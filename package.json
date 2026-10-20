@@ -2,7 +2,7 @@
   "name": "pte-21c",
   "version": "0.0.0",
   "private": true,
-  "description": "PTE-21C — Experience the Elements. A quantum-aware, photographic, swipeable periodic table.",
+  "description": "PTE-21C \u2014 Experience the Elements. A quantum-aware, photographic, swipeable periodic table.",
   "license": "CC-BY-NC-SA-4.0",
   "author": "Bietenhader (Fin)",
   "homepage": "https://bietenhader.github.io/PTE-21C-Experience-the-Elements/",
@@ -47,5 +47,8 @@
     "typescript-eslint": "8.72.0",
     "vite": "8.3.4",
     "vitest": "5.0.5"
+  },
+  "overrides": {
+    "playwright-core": "1.56.1"
   }
 }

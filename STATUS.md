@@ -1,26 +1,21 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M0 — Skeleton · **built; pull request "M0 — skeleton" open for Fin's review**
+**Current milestone:** M0 — Skeleton · **complete** (merged 2026-10-20; the site is live)
 **Last updated:** 2026-10-20
-**Next:** M1 (table interaction) starts only after Fin has reviewed and merged M0.
+**Next:** M1 (table interaction), when Fin gives the go-ahead.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
-## For Fin: what to look at, in order
+## For Fin: what to look at
 
-1. **The pull request "M0 — skeleton"** on GitHub. It has screenshots of the table on a desktop and a phone,
-   and a plain-language summary. If you are happy, press **Merge pull request**.
-2. **Switch on the website (one time only — item F2).** After merging: on the repository page click
-   **Settings** → **Pages** (left column) → under *Build and deployment*, set **Source** to
-   **GitHub Actions**. A few minutes later the table is live at
-   **https://bietenhader.github.io/PTE-21C-Experience-the-Elements/**.
-3. **Try the launcher on your Mac.** In the project folder, right-click **`PTE-21C.command`** → **Open** →
-   **Open** (macOS asks only the first time). The table opens in your browser. It needs Node.js 22 once
-   (`brew install node@22`); the launcher tells you if it is missing.
-4. **Read the questions below** ("Decisions I need from you"). Each has a default, so nothing is blocked.
+- **The live site:** https://bietenhader.github.io/PTE-21C-Experience-the-Elements/ — published automatically
+  whenever `main` changes. (The one-time Pages switch, F2, is done.)
+- **The launcher on your Mac,** if you have not tried it yet: in the project folder, right-click
+  **`PTE-21C.command`** → **Open** → **Open** (macOS asks only the first time). It needs Node.js 22 once
+  (`brew install node@22`); the launcher tells you if it is missing.
 
 ## M0 acceptance criteria (SPEC §18)
 
@@ -31,11 +26,11 @@ This file is updated at the end of every working session (SPEC §17.5).
 | … from `index.json` built by the PubChem, NIST GSIE and NIST AWIC fetchers + `build_layouts.py` | Done, plus three more fetchers M0 needed (IAEA, CODATA, CIAAW — see note 7) |
 | Schema + sources registry | Done (`schema/`, `tools/sources.toml` → `public/data/sources.json`) |
 | Every tile shows weight or (mass number), Z, IE₁, EN, oxidation states, symbol, name, configuration with ◆ | Done — all fields on full-size tiles; smaller tiles show fewer, as SPEC §7.1 prescribes |
-| Hyperfine slot renders `Missing` correctly | Done: 1 value (Cs-133), 24 *not applicable* (J = 0 or I = 0), 34 *no stable isotope*, 59 *not yet in the curated table* (note 3) |
+| Hyperfine slot renders `Missing` correctly | Done: 1 value (Cs-133), 24 *not applicable* (J = 0 or I = 0), 34 *no stable isotope*, 59 *not yet in the curated table* (decision 3) |
 | Schema and coverage tests pass | Done: 74 pipeline tests, 80 unit tests, 14 end-to-end tests pass locally |
-| CI green | Runs on the pull request — see the checks there |
-| Site live on Pages | Needs the merge and the one-time Pages switch (step 2 above) |
-| `PTE-21C.command` works | Tested from a fresh copy (installs, starts, serves the table). Tested on Linux, not on a Mac — please try step 3 |
+| CI green | Done: all three jobs green on the pull request and again on `main` after the merge |
+| Site live on Pages | Done: deployed on merge; checked in a browser — 118 tiles, no request to any other site, no errors |
+| `PTE-21C.command` works | Tested from a fresh copy (installs, starts, serves the table). Tested on Linux, not yet on a Mac |
 
 ## What changed this session
 
@@ -56,27 +51,24 @@ This file is updated at the end of every working session (SPEC §17.5).
 | Item | Default in use | What you need to do |
 |---|---|---|
 | F1 Attribution name | "Bietenhader (Fin)" (README, footer, package) | Confirm or change before M5 |
-| F2 GitHub Pages | — | **Step 2 above, once** |
+| F2 GitHub Pages | Source "GitHub Actions" | Done (2026-10-20) |
 | F3 Review `biology.toml` and the image report | — | Later: M2 (images) and M4 (biology) |
 | F4 Design review | — | End of M3. Comments on the screenshots are welcome any time |
 | F5 Subtitle | "A fresh perspective on the Periodic Table of the Elements" | Confirm or change |
 
-## Decisions I need from you (each has a default; nothing is blocked)
+## Decisions made — Fin, 2026-10-20: "use the defaults"
 
-1. **Atomic weights: NIST or IUPAC directly?** The spec takes standard atomic weights from NIST AWIC. NIST's
-   table is IUPAC's **2013** edition; IUPAC (CIAAW) has since revised 22 values — argon and lead are now ranges,
-   and gadolinium, lutetium, zirconium and ytterbium shifted. *Default:* keep NIST as the spec says and list the
-   differences in `tools/build-report.md`. *Proposal:* from M2, take atomic weights from IUPAC/CIAAW directly
-   and keep NIST for isotope masses.
-2. **Elements 109–118 have no NIST data.** NIST's database stops at hassium (108). The spec's M2 targets
-   ("ground term for all 118", "IE₁ for ≥ 110") cannot be met from NIST alone. Today those elements show
-   their *predicted* configuration (marked †) and "pred. only" for IE₁ and the ground term. *Proposal for M2:*
-   a curated table of published theoretical values (with references), clearly flagged as predictions.
-3. **"hfs n/m" says "not measured" too broadly.** The spec defines `not_measured` to include "measured, but
-   not yet in our curated table". So in M0, 59 elements — hydrogen included, whose 21-cm line is famous —
-   show *hfs n/m*; the hover text says "not yet in the curated table (compiled in M2)". The curated table is
-   filled in M2. *Option:* add a separate reason "not yet compiled" so the tile never says *n/m* for a
-   measured value. *Default:* follow the spec.
+1. **Atomic weights stay with NIST AWIC**, as the spec says. NIST's table is IUPAC's 2013 edition; the 22
+   values IUPAC (CIAAW) has revised since — argon and lead are now ranges — keep being listed in
+   `tools/build-report.md` on every pipeline run.
+2. **Elements 109–118 keep today's honest handling:** the *predicted* configuration (marked †, source
+   PubChem/Los Alamos) and `Missing{predicted_only}` for IE₁ and the ground term, since NIST's database stops
+   at hassium (108). Consequence to revisit at M2: the SPEC §13.1 targets "ground term for all 118" and
+   "IE₁ for ≥ 110" cannot be met from NIST alone. They stay in `tools/coverage.toml` as written, and at M2 I
+   will bring a concrete proposal (a cited table of theoretical values, flagged as predictions) rather than
+   quietly lowering them.
+3. **The spec's wording stays:** `not_measured` also covers "measured, but not yet in our curated table", so
+   *hfs n/m* remains on tiles until M2 fills the hyperfine table; the hover text says which case applies.
 
 ## Notes (things that differ from what you might expect)
 

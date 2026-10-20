@@ -9,6 +9,7 @@ changes or overrides a source value is written to tools/build-report.md.
 
 from __future__ import annotations
 
+import json
 import re
 import tomllib
 from decimal import Decimal
@@ -511,7 +512,8 @@ def validate(definition: str, obj) -> None:
 
 
 def _ts_number(d: Decimal) -> str:
-    return format(d.normalize(), "f") if -6 < d.adjusted() < 16 else format(d, "e").replace("E", "e")
+    """The nearest IEEE double, written so that JavaScript reads back exactly that double."""
+    return repr(float(d))
 
 
 def write_constants_ts(codata, ev_to_kj):
@@ -526,6 +528,8 @@ def write_constants_ts(codata, ev_to_kj):
         "  readonly unit: string;",
         "  readonly exact: boolean;",
         "  readonly name: string;",
+        "  /** CODATA's own decimal text; `value` is the nearest double to it. */",
+        "  readonly text: string;",
         "}",
         "",
         "export const CODATA = {",
@@ -534,17 +538,19 @@ def write_constants_ts(codata, ev_to_kj):
         c = codata[name]
         unc = "0" if c["unc"] is None else _ts_number(c["unc"])
         lines.append(
-            f"  {key}: {{ value: {_ts_number(c['value'])}, unc: {unc}, unit: {c['unit']!r}, "
-            f"exact: {'true' if c['unc'] is None else 'false'}, name: {name!r} }},"
+            f"  {key}: {{ value: {_ts_number(c['value'])}, unc: {unc}, unit: {json.dumps(c['unit'])}, "
+            f"exact: {'true' if c['unc'] is None else 'false'}, name: {json.dumps(name)}, "
+            f"text: {json.dumps(c['text'])} }},"
         )
     lines += [
         "} as const satisfies Record<string, Constant>;",
         "",
-        "/** 1 eV expressed in kJ/mol: e · N_A / 1000, exact (both factors are SI defining constants). */",
+        "/** 1 eV expressed in kJ/mol: e · N_A / 1000, exact (both factors are SI defining constants).",
+        f" *  Exact decimal: {ev_to_kj}; the number below is the nearest double. */",
         f"export const EV_IN_KJ_PER_MOL = {_ts_number(ev_to_kj)};",
         "",
     ]
-    text = "\n".join(lines).replace("'", '"')
+    text = "\n".join(lines)
     (REPO_ROOT / "src" / "physics").mkdir(parents=True, exist_ok=True)
     (REPO_ROOT / "src" / "physics" / "constants.ts").write_text(text, encoding="utf-8")
 

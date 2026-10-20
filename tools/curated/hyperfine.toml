@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Ground-state hyperfine splittings per isotope (SPEC §6.2). One row per isotope and charge state;
+# every row carries a source key from tools/sources.toml (and a DOI where there is one) and is
+# verified against its primary reference. Uncertain rows are omitted, never guessed.
+#
+# Columns: Z, A, charge (0 = neutral atom, 1 = singly charged ion), I, J,
+#          A_MHz (magnetic dipole constant), B_MHz (electric quadrupole constant; omit for J = 1/2),
+#          splitting_Hz, unc_Hz (standard uncertainty; 0 = exact by definition), source, doi, note.
+#
+# Status: M0 carries only the one value that is exact by definition. The full first-pass list in
+# SPEC §6.2 (H-1, the alkalis, group 13, coinage metals, halogens, clock ions, …) is compiled in M2.
+
+[[row]]
+Z = 55
+A = 133
+charge = 0
+I = 3.5
+J = 0.5
+A_MHz = 2298.1579425
+splitting_Hz = 9192631770
+unc_Hz = 0
+source = "si_brochure"
+note = "Exact by definition: this transition defines the SI second (1967; a defining constant of the SI since 2019). A = splitting / (I + 1/2)."

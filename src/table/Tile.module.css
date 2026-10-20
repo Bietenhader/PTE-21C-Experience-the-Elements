@@ -1,0 +1,259 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+/* Tile typography scales with the tile itself (container query units), and fields appear as the
+   tile grows: < 60 px Z + symbol · 60–110 px + name + configuration · ≥ 110 px every field. */
+
+.tile {
+  --fill: var(--cat-unknown);
+  --accent: var(--accent-unknown);
+  --block-colour: var(--block-s);
+
+  container: tile / inline-size;
+  position: relative;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid transparent; /* becomes visible in forced-colours (high contrast) mode */
+  border-radius: 3px;
+  background: var(--fill);
+  color: var(--tile-ink);
+  font: inherit;
+  text-align: start;
+  cursor: default;
+  transition: outline-color 120ms ease-out;
+  outline: 2px solid transparent;
+  outline-offset: -1px;
+}
+
+.tile:hover {
+  outline-color: var(--accent);
+}
+
+.tile:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 1px;
+  z-index: 2;
+}
+
+.tile[data-category="alkali-metal"] { --fill: var(--cat-alkali-metal); --accent: var(--accent-alkali-metal); }
+.tile[data-category="alkaline-earth-metal"] { --fill: var(--cat-alkaline-earth-metal); --accent: var(--accent-alkaline-earth-metal); }
+.tile[data-category="lanthanide"] { --fill: var(--cat-lanthanide); --accent: var(--accent-lanthanide); }
+.tile[data-category="actinide"] { --fill: var(--cat-actinide); --accent: var(--accent-actinide); }
+.tile[data-category="transition-metal"] { --fill: var(--cat-transition-metal); --accent: var(--accent-transition-metal); }
+.tile[data-category="post-transition-metal"] { --fill: var(--cat-post-transition-metal); --accent: var(--accent-post-transition-metal); }
+.tile[data-category="metalloid"] { --fill: var(--cat-metalloid); --accent: var(--accent-metalloid); }
+.tile[data-category="reactive-nonmetal"] { --fill: var(--cat-reactive-nonmetal); --accent: var(--accent-reactive-nonmetal); }
+.tile[data-category="noble-gas"] { --fill: var(--cat-noble-gas); --accent: var(--accent-noble-gas); }
+.tile[data-category="unknown"] { --fill: var(--cat-unknown); --accent: var(--accent-unknown); }
+.tile[data-block="s"] { --block-colour: var(--block-s); }
+.tile[data-block="p"] { --block-colour: var(--block-p); }
+.tile[data-block="d"] { --block-colour: var(--block-d); }
+.tile[data-block="f"] { --block-colour: var(--block-f); }
+
+/* Thin block-colour bar along the bottom edge, readable in every layout. */
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  block-size: max(2px, 2.5cqi);
+  background: var(--block-colour);
+}
+
+.inner {
+  display: grid;
+  block-size: 100%;
+  grid-template: "z" auto "symbol" 1fr / 1fr;
+  padding: 5cqi 6cqi 8cqi;
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.weight,
+.ieen,
+.ox,
+.name,
+.config,
+.hfs,
+.block {
+  display: none;
+}
+
+.z {
+  grid-area: z;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  font-size: 20cqi;
+  font-weight: 500;
+}
+
+.symbol {
+  grid-area: symbol;
+  align-self: center;
+  justify-self: center;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 42cqi;
+  line-height: 1;
+}
+
+.trefoil {
+  inline-size: 0.9em;
+  block-size: 0.9em;
+  flex: none;
+}
+
+/* 60–110 px: Z, symbol, name, configuration. */
+@container tile (min-width: 60px) {
+  .inner {
+    grid-template:
+      "z" auto
+      "symbol" 1fr
+      "name" auto
+      "config" auto / 1fr;
+    padding: 4cqi 5cqi 6cqi;
+  }
+  .z {
+    font-size: 12cqi;
+  }
+  .symbol {
+    font-size: 32cqi;
+  }
+  .name {
+    display: block;
+    grid-area: name;
+    font-family: var(--font-title);
+    font-size: 11cqi;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .config {
+    display: block;
+    grid-area: config;
+    margin-block-start: 2cqi;
+    font-family: var(--font-mono);
+    font-size: 8.4cqi;
+    letter-spacing: -0.02em;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+/* ≥ 110 px: every field of the reference table plus the hyperfine slot. */
+@container tile (min-width: 110px) {
+  .inner {
+    grid-template:
+      "weight z" auto
+      "ieen ox" auto
+      "symbol ox" 1fr
+      "name ox" auto
+      "config config" auto
+      "hfs hfs" auto / 1fr auto;
+    column-gap: 3cqi;
+    padding: 4cqi 5cqi 6.5cqi;
+  }
+  .z {
+    justify-content: flex-end;
+    font-size: 8cqi;
+  }
+  .weight {
+    display: block;
+    grid-area: weight;
+    font-size: 7.4cqi;
+  }
+  .ieen {
+    display: flex;
+    grid-area: ieen;
+    gap: 0.6em;
+    font-size: 7cqi;
+    font-stretch: 87.5%;
+  }
+  .ox {
+    display: grid;
+    grid-area: ox;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(var(--ox-rows, 7), auto);
+    align-content: start;
+    justify-items: end;
+    column-gap: 0.5em;
+    padding-block-start: 1cqi;
+    font-size: 6.6cqi;
+    font-stretch: 87.5%;
+    line-height: 1.05;
+    color: var(--tile-ink-muted);
+  }
+  .ox b {
+    font-weight: 700;
+    color: var(--tile-ink);
+  }
+  .symbol {
+    justify-self: start;
+    align-self: end;
+    font-size: 27cqi;
+  }
+  .name {
+    font-size: 9cqi;
+    text-align: start;
+  }
+  .config {
+    font-size: 7.2cqi;
+    text-align: start;
+  }
+  .hfs {
+    display: block;
+    grid-area: hfs;
+    margin-block-start: 1.5cqi;
+    font-size: 6cqi;
+    font-stretch: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+  .block {
+    display: block;
+    position: absolute;
+    inset-inline-end: 4cqi;
+    inset-block-end: 3.5cqi;
+    font-size: 5.6cqi;
+    line-height: 1;
+    color: var(--tile-ink-muted);
+  }
+}
+
+[data-missing] {
+  color: var(--tile-ink-muted);
+  font-style: italic;
+}
+
+.config sup,
+.hfs sup {
+  font-size: 0.72em;
+  line-height: 0;
+  vertical-align: 0.5em;
+}
+
+.hfs sub {
+  font-size: 0.72em;
+  line-height: 0;
+}
+
+.core {
+  margin-inline-end: 0.15em;
+}
+
+.anomaly {
+  margin-inline-start: 0.25em;
+  font-family: var(--font-num);
+}
+
+@media (forced-colors: active) {
+  .tile {
+    border-color: CanvasText;
+  }
+  .tile::after {
+    background: CanvasText;
+  }
+}

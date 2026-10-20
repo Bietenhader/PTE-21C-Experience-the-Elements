@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "id": "long32",
  "title": "32-column long form",
- "caption": "The same table with the f-block placed inline between groups 2 and 3, so every period reads as one unbroken row of increasing atomic number.",
+ "caption": "The same table with the f-block placed inline between groups 2 and 3, so each period is one row. The inline block is 14 cells wide: with lutetium and lawrencium in group 3 it holds La–Yb and Ac–No; with lanthanum and actinium in group 3 it holds Ce–Lu and Th–Lr, and La and Ac stand in the group-3 column to its right.",
  "rowAxis": "period",
  "group3Sensitive": true,
  "variants": {

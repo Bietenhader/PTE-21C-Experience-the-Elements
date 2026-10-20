@@ -1,0 +1,144 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+/*
+ * Design tokens — the single place for colour, type and spacing (SPEC §16: "keep tokens central so a
+ * redirect is cheap"). Dark theme ("a lab bench at night") is the default; light is the inverse.
+ * Category fills are muted so the photographs (M2) are the colour in the room; the saturated
+ * accent of each category appears on hover and focus.
+ *
+ * src/app/palette.test.ts parses this file and fails if any tile text drops below 4.5:1 (WCAG AA)
+ * on any category fill, in either palette or theme.
+ */
+
+:root {
+  color-scheme: dark;
+
+  /* Surfaces and text */
+  --bg: #101317;
+  --surface: #171b21;
+  --surface-raised: #1e232b;
+  --border: #2c333d;
+  --text: #eceef1;
+  --text-muted: #a7afb8;
+  --link: #8cc4ff;
+  --focus: #ffd166;
+
+  /* Ink on tiles */
+  --tile-ink: #f4f5f7;
+  --tile-ink-muted: #c9ced4;
+
+  /* Category fills, palette "Campion" (SPEC §7.3), dark theme */
+  --cat-alkali-metal: #872a2d;
+  --cat-alkaline-earth-metal: #6c4115;
+  --cat-lanthanide: #7b305c;
+  --cat-actinide: #613980;
+  --cat-transition-metal: #264c82;
+  --cat-post-transition-metal: #1e5634;
+  --cat-metalloid: #14534e;
+  --cat-reactive-nonmetal: #534c17;
+  --cat-noble-gas: #1c5066;
+  --cat-unknown: #484b50;
+
+  /* Category accents (hover/focus rings, legend swatch borders) */
+  --accent-alkali-metal: #e5484d;
+  --accent-alkaline-earth-metal: #f0902e;
+  --accent-lanthanide: #d4529f;
+  --accent-actinide: #a15fd6;
+  --accent-transition-metal: #3f7fd9;
+  --accent-post-transition-metal: #3aa866;
+  --accent-metalloid: #27a69c;
+  --accent-reactive-nonmetal: #d6c23a;
+  --accent-noble-gas: #3fb2e3;
+  --accent-unknown: #8b9099;
+
+  /* Block bar (s p d f), Janet's classic colouring */
+  --block-s: #e5484d;
+  --block-p: #e3c13b;
+  --block-d: #4a8fe7;
+  --block-f: #43b86b;
+
+  /* Type: humanist sans for titles and symbols, tabular sans for numbers, mono for configurations */
+  --font-title: "Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+  --font-num: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Space */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --radius: 0.375rem;
+
+  /* Table geometry */
+  --tile-gap: 3px;
+  --tile-full: 9rem;
+  --tile-aspect: 1.2; /* height ÷ width; small tiles need room for the symbol */
+  --tile-aspect-full: 1.08;
+  --label-track: 1.5rem;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --border: #d6d2c8;
+  --text: #15181c;
+  --text-muted: #4a515a;
+  --link: #0b57b5;
+  --focus: #9a5b00;
+
+  --tile-ink: #121418;
+  --tile-ink-muted: #3d434a;
+
+  --cat-alkali-metal: #f5b6b8;
+  --cat-alkaline-earth-metal: #f6ba7d;
+  --cat-lanthanide: #edb6d7;
+  --cat-actinide: #d8bcee;
+  --cat-transition-metal: #acc8ef;
+  --cat-post-transition-metal: #9bd3b1;
+  --cat-metalloid: #91d2cd;
+  --cat-reactive-nonmetal: #d9c74a;
+  --cat-noble-gas: #88cfee;
+  --cat-unknown: #c4c6cb;
+}
+
+/* Palette "Colour-safe" (SPEC §7.3): hues from Okabe & Ito, distinguishable under deuteranopia/protanopia. */
+:root[data-palette="colour-safe"] {
+  --cat-alkali-metal: #7e3700;
+  --cat-alkaline-earth-metal: #654600;
+  --cat-lanthanide: #683e55;
+  --cat-actinide: #72365e;
+  --cat-transition-metal: #004f7b;
+  --cat-post-transition-metal: #00573f;
+  --cat-metalloid: #4f4b16;
+  --cat-reactive-nonmetal: #264f67;
+  --cat-noble-gas: #474774;
+  --cat-unknown: #4b4b4b;
+
+  --accent-alkali-metal: #d55e00;
+  --accent-alkaline-earth-metal: #e69f00;
+  --accent-lanthanide: #cc79a7;
+  --accent-actinide: #a8508a;
+  --accent-transition-metal: #0072b2;
+  --accent-post-transition-metal: #009e73;
+  --accent-metalloid: #f0e442;
+  --accent-reactive-nonmetal: #56b4e9;
+  --accent-noble-gas: #7f7fd0;
+  --accent-unknown: #999999;
+}
+
+:root[data-theme="light"][data-palette="colour-safe"] {
+  --cat-alkali-metal: #eebd96;
+  --cat-alkaline-earth-metal: #eebf54;
+  --cat-lanthanide: #e5bbd2;
+  --cat-actinide: #debcd3;
+  --cat-transition-metal: #a3cce3;
+  --cat-post-transition-metal: #8fd4c1;
+  --cat-metalloid: #f0e442;
+  --cat-reactive-nonmetal: #8fcef0;
+  --cat-noble-gas: #c3c3e9;
+  --cat-unknown: #c6c6c6;
+}

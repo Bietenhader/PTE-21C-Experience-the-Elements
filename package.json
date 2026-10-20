@@ -2,7 +2,7 @@
   "name": "pte-21c",
   "version": "0.0.0",
   "private": true,
-  "description": "PTE-21C \u2014 Experience the Elements. A quantum-aware, photographic, swipeable periodic table.",
+  "description": "PTE-21C — Experience the Elements. A quantum-aware, photographic, swipeable periodic table.",
   "license": "CC-BY-NC-SA-4.0",
   "author": "Bietenhader (Fin)",
   "homepage": "https://bietenhader.github.io/PTE-21C-Experience-the-Elements/",
@@ -27,13 +27,23 @@
     "check:licences": "node tools/check-licences.mjs"
   },
   "dependencies": {
+    "@floating-ui/react-dom": "2.1.9",
+    "d3-array": "3.2.4",
+    "d3-scale": "4.0.2",
+    "d3-scale-chromatic": "3.1.0",
+    "d3-shape": "3.2.0",
     "react": "19.3.1",
-    "react-dom": "19.3.1"
+    "react-dom": "19.3.1",
+    "zustand": "5.0.15"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
     "@eslint/js": "9.39.4",
     "@playwright/test": "1.56.1",
+    "@types/d3-array": "3.2.2",
+    "@types/d3-scale": "4.0.9",
+    "@types/d3-scale-chromatic": "3.1.0",
+    "@types/d3-shape": "3.2.0",
     "@types/node": "22.19.1",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",

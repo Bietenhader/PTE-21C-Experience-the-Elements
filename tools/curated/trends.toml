@@ -157,9 +157,9 @@ sources = ["pubchem"]
 id = "electron-affinity"
 label = "Electron affinity"
 field = "electronAffinity"
-quantity = "plain"
+quantity = "energy"
 scale = "linear"
-caption = "Electron affinity in eV as listed by PubChem; elements without a listed value include those whose negative ion is unbound."
+caption = "Electron affinity as listed by PubChem (published in eV). Elements without a listed value include those whose negative ion is unbound."
 sources = ["pubchem"]
 
 [[heatmap]]
@@ -213,7 +213,7 @@ label = "Standard atomic weight"
 field = "atomicWeight"
 quantity = "plain"
 scale = "linear"
-caption = "Standard atomic weight from NIST AWIC; for interval elements, IUPAC's single abridged value (CIAAW). Elements without a standard atomic weight are left blank."
+caption = "Standard atomic weight from NIST AWIC; for interval elements, IUPAC's single abridged value (CIAAW). Elements without a standard atomic weight are hatched and say why."
 sources = ["nist_awic", "ciaaw"]
 
 [[heatmap]]

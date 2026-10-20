@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 import { describe, expect, it } from "vitest";
 import { CODATA, EV_IN_KJ_PER_MOL } from "./constants";
-import { celsiusToKelvin, evToKjPerMol, kelvinToCelsius, kjPerMolToEv } from "./units";
+import { celsiusToKelvin, convertEnergy, convertTemperature, evToKjPerMol, kelvinToCelsius, kjPerMolToEv } from "./units";
 
 describe("unit conversions", () => {
   it("uses the exact CODATA factor e·N_A", () => {
@@ -25,5 +25,13 @@ describe("unit conversions", () => {
   it("marks the SI defining constants exact", () => {
     expect(CODATA.deltaNuCs).toMatchObject({ value: 9192631770, exact: true, unc: 0 });
     expect(CODATA.alpha.exact).toBe(false);
+  });
+
+  it("converts for display in the chosen unit", () => {
+    expect(convertEnergy(375.7, "kJ/mol", "kJ/mol")).toBe(375.7);
+    expect(convertEnergy(375.7, "kJ/mol", "eV")).toBeCloseTo(3.8939, 4);
+    expect(convertEnergy(0.4715, "eV", "kJ/mol")).toBeCloseTo(45.49, 2); // Cs electron affinity
+    expect(convertTemperature(1811, "K")).toBe(1811);
+    expect(convertTemperature(1811, "°C")).toBeCloseTo(1537.85, 10);
   });
 });

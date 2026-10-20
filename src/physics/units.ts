@@ -10,3 +10,17 @@ export const kjPerMolToEv = (kj: number): number => kj / EV_IN_KJ_PER_MOL;
 export const evToKjPerMol = (ev: number): number => ev * EV_IN_KJ_PER_MOL;
 export const kelvinToCelsius = (k: number): number => k - CELSIUS_ZERO_IN_KELVIN;
 export const celsiusToKelvin = (c: number): number => c + CELSIUS_ZERO_IN_KELVIN;
+
+export type EnergyUnit = "kJ/mol" | "eV";
+export type TemperatureUnit = "K" | "°C";
+
+/** An energy stored in `from` (kJ/mol or eV), expressed in `to`. */
+export function convertEnergy(value: number, from: EnergyUnit, to: EnergyUnit): number {
+  if (from === to) return value;
+  return to === "eV" ? kjPerMolToEv(value) : evToKjPerMol(value);
+}
+
+/** A temperature stored in kelvin, expressed in `to`. */
+export function convertTemperature(kelvin: number, to: TemperatureUnit): number {
+  return to === "K" ? kelvin : kelvinToCelsius(kelvin);
+}

@@ -28,7 +28,7 @@ export function App() {
           <legend className={styles.controlsLegend}>Tile size</legend>
           {(
             [
-              ["fit", "Fit to screen"],
+              ["fit", "Compact"],
               ["full", "Full-size tiles"],
             ] as const
           ).map(([value, label]) => (
@@ -46,12 +46,11 @@ export function App() {
         </fieldset>
       </header>
 
-      <p className={styles.preview} role="note">
-        Early preview (milestone M0): the table and its data. Hover cards, layouts, trends and the element sheets
-        arrive in the next milestones.
-      </p>
-
       <main className={styles.main}>
+        <p className={styles.preview} role="note">
+          Early preview (milestone M0): the table and its data. Hover cards, layouts, trends and the element sheets
+          arrive in the next milestones.
+        </p>
         {state.status === "loading" && <p className={styles.status}>Loading the elements…</p>}
         {state.status === "error" && (
           <p className={styles.status} role="alert">

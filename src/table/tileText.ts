@@ -171,7 +171,8 @@ export function tileText(e: ElementIndexEntry, sources: Sources): TileText {
     (ox.other.length ? `; others ${ox.other.map(signed).join(", ")}` : "") +
     (ox.note ? `. ${ox.note}` : "");
 
-  const label = `${e.name}, atomic number ${e.Z}, ${CATEGORY_NAME[e.category]}.`;
+  // The symbol is in the name so speech-input users can say "click Cs" (WCAG 2.5.3, label in name).
+  const label = `${e.name} (${e.symbol}), atomic number ${e.Z}, ${CATEGORY_NAME[e.category]}.`;
   const sentences = [
     `${e.block}-block, period ${e.period}${e.group === null ? "" : `, group ${e.group}`}.`,
     `${w.title}.`,

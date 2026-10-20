@@ -16,7 +16,7 @@ const el = (sym: string) => {
 describe("tile text (SPEC §7.1)", () => {
   it("caesium: every reference-table field plus the hyperfine slot", () => {
     const t = el("Cs");
-    expect(t.label).toBe("Caesium, atomic number 55, alkali metal.");
+    expect(t.label).toBe("Caesium (Cs), atomic number 55, alkali metal.");
     expect(t.weight.text).toBe("132.9055");
     expect(t.ie.text).toBe("375.7");
     expect(t.en.text).toBe("0.79");

@@ -21,4 +21,5 @@ A_MHz = 2298.1579425
 splitting_Hz = 9192631770
 unc_Hz = 0
 source = "si_brochure"
-note = "Exact by definition: this transition defines the SI second (1967; a defining constant of the SI since 2019). A = splitting / (I + 1/2)."
+# A_MHz = splitting / (I + 1/2) for this J = 1/2 ground level (SPEC §11.4).
+note = "Exact by definition: this transition defines the SI second (1967; a defining constant of the SI since 2019)."

@@ -4476,7 +4476,7 @@
      "unc": 0,
      "unit": "Hz",
      "source": "si_brochure",
-     "note": "Exact by definition: this transition defines the SI second (1967; a defining constant of the SI since 2019). A = splitting / (I + 1/2)."
+     "note": "Exact by definition: this transition defines the SI second (1967; a defining constant of the SI since 2019)."
     }
    },
    "quantumFact": "Ground-state hyperfine splitting of ¹³³Cs: 9 192 631 770 Hz (exact by definition).",

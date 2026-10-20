@@ -19,13 +19,18 @@
   --tile-h: calc(var(--tile-w) * var(--tile-aspect));
 }
 
-/* Fit: share the available width among the tile columns, but never larger than a full tile. */
+/* Compact: share the available width among the tile columns — never larger than a full tile, and
+   never smaller than the WCAG 2.2 minimum target of 24 × 24 px (SC 2.5.8); on narrow phones the
+   table then scrolls sideways instead of shrinking further. */
 .scroller[data-size="fit"] > .grid {
   --tile-w: min(
     var(--tile-full),
-    calc(
-      (100cqi - var(--label-cols) * var(--label-track) - (var(--tile-cols) + var(--label-cols) - 1) * var(--tile-gap)) /
-        var(--tile-cols)
+    max(
+      var(--tile-min),
+      calc(
+        (100cqi - var(--label-cols) * var(--label-track) - (var(--tile-cols) + var(--label-cols) - 1) * var(--tile-gap)) /
+          var(--tile-cols)
+      )
     )
   );
 }

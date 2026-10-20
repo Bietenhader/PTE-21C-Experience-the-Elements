@@ -24,27 +24,27 @@ export function Tile({ element: e, sources, style, variant = "table" }: TileProp
   const oxRows = oxCount > 7 ? Math.ceil(oxCount / 2) : Math.max(1, oxCount);
   const body = (
     <span className={styles.inner} aria-hidden="true" style={{ "--ox-rows": oxRows } as CSSProperties}>
-      <span className={styles.weight} data-missing={t.weight.missing || undefined} title={t.weight.title}>
+      <span className={styles.weight} data-field="weight" data-missing={t.weight.missing || undefined} title={t.weight.title}>
         {t.weight.text}
       </span>
-      <span className={styles.z}>
+      <span className={styles.z} data-field="z">
         {e.radioactive && <Trefoil />}
         {e.Z}
       </span>
       <span className={styles.ieen}>
-        <span data-missing={t.ie.missing || undefined} title={t.ie.title}>
+        <span data-field="ie1" data-missing={t.ie.missing || undefined} title={t.ie.title}>
           {t.ie.text}
         </span>
-        <span data-missing={t.en.missing || undefined} title={t.en.title}>
+        <span data-field="en" data-missing={t.en.missing || undefined} title={t.en.title}>
           {t.en.text}
         </span>
       </span>
-      <span className={styles.ox} title={t.ox.title}>
+      <span className={styles.ox} data-field="ox" title={t.ox.title}>
         {t.ox.states.map((s) => (s.common ? <b key={s.text}>{s.text}</b> : <span key={s.text}>{s.text}</span>))}
       </span>
-      <span className={styles.symbol}>{e.symbol}</span>
-      <span className={styles.name}>{e.name}</span>
-      <span className={styles.config} title={t.config.title} data-predicted={t.config.predicted || undefined}>
+      <span className={styles.symbol} data-field="symbol">{e.symbol}</span>
+      <span className={styles.name} data-field="name">{e.name}</span>
+      <span className={styles.config} data-field="config" title={t.config.title} data-predicted={t.config.predicted || undefined}>
         {t.config.core && <span className={styles.core}>[{t.config.core}]</span>}
         {t.config.subshells.map((s) => (
           <Fragment key={`${s.n}${s.l}`}>
@@ -56,7 +56,7 @@ export function Tile({ element: e, sources, style, variant = "table" }: TileProp
         {t.config.anomalous && <span className={styles.anomaly}>◆</span>}
         {t.config.predicted && <span className={styles.anomaly}>†</span>}
       </span>
-      <span className={styles.hfs} data-missing={t.hfs.missing || undefined} title={t.hfs.title}>
+      <span className={styles.hfs} data-field="hfs" data-missing={t.hfs.missing || undefined} title={t.hfs.title}>
         {t.hfs.missing ? (
           t.hfs.text
         ) : (

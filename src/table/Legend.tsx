@@ -128,7 +128,7 @@ export function Legend({ elements, variant, sources, keySymbol = "Cs" }: Props) 
             Missing values are never shown as 0 or a dash: <i>n/m</i> not measured, <i>n/a</i> not applicable,{" "}
             <i>pred. only</i> only theoretical predictions exist.
           </li>
-          <li>Small tiles show fewer fields; switch to full-size tiles to see them all.</li>
+          <li>Small tiles show fewer fields; choose “Full-size tiles” above the table to see them all.</li>
         </ul>
       </section>
     </section>

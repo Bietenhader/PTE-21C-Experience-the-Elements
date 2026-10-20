@@ -62,7 +62,7 @@
 }
 
 .preview {
-  margin: 0 var(--space-6) var(--space-2);
+  margin: 0 var(--space-3) var(--space-2);
   color: var(--text-muted);
   font-size: 0.875rem;
 }
@@ -95,7 +95,7 @@
     padding: var(--space-4) var(--space-4) var(--space-2);
   }
   .preview {
-    margin-inline: var(--space-4);
+    margin-inline: var(--space-3);
   }
   .main {
     padding-inline: var(--space-1);

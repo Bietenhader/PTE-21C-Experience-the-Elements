@@ -73,6 +73,7 @@
   /* Table geometry */
   --tile-gap: 3px;
   --tile-full: 9rem;
+  --tile-min: 1.5rem; /* 24 px: WCAG 2.2 minimum target size */
   --tile-aspect: 1.2; /* height ÷ width; small tiles need room for the symbol */
   --tile-aspect-full: 1.08;
   --label-track: 1.5rem;

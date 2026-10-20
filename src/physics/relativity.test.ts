@@ -9,7 +9,7 @@ describe("hydrogenic 1s speed", () => {
   });
 
   it("gives the textbook Lorentz factor for gold (about 1.22)", () => {
-    expect(lorentzFactor(zAlpha(79))).toBeCloseTo(1.223, 3);
+    expect(lorentzFactor(zAlpha(79))).toBeCloseTo(1.224, 3);
     expect(lorentzFactor(0)).toBe(1);
     expect(lorentzFactor(1)).toBe(Infinity);
   });

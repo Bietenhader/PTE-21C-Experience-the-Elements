@@ -118,13 +118,5 @@ a {
   border: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-  }
-}
+/* Motion is handled case by case (no blanket override): the layout morph and the sheet's entry
+   check the effective preference, written to <html data-motion> by the app. */

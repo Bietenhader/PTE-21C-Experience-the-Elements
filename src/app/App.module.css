@@ -32,33 +32,19 @@
   font-size: clamp(1rem, 1.6vw, 1.25rem);
 }
 
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-1) var(--space-4);
-  margin: 0;
-  padding: var(--space-2) var(--space-3);
+.settings {
+  min-block-size: 2.5rem;
+  padding: 0 var(--space-4);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-}
-
-.controlsLegend {
-  padding-inline: var(--space-1);
-  color: var(--text-muted);
-  font-size: 0.8125rem;
-}
-
-.option {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: 0.9375rem;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
   cursor: pointer;
 }
 
-.option input {
-  accent-color: var(--focus);
-  margin: 0;
+.settings:hover {
+  background: var(--surface-raised);
 }
 
 .preview {
@@ -92,7 +78,19 @@
 
 @media (max-width: 40rem) {
   .header {
-    padding: var(--space-4) var(--space-4) var(--space-2);
+    flex-wrap: nowrap;
+    align-items: start;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-3) var(--space-2);
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 0.9375rem;
+  }
+  .settings {
+    flex: none;
   }
   .preview {
     margin-inline: var(--space-3);

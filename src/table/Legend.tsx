@@ -6,6 +6,7 @@ import type { CSSProperties } from "react";
 import { groupDigits } from "../data/format";
 import type { Category, ElementIndexEntry, LayoutVariant, SourcesFile } from "../data/types";
 import { EV_IN_KJ_PER_MOL } from "../physics/constants";
+import type { EnergyUnit } from "../physics/units";
 import { Quantity, SourceChip } from "../ui/Quantity";
 import { gridGeometry } from "./grid";
 import styles from "./Legend.module.css";
@@ -19,10 +20,11 @@ interface Props {
   elements: ElementIndexEntry[];
   variant: LayoutVariant;
   sources: SourcesFile["sources"];
+  energyUnit?: EnergyUnit;
   keySymbol?: string;
 }
 
-export function Legend({ elements, variant, sources, keySymbol = "Cs" }: Props) {
+export function Legend({ elements, variant, sources, energyUnit = "kJ/mol", keySymbol = "Cs" }: Props) {
   const keyElement = elements.find((e) => e.symbol === keySymbol) ?? elements[0];
   return (
     <section className={styles.legend} aria-labelledby="legend-heading">
@@ -67,7 +69,13 @@ export function Legend({ elements, variant, sources, keySymbol = "Cs" }: Props) 
           <h3 id="key-heading">How to read a tile</h3>
           <div className={styles.key}>
             <div className={styles.keyTile}>
-              <Tile element={keyElement} sources={sources} variant="key" style={{ inlineSize: "100%", blockSize: "100%" }} />
+              <Tile
+                element={keyElement}
+                sources={sources}
+                energyUnit={energyUnit}
+                variant="key"
+                style={{ inlineSize: "100%", blockSize: "100%" }}
+              />
             </div>
             <dl className={styles.fields}>
               <dt>Top left</dt>
@@ -83,7 +91,7 @@ export function Legend({ elements, variant, sources, keySymbol = "Cs" }: Props) 
               </dd>
               <dt>Second line</dt>
               <dd>
-                First ionization energy in kJ/mol (<Quantity q={keyElement.ie1} sources={sources} />), then the
+                First ionization energy in {energyUnit} (<Quantity q={keyElement.ie1} sources={sources} />), then the
                 Pauling electronegativity (<Quantity q={keyElement.electronegativityPauling} sources={sources} />).
               </dd>
               <dt>Right edge</dt>
@@ -128,7 +136,10 @@ export function Legend({ elements, variant, sources, keySymbol = "Cs" }: Props) 
             Missing values are never shown as 0 or a dash: <i>n/m</i> not measured, <i>n/a</i> not applicable,{" "}
             <i>pred. only</i> only theoretical predictions exist.
           </li>
-          <li>Small tiles show fewer fields; choose “Full-size tiles” above the table to see them all.</li>
+          <li>
+            Small tiles show fewer fields. Zoom in — pinch, Ctrl/⌘ + scroll, double-tap the background, or the
+            “Full-size tiles” button — and every field appears.
+          </li>
         </ul>
       </section>
     </section>

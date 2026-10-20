@@ -56,6 +56,20 @@
   --block-d: #4a8fe7;
   --block-f: #43b86b;
 
+  /* Categorical map tones (SPEC §8.3), after Okabe & Ito; every map also prints a short label. */
+  --map-1: #7d5000;
+  --map-2: #1a5a7d;
+  --map-3: #00604a;
+  --map-4: #5e5800;
+  --map-5: #003f6b;
+  --map-6: #8a3a00;
+  --map-7: #7a3b62;
+  --map-8: #4a4d52;
+
+  /* Hatching for "no value" on heatmaps */
+  --hatch-a: #2b3038;
+  --hatch-b: #1c2027;
+
   /* Type: humanist sans for titles and symbols, tabular sans for numbers, mono for configurations */
   --font-title: "Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
   --font-num: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
@@ -70,13 +84,10 @@
   --space-8: 2rem;
   --radius: 0.375rem;
 
-  /* Table geometry */
+  /* Table geometry (tile width and proportions come from the zoom, src/table/zoom.ts) */
   --tile-gap: 3px;
-  --tile-full: 9rem;
-  --tile-min: 1.5rem; /* 24 px: WCAG 2.2 minimum target size */
-  --tile-aspect: 1.2; /* height ÷ width; small tiles need room for the symbol */
-  --tile-aspect-full: 1.08;
   --label-track: 1.5rem;
+  --arrow-room: 2.75rem; /* space around the table for trend arrows */
 }
 
 :root[data-theme="light"] {
@@ -104,6 +115,18 @@
   --cat-reactive-nonmetal: #d9c74a;
   --cat-noble-gas: #88cfee;
   --cat-unknown: #c4c6cb;
+
+  --map-1: #f3cf7a;
+  --map-2: #a9d8f3;
+  --map-3: #88d6bd;
+  --map-4: #ece28a;
+  --map-5: #a5c4e8;
+  --map-6: #f2b48a;
+  --map-7: #e7b3d0;
+  --map-8: #cfd1d5;
+
+  --hatch-a: #dedad2;
+  --hatch-b: #f3f1ec;
 }
 
 /* Palette "Colour-safe" (SPEC §7.3): hues from Okabe & Ito, distinguishable under deuteranopia/protanopia. */

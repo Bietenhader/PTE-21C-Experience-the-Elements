@@ -1,0 +1,268 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+/* Desktop: a centred modal about 92 % of the viewport, over a dimmed backdrop (SPEC §9.2). */
+.sheet {
+  inline-size: 92vw;
+  max-inline-size: 92vw;
+  block-size: 92dvh;
+  max-block-size: 92dvh;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 2);
+  background: var(--bg);
+  color: var(--text);
+  /* The page underneath must not scroll (progressive enhancement; no overflow lock on <body>). */
+  overscroll-behavior: contain;
+}
+
+.sheet::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background: rgb(4 6 9 / 0.72);
+}
+
+:root[data-motion="full"] .sheet[open] {
+  transition:
+    opacity 180ms ease-out,
+    translate 220ms ease-out;
+  @starting-style {
+    opacity: 0;
+    translate: 0 1.5rem;
+  }
+}
+
+.body {
+  --fill: var(--cat-unknown);
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+  min-block-size: 0;
+}
+
+.body[data-category="alkali-metal"] { --fill: var(--cat-alkali-metal); }
+.body[data-category="alkaline-earth-metal"] { --fill: var(--cat-alkaline-earth-metal); }
+.body[data-category="lanthanide"] { --fill: var(--cat-lanthanide); }
+.body[data-category="actinide"] { --fill: var(--cat-actinide); }
+.body[data-category="transition-metal"] { --fill: var(--cat-transition-metal); }
+.body[data-category="post-transition-metal"] { --fill: var(--cat-post-transition-metal); }
+.body[data-category="metalloid"] { --fill: var(--cat-metalloid); }
+.body[data-category="reactive-nonmetal"] { --fill: var(--cat-reactive-nonmetal); }
+.body[data-category="noble-gas"] { --fill: var(--cat-noble-gas); }
+.body[data-category="unknown"] { --fill: var(--cat-unknown); }
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  gap: var(--space-3) var(--space-6);
+  padding: var(--space-4) var(--space-6) var(--space-3);
+  border-block-end: 1px solid var(--border);
+}
+
+.close {
+  position: absolute;
+  inset-block-start: var(--space-2);
+  inset-inline-end: var(--space-2);
+  z-index: 1;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-inline-end: 3rem;
+}
+
+.symbol {
+  display: grid;
+  place-items: center;
+  flex: none;
+  inline-size: 4.5rem;
+  block-size: 4.5rem;
+  border-radius: var(--radius);
+  background: var(--fill);
+  color: var(--tile-ink);
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.name {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.z {
+  color: var(--text-muted);
+  font-family: var(--font-num);
+  font-size: 0.55em;
+  font-weight: 500;
+}
+
+.meta,
+.muted {
+  margin: var(--space-1) 0 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.photos {
+  grid-row: span 2;
+  min-inline-size: 0;
+}
+
+.prose {
+  max-inline-size: 70ch;
+  font-size: 0.9375rem;
+}
+
+.prose p {
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3) 0;
+}
+
+.step {
+  flex: none;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  flex: 1;
+  gap: var(--space-1);
+  min-inline-size: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.tab {
+  flex: none;
+  min-block-size: 2.5rem;
+  padding: 0 var(--space-3);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tab[aria-selected="true"] {
+  border-color: var(--border);
+  background: var(--surface-raised);
+  color: var(--text);
+  box-shadow: inset 0 -3px 0 var(--focus);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding-block: var(--space-2);
+}
+
+.dots span {
+  inline-size: 6px;
+  block-size: 6px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.dots span[data-current] {
+  background: var(--focus);
+}
+
+/* The panel strip: one panel per snap point, so swipes work without script (SPEC §9.2). */
+.strip {
+  display: flex;
+  flex: 1;
+  min-block-size: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.panel {
+  flex: 0 0 100%;
+  min-inline-size: 0;
+  overflow-y: auto;
+  padding: var(--space-3) var(--space-6) var(--space-8);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overscroll-behavior-y: contain;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 1.375rem;
+}
+
+.summary {
+  margin: var(--space-1) 0 var(--space-4);
+  color: var(--text-muted);
+}
+
+/* Phone: a full-height bottom sheet. */
+@media (max-width: 40rem) {
+  .sheet {
+    inline-size: 100vw;
+    max-inline-size: 100vw;
+    block-size: 100dvh;
+    max-block-size: 100dvh;
+    margin: auto 0 0;
+    border-radius: calc(var(--radius) * 2) calc(var(--radius) * 2) 0 0;
+    border-block-end: 0;
+  }
+  :root[data-motion="full"] .sheet[open] {
+    transition: translate 260ms ease-out;
+    @starting-style {
+      translate: 0 100%;
+    }
+  }
+  .header {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--space-3) var(--space-4) var(--space-2);
+  }
+  .photos {
+    grid-row: auto;
+  }
+  .symbol {
+    inline-size: 3.5rem;
+    block-size: 3.5rem;
+    font-size: 2rem;
+  }
+  .panel {
+    padding: var(--space-3) var(--space-4) var(--space-8);
+  }
+  .prose {
+    font-size: 0.875rem;
+  }
+}

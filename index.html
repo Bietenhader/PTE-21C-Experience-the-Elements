@@ -7,6 +7,9 @@
     <meta name="color-scheme" content="dark" />
     <meta name="description" content="PTE-21C — Experience the Elements: a quantum-aware, photographic periodic table where every number has a source." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- The table needs these before it can draw; fetch them alongside the script (SPEC §13.4). -->
+    <link rel="preload" href="/data/index.json" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/data/layouts/standard18.json" as="fetch" crossorigin="anonymous" />
     <title>PTE-21C — Experience the Elements</title>
   </head>
   <body>

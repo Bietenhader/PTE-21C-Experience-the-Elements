@@ -21,7 +21,11 @@
   color: var(--tile-ink);
   font: inherit;
   text-align: start;
-  cursor: default;
+  cursor: pointer;
+  /* Long-press peeks at the hover card on touch screens (SPEC §9.1): no text selection or callout. */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
   transition: outline-color 120ms ease-out;
   outline: 2px solid transparent;
   outline-offset: -1px;
@@ -77,7 +81,8 @@
 .name,
 .config,
 .hfs,
-.block {
+.block,
+.value {
   display: none;
 }
 
@@ -228,6 +233,99 @@
   font-style: italic;
 }
 
+/* --- Heatmap and map faces (SPEC §8.2, §8.3): value instead of the detailed fields ---------- */
+
+.tile[data-face] {
+  color: var(--face-ink, var(--tile-ink));
+}
+
+.tile[data-face] .weight,
+.tile[data-face] .ieen,
+.tile[data-face] .ox,
+.tile[data-face] .name,
+.tile[data-face] .config,
+.tile[data-face] .hfs {
+  display: none;
+}
+
+.tile[data-face] .inner {
+  grid-template: "z" auto "symbol" 1fr / 1fr;
+}
+
+.tile[data-face] [data-missing] {
+  color: inherit;
+}
+
+/* No value: hatched, and the tile names the reason (never a blank, a zero or a dash). */
+.tile[data-face-missing] {
+  background: repeating-linear-gradient(135deg, var(--hatch-a) 0 4px, var(--hatch-b) 4px 8px);
+  color: var(--tile-ink);
+}
+
+.value {
+  grid-area: value;
+  justify-self: center;
+  max-inline-size: 100%;
+  overflow: hidden;
+  font-weight: 600;
+  font-stretch: 87.5%;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+/* Maps on small tiles: the class label takes the place of Z, so colour is never the only cue. */
+.tile[data-face="map"] .inner {
+  grid-template: "value" auto "symbol" 1fr / 1fr;
+}
+.tile[data-face="map"] .z {
+  display: none;
+}
+.tile[data-face="map"] .value {
+  display: block;
+  justify-self: start;
+  font-size: 22cqi;
+}
+
+@container tile (min-width: 40px) {
+  .tile[data-face] .inner {
+    grid-template: "z" auto "symbol" 1fr "value" auto / 1fr;
+  }
+  .tile[data-face] .z {
+    display: flex;
+  }
+  .tile[data-face] .value {
+    display: block;
+    justify-self: center;
+    font-size: 17cqi;
+  }
+}
+
+@container tile (min-width: 110px) {
+  .tile[data-face] .symbol {
+    justify-self: center;
+    align-self: center;
+    font-size: 30cqi;
+  }
+  .tile[data-face] .value {
+    font-size: 13cqi;
+  }
+}
+
+/* --- Search (SPEC §7.4): matches keep their colour, the rest recede to the page colour ------ */
+
+.tile[data-match="false"] {
+  --fill: var(--surface);
+  color: var(--text-muted);
+  background: var(--surface);
+}
+.tile[data-match="false"]::after {
+  opacity: 0.35;
+}
+.tile[data-match="true"] {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+
 .config sup,
 .hfs sup {
   font-size: 0.72em;
@@ -252,6 +350,9 @@
 @media (forced-colors: active) {
   .tile {
     border-color: CanvasText;
+  }
+  .tile[data-match="false"] {
+    border-style: dotted;
   }
   .tile::after {
     background: CanvasText;

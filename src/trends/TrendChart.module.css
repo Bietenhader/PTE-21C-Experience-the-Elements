@@ -1,0 +1,71 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.chart {
+  margin-block-start: var(--space-3);
+}
+
+.chart svg {
+  display: block;
+  max-inline-size: 100%;
+  overflow: visible;
+}
+
+.caption {
+  margin: 0 0 var(--space-2);
+  max-inline-size: 75ch;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.axis text {
+  fill: var(--text-muted);
+  font-family: var(--font-num);
+  font-size: 11px;
+}
+
+.grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.line {
+  fill: none;
+  stroke: var(--link);
+  stroke-width: 1.5;
+}
+
+.dot {
+  fill: var(--link);
+}
+
+.hollow {
+  fill: var(--surface);
+  stroke: var(--link);
+  stroke-width: 1.5;
+}
+
+.toggle {
+  margin-block-start: var(--space-2);
+  min-block-size: 2.25rem;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.table {
+  margin-block-start: var(--space-2);
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th,
+.table td {
+  padding: 0.2rem 0.6rem;
+  border-block-end: 1px solid var(--border);
+  text-align: start;
+}

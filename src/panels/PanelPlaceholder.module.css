@@ -1,0 +1,28 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.placeholder {
+  max-inline-size: 60ch;
+  color: var(--text);
+}
+
+.placeholder ul {
+  padding-inline-start: 1.25rem;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 var(--space-3);
+  padding: 0.1rem 0.6rem;
+  border: 1px dashed var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.footer {
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}

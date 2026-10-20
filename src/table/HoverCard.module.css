@@ -1,0 +1,71 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.card {
+  z-index: 50;
+  display: grid;
+  gap: var(--space-2);
+  inline-size: min(20rem, calc(100vw - 1rem));
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  color: var(--text);
+  box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 0.45);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.symbol {
+  display: grid;
+  place-items: center;
+  inline-size: 3rem;
+  block-size: 3rem;
+  border-radius: 3px;
+  background: var(--fill, var(--cat-unknown));
+  color: var(--tile-ink);
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.card p {
+  margin: 0;
+}
+
+.name {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.meta,
+.footer {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.fact {
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.footer {
+  padding-block-start: var(--space-1);
+  border-block-start: 1px solid var(--border);
+}
+
+.card[data-category="alkali-metal"] { --fill: var(--cat-alkali-metal); }
+.card[data-category="alkaline-earth-metal"] { --fill: var(--cat-alkaline-earth-metal); }
+.card[data-category="lanthanide"] { --fill: var(--cat-lanthanide); }
+.card[data-category="actinide"] { --fill: var(--cat-actinide); }
+.card[data-category="transition-metal"] { --fill: var(--cat-transition-metal); }
+.card[data-category="post-transition-metal"] { --fill: var(--cat-post-transition-metal); }
+.card[data-category="metalloid"] { --fill: var(--cat-metalloid); }
+.card[data-category="reactive-nonmetal"] { --fill: var(--cat-reactive-nonmetal); }
+.card[data-category="noble-gas"] { --fill: var(--cat-noble-gas); }
+.card[data-category="unknown"] { --fill: var(--cat-unknown); }

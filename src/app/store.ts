@@ -108,10 +108,8 @@ export const useSettings = create<Settings & SettingsActions>()(
       name: "pte-21c.settings",
       version: 1,
       storage: createJSONStorage(() => safeStorage),
-      partialize: (s) => {
-        const { set: _set, reset: _reset, ...settings } = s;
-        return settings;
-      },
+      partialize: (s) =>
+        Object.fromEntries(Object.keys(DEFAULT_SETTINGS).map((k) => [k, s[k as keyof Settings]])) as unknown as Settings,
       merge: (saved, current) => ({ ...current, ...sanitizeSettings(saved) }),
     },
   ),

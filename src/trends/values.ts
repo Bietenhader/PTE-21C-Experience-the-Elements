@@ -19,12 +19,14 @@ export interface Present {
   value: number;
   unit: string;
   /** NIST-style marker: interpolated values in [ ], calculated in ( ). */
-  flag?: Quantity["flag"];
+  flag?: Quantity["flag"] | undefined;
   source: string;
-  note?: string;
+  note?: string | undefined;
   /** Short text for the tile. */
   text: string;
-  /** Full sentence for screen readers and tooltips. */
+  /** The value in words, with unit and flags: "375.7 kJ/mol". */
+  detail: string;
+  /** Full sentence for screen readers and tooltips: "<label>: <detail>". */
   long: string;
 }
 
@@ -32,6 +34,7 @@ export interface Absent {
   ok: false;
   missing: Missing;
   text: string;
+  detail: string;
   long: string;
 }
 
@@ -88,15 +91,16 @@ function display(q: Quantity, h: Heatmap, units: Units): { value: number; unit: 
 export function heatValue(e: ElementIndexEntry, h: Heatmap, units: Units): HeatValue {
   const q = rawQuantity(e, h.field);
   if (isMissing(q)) {
-    return { ok: false, missing: q, text: MISSING_TEXT[q.reason].short, long: `${h.label}: ${describeMissing(q)}` };
+    const detail = describeMissing(q);
+    return { ok: false, missing: q, text: MISSING_TEXT[q.reason].short, detail, long: `${h.label}: ${detail}` };
   }
   const { value, unit } = display(q, h, units);
   let text = formatValue(value, unit as Unit | EnergyUnit | TemperatureUnit);
   if (q.flag === "interpolated") text = `[${text}]`;
   if (q.flag === "calculated" && !h.field.startsWith("computed:")) text = `(${text})`;
   const flagWord = q.flag && q.flag !== "measured" ? `, ${q.flag}` : "";
-  const long = `${h.label}: ${formatLong(value, unit)}${flagWord}${q.note ? ` (${q.note})` : ""}`;
-  return { ok: true, value, unit, flag: q.flag, source: q.source, note: q.note, text, long };
+  const detail = `${formatLong(value, unit)}${flagWord}${q.note ? ` (${q.note})` : ""}`;
+  return { ok: true, value, unit, flag: q.flag, source: q.source, note: q.note, text, detail, long: `${h.label}: ${detail}` };
 }
 
 export function series(elements: ElementIndexEntry[], h: Heatmap, units: Units): SeriesPoint[] {

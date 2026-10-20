@@ -16,7 +16,7 @@ import {
   tileNumber,
 } from "../data/format";
 import type { Category, ElementIndexEntry, Missing, SourcesFile, Subshell } from "../data/types";
-import { kjPerMolToEv } from "../physics/units";
+import { type EnergyUnit, kjPerMolToEv } from "../physics/units";
 
 export const CATEGORY_NAME: Record<Category, string> = {
   "alkali-metal": "alkali metal",
@@ -90,12 +90,12 @@ function weight(e: ElementIndexEntry, sources: Sources): Field {
   };
 }
 
-function ionization(e: ElementIndexEntry, sources: Sources): Field {
+function ionization(e: ElementIndexEntry, sources: Sources, unit: EnergyUnit): Field {
   const q = e.ie1;
   if (isMissing(q)) return missingField(q, "First ionization energy");
-  const v = tileNumber(q.value, 1);
-  const text = q.flag === "interpolated" ? `[${v}]` : q.flag === "calculated" ? `(${v})` : v;
   const ev = kjPerMolToEv(q.value);
+  const v = unit === "eV" ? tileNumber(ev, 2) : tileNumber(q.value, 1);
+  const text = q.flag === "interpolated" ? `[${v}]` : q.flag === "calculated" ? `(${v})` : v;
   return {
     text,
     title:
@@ -158,9 +158,9 @@ function configuration(e: ElementIndexEntry, sources: Sources): TileText["config
   };
 }
 
-export function tileText(e: ElementIndexEntry, sources: Sources): TileText {
+export function tileText(e: ElementIndexEntry, sources: Sources, energyUnit: EnergyUnit = "kJ/mol"): TileText {
   const w = weight(e, sources);
-  const ie = ionization(e, sources);
+  const ie = ionization(e, sources, energyUnit);
   const en = electronegativity(e, sources);
   const hfs = hyperfine(e, sources);
   const config = configuration(e, sources);
@@ -182,6 +182,7 @@ export function tileText(e: ElementIndexEntry, sources: Sources): TileText {
     `${config.title}.`,
     `${hfs.title}.`,
     e.radioactive ? "Radioactive: no stable isotope." : "",
+    `${e.quantumFact}.`,
   ];
   return {
     weight: w,

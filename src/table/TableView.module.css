@@ -1,0 +1,76 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.figure {
+  position: relative;
+  margin: 0;
+}
+
+.zoomBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  margin: 0 var(--space-2) var(--space-2);
+}
+
+.zoomBar button {
+  min-inline-size: 2.25rem;
+  min-block-size: 2.25rem;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.zoomBar button:hover {
+  background: var(--surface-raised);
+}
+
+.zoomBar button[aria-pressed="true"] {
+  border-color: var(--focus);
+}
+
+.percent {
+  min-inline-size: 3.5em;
+  color: var(--text-muted);
+  font-family: var(--font-num);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+/* Pan = native scrolling. Pinch is ours (touch-action leaves it to us); one-finger pans stay native. */
+.viewport {
+  overflow-x: auto;
+  overflow-y: clip;
+  padding-block: var(--space-2) var(--space-3);
+  touch-action: pan-x pan-y;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+
+.content {
+  position: relative;
+  inline-size: max-content;
+  min-inline-size: 100%;
+}
+
+.ghosts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.caption {
+  max-inline-size: 70ch;
+  margin: var(--space-2) auto 0;
+  padding-inline: var(--space-4);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}

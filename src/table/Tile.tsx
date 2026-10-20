@@ -2,10 +2,13 @@
 // One element tile (SPEC §7.1). Progressive disclosure is pure CSS (container queries in
 // Tile.module.css): ≥ 110 px every reference-table field, 60–110 px Z/symbol/name/configuration,
 // < 60 px Z and symbol. The accessible name and description always carry every field.
+// While a heatmap or map is active the tile shows its value instead (a "face", see face.ts).
 
-import { type CSSProperties, Fragment, useId } from "react";
+import { type CSSProperties, Fragment, memo, useId } from "react";
 import type { ElementIndexEntry, SourcesFile } from "../data/types";
 import { L_LETTERS } from "../physics/madelung";
+import type { EnergyUnit } from "../physics/units";
+import type { Face } from "./face";
 import styles from "./Tile.module.css";
 import { tileText } from "./tileText";
 
@@ -15,11 +18,16 @@ interface TileProps {
   style?: CSSProperties;
   /** "key" renders a non-interactive copy for the "how to read a tile" legend. */
   variant?: "table" | "key";
+  energyUnit?: EnergyUnit;
+  face?: Face | undefined;
+  /** Search: true = matches, false = does not, undefined = no search. */
+  match?: boolean | undefined;
 }
 
-export function Tile({ element: e, sources, style, variant = "table" }: TileProps) {
-  const t = tileText(e, sources);
+export const Tile = memo(function Tile({ element: e, sources, style, variant = "table", energyUnit = "kJ/mol", face, match }: TileProps) {
+  const t = tileText(e, sources, energyUnit);
   const descId = useId();
+  const faceId = useId();
   const oxCount = t.ox.states.length;
   const oxRows = oxCount > 7 ? Math.ceil(oxCount / 2) : Math.max(1, oxCount);
   const body = (
@@ -68,6 +76,11 @@ export function Tile({ element: e, sources, style, variant = "table" }: TileProp
         )}
       </span>
       <span className={styles.block}>{e.block}</span>
+      {face && (
+        <span className={styles.value} data-field="value" data-missing={face.missing || undefined}>
+          {face.text}
+        </span>
+      )}
     </span>
   );
 
@@ -85,17 +98,26 @@ export function Tile({ element: e, sources, style, variant = "table" }: TileProp
       data-category={e.category}
       data-block={e.block}
       data-z={e.Z}
-      style={style}
-      aria-label={t.label}
-      aria-describedby={descId}
+      data-face={face?.kind}
+      data-face-missing={face?.missing || undefined}
+      data-match={match === undefined ? undefined : String(match)}
+      style={face ? ({ ...style, "--fill": face.fill, "--face-ink": face.ink } as CSSProperties) : style}
+      title={face ? face.description : undefined}
+      aria-label={`${t.label} Press Enter for details.`}
+      aria-describedby={face ? `${descId} ${faceId}` : descId}
     >
       {body}
       <span id={descId} hidden>
         {t.description}
       </span>
+      {face && (
+        <span id={faceId} hidden>
+          {face.description}
+        </span>
+      )}
     </button>
   );
-}
+});
 
 /** Radiation trefoil, drawn rather than taken from a font so it renders everywhere. */
 export function Trefoil() {

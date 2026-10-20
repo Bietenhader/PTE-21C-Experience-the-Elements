@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# CI (SPEC §17.2): validates the committed data and runs every test. It never fetches data
+# from the internet — the pipeline is a developer tool run locally (tools/pipeline.command).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    name: App — lint, types, unit tests, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - name: Generated types match the schema
+        run: npm run check:types
+      - name: Dependency licences (no GPL/AGPL/LGPL; permissive when shipped)
+        run: npm run check:licences
+      - run: npm test
+      - run: npm run build
+
+  data:
+    name: Data — schema, provenance, coverage, golden values
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: tools/requirements-dev.txt
+      - run: pip install -r tools/requirements-dev.txt
+      - run: ruff check tools
+      - run: ruff format --check tools
+      - run: pytest
+        working-directory: tools
+      - name: PROVENANCE.md and CREDITS.md are current; licence audit
+        run: python tools/report.py --check
+
+  e2e:
+    name: End-to-end (Playwright, Chromium desktop + phone)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+        env:
+          CI: "true"
+      - if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: playwright-report
+          path: playwright-report
+          retention-days: 14

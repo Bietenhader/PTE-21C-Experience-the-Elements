@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Element-name overrides. PubChem uses U.S. spellings; the app shows IUPAC's.
+# One row per element whose IUPAC name differs from PubChem's; every row needs a source.
+
+[[row]]
+Z = 13
+name = "Aluminium"
+source = "iupac_redbook_2005"
+note = "PubChem: Aluminum"
+
+[[row]]
+Z = 55
+name = "Caesium"
+source = "iupac_redbook_2005"
+note = "PubChem: Cesium"

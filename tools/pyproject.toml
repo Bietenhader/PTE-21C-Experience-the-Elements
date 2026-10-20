@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# Configuration for the PTE-21C data pipeline (tools/). Dependencies: requirements*.txt.
+
+[project]
+name = "pte21c-tools"
+version = "0.1.0"
+description = "Data pipeline for PTE-21C — Experience the Elements"
+requires-python = ">=3.11"
+license = { text = "CC-BY-NC-SA-4.0" }
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = [".venv", "raw"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "RUF"]
+ignore = [
+  "RUF001", "RUF002", "RUF003",  # Greek letters, superscripts and minus signs are intended
+  "E741",  # `l` is the orbital quantum number throughout
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

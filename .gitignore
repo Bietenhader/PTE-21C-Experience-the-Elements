@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Test output
+test-results/
+playwright-report/
+coverage/
+
+# Python pipeline: raw responses are cached locally, never committed (SPEC §6.1)
+tools/raw/
+tools/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Editors and OS
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,43 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.quantity {
+  font-variant-numeric: tabular-nums;
+}
+
+.value {
+  white-space: nowrap;
+}
+
+.flag {
+  margin-inline-start: 0.4em;
+  padding: 0 0.35em;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.75em;
+}
+
+.chip {
+  display: inline-block;
+  max-inline-size: 100%;
+  padding: 0 0.45em;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-raised);
+  color: var(--text-muted);
+  font-size: 0.75em;
+  line-height: 1.6;
+  vertical-align: 0.1em;
+}
+
+.missing {
+  color: var(--text-muted);
+}
+
+.reason {
+  font-style: italic;
+}
+
+.note {
+  font-size: 0.875em;
+}

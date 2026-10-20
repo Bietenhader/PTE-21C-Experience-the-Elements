@@ -1,0 +1,74 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Coverage thresholds (SPEC §13.1). tools/tests/test_coverage.py fails when a field covers fewer
+# elements than `min`. A threshold applies once `current_milestone` reaches its `milestone`; raise
+# current_milestone when a milestone starts, so the SPEC targets switch on with the data they need.
+
+current_milestone = 0
+
+[[threshold]]
+field = "configuration"
+min = 118
+milestone = 0
+note = "NIST for Z ≤ 108, published predictions (flagged) for Z ≥ 109"
+
+[[threshold]]
+field = "configuration_nist"
+min = 108
+milestone = 0
+note = "NIST ASD lists neutral ground states up to Z = 108"
+
+[[threshold]]
+field = "groundTerm"
+min = 108
+milestone = 0
+
+[[threshold]]
+field = "groundTerm"
+min = 118
+milestone = 2
+note = "SPEC §13.1 target. NIST stops at Z = 108; needs a cited source of predicted ground levels for Z ≥ 109 (see STATUS.md)"
+
+[[threshold]]
+field = "ie1"
+min = 108
+milestone = 0
+
+[[threshold]]
+field = "ie1"
+min = 110
+milestone = 2
+note = "SPEC §13.1 target. NIST stops at Z = 108 (see STATUS.md)"
+
+[[threshold]]
+field = "atomicWeightOrMassNumber"
+min = 118
+milestone = 0
+
+[[threshold]]
+field = "oxidationStates"
+min = 117
+milestone = 0
+note = "PubChem lists none for nihonium"
+
+[[threshold]]
+field = "electronegativityPauling"
+min = 95
+milestone = 0
+note = "regression guard at the M0 level, not a SPEC target"
+
+[[threshold]]
+field = "images"
+min = 118
+milestone = 2
+note = "≥ 1 image or placeholder per element"
+
+[[threshold]]
+field = "isotopes"
+min = 118
+milestone = 2
+
+[[threshold]]
+field = "visibleLines"
+min = 90
+milestone = 2

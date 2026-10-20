@@ -342,9 +342,11 @@
   margin-inline-end: 0.15em;
 }
 
+/* ◆ and † come from the system font: neither is in the latin subset of the web fonts, and pulling
+   in a 47 kB extended subset for one dagger would slow the first paint. */
 .anomaly {
   margin-inline-start: 0.25em;
-  font-family: var(--font-num);
+  font-family: system-ui, sans-serif;
 }
 
 @media (forced-colors: active) {

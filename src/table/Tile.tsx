@@ -22,9 +22,16 @@ interface TileProps {
   face?: Face | undefined;
   /** Search: true = matches, false = does not, undefined = no search. */
   match?: boolean | undefined;
+  /**
+   * Which fields to render: 0 Z and symbol, 1 adds name and configuration, 2 everything. The CSS
+   * container queries decide what shows; the table passes the level its tile width allows so small
+   * tiles do not carry hidden markup (118 tiles × ~30 nodes matter on a phone).
+   */
+  detail?: 0 | 1 | 2;
 }
 
-export const Tile = memo(function Tile({ element: e, sources, style, variant = "table", energyUnit = "kJ/mol", face, match }: TileProps) {
+export const Tile = memo(function Tile(props: TileProps) {
+  const { element: e, sources, style, variant = "table", energyUnit = "kJ/mol", face, match, detail = 2 } = props;
   const t = tileText(e, sources, energyUnit);
   const descId = useId();
   const faceId = useId();
@@ -32,50 +39,78 @@ export const Tile = memo(function Tile({ element: e, sources, style, variant = "
   const oxRows = oxCount > 7 ? Math.ceil(oxCount / 2) : Math.max(1, oxCount);
   const body = (
     <span className={styles.inner} aria-hidden="true" style={{ "--ox-rows": oxRows } as CSSProperties}>
-      <span className={styles.weight} data-field="weight" data-missing={t.weight.missing || undefined} title={t.weight.title}>
-        {t.weight.text}
-      </span>
+      {detail >= 2 && (
+        <span
+          className={styles.weight}
+          data-field="weight"
+          data-missing={t.weight.missing || undefined}
+          title={t.weight.title}
+        >
+          {t.weight.text}
+        </span>
+      )}
       <span className={styles.z} data-field="z">
         {e.radioactive && <Trefoil />}
         {e.Z}
       </span>
-      <span className={styles.ieen}>
-        <span data-field="ie1" data-missing={t.ie.missing || undefined} title={t.ie.title}>
-          {t.ie.text}
-        </span>
-        <span data-field="en" data-missing={t.en.missing || undefined} title={t.en.title}>
-          {t.en.text}
-        </span>
+      {detail >= 2 && (
+        <>
+          <span className={styles.ieen}>
+            <span data-field="ie1" data-missing={t.ie.missing || undefined} title={t.ie.title}>
+              {t.ie.text}
+            </span>
+            <span data-field="en" data-missing={t.en.missing || undefined} title={t.en.title}>
+              {t.en.text}
+            </span>
+          </span>
+          <span className={styles.ox} data-field="ox" title={t.ox.title}>
+            {t.ox.states.map((s) => (s.common ? <b key={s.text}>{s.text}</b> : <span key={s.text}>{s.text}</span>))}
+          </span>
+        </>
+      )}
+      <span className={styles.symbol} data-field="symbol">
+        {e.symbol}
       </span>
-      <span className={styles.ox} data-field="ox" title={t.ox.title}>
-        {t.ox.states.map((s) => (s.common ? <b key={s.text}>{s.text}</b> : <span key={s.text}>{s.text}</span>))}
-      </span>
-      <span className={styles.symbol} data-field="symbol">{e.symbol}</span>
-      <span className={styles.name} data-field="name">{e.name}</span>
-      <span className={styles.config} data-field="config" title={t.config.title} data-predicted={t.config.predicted || undefined}>
-        {t.config.core && <span className={styles.core}>[{t.config.core}]</span>}
-        {t.config.subshells.map((s) => (
-          <Fragment key={`${s.n}${s.l}`}>
-            {s.n}
-            {L_LETTERS[s.l]}
-            <sup>{s.occupancy}</sup>
-          </Fragment>
-        ))}
-        {t.config.anomalous && <span className={styles.anomaly}>◆</span>}
-        {t.config.predicted && <span className={styles.anomaly}>†</span>}
-      </span>
-      <span className={styles.hfs} data-field="hfs" data-missing={t.hfs.missing || undefined} title={t.hfs.title}>
-        {t.hfs.missing ? (
-          t.hfs.text
-        ) : (
-          <>
-            <i>ν</i>
-            <sub>hfs</sub> {t.hfs.text} · <sup>{t.hfs.isotope}</sup>
-            {e.symbol}
-          </>
-        )}
-      </span>
-      <span className={styles.block}>{e.block}</span>
+      {detail >= 1 && (
+        <>
+          <span className={styles.name} data-field="name">
+            {e.name}
+          </span>
+          <span
+            className={styles.config}
+            data-field="config"
+            title={t.config.title}
+            data-predicted={t.config.predicted || undefined}
+          >
+            {t.config.core && <span className={styles.core}>[{t.config.core}]</span>}
+            {t.config.subshells.map((s) => (
+              <Fragment key={`${s.n}${s.l}`}>
+                {s.n}
+                {L_LETTERS[s.l]}
+                <sup>{s.occupancy}</sup>
+              </Fragment>
+            ))}
+            {t.config.anomalous && <span className={styles.anomaly}>◆</span>}
+            {t.config.predicted && <span className={styles.anomaly}>†</span>}
+          </span>
+        </>
+      )}
+      {detail >= 2 && (
+        <>
+          <span className={styles.hfs} data-field="hfs" data-missing={t.hfs.missing || undefined} title={t.hfs.title}>
+            {t.hfs.missing ? (
+              t.hfs.text
+            ) : (
+              <>
+                <i className="system-glyph">ν</i>
+                <sub>hfs</sub> {t.hfs.text} · <sup>{t.hfs.isotope}</sup>
+                {e.symbol}
+              </>
+            )}
+          </span>
+          <span className={styles.block}>{e.block}</span>
+        </>
+      )}
       {face && (
         <span className={styles.value} data-field="value" data-missing={face.missing || undefined}>
           {face.text}
@@ -86,7 +121,14 @@ export const Tile = memo(function Tile({ element: e, sources, style, variant = "
 
   if (variant === "key") {
     return (
-      <div className={styles.tile} data-category={e.category} data-block={e.block} style={style} role="img" aria-label={`${t.label} ${t.description}`}>
+      <div
+        className={styles.tile}
+        data-category={e.category}
+        data-block={e.block}
+        style={style}
+        role="img"
+        aria-label={`${t.label} ${t.description}`}
+      >
         {body}
       </div>
     );

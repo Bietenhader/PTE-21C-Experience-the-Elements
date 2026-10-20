@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/prerender.tsx --outDir dist-ssr && node tools/prerender.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
@@ -24,7 +24,8 @@
     "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
     "gen:types": "node tools/gen-types.mjs",
     "check:types": "node tools/gen-types.mjs --check",
-    "check:licences": "node tools/check-licences.mjs"
+    "check:licences": "node tools/check-licences.mjs",
+    "lighthouse": "node tools/lighthouse.mjs"
   },
   "dependencies": {
     "@floating-ui/react-dom": "2.1.9",
@@ -53,6 +54,7 @@
     "eslint-plugin-react-hooks": "7.1.1",
     "globals": "17.13.0",
     "json-schema-to-typescript": "16.0.0",
+    "lighthouse": "13.5.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.72.0",
     "vite": "8.3.4",

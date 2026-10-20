@@ -6,6 +6,18 @@
   inline-size: max-content;
   margin-inline: auto;
   --tile-h: calc(var(--tile-w) * var(--tile-aspect));
+  /* Fit to width in CSS, used until the viewport has been measured (and by the prerendered page):
+     the same arithmetic as fitTileWidth() in zoom.ts, against the viewport's width (100cqi). */
+  --fit-w: min(
+    9rem,
+    max(
+      24px,
+      calc(
+        (100cqi - var(--label-cols) * var(--label-track) - (var(--tile-cols) + var(--label-cols) - 1) * var(--tile-gap)) /
+          var(--tile-cols)
+      )
+    )
+  );
 }
 
 /* Room for the trend arrows (SPEC §8.1) above and on both sides of the table. */

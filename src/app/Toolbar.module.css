@@ -103,8 +103,11 @@
   font-size: 0.9375rem;
 }
 
+/* The title face: its subset has no Greek, so the "Zα" option does not fetch a Greek subset at start. */
 .select {
   max-inline-size: min(22rem, 100%);
+  font-family: var(--font-title);
+  font-size: 1rem;
 }
 
 .searchGroup {

@@ -20,7 +20,8 @@ interface Props {
   layout: LayoutFile;
   group3: Group3;
   sources: SourcesFile["sources"];
-  tileWidth: number;
+  /** CSS px; null before the viewport has been measured (the prerendered page): fit in CSS. */
+  tileWidth: number | null;
   energyUnit: EnergyUnit;
   faces: Faces | null;
   /** Search matches; null when no search is active. */
@@ -43,14 +44,23 @@ export function PeriodicTable(props: Props) {
     if (gridRef.current) playMorph(gridRef.current, ghosts.current, reduced);
   }, [layout.id, group3, ghosts, reduced]);
 
+  const tileCols = g.columns.filter((t) => t === "tile").length;
   const gridStyle = {
-    "--tile-w": `${tileWidth}px`,
-    "--tile-aspect": tileAspect(tileWidth),
+    "--tile-cols": tileCols,
+    "--label-cols": g.columns.length - tileCols,
+    "--tile-w": tileWidth === null ? "var(--fit-w)" : `${tileWidth}px`,
+    "--tile-aspect": tileAspect(tileWidth ?? 0),
     gridTemplateColumns: g.columns.map((t) => (t === "tile" ? "var(--tile-w)" : "var(--label-track)")).join(" "),
     gridTemplateRows: g.rows
       .map((t) => (t === "tile" ? "var(--tile-h)" : t === "gap" ? "calc(var(--tile-h) * 0.3)" : "auto"))
       .join(" "),
   } as CSSProperties;
+
+  // Fields the tile width can show (the container queries in Tile.module.css measure the content
+  // box, 2 px narrower than the tile; one more pixel of margin keeps the two in step).
+  // Width not yet known (prerendering): the middle level, which fits the common screen sizes.
+  const inner = tileWidth === null ? 100 : tileWidth - 2;
+  const detail = inner >= 109 ? 2 : inner >= 59 ? 1 : 0;
 
   const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
     const dir = KEY_DIRECTION[e.key];
@@ -100,6 +110,7 @@ export function PeriodicTable(props: Props) {
             energyUnit={energyUnit}
             face={faces?.get(e.Z)}
             match={matches ? matches.has(e.Z) : undefined}
+            detail={detail}
             style={cellStyle(g.col(cell.col), g.row(cell.row))}
           />
         );

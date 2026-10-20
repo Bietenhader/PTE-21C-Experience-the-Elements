@@ -106,12 +106,13 @@ export function Legend({ elements, variant, sources, energyUnit = "kJ/mol", keyS
               <dd>
                 Measured ground-state configuration in noble-gas notation (
                 <SourceChip id="nist_gsie" sources={sources} />
-                ). <b>◆</b> means it differs from the Aufbau (Madelung) prediction; <b>†</b> marks a prediction for
+                ). <b>◆</b> means it differs from the Aufbau (Madelung) prediction; <b className="system-glyph">†</b> marks a prediction for
                 elements no one has measured.
               </dd>
               <dt>Bottom line</dt>
               <dd>
-                Ground-state hyperfine splitting ν<sub>hfs</sub> of the reference isotope — for caesium-133 it
+                Ground-state hyperfine splitting <i className="system-glyph">ν</i>
+                <sub>hfs</sub> of the reference isotope — for caesium-133 it
                 defines the SI second. Otherwise the reason it is absent: <i>no hfs (I = 0)</i> or{" "}
                 <i>no hfs (J = 0)</i> when physics forbids it, <i>hfs: no stable isotope</i>, or <i>hfs n/m</i>{" "}
                 when the value is not yet in our curated table.

@@ -1,6 +1,9 @@
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
 
 .legend {
+  /* Below the fold on load: skip its rendering until it scrolls near (SPEC §13.4 budgets). */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 70rem;
   display: grid;
   gap: var(--space-6);
   max-inline-size: 72rem;

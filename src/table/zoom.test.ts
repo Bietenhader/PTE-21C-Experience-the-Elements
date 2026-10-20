@@ -7,7 +7,7 @@ const m = { rem: 16, gap: 3, labelTrack: 24 };
 describe("fit to width", () => {
   it("shares the width among the tile columns", () => {
     // 18 tiles + 1 label column, 18 gaps: (1200 − 24 − 54) / 18 = 62.33
-    expect(fitTileWidth(1200, { tileCols: 18, labelCols: 1 }, m)).toBe(62.25);
+    expect(fitTileWidth(1200, { tileCols: 18, labelCols: 1 }, m)).toBeCloseTo(62.333, 3);
   });
 
   it("never exceeds full size and never drops below the WCAG target minimum", () => {

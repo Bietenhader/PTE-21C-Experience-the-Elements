@@ -5,8 +5,10 @@ import { type BrowserContext, expect, type Page, type TestInfo } from "@playwrig
 
 export const tile = (page: Page, z: number) => page.locator(`button[data-z="${z}"]`);
 
+/** Opens the app and waits until the live app has replaced the prerendered table. */
 export async function open(page: Page, hash = "") {
   await page.goto(`./${hash}`);
+  await page.waitForSelector("html[data-ready]", { state: "attached" });
   await expect(page.locator("button[data-z]")).toHaveCount(118);
 }
 

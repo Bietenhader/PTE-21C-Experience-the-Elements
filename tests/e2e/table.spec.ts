@@ -88,7 +88,8 @@ test("every tile's accessible name contains its visible label: symbol and name (
     els.map((el) => ({
       label: el.getAttribute("aria-label") ?? "",
       symbol: el.querySelector('[data-field="symbol"]')?.textContent ?? "?",
-      name: el.querySelector('[data-field="name"]')?.textContent ?? "?",
+      // Small tiles show only the symbol; the name is then not part of the visible label.
+      name: el.querySelector('[data-field="name"]')?.textContent ?? "",
     })),
   );
   for (const p of pairs) {
@@ -102,4 +103,13 @@ test("axe: no critical or serious accessibility violations", async ({ page }) =>
   expect(await axeViolations(page), "compact").toEqual([]);
   await fullSize(page);
   expect(await axeViolations(page), "full size").toEqual([]);
+});
+
+test("the table is in the page before any script runs (prerendered, SPEC §13.4)", async ({ browser, baseURL }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto(baseURL ?? "");
+  await expect(page.locator("button[data-z]")).toHaveCount(118);
+  await expect(page.locator("#root[data-prerendered]")).toHaveCount(1);
+  await context.close();
 });

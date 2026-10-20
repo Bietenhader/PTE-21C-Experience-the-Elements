@@ -1,0 +1,37 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# Nightly end-to-end run on every browser (SPEC §13.3, §17.2): Chromium, Firefox and WebKit on
+# desktop, plus Android (Chromium) and iPhone (WebKit) emulation. Pushes and pull requests run
+# Chromium only (ci.yml); this catches engine-specific breakage within a day. It can also be
+# started by hand from the Actions tab ("Run workflow").
+name: Nightly browsers
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  e2e-all-browsers:
+    name: End-to-end (all browsers)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - run: npm run test:e2e
+        env:
+          CI: "true"
+          PW_ALL_BROWSERS: "1"
+      - if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: playwright-report-all-browsers
+          path: playwright-report
+          retention-days: 14

@@ -106,6 +106,12 @@ a {
   outline-offset: 2px;
 }
 
+/* A lone glyph outside the latin subsets of the web fonts (†, ν): drawn by the system font, so
+   showing it does not download a whole extra subset. */
+.system-glyph {
+  font-family: system-ui, sans-serif;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px;

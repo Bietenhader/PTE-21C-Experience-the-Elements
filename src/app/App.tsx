@@ -3,7 +3,7 @@
 // footer, the element sheet and the settings dialog.
 
 import { useCallback, useEffect, useMemo, useRef } from "react";
-import { useDataset } from "../data/load";
+import { type Dataset, useDataset } from "../data/load";
 import type { TrendsFile } from "../data/types";
 import { search } from "../search/query";
 import { ElementSheet } from "../sheet/ElementSheet";
@@ -21,13 +21,16 @@ import { useShortcuts } from "./useShortcuts";
 
 const REPO = "https://github.com/Bietenhader/PTE-21C-Experience-the-Elements";
 
-export function App() {
-  const state = useDataset();
-  const data = state.status === "ready" ? state.data : null;
+export type Boot = { data: Dataset } | { error: string };
+
+export function App({ boot }: { boot: Boot }) {
+  const layoutId = useSettings((s) => s.layout);
+  const loaded = useDataset("data" in boot ? boot.data : EMPTY_DATASET);
+  const data = "data" in boot ? loaded.data : null;
+  const problem = "error" in boot ? boot.error : loaded.problem;
   useRouteSync(data);
   useDocumentSettings();
 
-  const layoutId = useSettings((s) => s.layout);
   const group3 = useSettings((s) => s.group3);
   const energy = useSettings((s) => s.energyUnit);
   const temperature = useSettings((s) => s.temperatureUnit);
@@ -57,8 +60,12 @@ export function App() {
     [elements, query, units],
   );
   const matches = useMemo(() => (query.trim() ? new Set(result.matches) : null), [query, result]);
-  const active = useOverlay(overlay, data?.trends ?? EMPTY_TRENDS, elements ?? [], units);
+  const trends = data?.trends ?? EMPTY_TRENDS;
+  const active = useOverlay(overlay, trends, elements ?? [], units);
   const symbols = useMemo(() => (elements ?? []).map((e) => e.symbol), [elements]);
+  // A layout chosen before its file has arrived: keep showing the one we have.
+  const layout = data ? (data.layouts[layoutId] ?? Object.values(data.layouts)[0]) : undefined;
+  const variantKey = layout?.group3Sensitive ? group3 : "lu";
 
   return (
     <div className={styles.page}>
@@ -74,27 +81,24 @@ export function App() {
         </button>
       </header>
 
-      {data && (
-        <Toolbar trends={data.trends} symbols={symbols} search={result} searchRef={searchRef} trendRef={trendRef} />
-      )}
+      <Toolbar trends={trends} symbols={symbols} search={result} searchRef={searchRef} trendRef={trendRef} />
 
       <main className={styles.main}>
         <p className={styles.preview} role="note">
           Preview (milestone M1): layouts, trends, search, hover cards and the element sheet's frame work. Photographs,
           the panels' contents and the remaining data arrive in milestones M2–M4.
         </p>
-        {state.status === "loading" && <p className={styles.status}>Loading the elements…</p>}
-        {state.status === "error" && (
+        {problem && (
           <p className={styles.status} role="alert">
-            The data could not be loaded ({state.message}). Reload the page; if it persists, please open an issue.
+            Some data could not be loaded ({problem}). Reload the page; if it persists, please open an issue.
           </p>
         )}
-        {data && elements && (
+        {data && elements && layout && (
           <>
             <TableView
               elements={elements}
-              layout={data.layouts[layoutId]}
-              group3={data.layouts[layoutId].group3Sensitive ? group3 : "lu"}
+              layout={layout}
+              group3={variantKey}
               sources={data.sources.sources}
               energyUnit={energy}
               faces={active && active.kind !== "arrows" ? active.faces : null}
@@ -106,7 +110,7 @@ export function App() {
             {active && <TrendLegend active={active} elements={elements} sources={data.sources.sources} units={units} />}
             <Legend
               elements={elements}
-              variant={data.layouts[layoutId].variants[data.layouts[layoutId].group3Sensitive ? group3 : "lu"]}
+              variant={layout.variants[variantKey]}
               sources={data.sources.sources}
               energyUnit={energy}
             />
@@ -137,6 +141,12 @@ export function App() {
 }
 
 const EMPTY_TRENDS: TrendsFile = { schemaVersion: 1, arrows: [], heatmaps: [], maps: [] };
+const EMPTY_DATASET: Dataset = {
+  index: { schemaVersion: 1, elements: [] },
+  sources: { schemaVersion: 1, sources: {} },
+  layouts: {},
+  trends: EMPTY_TRENDS,
+};
 
 /** Theme, palette and the effective motion preference live on <html> for the CSS. */
 function useDocumentSettings() {
@@ -148,6 +158,7 @@ function useDocumentSettings() {
     root.dataset.theme = theme;
     root.dataset.palette = palette;
     root.dataset.motion = reduced ? "reduce" : "full";
+    root.dataset.ready = "true"; // the live app has replaced the prerendered page
     document.querySelector('meta[name="color-scheme"]')?.setAttribute("content", theme);
   }, [theme, palette, reduced]);
 }

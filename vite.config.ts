@@ -6,9 +6,10 @@ import { defineConfig } from "vitest/config";
 // `npm run preview` and the end-to-end tests exercise exactly what is deployed.
 export const PAGES_BASE = "/PTE-21C-Experience-the-Elements/";
 
-export default defineConfig(({ command, isPreview }) => ({
+export default defineConfig(({ command, isPreview, isSsrBuild }) => ({
   base: command === "build" || isPreview ? PAGES_BASE : "/",
   plugins: [react()],
-  build: { target: "es2022", sourcemap: true },
+  // The SSR build only produces tools/prerender.mjs's renderer (src/prerender.tsx).
+  build: { target: "es2022", sourcemap: !isSsrBuild, copyPublicDir: !isSsrBuild },
   test: { include: ["src/**/*.test.ts"], environment: "node" },
 }));

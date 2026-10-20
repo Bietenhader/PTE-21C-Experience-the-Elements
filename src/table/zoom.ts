@@ -30,7 +30,9 @@ export function clampTileWidth(w: number, m: Metrics): number {
 export function fitTileWidth(available: number, t: Tracks, m: Metrics): number {
   const tracks = t.tileCols + t.labelCols;
   const w = (available - t.labelCols * m.labelTrack - (tracks - 1) * m.gap) / t.tileCols;
-  return Math.min(TILE_FULL_REM * m.rem, Math.max(TILE_MIN_PX, Math.floor(w * 4) / 4));
+  // Exactly the CSS fallback in PeriodicTable.module.css (--fit-w), so nothing moves when the
+  // measured width takes over from it.
+  return Math.min(TILE_FULL_REM * m.rem, Math.max(TILE_MIN_PX, w));
 }
 
 /** Height ÷ width: small tiles need room for the symbol; full-size ones match the reference. */

@@ -91,8 +91,10 @@ export function TableView(props: Props) {
 
   const room = arrows ? 2.75 * metrics.rem * 2 : 0;
   const fit = fitTileWidth(Math.max(0, available - room), tracks, metrics);
-  const tileWidth = zoom.mode === "fit" ? fit : zoom.w;
   const full = TILE_FULL_REM * metrics.rem;
+  // Until the viewport is measured, the table fits to width in CSS (see PeriodicTable.module.css).
+  const measured = available > 0;
+  const tileWidth = zoom.mode === "fit" ? fit : zoom.w;
 
   const tileRef = useRef(tileWidth);
   useLayoutEffect(() => {
@@ -116,6 +118,11 @@ export function TableView(props: Props) {
     },
     [],
   );
+
+  // When the live table first paints (the prerendered copy marks "pte:table" earlier).
+  useEffect(() => {
+    requestAnimationFrame(() => requestAnimationFrame(() => performance.mark("pte:live-table")));
+  }, []);
 
   // After a zoom, scroll so the anchored tile is back under the pointer.
   useLayoutEffect(() => {
@@ -287,7 +294,7 @@ export function TableView(props: Props) {
             layout={layout}
             group3={group3}
             sources={sources}
-            tileWidth={tileWidth}
+            tileWidth={measured || zoom.mode === "manual" ? tileWidth : null}
             energyUnit={energyUnit}
             faces={faces}
             matches={matches}

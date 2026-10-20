@@ -1,11 +1,13 @@
 # Dependencies and build output
 node_modules/
 dist/
+dist-ssr/
 *.tsbuildinfo
 
 # Test output
 test-results/
 playwright-report/
+lighthouse-report/
 coverage/
 
 # Python pipeline: raw responses are cached locally, never committed (SPEC §6.1)

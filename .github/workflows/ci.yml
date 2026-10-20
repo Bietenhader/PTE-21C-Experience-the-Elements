@@ -73,3 +73,23 @@ jobs:
           name: playwright-report
           path: playwright-report
           retention-days: 14
+
+  lighthouse:
+    name: Performance budgets (Lighthouse, mobile)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # Lighthouse finds the runner's preinstalled Google Chrome; budgets are in tools/lighthouse.mjs.
+      - run: npm run lighthouse
+      - if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: lighthouse-report
+          path: lighthouse-report
+          retention-days: 14

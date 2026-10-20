@@ -46,6 +46,7 @@
 
 /* Pan = native scrolling. Pinch is ours (touch-action leaves it to us); one-finger pans stay native. */
 .viewport {
+  container-type: inline-size;
   overflow-x: auto;
   overflow-y: clip;
   padding-block: var(--space-2) var(--space-3);

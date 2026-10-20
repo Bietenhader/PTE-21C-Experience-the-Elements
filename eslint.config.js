@@ -6,7 +6,7 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist", "node_modules", "tools/.venv", "tools/raw", "playwright-report", "test-results"] },
+  { ignores: ["dist", "dist-ssr", "node_modules", "tools/.venv", "tools/raw", "playwright-report", "test-results", "lighthouse-report"] },
   js.configs.recommended,
   ...tseslint.configs.strict,
   {

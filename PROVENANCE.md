@@ -15,7 +15,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `nist_awic` | [NIST Atomic Weights and Isotopic Compositions with Relative Atomic Masses](https://www.nist.gov/pml/atomic-weights-and-isotopic-compositions-relative-atomic-masses) | [Public domain (U.S. Government work); citation requested](https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications) | 2026-10-20 | used |
 | `nist_srd141` | [NIST SRD 141 — Atomic Reference Data for Electronic Structure Calculations](https://www.nist.gov/pml/data/atomic-reference-data-electronic-structure-calculations) | [Public domain (U.S. Government work); citation requested](https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications) | not fetched | not yet used |
 | `nist_codata` | [CODATA 2022 recommended values of the fundamental physical constants](https://physics.nist.gov/cuu/Constants/) | [Public domain (U.S. Government work); citation requested](https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications) | 2026-10-20 | used |
-| `iaea_livechart` | [IAEA LiveChart of Nuclides — ground-state data](https://nds.iaea.org/relnsd/vcharthtml/VChartHTML.html) | [Free for use; cite ENSDF and the IAEA Nuclear Data Section](https://nds.iaea.org/relnsd/vcharthtml/api_v0_guide.html) | not fetched | not yet used |
+| `iaea_livechart` | [IAEA LiveChart of Nuclides — ground-state data](https://nds.iaea.org/relnsd/vcharthtml/VChartHTML.html) | [Free for use; cite ENSDF and the IAEA Nuclear Data Section](https://nds.iaea.org/relnsd/vcharthtml/api_v0_guide.html) | 2026-10-20 | used |
 | `ciaaw` | [IUPAC CIAAW — Standard Atomic Weights (2024) and abridged values](https://www.ciaaw.org/atomic-weights.htm) | [Scientific facts; cite the IUPAC Commission on Isotopic Abundances and Atomic Weights](https://www.ciaaw.org/) | 2026-10-20 | used |
 | `si_brochure` | [The International System of Units (SI Brochure), 9th edition](https://www.bipm.org/en/publications/si-brochure) | [© BIPM; definitions are facts; cite](https://www.bipm.org/en/legal-notice) | — | used |
 | `iupac_redbook_2005` | [Nomenclature of Inorganic Chemistry — IUPAC Recommendations 2005 (Red Book)](https://iupac.org/what-we-do/books/redbook/) | [Names are facts; cite](https://iupac.org/) | — | not yet used |
@@ -41,6 +41,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `nist_gsie` — Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. National Institute of Standards and Technology, Gaithersburg, MD. DOI: https://doi.org/10.18434/T4W30F
 - `nist_awic` — Coursey, J. S., Schwab, D. J., Tsai, J. J. and Dragoset, R. A., Atomic Weights and Isotopic Compositions (version 4.1). National Institute of Standards and Technology, Gaithersburg, MD. https://physics.nist.gov/Comp
 - `nist_codata` — E. Tiesinga, P. J. Mohr, D. B. Newell and B. N. Taylor (2024), "The 2022 CODATA Recommended Values of the Fundamental Physical Constants" (Web Version 9.0). National Institute of Standards and Technology, Gaithersburg, MD. https://physics.nist.gov/constants
+- `iaea_livechart` — IAEA Nuclear Data Section, LiveChart of Nuclides, data API https://nds.iaea.org/relnsd/v1/data (ground states of all nuclides), based on ENSDF.
 - `ciaaw` — IUPAC Commission on Isotopic Abundances and Atomic Weights, Standard Atomic Weights (2024) https://www.ciaaw.org/atomic-weights.htm and Abridged Standard Atomic Weights https://www.ciaaw.org/abridged-atomic-weights.htm
 - `si_brochure` — Bureau International des Poids et Mesures, The International System of Units (SI), 9th edition (2019), Section 2.2: the caesium-133 hyperfine transition frequency Δν_Cs = 9 192 631 770 Hz exactly.
 
@@ -55,6 +56,14 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | Pauling electronegativity | 95 | not_measured: 23 |
 | Oxidation states | 117 | — |
 | Ground-state hyperfine headline | 1 | no_stable_isotope: 34, not_applicable: 24, not_measured: 59 |
+| Electron affinity | 57 | not_measured: 61 |
+| Covalent radius | 96 | not_measured: 22 |
+| Van der Waals radius | 99 | not_measured: 19 |
+| Melting point | 103 | not_measured: 15 |
+| Boiling point | 93 | not_measured: 25 |
+| Density | 96 | not_measured: 22 |
+| Number of stable isotopes | 118 | — |
+| Longest half-life (elements without a stable isotope) | 38 | not_applicable: 80 |
 | Images | 0 | — |
 
 Predicted configurations (Z ≥ 109, from PubChem/LANL) are counted as not covered by NIST.

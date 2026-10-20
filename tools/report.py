@@ -43,6 +43,14 @@ FIELDS = [
     ("Pauling electronegativity", "electronegativityPauling", None),
     ("Oxidation states", "oxidationStates", "ox"),
     ("Ground-state hyperfine headline", "hyperfineHeadline", None),
+    ("Electron affinity", "electronAffinity", None),
+    ("Covalent radius", "radiusCovalent", None),
+    ("Van der Waals radius", "radiusVdw", None),
+    ("Melting point", "meltingPoint", None),
+    ("Boiling point", "boilingPoint", None),
+    ("Density", "density", None),
+    ("Number of stable isotopes", "stableIsotopes", None),
+    ("Longest half-life (elements without a stable isotope)", "longestHalfLife", None),
     ("Images", "images", "images"),
 ]
 

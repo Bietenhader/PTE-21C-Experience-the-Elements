@@ -205,6 +205,71 @@ def electronegativity(z, pub):
     return quantity(float(text), "", "pubchem", note="Pauling scale")
 
 
+PUBCHEM_NUMBERS = {
+    # field: (PubChem column, unit, what it is, note)
+    "electronAffinity": ("electronAffinity", "eV", "electron affinity", None),
+    "radiusVdw": ("radiusVdw", "pm", "van der Waals radius", "Van der Waals radius (Los Alamos National Laboratory)."),
+    "meltingPoint": ("meltingPoint", "K", "melting point", None),
+    "boilingPoint": ("boilingPoint", "K", "boiling point", None),
+    "density": ("density", "g/cm³", "density", None),
+}
+
+
+def pubchem_number(z, pub, field):
+    column, unit, what, note = PUBCHEM_NUMBERS[field]
+    if pub is None:
+        return missing("source_unavailable_at_build", "PubChem could not be read at build time.")
+    text = pub[z][column].strip()
+    if not text:
+        return missing("not_measured", f"PubChem lists no {what} for this element.")
+    return quantity(float(text), unit, "pubchem", note=note)
+
+
+def covalent_radius(z, pub):
+    if pub is None:
+        return missing("source_unavailable_at_build", "PubChem could not be read at build time.")
+    text = pub[z]["radiusCovalent"]
+    if not text:
+        return missing("not_measured", "PubChem lists no covalent radius for this element.")
+    value, unc, tag, others = fetch_pubchem.covalent_radius(text)
+    note = "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+    if tag:
+        note += f" Value for {tag}"
+        note += f"; also {others}." if others else "."
+    return quantity(value, "pm", "pubchem", unc=unc, note=note)
+
+
+def discovery(z, pub):
+    if pub is None:
+        return {"text": "unknown", "source": "pubchem"}
+    text = pub[z]["yearDiscovered"].strip()
+    if text.isdigit():
+        return {"year": int(text), "text": text, "source": "pubchem"}
+    return {"text": "Antiquity" if text == "Ancient" else text, "source": "pubchem"}
+
+
+def isotope_summary(iso):
+    """Number of stable isotopes and, for elements without one, the longest half-life (IAEA)."""
+    if iso is None:
+        unavailable = missing("source_unavailable_at_build", "IAEA data could not be read at build time.")
+        return unavailable, unavailable
+    stable = sum(1 for x in iso if x["stable"])
+    count = quantity(stable, "", "iaea_livechart", note="Ground-state isotopes marked STABLE by IAEA.")
+    best = longest_lived(iso)
+    if stable:
+        longest = missing("not_applicable", "The element has stable isotopes.")
+    elif best is None:
+        longest = missing("not_measured", "IAEA lists no half-life for any isotope of this element.")
+    else:
+        longest = quantity(
+            best["halfLifeS"],
+            "s",
+            "iaea_livechart",
+            note=f"Longest-lived isotope {best['A']} (t½ = {best['halfLifeText']}).",
+        )
+    return count, longest
+
+
 def oxidation_states(z, pub, report):
     if pub is None:
         return {
@@ -417,11 +482,21 @@ def build() -> int:
         }
         if radioactive and best:
             entry["mostStableMassNumber"] = best["A"]
+        stable_count, longest = isotope_summary(iso)
         entry.update(
             {
                 "radioactive": radioactive,
                 "ie1": ionization_energy(z, gsie, ev_to_kj),
                 "electronegativityPauling": electronegativity(z, pub),
+                "electronAffinity": pubchem_number(z, pub, "electronAffinity"),
+                "radiusCovalent": covalent_radius(z, pub),
+                "radiusVdw": pubchem_number(z, pub, "radiusVdw"),
+                "meltingPoint": pubchem_number(z, pub, "meltingPoint"),
+                "boilingPoint": pubchem_number(z, pub, "boilingPoint"),
+                "density": pubchem_number(z, pub, "density"),
+                "stableIsotopes": stable_count,
+                "longestHalfLife": longest,
+                "discovery": discovery(z, pub),
                 "oxidationStates": oxidation_states(z, pub, report),
                 "configuration": cfg_entry,
                 "groundTerm": term,

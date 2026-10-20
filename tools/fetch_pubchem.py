@@ -78,6 +78,12 @@ def parse() -> dict[int, dict]:
             "groupBlock": cell["GroupBlock"],
             "configuration": cell["ElectronConfiguration"],
             "yearDiscovered": cell["YearDiscovered"],
+            # Units as published for the PubChem periodic table: eV, pm, K, K, g/cm³.
+            "electronAffinity": cell["ElectronAffinity"],
+            "radiusVdw": cell["AtomicRadius"],  # Los Alamos's van der Waals radius (see the element pages)
+            "meltingPoint": cell["MeltingPoint"],
+            "boilingPoint": cell["BoilingPoint"],
+            "density": cell["Density"],
         }
     for z in range(1, NUM_ELEMENTS + 1):
         page = raw_path(SOURCE, f"element_{z:03d}.json")
@@ -85,4 +91,40 @@ def parse() -> dict[int, dict]:
         ox = _strings(record, "Oxidation States")
         out[z]["oxidationJefferson"] = ox.get(JEFFERSON)
         out[z]["oxidationLANL"] = ox.get(LANL)
+        out[z]["radiusCovalent"] = next((t for t in _strings_all(record, "Atomic Radius") if "(Covalent)" in t), None)
     return out
+
+
+def _strings_all(record: dict, heading: str) -> list[str]:
+    """Every value under a heading, numbers included ('25 pm (Empirical)')."""
+    out = []
+    for sec in record.get("Section", []):
+        found = _find(sec, heading)
+        if not found:
+            continue
+        for info in found.get("Information", []):
+            value = info.get("Value", {})
+            texts = [s.get("String", "") for s in value.get("StringWithMarkup", [])]
+            if texts:
+                out.append(" ".join(texts))
+            elif "Number" in value:
+                out.append(f"{value['Number'][0]} {value.get('Unit', '')}".strip())
+    return out
+
+
+_COVALENT = re.compile(r"(\d+(?:\.\d+)?)(?:\((\d+)\))?(?:\[([^\]]+)\])?")
+
+
+def covalent_radius(text: str) -> tuple[float, float | None, str | None, str]:
+    """'132(3)[l.s.], 152(6)[h.s.] pm (Covalent)' → (132.0, 3.0, 'l.s.', '152(6)[h.s.]').
+
+    The first value is used; any further values are returned verbatim for the note.
+    """
+    body = text.split("pm")[0]
+    parts = [p.strip() for p in body.split(",") if p.strip()]
+    m = _COVALENT.fullmatch(parts[0])
+    if not m:
+        raise ValueError(f"unrecognised covalent radius {text!r}")
+    value = float(m.group(1))
+    unc = float(m.group(2)) if m.group(2) else None
+    return value, unc, m.group(3), ", ".join(parts[1:])

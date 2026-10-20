@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import build
 import build_layouts
+import build_trends
 import fetch_ciaaw
 import fetch_codata
 import fetch_iaea
@@ -51,6 +52,7 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"!!! {exc}", flush=True)
     build.build()
     build_layouts.build_layouts()
+    build_trends.build_trends()
     if failed:
         print(f"\n!!! Unavailable sources: {', '.join(failed)} — see tools/build-report.md and STATUS.md")
     return 0

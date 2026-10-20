@@ -37,6 +37,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.754,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 31.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 120.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 13.81,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 20.28,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.988e-05,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1766,
+    "text": "1766",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      1,
@@ -106,6 +155,54 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 28.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 140.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 0.95,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4.22,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.0001785,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1868,
+    "text": "1868",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -183,6 +280,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.618,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 128.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 182.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 453.65,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1615.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.534,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1817,
+    "text": "1817",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      1
@@ -252,6 +398,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 96.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 153.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1560.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2744.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 1.85,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1798,
+    "text": "1798",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -330,6 +525,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.277,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 84.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 192.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2348.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4273.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 2.37,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1808,
+    "text": "1808",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -416,6 +660,54 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 1.263,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 76.0,
+    "unc": 1.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832. Value for sp3; also 73(2)[sp2], 69(1)[sp]."
+   },
+   "radiusVdw": {
+    "value": 170.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 3823.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4098.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 2.267,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -507,6 +799,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 71.0,
+    "unc": 1.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 155.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 63.15,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 77.36,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.0012506,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1772,
+    "text": "1772",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      5,
@@ -595,6 +936,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 1.461,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 66.0,
+    "unc": 2.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 152.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 54.36,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 90.2,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.001429,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 3,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1774,
+    "text": "1774",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      -2
@@ -674,6 +1064,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 3.339,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 57.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 135.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 53.53,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 85.03,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.001696,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1670,
+    "text": "1670",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      -1
@@ -747,6 +1186,54 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 58.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 154.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 24.56,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 27.07,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.0008999,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 3,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1898,
+    "text": "1898",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -822,6 +1309,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.548,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 166.0,
+    "unc": 9.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 227.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 370.95,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1156.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.97,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1807,
+    "text": "1807",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -899,6 +1435,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 141.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 173.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 923.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1363.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 1.74,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 3,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1808,
+    "text": "1808",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2
@@ -970,6 +1555,54 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.441,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 121.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 184.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 933.437,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2792.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 2.7,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -1057,6 +1690,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 1.385,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 111.0,
+    "unc": 2.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 210.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1687.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3538.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 2.3296,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 3,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1854,
+    "text": "1854",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      4,
@@ -1139,6 +1821,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.746,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 107.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 180.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 317.3,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 553.65,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 1.82,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1669,
+    "text": "1669",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -1229,6 +1960,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 2.077,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 105.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 180.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 388.36,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 717.75,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 2.067,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 4,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      6,
@@ -1318,6 +2097,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 3.617,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 102.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 175.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 171.65,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 239.11,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.003214,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1774,
+    "text": "1774",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      7,
@@ -1400,6 +2228,55 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 106.0,
+    "unc": 10.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 188.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 83.8,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 87.3,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.0017837,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 3,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1894,
+    "text": "1894",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      0
@@ -1475,6 +2352,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.501,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 203.0,
+    "unc": 12.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 275.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 336.53,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1032.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.89,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1807,
+    "text": "1807",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      1
@@ -1547,6 +2473,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 176.0,
+    "unc": 10.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 231.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1115.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1757.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 1.54,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2
@@ -1618,6 +2592,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.188,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 170.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 211.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1814.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3109.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 2.99,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1879,
+    "text": "1879",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -1696,6 +2719,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.079,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 160.0,
+    "unc": 8.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 187.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1941.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3560.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 4.5,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1791,
+    "text": "1791",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -1778,6 +2850,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.525,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 153.0,
+    "unc": 8.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 179.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2183.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3680.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 6.0,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1801,
+    "text": "1801",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      5,
@@ -1859,6 +2980,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.666,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 139.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 189.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2180.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2944.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.15,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 3,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1797,
+    "text": "1797",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -1943,6 +3113,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 139.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832. Value for l.s.; also 161(8)[h.s.]."
+   },
+   "radiusVdw": {
+    "value": 197.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1519.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2334.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.3,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1774,
+    "text": "1774",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -2029,6 +3248,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.163,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 132.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832. Value for l.s.; also 152(6)[h.s.]."
+   },
+   "radiusVdw": {
+    "value": 194.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1811.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3134.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.874,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 4,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -2114,6 +3381,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.661,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 126.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832. Value for l.s.; also 150(7)[h.s.]."
+   },
+   "radiusVdw": {
+    "value": 192.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1768.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3200.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.86,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1735,
+    "text": "1735",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -2196,6 +3512,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 1.156,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 124.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 163.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1728.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3186.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.912,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1751,
+    "text": "1751",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -2277,6 +3642,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 1.228,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 132.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 140.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1357.77,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2835.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.933,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2,
@@ -2357,6 +3770,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 122.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 139.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 692.68,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1180.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.134,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 4,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1746,
+    "text": "1746",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2
@@ -2435,6 +3897,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.3,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 122.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 187.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 302.91,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2477.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 5.91,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1875,
+    "text": "1875",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -2522,6 +4033,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 1.35,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 120.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 211.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1211.4,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3106.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 5.323,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1886,
+    "text": "1886",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -2612,6 +4172,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.81,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 119.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 185.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1090.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 887.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 5.776,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      5,
@@ -2699,6 +4307,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 2.021,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 120.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 190.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 493.65,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 958.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 4.809,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1817,
+    "text": "1817",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -2794,6 +4451,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 3.365,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 120.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 183.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 265.95,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 331.95,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 3.11,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1826,
+    "text": "1826",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      5,
@@ -2879,6 +4585,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 116.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 202.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 115.79,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 119.93,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.003733,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 6,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1898,
+    "text": "1898",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      0
@@ -2962,6 +4717,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.468,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 220.0,
+    "unc": 9.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 303.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 312.46,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 961.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 1.53,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1861,
+    "text": "1861",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      1
@@ -3034,6 +4838,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 195.0,
+    "unc": 10.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 249.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1050.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1655.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 2.64,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 4,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1790,
+    "text": "1790",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2
@@ -3105,6 +4958,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.307,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 190.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 219.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1795.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3618.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 4.47,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1794,
+    "text": "1794",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -3183,6 +5085,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.426,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 175.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 186.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2128.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4682.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 6.52,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 4,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1789,
+    "text": "1789",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -3263,6 +5214,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.893,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 164.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 207.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2750.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 5017.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.57,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1801,
+    "text": "1801",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -3345,6 +5345,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.746,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 154.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 209.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2896.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4912.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 10.2,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 6,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1778,
+    "text": "1778",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -3430,6 +5479,56 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.55,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 147.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 209.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2430.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4538.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 11.0,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 132854658353032.31,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 97 (t½ = 4.21E+6 Y)."
+   },
+   "discovery": {
+    "year": 1937,
+    "text": "1937",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      7,
@@ -3513,6 +5612,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 1.05,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 146.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 207.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2607.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4423.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 12.1,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 7,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1827,
+    "text": "1827",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -3599,6 +5747,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 1.137,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 142.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 195.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2237.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3968.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 12.4,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1803,
+    "text": "1803",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -3682,6 +5879,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.557,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 139.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 202.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1828.05,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3236.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 12.0,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 6,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1803,
+    "text": "1803",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -3756,6 +6002,54 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 1.302,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 145.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 172.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1234.93,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2435.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 10.501,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -3837,6 +6131,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 144.0,
+    "unc": 9.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 158.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 594.22,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1040.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.69,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 6,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1817,
+    "text": "1817",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2
@@ -3914,6 +6257,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.3,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 142.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 193.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 429.75,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2345.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.31,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1863,
+    "text": "1863",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -4000,6 +6392,54 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 1.2,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 139.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 217.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 505.08,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2875.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.287,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 10,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -4089,6 +6529,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 1.07,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 139.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 206.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 903.78,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1860.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 6.685,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      5,
@@ -4176,6 +6664,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 1.971,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 138.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 206.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 722.66,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1261.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 6.232,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1782,
+    "text": "1782",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -4265,6 +6802,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 3.059,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 139.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 198.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 386.85,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 457.55,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 4.93,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1811,
+    "text": "1811",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      7,
@@ -4352,6 +6938,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 140.0,
+    "unc": 9.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 216.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 161.36,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 165.03,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.005887,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 6,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1898,
+    "text": "1898",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      0
@@ -4438,6 +7073,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.472,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 244.0,
+    "unc": 11.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 343.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 301.59,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 944.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 1.93,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1860,
+    "text": "1860",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      1
@@ -4515,6 +7199,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 215.0,
+    "unc": 11.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 268.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1000.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2170.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 3.62,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 6,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1808,
+    "text": "1808",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2
@@ -4586,6 +7319,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.5,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 207.0,
+    "unc": 8.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 240.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1191.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3737.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 6.15,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1839,
+    "text": "1839",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -4664,6 +7446,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.5,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 204.0,
+    "unc": 9.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 235.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1071.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3697.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 6.77,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1803,
+    "text": "1803",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -4749,6 +7580,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 203.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 239.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1204.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3793.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 6.77,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1885,
+    "text": "1885",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -4828,6 +7708,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 201.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 229.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1294.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3347.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.01,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1885,
+    "text": "1885",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -4905,6 +7834,55 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 199.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 236.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1315.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3273.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.26,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 558557589.7502784,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 145 (t½ = 17.7 Y)."
+   },
+   "discovery": {
+    "year": 1945,
+    "text": "1945",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -4981,6 +7959,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 198.0,
+    "unc": 8.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 229.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1347.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2067.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.52,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1879,
+    "text": "1879",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -5060,6 +8087,55 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 198.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 233.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1095.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1802.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 5.24,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1901,
+    "text": "1901",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -5137,6 +8213,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 196.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 237.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1586.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3546.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 7.9,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 6,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1880,
+    "text": "1880",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -5220,6 +8345,55 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 194.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 221.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1629.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3503.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.23,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1843,
+    "text": "1843",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -5299,6 +8473,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 192.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 229.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1685.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2840.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.55,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 7,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1886,
+    "text": "1886",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -5376,6 +8599,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 192.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 216.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1747.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2973.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 8.8,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1878,
+    "text": "1878",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -5455,6 +8727,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 189.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 235.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1802.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3141.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 9.07,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 6,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1843,
+    "text": "1843",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -5533,6 +8854,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 190.0,
+    "unc": 10.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 227.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1818.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2223.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 9.32,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1879,
+    "text": "1879",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -5609,6 +8979,55 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 187.0,
+    "unc": 8.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 242.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1092.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1469.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 6.9,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 7,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1878,
+    "text": "1878",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -5684,6 +9103,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 187.0,
+    "unc": 8.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 221.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1936.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3675.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 9.84,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1907,
+    "text": "1907",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -5767,6 +9235,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 175.0,
+    "unc": 10.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 212.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2506.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4876.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 13.3,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1923,
+    "text": "1923",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -5852,6 +9369,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.322,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 170.0,
+    "unc": 8.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 217.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 3290.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 5731.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 16.4,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1802,
+    "text": "1802",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -5939,6 +9505,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.815,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 162.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 210.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 3695.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 5828.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 19.3,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 3,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1783,
+    "text": "1783",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -6030,6 +9645,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.15,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 151.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 217.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 3459.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 5869.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 20.8,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1925,
+    "text": "1925",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      7,
@@ -6119,6 +9783,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 1.1,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 144.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 216.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 3306.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 5285.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 22.57,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1803,
+    "text": "1803",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -6212,6 +9925,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 1.565,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 141.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 202.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2719.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4701.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 22.42,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1803,
+    "text": "1803",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      4,
@@ -6304,6 +10066,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 2.128,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 136.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 209.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2041.55,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4098.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 21.46,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 5,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1735,
+    "text": "1735",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      4,
@@ -6393,6 +10204,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 2.309,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 136.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 166.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1337.33,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3129.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 19.282,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 1,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -6480,6 +10339,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 132.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 209.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 234.32,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 629.88,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 13.5336,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 7,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2,
@@ -6566,6 +10473,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.2,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 145.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 196.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 577.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1746.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 11.8,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 2,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "year": 1861,
+    "text": "1861",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -6658,6 +10614,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.36,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 146.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 202.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 600.61,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2022.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 11.342,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 3,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "missing": true,
+    "reason": "not_applicable",
+    "note": "The element has stable isotopes."
+   },
+   "discovery": {
+    "text": "Antiquity",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      4,
@@ -6748,6 +10752,56 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "value": 0.946,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 148.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 207.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 544.55,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1837.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 9.807,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 6.342942120892992e+26,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 209 (t½ = 2.01E19 Y)."
+   },
+   "discovery": {
+    "year": 1753,
+    "text": "1753",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -6842,6 +10896,56 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 1.9,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 140.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 197.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 527.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1235.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 9.32,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 3913058820.849408,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 209 (t½ = 124 Y)."
+   },
+   "discovery": {
+    "year": 1898,
+    "text": "1898",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      4,
@@ -6932,6 +11036,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 2.8,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 150.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 202.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 575.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "value": 7.0,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 29160.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 210 (t½ = 8.1 h)."
+   },
+   "discovery": {
+    "year": 1940,
+    "text": "1940",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [],
     "other": [
@@ -7019,6 +11172,55 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 150.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 220.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 202.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 211.45,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 0.00973,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 330350.4,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 222 (t½ = 3.8235 d)."
+   },
+   "discovery": {
+    "year": 1900,
+    "text": "1900",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -7108,6 +11310,55 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "value": 0.47,
+    "unit": "eV",
+    "source": "pubchem"
+   },
+   "radiusCovalent": {
+    "value": 260.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 348.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 300.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 1320.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 223 (t½ = 22.00 m)."
+   },
+   "discovery": {
+    "year": 1939,
+    "text": "1939",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      1
@@ -7178,6 +11429,56 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 221.0,
+    "unc": 2.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 283.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 973.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 1413.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 5.0,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 50491081559.3472,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 226 (t½ = 1600 Y)."
+   },
+   "discovery": {
+    "year": 1898,
+    "text": "1898",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      2
@@ -7247,6 +11548,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 215.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 260.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1324.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3471.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 10.07,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 687057392.318817,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 227 (t½ = 21.772 Y)."
+   },
+   "discovery": {
+    "year": 1899,
+    "text": "1899",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -7325,6 +11675,56 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 206.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 237.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 2023.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 5061.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 11.72,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 4.41796963644288e+17,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 232 (t½ = 1.40E10 Y)."
+   },
+   "discovery": {
+    "year": 1828,
+    "text": "1828",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -7405,6 +11805,55 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 200.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 243.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1845.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "value": 15.37,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 1027809078992.4614,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 231 (t½ = 32570 Y)."
+   },
+   "discovery": {
+    "year": 1913,
+    "text": "1913",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -7490,6 +11939,56 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 196.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 240.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1408.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4404.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 18.95,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 1.4099634525447706e+17,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 238 (t½ = 4.468E9 Y)."
+   },
+   "discovery": {
+    "year": 1789,
+    "text": "1789",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -7577,6 +12076,56 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 190.0,
+    "unc": 1.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 221.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 917.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 4175.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 20.25,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 67658049289525.25,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 237 (t½ = 2.144E+6 Y)."
+   },
+   "discovery": {
+    "year": 1940,
+    "text": "1940",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      6,
@@ -7663,6 +12212,56 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 187.0,
+    "unc": 1.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 243.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 913.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3501.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 19.84,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 2565578081734329.5,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 244 (t½ = 8.13E+7 Y)."
+   },
+   "discovery": {
+    "year": 1940,
+    "text": "1940",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      6,
@@ -7746,6 +12345,56 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 180.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 244.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1449.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 2284.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 13.69,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 232385202876.89548,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 243 (t½ = 7364 Y)."
+   },
+   "discovery": {
+    "year": 1944,
+    "text": "1944",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      6,
@@ -7827,6 +12476,56 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "value": 169.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "radiusVdw": {
+    "value": 245.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1618.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "value": 3400.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "density": {
+    "value": 13.51,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 492288045203635.2,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 247 (t½ = 1.56E+7 Y)."
+   },
+   "discovery": {
+    "year": 1944,
+    "text": "1944",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -7912,6 +12611,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "value": 244.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1323.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "value": 14.0,
+    "unit": "g/cm³",
+    "source": "pubchem"
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 43548557844.93696,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 247 (t½ = 1380 Y)."
+   },
+   "discovery": {
+    "year": 1949,
+    "text": "1949",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      4,
@@ -7989,6 +12736,54 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "value": 245.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1173.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 28338119525.183617,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 251 (t½ = 898 Y)."
+   },
+   "discovery": {
+    "year": 1950,
+    "text": "1950",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -8068,6 +12863,54 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "value": 245.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   },
+   "meltingPoint": {
+    "value": 1133.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 40754880.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 252 (t½ = 471.7 d)."
+   },
+   "discovery": {
+    "year": 1952,
+    "text": "1952",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -8146,6 +12989,53 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "value": 1800.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 8683200.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 257 (t½ = 100.5 d)."
+   },
+   "discovery": {
+    "year": 1952,
+    "text": "1952",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3
@@ -8223,6 +13113,53 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "value": 1100.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 4449600.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 258 (t½ = 51.50 d)."
+   },
+   "discovery": {
+    "year": 1955,
+    "text": "1955",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -8299,6 +13236,53 @@
     "source": "pubchem",
     "note": "Pauling scale"
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "value": 1100.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 3480.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 259 (t½ = 58 m)."
+   },
+   "discovery": {
+    "year": 1957,
+    "text": "1957",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      3,
@@ -8374,6 +13358,53 @@
     "unit": "",
     "source": "pubchem",
     "note": "Pauling scale"
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "value": 1900.0,
+    "unit": "K",
+    "source": "pubchem"
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 39600.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 266 (t½ = 11 h)."
+   },
+   "discovery": {
+    "year": 1961,
+    "text": "1961",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [
@@ -8454,6 +13485,53 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 4680.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 267 (t½ = 1.3 h)."
+   },
+   "discovery": {
+    "year": 1964,
+    "text": "1964",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [
      4
@@ -8532,6 +13610,53 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 100800.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 268 (t½ = 28 h)."
+   },
+   "discovery": {
+    "year": 1967,
+    "text": "1967",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [],
@@ -8613,6 +13738,53 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 130.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 269 (t½ = 1.3E2 s)."
+   },
+   "discovery": {
+    "year": 1974,
+    "text": "1974",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [],
     "other": [
@@ -8690,6 +13862,53 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 1140.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 278 (t½ = 19 m)."
+   },
+   "discovery": {
+    "year": 1976,
+    "text": "1976",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [],
@@ -8769,6 +13988,53 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 1140.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 278 (t½ = 19 m)."
+   },
+   "discovery": {
+    "year": 1984,
+    "text": "1984",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [],
     "other": [
@@ -8843,6 +14109,53 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 66.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 282 (t½ = 1.1 m)."
+   },
+   "discovery": {
+    "year": 1982,
+    "text": "1982",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [],
@@ -8925,6 +14238,53 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 66.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 282 (t½ = 1.1 m)."
+   },
+   "discovery": {
+    "year": 1994,
+    "text": "1994",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [],
     "other": [
@@ -9005,6 +14365,53 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 660.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 286 (t½ = 11 m)."
+   },
+   "discovery": {
+    "year": 1994,
+    "text": "1994",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [],
     "other": [
@@ -9084,6 +14491,53 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 660.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 286 (t½ = 11 m)."
+   },
+   "discovery": {
+    "year": 1996,
+    "text": "1996",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [],
     "other": [
@@ -9158,6 +14612,53 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 9.5,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 286 (t½ = 9.5 s)."
+   },
+   "discovery": {
+    "year": 2004,
+    "text": "2004",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [],
@@ -9236,6 +14737,53 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 19.0,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 290 (t½ = 19 s)."
+   },
+   "discovery": {
+    "year": 1998,
+    "text": "1998",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [],
@@ -9322,6 +14870,53 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 0.65,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 290 (t½ = 0.65 s)."
+   },
+   "discovery": {
+    "year": 2003,
+    "text": "2003",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [],
     "other": [
@@ -9402,6 +14997,53 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 0.095,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 293 (t½ = 95 ms)."
+   },
+   "discovery": {
+    "year": 2000,
+    "text": "2000",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [],
@@ -9486,6 +15128,53 @@
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
    },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 0.051,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 294 (t½ = 51 ms)."
+   },
+   "discovery": {
+    "year": 2010,
+    "text": "2010",
+    "source": "pubchem"
+   },
    "oxidationStates": {
     "common": [],
     "other": [
@@ -9569,6 +15258,53 @@
     "missing": true,
     "reason": "not_measured",
     "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "electronAffinity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no electron affinity for this element."
+   },
+   "radiusCovalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "radiusVdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   },
+   "meltingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no melting point for this element."
+   },
+   "boilingPoint": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no boiling point for this element."
+   },
+   "density": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no density for this element."
+   },
+   "stableIsotopes": {
+    "value": 0,
+    "unit": "",
+    "source": "iaea_livechart",
+    "note": "Ground-state isotopes marked STABLE by IAEA."
+   },
+   "longestHalfLife": {
+    "value": 0.00058,
+    "unit": "s",
+    "source": "iaea_livechart",
+    "note": "Longest-lived isotope 294 (t½ = 0.58 ms)."
+   },
+   "discovery": {
+    "year": 2006,
+    "text": "2006",
+    "source": "pubchem"
    },
    "oxidationStates": {
     "common": [],

@@ -90,7 +90,8 @@
    "licenceUrl": "https://nds.iaea.org/relnsd/vcharthtml/api_v0_guide.html",
    "citation": "IAEA Nuclear Data Section, LiveChart of Nuclides, data API https://nds.iaea.org/relnsd/v1/data (ground states of all nuclides), based on ENSDF.",
    "kind": "fetched",
-   "status": "not_yet_used",
+   "status": "ok",
+   "retrieved": "2026-10-20",
    "notes": "One CSV request: ?fields=ground_states&nuclides=all. Used in M0 for natural abundances, nuclear spins and half-lives (most-stable mass number, radioactivity, hyperfine applicability)."
   },
   "ciaaw": {

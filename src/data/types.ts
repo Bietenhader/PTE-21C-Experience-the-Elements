@@ -148,6 +148,15 @@ export interface ElementIndexEntry {
   radioactive: boolean;
   ie1: Q;
   electronegativityPauling: Q;
+  electronAffinity: Q;
+  radiusCovalent: Q;
+  radiusVdw: Q;
+  meltingPoint: Q;
+  boilingPoint: Q;
+  density: Q;
+  stableIsotopes: Q;
+  longestHalfLife: Q;
+  discovery: Discovery;
   oxidationStates: OxidationStates;
   configuration: Configuration;
   groundTerm: GroundTerm | Missing;
@@ -158,6 +167,14 @@ export interface ElementIndexEntry {
    */
   images: [] | [ImageRef] | [ImageRef, ImageRef] | [ImageRef, ImageRef, ImageRef];
   flags: ElementFlags;
+}
+/**
+ * Discovery year as PubChem gives it; elements known since antiquity have no year.
+ */
+export interface Discovery {
+  year?: number;
+  text: string;
+  source: SourceId;
 }
 export interface IndexFile {
   schemaVersion: 1;
@@ -232,4 +249,90 @@ export interface LayoutFile {
     lu: LayoutVariant;
     la: LayoutVariant;
   };
+}
+export interface TrendArrow {
+  /**
+   * across: along a period, left to right; down: down a group.
+   */
+  axis: "across" | "down";
+  direction: "increases" | "decreases" | "about constant";
+  region: "all" | "metals" | "nonmetals";
+  label?: string;
+}
+export interface TrendException {
+  /**
+   * @minItems 1
+   */
+  symbols: [string, ...string[]];
+  note: string;
+}
+/**
+ * A classic monotone trend (SPEC §8.1), drawn only in layouts with periods and groups.
+ */
+export interface ArrowTrend {
+  id: string;
+  label: string;
+  cause: string;
+  /**
+   * @minItems 1
+   */
+  arrows: [TrendArrow, ...TrendArrow[]];
+  exceptions: TrendException[];
+}
+/**
+ * A numeric field shown as a colour scale (SPEC §8.2). `field` names an index.json field, or `computed:zAlpha` for a value the app computes.
+ */
+export interface Heatmap {
+  id: string;
+  label: string;
+  field: string;
+  /**
+   * energy and temperature follow the unit setting.
+   */
+  quantity: "energy" | "temperature" | "plain";
+  scale: "linear" | "log";
+  caption: string;
+  /**
+   * @minItems 1
+   */
+  sources: [SourceId, ...SourceId[]];
+}
+export interface MapClass {
+  id: string;
+  label: string;
+  short: string;
+  description: string;
+  tone: number;
+}
+/**
+ * A categorical map (SPEC §8.3). The pipeline assigns every element a class; the app only draws it.
+ */
+export interface CategoricalMap {
+  id: string;
+  label: string;
+  caption: string;
+  /**
+   * @minItems 1
+   */
+  sources: [SourceId, ...SourceId[]];
+  /**
+   * @minItems 2
+   */
+  classes: [MapClass, MapClass, ...MapClass[]];
+  values: {
+    /**
+     * This interface was referenced by `undefined`'s JSON-Schema definition
+     * via the `patternProperty` "^[0-9]+$".
+     */
+    [k: string]: string;
+  };
+}
+/**
+ * public/data/trends.json, produced by tools/build_trends.py from tools/curated/trends.toml.
+ */
+export interface TrendsFile {
+  schemaVersion: 1;
+  arrows: ArrowTrend[];
+  heatmaps: Heatmap[];
+  maps: CategoricalMap[];
 }

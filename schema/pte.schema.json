@@ -12,151 +12,377 @@
     "Unit": {
       "description": "The units table (SPEC §5.2). Stored units are fixed per field; display conversions live in src/physics/units.ts. \"\" means dimensionless.",
       "type": "string",
-      "enum": ["", "u", "kJ/mol", "eV", "Hz", "MHz", "pm", "K", "g/cm³", "s", "μ_N", "b"]
+      "enum": [
+        "",
+        "u",
+        "kJ/mol",
+        "eV",
+        "Hz",
+        "MHz",
+        "pm",
+        "K",
+        "g/cm³",
+        "s",
+        "μ_N",
+        "b"
+      ]
     },
     "QuantityFlag": {
       "type": "string",
-      "enum": ["measured", "calculated", "interpolated", "estimated", "predicted"]
+      "enum": [
+        "measured",
+        "calculated",
+        "interpolated",
+        "estimated",
+        "predicted"
+      ]
     },
     "Quantity": {
       "description": "A number with its unit and source. `unc` is the standard uncertainty in the same unit, when the source gives one; 0 means exact by definition.",
       "type": "object",
       "properties": {
-        "value": { "type": "number" },
-        "unc": { "type": "number", "minimum": 0 },
-        "unit": { "$ref": "#/definitions/Unit" },
-        "source": { "$ref": "#/definitions/SourceId" },
-        "flag": { "$ref": "#/definitions/QuantityFlag" },
-        "note": { "type": "string" }
+        "value": {
+          "type": "number"
+        },
+        "unc": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "$ref": "#/definitions/Unit"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "flag": {
+          "$ref": "#/definitions/QuantityFlag"
+        },
+        "note": {
+          "type": "string"
+        }
       },
-      "required": ["value", "unit", "source"],
+      "required": [
+        "value",
+        "unit",
+        "source"
+      ],
       "additionalProperties": false
     },
     "MissingReason": {
       "type": "string",
-      "enum": ["not_measured", "not_applicable", "no_stable_isotope", "predicted_only", "source_unavailable_at_build"]
+      "enum": [
+        "not_measured",
+        "not_applicable",
+        "no_stable_isotope",
+        "predicted_only",
+        "source_unavailable_at_build"
+      ]
     },
     "Missing": {
       "description": "An absent value, always with a reason (SPEC §2.2). Never 0, never a bare dash.",
       "type": "object",
       "properties": {
-        "missing": { "type": "boolean", "enum": [true] },
-        "reason": { "$ref": "#/definitions/MissingReason" },
-        "note": { "type": "string" }
+        "missing": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "reason": {
+          "$ref": "#/definitions/MissingReason"
+        },
+        "note": {
+          "type": "string"
+        }
       },
-      "required": ["missing", "reason"],
+      "required": [
+        "missing",
+        "reason"
+      ],
       "additionalProperties": false
     },
     "Q": {
-      "oneOf": [{ "$ref": "#/definitions/Quantity" }, { "$ref": "#/definitions/Missing" }]
+      "oneOf": [
+        {
+          "$ref": "#/definitions/Quantity"
+        },
+        {
+          "$ref": "#/definitions/Missing"
+        }
+      ]
     },
     "Interval": {
       "description": "IUPAC interval standard atomic weight [low, high]. `conventional` is the single value IUPAC publishes for display, itself a sourced Quantity (SPEC §2.1: no number without a source).",
       "type": "object",
       "properties": {
-        "low": { "type": "number" },
-        "high": { "type": "number" },
-        "unit": { "type": "string", "enum": ["u"] },
-        "source": { "$ref": "#/definitions/SourceId" },
-        "conventional": { "$ref": "#/definitions/Quantity" }
+        "low": {
+          "type": "number"
+        },
+        "high": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "u"
+          ]
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "conventional": {
+          "$ref": "#/definitions/Quantity"
+        }
       },
-      "required": ["low", "high", "unit", "source"],
+      "required": [
+        "low",
+        "high",
+        "unit",
+        "source"
+      ],
       "additionalProperties": false
     },
     "TextFact": {
       "type": "object",
       "properties": {
-        "text": { "type": "string" },
-        "source": { "$ref": "#/definitions/SourceId" }
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
       },
-      "required": ["text", "source"],
+      "required": [
+        "text",
+        "source"
+      ],
       "additionalProperties": false
     },
     "Subshell": {
       "type": "object",
       "properties": {
-        "n": { "type": "integer", "minimum": 1 },
-        "l": { "type": "integer", "minimum": 0 },
-        "occupancy": { "type": "integer", "minimum": 1 }
+        "n": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "l": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "occupancy": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
-      "required": ["n", "l", "occupancy"],
+      "required": [
+        "n",
+        "l",
+        "occupancy"
+      ],
       "additionalProperties": false
     },
     "Configuration": {
       "description": "Ground-state electron configuration. `measured` is the reference configuration from NIST ASD; where NIST has none (Z ≥ 109) it is a published prediction and `flag` is \"predicted\". `aufbau` is generated by the Madelung rule. Both in noble-gas notation, subshells ordered by n then l.",
       "type": "object",
       "properties": {
-        "measured": { "type": "string" },
-        "aufbau": { "type": "string" },
-        "anomalous": { "type": "boolean" },
-        "valenceSubshells": { "type": "array", "items": { "$ref": "#/definitions/Subshell" } },
-        "source": { "$ref": "#/definitions/SourceId" },
-        "flag": { "type": "string", "enum": ["predicted"] },
-        "note": { "type": "string" }
+        "measured": {
+          "type": "string"
+        },
+        "aufbau": {
+          "type": "string"
+        },
+        "anomalous": {
+          "type": "boolean"
+        },
+        "valenceSubshells": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subshell"
+          }
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "flag": {
+          "type": "string",
+          "enum": [
+            "predicted"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
       },
-      "required": ["measured", "aufbau", "anomalous", "valenceSubshells", "source"],
+      "required": [
+        "measured",
+        "aufbau",
+        "anomalous",
+        "valenceSubshells",
+        "source"
+      ],
       "additionalProperties": false
     },
     "GroundTerm": {
       "description": "Ground level. `term` is NIST's designation, e.g. \"2S1/2\", \"1G*4\" (* = odd parity), \"(1/2,1/2)0\". S and L are present only for LS coupling.",
       "type": "object",
       "properties": {
-        "term": { "type": "string" },
+        "term": {
+          "type": "string"
+        },
         "coupling": {
           "description": "LS: a term symbol; jj: (j1,j2)J, as NIST gives for Pb; J: NIST gives only J.",
           "type": "string",
-          "enum": ["LS", "jj", "J"]
+          "enum": [
+            "LS",
+            "jj",
+            "J"
+          ]
         },
-        "S": { "type": "number", "minimum": 0 },
-        "L": { "type": "integer", "minimum": 0 },
-        "J": { "type": "number", "minimum": 0 },
-        "parity": { "type": "string", "enum": ["even", "odd"] },
-        "gJ": { "$ref": "#/definitions/Q" },
-        "source": { "$ref": "#/definitions/SourceId" }
+        "S": {
+          "type": "number",
+          "minimum": 0
+        },
+        "L": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "J": {
+          "type": "number",
+          "minimum": 0
+        },
+        "parity": {
+          "type": "string",
+          "enum": [
+            "even",
+            "odd"
+          ]
+        },
+        "gJ": {
+          "$ref": "#/definitions/Q"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
       },
-      "required": ["term", "coupling", "J", "parity", "source"],
+      "required": [
+        "term",
+        "coupling",
+        "J",
+        "parity",
+        "source"
+      ],
       "additionalProperties": false
     },
     "HyperfineHeadline": {
       "description": "Ground-state hyperfine splitting of the reference isotope (SPEC §5.1).",
       "type": "object",
       "properties": {
-        "isotope": { "type": "integer", "minimum": 1 },
-        "splitting": { "$ref": "#/definitions/Quantity" }
+        "isotope": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "splitting": {
+          "$ref": "#/definitions/Quantity"
+        }
       },
-      "required": ["isotope", "splitting"],
+      "required": [
+        "isotope",
+        "splitting"
+      ],
       "additionalProperties": false
     },
     "OxidationStates": {
       "type": "object",
       "properties": {
-        "common": { "type": "array", "items": { "type": "integer" } },
-        "other": { "type": "array", "items": { "type": "integer" } },
-        "source": { "$ref": "#/definitions/SourceId" },
-        "flag": { "type": "string", "enum": ["predicted"] },
-        "note": { "type": "string" }
+        "common": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "other": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "flag": {
+          "type": "string",
+          "enum": [
+            "predicted"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
       },
-      "required": ["common", "other", "source"],
+      "required": [
+        "common",
+        "other",
+        "source"
+      ],
       "additionalProperties": false
     },
     "ImageRef": {
       "type": "object",
       "properties": {
-        "file": { "type": "string" },
-        "thumb": { "type": "string" },
-        "width": { "type": "integer", "minimum": 1 },
-        "height": { "type": "integer", "minimum": 1 },
-        "title": { "type": "string" },
-        "author": { "type": "string" },
-        "licence": { "type": "string" },
-        "licenceUrl": { "type": "string" },
-        "sourceUrl": { "type": "string" },
+        "file": {
+          "type": "string"
+        },
+        "thumb": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "licence": {
+          "type": "string"
+        },
+        "licenceUrl": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string"
+        },
         "kind": {
           "type": "string",
-          "enum": ["sample", "discharge_tube", "crystal", "powder", "liquid", "historical", "placeholder"]
+          "enum": [
+            "sample",
+            "discharge_tube",
+            "crystal",
+            "powder",
+            "liquid",
+            "historical",
+            "placeholder"
+          ]
         }
       },
-      "required": ["file", "thumb", "width", "height", "title", "author", "licence", "licenceUrl", "sourceUrl", "kind"],
+      "required": [
+        "file",
+        "thumb",
+        "width",
+        "height",
+        "title",
+        "author",
+        "licence",
+        "licenceUrl",
+        "sourceUrl",
+        "kind"
+      ],
       "additionalProperties": false
     },
     "Category": {
@@ -179,46 +405,170 @@
       "description": "Boolean maps. A flag whose curated source table does not exist yet is omitted, never defaulted to false.",
       "type": "object",
       "properties": {
-        "laserCooled": { "type": "boolean" },
-        "clockSpecies": { "type": "boolean" },
-        "siHistory": { "type": "boolean" },
-        "madelungAnomaly": { "type": "boolean" },
-        "essentialHuman": { "type": "boolean" },
-        "essentialPlant": { "type": "boolean" }
+        "laserCooled": {
+          "type": "boolean"
+        },
+        "clockSpecies": {
+          "type": "boolean"
+        },
+        "siHistory": {
+          "type": "boolean"
+        },
+        "madelungAnomaly": {
+          "type": "boolean"
+        },
+        "essentialHuman": {
+          "type": "boolean"
+        },
+        "essentialPlant": {
+          "type": "boolean"
+        }
       },
-      "required": ["madelungAnomaly"],
+      "required": [
+        "madelungAnomaly"
+      ],
       "additionalProperties": false
     },
     "ElementIndexEntry": {
       "description": "One entry of public/data/index.json — tile-level data, kept small.",
       "type": "object",
       "properties": {
-        "Z": { "type": "integer", "minimum": 1 },
-        "symbol": { "type": "string", "pattern": "^[A-Z][a-z]{0,2}$" },
-        "name": { "type": "string" },
-        "category": { "$ref": "#/definitions/Category" },
-        "block": { "type": "string", "enum": ["s", "p", "d", "f"] },
-        "period": { "type": "integer", "minimum": 1 },
-        "group": { "type": ["integer", "null"], "minimum": 1, "maximum": 18 },
-        "standardState": { "type": "string", "enum": ["solid", "liquid", "gas", "unknown"] },
-        "atomicWeight": {
-          "oneOf": [{ "$ref": "#/definitions/Quantity" }, { "$ref": "#/definitions/Interval" }, { "$ref": "#/definitions/Missing" }]
+        "Z": {
+          "type": "integer",
+          "minimum": 1
         },
-        "mostStableMassNumber": { "type": "integer", "minimum": 1 },
-        "radioactive": { "type": "boolean" },
-        "ie1": { "$ref": "#/definitions/Q" },
-        "electronegativityPauling": { "$ref": "#/definitions/Q" },
-        "oxidationStates": { "$ref": "#/definitions/OxidationStates" },
-        "configuration": { "$ref": "#/definitions/Configuration" },
+        "symbol": {
+          "type": "string",
+          "pattern": "^[A-Z][a-z]{0,2}$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "$ref": "#/definitions/Category"
+        },
+        "block": {
+          "type": "string",
+          "enum": [
+            "s",
+            "p",
+            "d",
+            "f"
+          ]
+        },
+        "period": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "group": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 18
+        },
+        "standardState": {
+          "type": "string",
+          "enum": [
+            "solid",
+            "liquid",
+            "gas",
+            "unknown"
+          ]
+        },
+        "atomicWeight": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Quantity"
+            },
+            {
+              "$ref": "#/definitions/Interval"
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ]
+        },
+        "mostStableMassNumber": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "radioactive": {
+          "type": "boolean"
+        },
+        "ie1": {
+          "$ref": "#/definitions/Q"
+        },
+        "electronegativityPauling": {
+          "$ref": "#/definitions/Q"
+        },
+        "electronAffinity": {
+          "$ref": "#/definitions/Q"
+        },
+        "radiusCovalent": {
+          "$ref": "#/definitions/Q"
+        },
+        "radiusVdw": {
+          "$ref": "#/definitions/Q"
+        },
+        "meltingPoint": {
+          "$ref": "#/definitions/Q"
+        },
+        "boilingPoint": {
+          "$ref": "#/definitions/Q"
+        },
+        "density": {
+          "$ref": "#/definitions/Q"
+        },
+        "stableIsotopes": {
+          "$ref": "#/definitions/Q"
+        },
+        "longestHalfLife": {
+          "$ref": "#/definitions/Q"
+        },
+        "discovery": {
+          "$ref": "#/definitions/Discovery"
+        },
+        "oxidationStates": {
+          "$ref": "#/definitions/OxidationStates"
+        },
+        "configuration": {
+          "$ref": "#/definitions/Configuration"
+        },
         "groundTerm": {
-          "oneOf": [{ "$ref": "#/definitions/GroundTerm" }, { "$ref": "#/definitions/Missing" }]
+          "oneOf": [
+            {
+              "$ref": "#/definitions/GroundTerm"
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ]
         },
         "hyperfineHeadline": {
-          "oneOf": [{ "$ref": "#/definitions/HyperfineHeadline" }, { "$ref": "#/definitions/Missing" }]
+          "oneOf": [
+            {
+              "$ref": "#/definitions/HyperfineHeadline"
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ]
         },
-        "quantumFact": { "type": "string" },
-        "images": { "type": "array", "items": { "$ref": "#/definitions/ImageRef" }, "maxItems": 3 },
-        "flags": { "$ref": "#/definitions/ElementFlags" }
+        "quantumFact": {
+          "type": "string"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageRef"
+          },
+          "maxItems": 3
+        },
+        "flags": {
+          "$ref": "#/definitions/ElementFlags"
+        }
       },
       "required": [
         "Z",
@@ -233,6 +583,15 @@
         "radioactive",
         "ie1",
         "electronegativityPauling",
+        "electronAffinity",
+        "radiusCovalent",
+        "radiusVdw",
+        "meltingPoint",
+        "boilingPoint",
+        "density",
+        "stableIsotopes",
+        "longestHalfLife",
+        "discovery",
         "oxidationStates",
         "configuration",
         "groundTerm",
@@ -246,63 +605,167 @@
     "IndexFile": {
       "type": "object",
       "properties": {
-        "schemaVersion": { "type": "integer", "enum": [1] },
-        "elements": { "type": "array", "items": { "$ref": "#/definitions/ElementIndexEntry" } }
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ElementIndexEntry"
+          }
+        }
       },
-      "required": ["schemaVersion", "elements"],
+      "required": [
+        "schemaVersion",
+        "elements"
+      ],
       "additionalProperties": false
     },
     "Source": {
       "type": "object",
       "properties": {
-        "id": { "$ref": "#/definitions/SourceId" },
-        "title": { "type": "string" },
-        "url": { "type": "string" },
-        "licence": { "type": "string" },
-        "licenceUrl": { "type": "string" },
-        "citation": { "type": "string" },
-        "kind": { "type": "string", "enum": ["fetched", "curated", "reference"] },
-        "retrieved": { "type": "string", "description": "UTC date of the cached raw response used for this build (fetched sources only)." },
-        "status": { "type": "string", "enum": ["ok", "unavailable", "not_yet_used"] },
-        "notes": { "type": "string" }
+        "id": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "licence": {
+          "type": "string"
+        },
+        "licenceUrl": {
+          "type": "string"
+        },
+        "citation": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "fetched",
+            "curated",
+            "reference"
+          ]
+        },
+        "retrieved": {
+          "type": "string",
+          "description": "UTC date of the cached raw response used for this build (fetched sources only)."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ok",
+            "unavailable",
+            "not_yet_used"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
       },
-      "required": ["id", "title", "url", "licence", "licenceUrl", "citation", "kind", "status"],
+      "required": [
+        "id",
+        "title",
+        "url",
+        "licence",
+        "licenceUrl",
+        "citation",
+        "kind",
+        "status"
+      ],
       "additionalProperties": false
     },
     "SourcesFile": {
       "type": "object",
       "properties": {
-        "schemaVersion": { "type": "integer", "enum": [1] },
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
         "sources": {
           "type": "object",
-          "patternProperties": { "^[a-z][a-z0-9_]*$": { "$ref": "#/definitions/Source" } },
+          "patternProperties": {
+            "^[a-z][a-z0-9_]*$": {
+              "$ref": "#/definitions/Source"
+            }
+          },
           "additionalProperties": false
         }
       },
-      "required": ["schemaVersion", "sources"],
+      "required": [
+        "schemaVersion",
+        "sources"
+      ],
       "additionalProperties": false
     },
     "LayoutCell": {
       "description": "Grid position in the shared 32-column coordinate space (SPEC §7.2). col 1–32, row ≥ 1; label positions may use row 0 / spare columns as margins.",
       "type": "object",
       "properties": {
-        "col": { "type": "integer", "minimum": 0, "maximum": 33 },
-        "row": { "type": "integer", "minimum": 0 }
+        "col": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 33
+        },
+        "row": {
+          "type": "integer",
+          "minimum": 0
+        }
       },
-      "required": ["col", "row"],
+      "required": [
+        "col",
+        "row"
+      ],
       "additionalProperties": false
     },
     "LayoutLabel": {
       "type": "object",
       "properties": {
-        "text": { "type": "string" },
-        "col": { "type": "integer", "minimum": 0, "maximum": 33 },
-        "row": { "type": "integer", "minimum": 0 },
-        "kind": { "type": "string", "enum": ["group", "period", "row", "block", "marker"] },
-        "span": { "type": "integer", "minimum": 1, "description": "Columns the label spans (default 1)." },
-        "title": { "type": "string" }
+        "text": {
+          "type": "string"
+        },
+        "col": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 33
+        },
+        "row": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "group",
+            "period",
+            "row",
+            "block",
+            "marker"
+          ]
+        },
+        "span": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Columns the label spans (default 1)."
+        },
+        "title": {
+          "type": "string"
+        }
       },
-      "required": ["text", "col", "row", "kind"],
+      "required": [
+        "text",
+        "col",
+        "row",
+        "kind"
+      ],
       "additionalProperties": false
     },
     "LayoutVariant": {
@@ -310,35 +773,367 @@
       "properties": {
         "cells": {
           "type": "object",
-          "patternProperties": { "^[0-9]+$": { "$ref": "#/definitions/LayoutCell" } },
+          "patternProperties": {
+            "^[0-9]+$": {
+              "$ref": "#/definitions/LayoutCell"
+            }
+          },
           "additionalProperties": false
         },
-        "labels": { "type": "array", "items": { "$ref": "#/definitions/LayoutLabel" } }
+        "labels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LayoutLabel"
+          }
+        }
       },
-      "required": ["cells", "labels"],
+      "required": [
+        "cells",
+        "labels"
+      ],
       "additionalProperties": false
     },
     "LayoutFile": {
       "description": "public/data/layouts/{id}.json, produced by tools/build_layouts.py. Components read positions from here and never compute them.",
       "type": "object",
       "properties": {
-        "schemaVersion": { "type": "integer", "enum": [1] },
-        "id": { "type": "string", "enum": ["standard18", "long32", "janet", "adomah"] },
-        "title": { "type": "string" },
-        "caption": { "type": "string" },
-        "rowAxis": { "type": "string", "enum": ["period", "n+l", "n"] },
-        "group3Sensitive": { "type": "boolean" },
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "id": {
+          "type": "string",
+          "enum": [
+            "standard18",
+            "long32",
+            "janet",
+            "adomah"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "rowAxis": {
+          "type": "string",
+          "enum": [
+            "period",
+            "n+l",
+            "n"
+          ]
+        },
+        "group3Sensitive": {
+          "type": "boolean"
+        },
         "variants": {
           "type": "object",
           "properties": {
-            "lu": { "$ref": "#/definitions/LayoutVariant" },
-            "la": { "$ref": "#/definitions/LayoutVariant" }
+            "lu": {
+              "$ref": "#/definitions/LayoutVariant"
+            },
+            "la": {
+              "$ref": "#/definitions/LayoutVariant"
+            }
           },
-          "required": ["lu", "la"],
+          "required": [
+            "lu",
+            "la"
+          ],
           "additionalProperties": false
         }
       },
-      "required": ["schemaVersion", "id", "title", "caption", "rowAxis", "group3Sensitive", "variants"],
+      "required": [
+        "schemaVersion",
+        "id",
+        "title",
+        "caption",
+        "rowAxis",
+        "group3Sensitive",
+        "variants"
+      ],
+      "additionalProperties": false
+    },
+    "Discovery": {
+      "description": "Discovery year as PubChem gives it; elements known since antiquity have no year.",
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer"
+        },
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
+      },
+      "required": [
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "TrendArrow": {
+      "type": "object",
+      "properties": {
+        "axis": {
+          "type": "string",
+          "enum": [
+            "across",
+            "down"
+          ],
+          "description": "across: along a period, left to right; down: down a group."
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "increases",
+            "decreases",
+            "about constant"
+          ]
+        },
+        "region": {
+          "type": "string",
+          "enum": [
+            "all",
+            "metals",
+            "nonmetals"
+          ]
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "axis",
+        "direction",
+        "region"
+      ],
+      "additionalProperties": false
+    },
+    "TrendException": {
+      "type": "object",
+      "properties": {
+        "symbols": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "symbols",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "ArrowTrend": {
+      "description": "A classic monotone trend (SPEC §8.1), drawn only in layouts with periods and groups.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "cause": {
+          "type": "string"
+        },
+        "arrows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TrendArrow"
+          },
+          "minItems": 1
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TrendException"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "cause",
+        "arrows",
+        "exceptions"
+      ],
+      "additionalProperties": false
+    },
+    "Heatmap": {
+      "description": "A numeric field shown as a colour scale (SPEC §8.2). `field` names an index.json field, or `computed:zAlpha` for a value the app computes.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "field": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "string",
+          "enum": [
+            "energy",
+            "temperature",
+            "plain"
+          ],
+          "description": "energy and temperature follow the unit setting."
+        },
+        "scale": {
+          "type": "string",
+          "enum": [
+            "linear",
+            "log"
+          ]
+        },
+        "caption": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceId"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "field",
+        "quantity",
+        "scale",
+        "caption",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "MapClass": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "short": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "tone": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "short",
+        "description",
+        "tone"
+      ],
+      "additionalProperties": false
+    },
+    "CategoricalMap": {
+      "description": "A categorical map (SPEC §8.3). The pipeline assigns every element a class; the app only draws it.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceId"
+          },
+          "minItems": 1
+        },
+        "classes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MapClass"
+          },
+          "minItems": 2
+        },
+        "values": {
+          "type": "object",
+          "patternProperties": {
+            "^[0-9]+$": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "caption",
+        "sources",
+        "classes",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "TrendsFile": {
+      "description": "public/data/trends.json, produced by tools/build_trends.py from tools/curated/trends.toml.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "arrows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ArrowTrend"
+          }
+        },
+        "heatmaps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Heatmap"
+          }
+        },
+        "maps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CategoricalMap"
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "arrows",
+        "heatmaps",
+        "maps"
+      ],
       "additionalProperties": false
     }
   }

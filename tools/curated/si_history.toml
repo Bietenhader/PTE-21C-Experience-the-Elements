@@ -1,0 +1,130 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Elements in the definitions of the SI units (SPEC §6.2, §10.6 "In the SI"). Hand rows for the
+# definitions and prototypes, each citing the CGPM resolution that made or ended the role (texts
+# read on bipm.org; DOIs 10.59161/… are the BIPM's own). The secondary representations of the
+# second (SRS) and the recommended radiations for the metre (iodine-stabilized lasers, spectral
+# lamps) are NOT typed here: tools/build_metrology.py generates them from the fetched BIPM list.
+#
+# Columns: Z, A (isotope, optional), unit, role, from, to (omit while current), text (own words),
+#          source, doi (the resolution that made the role), end_doi (the one that ended it).
+
+[[row]]
+Z = 55
+A = 133
+unit = "second"
+role = "definition"
+from = 1967
+text = "The second is the duration of 9 192 631 770 periods of the caesium-133 ground-state hyperfine transition. Since 2019 the same number is a fixed defining constant of the whole SI."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1967RES1E"
+
+[[row]]
+Z = 36
+A = 86
+unit = "metre"
+role = "definition"
+from = 1960
+to = 1983
+text = "The metre was 1 650 763.73 wavelengths, in vacuum, of the orange-red line of krypton-86. Since 1983 the metre is fixed by the speed of light."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1960RES6E"
+end_doi = "10.59161/CGPM1983RES1E"
+
+[[row]]
+Z = 78
+unit = "metre"
+role = "prototype"
+from = 1889
+to = 1960
+text = "The international prototype of the metre was a bar of platinum alloyed with 10 % iridium; the metre was the distance between two marks on it."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1889DECLE"
+end_doi = "10.59161/CGPM1960RES6E"
+
+[[row]]
+Z = 77
+unit = "metre"
+role = "prototype"
+from = 1889
+to = 1960
+text = "Iridium (10 %) hardened the platinum of the international prototype of the metre."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1889DECLE"
+end_doi = "10.59161/CGPM1960RES6E"
+
+[[row]]
+Z = 78
+unit = "kilogram"
+role = "prototype"
+from = 1889
+to = 2019
+text = "The kilogram was the mass of the international prototype, a cylinder of platinum with 10 % iridium kept at the BIPM. Since 2019 the kilogram is fixed by the Planck constant."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1889DECLE"
+end_doi = "10.59161/CGPM2018RES1E"
+
+[[row]]
+Z = 77
+unit = "kilogram"
+role = "prototype"
+from = 1889
+to = 2019
+text = "Iridium (10 %) made up part of the international prototype of the kilogram."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1889DECLE"
+end_doi = "10.59161/CGPM2018RES1E"
+
+[[row]]
+Z = 78
+unit = "candela"
+role = "definition"
+from = 1948
+to = 1979
+text = "The candela was based on a black body at the freezing temperature of platinum: 1/600 000 square metre of it, seen perpendicularly, had a luminous intensity of one candela."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1967RES5E"
+end_doi = "10.59161/CGPM1979RES3E"
+
+[[row]]
+Z = 6
+A = 12
+unit = "mole"
+role = "definition"
+from = 1971
+to = 2019
+text = "The mole was the amount of substance containing as many entities as there are atoms in 0.012 kg of carbon-12. Since 2019 it is fixed by the Avogadro constant."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1971RES3E"
+end_doi = "10.59161/CGPM2018RES1E"
+
+[[row]]
+Z = 1
+unit = "kelvin"
+role = "definition"
+from = 1954
+to = 2019
+text = "The kelvin was 1/273.16 of the thermodynamic temperature of the triple point of water (hydrogen and oxygen). Since 2019 it is fixed by the Boltzmann constant."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1954RES3E"
+end_doi = "10.59161/CGPM2018RES1E"
+
+[[row]]
+Z = 8
+unit = "kelvin"
+role = "definition"
+from = 1954
+to = 2019
+text = "The kelvin was 1/273.16 of the thermodynamic temperature of the triple point of water (hydrogen and oxygen). Since 2019 it is fixed by the Boltzmann constant."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1954RES3E"
+end_doi = "10.59161/CGPM2018RES1E"
+
+[[row]]
+Z = 14
+A = 28
+unit = "kilogram"
+role = "realization"
+from = 2019
+text = "One of the two primary ways to realize the kilogram counts atoms: a near-perfect sphere of silicon enriched in silicon-28 is measured by X-ray crystal density (XRCD), and its mass follows from the Planck constant."
+source = "bipm_mep_kilogram"

@@ -87,9 +87,21 @@ def test_every_missing_has_a_reason(index):
 
 @pytest.mark.parametrize("toml_file", sorted(p.name for p in CURATED_DIR.glob("*.toml")))
 def test_every_curated_row_has_a_registered_source(toml_file, sources):
-    rows = tomllib.loads((CURATED_DIR / toml_file).read_text(encoding="utf-8")).get("row", [])
-    for row in rows:
-        assert row.get("source") in sources["sources"], (toml_file, row)
+    """SPEC §6.2: every row of every table names a registered source (biology.toml names one per
+    claim: plant_source, human_source); primary_literature rows give their DOI or arXiv id."""
+    doc = tomllib.loads((CURATED_DIR / toml_file).read_text(encoding="utf-8"))
+    # images.toml chooses files (credits come with each file); trends.toml cites per trend.
+    for table, rows in doc.items():
+        if table not in ("row", "clock", "event"):
+            continue
+        for row in rows:
+            keys = [k for k in row if (k == "source" or k.endswith("_source")) and k != "wavelength_source"]
+            assert keys, (toml_file, table, row)
+            for k in keys:
+                assert row[k] in sources["sources"], (toml_file, k, row)
+                if row[k] == "primary_literature":
+                    doi = row.get(k.replace("source", "doi")) or row.get("doi") or row.get("arxiv")
+                    assert doi, (toml_file, "primary_literature without a DOI", row)
 
 
 def test_fetched_sources_used_in_m0_have_retrieval_dates(sources):

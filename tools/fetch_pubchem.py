@@ -128,3 +128,49 @@ def covalent_radius(text: str) -> tuple[float, float | None, str | None, str]:
     value = float(m.group(1))
     unc = float(m.group(2)) if m.group(2) else None
     return value, unc, m.group(3), ", ".join(parts[1:])
+
+
+ABUNDANCE_HEADINGS = {"crust": "Estimated Crustal Abundance", "ocean": "Estimated Oceanic Abundance"}
+_SUPERSCRIPT = str.maketrans("0123456789-−", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁻")
+ABUNDANCE_UNITS = {"milligrams per kilogram": "mg/kg", "milligrams per liter": "mg/L"}
+
+
+def _superscripted(swm: dict) -> str:
+    """Re-insert the exponent markers PubChem keeps as markup: '5.63×104' + superscript → '5.63e4'."""
+    text = swm.get("String", "")
+    for mk in sorted(swm.get("Markup", []), key=lambda m: -m.get("Start", 0)):
+        if mk.get("Type") == "Superscript":
+            a, b = mk["Start"], mk["Start"] + mk["Length"]
+            text = text[:a] + "^" + text[a:b] + "^" + text[b:]
+    return text
+
+
+def parse_abundance() -> dict[int, dict[str, dict]]:
+    """{Z: {"crust": {value, unit, text}, "ocean": {...}}} from Jefferson Lab's estimates on the
+    PubChem element pages (mg/kg in the crust, mg/L in sea water); 'Not Applicable' is skipped."""
+    out: dict[int, dict[str, dict]] = {}
+    for z in range(1, NUM_ELEMENTS + 1):
+        record = json.loads(raw_path(SOURCE, f"element_{z:03d}.json").read_text(encoding="utf-8"))["Record"]
+        refs = {r["ReferenceNumber"]: r.get("SourceName", "") for r in record.get("Reference", [])}
+        for key, heading in ABUNDANCE_HEADINGS.items():
+            for sec in record.get("Section", []):
+                found = _find(sec, heading)
+                if not found:
+                    continue
+                for info in found.get("Information", []):
+                    if refs.get(info.get("ReferenceNumber")) != JEFFERSON:
+                        continue
+                    for swm in info.get("Value", {}).get("StringWithMarkup", []):
+                        text = _superscripted(swm)
+                        m = re.match(r"^\s*([\d.]+)(?:×10\^(−?-?\d+)\^)?\s+(milligrams per (?:kilogram|liter))", text)
+                        if not m:
+                            continue
+                        exp = int(m.group(2).replace("−", "-")) if m.group(2) else 0
+                        value = float(m.group(1)) * 10**exp
+                        shown = re.sub(r"\^([^^]*)\^", lambda g: g.group(1).translate(_SUPERSCRIPT), text)
+                        out.setdefault(z, {})[key] = {
+                            "value": value,
+                            "unit": ABUNDANCE_UNITS[m.group(3)],
+                            "text": shown,
+                        }
+    return out

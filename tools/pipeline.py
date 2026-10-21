@@ -18,17 +18,35 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import build
+import build_details
 import build_layouts
 import build_trends
+import fetch_bipm
 import fetch_ciaaw
 import fetch_codata
 import fetch_iaea
+import fetch_images
 import fetch_nist_awic
 import fetch_nist_gsie
+import fetch_nist_levels
+import fetch_nist_lines
+import fetch_nist_srd141
 import fetch_pubchem
 from common import SourceUnavailable
 
-FETCHERS = [fetch_pubchem, fetch_nist_gsie, fetch_nist_awic, fetch_iaea, fetch_codata, fetch_ciaaw]
+FETCHERS = [
+    fetch_pubchem,
+    fetch_nist_gsie,
+    fetch_nist_awic,
+    fetch_iaea,
+    fetch_codata,
+    fetch_ciaaw,
+    fetch_nist_levels,
+    fetch_nist_lines,
+    fetch_nist_srd141,
+    fetch_bipm,
+    fetch_images,
+]
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -51,6 +69,7 @@ def main(argv: list[str] | None = None) -> int:
                 failed.append(mod.SOURCE)
                 print(f"!!! {exc}", flush=True)
     build.build()
+    build_details.build_details()
     build_layouts.build_layouts()
     build_trends.build_trends()
     if failed:

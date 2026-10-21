@@ -14,15 +14,72 @@ from __future__ import annotations
 import csv
 import re
 
-from common import http_get, raw_path
+from common import SourceUnavailable, http_get, raw_path
 
 SOURCE = "iaea_livechart"
 URL = "https://nds.iaea.org/relnsd/v1/data?fields=ground_states&nuclides=all"
 FILE = "ground_states.csv"
 
 
+LEVELS_URL = "https://nds.iaea.org/relnsd/v1/data?fields=levels&nuclides={nuclide}"
+
+
+def levels_file(z: int, a: int) -> str:
+    return f"levels_{z:03d}_{a:03d}.csv"
+
+
 def fetch(refresh: bool = False) -> None:
     http_get(SOURCE, URL, FILE, refresh=refresh)
+    # The ground-state table attaches to a nuclide the first moment it finds for ANY of its levels
+    # (O-16 shows the 6.13 MeV 3- state's moment; Fe-57 shows the 14.4 keV level's quadrupole
+    # moment). The level table says which level each moment belongs to, so it is fetched for every
+    # nuclide whose ground-state row carries a moment, and only level 0 is used.
+    for z, recs in _ground_rows().items():
+        for r in recs:
+            if r["mu_raw"] or r["q_raw"]:
+                try:
+                    http_get(
+                        SOURCE,
+                        LEVELS_URL.format(nuclide=f"{r['A']}{r['symbol'].lower()}"),
+                        levels_file(z, r["A"]),
+                        refresh=refresh,
+                    )
+                except SourceUnavailable:
+                    pass  # parse_full marks this nuclide's moments unavailable
+
+
+def _ground_rows() -> dict[int, list[dict]]:
+    out: dict[int, list[dict]] = {}
+    with raw_path(SOURCE, FILE).open(encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            z = int(row["z"])
+            if z:
+                out.setdefault(z, []).append(
+                    {
+                        "A": z + int(row["n"]),
+                        "symbol": row["symbol"],
+                        "mu_raw": row["magnetic_dipole"].strip(),
+                        "q_raw": row["electric_quadrupole"].strip(),
+                    }
+                )
+    return out
+
+
+def ground_level_moments(z: int, a: int) -> dict | None:
+    """{mu, muUnc, Q, QUnc} of the level at 0 keV from the cached level table, or None if not cached."""
+    path = raw_path(SOURCE, levels_file(z, a))
+    if not path.exists():
+        return None
+    with path.open(encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            if row.get("idx") == "0" or (row.get("energy", "").strip() == "0" and not row.get("energy_shift")):
+                return {
+                    "mu": _float(row.get("magnetic_dipole", "")),
+                    "muUnc": _float(row.get("unc_mn", "")),
+                    "Q": _float(row.get("electric_quadrupole", "")),
+                    "QUnc": _float(row.get("unc_eq", "")),
+                }
+    return {"mu": None, "muUnc": None, "Q": None, "QUnc": None}
 
 
 def parse_spin(jp: str) -> float | None:
@@ -111,10 +168,7 @@ def parse_full() -> dict[int, list[dict]]:
                     "massSystematics": row["me_systematics"].strip() == "Y",
                     "bindingKeV": _num(row, "binding"),
                     "bindingUnc": _num(row, "unc_ba"),
-                    "mu": _num(row, "magnetic_dipole"),
-                    "muUnc": _num(row, "unc_md"),
-                    "Q": _num(row, "electric_quadrupole"),
-                    "QUnc": _num(row, "unc_eq"),
+                    **_moments(z, z + n, row),
                     "radius": _num(row, "radius"),
                     "radiusUnc": _num(row, "unc_r"),
                     "discovery": int(row["discovery"]) if row["discovery"].strip().isdigit() else None,
@@ -124,3 +178,13 @@ def parse_full() -> dict[int, list[dict]]:
     for isotopes in out.values():
         isotopes.sort(key=lambda x: x["N"])
     return out
+
+
+def _moments(z: int, a: int, row: dict) -> dict:
+    """Ground-level moments: from the level table (level 0) when the ground-state row has any."""
+    if not (row["magnetic_dipole"].strip() or row["electric_quadrupole"].strip()):
+        return {"mu": None, "muUnc": None, "Q": None, "QUnc": None, "momentsUnavailable": False}
+    level0 = ground_level_moments(z, a)
+    if level0 is None:
+        return {"mu": None, "muUnc": None, "Q": None, "QUnc": None, "momentsUnavailable": True}
+    return {**level0, "momentsUnavailable": False}

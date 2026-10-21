@@ -1,15 +1,19 @@
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
 #
 # Ground-state hyperfine splittings per isotope (SPEC §6.2). One row per isotope and charge state;
-# every row carries a source key from tools/sources.toml (and a DOI where there is one) and is
-# verified against its primary reference. Uncertain rows are omitted, never guessed.
+# every row carries a source key from tools/sources.toml (and the DOI of the primary measurement
+# where there is one). Every number was read in the document named in the row's evidence line
+# (the arXiv version where the journal is paywalled); every DOI was checked against Crossref.
+# Uncertain rows are omitted, never guessed. Rubidium-87 is not typed here: its splitting is the
+# BIPM recommended value, taken from the fetched list by the build (bipm_frequencies).
 #
 # Columns: Z, A, charge (0 = neutral atom, 1 = singly charged ion), I, J,
-#          A_MHz (magnetic dipole constant), B_MHz (electric quadrupole constant; omit for J = 1/2),
-#          splitting_Hz, unc_Hz (standard uncertainty; 0 = exact by definition), source, doi, note.
-#
-# Status: M0 carries only the one value that is exact by definition. The full first-pass list in
-# SPEC §6.2 (H-1, the alkalis, group 13, coinage metals, halogens, clock ions, …) is compiled in M2.
+#          A_MHz (magnetic dipole constant) and A_unc_MHz, B_MHz and B_unc_MHz (electric quadrupole,
+#          only for J ≥ 1), splitting_Hz and unc_Hz (standard uncertainty; 0 = exact by definition),
+#          splitting_text (exact decimal where a double loses digits), source, doi, note.
+# For J = 1/2 the splitting is |A|(I + 1/2), the interval between the two F levels. For J ≥ 1 it
+# is the width of the ground-level hyperfine manifold, E(F_max) − E(F_min), computed from A and B
+# (SPEC §11.4); the build recomputes every splitting from A (and B) as a consistency check.
 
 [[row]]
 Z = 55
@@ -23,3 +27,634 @@ unc_Hz = 0
 source = "si_brochure"
 # A_MHz = splitting / (I + 1/2) for this J = 1/2 ground level (SPEC §11.4).
 note = "Exact by definition: this transition defines the SI second (1967; a defining constant of the SI since 2019)."
+
+# evidence: arXiv:hep-ph/0509010 (Karshenboim, Phys. Rep. 422 (2005) 1), table of 1s hyperfine intervals: "1420405.751768(1) kHz"
+
+[[row]]
+Z = 1
+A = 1
+charge = 0
+I = 0.5
+J = 0.5
+A_MHz = 1420.405751768
+splitting_Hz = 1420405751.768
+unc_Hz = 0.001
+source = "karshenboim2005"
+note = "1s ground-state hyperfine interval, measured by hydrogen masers (several measurements; conservative average of Karshenboim 2000); as tabulated by Karshenboim (2005)."
+
+# evidence: arXiv:hep-ph/0509010 (Karshenboim, Phys. Rep. 422 (2005) 1), table of 1s hyperfine intervals: "327384.352522(2) kHz"
+
+[[row]]
+Z = 1
+A = 2
+charge = 0
+I = 1.0
+J = 0.5
+A_MHz = 218.256235014667
+splitting_Hz = 327384352.522
+unc_Hz = 0.002
+source = "karshenboim2005"
+doi = "10.1103/PhysRevA.5.821"
+note = "1s ground-state hyperfine interval, measured by Wineland and Ramsey, deuterium maser (1972); as tabulated by Karshenboim (2005)."
+
+# evidence: arXiv:hep-ph/0509010 (Karshenboim, Phys. Rep. 422 (2005) 1), table of 1s hyperfine intervals: "1516701.470773(8) kHz"
+
+[[row]]
+Z = 1
+A = 3
+charge = 0
+I = 0.5
+J = 0.5
+A_MHz = 1516.701470773
+splitting_Hz = 1516701470.773
+unc_Hz = 0.008
+source = "karshenboim2005"
+doi = "10.1103/PhysRev.158.14"
+note = "1s ground-state hyperfine interval, measured by Mathur, Crampton, Kleppner and Ramsey (1967); as tabulated by Karshenboim (2005)."
+
+# evidence: arXiv:2209.11423 Table I, ground S1/2 row: "152.1368407(0.0000020)" MHz
+
+[[row]]
+Z = 3
+A = 6
+charge = 0
+I = 1.0
+J = 0.5
+A_MHz = 152.1368407
+A_unc_MHz = 0.000002
+splitting_Hz = 228205261.05
+unc_Hz = 3
+source = "allegrini2022"
+doi = "10.1103/RevModPhys.49.31"
+note = "Ground-state A constant (From Arimondo, Inguscio and Violino (1977)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# evidence: arXiv:2209.11423 Table I, ground S1/2 row: "401.7520433(5E-7)" MHz
+
+[[row]]
+Z = 3
+A = 7
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 401.7520433
+A_unc_MHz = 0.0000005
+splitting_Hz = 803504086.6
+unc_Hz = 1
+source = "allegrini2022"
+note = "Ground-state A constant (Beckmann, Böklen and Elke (1974)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# evidence: arXiv:2209.11423 Table II, ground S1/2 row: "885.8130644(5E-7)" MHz
+
+[[row]]
+Z = 11
+A = 23
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 885.8130644
+A_unc_MHz = 0.0000005
+splitting_Hz = 1771626128.8
+unc_Hz = 1
+source = "allegrini2022"
+doi = "10.1103/RevModPhys.49.31"
+note = "Ground-state A constant (From Arimondo, Inguscio and Violino (1977)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# evidence: arXiv:2209.11423 Table III, ground S1/2 row: "230.8598601(3E-7)" MHz
+
+[[row]]
+Z = 19
+A = 39
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 230.8598601
+A_unc_MHz = 0.0000003
+splitting_Hz = 461719720.2
+unc_Hz = 0.6
+source = "allegrini2022"
+doi = "10.1103/RevModPhys.49.31"
+note = "Ground-state A constant (From Arimondo, Inguscio and Violino (1977)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# evidence: arXiv:2209.11423 Table III, ground S1/2 row: "-285.7308(0.0024)" MHz
+
+[[row]]
+Z = 19
+A = 40
+charge = 0
+I = 4.0
+J = 0.5
+A_MHz = -285.7308
+A_unc_MHz = 0.0024
+splitting_Hz = 1285788600
+unc_Hz = 10800
+source = "allegrini2022"
+doi = "10.1103/RevModPhys.49.31"
+note = "Ground-state A constant (From Arimondo, Inguscio and Violino (1977)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2). Negative A: the hyperfine levels are inverted."
+
+# evidence: arXiv:2209.11423 Table III, ground S1/2 row: "127.0069352(6E-7)" MHz
+
+[[row]]
+Z = 19
+A = 41
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 127.0069352
+A_unc_MHz = 0.0000006
+splitting_Hz = 254013870.4
+unc_Hz = 1.2
+source = "allegrini2022"
+doi = "10.1103/RevModPhys.49.31"
+note = "Ground-state A constant (From Arimondo, Inguscio and Violino (1977)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# evidence: arXiv:2209.11423 Table IV, ground S1/2 row: "1011.910813(0.000002)" MHz
+
+[[row]]
+Z = 37
+A = 85
+charge = 0
+I = 2.5
+J = 0.5
+A_MHz = 1011.910813
+A_unc_MHz = 0.000002
+splitting_Hz = 3035732439
+unc_Hz = 6
+source = "allegrini2022"
+note = "Ground-state A constant (Tetu, Fortin and Savard (1976)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# evidence: arXiv:2209.11423 Table VIII, ground S1/2 row: "7195.1(0.6)" MHz
+
+[[row]]
+Z = 87
+A = 210
+charge = 0
+I = 6.0
+J = 0.5
+A_MHz = 7195.1
+A_unc_MHz = 0.6
+splitting_Hz = 46768150000
+unc_Hz = 3900000
+source = "allegrini2022"
+note = "Ground-state A constant (weighted average of Liberman et al. (1980) and Coc et al. (1985)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# evidence: arXiv:2209.11423 Table VIII, ground S1/2 row: "8713.8(0.8)" MHz
+
+[[row]]
+Z = 87
+A = 211
+charge = 0
+I = 4.5
+J = 0.5
+A_MHz = 8713.8
+A_unc_MHz = 0.8
+splitting_Hz = 43569000000
+unc_Hz = 4000000
+source = "allegrini2022"
+note = "Ground-state A constant (weighted average of Liberman et al. (1980), Coc et al. (1985) and Lynch et al. (2014)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# evidence: arXiv:2209.11423 Table VIII, ground S1/2 row: "9064.2(0.2)" MHz
+
+[[row]]
+Z = 87
+A = 212
+charge = 0
+I = 5.0
+J = 0.5
+A_MHz = 9064.2
+A_unc_MHz = 0.2
+splitting_Hz = 49853100000
+unc_Hz = 1100000
+source = "allegrini2022"
+note = "Ground-state A constant (weighted average of Liberman et al. (1980), Coc et al. (1985) and Duong et al. (1987)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+
+# --- rows verified in a second literature check (evidence lines quote the document read) ---
+# evidence: arXiv:1106.5760 (primary paper, arXiv version), abstract: "A0 is determined to be −625 008 837.044(12) Hz"
+# cross-check: arXiv:2601.14811 Table (comparison of measurements) lists "−625.008 840(35)" MHz from a 2026 low-field measurement; consistent.
+[[row]]
+Z = 4
+A = 9
+charge = 1
+I = 1.5
+J = 0.5
+A_MHz = -625.008837044
+A_unc_MHz = 0.000000012
+splitting_Hz = 1250017674.088
+unc_Hz = 0.024
+source = "primary_literature"
+doi = "10.1103/PhysRevA.84.012510"
+note = "Zero-field A0 from Penning-trap hyperfine-Zeeman spectroscopy (Shiga, Itano, Bollinger 2011), extrapolated over the diamagnetic shift. Splitting derived as 2|A0|. Negative A: inverted structure (F=1 above F=2)."
+
+# evidence: arXiv:1903.04661 (primary paper, arXiv version), abstract: "∆W/h = 1 788 762 752.85(13) Hz"; text before Sec. V: "A′hfs = −596 254 250.949(45) Hz"
+[[row]]
+Z = 12
+A = 25
+charge = 1
+I = 2.5
+J = 0.5
+A_MHz = -596.254250949
+A_unc_MHz = 0.000000045
+splitting_Hz = 1788762752.85
+unc_Hz = 0.13
+source = "primary_literature"
+doi = "10.1103/PhysRevA.100.013409"
+note = "Splitting measured directly by microwave Ramsey spectroscopy in an RF trap (Brewer et al. 2019). The A quoted is the authors' 'uncorrected' A' = splitting/3, which ignores higher-order hyperfine terms. The older 1981 Penning-trap A' (-596 254 376(54) Hz) lies about 2 sigma lower."
+
+# evidence: arXiv:1011.5949 Introduction: "4s ground state hyperfine structure splitting of 43 Ca+ (3225.6082864(3)MHz) was reported by Arbes et al. [51]"; Table XI Expt. "−806.402072"
+# evidence: arXiv:physics/0611134 text: "AS1/2 = −806.4020716 MHz was measured in reference [10]" ([10] = Arbes et al., Z. Phys. D 31, 27 (1994))
+[[row]]
+Z = 20
+A = 43
+charge = 1
+I = 3.5
+J = 0.5
+A_MHz = -806.4020716
+A_unc_MHz = 0.000000075
+splitting_Hz = 3225608286.4
+unc_Hz = 0.3
+source = "primary_literature"
+doi = "10.1007/BF01426573"
+note = "Measured by Arbes et al. (1994) with stored ions, as quoted in arXiv:1011.5949 Sec. I and arXiv:physics/0611134. A uncertainty derived as splitting uncertainty / 4. Negative A: inverted structure."
+
+# evidence: arXiv:2605.04281 Table IV, Experiment Ref. column: "AS1/2 ... −1000.473 673(11)†" († = [87] Sunaoshi et al., Hyperfine Interact. 78, 241 (1993))
+# cross-check: arXiv:2509.17512 Table VI Expt. "−1000.47367g" (g = [30] Sunaoshi et al.)
+[[row]]
+Z = 38
+A = 87
+charge = 1
+I = 4.5
+J = 0.5
+A_MHz = -1000.473673
+A_unc_MHz = 0.000011
+splitting_Hz = 5002368365
+unc_Hz = 55
+source = "primary_literature"
+doi = "10.1007/BF00568145"
+note = "Measured by Sunaoshi et al. (1993) on trapped ions, as tabulated in arXiv:2605.04281 Table IV. Splitting derived as 5|A|. Negative A: inverted structure."
+
+# evidence: arXiv:1705.09736 Table I, row 137, column AS1/2 (MHz): "4018.87083385(18)" (not a value from that work; the caption points to refs [24, 25, 30-33], where [30] = Blatt and Werth, Phys. Rev. A 25, 1476 (1982))
+# cross-check: arXiv:2505.05230 Table IX "4018.870...b" with b = [75] Blatt & Werth, PRA 25, 1476 (1982); arXiv:2103.02776 Table footnote a gives the older "A = 4018.8708343(16) MHz" from Blatt & Werth, Z. Phys. A 299, 93 (1981). All consistent.
+[[row]]
+Z = 56
+A = 137
+charge = 1
+I = 1.5
+J = 0.5
+A_MHz = 4018.87083385
+A_unc_MHz = 0.00000018
+splitting_Hz = 8037741667.70
+unc_Hz = 0.36
+source = "primary_literature"
+doi = "10.1103/PhysRevA.25.1476"
+note = "Measured by Blatt and Werth (1982) by ion-storage microwave spectroscopy, as tabulated in arXiv:1705.09736 Table I. Splitting derived as 2A. Positive A: normal ordering."
+
+# evidence: arXiv:2201.06719 Sec. II: "were accurately measured to be 14530507349.9(1.1) Hz [16]" ([16] = J. W. Zhang et al., Phys. Rev. A 86, 022523 (2012))
+# cross-check: arXiv:1802.02740 text (discussion of Table II): "14530.5073499(11) MHz [12]" ([12] = same PRA 86, 022523)
+[[row]]
+Z = 48
+A = 111
+charge = 1
+I = 0.5
+J = 0.5
+A_MHz = -14530.5073499
+A_unc_MHz = 0.0000011
+splitting_Hz = 14530507349.9
+unc_Hz = 1.1
+source = "primary_literature"
+doi = "10.1103/PhysRevA.86.022523"
+note = "Laser-microwave double resonance on trapped ions (Zhang et al. 2012), as quoted in arXiv:2201.06719. Sources give only the splitting; the minus sign on A is inferred from the negative nuclear g-factor quoted in arXiv:1802.02740 Table II caption."
+
+# evidence: arXiv:2110.12353 (primary paper, arXiv version), abstract and Eq. (4): "ν00 (0) = 15199862855.02799(27) Hz"
+[[row]]
+Z = 48
+A = 113
+charge = 1
+I = 0.5
+J = 0.5
+A_MHz = -15199.86285502799
+A_unc_MHz = 0.00000000027
+splitting_Hz = 15199862855.02799
+splitting_text = "15199862855.02799"
+unc_Hz = 0.00027
+source = "primary_literature"
+doi = "10.1364/OL.444045"
+note = "Microwave clock on laser-cooled trapped ions (Miao et al. 2021); agrees with earlier values listed in that paper's Table 2. Source gives only the splitting; minus sign on A inferred from the negative nuclear g-factor (arXiv:1802.02740 Table II caption)."
+
+# evidence: arXiv:2309.05323 Table I (hyperfine splitting νHFS, in mHz): "12642812118468.2(4)   [14]   Expt." ([14] = Phoonthong, Mizuno, Kido, Shiga, Applied Physics B 117, 673 (2014))
+# cross-check: same table, this-paper value "12642812118468.9(8)" mHz (Han et al.), and Fisk et al. "12642812118466(2)" mHz; all agree.
+[[row]]
+Z = 70
+A = 171
+charge = 1
+I = 0.5
+J = 0.5
+A_MHz = 12642.8121184682
+A_unc_MHz = 0.0000000004
+splitting_Hz = 12642812118.4682
+splitting_text = "12642812118.4682"
+unc_Hz = 0.0004
+source = "primary_literature"
+doi = "10.1007/s00340-014-5882-2"
+note = "Absolute microwave frequency of laser-cooled trapped ions (Phoonthong et al. 2014), the most precise entry in arXiv:2309.05323 Table I (converted from mHz). Source gives only the splitting; A taken positive (normal ordering, positive nuclear moment)."
+
+# evidence: arXiv:physics/0010056 p. 2 (text): "measured in a 199 Hg+ microwave frequency standard to be 40 507.347 996 841 59 (43) MHz [11]" ([11] = Berkeland et al., Phys. Rev. Lett. 80, 2089 (1998))
+# cross-check: arXiv:0904.2224: "40.50734799684159(41) GHz [1]" (same reference, same digits; it quotes a slightly smaller uncertainty, 41 instead of 43)
+[[row]]
+Z = 80
+A = 199
+charge = 1
+I = 0.5
+J = 0.5
+A_MHz = 40507.34799684159
+A_unc_MHz = 0.00000000043
+splitting_Hz = 40507347996.84159
+splitting_text = "40507347996.84159"
+unc_Hz = 0.00043
+source = "primary_literature"
+doi = "10.1103/PhysRevLett.80.2089"
+note = "Laser-cooled mercury-ion microwave standard (Berkeland et al. 1998), as quoted in arXiv:physics/0010056 (uncertainty 43 in the last digits, statistical and systematic combined). For I = 1/2 the splitting equals A."
+
+# ---------------------------------------------------------------------------
+# Neutral group-13 atoms, ground level 2P1/2
+# ---------------------------------------------------------------------------
+
+# evidence: arXiv:1511.08928 Table V, row "Experiment, 1960 [34]", column A1/2 (11B): "366.076 5(15)" ([34] = H. Lew and R. S. Title, Can. J. Phys. 38, 868 (1960))
+# note: arXiv:1206.2932 Table (final) lists the same "366.0765" but cites Harvey, Evans & Lew, Can. J. Phys. 50, 1719 (1972).
+[[row]]
+Z = 5
+A = 11
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 366.0765
+A_unc_MHz = 0.0015
+splitting_Hz = 732153000
+unc_Hz = 3000
+source = "primary_literature"
+doi = "10.1139/p60-091"
+note = "Atomic-beam magnetic resonance (Lew and Title 1960), as tabulated in arXiv:1511.08928 Table V. Splitting derived as 2A. Another review attributes the same number to Harvey, Evans and Lew (1972)."
+
+# evidence: arXiv:2511.08881 Table I, Literature column, A2P1/2 (MHz): "502.0336 (5) [45]" ([45] = Harvey, Evans, Lew, Can. J. Phys. 50, 1719 (1972))
+# cross-check: arXiv:0808.2821: "clock frequency has been measured to be 1.50614(5) GHz [11]" ([11] = Lew & Wessel 1953); consistent.
+[[row]]
+Z = 13
+A = 27
+charge = 0
+I = 2.5
+J = 0.5
+A_MHz = 502.0336
+A_unc_MHz = 0.0005
+splitting_Hz = 1506100800
+unc_Hz = 1500
+source = "primary_literature"
+doi = "10.1139/p72-233"
+note = "Atomic-beam measurement (Harvey, Evans and Lew 1972), as tabulated in arXiv:2511.08881 Table I. Splitting derived as 3A."
+
+# evidence: arXiv:0808.2821 p. 4: "has been measured to be 2.6779875(10) GHz and 3.4026946(13) GHz for 69 Ga and 71 Ga, respectively [19]" ([19] = Lurio & Prodell, Phys. Rev. 101, 79 (1956))
+# cross-check: arXiv:2608.18811 Table III, 69Ga 4p1/2 AExpt. "1339.1(1.2)" (laser spectroscopy, 1980); consistent.
+[[row]]
+Z = 31
+A = 69
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 1338.99375
+A_unc_MHz = 0.0005
+splitting_Hz = 2677987500
+unc_Hz = 1000
+source = "primary_literature"
+doi = "10.1103/PhysRev.101.79"
+note = "F=2 to F=1 interval from atomic-beam work (Lurio and Prodell 1956), as quoted in arXiv:0808.2821. A derived as splitting/2; positive sign as in arXiv:2608.18811 Table III."
+
+# evidence: arXiv:0808.2821 p. 4: "2.6779875(10) GHz and 3.4026946(13) GHz for 69 Ga and 71 Ga, respectively [19]" ([19] = Lurio & Prodell, Phys. Rev. 101, 79 (1956))
+[[row]]
+Z = 31
+A = 71
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 1701.3473
+A_unc_MHz = 0.00065
+splitting_Hz = 3402694600
+unc_Hz = 1300
+source = "primary_literature"
+doi = "10.1103/PhysRev.101.79"
+note = "F=2 to F=1 interval from atomic-beam work (Lurio and Prodell 1956), as quoted in arXiv:0808.2821. A derived as splitting/2 (positive, as for 69Ga)."
+
+# evidence: arXiv:2311.02285 Table III (115In), row "AExpt. [15]", column 5p1/2: "2281.9504(4)"
+# evidence: arXiv:0705.0656 Table VII (115In), 5p1/2 Exper. "2282b" with b = Ref. [13] = T. G. Eck, A. Lurio, P. Kusch, Phys. Rev. 106, 954 (1957)
+[[row]]
+Z = 49
+A = 115
+charge = 0
+I = 4.5
+J = 0.5
+A_MHz = 2281.9504
+A_unc_MHz = 0.0004
+splitting_Hz = 11409752000
+unc_Hz = 2000
+source = "primary_literature"
+doi = "10.1103/PhysRev.106.954"
+note = "Atomic-beam value as tabulated in arXiv:2311.02285 Table III. That table cites Eck and Kusch, Phys. Rev. 106, 958 (a paper on the 2P3/2 state); the 2P1/2 paper is the companion Eck, Lurio and Kusch, Phys. Rev. 106, 954, which arXiv:0705.0656 cites for this level. Splitting derived as 5A."
+
+# evidence: arXiv:physics/0703075 Table III, row "Ref.[33]", column 6P1/2 203Tl: "21105.447(5)" ([33] = A. Lurio and A. G. Prodell, Phys. Rev. 101, 79 (1956))
+[[row]]
+Z = 81
+A = 203
+charge = 0
+I = 0.5
+J = 0.5
+A_MHz = 21105.447
+A_unc_MHz = 0.005
+splitting_Hz = 21105447000
+unc_Hz = 5000
+source = "primary_literature"
+doi = "10.1103/PhysRev.101.79"
+note = "Atomic-beam measurement (Lurio and Prodell 1956), as tabulated in arXiv:physics/0703075 Table III. For I = 1/2 the splitting equals A."
+
+# evidence: arXiv:physics/0703075 Table III, row "Ref.[33]", column 6P1/2 205Tl: "21310.835(5)" ([33] = Lurio & Prodell 1956)
+# cross-check: arXiv:2101.01145 text near Eq. (24): "A205 [6P1/2 ] = 21310.835(5) from Ref. [65]" ([65] = Lurio & Prodell, Phys. Rev. 101, 79 (1956))
+[[row]]
+Z = 81
+A = 205
+charge = 0
+I = 0.5
+J = 0.5
+A_MHz = 21310.835
+A_unc_MHz = 0.005
+splitting_Hz = 21310835000
+unc_Hz = 5000
+source = "primary_literature"
+doi = "10.1103/PhysRev.101.79"
+note = "Atomic-beam measurement (Lurio and Prodell 1956), as tabulated in arXiv:physics/0703075 Table III and quoted in arXiv:2101.01145. For I = 1/2 the splitting equals A."
+
+# ---------------------------------------------------------------------------
+# Neutral coinage metals, ground level 2S1/2
+# ---------------------------------------------------------------------------
+
+# evidence: arXiv:2210.11425 Sec. "Hyperfine structure of Copper": "12568.81(1) MHz for 65 Cu and to 11733.83(1) MHz for 63 Cu [53]" ([53] = Y. Ting and H. Lew, Phys. Rev. 105, 581 (1957))
+# sign: arXiv:1011.5420 Table II lists A(2S1/2) of 63Cu as "+5867.1(5)" (laser value) and the 65Cu literature reference "Aref =+6284.405(5) MHz".
+[[row]]
+Z = 29
+A = 63
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 5866.915
+A_unc_MHz = 0.005
+splitting_Hz = 11733830000
+unc_Hz = 10000
+source = "primary_literature"
+doi = "10.1103/PhysRev.105.581"
+note = "Atomic-beam microwave measurement (Ting and Lew 1957), as quoted in arXiv:2210.11425. A derived as splitting/2."
+
+# evidence: arXiv:2210.11425: "12568.81(1) MHz for 65 Cu" ([53] = Ting & Lew 1957); arXiv:1011.5420 text near Eq. (6): "Aref =+6284.405(5) MHz" (given as the literature value; the sentence before cites refs [26, 27], [26] = Ting & Lew)
+[[row]]
+Z = 29
+A = 65
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 6284.405
+A_unc_MHz = 0.005
+splitting_Hz = 12568810000
+unc_Hz = 10000
+source = "primary_literature"
+doi = "10.1103/PhysRev.105.581"
+note = "Atomic-beam microwave measurement (Ting and Lew 1957), as quoted in arXiv:2210.11425; the same A appears as the reference value in arXiv:1011.5420."
+
+# evidence: arXiv:2609.40130 Table V, 107Ag 5s 2S1/2 Aexp: "−1712.512111(18) [16]" ([16] = H. Dahmen and S. Penselin, Z. Phys. 200, 456 (1967))
+[[row]]
+Z = 47
+A = 107
+charge = 0
+I = 0.5
+J = 0.5
+A_MHz = -1712.512111
+A_unc_MHz = 0.000018
+splitting_Hz = 1712512111
+unc_Hz = 18
+source = "primary_literature"
+doi = "10.1007/BF01326186"
+note = "Atomic-beam magnetic resonance (Dahmen and Penselin 1967), as tabulated in arXiv:2609.40130 Table V. For I = 1/2 the splitting equals |A|. Negative A: inverted structure."
+
+# evidence: arXiv:2609.40130 Table V, 109Ag 5s 2S1/2 Aexp: "−1976.932075(17) [16]" ([16] = Dahmen & Penselin 1967)
+[[row]]
+Z = 47
+A = 109
+charge = 0
+I = 0.5
+J = 0.5
+A_MHz = -1976.932075
+A_unc_MHz = 0.000017
+splitting_Hz = 1976932075
+unc_Hz = 17
+source = "primary_literature"
+doi = "10.1007/BF01326186"
+note = "Atomic-beam magnetic resonance (Dahmen and Penselin 1967), as tabulated in arXiv:2609.40130 Table V. For I = 1/2 the splitting equals |A|. Negative A: inverted structure."
+
+# evidence: arXiv:2012.00401 Sec. VI (text): "differs from the experimental value 3049.66 MHz [48]" ([48] = H. Dahmen and S. Penselin, Z. Phys. 200, 456 (1967))
+# The document gives no uncertainty, so A_unc_MHz and unc_Hz are omitted.
+[[row]]
+Z = 79
+A = 197
+charge = 0
+I = 1.5
+J = 0.5
+A_MHz = 3049.66
+splitting_Hz = 6099320000
+source = "primary_literature"
+doi = "10.1007/BF01326186"
+note = "Atomic-beam value (Dahmen and Penselin 1967) as quoted, without uncertainty, in arXiv:2012.00401. Splitting derived as 2A and so only good to about 0.02 MHz. Needs an uncertainty from the primary paper."
+
+#
+
+
+# --- J ≥ 1 ground levels: splitting = width of the hyperfine manifold, from A and B (second literature check) ---
+# evidence: arXiv:2311.01110 (Lechner et al., PLB 847, 138278) Table 1, row 121, "Lit." columns: "-299.034(4) [37]" and "-3.68(2) [37]"; [37] = Fernando, Rochester, Spalding, Smith, Phil. Mag. 5 (1960) 1291
+[[row]]
+Z = 51
+A = 121
+charge = 0
+I = 2.5
+J = 1.5
+A_MHz = -299.034
+A_unc_MHz = 0.004
+B_MHz = -3.68
+B_unc_MHz = 0.02
+splitting_Hz = 2689650000.0     # E(F_max) − E(F_min), computed from A and B
+unc_Hz = 45000.0
+source = "primary_literature"
+doi = "10.1080/14786436008238341"
+note = "5p3 4S3/2 ground level. A and B measured by Fernando et al. (1960), as tabulated in arXiv:2311.01110 Table 1; the collinear-laser value there, A = -299.0(3) MHz, agrees. Splitting = width of the ground-level hyperfine manifold (F = 1 to 4), from A and B."
+
+# evidence: arXiv:2311.01110 (Lechner et al., PLB 847, 138278) Table 1, row 123, "Lit." columns: "-162.451(3) [37]" and "-4.67(3) [37]"; [37] = Fernando, Rochester, Spalding, Smith, Phil. Mag. 5 (1960) 1291
+[[row]]
+Z = 51
+A = 123
+charge = 0
+I = 3.5
+J = 1.5
+A_MHz = -162.451
+A_unc_MHz = 0.003
+B_MHz = -4.67
+B_unc_MHz = 0.03
+splitting_Hz = 1948077714.0     # E(F_max) − E(F_min), computed from A and B
+unc_Hz = 44600.0
+source = "primary_literature"
+doi = "10.1080/14786436008238341"
+note = "5p3 4S3/2 ground level. A and B measured by Fernando et al. (1960), as tabulated in arXiv:2311.01110 Table 1; the collinear-laser value there, A = -162.58(8) MHz, is close. Splitting = width of the ground-level hyperfine manifold (F = 2 to 5), from A and B."
+
+# evidence: arXiv:2005.00414 (de Groote et al., PLB 827, 136930) Table 2, D3/2, "Expt. this work, Uncorrected": "269.55817(5)" and "-26.3531(9)" (Childs 1971 in the same table: "269.556(1)", "-26.346(4)")
+[[row]]
+Z = 21
+A = 45
+charge = 0
+I = 3.5
+J = 1.5
+A_MHz = 269.55817
+A_unc_MHz = 0.00005
+B_MHz = -26.3531
+B_unc_MHz = 0.0009
+splitting_Hz = 3242227497.0     # E(F_max) − E(F_min), computed from A and B
+unc_Hz = 860.0
+source = "primary_literature"
+doi = "10.1016/j.physletb.2022.136930"
+note = "3d4s2 2D3/2 ground level. Laser-rf double resonance on an atomic beam with resonance-ionisation detection (de Groote et al. 2022, arXiv:2005.00414 Table 2). These are the values fitted directly to the measured intervals, before second-order correction, so they reproduce the observed splitting. Childs (1971) gives B = -26.346(4) MHz, which differs by about 1.7 sigma. Splitting = width of the ground-level hyperfine manifold (F = 2 to 5), from A and B."
+
+# evidence: arXiv:physics/0506011 (Sahoo et al., J. Phys. B 38, 4379) Table I, Yttrium, Experiment [7-11]: "4d2 D3/2 ... 57.217(15)" (table prints magnitudes only; it also prints the Sc B as +26.346)
+# evidence (sign): arXiv:2604.16274 text: "µI = −0.137298(5)µN" for 89Y
+[[row]]
+Z = 39
+A = 89
+charge = 0
+I = 0.5
+J = 1.5
+A_MHz = -57.217
+A_unc_MHz = 0.015
+splitting_Hz = 114434000.0     # E(F_max) − E(F_min), computed from A (I = 1/2, no B term)
+unc_Hz = 30000.0
+source = "primary_literature"
+doi = "10.1007/bf01338376"
+note = "4d5s2 2D3/2 ground level. The magnitude of A comes from the atomic-beam resonance work of Fricke, Kopfermann and Penselin (1959), the hfs paper among refs 7-11 of arXiv:physics/0506011 Table I. That table drops signs. The minus sign is assigned here because the 89Y magnetic moment is negative (arXiv:2604.16274) and the analogous Sc level has A/mu > 0. The splitting does not depend on the sign. I = 1/2, so B is not defined. Splitting = width of the ground-level hyperfine manifold (F = 1 to 2)."
+
+# evidence: arXiv:2211.12797 (ApJ, doi 10.3847/1538-4357/ac922c) Table 1, "a6 S(1) 5/2 0 −2.416e−3 −6.348e−7" (A, B in cm−1), "(1) Davis et al. (1971)"
+# evidence: arXiv:1508.06207 (Heylen et al., PRC 92, 044311) text: "the 55 Mn literature value is B(S5/2 ) = 0.019031(15) MHz [24]"; [24] = Davis, Wright, Balling, Phys. Rev. A 3, 1220 (1971)
+[[row]]
+Z = 25
+A = 55
+charge = 0
+I = 2.5
+J = 2.5
+A_MHz = -72.4299
+A_unc_MHz = 0.015
+B_MHz = -0.019031
+B_unc_MHz = 0.000015
+splitting_Hz = 1086439936.0     # E(F_max) − E(F_min), computed from A and B
+unc_Hz = 240000.0
+source = "primary_literature"
+doi = "10.1103/PhysRevA.3.1220"
+note = "3d5 4s2 a6S5/2 ground level, Davis, Wright and Balling (1971). A is converted from -2.416e-3 cm-1 in arXiv:2211.12797 Table 1 (1 cm-1 = 29979.2458 MHz). That document gives no uncertainty, so A_unc is only the rounding of the tabulated digits and limits the splitting. The B magnitude and uncertainty come from arXiv:1508.06207, which prints it as positive. The sign follows arXiv:2211.12797 (negative). Changing the sign moves the width by only 0.017 MHz, which is included in unc_Hz. Splitting = width of the ground-level hyperfine manifold (F = 0 to 5), from A and B."
+
+# Not yet in this table (no accessible document giving a measured value with its source; SPEC
+# §6.2 first-pass list): 14N, 31P, 75As, 209Bi, 19F, 35Cl, 37Cl, 79Br, 81Br, 127I, 139La, 175Lu,
+# 59Co, 51V, 93Nb, 151Eu, 153Eu. Their tiles say "not yet in our curated table" until they are added.

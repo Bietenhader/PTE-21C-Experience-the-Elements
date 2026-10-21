@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Bietenhader/PTE-21C-Experience-the-Elements/schema/metrology.schema.json",
+  "description": "SPDX-License-Identifier: CC-BY-NC-SA-4.0. Schema for public/data/metrology.json.",
+  "$ref": "pte.schema.json#/definitions/MetrologyFile"
+}

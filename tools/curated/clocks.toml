@@ -1,0 +1,84 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Clock transitions that are NOT in the fetched BIPM list of standard frequencies (SPEC §6.2):
+# caesium's exact defining value, and the thorium-229 nuclear transition with its 2024–2026
+# results. Everything else in the AMO panel's clock table comes from the BIPM list
+# (tools/fetch_bipm.py), never from this file. Values are copied from the papers named by DOI
+# or arXiv id (read in full before entry).
+#
+# [[clock]] rows: Z, A, charge, kind ("atomic" | "nuclear"), transition, frequency_text (exact
+#   decimal, Hz), unc_Hz (0 = exact), flag, source, doi | arxiv, note.
+# [[event]] rows: the timeline of the second (SPEC §10.6), year, text (own words), source, doi.
+
+[[clock]]
+Z = 55
+A = 133
+charge = 0
+kind = "atomic"
+transition = "6s 2S1/2 (F=3) – 6s 2S1/2 (F=4)"
+frequency_text = "9192631770"
+unc_Hz = 0
+source = "si_brochure"
+note = "Exact by definition: this frequency defines the SI second (1967; a fixed defining constant of the SI since 2019)."
+
+[[clock]]
+Z = 90
+A = 229
+charge = 0
+kind = "nuclear"
+transition = "229Th nucleus, ground state 5/2+ – isomer 3/2+ (in a CaF2 crystal)"
+frequency_text = "2020407384335000"
+unc_Hz = 2000
+flag = "measured"
+source = "primary_literature"
+doi = "10.1038/s41586-024-07839-6"
+arxiv = "2406.18719"
+note = "Isomer transition frequency in calcium fluoride, measured as a frequency ratio to the JILA strontium-87 clock: 2 020 407 384 335(2) kHz (Zhang et al., Nature 2024). The energy is about 8.4 eV, a vacuum-ultraviolet photon of 148 nm."
+
+[[event]]
+year = 1967
+text = "The 13th CGPM defines the second by the caesium-133 hyperfine transition: 9 192 631 770 periods."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM1967RES1E"
+
+[[event]]
+year = 2018
+text = "The 26th CGPM revises the SI (in force 20 May 2019): seven fixed constants define all units; the second keeps the caesium frequency as one of them."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM2018RES1E"
+
+[[event]]
+year = 2022
+text = "The 27th CGPM asks for a roadmap to a new definition of the second based on optical clocks, to be adopted at the 29th CGPM in 2030."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM2022RES5E"
+
+[[event]]
+year = 2024
+text = "Thorium-229: a laser excites an atomic nucleus for the first time — the 8.4 eV isomer, in a crystal."
+source = "primary_literature"
+doi = "10.1103/PhysRevLett.132.182501"
+
+[[event]]
+year = 2024
+text = "Thorium-229: the nuclear transition frequency is measured against a strontium optical clock, to 2 kHz in 2 PHz."
+source = "primary_literature"
+doi = "10.1038/s41586-024-07839-6"
+
+[[event]]
+year = 2026
+text = "The 28th CGPM finds no consensus yet on which atom or ion (or ensemble) should define the second, and asks for a proposal for the new definition at the 29th CGPM in 2030."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM2026RES4E"
+
+[[event]]
+year = 2026
+text = "Thorium-229: a laser is kept locked to the nuclear transition and compared continuously with an ion clock — a working, if not yet precise, nuclear clock."
+source = "primary_literature"
+arxiv = "2606.04997"
+
+[[event]]
+year = 2030
+text = "Planned: the 29th CGPM is to decide on a new definition of the second."
+source = "cgpm_resolutions"
+doi = "10.59161/CGPM2026RES4E"

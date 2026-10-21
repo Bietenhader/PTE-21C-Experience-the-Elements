@@ -26,7 +26,7 @@ URL = (
     "&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&submit=Retrieve+Data"
 )
 VISIBLE = (380, 780)
-MEDIUM_AIR, MEDIUM_VACUUM = 2, 1
+MEDIUM_AIR, MEDIUM_VACUUM = 2, 3  # 3 = vacuum at every wavelength (1 garbles lines above 1000 nm)
 MAX_Z = 108
 ROMAN = {0: "I", 1: "II"}
 WINDOW_NM = 0.6

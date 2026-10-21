@@ -5,6 +5,9 @@ from __future__ import annotations
 
 import tomllib
 
+import pytest
+
+import curated
 from common import CURATED_DIR
 
 MADELUNG_ANOMALIES = {
@@ -46,13 +49,17 @@ def test_caesium_hyperfine_defines_the_second(by_symbol):
 
 
 def test_hyperfine_rows_consistent_with_a_constant():
-    """SPEC §11.4: for J = 1/2 the ground splitting is A(I + 1/2); the curated file must agree."""
+    """SPEC §11.4: the splitting recomputed from A (and B) agrees with the stored one; for J = 1/2
+    that is |A|(I + 1/2)."""
     rows = tomllib.loads((CURATED_DIR / "hyperfine.toml").read_text(encoding="utf-8"))["row"]
     for r in rows:
-        if r["J"] == 0.5 and "A_MHz" in r:
-            predicted = r["A_MHz"] * 1e6 * (r["I"] + 0.5)
-            tolerance = max(r["unc_Hz"] * 3, abs(r["splitting_Hz"]) * 1e-12)
-            assert abs(predicted - r["splitting_Hz"]) <= tolerance, r
+        if "A_MHz" not in r:
+            continue
+        width = curated.hyperfine_width_hz(r)
+        if r["J"] == 0.5:
+            assert width == pytest.approx(abs(r["A_MHz"]) * 1e6 * (r["I"] + 0.5), rel=1e-12)
+        tolerance = max(3 * (r.get("unc_Hz") or 0), abs(r["splitting_Hz"]) * 1e-9, 1.0)
+        assert abs(width - r["splitting_Hz"]) <= tolerance, r
 
 
 def test_hyperfine_reasons(by_symbol):
@@ -62,14 +69,18 @@ def test_hyperfine_reasons(by_symbol):
     assert by_symbol["He"]["hyperfineHeadline"]["reason"] == "not_applicable"  # ¹S₀ ground level
     assert "J = 0" in by_symbol["He"]["hyperfineHeadline"]["note"]
     assert by_symbol["Tc"]["hyperfineHeadline"]["reason"] == "no_stable_isotope"
-    assert by_symbol["H"]["hyperfineHeadline"]["reason"] == "not_measured"
+    # not yet compiled: N-14's ground level 4S3/2 has hyperfine structure, not yet in the table
+    assert by_symbol["N"]["hyperfineHeadline"]["reason"] == "not_measured"
+    assert "not yet in our curated table" in by_symbol["N"]["hyperfineHeadline"]["note"]
 
 
 def test_ionization_energy_flags_follow_nist_markers(by_symbol):
     assert by_symbol["H"]["ie1"]["flag"] == "calculated"  # NIST prints it in parentheses
     assert by_symbol["Md"]["ie1"]["flag"] == "interpolated"  # square brackets
     assert by_symbol["Fe"]["ie1"]["flag"] == "measured"
-    assert by_symbol["Og"]["ie1"]["reason"] == "predicted_only"
+    # Z ≥ 109: no NIST value; a published relativistic prediction, flagged so (tools/curated/superheavy.toml)
+    assert by_symbol["Og"]["ie1"]["flag"] == "predicted"
+    assert by_symbol["Og"]["ie1"]["source"] != "nist_gsie"
 
 
 def test_interval_elements_carry_a_sourced_display_value(elements):

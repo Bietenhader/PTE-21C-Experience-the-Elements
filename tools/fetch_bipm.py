@@ -3,7 +3,9 @@
 
 The BIPM Time Department's CCL-CCTF API serves the list as XML (NPL MeP schema): one request
 for the list of (species, frequency) pairs, then one per atomic species valid on the retrieval
-date. Molecular references (I₂, CH₄, OsO₄, C₂H₂) and the He–Ne laser are listed but skipped.
+date. Of the molecular references only iodine (¹²⁷I₂, the absorber of the iodine-stabilized lasers)
+and the He–Ne laser itself are kept, for the elements' roles in realizing the metre; CH₄, OsO₄ and
+C₂H₂ are skipped.
 """
 
 from __future__ import annotations
@@ -24,6 +26,8 @@ LIST_FILE = "list.html"
 
 # An atom or atomic ion: mass number, element symbol, optional charge sign ("87Rb", "171Yb+", "H").
 ATOMIC = re.compile(r"^(?P<A>\d+)?(?P<symbol>[A-Z][a-z]?)(?P<ion>\+)?$")
+# Molecular or laser references kept, with the element(s) they stand for.
+KEPT_OTHER = {"127I2": [("I", 127)], "HeNe": [("He", None), ("Ne", None)]}
 NS = {"freq": "NPL_MeP_Schema", "si": "https://ptb.de/si"}
 # D-SI unit strings → power of ten relative to the hertz.
 HERTZ = {"\\hertz": 0, "\\kilo\\hertz": 3, "\\mega\\hertz": 6, "\\giga\\hertz": 9, "\\tera\\hertz": 12}
@@ -47,7 +51,7 @@ def fetch(refresh: bool = False) -> None:
     http_get(SOURCE, LIST_URL, LIST_FILE, refresh=refresh)
     date = datetime.now(UTC).strftime("%Y-%m-%d")
     for target, freq in list_items():
-        if not ATOMIC.match(target):
+        if not ATOMIC.match(target) and target not in KEPT_OTHER:
             continue
         url = ITEM_URL.format(target=urllib.parse.quote(target), freq=urllib.parse.quote_plus(freq), date=date)
         http_get(SOURCE, url, item_file(target, freq), refresh=refresh)
@@ -79,14 +83,15 @@ def parse_item(text: str) -> dict | None:
 
 
 def parse() -> list[dict]:
-    """Every atomic standard frequency: [{target, A, symbol, charge, label, validFrom, srs,
-    transition, valueText, uncText, unit (power of ten of the hertz), coverageFactor}]."""
+    """Every kept standard frequency: [{target, A, symbol, charge, molecular, elements [(symbol, A)],
+    label, validFrom, srs, transition, valueText, uncText, unit (power of ten of the hertz),
+    coverageFactor}]."""
     if not raw_path(SOURCE, LIST_FILE).exists():
         raise SourceUnavailable(f"{SOURCE}: nothing cached in tools/raw/{SOURCE}")
     out = []
     for target, freq in list_items():
         m = ATOMIC.match(target)
-        if not m:
+        if not m and target not in KEPT_OTHER:
             continue
         path = raw_path(SOURCE, item_file(target, freq))
         if not path.exists():
@@ -94,13 +99,19 @@ def parse() -> list[dict]:
         item = parse_item(path.read_text(encoding="utf-8"))
         if item is None:
             continue
-        item.update(
-            {
-                "A": int(m.group("A")) if m.group("A") else None,
-                "symbol": m.group("symbol"),
-                "charge": 1 if m.group("ion") else 0,
-            }
-        )
+        if m:
+            item.update(
+                {
+                    "A": int(m.group("A")) if m.group("A") else None,
+                    "symbol": m.group("symbol"),
+                    "charge": 1 if m.group("ion") else 0,
+                    "molecular": False,
+                    "elements": [(m.group("symbol"), int(m.group("A")) if m.group("A") else None)],
+                }
+            )
+        else:
+            symbol, a = KEPT_OTHER[target][0]
+            item.update({"A": a, "symbol": symbol, "charge": 0, "molecular": True, "elements": KEPT_OTHER[target]})
         out.append(item)
     if not out:
         raise SourceUnavailable(f"{SOURCE}: no atomic standard frequencies parsed")

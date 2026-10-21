@@ -1,0 +1,693 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Which photographs each element shows (SPEC §12). Chosen by eye from the candidates that
+# tools/fetch_images.py lists in tools/images-report.md; this file wins over any heuristic.
+#
+#   pin          files in display order: images-of-elements.com files as the element page names
+#                them ("iron.jpg", or "s/rhodium.jpg" where the site has only its 400 px copy),
+#                or Wikimedia Commons titles ("File:…").
+#   kind         per-file kind (SPEC §5 ImageRef): sample, discharge_tube, crystal, powder,
+#                liquid, historical. Default: sample.
+#   title        per-file caption, in our own words.
+#   credit       per-file author and licence where the element page credits someone other than
+#                the site ("unless otherwise noted"); images-of-elements files without a credit
+#                entry are the site's own (Jürgen Kummer, CC BY 3.0).
+#   placeholder  "never_visible" (never made in a visible amount) or "no_free_photo" (made in
+#                visible amounts, but no openly licensed photograph was found); the card is drawn
+#                by the app (SPEC §12.5) and comes first.
+#   exclude      files looked at and rejected, with the reason in a comment.
+#
+# Rejected throughout: photos of minerals, ores, alloys, compounds, coins and objects (they are
+# not the element); the site's illustrations ("This is only an illustration, not … itself");
+# any photo marked © / "all rights reserved" (Theodore Gray, LANL 2011, JRC-ITU, CERN, SOHO).
+
+[[element]]
+Z = 1
+pin = ["hydrogen.jpg"]
+kind = { "hydrogen.jpg" = "discharge_tube" }
+title = { "hydrogen.jpg" = "Hydrogen glowing in a discharge tube" }
+exclude = ["s/orion-nebula.jpg"]  # a nebula, credited to Observatory Kempten
+
+[[element]]
+Z = 2
+pin = ["helium.jpg"]
+kind = { "helium.jpg" = "discharge_tube" }
+title = { "helium.jpg" = "Helium glowing in a discharge tube" }
+exclude = ["s/sun.jpg"]  # the Sun, © SOHO-EIT/ESA/NASA
+
+[[element]]
+Z = 3
+pin = ["lithium.jpg", "lithium-white.jpg"]
+title = { "lithium.jpg" = "Lithium pieces in a glass tube", "lithium-white.jpg" = "Lithium with a white corrosion layer" }
+
+[[element]]
+Z = 4
+pin = ["beryllium.jpg", "beryllium-3.jpg"]
+title = { "beryllium.jpg" = "Beryllium", "beryllium-3.jpg" = "The same beryllium piece, brighter light" }
+exclude = ["beryl.jpg"]  # a mineral
+
+[[element]]
+Z = 5
+pin = ["boron.jpg", "brown-boron.jpg"]
+kind = { "brown-boron.jpg" = "powder" }
+title = { "boron.jpg" = "Crystalline boron", "brown-boron.jpg" = "Amorphous brown boron powder" }
+exclude = ["ulexite.jpg"]  # a mineral
+
+[[element]]
+Z = 6
+pin = ["carbon.jpg", "diamond.jpg"]
+kind = { "diamond.jpg" = "crystal" }
+title = { "carbon.jpg" = "Ultrapure carbon as a graphite bar", "diamond.jpg" = "A rough diamond" }
+credit = { "diamond.jpg" = { author = "Unknown photographer", licence = "Public domain", note = "The element page marks this photo as public domain." } }
+exclude = ["c-60.jpg", "sic.jpg"]  # C60 dissolved in toluene; silicon carbide
+
+[[element]]
+Z = 7
+pin = ["nitrogen.jpg"]
+kind = { "nitrogen.jpg" = "discharge_tube" }
+title = { "nitrogen.jpg" = "Nitrogen glowing in a discharge tube" }
+
+[[element]]
+Z = 8
+pin = ["oxygen.jpg"]
+kind = { "oxygen.jpg" = "discharge_tube" }
+title = { "oxygen.jpg" = "Oxygen glowing in a discharge tube" }
+exclude = ["fire.jpg"]
+
+[[element]]
+Z = 9
+pin = ["fluorine.jpg"]
+title = { "fluorine.jpg" = "Fluorine gas in a sealed ampoule" }
+exclude = ["fluorite.jpg", "fluorite-2.jpg", "fluorite-eu.jpg", "fluorophore.jpg"]  # the mineral fluorite
+
+[[element]]
+Z = 10
+pin = ["neon.jpg"]
+kind = { "neon.jpg" = "discharge_tube" }
+title = { "neon.jpg" = "Neon glowing in a discharge tube" }
+
+[[element]]
+Z = 11
+pin = ["sodium.jpg", "sodium-vapor-lamp.jpg"]
+kind = { "sodium-vapor-lamp.jpg" = "discharge_tube" }
+title = { "sodium.jpg" = "Sodium under paraffin oil", "sodium-vapor-lamp.jpg" = "A sodium-vapour lamp" }
+
+[[element]]
+Z = 12
+pin = ["magnesium.jpg", "magnesium-swarf.jpg"]
+title = { "magnesium.jpg" = "Magnesium", "magnesium-swarf.jpg" = "Magnesium turnings" }
+exclude = ["chlorophyll.jpg"]
+
+[[element]]
+Z = 13
+pin = ["aluminium-4.jpg", "aluminium.jpg"]
+title = { "aluminium-4.jpg" = "A chunk of aluminium", "aluminium.jpg" = "Aluminium foil" }
+exclude = ["coin.jpg", "alu-plate.jpg"]
+
+[[element]]
+Z = 14
+pin = ["silicon.jpg", "silicon-3.jpg"]
+title = { "silicon.jpg" = "A piece of silicon", "silicon-3.jpg" = "Pure silicon with a rough surface" }
+exclude = ["polycrystalline-silicon.jpg", "solar-cells.jpg", "sand.jpg"]
+
+[[element]]
+Z = 15
+pin = ["white-phosphorus.jpg", "red-phosphorus.jpg", "phosphorus.jpg"]
+kind = { "red-phosphorus.jpg" = "powder" }
+title = { "white-phosphorus.jpg" = "White phosphorus under water", "red-phosphorus.jpg" = "Red phosphorus", "phosphorus.jpg" = "Violet phosphorus" }
+
+[[element]]
+Z = 16
+pin = ["sulfur.jpg", "sulfur-3.jpg"]
+kind = { "sulfur.jpg" = "crystal" }
+title = { "sulfur.jpg" = "Sulfur crystals", "sulfur-3.jpg" = "A chunk of sulfur" }
+exclude = ["volcanic-sulfur.jpg", "pyrite-2.jpg"]
+
+[[element]]
+Z = 17
+pin = ["chlorine.jpg", "chlorine-gas.jpg"]
+kind = { "chlorine.jpg" = "liquid" }
+title = { "chlorine.jpg" = "Liquid chlorine in a sealed ampoule", "chlorine-gas.jpg" = "Chlorine gas in an ampoule" }
+
+[[element]]
+Z = 18
+pin = ["argon.jpg"]
+kind = { "argon.jpg" = "discharge_tube" }
+title = { "argon.jpg" = "Argon glowing in a discharge tube" }
+
+[[element]]
+Z = 19
+pin = ["potassium.jpg", "potassium-2.jpg"]
+title = { "potassium.jpg" = "Potassium in a sealed ampoule", "potassium-2.jpg" = "Potassium pearls" }
+exclude = ["apricot.jpg"]
+
+[[element]]
+Z = 20
+pin = ["calcium.jpg"]
+title = { "calcium.jpg" = "Calcium pieces under argon" }
+exclude = ["shell.jpg"]
+
+[[element]]
+Z = 21
+pin = ["scandium.jpg", "scandium-3.jpg"]
+title = { "scandium.jpg" = "Scandium", "scandium-3.jpg" = "Scandium with a thin oxide layer" }
+
+[[element]]
+Z = 22
+pin = ["titanium-crystal.jpg", "titanium-3.jpg"]
+kind = { "titanium-crystal.jpg" = "crystal" }
+title = { "titanium-crystal.jpg" = "A titanium crystal bar", "titanium-3.jpg" = "A titanium cylinder" }
+exclude = ["titanium-screws.jpg", "titanium-screw.jpg"]
+
+[[element]]
+Z = 23
+pin = ["vanadium-crystals.jpg", "vanadium.jpg"]
+kind = { "vanadium-crystals.jpg" = "crystal" }
+title = { "vanadium-crystals.jpg" = "Three vanadium crystals", "vanadium.jpg" = "Vanadium with an oxide layer" }
+exclude = ["screwdriver.jpg", "vanadinite.jpg"]
+
+[[element]]
+Z = 24
+pin = ["chromium.jpg"]
+title = { "chromium.jpg" = "Chromium" }
+exclude = ["ruby.jpg", "ruby-uv.jpg"]
+
+[[element]]
+Z = 25
+pin = ["manganese.jpg", "manganese-4.jpg"]
+title = { "manganese.jpg" = "Manganese with crystals", "manganese-4.jpg" = "Manganese pieces" }
+exclude = ["manganese-dendrites.jpg"]
+
+[[element]]
+Z = 26
+pin = ["iron-3.jpg", "iron.jpg"]
+title = { "iron-3.jpg" = "A cylinder of pure iron", "iron.jpg" = "Fragments of an iron meteorite, about 92 % iron" }
+exclude = ["horseshoe.jpg", "glowing-iron.jpg", "iron-ore.jpg", "knife-steel.jpg"]
+
+[[element]]
+Z = 27
+pin = ["cobalt.jpg", "cobalt-3.jpg"]
+title = { "cobalt.jpg" = "Cobalt", "cobalt-3.jpg" = "An electrolytic cobalt cathode" }
+exclude = ["cobalt-glass.jpg"]
+
+[[element]]
+Z = 28
+pin = ["nickel.jpg", "nickel-sheet.jpg"]
+title = { "nickel.jpg" = "Nickel", "nickel-sheet.jpg" = "Nickel sheet" }
+exclude = ["widmanstaetten-1.jpg", "widmanstaetten-2.jpg"]
+
+[[element]]
+Z = 29
+pin = ["copper.jpg", "copper-3.jpg"]
+title = { "copper.jpg" = "A native copper nugget", "copper-3.jpg" = "Copper pieces" }
+exclude = ["copper-ore.jpg", "copper-wire.jpg"]
+
+[[element]]
+Z = 30
+pin = ["zinc.jpg", "zinc-sheet.jpg"]
+title = { "zinc.jpg" = "Zinc", "zinc-sheet.jpg" = "Zinc sheet" }
+exclude = ["zinc-plated.jpg", "brass-screw.jpg"]
+
+[[element]]
+Z = 31
+pin = ["gallium.jpg", "gallium-3.jpg"]
+kind = { "gallium.jpg" = "crystal" }
+title = { "gallium.jpg" = "Gallium crystallizing", "gallium-3.jpg" = "Solid gallium" }
+exclude = ["led.jpg"]
+
+[[element]]
+Z = 32
+pin = ["germanium.jpg", "germanium-3.jpg"]
+title = { "germanium.jpg" = "Germanium", "germanium-3.jpg" = "Polycrystalline germanium" }
+
+[[element]]
+Z = 33
+pin = ["arsenic.jpg"]
+title = { "arsenic.jpg" = "Two pieces of grey arsenic in a sealed tube" }
+exclude = ["realgar.jpg"]
+
+[[element]]
+Z = 34
+pin = ["selenium.jpg", "grey-selenium.jpg"]
+title = { "selenium.jpg" = "Black selenium", "grey-selenium.jpg" = "Grey selenium" }
+
+[[element]]
+Z = 35
+pin = ["bromine.jpg"]
+kind = { "bromine.jpg" = "liquid" }
+title = { "bromine.jpg" = "Liquid bromine and its vapour in a sealed ampoule" }
+
+[[element]]
+Z = 36
+pin = ["krypton.jpg"]
+kind = { "krypton.jpg" = "discharge_tube" }
+title = { "krypton.jpg" = "Krypton glowing in a discharge tube" }
+
+[[element]]
+Z = 37
+pin = ["rubidium.jpg"]
+title = { "rubidium.jpg" = "Rubidium in a sealed ampoule" }
+
+[[element]]
+Z = 38
+pin = ["strontium.jpg"]
+title = { "strontium.jpg" = "Strontium under argon" }
+exclude = ["celestine.jpg"]
+
+[[element]]
+Z = 39
+pin = ["yttrium.jpg", "yttrium-2.jpg"]
+title = { "yttrium.jpg" = "Yttrium", "yttrium-2.jpg" = "The same yttrium piece, back side" }
+
+[[element]]
+Z = 40
+pin = ["zirconium.jpg", "zirconium-3.jpg"]
+title = { "zirconium.jpg" = "Zirconium under argon", "zirconium-3.jpg" = "Zirconium pieces" }
+exclude = ["cubic-zirconia.jpg", "zircon.jpg"]
+
+[[element]]
+Z = 41
+pin = ["niobium.jpg"]
+title = { "niobium.jpg" = "A niobium bead" }
+exclude = ["ag-nb-coin.jpg", "ag-nb-coin-2.jpg"]
+
+[[element]]
+Z = 42
+pin = ["molybdenum.jpg", "molybdenum-3.jpg"]
+kind = { "molybdenum.jpg" = "crystal" }
+title = { "molybdenum.jpg" = "A molybdenum crystal", "molybdenum-3.jpg" = "Molybdenum with a rough surface" }
+exclude = ["molybdenite.jpg"]
+
+[[element]]
+Z = 43
+pin = ["File:Technetium-sample-cropped.jpg"]
+title = { "File:Technetium-sample-cropped.jpg" = "Technetium in a sealed ampoule under argon" }
+exclude = ["s/technetium.jpg"]  # the page says public domain but names no author; the Commons photo has a clear licence
+
+[[element]]
+Z = 44
+pin = ["ruthenium.jpg", "ruthenium-crystal.jpg"]
+kind = { "ruthenium-crystal.jpg" = "crystal" }
+title = { "ruthenium.jpg" = "Ruthenium", "ruthenium-crystal.jpg" = "Ruthenium crystals" }
+
+[[element]]
+Z = 45
+pin = ["s/rhodium.jpg"]
+title = { "s/rhodium.jpg" = "A rhodium bead, 1 g" }
+
+[[element]]
+Z = 46
+pin = ["palladium.jpg", "palladium-crystals.jpg"]
+kind = { "palladium-crystals.jpg" = "crystal" }
+title = { "palladium.jpg" = "Palladium", "palladium-crystals.jpg" = "Tiny palladium crystals" }
+
+[[element]]
+Z = 47
+pin = ["silver.jpg", "silver-3.jpg"]
+title = { "silver.jpg" = "A native silver nugget", "silver-3.jpg" = "Pieces of silver" }
+exclude = ["silver-sulfide.jpg", "silverchain.jpg"]
+
+[[element]]
+Z = 48
+pin = ["cadmium.jpg", "cadmium-3.jpg"]
+title = { "cadmium.jpg" = "Cadmium", "cadmium-3.jpg" = "A piece of cadmium" }
+
+[[element]]
+Z = 49
+pin = ["indium.jpg", "indium-3.jpg"]
+title = { "indium.jpg" = "An indium ingot", "indium-3.jpg" = "Freshly cut indium" }
+
+[[element]]
+Z = 50
+pin = ["tin.jpg", "s/tin-drop.jpg"]
+title = { "tin.jpg" = "A solidified tin splash", "s/tin-drop.jpg" = "A tin drop" }
+exclude = ["tin-vase.jpg", "bronze-coin.jpg"]
+
+[[element]]
+Z = 51
+pin = ["antimony.jpg", "antimony-4.jpg"]
+kind = { "antimony-4.jpg" = "crystal" }
+title = { "antimony.jpg" = "Antimony", "antimony-4.jpg" = "An antimony crystal" }
+exclude = ["stibnite.jpg"]
+
+[[element]]
+Z = 52
+pin = ["tellurium-crystals.jpg", "tellurium-2.jpg"]
+kind = { "tellurium-crystals.jpg" = "crystal" }
+title = { "tellurium-crystals.jpg" = "Tellurium crystals", "tellurium-2.jpg" = "A tellurium disk" }
+exclude = ["cd-te.jpg"]
+
+[[element]]
+Z = 53
+pin = ["iodine.jpg", "iodine-2.jpg"]
+kind = { "iodine.jpg" = "crystal" }
+title = { "iodine.jpg" = "Iodine crystals", "iodine-2.jpg" = "Iodine evaporating to a violet vapour" }
+
+[[element]]
+Z = 54
+pin = ["xenon.jpg"]
+kind = { "xenon.jpg" = "discharge_tube" }
+title = { "xenon.jpg" = "Xenon glowing in a discharge tube" }
+exclude = ["s/xenon-tetrafluoride.gif"]  # a compound
+
+[[element]]
+Z = 55
+pin = ["caesium-3.jpg"]
+title = { "caesium-3.jpg" = "Caesium in a sealed ampoule" }
+
+[[element]]
+Z = 56
+pin = ["barium.jpg", "barium-3.jpg"]
+title = { "barium.jpg" = "Barium under argon", "barium-3.jpg" = "A piece of barium" }
+exclude = ["s/barium-fireworks.jpg"]
+
+[[element]]
+Z = 57
+pin = ["lanthanum.jpg", "lanthanum-2.jpg"]
+title = { "lanthanum.jpg" = "Lanthanum under argon", "lanthanum-2.jpg" = "Lanthanum pieces" }
+
+[[element]]
+Z = 58
+pin = ["cerium.jpg"]
+title = { "cerium.jpg" = "Cerium under argon" }
+exclude = ["s/mischmetal.jpg"]
+
+[[element]]
+Z = 59
+pin = ["praseodymium.jpg"]
+title = { "praseodymium.jpg" = "Praseodymium under argon" }
+exclude = ["praseodymium-glass.jpg"]
+
+[[element]]
+Z = 60
+pin = ["neodymium.jpg", "neodymium-ox.jpg"]
+title = { "neodymium.jpg" = "Neodymium under argon", "neodymium-ox.jpg" = "Neodymium with an oxidized surface" }
+exclude = ["nd-magnet.jpg", "neodymium-glass.jpg", "neodymium-acetate.jpg"]
+
+[[element]]
+Z = 61
+pin = ["File:Promethium Metal Buttons.png"]
+kind = { "File:Promethium Metal Buttons.png" = "historical" }
+title = { "File:Promethium Metal Buttons.png" = "The first two buttons of promethium-147 metal, with a coin for scale" }
+exclude = ["promethium.jpg"]  # the site's illustration, not promethium
+
+[[element]]
+Z = 62
+pin = ["samarium.jpg", "samarium-2.jpg"]
+title = { "samarium.jpg" = "Samarium under argon", "samarium-2.jpg" = "Sublimed samarium" }
+exclude = ["samarium-sulfate.jpg"]
+
+[[element]]
+Z = 63
+pin = ["europium-3.jpg", "europium.jpg"]
+title = { "europium-3.jpg" = "Weakly oxidized europium", "europium.jpg" = "Strongly oxidized europium" }
+
+[[element]]
+Z = 64
+pin = ["gadolinium.jpg", "gadolinium-3.jpg"]
+title = { "gadolinium.jpg" = "Gadolinium", "gadolinium-3.jpg" = "Another piece of gadolinium" }
+
+[[element]]
+Z = 65
+pin = ["terbium.jpg"]
+title = { "terbium.jpg" = "Terbium" }
+
+[[element]]
+Z = 66
+pin = ["dysprosium-2.jpg", "dysprosium-3.jpg"]
+title = { "dysprosium-2.jpg" = "Dysprosium", "dysprosium-3.jpg" = "Dysprosium, cut" }
+
+[[element]]
+Z = 67
+pin = ["holmium.jpg"]
+title = { "holmium.jpg" = "Holmium" }
+
+[[element]]
+Z = 68
+pin = ["erbium.jpg", "erbium-2.jpg"]
+title = { "erbium.jpg" = "Erbium", "erbium-2.jpg" = "Erbium with cut traces" }
+exclude = ["erbium-glass.jpg"]
+
+[[element]]
+Z = 69
+pin = ["thulium.jpg"]
+title = { "thulium.jpg" = "Thulium" }
+
+[[element]]
+Z = 70
+pin = ["ytterbium.jpg", "ytterbium-3.jpg"]
+title = { "ytterbium.jpg" = "Ytterbium", "ytterbium-3.jpg" = "Another piece of ytterbium" }
+exclude = ["ytterbium-acetate.jpg"]
+
+[[element]]
+Z = 71
+pin = ["lutetium.jpg", "lutetium-2.jpg"]
+title = { "lutetium.jpg" = "Lutetium", "lutetium-2.jpg" = "A piece of lutetium" }
+
+[[element]]
+Z = 72
+pin = ["hafnium.jpg", "hafnium-3.jpg"]
+title = { "hafnium.jpg" = "Hafnium", "hafnium-3.jpg" = "Electrolytic hafnium" }
+
+[[element]]
+Z = 73
+pin = ["tantalum.jpg", "tantalum-chunk.jpg"]
+title = { "tantalum.jpg" = "Tantalum pieces", "tantalum-chunk.jpg" = "A large chunk of tantalum" }
+
+[[element]]
+Z = 74
+pin = ["tungsten-rod.jpg", "tungsten-2.jpg"]
+title = { "tungsten-rod.jpg" = "A tungsten rod", "tungsten-2.jpg" = "Sintered tungsten" }
+exclude = ["filament.jpg", "tungsten-carbide.jpg"]
+
+[[element]]
+Z = 75
+pin = ["rhenium-3.jpg", "rhenium-bar.jpg"]
+title = { "rhenium-3.jpg" = "A rhenium bead", "rhenium-bar.jpg" = "A rhenium bar" }
+
+[[element]]
+Z = 76
+pin = ["osmium.jpg"]
+title = { "osmium.jpg" = "An osmium bead" }
+
+[[element]]
+Z = 77
+pin = ["iridium.jpg"]
+title = { "iridium.jpg" = "Iridium pieces" }
+
+[[element]]
+Z = 78
+pin = ["platinum.jpg"]
+title = { "platinum.jpg" = "Platinum crystals" }
+
+[[element]]
+Z = 79
+pin = ["gold.jpg", "gold-bar.jpg"]
+title = { "gold.jpg" = "Gold leaf", "gold-bar.jpg" = "A small gold bar" }
+exclude = ["solidus-justin.jpg", "gold-coin.jpg", "gold-connector.jpg"]
+
+[[element]]
+Z = 80
+pin = ["hydrargyrum.jpg"]
+kind = { "hydrargyrum.jpg" = "liquid" }
+title = { "hydrargyrum.jpg" = "Liquid mercury" }
+exclude = ["mercury.jpg", "cinnabar.jpg", "mercury-vapor-lamp.jpg"]
+
+[[element]]
+Z = 81
+pin = ["thallium.jpg"]
+title = { "thallium.jpg" = "Thallium sealed under argon" }
+
+[[element]]
+Z = 82
+pin = ["lead.jpg", "lead-cut.jpg"]
+title = { "lead.jpg" = "A lead bead", "lead-cut.jpg" = "Freshly cut lead" }
+exclude = ["galena.jpg"]
+
+[[element]]
+Z = 83
+pin = ["bismuth.jpg", "bismuth-3.jpg"]
+kind = { "bismuth.jpg" = "crystal" }
+title = { "bismuth.jpg" = "A bismuth crystal with its oxide film", "bismuth-3.jpg" = "A bismuth ingot" }
+
+[[element]]
+Z = 84
+placeholder = "no_free_photo"
+exclude = ["polonium.jpg"]  # the site's illustration
+
+[[element]]
+Z = 85
+placeholder = "never_visible"
+exclude = ["astatine.jpg"]  # the site's illustration
+
+[[element]]
+Z = 86
+placeholder = "no_free_photo"
+exclude = ["radon.jpg"]  # the site's illustration
+
+[[element]]
+Z = 87
+placeholder = "never_visible"
+exclude = ["francium.jpg"]  # the site's illustration
+
+[[element]]
+Z = 88
+placeholder = "no_free_photo"
+pin = ["File:US radium standard 1927.jpg"]
+kind = { "File:US radium standard 1927.jpg" = "historical" }
+title = { "File:US radium standard 1927.jpg" = "The US radium standard of 1927: a sealed tube of radium chloride" }
+exclude = ["s/radium-paint.jpg", "radium-glow.jpg"]  # luminous clock paint, not radium
+
+[[element]]
+Z = 89
+pin = ["File:Actinium sample (31481701837).png"]
+title = { "File:Actinium sample (31481701837).png" = "Actinium-225 in a vial; the blue glow is air ionized by its radiation" }
+exclude = ["s/actinium-225.jpg"]  # © Los Alamos National Security, all rights reserved
+
+[[element]]
+Z = 90
+pin = ["File:Thorium bead 1.jpg", "File:Thorium sample 0.1g.jpg"]
+title = { "File:Thorium bead 1.jpg" = "A thorium bead", "File:Thorium sample 0.1g.jpg" = "Thin thorium sheet under argon, about 0.1 g" }
+exclude = ["s/thorium.jpg"]  # © Theodore Gray
+
+[[element]]
+Z = 91
+pin = ["File:Protactinium-233.jpg"]
+title = { "File:Protactinium-233.jpg" = "A sample of protactinium-233 (the dark circle)" }
+exclude = ["s/protactinium-231.jpg"]  # © European Union (JRC-ITU)
+
+[[element]]
+Z = 92
+pin = ["s/uranium.jpg"]
+title = { "s/uranium.jpg" = "Depleted uranium (uranium-238)" }
+credit = { "s/uranium.jpg" = { author = "Unknown photographer", licence = "Public domain", note = "The element page marks this photo as public domain." } }
+exclude = ["uranium-glass.jpg", "uranium-glass-uv.jpg"]
+
+[[element]]
+Z = 93
+pin = ["s/neptunium.jpg"]
+title = { "s/neptunium.jpg" = "A 6 kg sphere of neptunium-237 (2002)" }
+credit = { "s/neptunium.jpg" = { author = "Los Alamos National Laboratory", licence = "Public domain", note = "U.S. Government work, released as public domain (credited so on the element page)." } }
+
+[[element]]
+Z = 94
+pin = ["s/plutonium.jpg"]
+title = { "s/plutonium.jpg" = "Plutonium metal (1945)" }
+credit = { "s/plutonium.jpg" = { author = "U.S. Department of Energy", licence = "Public domain", note = "U.S. Government work, 1945 (credited so on the element page)." } }
+exclude = ["maralinga-sand.jpg"]
+
+[[element]]
+Z = 95
+pin = ["s/americium.jpg"]
+title = { "s/americium.jpg" = "A small disc of americium-241 under a microscope" }
+credit = { "s/americium.jpg" = { author = "Bionerd", licence = "CC BY 3.0", note = "Credited to Bionerd, CC BY 3.0, on the element page." } }
+
+[[element]]
+Z = 96
+placeholder = "no_free_photo"
+pin = ["File:Curium hydroxide Nobel Lectures in Chemistry.png"]
+kind = { "File:Curium hydroxide Nobel Lectures in Chemistry.png" = "historical" }
+title = { "File:Curium hydroxide Nobel Lectures in Chemistry.png" = "The first visible curium compound, curium hydroxide (1947), about twice enlarged" }
+exclude = ["s/curium-glow.jpg"]  # © European Union (JRC-ITU)
+
+[[element]]
+Z = 97
+pin = ["s/berkelium-ornl.jpg"]
+title = { "s/berkelium-ornl.jpg" = "13 mg of berkelium-249, later used to make tennessine" }
+credit = { "s/berkelium-ornl.jpg" = { author = "Oak Ridge National Laboratory", licence = "Public domain", note = "U.S. Government work (credited so on the element page)." } }
+
+[[element]]
+Z = 98
+pin = ["s/californium-disc.jpg"]
+title = { "s/californium-disc.jpg" = "A californium disc, about 1 mm across" }
+credit = { "s/californium-disc.jpg" = { author = "U.S. Department of Energy", licence = "Public domain", note = "U.S. Government work (credited so on the element page)." } }
+
+[[element]]
+Z = 99
+pin = ["s/einsteinium-253.jpg"]
+title = { "s/einsteinium-253.jpg" = "About 300 µg of einsteinium-253, glowing from its own radiation" }
+credit = { "s/einsteinium-253.jpg" = { author = "U.S. Department of Energy", licence = "Public domain", note = "U.S. Government work (credited so on the element page)." } }
+
+[[element]]
+Z = 100
+placeholder = "never_visible"
+pin = ["s/fermium.jpg"]
+kind = { "s/fermium.jpg" = "historical" }
+title = { "s/fermium.jpg" = "The Ivy Mike test (1952), in whose debris fermium was discovered" }
+credit = { "s/fermium.jpg" = { author = "U.S. Department of Energy", licence = "Public domain", note = "U.S. Government work, 1952 (credited so on the element page)." } }
+
+[[element]]
+Z = 101
+placeholder = "never_visible"
+exclude = ["s/mendelevium.jpg"]  # the site's illustration
+
+[[element]]
+Z = 102
+placeholder = "never_visible"
+exclude = ["nobelium.jpg"]  # the site's illustration
+
+[[element]]
+Z = 103
+placeholder = "never_visible"
+exclude = ["lawrencium.jpg"]  # the site's illustration
+
+[[element]]
+Z = 104
+placeholder = "never_visible"
+exclude = ["s/rutherfordium.jpg"]  # © CERN, and not the element
+
+[[element]]
+Z = 105
+placeholder = "never_visible"
+
+[[element]]
+Z = 106
+placeholder = "never_visible"
+
+[[element]]
+Z = 107
+placeholder = "never_visible"
+
+[[element]]
+Z = 108
+placeholder = "never_visible"
+
+[[element]]
+Z = 109
+placeholder = "never_visible"
+
+[[element]]
+Z = 110
+placeholder = "never_visible"
+
+[[element]]
+Z = 111
+placeholder = "never_visible"
+
+[[element]]
+Z = 112
+placeholder = "never_visible"
+
+[[element]]
+Z = 113
+placeholder = "never_visible"
+
+[[element]]
+Z = 114
+placeholder = "never_visible"
+
+[[element]]
+Z = 115
+placeholder = "never_visible"
+
+[[element]]
+Z = 116
+placeholder = "never_visible"
+
+[[element]]
+Z = 117
+placeholder = "never_visible"
+
+[[element]]
+Z = 118
+placeholder = "never_visible"

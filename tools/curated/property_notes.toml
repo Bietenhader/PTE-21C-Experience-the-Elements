@@ -1,0 +1,47 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Notes that explain a value which would otherwise mislead (SPEC §2.3: name what a number means).
+# The value itself still comes from its source; the note is added to it. Each note is our own
+# summary of what the cited source says. Columns: Z, field (an index.json field), note, source.
+
+[[row]]
+Z = 2
+field = "meltingPoint"
+note = "Helium does not freeze at normal pressure, however cold it gets; it becomes solid only under raised pressure, so this value is not an ordinary melting point."
+source = "pubchem"
+
+[[row]]
+Z = 6
+field = "meltingPoint"
+note = "Carbon has no melting point at normal pressure: graphite turns straight into vapour (sublimes). PubChem's second contributor gives 3550 °C for diamond."
+source = "pubchem"
+
+[[row]]
+Z = 6
+field = "boilingPoint"
+note = "At normal pressure this is the sublimation temperature of graphite (solid to vapour, no liquid)."
+source = "pubchem"
+
+[[row]]
+Z = 15
+field = "meltingPoint"
+note = "For white phosphorus; the other forms of phosphorus behave differently."
+source = "pubchem"
+
+[[row]]
+Z = 15
+field = "boilingPoint"
+note = "For white phosphorus."
+source = "pubchem"
+
+[[row]]
+Z = 33
+field = "meltingPoint"
+note = "Arsenic melts only under pressure (about 28 atmospheres). At normal pressure it turns straight from solid to vapour at 887 K, which is why this melting point is higher than the boiling point shown."
+source = "pubchem"
+
+[[row]]
+Z = 33
+field = "boilingPoint"
+note = "At normal pressure this is a sublimation point: solid arsenic turns straight into vapour."
+source = "pubchem"

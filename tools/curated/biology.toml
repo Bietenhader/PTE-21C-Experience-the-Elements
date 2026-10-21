@@ -1,0 +1,331 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Biology (SPEC §6.2, §10.10). FIN REVIEWS THIS FILE (he is the plant scientist) — please mark
+# anything wrong, too simple or missing; the app shows these sentences as they stand.
+#
+# One row per element with a known role. Elements without a row are not known to be essential
+# for plants or humans; the app says exactly that.
+#
+#   essential_plant  "yes" (essential mineral nutrient), "beneficial" (helps some or many plants,
+#                    not essential for all), or "no".
+#   plant_class      "macronutrient" | "micronutrient" | "beneficial" | "structural" (C, H, O:
+#                    taken up as CO2 and water, not as mineral nutrients).
+#   plant_role       one sentence, our own words.
+#   plant_source / plant_doi   where the classification comes from: the chapters of Marschner's
+#                    Mineral Nutrition of Higher Plants (3rd ed., 2012) by DOI, and for nickel the
+#                    paper that established its essentiality (Brown, Welch & Cary 1987).
+#   essential_human  "yes" (an essential nutrient: EFSA has set dietary reference values for it,
+#                    or it is a building block of the body's main molecules), "probable"
+#                    (essentiality suggested or debated), or "no".
+#   human_role       one sentence, our own words.
+#   human_source / human_doi   EFSA Dietary Reference Values (2017 summary) or the review of
+#                    essential metals by Zoroddu et al. (2019).
+#   note             anything Fin should know.
+#
+# Not here yet (planned for M4): body mass fractions (a source we can read and cite is being
+# located), toxicity, GHS hazard pictograms (from PubChem), environmental notes.
+
+# --- the 17 essential plant nutrients ---------------------------------------------------------
+
+[[row]]
+Z = 1
+essential_plant = "yes"
+plant_class = "structural"
+plant_role = "Comes from water; part of every organic molecule, and the proton gradients across thylakoid and mitochondrial membranes drive ATP synthesis."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00001-7"
+essential_human = "yes"
+human_role = "Part of water and of every organic molecule in the body."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+[[row]]
+Z = 6
+essential_plant = "yes"
+plant_class = "structural"
+plant_role = "Fixed from atmospheric CO2 in photosynthesis; the backbone of all organic matter."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00001-7"
+essential_human = "yes"
+human_role = "The backbone of proteins, fats, carbohydrates and nucleic acids."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+[[row]]
+Z = 8
+essential_plant = "yes"
+plant_class = "structural"
+plant_role = "Comes from CO2 and water; part of most organic molecules, and needed by roots and all other non-green tissues for respiration."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00001-7"
+essential_human = "yes"
+human_role = "Part of water and most biomolecules; the final electron acceptor of respiration."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+[[row]]
+Z = 7
+essential_plant = "yes"
+plant_class = "macronutrient"
+plant_role = "Taken up as nitrate or ammonium; part of amino acids, proteins, nucleic acids and chlorophyll, and the nutrient that most often limits plant growth."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00006-6"
+essential_human = "yes"
+human_role = "Part of every amino acid, protein and nucleic acid; obtained from dietary protein."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+[[row]]
+Z = 15
+essential_plant = "yes"
+plant_class = "macronutrient"
+plant_role = "Taken up as phosphate; carries energy in ATP and forms the backbone of DNA, RNA and membrane phospholipids."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00006-6"
+essential_human = "yes"
+human_role = "Bone mineral (calcium phosphate), ATP, DNA and RNA, and cell membranes."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 19
+essential_plant = "yes"
+plant_class = "macronutrient"
+plant_role = "The main cation of the cell sap; drives turgor and stomatal opening and activates many enzymes, without being built into organic molecules."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00006-6"
+essential_human = "yes"
+human_role = "The main positive ion inside cells; with sodium it sets the membrane potential of nerves and muscles."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 20
+essential_plant = "yes"
+plant_class = "macronutrient"
+plant_role = "Binds the pectins of cell walls, stabilizes membranes, and acts as a messenger inside the cell; it moves only in the xylem, so young tissue shows a shortage first."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00006-6"
+essential_human = "yes"
+human_role = "Builds bones and teeth, and signals muscle contraction, nerve transmission and blood clotting."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 12
+essential_plant = "yes"
+plant_class = "macronutrient"
+plant_role = "The atom at the centre of chlorophyll; it also binds ATP and holds ribosomes together."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00006-6"
+essential_human = "yes"
+human_role = "Needed by hundreds of enzymes, above all those that use ATP, which acts as a magnesium complex."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 16
+essential_plant = "yes"
+plant_class = "macronutrient"
+plant_role = "Taken up as sulfate; part of the amino acids cysteine and methionine, of glutathione and of iron–sulfur clusters."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00006-6"
+essential_human = "yes"
+human_role = "Part of the amino acids methionine and cysteine; obtained from dietary protein."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+[[row]]
+Z = 26
+essential_plant = "yes"
+plant_class = "micronutrient"
+plant_role = "Carries electrons in cytochromes and iron–sulfur proteins of photosynthesis and respiration, and is needed to make chlorophyll; shortage yellows young leaves between the veins."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00007-8"
+essential_human = "yes"
+human_role = "Binds oxygen in haemoglobin and myoglobin and carries electrons in respiration."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 25
+essential_plant = "yes"
+plant_class = "micronutrient"
+plant_role = "Four manganese atoms and one calcium atom form the cluster in photosystem II that splits water and releases oxygen."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00007-8"
+essential_human = "yes"
+human_role = "Part of enzymes such as mitochondrial superoxide dismutase and arginase."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 30
+essential_plant = "yes"
+plant_class = "micronutrient"
+plant_role = "Holds the shape of many enzymes and of DNA-binding 'zinc finger' proteins; needed for auxin and protein synthesis."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00007-8"
+essential_human = "yes"
+human_role = "Needed by hundreds of enzymes and by zinc-finger proteins that control genes; important for growth and immunity."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 29
+essential_plant = "yes"
+plant_class = "micronutrient"
+plant_role = "Carries electrons in plastocyanin of photosynthesis and in cytochrome c oxidase; also needed for lignin and pollen formation."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00007-8"
+essential_human = "yes"
+human_role = "Part of cytochrome c oxidase, superoxide dismutase and the proteins that handle iron."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 5
+essential_plant = "yes"
+plant_class = "micronutrient"
+plant_role = "Taken up as boric acid; cross-links the pectin rhamnogalacturonan II in cell walls, so a shortage first harms growing tips, flowers and pollen tubes."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00007-8"
+essential_human = "probable"
+human_role = "May help bone and brain function, but no essential role in humans has been proven."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+note = "Human: no EFSA dietary reference value."
+
+[[row]]
+Z = 42
+essential_plant = "yes"
+plant_class = "micronutrient"
+plant_role = "Part of the molybdenum cofactor of nitrate reductase, and of nitrogenase in the bacteria that fix nitrogen in legume nodules; the plant's smallest requirement."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00007-8"
+essential_human = "yes"
+human_role = "Part of the molybdenum cofactor of enzymes such as sulfite oxidase and xanthine oxidase."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 17
+essential_plant = "yes"
+plant_class = "micronutrient"
+plant_role = "Taken up as chloride; balances charges, helps stomata open and close, and is needed by the water-splitting step of photosynthesis."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00007-8"
+essential_human = "yes"
+human_role = "The main negative ion outside cells; part of stomach acid."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 28
+essential_plant = "yes"
+plant_class = "micronutrient"
+plant_role = "The metal in urease, which breaks down urea; the last element shown to be essential for plants, in barley grown over generations without nickel."
+plant_source = "primary_literature"
+plant_doi = "10.1104/pp.85.3.801"
+essential_human = "probable"
+human_role = "No essential role in humans is proven; it is used by enzymes of some microbes in the gut."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+note = "Plant: Brown, Welch & Cary (1987). Human: no EFSA dietary reference value."
+
+# --- beneficial for plants (SPEC §6.2: Na, Si, Co, Se, Al) -------------------------------------
+
+[[row]]
+Z = 11
+essential_plant = "beneficial"
+plant_class = "beneficial"
+plant_role = "Essential for some C4 and CAM plants, which use it to move pyruvate into chloroplasts; can partly replace potassium as an osmoticum, and halophytes store it in large amounts."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00008-X"
+essential_human = "yes"
+human_role = "The main positive ion outside cells; controls water balance and, with potassium, nerve signals."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 14
+essential_plant = "beneficial"
+plant_class = "beneficial"
+plant_role = "Deposited as silica in cell walls, it stiffens stems and leaves and protects against pests, fungi and drought; grasses such as rice accumulate the most."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00008-X"
+essential_human = "probable"
+human_role = "May help bone and connective tissue form; essentiality in humans is not proven."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+[[row]]
+Z = 27
+essential_plant = "beneficial"
+plant_class = "beneficial"
+plant_role = "Needed by the nitrogen-fixing bacteria in legume root nodules, which use it in vitamin B12 (cobalamin); not needed by the plant itself."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00008-X"
+essential_human = "yes"
+human_role = "The metal at the heart of vitamin B12, which we must take in already made."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+note = "Human: EFSA sets its value for cobalamin (vitamin B12), not for cobalt itself."
+
+[[row]]
+Z = 34
+essential_plant = "beneficial"
+plant_class = "beneficial"
+plant_role = "Not needed by plants, but at low levels it can raise antioxidant defences; some 'hyperaccumulator' plants store very large amounts, and crops are a main route of selenium into our diet."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00008-X"
+essential_human = "yes"
+human_role = "Built into selenoproteins such as glutathione peroxidases, which protect cells from oxidation, and into enzymes that activate thyroid hormone."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 13
+essential_plant = "beneficial"
+plant_class = "beneficial"
+plant_role = "At low concentrations it stimulates growth in some species, such as tea; in acid soils dissolved aluminium is instead a major cause of poor root growth."
+plant_source = "marschner2012"
+plant_doi = "10.1016/B978-0-12-384905-2.00008-X"
+essential_human = "no"
+human_role = "No known role in the body."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+# --- essential or probably essential for humans only ------------------------------------------
+
+[[row]]
+Z = 53
+essential_plant = "no"
+essential_human = "yes"
+human_role = "Built into the thyroid hormones thyroxine and triiodothyronine; shortage causes goitre."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 9
+essential_plant = "no"
+essential_human = "probable"
+human_role = "Strengthens tooth enamel against decay; EFSA sets an adequate intake for this reason but does not consider it essential."
+human_source = "efsa_drv"
+human_doi = "10.2903/sp.efsa.2017.e15121"
+
+[[row]]
+Z = 24
+essential_plant = "no"
+essential_human = "probable"
+human_role = "Long thought to help insulin work; EFSA found no convincing evidence that it is essential."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+[[row]]
+Z = 23
+essential_plant = "no"
+essential_human = "probable"
+human_role = "Essential for some other organisms; a role in humans is suspected but not shown."
+human_source = "zoroddu2019"
+human_doi = "10.1016/j.jinorgbio.2019.03.013"

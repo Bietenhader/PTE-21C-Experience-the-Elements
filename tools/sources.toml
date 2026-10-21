@@ -34,7 +34,7 @@ licence = "Public domain (U.S. Government work); citation requested"
 licence_url = "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications"
 citation = "Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. DOI: https://doi.org/10.18434/T4W30F"
 kind = "fetched"
-notes = "Fetched from M2 on."
+notes = "One tab-delimited request per neutral atom (108 answer). public/data/levels/{Z}.json keeps the lowest 60 levels with absolute energies and the ionization limit."
 
 [nist_lines]
 title = "NIST Atomic Spectra Database — Lines"
@@ -43,7 +43,7 @@ licence = "Public domain (U.S. Government work); citation requested"
 licence_url = "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications"
 citation = "Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. DOI: https://doi.org/10.18434/T4W30F"
 kind = "fetched"
-notes = "Fetched from M2 on."
+notes = "380-780 nm for the neutral atom and the singly charged ion (air wavelengths, as ASD gives them between 200 and 2000 nm), strongest 400 lines per species kept; plus vacuum windows around each laser-cooling line, whose A_ki gives the linewidth."
 
 [nist_awic]
 title = "NIST Atomic Weights and Isotopic Compositions with Relative Atomic Masses"
@@ -59,9 +59,9 @@ title = "NIST SRD 141 — Atomic Reference Data for Electronic Structure Calcula
 url = "https://www.nist.gov/pml/data/atomic-reference-data-electronic-structure-calculations"
 licence = "Public domain (U.S. Government work); citation requested"
 licence_url = "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications"
-citation = "Kotochigova, S., Levine, Z. H., Shirley, E. L., Stiles, M. D. and Clark, C. W., Atomic Reference Data for Electronic Structure Calculations, NIST Standard Reference Database 141."
+citation = "Kotochigova, S., Levine, Z. H., Shirley, E. L., Stiles, M. D. and Clark, C. W., Atomic Reference Data for Electronic Structure Calculations, NIST Standard Reference Database 141. https://math.nist.gov/DFTdata/atomdata/"
 kind = "fetched"
-notes = "Fetched from M2 on."
+notes = "Per-element tables at math.nist.gov/DFTdata/atomdata/tables/, Z = 1-92. Orbital eigenvalues of the neutral atom in LDA and ScRLDA, converted from hartree to eV with CODATA. The Sm page prints its ScRLDA column one row out of step; that column is not used for Sm."
 
 [nist_codata]
 title = "CODATA 2022 recommended values of the fundamental physical constants"
@@ -113,9 +113,9 @@ title = "BIPM — Recommended values of standard frequencies"
 url = "https://www.bipm.org/en/publications/mises-en-pratique/standard-frequencies-by-wavelength"
 licence = "© BIPM; numerical values are facts; cite"
 licence_url = "https://www.bipm.org/en/legal-notice"
-citation = "BIPM, Recommended values of standard frequencies for applications including the practical realization of the metre and secondary representations of the second."
+citation = "BIPM, Recommended values of standard frequencies for applications including the practical realization of the metre and secondary representations of the second (CCL-CCTF list, 2025 update), https://www.bipm.org/en/publications/mises-en-pratique/standard-frequencies — machine-readable via the BIPM Time Department CCL-CCTF API, https://webtai.bipm.org/api/ccl-cctf/"
 kind = "fetched"
-notes = "Fetched from M2 on."
+notes = "Every atomic and atomic-ion entry valid on the retrieval date, plus iodine (127I2) and the He-Ne laser. The rubidium-87 ground-state hyperfine splitting shown on its tile is this list's value."
 
 [bunge_rhf]
 title = "Roothaan–Hartree–Fock ground-state atomic wavefunctions, He–Xe"
@@ -140,9 +140,9 @@ title = "Clementi–Raimondi effective nuclear charges"
 url = "https://doi.org/10.1063/1.1733573"
 licence = "Published numerical values; cite"
 licence_url = "https://doi.org/10.1063/1.1733573"
-citation = "E. Clementi and D. L. Raimondi, J. Chem. Phys. 38, 2686 (1963); E. Clementi, D. L. Raimondi and W. P. Reinhardt, J. Chem. Phys. 47, 1300 (1967)."
+citation = "E. Clementi and D. L. Raimondi, J. Chem. Phys. 38, 2686 (1963), doi:10.1063/1.1733573; E. Clementi, D. L. Raimondi and W. P. Reinhardt, J. Chem. Phys. 47, 1300 (1967), doi:10.1063/1.1712084."
 kind = "curated"
-notes = "Transcribed into tools/curated/zeff.toml from M2 on."
+notes = "tools/curated/zeff.toml (He-Rn): Z_eff = n x zeta, taken from the transcription of both tables in the MIT-licensed mendeleev package (v1.3.0, table screeningconstants); closed-shell atoms were recomputed independently as a check (agreement 1e-4 for He-Ar, 0.013 for Zn and Kr). Slater's rules are used for Z > 86."
 
 [steck_alkali]
 title = "Alkali D Line Data (Daniel A. Steck)"
@@ -158,9 +158,9 @@ title = "Survey of hyperfine measurements in alkali atoms"
 url = "https://arxiv.org/abs/2209.11423"
 licence = "Scientific facts; cite"
 licence_url = "https://arxiv.org/abs/2209.11423"
-citation = "M. Allegrini, E. Arimondo and L. A. Orozco, arXiv:2209.11423 (2022)."
+citation = "M. Allegrini, E. Arimondo and L. A. Orozco, Survey of hyperfine structure measurements in alkali atoms, J. Phys. Chem. Ref. Data 51, 043102 (2022), arXiv:2209.11423."
 kind = "curated"
-notes = "From M2 on."
+notes = "Ground-state A constants of Li, Na, K, Rb-85 and Fr read from its Tables I-IV and VIII."
 
 [arimondo1977]
 title = "Experimental determinations of the hyperfine structure in the alkali atoms"
@@ -187,16 +187,16 @@ licence = "Cite; verify each entry against its primary reference"
 licence_url = "https://personal.denison.edu/~olmschenks/"
 citation = "S. Olmschenk, Laser-cooled atoms and ions catalog, https://personal.denison.edu/~olmschenks/atom_catalog.html and ion_catalog.html."
 kind = "curated"
-notes = "From M2 on."
+notes = "Species list and first-trapping references for tools/curated/lasercooling.toml (read 2026-10-21); every milestone there carries its own DOI, checked against Crossref."
 
 [images_of_elements]
-title = "Images of elements (Heinrich Pniok)"
+title = "Images of elements (Jürgen Kummer)"
 url = "https://images-of-elements.com/"
 licence = "CC BY 3.0 (attribution by link to the element page)"
 licence_url = "https://creativecommons.org/licenses/by/3.0/"
-citation = "Images-of-elements.com, element photographs, CC BY 3.0."
+citation = "Jürgen Kummer, images-of-elements.com — photographs of the chemical elements, CC BY 3.0; each photo is credited with a link to its element page."
 kind = "fetched"
-notes = "From M2 on."
+notes = "Element pages and photographs fetched by tools/fetch_images.py; the choice per element is tools/curated/images.toml. The site's licence is CC BY 3.0 'unless otherwise noted': photos the page credits to someone else carry that credit and licence instead."
 
 [commons]
 title = "Wikimedia Commons"
@@ -205,7 +205,7 @@ licence = "Per-file licences; only the allow-list in SPEC §15.3"
 licence_url = "https://commons.wikimedia.org/wiki/Commons:Licensing"
 citation = "Wikimedia Commons; each file credited individually in CREDITS.md."
 kind = "fetched"
-notes = "From M2 on."
+notes = "Only files pinned in tools/curated/images.toml, for elements images-of-elements.com cannot show freely. Commons rate-limits shared addresses heavily; the fetcher honours Retry-After."
 
 [usgs_mcs]
 title = "USGS Mineral Commodity Summaries"
@@ -214,25 +214,25 @@ licence = "Public domain (U.S. Government work)"
 licence_url = "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
 citation = "U.S. Geological Survey, Mineral Commodity Summaries (year-stamped per value)."
 kind = "curated"
-notes = "From M4 on."
+notes = "Annual world production and unit values, year-stamped (tools/curated/production.toml)."
 
 [eu_crm]
 title = "EU critical raw materials list (2023)"
 url = "https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en"
 licence = "Facts; cite"
 licence_url = "https://commission.europa.eu/legal-notice_en"
-citation = "European Commission, Study on the Critical Raw Materials for the EU 2023."
+citation = "Regulation (EU) 2024/1252 of the European Parliament and of the Council (Critical Raw Materials Act), Annex II: strategic and critical raw materials (the 2023 list)."
 kind = "curated"
-notes = "From M4 on."
+notes = "Raw materials mapped to elements in tools/curated/production.toml; mappings through a mineral (fluorspar, baryte, graphite, phosphate rock) are marked."
 
 [kobayashi2020]
 title = "The origin of elements from carbon to uranium"
 url = "https://doi.org/10.3847/1538-4357/abae65"
 licence = "Facts; cite; approximate transcription"
 licence_url = "https://doi.org/10.3847/1538-4357/abae65"
-citation = "C. Kobayashi, A. I. Karakas and M. Lugaro, ApJ 900, 179 (2020)."
+citation = "C. Kobayashi, A. I. Karakas and M. Lugaro, The origin of elements from carbon to uranium, ApJ 900, 179 (2020), doi:10.3847/1538-4357/abae65, arXiv:2008.04660."
 kind = "curated"
-notes = "From M4 on; every value flagged estimated."
+notes = "tools/curated/nucleosynthesis.toml; every value flagged estimated (approximate transcription)."
 
 [pyykko2011]
 title = "A suggested periodic table up to Z ≤ 172"
@@ -242,3 +242,84 @@ licence_url = "https://doi.org/10.1039/C0CP01575J"
 citation = "P. Pyykkö, Phys. Chem. Chem. Phys. 13, 161 (2011)."
 kind = "curated"
 notes = "v0.2."
+
+[karshenboim2005]
+title = "Precision physics of simple atoms: QED tests, nuclear structure and fundamental constants"
+url = "https://doi.org/10.1016/j.physrep.2005.08.008"
+licence = "Scientific facts; cite"
+licence_url = "https://arxiv.org/abs/hep-ph/0509010"
+citation = "S. G. Karshenboim, Phys. Rep. 422, 1 (2005), doi:10.1016/j.physrep.2005.08.008, arXiv:hep-ph/0509010."
+kind = "curated"
+notes = "Added in M2. Ground-state (1s) hyperfine intervals of hydrogen, deuterium and tritium, read from its table of measured values (each row names the primary measurement)."
+
+[primary_literature]
+title = "Primary research papers (one per row, by DOI)"
+url = "https://www.doi.org/"
+licence = "Scientific facts; cite"
+licence_url = "https://www.doi.org/"
+citation = "The paper named by the DOI (or arXiv identifier) given with each value; listed in full in PROVENANCE.md."
+kind = "curated"
+notes = "Added in M2. Used where a value comes from a single research paper rather than from a compilation; the value's own record carries the DOI. Every DOI was checked against Crossref."
+
+[cgpm_resolutions]
+title = "Resolutions of the General Conference on Weights and Measures (CGPM)"
+url = "https://www.bipm.org/en/committees/cg/cgpm/resolutions"
+licence = "© BIPM; definitions are facts; cite"
+licence_url = "https://www.bipm.org/en/legal-notice"
+citation = "Conférence Générale des Poids et Mesures, Resolutions (BIPM), each cited by its DOI 10.59161/CGPM<year>RES<n>E."
+kind = "reference"
+notes = "Added in M2. The definitions, prototypes and dates in tools/curated/si_history.toml and the timeline of the second in tools/curated/clocks.toml; texts read on bipm.org."
+
+[bipm_mep_kilogram]
+title = "Mise en pratique for the definition of the kilogram in the SI (SI Brochure, Appendix 2)"
+url = "https://www.bipm.org/en/publications/mises-en-pratique"
+licence = "© BIPM; facts; cite"
+licence_url = "https://www.bipm.org/en/legal-notice"
+citation = "CCM, Mise en pratique for the definition of the kilogram in the SI, SI Brochure 9th edition, Appendix 2 (BIPM)."
+kind = "reference"
+notes = "Added in M2. The X-ray-crystal-density realization of the kilogram with silicon-28 spheres."
+
+[allen_en]
+title = "Configuration energies (Allen electronegativity) of the elements"
+url = "https://doi.org/10.1021/ja992866e"
+licence = "Published numerical values; cite"
+licence_url = "https://doi.org/10.1021/ja992866e"
+citation = "J. B. Mann, T. L. Meek and L. C. Allen, J. Am. Chem. Soc. 122, 2780 (2000), doi:10.1021/ja992866e; J. B. Mann, T. L. Meek, E. T. Knight, J. F. Capitani and L. C. Allen, J. Am. Chem. Soc. 122, 5132 (2000), doi:10.1021/ja9928677."
+kind = "curated"
+notes = "Added in M2. tools/curated/electronegativity_allen.toml: configuration energies in eV, as transcribed in the MIT-licensed mendeleev package (v1.3.0). For He and groups 1-2 they equal the first ionization energy (checked against NIST to 0.003 eV, except H and Cs). Not converted to the Pauling-like scale."
+
+[marschner2012]
+title = "Marschner's Mineral Nutrition of Higher Plants, 3rd edition"
+url = "https://doi.org/10.1016/C2009-0-63043-9"
+licence = "Facts; cite"
+licence_url = "https://doi.org/10.1016/C2009-0-63043-9"
+citation = "P. Marschner (ed.), Marschner's Mineral Nutrition of Higher Plants, 3rd ed., Academic Press (2012); chapters cited by DOI."
+kind = "curated"
+notes = "Added in M2. Which elements are essential or beneficial for plants (tools/curated/biology.toml)."
+
+[efsa_drv]
+title = "EFSA Dietary Reference Values for nutrients — summary report"
+url = "https://doi.org/10.2903/sp.efsa.2017.e15121"
+licence = "Facts; cite"
+licence_url = "https://doi.org/10.2903/sp.efsa.2017.e15121"
+citation = "European Food Safety Authority, Dietary Reference Values for nutrients: Summary report, EFSA Supporting Publications 14, e15121 (2017), doi:10.2903/sp.efsa.2017.e15121."
+kind = "curated"
+notes = "Added in M2. Elements for which EFSA sets dietary reference values (tools/curated/biology.toml)."
+
+[zoroddu2019]
+title = "The essential metals for humans: a brief overview"
+url = "https://doi.org/10.1016/j.jinorgbio.2019.03.013"
+licence = "Facts; cite"
+licence_url = "https://doi.org/10.1016/j.jinorgbio.2019.03.013"
+citation = "M. A. Zoroddu, J. Aaseth, G. Crisponi, S. Medici, M. Peana and V. M. Nurchi, J. Inorg. Biochem. 195, 120 (2019), doi:10.1016/j.jinorgbio.2019.03.013."
+kind = "curated"
+notes = "Added in M2. Human roles of elements without an EFSA reference value (tools/curated/biology.toml)."
+
+[smits2023]
+title = "Pushing the limits of the periodic table — a review on atomic relativistic electronic structure theory and calculations for the superheavy elements"
+url = "https://doi.org/10.1016/j.physrep.2023.09.004"
+licence = "Scientific facts; cite"
+licence_url = "https://arxiv.org/abs/2301.02553"
+citation = "O. R. Smits, P. Indelicato, W. Nazarewicz, M. Piibeleht and P. Schwerdtfeger, Phys. Rep. 1035, 1 (2023), doi:10.1016/j.physrep.2023.09.004, arXiv:2301.02553."
+kind = "reference"
+notes = "Added in M2. Predicted ground levels of Z = 109-118 (tools/curated/superheavy.toml); rows cite it by DOI under primary_literature."

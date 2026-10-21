@@ -10,21 +10,32 @@
       "pattern": "^[a-z][a-z0-9_]*$"
     },
     "Unit": {
-      "description": "The units table (SPEC §5.2). Stored units are fixed per field; display conversions live in src/physics/units.ts. \"\" means dimensionless.",
+      "description": "The units table (SPEC §5.2). Stored units are fixed per field; display conversions live in src/physics/units.ts. \"\" means dimensionless. Å³ / a.u. (a₀³) for polarizabilities; s⁻¹ for Einstein coefficients; mg/kg and mg/L for abundances in rock and sea water; t/yr and USD/kg for production.",
       "type": "string",
       "enum": [
         "",
         "u",
         "kJ/mol",
         "eV",
+        "keV",
         "Hz",
         "MHz",
         "pm",
+        "fm",
+        "nm",
         "K",
         "g/cm³",
         "s",
+        "s⁻¹",
+        "%",
         "μ_N",
-        "b"
+        "b",
+        "Å³",
+        "a.u.",
+        "mg/kg",
+        "mg/L",
+        "t/yr",
+        "USD/kg"
       ]
     },
     "QuantityFlag": {
@@ -38,7 +49,7 @@
       ]
     },
     "Quantity": {
-      "description": "A number with its unit and source. `unc` is the standard uncertainty in the same unit, when the source gives one; 0 means exact by definition.",
+      "description": "A number with its unit and source. `unc` is the standard uncertainty in the same unit, when the source gives one; 0 means exact by definition. `text` keeps the exact decimal where `value` (an IEEE double) would lose digits.",
       "type": "object",
       "properties": {
         "value": {
@@ -59,6 +70,18 @@
         },
         "note": {
           "type": "string"
+        },
+        "text": {
+          "type": "string",
+          "description": "The source's own decimal text, when a double cannot hold every digit (clock frequencies)."
+        },
+        "doi": {
+          "type": "string",
+          "description": "DOI of the primary paper, where `source` is a collective key such as primary_literature."
+        },
+        "arxiv": {
+          "type": "string",
+          "description": "arXiv identifier of the paper, where it has no DOI yet."
         }
       },
       "required": [
@@ -211,6 +234,10 @@
         },
         "note": {
           "type": "string"
+        },
+        "doi": {
+          "type": "string",
+          "description": "DOI of the primary paper, where `source` is a collective key such as primary_literature."
         }
       },
       "required": [
@@ -223,7 +250,7 @@
       "additionalProperties": false
     },
     "GroundTerm": {
-      "description": "Ground level. `term` is NIST's designation, e.g. \"2S1/2\", \"1G*4\" (* = odd parity), \"(1/2,1/2)0\". S and L are present only for LS coupling.",
+      "description": "Ground level. `term` is NIST's designation, e.g. \"2S1/2\", \"1G*4\" (* = odd parity), \"(1/2,1/2)0\". S and L are present only for LS coupling. For Z ≥ 109, where NIST has no data, a relativistic prediction flagged \"predicted\".",
       "type": "object",
       "properties": {
         "term": {
@@ -262,6 +289,19 @@
         },
         "source": {
           "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string",
+          "description": "DOI of the primary paper, where `source` is a collective key such as primary_literature."
+        },
+        "flag": {
+          "type": "string",
+          "enum": [
+            "predicted"
+          ]
+        },
+        "note": {
+          "type": "string"
         }
       },
       "required": [
@@ -366,9 +406,15 @@
             "crystal",
             "powder",
             "liquid",
-            "historical",
-            "placeholder"
+            "historical"
           ]
+        },
+        "attribution": {
+          "type": "string",
+          "description": "The attribution line the licence requires, ready to show."
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
         }
       },
       "required": [
@@ -381,9 +427,12 @@
         "licence",
         "licenceUrl",
         "sourceUrl",
-        "kind"
+        "kind",
+        "attribution",
+        "source"
       ],
-      "additionalProperties": false
+      "additionalProperties": false,
+      "description": "A vendored photograph (SPEC §12): 800 px and 320 px WebP, resized only, with full credit (SPEC §15.4)."
     },
     "Category": {
       "description": "SPEC §7.3.",
@@ -562,8 +611,16 @@
         "images": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ImageRef"
+            "oneOf": [
+              {
+                "$ref": "#/definitions/ImageRef"
+              },
+              {
+                "$ref": "#/definitions/ImagePlaceholder"
+              }
+            ]
           },
+          "minItems": 1,
           "maxItems": 3
         },
         "flags": {
@@ -1133,6 +1190,1204 @@
         "arrows",
         "heatmaps",
         "maps"
+      ],
+      "additionalProperties": false
+    },
+    "ImagePlaceholder": {
+      "description": "An honest placeholder (SPEC §12.5): no free photograph of the element exists or was found. The app draws the card; nothing is stored as an image.",
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "placeholder"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "The sentence the card shows, values from IAEA."
+        },
+        "reason": {
+          "type": "string",
+          "enum": [
+            "never_visible",
+            "no_free_photo"
+          ]
+        },
+        "longestLived": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "halfLife": {
+              "$ref": "#/definitions/Quantity"
+            }
+          },
+          "required": [
+            "A",
+            "halfLife"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "text",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "Decay": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "description": "IAEA decay-mode code, e.g. B-, EC+B+, A, SF, IT, B-N, P."
+        },
+        "branching": {
+          "$ref": "#/definitions/Q"
+        }
+      },
+      "required": [
+        "mode",
+        "branching"
+      ],
+      "additionalProperties": false
+    },
+    "Isotope": {
+      "description": "One nuclide's ground state (IAEA LiveChart, from ENSDF and AME). Bulk numbers carry the file's source.",
+      "type": "object",
+      "properties": {
+        "A": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "N": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stable": {
+          "type": "boolean"
+        },
+        "halfLife": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Quantity"
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ],
+          "description": "Absent for stable nuclides."
+        },
+        "halfLifeText": {
+          "type": "string",
+          "description": "IAEA's own value, unit and operator, e.g. '> 1.0E26 y'."
+        },
+        "jp": {
+          "type": "string",
+          "description": "Spin-parity as ENSDF gives it; brackets mark tentative assignments."
+        },
+        "I": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ]
+        },
+        "decays": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Decay"
+          }
+        },
+        "abundance": {
+          "$ref": "#/definitions/Q"
+        },
+        "mass": {
+          "$ref": "#/definitions/Q"
+        },
+        "massExcess": {
+          "$ref": "#/definitions/Q"
+        },
+        "bindingPerNucleon": {
+          "$ref": "#/definitions/Q"
+        },
+        "mu": {
+          "$ref": "#/definitions/Q"
+        },
+        "Q": {
+          "$ref": "#/definitions/Q"
+        },
+        "chargeRadius": {
+          "$ref": "#/definitions/Q"
+        },
+        "discoveryYear": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "A",
+        "N",
+        "stable",
+        "jp",
+        "I",
+        "decays",
+        "abundance",
+        "mass",
+        "massExcess",
+        "bindingPerNucleon",
+        "mu",
+        "Q"
+      ],
+      "additionalProperties": false
+    },
+    "IsotopesFile": {
+      "description": "public/data/isotopes/{Z}.json (SPEC §10.7).",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "Z": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "isotopes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Isotope"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "Z",
+        "symbol",
+        "source",
+        "isotopes"
+      ],
+      "additionalProperties": false
+    },
+    "LevelLabel": {
+      "type": "object",
+      "properties": {
+        "conf": {
+          "type": "string"
+        },
+        "term": {
+          "type": "string"
+        },
+        "J": {
+          "type": "string"
+        },
+        "eV": {
+          "type": "number"
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "minProperties": 1,
+      "description": "Lower or upper level of a line, as NIST classifies it; fields NIST leaves empty are omitted."
+    },
+    "SpectralLine": {
+      "description": "One line: wavelength in nm (medium as the file says), NIST relative intensity (comparable only within one species), Einstein coefficient A_ki in s⁻¹; lower/upper are absent for unclassified lines.",
+      "type": "object",
+      "properties": {
+        "nm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0
+        },
+        "intensityText": {
+          "type": "string"
+        },
+        "Aki": {
+          "type": "number",
+          "minimum": 0
+        },
+        "lower": {
+          "$ref": "#/definitions/LevelLabel"
+        },
+        "upper": {
+          "$ref": "#/definitions/LevelLabel"
+        },
+        "charge": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "0 = neutral atom (I), 1 = singly charged ion (II)."
+        }
+      },
+      "required": [
+        "nm",
+        "charge"
+      ],
+      "additionalProperties": false
+    },
+    "SpectrumSpecies": {
+      "type": "object",
+      "properties": {
+        "charge": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "label": {
+          "type": "string"
+        },
+        "linesInWindow": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Lines NIST lists in the window."
+        },
+        "kept": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Lines kept in this file: the strongest, up to the SPEC §10.8 cap."
+        }
+      },
+      "required": [
+        "charge",
+        "label",
+        "linesInWindow",
+        "kept"
+      ],
+      "additionalProperties": false
+    },
+    "SpectraFile": {
+      "description": "public/data/spectra/{Z}.json (SPEC §10.8): visible lines of the neutral atom and the singly charged ion.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "Z": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "window": {
+          "type": "object",
+          "properties": {
+            "low": {
+              "type": "number"
+            },
+            "high": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "nm"
+              ]
+            },
+            "medium": {
+              "type": "string",
+              "enum": [
+                "air",
+                "vacuum"
+              ]
+            }
+          },
+          "required": [
+            "low",
+            "high",
+            "unit",
+            "medium"
+          ],
+          "additionalProperties": false
+        },
+        "units": {
+          "type": "object",
+          "properties": {
+            "nm": {
+              "type": "string",
+              "enum": [
+                "nm"
+              ]
+            },
+            "Aki": {
+              "type": "string",
+              "enum": [
+                "s⁻¹"
+              ]
+            },
+            "eV": {
+              "type": "string",
+              "enum": [
+                "eV"
+              ]
+            }
+          },
+          "required": [
+            "nm",
+            "Aki",
+            "eV"
+          ],
+          "additionalProperties": false
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SpectralLine"
+          },
+          "description": "Every kept line of every species, by wavelength."
+        },
+        "species": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SpectrumSpecies"
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "Z",
+        "symbol",
+        "source",
+        "window",
+        "units",
+        "lines",
+        "species"
+      ],
+      "additionalProperties": false
+    },
+    "EnergyLevel": {
+      "type": "object",
+      "properties": {
+        "eV": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unc": {
+          "type": "number",
+          "minimum": 0
+        },
+        "configuration": {
+          "type": "string"
+        },
+        "term": {
+          "type": "string"
+        },
+        "J": {
+          "type": "string"
+        },
+        "parity": {
+          "type": "string",
+          "enum": [
+            "even",
+            "odd"
+          ]
+        },
+        "gJ": {
+          "type": "number"
+        },
+        "flag": {
+          "type": "string",
+          "enum": [
+            "interpolated",
+            "calculated"
+          ],
+          "description": "NIST's [ ] and ( ) markers on the level energy."
+        }
+      },
+      "required": [
+        "eV",
+        "configuration",
+        "term",
+        "J",
+        "parity"
+      ],
+      "additionalProperties": false
+    },
+    "LevelsFile": {
+      "description": "public/data/levels/{Z}.json (SPEC §10.8): the lowest levels of the neutral atom and its ionization limit.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "Z": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "units": {
+          "type": "object",
+          "properties": {
+            "eV": {
+              "type": "string",
+              "enum": [
+                "eV"
+              ]
+            }
+          },
+          "required": [
+            "eV"
+          ],
+          "additionalProperties": false
+        },
+        "levelsInDatabase": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "levels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EnergyLevel"
+          },
+          "minItems": 1
+        },
+        "ionizationLimit": {
+          "$ref": "#/definitions/Q"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "Z",
+        "symbol",
+        "source",
+        "units",
+        "levelsInDatabase",
+        "levels",
+        "ionizationLimit"
+      ],
+      "additionalProperties": false
+    },
+    "Citation": {
+      "type": "object",
+      "description": "A dated milestone with the paper that reports it.",
+      "properties": {
+        "year": {
+          "type": "integer"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
+      },
+      "required": [
+        "year",
+        "doi",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "SourcedText": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "Zeff": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "l": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "value": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
+      },
+      "required": [
+        "n",
+        "l",
+        "value",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "Eigenvalue": {
+      "type": "object",
+      "description": "Orbital eigenvalue of the neutral atom (NIST SRD 141), in eV.",
+      "properties": {
+        "n": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "l": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "eV": {
+          "type": "number"
+        },
+        "method": {
+          "type": "string",
+          "enum": [
+            "LDA",
+            "LSD",
+            "RLDA",
+            "ScRLDA"
+          ]
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
+      },
+      "required": [
+        "n",
+        "l",
+        "eV",
+        "method",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "IonizationStage": {
+      "type": "object",
+      "properties": {
+        "stage": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "eV": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "unc": {
+          "type": "number",
+          "minimum": 0
+        },
+        "flag": {
+          "type": "string",
+          "enum": [
+            "interpolated",
+            "calculated"
+          ]
+        }
+      },
+      "required": [
+        "stage",
+        "eV"
+      ],
+      "additionalProperties": false
+    },
+    "IonizationLadder": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "eV"
+          ]
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IonizationStage"
+          }
+        }
+      },
+      "required": [
+        "source",
+        "unit",
+        "stages"
+      ],
+      "additionalProperties": false
+    },
+    "HyperfineRecord": {
+      "type": "object",
+      "properties": {
+        "A": {
+          "type": "integer"
+        },
+        "charge": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "I": {
+          "type": "number",
+          "minimum": 0
+        },
+        "J": {
+          "type": "number",
+          "minimum": 0
+        },
+        "A_MHz": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "B_MHz": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "splitting": {
+          "$ref": "#/definitions/Quantity"
+        }
+      },
+      "required": [
+        "A",
+        "charge",
+        "splitting"
+      ],
+      "additionalProperties": false
+    },
+    "ClockRecord": {
+      "type": "object",
+      "properties": {
+        "Z": {
+          "type": "integer"
+        },
+        "species": {
+          "type": "string"
+        },
+        "A": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "charge": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "atomic",
+            "nuclear",
+            "molecular"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "transition": {
+          "type": "string"
+        },
+        "srs": {
+          "type": "boolean",
+          "description": "A secondary representation of the second."
+        },
+        "metre": {
+          "type": "boolean",
+          "description": "Usable for realizing the metre (BIPM)."
+        },
+        "definesSecond": {
+          "type": "boolean"
+        },
+        "frequency": {
+          "$ref": "#/definitions/Quantity"
+        }
+      },
+      "required": [
+        "Z",
+        "species",
+        "A",
+        "charge",
+        "kind",
+        "label",
+        "transition",
+        "srs",
+        "metre",
+        "frequency"
+      ],
+      "additionalProperties": false
+    },
+    "SIRole": {
+      "type": "object",
+      "properties": {
+        "Z": {
+          "type": "integer"
+        },
+        "A": {
+          "type": "integer"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "from": {
+          "type": "integer"
+        },
+        "to": {
+          "type": "integer"
+        },
+        "text": {
+          "type": "string"
+        },
+        "validFrom": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "endDoi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Z",
+        "unit",
+        "role",
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "LaserCooling": {
+      "type": "object",
+      "properties": {
+        "A": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "natural"
+              ]
+            }
+          ]
+        },
+        "charge": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "ground",
+            "metastable"
+          ]
+        },
+        "lower": {
+          "type": "string"
+        },
+        "upper": {
+          "type": "string"
+        },
+        "wavelength": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "gamma": {
+          "$ref": "#/definitions/Q"
+        },
+        "repump": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "firstCooled": {
+          "$ref": "#/definitions/Citation"
+        },
+        "firstMOT": {
+          "$ref": "#/definitions/Citation"
+        },
+        "BEC": {
+          "$ref": "#/definitions/Citation"
+        },
+        "DFG": {
+          "$ref": "#/definitions/Citation"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "A",
+        "charge",
+        "state",
+        "lower",
+        "upper",
+        "wavelength",
+        "gamma",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "Biology": {
+      "type": "object",
+      "properties": {
+        "essentialPlant": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "beneficial",
+            "no"
+          ]
+        },
+        "essentialHuman": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "probable",
+            "no"
+          ]
+        },
+        "plantClass": {
+          "type": "string",
+          "enum": [
+            "macronutrient",
+            "micronutrient",
+            "beneficial",
+            "structural"
+          ]
+        },
+        "plantRole": {
+          "$ref": "#/definitions/SourcedText"
+        },
+        "humanRole": {
+          "$ref": "#/definitions/SourcedText"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "essentialPlant",
+        "essentialHuman"
+      ],
+      "additionalProperties": false
+    },
+    "ElementDetailFile": {
+      "description": "public/data/elements/{Z}.json: per-panel detail, loaded when the sheet opens (SPEC §5, §10). Sections are keyed by panel slug.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "Z": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "orbitals": {
+          "type": "object",
+          "properties": {
+            "zeff": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Zeff"
+              }
+            },
+            "eigenvalues": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Eigenvalue"
+              }
+            },
+            "radii": {
+              "type": "object",
+              "properties": {
+                "covalent": {
+                  "$ref": "#/definitions/Q"
+                },
+                "vdw": {
+                  "$ref": "#/definitions/Q"
+                },
+                "metallic": {
+                  "$ref": "#/definitions/Q"
+                },
+                "calculated": {
+                  "$ref": "#/definitions/Q"
+                }
+              },
+              "required": [
+                "covalent",
+                "vdw"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "zeff",
+            "eigenvalues",
+            "radii"
+          ],
+          "additionalProperties": false
+        },
+        "em": {
+          "type": "object",
+          "properties": {
+            "ionizationEnergies": {
+              "$ref": "#/definitions/IonizationLadder"
+            },
+            "electronAffinity": {
+              "$ref": "#/definitions/Q"
+            },
+            "en": {
+              "type": "object",
+              "properties": {
+                "pauling": {
+                  "$ref": "#/definitions/Q"
+                },
+                "allen": {
+                  "$ref": "#/definitions/Q"
+                }
+              },
+              "required": [
+                "pauling",
+                "allen"
+              ],
+              "additionalProperties": false
+            },
+            "polarizability": {
+              "$ref": "#/definitions/Q"
+            }
+          },
+          "required": [
+            "ionizationEnergies",
+            "electronAffinity",
+            "en"
+          ],
+          "additionalProperties": false
+        },
+        "probability": {
+          "type": "object",
+          "properties": {
+            "referenceIsotope": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "physical": {
+          "type": "object",
+          "properties": {
+            "abundance": {
+              "type": "object",
+              "properties": {
+                "crust": {
+                  "$ref": "#/definitions/Quantity"
+                },
+                "ocean": {
+                  "$ref": "#/definitions/Quantity"
+                },
+                "solar": {
+                  "$ref": "#/definitions/Q"
+                },
+                "body": {
+                  "$ref": "#/definitions/Q"
+                }
+              },
+              "additionalProperties": false
+            },
+            "crystal": {
+              "type": "object"
+            },
+            "production": {
+              "type": "object"
+            },
+            "critical": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "abundance"
+          ],
+          "additionalProperties": false
+        },
+        "amo": {
+          "type": "object",
+          "properties": {
+            "hyperfine": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/HyperfineRecord"
+              }
+            },
+            "clocks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ClockRecord"
+              }
+            },
+            "laserCooling": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LaserCooling"
+              }
+            },
+            "siHistory": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SIRole"
+              }
+            }
+          },
+          "required": [
+            "hyperfine",
+            "clocks",
+            "laserCooling",
+            "siHistory"
+          ],
+          "additionalProperties": false
+        },
+        "nucleus": {
+          "type": "object"
+        },
+        "biology": {
+          "$ref": "#/definitions/Biology"
+        },
+        "history": {
+          "type": "object"
+        },
+        "prose": {
+          "type": "object",
+          "description": "Our own 60–120-word text (tools/curated/prose/{Z}.md): what it is, one surprising fact, one quantum fact.",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SourceId"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "text",
+            "sources"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "Z",
+        "symbol",
+        "orbitals",
+        "em",
+        "probability",
+        "physical",
+        "amo",
+        "biology"
+      ],
+      "additionalProperties": false
+    },
+    "MetrologyFile": {
+      "description": "public/data/metrology.json: every clock and standard frequency, every SI role, and the timeline of the second (SPEC §10.6).",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "clocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClockRecord"
+          }
+        },
+        "siHistory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SIRole"
+          }
+        },
+        "timeline": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer"
+              },
+              "text": {
+                "type": "string"
+              },
+              "source": {
+                "$ref": "#/definitions/SourceId"
+              },
+              "doi": {
+                "type": "string"
+              },
+              "arxiv": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "year",
+              "text",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "clocks",
+        "siHistory",
+        "timeline"
       ],
       "additionalProperties": false
     }

@@ -57,11 +57,8 @@ def element_pages() -> dict[int, str]:
     return out
 
 
-_IMG = re.compile(
-    r'<a href="(?P<full>[^"]+\.(?:jpg|jpeg|png))"[^>]*>\s*<img src="(?P<small>[^"]+)"[^>]*?'
-    r'(?:width="(?P<w>\d+)")?[^>]*?(?:height="(?P<h>\d+)")?[^>]*?alt="(?P<alt>[^"]*)"',
-    re.IGNORECASE,
-)
+_IMG = re.compile(r'<img src="(?P<small>s/[^"]+)"[^>]*?alt="(?P<alt>[^"]*)"', re.IGNORECASE)
+_LINK = re.compile(r'<a href="(?P<full>[^"]+\.(?:jpg|jpeg|png))"[^>]*>\s*$', re.IGNORECASE)
 
 
 def _plain(fragment: str) -> str:
@@ -70,30 +67,44 @@ def _plain(fragment: str) -> str:
 
 
 def parse_page(text: str) -> dict:
-    """{title, intro, photos: [{file, alt, context}], notes: [...]} for one element page.
+    """{title, intro, photos: [{file, small, alt, context}], notes: [...]} for one element page.
 
-    `context` is the caption text that follows the photograph up to the next one (the site writes
-    "Left: … Right: …" under each pair); `notes` collects any sentence that credits someone other
-    than the site, which overrides its default licence ("unless otherwise noted")."""
-    body = text[text.find("<h1>") :] if "<h1>" in text else text
+    The element's own text sits in <div class="text">, from its <h1> to the licence line. A photo
+    is linked to its full-size file when the site has one; otherwise only the 400 px version
+    exists and `file` is that. `context` is the caption text after the photo up to the next one
+    (the site writes "Left: … Right: …" under each pair). `notes` collects every sentence that
+    credits someone other than the site, which overrides its default licence ("unless otherwise
+    noted"); such pages are never selected automatically (tools/curated/images.toml decides).
+    """
+    start = text.find('<div class="text">')
+    body = text[start:] if start >= 0 else text
     end = body.find("The images are licensed under")
     body = body[:end] if end > 0 else body
-    title = _plain(body[: body.find("</h1>")]) if "</h1>" in body else ""
+    title = _plain(body[body.find("<h1>") : body.find("</h1>")]) if "</h1>" in body else ""
     matches = list(_IMG.finditer(body))
     photos = []
     for i, m in enumerate(matches):
+        link = _LINK.search(body[max(0, m.start() - 300) : m.start()])
         nxt = matches[i + 1].start() if i + 1 < len(matches) else len(body)
-        # Text after this photo up to the next photo; for the left photo of a pair this is the
-        # shared caption block, which names both.
         context = _plain(body[m.end() : nxt])
-        if not context and i + 1 < len(matches):
-            context = _plain(body[matches[i + 1].end() : matches[i + 2].start() if i + 2 < len(matches) else len(body)])
-        photos.append({"file": m.group("full"), "alt": html.unescape(m.group("alt")), "context": context[:600]})
-    intro = _plain(body[body.find("</h1>") + 5 : matches[0].start()]) if matches and "</h1>" in body else ""
+        photos.append(
+            {
+                "file": link.group("full") if link else m.group("small"),
+                "small": m.group("small"),
+                "alt": html.unescape(m.group("alt")).strip(),
+                "context": context[:600],
+            }
+        )
+    first = matches[0].start() if matches else len(body)
+    intro = _plain(body[body.find("</h1>") + 5 : first]) if "</h1>" in body else ""
     notes = [
         s.strip()
         for s in re.split(r"(?<=[.!?])\s", _plain(body))
-        if re.search(r"(?i)\b(courtesy|wikimedia|wikipedia|photo(?:graph)? by|image by|©|copyright|public domain)\b", s)
+        if re.search(
+            r"(?i)(\bcourtesy|\bwikimedia|\bwikipedia|\bphoto(?:graph)?\s*(?:by|:)|\bimage by|©|\bcopyright"
+            r"|\bpublic domain|\blicen[cs]e|\billustration)",
+            s,
+        )
     ]
     return {"title": title, "intro": intro[:600], "photos": photos, "notes": notes}
 

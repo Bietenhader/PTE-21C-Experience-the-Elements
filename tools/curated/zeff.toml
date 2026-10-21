@@ -1,0 +1,6487 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# Clementi-Raimondi effective nuclear charges, Z_eff = Z - sigma = n * zeta (zeta = optimised
+# minimal-basis Slater-type-orbital exponent). Transcribed by mendeleev 1.3.0 (MIT),
+# elements.db table `screeningconstants` (stores sigma = Z - n*zeta); see README.md.
+# Z = 2-36: Clementi & Raimondi, J. Chem. Phys. 38, 2686 (1963), doi:10.1063/1.1733573
+# Z = 37-86: Clementi, Raimondi & Reinhardt, J. Chem. Phys. 47, 1300 (1967), doi:10.1063/1.1712084
+# H (Z = 1) omitted: not in either paper (1963 covers 2-36 electrons); mendeleev stores sigma = 0 for H 1s.
+
+[[row]]
+Z = 2
+n = 1
+l = 0
+zeff = 1.6875
+source = "clementi_zeff"
+note = "He 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3125. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 1.6875 (diff +0.0000)."
+
+[[row]]
+Z = 3
+n = 1
+l = 0
+zeff = 2.6906
+source = "clementi_zeff"
+note = "Li 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3094."
+
+[[row]]
+Z = 3
+n = 2
+l = 0
+zeff = 1.2792
+source = "clementi_zeff"
+note = "Li 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 1.7208."
+
+[[row]]
+Z = 4
+n = 1
+l = 0
+zeff = 3.6848
+source = "clementi_zeff"
+note = "Be 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3152. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 3.6848 (diff +0.0000)."
+
+[[row]]
+Z = 4
+n = 2
+l = 0
+zeff = 1.912
+source = "clementi_zeff"
+note = "Be 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 2.088. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 1.9121 (diff +0.0001)."
+
+[[row]]
+Z = 5
+n = 1
+l = 0
+zeff = 4.6795
+source = "clementi_zeff"
+note = "B 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3205."
+
+[[row]]
+Z = 5
+n = 2
+l = 0
+zeff = 2.5762
+source = "clementi_zeff"
+note = "B 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 2.4238."
+
+[[row]]
+Z = 5
+n = 2
+l = 1
+zeff = 2.4214
+source = "clementi_zeff"
+note = "B 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 2.5786."
+
+[[row]]
+Z = 6
+n = 1
+l = 0
+zeff = 5.6727
+source = "clementi_zeff"
+note = "C 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3273."
+
+[[row]]
+Z = 6
+n = 2
+l = 0
+zeff = 3.2166
+source = "clementi_zeff"
+note = "C 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 2.7834."
+
+[[row]]
+Z = 6
+n = 2
+l = 1
+zeff = 3.1358
+source = "clementi_zeff"
+note = "C 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 2.8642."
+
+[[row]]
+Z = 7
+n = 1
+l = 0
+zeff = 6.6651
+source = "clementi_zeff"
+note = "N 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3349."
+
+[[row]]
+Z = 7
+n = 2
+l = 0
+zeff = 3.8474
+source = "clementi_zeff"
+note = "N 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.1526."
+
+[[row]]
+Z = 7
+n = 2
+l = 1
+zeff = 3.834
+source = "clementi_zeff"
+note = "N 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.166."
+
+[[row]]
+Z = 8
+n = 1
+l = 0
+zeff = 7.6579
+source = "clementi_zeff"
+note = "O 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3421."
+
+[[row]]
+Z = 8
+n = 2
+l = 0
+zeff = 4.4916
+source = "clementi_zeff"
+note = "O 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.5084."
+
+[[row]]
+Z = 8
+n = 2
+l = 1
+zeff = 4.4532
+source = "clementi_zeff"
+note = "O 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.5468."
+
+[[row]]
+Z = 9
+n = 1
+l = 0
+zeff = 8.6501
+source = "clementi_zeff"
+note = "F 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3499."
+
+[[row]]
+Z = 9
+n = 2
+l = 0
+zeff = 5.1276
+source = "clementi_zeff"
+note = "F 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.8724."
+
+[[row]]
+Z = 9
+n = 2
+l = 1
+zeff = 5.1
+source = "clementi_zeff"
+note = "F 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9."
+
+[[row]]
+Z = 10
+n = 1
+l = 0
+zeff = 9.6421
+source = "clementi_zeff"
+note = "Ne 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3579. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 9.6421 (diff -0.0000)."
+
+[[row]]
+Z = 10
+n = 2
+l = 0
+zeff = 5.7584
+source = "clementi_zeff"
+note = "Ne 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.2416. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 5.7585 (diff +0.0001)."
+
+[[row]]
+Z = 10
+n = 2
+l = 1
+zeff = 5.7584
+source = "clementi_zeff"
+note = "Ne 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.2416. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 5.7585 (diff +0.0001)."
+
+[[row]]
+Z = 11
+n = 1
+l = 0
+zeff = 10.6259
+source = "clementi_zeff"
+note = "Na 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3741."
+
+[[row]]
+Z = 11
+n = 2
+l = 0
+zeff = 6.5714
+source = "clementi_zeff"
+note = "Na 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.4286."
+
+[[row]]
+Z = 11
+n = 2
+l = 1
+zeff = 6.8018
+source = "clementi_zeff"
+note = "Na 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.1982."
+
+[[row]]
+Z = 11
+n = 3
+l = 0
+zeff = 2.5074
+source = "clementi_zeff"
+note = "Na 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 8.4926."
+
+[[row]]
+Z = 12
+n = 1
+l = 0
+zeff = 11.6089
+source = "clementi_zeff"
+note = "Mg 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.3911. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 11.6089 (diff +0.0000)."
+
+[[row]]
+Z = 12
+n = 2
+l = 0
+zeff = 7.392
+source = "clementi_zeff"
+note = "Mg 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.608. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 7.3920 (diff +0.0000)."
+
+[[row]]
+Z = 12
+n = 2
+l = 1
+zeff = 7.8258
+source = "clementi_zeff"
+note = "Mg 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.1742. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 7.8258 (diff -0.0000)."
+
+[[row]]
+Z = 12
+n = 3
+l = 0
+zeff = 3.3075
+source = "clementi_zeff"
+note = "Mg 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 8.6925. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 3.3075 (diff +0.0000)."
+
+[[row]]
+Z = 13
+n = 1
+l = 0
+zeff = 12.591
+source = "clementi_zeff"
+note = "Al 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.409."
+
+[[row]]
+Z = 13
+n = 2
+l = 0
+zeff = 8.2136
+source = "clementi_zeff"
+note = "Al 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.7864."
+
+[[row]]
+Z = 13
+n = 2
+l = 1
+zeff = 8.9634
+source = "clementi_zeff"
+note = "Al 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.0366."
+
+[[row]]
+Z = 13
+n = 3
+l = 0
+zeff = 4.1172
+source = "clementi_zeff"
+note = "Al 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 8.8828."
+
+[[row]]
+Z = 13
+n = 3
+l = 1
+zeff = 4.0656
+source = "clementi_zeff"
+note = "Al 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 8.9344."
+
+[[row]]
+Z = 14
+n = 1
+l = 0
+zeff = 13.5745
+source = "clementi_zeff"
+note = "Si 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.4255."
+
+[[row]]
+Z = 14
+n = 2
+l = 0
+zeff = 9.02
+source = "clementi_zeff"
+note = "Si 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.98."
+
+[[row]]
+Z = 14
+n = 2
+l = 1
+zeff = 9.945
+source = "clementi_zeff"
+note = "Si 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.055."
+
+[[row]]
+Z = 14
+n = 3
+l = 0
+zeff = 4.9032
+source = "clementi_zeff"
+note = "Si 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 9.0968."
+
+[[row]]
+Z = 14
+n = 3
+l = 1
+zeff = 4.2852
+source = "clementi_zeff"
+note = "Si 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 9.7148."
+
+[[row]]
+Z = 15
+n = 1
+l = 0
+zeff = 14.5578
+source = "clementi_zeff"
+note = "P 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.4422."
+
+[[row]]
+Z = 15
+n = 2
+l = 0
+zeff = 9.825
+source = "clementi_zeff"
+note = "P 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 5.175."
+
+[[row]]
+Z = 15
+n = 2
+l = 1
+zeff = 10.9612
+source = "clementi_zeff"
+note = "P 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.0388."
+
+[[row]]
+Z = 15
+n = 3
+l = 0
+zeff = 5.6418
+source = "clementi_zeff"
+note = "P 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 9.3582."
+
+[[row]]
+Z = 15
+n = 3
+l = 1
+zeff = 4.8864
+source = "clementi_zeff"
+note = "P 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 10.1136."
+
+[[row]]
+Z = 16
+n = 1
+l = 0
+zeff = 15.5409
+source = "clementi_zeff"
+note = "S 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.4591."
+
+[[row]]
+Z = 16
+n = 2
+l = 0
+zeff = 10.6288
+source = "clementi_zeff"
+note = "S 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 5.3712."
+
+[[row]]
+Z = 16
+n = 2
+l = 1
+zeff = 11.977
+source = "clementi_zeff"
+note = "S 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.023."
+
+[[row]]
+Z = 16
+n = 3
+l = 0
+zeff = 6.3669
+source = "clementi_zeff"
+note = "S 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 9.6331."
+
+[[row]]
+Z = 16
+n = 3
+l = 1
+zeff = 5.4819
+source = "clementi_zeff"
+note = "S 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 10.5181."
+
+[[row]]
+Z = 17
+n = 1
+l = 0
+zeff = 16.5239
+source = "clementi_zeff"
+note = "Cl 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.4761."
+
+[[row]]
+Z = 17
+n = 2
+l = 0
+zeff = 11.4304
+source = "clementi_zeff"
+note = "Cl 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 5.5696."
+
+[[row]]
+Z = 17
+n = 2
+l = 1
+zeff = 12.9932
+source = "clementi_zeff"
+note = "Cl 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 4.0068."
+
+[[row]]
+Z = 17
+n = 3
+l = 0
+zeff = 7.0683
+source = "clementi_zeff"
+note = "Cl 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 9.9317."
+
+[[row]]
+Z = 17
+n = 3
+l = 1
+zeff = 6.1161
+source = "clementi_zeff"
+note = "Cl 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 10.8839."
+
+[[row]]
+Z = 18
+n = 1
+l = 0
+zeff = 17.5075
+source = "clementi_zeff"
+note = "Ar 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.4925. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 17.5075 (diff +0.0000)."
+
+[[row]]
+Z = 18
+n = 2
+l = 0
+zeff = 12.2304
+source = "clementi_zeff"
+note = "Ar 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 5.7696. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 12.2304 (diff +0.0000)."
+
+[[row]]
+Z = 18
+n = 2
+l = 1
+zeff = 14.0082
+source = "clementi_zeff"
+note = "Ar 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9918. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 14.0083 (diff +0.0001)."
+
+[[row]]
+Z = 18
+n = 3
+l = 0
+zeff = 7.7568
+source = "clementi_zeff"
+note = "Ar 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 10.2432. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 7.7569 (diff +0.0001)."
+
+[[row]]
+Z = 18
+n = 3
+l = 1
+zeff = 6.7641
+source = "clementi_zeff"
+note = "Ar 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 11.2359. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 6.7640 (diff -0.0001)."
+
+[[row]]
+Z = 19
+n = 1
+l = 0
+zeff = 18.4895
+source = "clementi_zeff"
+note = "K 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.5105."
+
+[[row]]
+Z = 19
+n = 2
+l = 0
+zeff = 13.0062
+source = "clementi_zeff"
+note = "K 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 5.9938."
+
+[[row]]
+Z = 19
+n = 2
+l = 1
+zeff = 15.0272
+source = "clementi_zeff"
+note = "K 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9728."
+
+[[row]]
+Z = 19
+n = 3
+l = 0
+zeff = 8.6799
+source = "clementi_zeff"
+note = "K 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 10.3201."
+
+[[row]]
+Z = 19
+n = 3
+l = 1
+zeff = 7.7256
+source = "clementi_zeff"
+note = "K 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 11.2744."
+
+[[row]]
+Z = 19
+n = 4
+l = 0
+zeff = 3.4952
+source = "clementi_zeff"
+note = "K 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.5048."
+
+[[row]]
+Z = 20
+n = 1
+l = 0
+zeff = 19.473
+source = "clementi_zeff"
+note = "Ca 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.527. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 19.4731 (diff +0.0001)."
+
+[[row]]
+Z = 20
+n = 2
+l = 0
+zeff = 13.7764
+source = "clementi_zeff"
+note = "Ca 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 6.2236. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 13.7752 (diff -0.0012)."
+
+[[row]]
+Z = 20
+n = 2
+l = 1
+zeff = 16.0414
+source = "clementi_zeff"
+note = "Ca 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9586. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 16.0415 (diff +0.0001)."
+
+[[row]]
+Z = 20
+n = 3
+l = 0
+zeff = 9.6015
+source = "clementi_zeff"
+note = "Ca 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 10.3985. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 9.6016 (diff +0.0001)."
+
+[[row]]
+Z = 20
+n = 3
+l = 1
+zeff = 8.6583
+source = "clementi_zeff"
+note = "Ca 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 11.3417. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 8.6583 (diff -0.0000)."
+
+[[row]]
+Z = 20
+n = 4
+l = 0
+zeff = 4.398
+source = "clementi_zeff"
+note = "Ca 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.602. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 4.3979 (diff -0.0001)."
+
+[[row]]
+Z = 21
+n = 1
+l = 0
+zeff = 20.4566
+source = "clementi_zeff"
+note = "Sc 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.5434."
+
+[[row]]
+Z = 21
+n = 2
+l = 0
+zeff = 14.5736
+source = "clementi_zeff"
+note = "Sc 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 6.4264."
+
+[[row]]
+Z = 21
+n = 2
+l = 1
+zeff = 17.0546
+source = "clementi_zeff"
+note = "Sc 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9454."
+
+[[row]]
+Z = 21
+n = 3
+l = 0
+zeff = 10.3398
+source = "clementi_zeff"
+note = "Sc 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 10.6602."
+
+[[row]]
+Z = 21
+n = 3
+l = 1
+zeff = 9.4062
+source = "clementi_zeff"
+note = "Sc 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 11.5938."
+
+[[row]]
+Z = 21
+n = 3
+l = 2
+zeff = 7.1199
+source = "clementi_zeff"
+note = "Sc 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 13.8801."
+
+[[row]]
+Z = 21
+n = 4
+l = 0
+zeff = 4.6324
+source = "clementi_zeff"
+note = "Sc 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 16.3676."
+
+[[row]]
+Z = 22
+n = 1
+l = 0
+zeff = 21.4409
+source = "clementi_zeff"
+note = "Ti 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.5591."
+
+[[row]]
+Z = 22
+n = 2
+l = 0
+zeff = 15.3766
+source = "clementi_zeff"
+note = "Ti 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 6.6234."
+
+[[row]]
+Z = 22
+n = 2
+l = 1
+zeff = 18.0648
+source = "clementi_zeff"
+note = "Ti 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9352."
+
+[[row]]
+Z = 22
+n = 3
+l = 0
+zeff = 11.0331
+source = "clementi_zeff"
+note = "Ti 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 10.9669."
+
+[[row]]
+Z = 22
+n = 3
+l = 1
+zeff = 10.1037
+source = "clementi_zeff"
+note = "Ti 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 11.8963."
+
+[[row]]
+Z = 22
+n = 3
+l = 2
+zeff = 8.1414
+source = "clementi_zeff"
+note = "Ti 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 13.8586."
+
+[[row]]
+Z = 22
+n = 4
+l = 0
+zeff = 4.8168
+source = "clementi_zeff"
+note = "Ti 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 17.1832."
+
+[[row]]
+Z = 23
+n = 1
+l = 0
+zeff = 22.4256
+source = "clementi_zeff"
+note = "V 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.5744."
+
+[[row]]
+Z = 23
+n = 2
+l = 0
+zeff = 16.1814
+source = "clementi_zeff"
+note = "V 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 6.8186."
+
+[[row]]
+Z = 23
+n = 2
+l = 1
+zeff = 19.0728
+source = "clementi_zeff"
+note = "V 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9272."
+
+[[row]]
+Z = 23
+n = 3
+l = 0
+zeff = 11.7093
+source = "clementi_zeff"
+note = "V 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 11.2907."
+
+[[row]]
+Z = 23
+n = 3
+l = 1
+zeff = 10.785
+source = "clementi_zeff"
+note = "V 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 12.215."
+
+[[row]]
+Z = 23
+n = 3
+l = 2
+zeff = 8.9829
+source = "clementi_zeff"
+note = "V 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.0171."
+
+[[row]]
+Z = 23
+n = 4
+l = 0
+zeff = 4.9812
+source = "clementi_zeff"
+note = "V 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 18.0188."
+
+[[row]]
+Z = 24
+n = 1
+l = 0
+zeff = 23.4138
+source = "clementi_zeff"
+note = "Cr 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.5862."
+
+[[row]]
+Z = 24
+n = 2
+l = 0
+zeff = 16.9838
+source = "clementi_zeff"
+note = "Cr 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 7.0162."
+
+[[row]]
+Z = 24
+n = 2
+l = 1
+zeff = 20.0752
+source = "clementi_zeff"
+note = "Cr 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9248."
+
+[[row]]
+Z = 24
+n = 3
+l = 0
+zeff = 12.3678
+source = "clementi_zeff"
+note = "Cr 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 11.6322."
+
+[[row]]
+Z = 24
+n = 3
+l = 1
+zeff = 11.466
+source = "clementi_zeff"
+note = "Cr 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 12.534."
+
+[[row]]
+Z = 24
+n = 3
+l = 2
+zeff = 9.7566
+source = "clementi_zeff"
+note = "Cr 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.2434."
+
+[[row]]
+Z = 24
+n = 4
+l = 0
+zeff = 5.1332
+source = "clementi_zeff"
+note = "Cr 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 18.8668."
+
+[[row]]
+Z = 25
+n = 1
+l = 0
+zeff = 24.3957
+source = "clementi_zeff"
+note = "Mn 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.6043."
+
+[[row]]
+Z = 25
+n = 2
+l = 0
+zeff = 17.7938
+source = "clementi_zeff"
+note = "Mn 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 7.2062."
+
+[[row]]
+Z = 25
+n = 2
+l = 1
+zeff = 21.084
+source = "clementi_zeff"
+note = "Mn 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.916."
+
+[[row]]
+Z = 25
+n = 3
+l = 0
+zeff = 13.0179
+source = "clementi_zeff"
+note = "Mn 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 11.9821."
+
+[[row]]
+Z = 25
+n = 3
+l = 1
+zeff = 12.1092
+source = "clementi_zeff"
+note = "Mn 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 12.8908."
+
+[[row]]
+Z = 25
+n = 3
+l = 2
+zeff = 10.5282
+source = "clementi_zeff"
+note = "Mn 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.4718."
+
+[[row]]
+Z = 25
+n = 4
+l = 0
+zeff = 5.2832
+source = "clementi_zeff"
+note = "Mn 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 19.7168."
+
+[[row]]
+Z = 26
+n = 1
+l = 0
+zeff = 25.381
+source = "clementi_zeff"
+note = "Fe 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.619."
+
+[[row]]
+Z = 26
+n = 2
+l = 0
+zeff = 18.599
+source = "clementi_zeff"
+note = "Fe 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 7.401."
+
+[[row]]
+Z = 26
+n = 2
+l = 1
+zeff = 22.0888
+source = "clementi_zeff"
+note = "Fe 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9112."
+
+[[row]]
+Z = 26
+n = 3
+l = 0
+zeff = 13.6761
+source = "clementi_zeff"
+note = "Fe 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 12.3239."
+
+[[row]]
+Z = 26
+n = 3
+l = 1
+zeff = 12.7779
+source = "clementi_zeff"
+note = "Fe 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 13.2221."
+
+[[row]]
+Z = 26
+n = 3
+l = 2
+zeff = 11.1798
+source = "clementi_zeff"
+note = "Fe 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.8202."
+
+[[row]]
+Z = 26
+n = 4
+l = 0
+zeff = 5.434
+source = "clementi_zeff"
+note = "Fe 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 20.566."
+
+[[row]]
+Z = 27
+n = 1
+l = 0
+zeff = 26.3668
+source = "clementi_zeff"
+note = "Co 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.6332."
+
+[[row]]
+Z = 27
+n = 2
+l = 0
+zeff = 19.405
+source = "clementi_zeff"
+note = "Co 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 7.595."
+
+[[row]]
+Z = 27
+n = 2
+l = 1
+zeff = 23.0924
+source = "clementi_zeff"
+note = "Co 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9076."
+
+[[row]]
+Z = 27
+n = 3
+l = 0
+zeff = 14.3223
+source = "clementi_zeff"
+note = "Co 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 12.6777."
+
+[[row]]
+Z = 27
+n = 3
+l = 1
+zeff = 13.4346
+source = "clementi_zeff"
+note = "Co 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 13.5654."
+
+[[row]]
+Z = 27
+n = 3
+l = 2
+zeff = 11.8554
+source = "clementi_zeff"
+note = "Co 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.1446."
+
+[[row]]
+Z = 27
+n = 4
+l = 0
+zeff = 5.5764
+source = "clementi_zeff"
+note = "Co 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 21.4236."
+
+[[row]]
+Z = 28
+n = 1
+l = 0
+zeff = 27.3526
+source = "clementi_zeff"
+note = "Ni 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.6474."
+
+[[row]]
+Z = 28
+n = 2
+l = 0
+zeff = 20.2126
+source = "clementi_zeff"
+note = "Ni 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 7.7874."
+
+[[row]]
+Z = 28
+n = 2
+l = 1
+zeff = 24.0952
+source = "clementi_zeff"
+note = "Ni 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9048."
+
+[[row]]
+Z = 28
+n = 3
+l = 0
+zeff = 14.961
+source = "clementi_zeff"
+note = "Ni 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 13.039."
+
+[[row]]
+Z = 28
+n = 3
+l = 1
+zeff = 14.085
+source = "clementi_zeff"
+note = "Ni 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 13.915."
+
+[[row]]
+Z = 28
+n = 3
+l = 2
+zeff = 12.5295
+source = "clementi_zeff"
+note = "Ni 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.4705."
+
+[[row]]
+Z = 28
+n = 4
+l = 0
+zeff = 5.7108
+source = "clementi_zeff"
+note = "Ni 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 22.2892."
+
+[[row]]
+Z = 29
+n = 1
+l = 0
+zeff = 28.3386
+source = "clementi_zeff"
+note = "Cu 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.6614."
+
+[[row]]
+Z = 29
+n = 2
+l = 0
+zeff = 21.0198
+source = "clementi_zeff"
+note = "Cu 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 7.9802."
+
+[[row]]
+Z = 29
+n = 2
+l = 1
+zeff = 25.097
+source = "clementi_zeff"
+note = "Cu 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.903."
+
+[[row]]
+Z = 29
+n = 3
+l = 0
+zeff = 15.5943
+source = "clementi_zeff"
+note = "Cu 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 13.4057."
+
+[[row]]
+Z = 29
+n = 3
+l = 1
+zeff = 14.7306
+source = "clementi_zeff"
+note = "Cu 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.2694."
+
+[[row]]
+Z = 29
+n = 3
+l = 2
+zeff = 13.2006
+source = "clementi_zeff"
+note = "Cu 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.7994."
+
+[[row]]
+Z = 29
+n = 4
+l = 0
+zeff = 5.8424
+source = "clementi_zeff"
+note = "Cu 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 23.1576."
+
+[[row]]
+Z = 30
+n = 1
+l = 0
+zeff = 29.3245
+source = "clementi_zeff"
+note = "Zn 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.6755. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 29.3173 (diff -0.0072)."
+
+[[row]]
+Z = 30
+n = 2
+l = 0
+zeff = 21.828
+source = "clementi_zeff"
+note = "Zn 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 8.172. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 21.8388 (diff +0.0108)."
+
+[[row]]
+Z = 30
+n = 2
+l = 1
+zeff = 26.098
+source = "clementi_zeff"
+note = "Zn 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.902. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 26.0990 (diff +0.0010)."
+
+[[row]]
+Z = 30
+n = 3
+l = 0
+zeff = 16.2192
+source = "clementi_zeff"
+note = "Zn 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 13.7808. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 16.2156 (diff -0.0036)."
+
+[[row]]
+Z = 30
+n = 3
+l = 1
+zeff = 15.3693
+source = "clementi_zeff"
+note = "Zn 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.6307. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 15.3661 (diff -0.0032)."
+
+[[row]]
+Z = 30
+n = 3
+l = 2
+zeff = 13.8783
+source = "clementi_zeff"
+note = "Zn 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 16.1217. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 13.8790 (diff +0.0007)."
+
+[[row]]
+Z = 30
+n = 4
+l = 0
+zeff = 5.9652
+source = "clementi_zeff"
+note = "Zn 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 24.0348. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 5.9645 (diff -0.0007)."
+
+[[row]]
+Z = 31
+n = 1
+l = 0
+zeff = 30.3094
+source = "clementi_zeff"
+note = "Ga 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.6906."
+
+[[row]]
+Z = 31
+n = 2
+l = 0
+zeff = 22.599
+source = "clementi_zeff"
+note = "Ga 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 8.401."
+
+[[row]]
+Z = 31
+n = 2
+l = 1
+zeff = 27.0908
+source = "clementi_zeff"
+note = "Ga 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9092."
+
+[[row]]
+Z = 31
+n = 3
+l = 0
+zeff = 16.9962
+source = "clementi_zeff"
+note = "Ga 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.0038."
+
+[[row]]
+Z = 31
+n = 3
+l = 1
+zeff = 16.2036
+source = "clementi_zeff"
+note = "Ga 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.7964."
+
+[[row]]
+Z = 31
+n = 3
+l = 2
+zeff = 15.0933
+source = "clementi_zeff"
+note = "Ga 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.9067."
+
+[[row]]
+Z = 31
+n = 4
+l = 0
+zeff = 7.0668
+source = "clementi_zeff"
+note = "Ga 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 23.9332."
+
+[[row]]
+Z = 31
+n = 4
+l = 1
+zeff = 6.2216
+source = "clementi_zeff"
+note = "Ga 4p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 24.7784."
+
+[[row]]
+Z = 32
+n = 1
+l = 0
+zeff = 31.2937
+source = "clementi_zeff"
+note = "Ge 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.7063."
+
+[[row]]
+Z = 32
+n = 2
+l = 0
+zeff = 23.3648
+source = "clementi_zeff"
+note = "Ge 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 8.6352."
+
+[[row]]
+Z = 32
+n = 2
+l = 1
+zeff = 28.0822
+source = "clementi_zeff"
+note = "Ge 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9178."
+
+[[row]]
+Z = 32
+n = 3
+l = 0
+zeff = 17.7897
+source = "clementi_zeff"
+note = "Ge 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.2103."
+
+[[row]]
+Z = 32
+n = 3
+l = 1
+zeff = 17.0136
+source = "clementi_zeff"
+note = "Ge 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.9864."
+
+[[row]]
+Z = 32
+n = 3
+l = 2
+zeff = 16.2513
+source = "clementi_zeff"
+note = "Ge 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.7487."
+
+[[row]]
+Z = 32
+n = 4
+l = 0
+zeff = 8.0436
+source = "clementi_zeff"
+note = "Ge 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 23.9564."
+
+[[row]]
+Z = 32
+n = 4
+l = 1
+zeff = 6.7804
+source = "clementi_zeff"
+note = "Ge 4p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 25.2196."
+
+[[row]]
+Z = 33
+n = 1
+l = 0
+zeff = 32.2783
+source = "clementi_zeff"
+note = "As 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.7217."
+
+[[row]]
+Z = 33
+n = 2
+l = 0
+zeff = 24.127
+source = "clementi_zeff"
+note = "As 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 8.873."
+
+[[row]]
+Z = 33
+n = 2
+l = 1
+zeff = 29.0736
+source = "clementi_zeff"
+note = "As 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9264."
+
+[[row]]
+Z = 33
+n = 3
+l = 0
+zeff = 18.5955
+source = "clementi_zeff"
+note = "As 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.4045."
+
+[[row]]
+Z = 33
+n = 3
+l = 1
+zeff = 17.8497
+source = "clementi_zeff"
+note = "As 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.1503."
+
+[[row]]
+Z = 33
+n = 3
+l = 2
+zeff = 17.3784
+source = "clementi_zeff"
+note = "As 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.6216."
+
+[[row]]
+Z = 33
+n = 4
+l = 0
+zeff = 8.944
+source = "clementi_zeff"
+note = "As 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 24.056."
+
+[[row]]
+Z = 33
+n = 4
+l = 1
+zeff = 7.4492
+source = "clementi_zeff"
+note = "As 4p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 25.5508."
+
+[[row]]
+Z = 34
+n = 1
+l = 0
+zeff = 33.2622
+source = "clementi_zeff"
+note = "Se 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.7378."
+
+[[row]]
+Z = 34
+n = 2
+l = 0
+zeff = 24.8884
+source = "clementi_zeff"
+note = "Se 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 9.1116."
+
+[[row]]
+Z = 34
+n = 2
+l = 1
+zeff = 30.0652
+source = "clementi_zeff"
+note = "Se 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9348."
+
+[[row]]
+Z = 34
+n = 3
+l = 0
+zeff = 19.4034
+source = "clementi_zeff"
+note = "Se 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.5966."
+
+[[row]]
+Z = 34
+n = 3
+l = 1
+zeff = 18.705
+source = "clementi_zeff"
+note = "Se 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.295."
+
+[[row]]
+Z = 34
+n = 3
+l = 2
+zeff = 18.477
+source = "clementi_zeff"
+note = "Se 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.523."
+
+[[row]]
+Z = 34
+n = 4
+l = 0
+zeff = 9.7576
+source = "clementi_zeff"
+note = "Se 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 24.2424."
+
+[[row]]
+Z = 34
+n = 4
+l = 1
+zeff = 8.2872
+source = "clementi_zeff"
+note = "Se 4p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 25.7128."
+
+[[row]]
+Z = 35
+n = 1
+l = 0
+zeff = 34.2471
+source = "clementi_zeff"
+note = "Br 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.7529."
+
+[[row]]
+Z = 35
+n = 2
+l = 0
+zeff = 25.6434
+source = "clementi_zeff"
+note = "Br 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 9.3566."
+
+[[row]]
+Z = 35
+n = 2
+l = 1
+zeff = 31.0564
+source = "clementi_zeff"
+note = "Br 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.9436."
+
+[[row]]
+Z = 35
+n = 3
+l = 0
+zeff = 20.2185
+source = "clementi_zeff"
+note = "Br 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.7815."
+
+[[row]]
+Z = 35
+n = 3
+l = 1
+zeff = 19.5708
+source = "clementi_zeff"
+note = "Br 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.4292."
+
+[[row]]
+Z = 35
+n = 3
+l = 2
+zeff = 19.5591
+source = "clementi_zeff"
+note = "Br 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.4409."
+
+[[row]]
+Z = 35
+n = 4
+l = 0
+zeff = 10.5528
+source = "clementi_zeff"
+note = "Br 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 24.4472."
+
+[[row]]
+Z = 35
+n = 4
+l = 1
+zeff = 9.028
+source = "clementi_zeff"
+note = "Br 4p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 25.972."
+
+[[row]]
+Z = 36
+n = 1
+l = 0
+zeff = 35.2316
+source = "clementi_zeff"
+note = "Kr 1s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 0.7684. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 35.2240 (diff -0.0076)."
+
+[[row]]
+Z = 36
+n = 2
+l = 0
+zeff = 26.398
+source = "clementi_zeff"
+note = "Kr 2s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 9.602. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 26.4109 (diff +0.0129)."
+
+[[row]]
+Z = 36
+n = 2
+l = 1
+zeff = 32.047
+source = "clementi_zeff"
+note = "Kr 2p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 3.953. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 32.0470 (diff -0.0000)."
+
+[[row]]
+Z = 36
+n = 3
+l = 0
+zeff = 21.0327
+source = "clementi_zeff"
+note = "Kr 3s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 14.9673. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 21.0273 (diff -0.0054)."
+
+[[row]]
+Z = 36
+n = 3
+l = 1
+zeff = 20.4342
+source = "clementi_zeff"
+note = "Kr 3p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.5658. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 20.4347 (diff +0.0005)."
+
+[[row]]
+Z = 36
+n = 3
+l = 2
+zeff = 20.6259
+source = "clementi_zeff"
+note = "Kr 3d: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 15.3741. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 20.6257 (diff -0.0002)."
+
+[[row]]
+Z = 36
+n = 4
+l = 0
+zeff = 11.3156
+source = "clementi_zeff"
+note = "Kr 4s: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 24.6844. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 11.3148 (diff -0.0008)."
+
+[[row]]
+Z = 36
+n = 4
+l = 1
+zeff = 9.7692
+source = "clementi_zeff"
+note = "Kr 4p: n*zeta from Clementi & Raimondi 1963; mendeleev 1.3.0 screening constant 26.2308. Cross-check: independent minimal-basis STO-RHF recomputation (scripts/sto_rhf.py) gives 9.7695 (diff +0.0003)."
+
+[[row]]
+Z = 37
+n = 1
+l = 0
+zeff = 36.2078
+source = "clementi_zeff"
+note = "Rb 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.7922."
+
+[[row]]
+Z = 37
+n = 2
+l = 0
+zeff = 27.1568
+source = "clementi_zeff"
+note = "Rb 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 9.8432."
+
+[[row]]
+Z = 37
+n = 2
+l = 1
+zeff = 33.0388
+source = "clementi_zeff"
+note = "Rb 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 3.9612."
+
+[[row]]
+Z = 37
+n = 3
+l = 0
+zeff = 21.8427
+source = "clementi_zeff"
+note = "Rb 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.1573."
+
+[[row]]
+Z = 37
+n = 3
+l = 1
+zeff = 21.3033
+source = "clementi_zeff"
+note = "Rb 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.6967."
+
+[[row]]
+Z = 37
+n = 3
+l = 2
+zeff = 21.6792
+source = "clementi_zeff"
+note = "Rb 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.3208."
+
+[[row]]
+Z = 37
+n = 4
+l = 0
+zeff = 12.388
+source = "clementi_zeff"
+note = "Rb 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 24.612."
+
+[[row]]
+Z = 37
+n = 4
+l = 1
+zeff = 10.8808
+source = "clementi_zeff"
+note = "Rb 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 26.1192."
+
+[[row]]
+Z = 37
+n = 5
+l = 0
+zeff = 4.9845
+source = "clementi_zeff"
+note = "Rb 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.0155."
+
+[[row]]
+Z = 38
+n = 1
+l = 0
+zeff = 37.1911
+source = "clementi_zeff"
+note = "Sr 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.8089."
+
+[[row]]
+Z = 38
+n = 2
+l = 0
+zeff = 27.9018
+source = "clementi_zeff"
+note = "Sr 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 10.0982."
+
+[[row]]
+Z = 38
+n = 2
+l = 1
+zeff = 34.0304
+source = "clementi_zeff"
+note = "Sr 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 3.9696."
+
+[[row]]
+Z = 38
+n = 3
+l = 0
+zeff = 22.6638
+source = "clementi_zeff"
+note = "Sr 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.3362."
+
+[[row]]
+Z = 38
+n = 3
+l = 1
+zeff = 22.1676
+source = "clementi_zeff"
+note = "Sr 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.8324."
+
+[[row]]
+Z = 38
+n = 3
+l = 2
+zeff = 22.7262
+source = "clementi_zeff"
+note = "Sr 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.2738."
+
+[[row]]
+Z = 38
+n = 4
+l = 0
+zeff = 13.4444
+source = "clementi_zeff"
+note = "Sr 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 24.5556."
+
+[[row]]
+Z = 38
+n = 4
+l = 1
+zeff = 11.932
+source = "clementi_zeff"
+note = "Sr 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 26.068."
+
+[[row]]
+Z = 38
+n = 5
+l = 0
+zeff = 6.0705
+source = "clementi_zeff"
+note = "Sr 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.9295."
+
+[[row]]
+Z = 39
+n = 1
+l = 0
+zeff = 38.1756
+source = "clementi_zeff"
+note = "Y 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.8244."
+
+[[row]]
+Z = 39
+n = 2
+l = 0
+zeff = 28.6222
+source = "clementi_zeff"
+note = "Y 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 10.3778."
+
+[[row]]
+Z = 39
+n = 2
+l = 1
+zeff = 35.0032
+source = "clementi_zeff"
+note = "Y 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 3.9968."
+
+[[row]]
+Z = 39
+n = 3
+l = 0
+zeff = 23.5515
+source = "clementi_zeff"
+note = "Y 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.4485."
+
+[[row]]
+Z = 39
+n = 3
+l = 1
+zeff = 23.0925
+source = "clementi_zeff"
+note = "Y 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.9075."
+
+[[row]]
+Z = 39
+n = 3
+l = 2
+zeff = 25.3971
+source = "clementi_zeff"
+note = "Y 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.6029."
+
+[[row]]
+Z = 39
+n = 4
+l = 0
+zeff = 14.2636
+source = "clementi_zeff"
+note = "Y 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 24.7364."
+
+[[row]]
+Z = 39
+n = 4
+l = 1
+zeff = 12.7456
+source = "clementi_zeff"
+note = "Y 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 26.2544."
+
+[[row]]
+Z = 39
+n = 4
+l = 2
+zeff = 15.9584
+source = "clementi_zeff"
+note = "Y 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.0416."
+
+[[row]]
+Z = 39
+n = 5
+l = 0
+zeff = 6.256
+source = "clementi_zeff"
+note = "Y 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.744."
+
+[[row]]
+Z = 40
+n = 1
+l = 0
+zeff = 39.159
+source = "clementi_zeff"
+note = "Zr 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.841."
+
+[[row]]
+Z = 40
+n = 2
+l = 0
+zeff = 29.3738
+source = "clementi_zeff"
+note = "Zr 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 10.6262."
+
+[[row]]
+Z = 40
+n = 2
+l = 1
+zeff = 35.9928
+source = "clementi_zeff"
+note = "Zr 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.0072."
+
+[[row]]
+Z = 40
+n = 3
+l = 0
+zeff = 24.3615
+source = "clementi_zeff"
+note = "Zr 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.6385."
+
+[[row]]
+Z = 40
+n = 3
+l = 1
+zeff = 23.8455
+source = "clementi_zeff"
+note = "Zr 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.1545."
+
+[[row]]
+Z = 40
+n = 3
+l = 2
+zeff = 25.5669
+source = "clementi_zeff"
+note = "Zr 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.4331."
+
+[[row]]
+Z = 40
+n = 4
+l = 0
+zeff = 14.9016
+source = "clementi_zeff"
+note = "Zr 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 25.0984."
+
+[[row]]
+Z = 40
+n = 4
+l = 1
+zeff = 13.46
+source = "clementi_zeff"
+note = "Zr 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 26.54."
+
+[[row]]
+Z = 40
+n = 4
+l = 2
+zeff = 13.0716
+source = "clementi_zeff"
+note = "Zr 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 26.9284."
+
+[[row]]
+Z = 40
+n = 5
+l = 0
+zeff = 6.4455
+source = "clementi_zeff"
+note = "Zr 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.5545."
+
+[[row]]
+Z = 41
+n = 1
+l = 0
+zeff = 40.1423
+source = "clementi_zeff"
+note = "Nb 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.8577. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 2
+l = 0
+zeff = 30.1252
+source = "clementi_zeff"
+note = "Nb 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 10.8748. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 2
+l = 1
+zeff = 36.9822
+source = "clementi_zeff"
+note = "Nb 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.0178. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 3
+l = 0
+zeff = 25.1715
+source = "clementi_zeff"
+note = "Nb 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.8285. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 3
+l = 1
+zeff = 24.6156
+source = "clementi_zeff"
+note = "Nb 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.3844. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 3
+l = 2
+zeff = 26.247
+source = "clementi_zeff"
+note = "Nb 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.753. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 4
+l = 0
+zeff = 15.2828
+source = "clementi_zeff"
+note = "Nb 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 25.7172. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 4
+l = 1
+zeff = 14.0844
+source = "clementi_zeff"
+note = "Nb 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 26.9156. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 4
+l = 2
+zeff = 11.2376
+source = "clementi_zeff"
+note = "Nb 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.7624. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 41
+n = 5
+l = 0
+zeff = 5.921
+source = "clementi_zeff"
+note = "Nb 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.079. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 1
+l = 0
+zeff = 41.1256
+source = "clementi_zeff"
+note = "Mo 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.8744. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 2
+l = 0
+zeff = 30.8768
+source = "clementi_zeff"
+note = "Mo 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 11.1232. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 2
+l = 1
+zeff = 37.9718
+source = "clementi_zeff"
+note = "Mo 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.0282. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 3
+l = 0
+zeff = 25.9815
+source = "clementi_zeff"
+note = "Mo 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.0185. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 3
+l = 1
+zeff = 25.4736
+source = "clementi_zeff"
+note = "Mo 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.5264. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 3
+l = 2
+zeff = 27.2283
+source = "clementi_zeff"
+note = "Mo 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.7717. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 4
+l = 0
+zeff = 16.0964
+source = "clementi_zeff"
+note = "Mo 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 25.9036. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 4
+l = 1
+zeff = 14.9768
+source = "clementi_zeff"
+note = "Mo 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.0232. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 4
+l = 2
+zeff = 11.3924
+source = "clementi_zeff"
+note = "Mo 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 30.6076. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 42
+n = 5
+l = 0
+zeff = 6.106
+source = "clementi_zeff"
+note = "Mo 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.894. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 43
+n = 1
+l = 0
+zeff = 42.109
+source = "clementi_zeff"
+note = "Tc 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.891."
+
+[[row]]
+Z = 43
+n = 2
+l = 0
+zeff = 31.6282
+source = "clementi_zeff"
+note = "Tc 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 11.3718."
+
+[[row]]
+Z = 43
+n = 2
+l = 1
+zeff = 38.9408
+source = "clementi_zeff"
+note = "Tc 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.0592."
+
+[[row]]
+Z = 43
+n = 3
+l = 0
+zeff = 26.7912
+source = "clementi_zeff"
+note = "Tc 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.2088."
+
+[[row]]
+Z = 43
+n = 3
+l = 1
+zeff = 26.3841
+source = "clementi_zeff"
+note = "Tc 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.6159."
+
+[[row]]
+Z = 43
+n = 3
+l = 2
+zeff = 28.353
+source = "clementi_zeff"
+note = "Tc 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.647."
+
+[[row]]
+Z = 43
+n = 4
+l = 0
+zeff = 17.1984
+source = "clementi_zeff"
+note = "Tc 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 25.8016."
+
+[[row]]
+Z = 43
+n = 4
+l = 1
+zeff = 15.8112
+source = "clementi_zeff"
+note = "Tc 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.1888."
+
+[[row]]
+Z = 43
+n = 4
+l = 2
+zeff = 12.882
+source = "clementi_zeff"
+note = "Tc 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 30.118."
+
+[[row]]
+Z = 43
+n = 5
+l = 0
+zeff = 7.2265
+source = "clementi_zeff"
+note = "Tc 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.7735."
+
+[[row]]
+Z = 44
+n = 1
+l = 0
+zeff = 43.0923
+source = "clementi_zeff"
+note = "Ru 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.9077. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 2
+l = 0
+zeff = 32.3798
+source = "clementi_zeff"
+note = "Ru 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 11.6202. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 2
+l = 1
+zeff = 39.9508
+source = "clementi_zeff"
+note = "Ru 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.0492. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 3
+l = 0
+zeff = 27.6012
+source = "clementi_zeff"
+note = "Ru 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.3988. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 3
+l = 1
+zeff = 27.2211
+source = "clementi_zeff"
+note = "Ru 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.7789. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 3
+l = 2
+zeff = 29.3589
+source = "clementi_zeff"
+note = "Ru 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.6411. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 4
+l = 0
+zeff = 17.656
+source = "clementi_zeff"
+note = "Ru 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 26.344. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 4
+l = 1
+zeff = 16.4348
+source = "clementi_zeff"
+note = "Ru 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.5652. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 4
+l = 2
+zeff = 12.8128
+source = "clementi_zeff"
+note = "Ru 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.1872. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 44
+n = 5
+l = 0
+zeff = 6.4845
+source = "clementi_zeff"
+note = "Ru 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.5155. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 1
+l = 0
+zeff = 44.0756
+source = "clementi_zeff"
+note = "Rh 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.9244. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 2
+l = 0
+zeff = 33.1546
+source = "clementi_zeff"
+note = "Rh 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 11.8454. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 2
+l = 1
+zeff = 40.9404
+source = "clementi_zeff"
+note = "Rh 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.0596. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 3
+l = 0
+zeff = 28.4385
+source = "clementi_zeff"
+note = "Rh 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.5615. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 3
+l = 1
+zeff = 28.1544
+source = "clementi_zeff"
+note = "Rh 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.8456. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 3
+l = 2
+zeff = 30.405
+source = "clementi_zeff"
+note = "Rh 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.595. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 4
+l = 0
+zeff = 18.5816
+source = "clementi_zeff"
+note = "Rh 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 26.4184. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 4
+l = 1
+zeff = 17.1396
+source = "clementi_zeff"
+note = "Rh 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.8604. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 4
+l = 2
+zeff = 13.4424
+source = "clementi_zeff"
+note = "Rh 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.5576. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 45
+n = 5
+l = 0
+zeff = 6.6395
+source = "clementi_zeff"
+note = "Rh 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.3605. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 1
+l = 0
+zeff = 45.0589
+source = "clementi_zeff"
+note = "Pd 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.9411. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 2
+l = 0
+zeff = 33.8828
+source = "clementi_zeff"
+note = "Pd 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 12.1172. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 2
+l = 1
+zeff = 41.93
+source = "clementi_zeff"
+note = "Pd 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.07. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 3
+l = 0
+zeff = 29.2212
+source = "clementi_zeff"
+note = "Pd 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.7788. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 3
+l = 1
+zeff = 29.0196
+source = "clementi_zeff"
+note = "Pd 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.9804. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 3
+l = 2
+zeff = 31.4511
+source = "clementi_zeff"
+note = "Pd 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.5489. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 4
+l = 0
+zeff = 18.986
+source = "clementi_zeff"
+note = "Pd 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.014. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 4
+l = 1
+zeff = 17.7232
+source = "clementi_zeff"
+note = "Pd 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.2768. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 46
+n = 4
+l = 2
+zeff = 13.6176
+source = "clementi_zeff"
+note = "Pd 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.3824. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 1
+l = 0
+zeff = 46.0423
+source = "clementi_zeff"
+note = "Ag 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.9577. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 2
+l = 0
+zeff = 34.6342
+source = "clementi_zeff"
+note = "Ag 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 12.3658. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 2
+l = 1
+zeff = 42.9194
+source = "clementi_zeff"
+note = "Ag 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.0806. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 3
+l = 0
+zeff = 30.0312
+source = "clementi_zeff"
+note = "Ag 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.9688. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 3
+l = 1
+zeff = 29.8086
+source = "clementi_zeff"
+note = "Ag 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.1914. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 3
+l = 2
+zeff = 32.5398
+source = "clementi_zeff"
+note = "Ag 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.4602. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 4
+l = 0
+zeff = 19.8648
+source = "clementi_zeff"
+note = "Ag 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.1352. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 4
+l = 1
+zeff = 18.5624
+source = "clementi_zeff"
+note = "Ag 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.4376. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 4
+l = 2
+zeff = 14.7628
+source = "clementi_zeff"
+note = "Ag 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.2372. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 47
+n = 5
+l = 0
+zeff = 6.7555
+source = "clementi_zeff"
+note = "Ag 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 40.2445. Ground-configuration exponent set (paper's Table II entries marked a)."
+
+[[row]]
+Z = 48
+n = 1
+l = 0
+zeff = 47.0256
+source = "clementi_zeff"
+note = "Cd 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.9744."
+
+[[row]]
+Z = 48
+n = 2
+l = 0
+zeff = 35.3858
+source = "clementi_zeff"
+note = "Cd 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 12.6142."
+
+[[row]]
+Z = 48
+n = 2
+l = 1
+zeff = 43.909
+source = "clementi_zeff"
+note = "Cd 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.091."
+
+[[row]]
+Z = 48
+n = 3
+l = 0
+zeff = 30.8412
+source = "clementi_zeff"
+note = "Cd 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.1588."
+
+[[row]]
+Z = 48
+n = 3
+l = 1
+zeff = 30.6915
+source = "clementi_zeff"
+note = "Cd 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.3085."
+
+[[row]]
+Z = 48
+n = 3
+l = 2
+zeff = 33.6069
+source = "clementi_zeff"
+note = "Cd 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.3931."
+
+[[row]]
+Z = 48
+n = 4
+l = 0
+zeff = 20.8692
+source = "clementi_zeff"
+note = "Cd 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.1308."
+
+[[row]]
+Z = 48
+n = 4
+l = 1
+zeff = 19.4112
+source = "clementi_zeff"
+note = "Cd 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.5888."
+
+[[row]]
+Z = 48
+n = 4
+l = 2
+zeff = 15.8768
+source = "clementi_zeff"
+note = "Cd 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.1232."
+
+[[row]]
+Z = 48
+n = 5
+l = 0
+zeff = 8.192
+source = "clementi_zeff"
+note = "Cd 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.808."
+
+[[row]]
+Z = 49
+n = 1
+l = 0
+zeff = 48.0097
+source = "clementi_zeff"
+note = "In 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 0.9903."
+
+[[row]]
+Z = 49
+n = 2
+l = 0
+zeff = 36.1236
+source = "clementi_zeff"
+note = "In 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 12.8764."
+
+[[row]]
+Z = 49
+n = 2
+l = 1
+zeff = 44.898
+source = "clementi_zeff"
+note = "In 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.102."
+
+[[row]]
+Z = 49
+n = 3
+l = 0
+zeff = 31.6308
+source = "clementi_zeff"
+note = "In 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.3692."
+
+[[row]]
+Z = 49
+n = 3
+l = 1
+zeff = 31.5207
+source = "clementi_zeff"
+note = "In 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.4793."
+
+[[row]]
+Z = 49
+n = 3
+l = 2
+zeff = 34.6782
+source = "clementi_zeff"
+note = "In 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.3218."
+
+[[row]]
+Z = 49
+n = 4
+l = 0
+zeff = 21.7612
+source = "clementi_zeff"
+note = "In 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.2388."
+
+[[row]]
+Z = 49
+n = 4
+l = 1
+zeff = 20.3688
+source = "clementi_zeff"
+note = "In 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.6312."
+
+[[row]]
+Z = 49
+n = 4
+l = 2
+zeff = 16.9416
+source = "clementi_zeff"
+note = "In 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.0584."
+
+[[row]]
+Z = 49
+n = 5
+l = 0
+zeff = 9.5115
+source = "clementi_zeff"
+note = "In 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.4885."
+
+[[row]]
+Z = 49
+n = 5
+l = 1
+zeff = 8.47
+source = "clementi_zeff"
+note = "In 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 40.53."
+
+[[row]]
+Z = 50
+n = 1
+l = 0
+zeff = 48.992
+source = "clementi_zeff"
+note = "Sn 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.008."
+
+[[row]]
+Z = 50
+n = 2
+l = 0
+zeff = 36.8594
+source = "clementi_zeff"
+note = "Sn 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.1406."
+
+[[row]]
+Z = 50
+n = 2
+l = 1
+zeff = 45.8854
+source = "clementi_zeff"
+note = "Sn 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.1146."
+
+[[row]]
+Z = 50
+n = 3
+l = 0
+zeff = 32.4198
+source = "clementi_zeff"
+note = "Sn 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.5802."
+
+[[row]]
+Z = 50
+n = 3
+l = 1
+zeff = 32.3532
+source = "clementi_zeff"
+note = "Sn 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.6468."
+
+[[row]]
+Z = 50
+n = 3
+l = 2
+zeff = 35.7417
+source = "clementi_zeff"
+note = "Sn 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.2583."
+
+[[row]]
+Z = 50
+n = 4
+l = 0
+zeff = 22.658
+source = "clementi_zeff"
+note = "Sn 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.342."
+
+[[row]]
+Z = 50
+n = 4
+l = 1
+zeff = 21.2652
+source = "clementi_zeff"
+note = "Sn 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.7348."
+
+[[row]]
+Z = 50
+n = 4
+l = 2
+zeff = 17.97
+source = "clementi_zeff"
+note = "Sn 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.03."
+
+[[row]]
+Z = 50
+n = 5
+l = 0
+zeff = 10.6285
+source = "clementi_zeff"
+note = "Sn 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.3715."
+
+[[row]]
+Z = 50
+n = 5
+l = 1
+zeff = 9.102
+source = "clementi_zeff"
+note = "Sn 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 40.898."
+
+[[row]]
+Z = 51
+n = 1
+l = 0
+zeff = 49.9744
+source = "clementi_zeff"
+note = "Sb 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.0256."
+
+[[row]]
+Z = 51
+n = 2
+l = 0
+zeff = 37.5954
+source = "clementi_zeff"
+note = "Sb 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.4046."
+
+[[row]]
+Z = 51
+n = 2
+l = 1
+zeff = 46.8726
+source = "clementi_zeff"
+note = "Sb 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.1274."
+
+[[row]]
+Z = 51
+n = 3
+l = 0
+zeff = 33.2091
+source = "clementi_zeff"
+note = "Sb 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.7909."
+
+[[row]]
+Z = 51
+n = 3
+l = 1
+zeff = 33.1839
+source = "clementi_zeff"
+note = "Sb 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.8161."
+
+[[row]]
+Z = 51
+n = 3
+l = 2
+zeff = 36.7998
+source = "clementi_zeff"
+note = "Sb 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.2002."
+
+[[row]]
+Z = 51
+n = 4
+l = 0
+zeff = 23.5436
+source = "clementi_zeff"
+note = "Sb 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.4564."
+
+[[row]]
+Z = 51
+n = 4
+l = 1
+zeff = 22.1812
+source = "clementi_zeff"
+note = "Sb 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.8188."
+
+[[row]]
+Z = 51
+n = 4
+l = 2
+zeff = 18.9744
+source = "clementi_zeff"
+note = "Sb 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.0256."
+
+[[row]]
+Z = 51
+n = 5
+l = 0
+zeff = 11.611
+source = "clementi_zeff"
+note = "Sb 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.389."
+
+[[row]]
+Z = 51
+n = 5
+l = 1
+zeff = 9.9945
+source = "clementi_zeff"
+note = "Sb 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.0055."
+
+[[row]]
+Z = 52
+n = 1
+l = 0
+zeff = 50.9568
+source = "clementi_zeff"
+note = "Te 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.0432."
+
+[[row]]
+Z = 52
+n = 2
+l = 0
+zeff = 38.3312
+source = "clementi_zeff"
+note = "Te 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.6688."
+
+[[row]]
+Z = 52
+n = 2
+l = 1
+zeff = 47.86
+source = "clementi_zeff"
+note = "Te 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.14."
+
+[[row]]
+Z = 52
+n = 3
+l = 0
+zeff = 33.9981
+source = "clementi_zeff"
+note = "Te 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.0019."
+
+[[row]]
+Z = 52
+n = 3
+l = 1
+zeff = 34.0089
+source = "clementi_zeff"
+note = "Te 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.9911."
+
+[[row]]
+Z = 52
+n = 3
+l = 2
+zeff = 37.8393
+source = "clementi_zeff"
+note = "Te 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.1607."
+
+[[row]]
+Z = 52
+n = 4
+l = 0
+zeff = 24.4084
+source = "clementi_zeff"
+note = "Te 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.5916."
+
+[[row]]
+Z = 52
+n = 4
+l = 1
+zeff = 23.122
+source = "clementi_zeff"
+note = "Te 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.878."
+
+[[row]]
+Z = 52
+n = 4
+l = 2
+zeff = 19.96
+source = "clementi_zeff"
+note = "Te 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.04."
+
+[[row]]
+Z = 52
+n = 5
+l = 0
+zeff = 12.538
+source = "clementi_zeff"
+note = "Te 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.462."
+
+[[row]]
+Z = 52
+n = 5
+l = 1
+zeff = 10.8085
+source = "clementi_zeff"
+note = "Te 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.1915."
+
+[[row]]
+Z = 53
+n = 1
+l = 0
+zeff = 51.9391
+source = "clementi_zeff"
+note = "I 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.0609."
+
+[[row]]
+Z = 53
+n = 2
+l = 0
+zeff = 39.067
+source = "clementi_zeff"
+note = "I 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.933."
+
+[[row]]
+Z = 53
+n = 2
+l = 1
+zeff = 48.8474
+source = "clementi_zeff"
+note = "I 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.1526."
+
+[[row]]
+Z = 53
+n = 3
+l = 0
+zeff = 34.7874
+source = "clementi_zeff"
+note = "I 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.2126."
+
+[[row]]
+Z = 53
+n = 3
+l = 1
+zeff = 34.8414
+source = "clementi_zeff"
+note = "I 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.1586."
+
+[[row]]
+Z = 53
+n = 3
+l = 2
+zeff = 38.9007
+source = "clementi_zeff"
+note = "I 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.0993."
+
+[[row]]
+Z = 53
+n = 4
+l = 0
+zeff = 25.2972
+source = "clementi_zeff"
+note = "I 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.7028."
+
+[[row]]
+Z = 53
+n = 4
+l = 1
+zeff = 24.0296
+source = "clementi_zeff"
+note = "I 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.9704."
+
+[[row]]
+Z = 53
+n = 4
+l = 2
+zeff = 20.934
+source = "clementi_zeff"
+note = "I 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.066."
+
+[[row]]
+Z = 53
+n = 5
+l = 0
+zeff = 13.4035
+source = "clementi_zeff"
+note = "I 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.5965."
+
+[[row]]
+Z = 53
+n = 5
+l = 1
+zeff = 11.6115
+source = "clementi_zeff"
+note = "I 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.3885."
+
+[[row]]
+Z = 54
+n = 1
+l = 0
+zeff = 52.9215
+source = "clementi_zeff"
+note = "Xe 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.0785."
+
+[[row]]
+Z = 54
+n = 2
+l = 0
+zeff = 39.803
+source = "clementi_zeff"
+note = "Xe 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.197."
+
+[[row]]
+Z = 54
+n = 2
+l = 1
+zeff = 49.8346
+source = "clementi_zeff"
+note = "Xe 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.1654."
+
+[[row]]
+Z = 54
+n = 3
+l = 0
+zeff = 35.5764
+source = "clementi_zeff"
+note = "Xe 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.4236."
+
+[[row]]
+Z = 54
+n = 3
+l = 1
+zeff = 35.6676
+source = "clementi_zeff"
+note = "Xe 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.3324."
+
+[[row]]
+Z = 54
+n = 3
+l = 2
+zeff = 39.9468
+source = "clementi_zeff"
+note = "Xe 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.0532."
+
+[[row]]
+Z = 54
+n = 4
+l = 0
+zeff = 26.1728
+source = "clementi_zeff"
+note = "Xe 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.8272."
+
+[[row]]
+Z = 54
+n = 4
+l = 1
+zeff = 24.9572
+source = "clementi_zeff"
+note = "Xe 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.0428."
+
+[[row]]
+Z = 54
+n = 4
+l = 2
+zeff = 21.8932
+source = "clementi_zeff"
+note = "Xe 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.1068."
+
+[[row]]
+Z = 54
+n = 5
+l = 0
+zeff = 14.218
+source = "clementi_zeff"
+note = "Xe 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.782."
+
+[[row]]
+Z = 54
+n = 5
+l = 1
+zeff = 12.4245
+source = "clementi_zeff"
+note = "Xe 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.5755."
+
+[[row]]
+Z = 55
+n = 1
+l = 0
+zeff = 53.9043
+source = "clementi_zeff"
+note = "Cs 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.0957."
+
+[[row]]
+Z = 55
+n = 2
+l = 0
+zeff = 40.5116
+source = "clementi_zeff"
+note = "Cs 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.4884."
+
+[[row]]
+Z = 55
+n = 2
+l = 1
+zeff = 50.8196
+source = "clementi_zeff"
+note = "Cs 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.1804."
+
+[[row]]
+Z = 55
+n = 3
+l = 0
+zeff = 36.3774
+source = "clementi_zeff"
+note = "Cs 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.6226."
+
+[[row]]
+Z = 55
+n = 3
+l = 1
+zeff = 36.5778
+source = "clementi_zeff"
+note = "Cs 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.4222."
+
+[[row]]
+Z = 55
+n = 3
+l = 2
+zeff = 40.9806
+source = "clementi_zeff"
+note = "Cs 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.0194."
+
+[[row]]
+Z = 55
+n = 4
+l = 0
+zeff = 27.0424
+source = "clementi_zeff"
+note = "Cs 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 27.9576."
+
+[[row]]
+Z = 55
+n = 4
+l = 1
+zeff = 25.8576
+source = "clementi_zeff"
+note = "Cs 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.1424."
+
+[[row]]
+Z = 55
+n = 4
+l = 2
+zeff = 22.8384
+source = "clementi_zeff"
+note = "Cs 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.1616."
+
+[[row]]
+Z = 55
+n = 5
+l = 0
+zeff = 15.4445
+source = "clementi_zeff"
+note = "Cs 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.5555."
+
+[[row]]
+Z = 55
+n = 5
+l = 1
+zeff = 13.651
+source = "clementi_zeff"
+note = "Cs 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.349."
+
+[[row]]
+Z = 55
+n = 6
+l = 0
+zeff = 6.363
+source = "clementi_zeff"
+note = "Cs 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 48.637."
+
+[[row]]
+Z = 56
+n = 1
+l = 0
+zeff = 54.8861
+source = "clementi_zeff"
+note = "Ba 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.1139."
+
+[[row]]
+Z = 56
+n = 2
+l = 0
+zeff = 41.2468
+source = "clementi_zeff"
+note = "Ba 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 14.7532."
+
+[[row]]
+Z = 56
+n = 2
+l = 1
+zeff = 51.8096
+source = "clementi_zeff"
+note = "Ba 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.1904."
+
+[[row]]
+Z = 56
+n = 3
+l = 0
+zeff = 37.1556
+source = "clementi_zeff"
+note = "Ba 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.8444."
+
+[[row]]
+Z = 56
+n = 3
+l = 1
+zeff = 37.3164
+source = "clementi_zeff"
+note = "Ba 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.6836."
+
+[[row]]
+Z = 56
+n = 3
+l = 2
+zeff = 42.0243
+source = "clementi_zeff"
+note = "Ba 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.9757."
+
+[[row]]
+Z = 56
+n = 4
+l = 0
+zeff = 27.92
+source = "clementi_zeff"
+note = "Ba 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.08."
+
+[[row]]
+Z = 56
+n = 4
+l = 1
+zeff = 26.8032
+source = "clementi_zeff"
+note = "Ba 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.1968."
+
+[[row]]
+Z = 56
+n = 4
+l = 2
+zeff = 23.784
+source = "clementi_zeff"
+note = "Ba 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.216."
+
+[[row]]
+Z = 56
+n = 5
+l = 0
+zeff = 16.6195
+source = "clementi_zeff"
+note = "Ba 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.3805."
+
+[[row]]
+Z = 56
+n = 5
+l = 1
+zeff = 14.8005
+source = "clementi_zeff"
+note = "Ba 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.1995."
+
+[[row]]
+Z = 56
+n = 6
+l = 0
+zeff = 7.575
+source = "clementi_zeff"
+note = "Ba 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 48.425."
+
+[[row]]
+Z = 57
+n = 1
+l = 0
+zeff = 55.8683
+source = "clementi_zeff"
+note = "La 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.1317. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 2
+l = 0
+zeff = 41.9534
+source = "clementi_zeff"
+note = "La 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.0466. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 2
+l = 1
+zeff = 52.7956
+source = "clementi_zeff"
+note = "La 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.2044. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 3
+l = 0
+zeff = 37.9431
+source = "clementi_zeff"
+note = "La 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.0569. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 3
+l = 1
+zeff = 38.1396
+source = "clementi_zeff"
+note = "La 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.8604. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 3
+l = 2
+zeff = 43.0602
+source = "clementi_zeff"
+note = "La 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.9398. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 4
+l = 0
+zeff = 28.7964
+source = "clementi_zeff"
+note = "La 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.2036. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 4
+l = 1
+zeff = 27.7064
+source = "clementi_zeff"
+note = "La 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.2936. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 4
+l = 2
+zeff = 24.7252
+source = "clementi_zeff"
+note = "La 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.2748. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 4
+l = 3
+zeff = 1.36
+source = "clementi_zeff"
+note = "La 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 55.64. 4f: paper lists two 4f exponents (4f, 4f'); mendeleev took '4f'. Very small value (1.36) - check against the paper before display. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 5
+l = 0
+zeff = 17.811
+source = "clementi_zeff"
+note = "La 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.189. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 5
+l = 1
+zeff = 15.896
+source = "clementi_zeff"
+note = "La 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.104. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 57
+n = 6
+l = 0
+zeff = 9.312
+source = "clementi_zeff"
+note = "La 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 47.688. La subshell set has 4f but no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 5d 6s2."
+
+[[row]]
+Z = 58
+n = 1
+l = 0
+zeff = 56.8481
+source = "clementi_zeff"
+note = "Ce 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.1519. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 2
+l = 0
+zeff = 42.74
+source = "clementi_zeff"
+note = "Ce 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.26. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 2
+l = 1
+zeff = 53.7824
+source = "clementi_zeff"
+note = "Ce 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.2176. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 3
+l = 0
+zeff = 38.6592
+source = "clementi_zeff"
+note = "Ce 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.3408. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 3
+l = 1
+zeff = 38.9595
+source = "clementi_zeff"
+note = "Ce 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.0405. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 3
+l = 2
+zeff = 44.0853
+source = "clementi_zeff"
+note = "Ce 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.9147. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 4
+l = 0
+zeff = 29.68
+source = "clementi_zeff"
+note = "Ce 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.32. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 4
+l = 1
+zeff = 28.6064
+source = "clementi_zeff"
+note = "Ce 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.3936. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 4
+l = 2
+zeff = 25.6608
+source = "clementi_zeff"
+note = "Ce 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.3392. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 4
+l = 3
+zeff = 1.676
+source = "clementi_zeff"
+note = "Ce 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 56.324. 4f: very small value (1.676) compared with Pr (21.10) - check against the paper before display. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 5
+l = 0
+zeff = 18.9135
+source = "clementi_zeff"
+note = "Ce 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.0865. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 5
+l = 1
+zeff = 16.9655
+source = "clementi_zeff"
+note = "Ce 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.0345. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 58
+n = 6
+l = 0
+zeff = 10.7964
+source = "clementi_zeff"
+note = "Ce 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 47.2036. Ce subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f 5d 6s2."
+
+[[row]]
+Z = 59
+n = 1
+l = 0
+zeff = 57.8306
+source = "clementi_zeff"
+note = "Pr 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.1694."
+
+[[row]]
+Z = 59
+n = 2
+l = 0
+zeff = 43.462
+source = "clementi_zeff"
+note = "Pr 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.538."
+
+[[row]]
+Z = 59
+n = 2
+l = 1
+zeff = 54.7694
+source = "clementi_zeff"
+note = "Pr 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.2306."
+
+[[row]]
+Z = 59
+n = 3
+l = 0
+zeff = 39.501
+source = "clementi_zeff"
+note = "Pr 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.499."
+
+[[row]]
+Z = 59
+n = 3
+l = 1
+zeff = 39.8244
+source = "clementi_zeff"
+note = "Pr 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.1756."
+
+[[row]]
+Z = 59
+n = 3
+l = 2
+zeff = 45.1524
+source = "clementi_zeff"
+note = "Pr 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.8476."
+
+[[row]]
+Z = 59
+n = 4
+l = 0
+zeff = 30.3332
+source = "clementi_zeff"
+note = "Pr 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 28.6668."
+
+[[row]]
+Z = 59
+n = 4
+l = 1
+zeff = 29.0568
+source = "clementi_zeff"
+note = "Pr 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.9432."
+
+[[row]]
+Z = 59
+n = 4
+l = 2
+zeff = 26.2972
+source = "clementi_zeff"
+note = "Pr 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.7028."
+
+[[row]]
+Z = 59
+n = 4
+l = 3
+zeff = 21.1008
+source = "clementi_zeff"
+note = "Pr 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.8992. 4f: paper lists two 4f exponents (4f, 4f'); mendeleev took '4f' (dominant per the authors)."
+
+[[row]]
+Z = 59
+n = 5
+l = 0
+zeff = 17.613
+source = "clementi_zeff"
+note = "Pr 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.387."
+
+[[row]]
+Z = 59
+n = 5
+l = 1
+zeff = 15.2835
+source = "clementi_zeff"
+note = "Pr 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 43.7165."
+
+[[row]]
+Z = 59
+n = 6
+l = 0
+zeff = 7.7466
+source = "clementi_zeff"
+note = "Pr 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.2534."
+
+[[row]]
+Z = 60
+n = 1
+l = 0
+zeff = 58.8132
+source = "clementi_zeff"
+note = "Nd 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.1868."
+
+[[row]]
+Z = 60
+n = 2
+l = 0
+zeff = 44.2162
+source = "clementi_zeff"
+note = "Nd 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 15.7838."
+
+[[row]]
+Z = 60
+n = 2
+l = 1
+zeff = 55.7566
+source = "clementi_zeff"
+note = "Nd 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.2434."
+
+[[row]]
+Z = 60
+n = 3
+l = 0
+zeff = 40.3428
+source = "clementi_zeff"
+note = "Nd 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.6572."
+
+[[row]]
+Z = 60
+n = 3
+l = 1
+zeff = 40.689
+source = "clementi_zeff"
+note = "Nd 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.311."
+
+[[row]]
+Z = 60
+n = 3
+l = 2
+zeff = 46.1568
+source = "clementi_zeff"
+note = "Nd 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.8432."
+
+[[row]]
+Z = 60
+n = 4
+l = 0
+zeff = 30.9864
+source = "clementi_zeff"
+note = "Nd 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.0136."
+
+[[row]]
+Z = 60
+n = 4
+l = 1
+zeff = 30.014
+source = "clementi_zeff"
+note = "Nd 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.986."
+
+[[row]]
+Z = 60
+n = 4
+l = 2
+zeff = 26.8092
+source = "clementi_zeff"
+note = "Nd 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.1908."
+
+[[row]]
+Z = 60
+n = 4
+l = 3
+zeff = 22.266
+source = "clementi_zeff"
+note = "Nd 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.734. 4f: paper lists two 4f exponents (4f, 4f'); mendeleev took '4f' (dominant per the authors)."
+
+[[row]]
+Z = 60
+n = 5
+l = 0
+zeff = 18.7425
+source = "clementi_zeff"
+note = "Nd 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 41.2575."
+
+[[row]]
+Z = 60
+n = 5
+l = 1
+zeff = 16.961
+source = "clementi_zeff"
+note = "Nd 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 43.039."
+
+[[row]]
+Z = 60
+n = 6
+l = 0
+zeff = 9.3066
+source = "clementi_zeff"
+note = "Nd 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.6934."
+
+[[row]]
+Z = 61
+n = 1
+l = 0
+zeff = 59.7958
+source = "clementi_zeff"
+note = "Pm 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.2042."
+
+[[row]]
+Z = 61
+n = 2
+l = 0
+zeff = 44.9704
+source = "clementi_zeff"
+note = "Pm 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.0296."
+
+[[row]]
+Z = 61
+n = 2
+l = 1
+zeff = 56.7438
+source = "clementi_zeff"
+note = "Pm 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.2562."
+
+[[row]]
+Z = 61
+n = 3
+l = 0
+zeff = 41.1846
+source = "clementi_zeff"
+note = "Pm 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.8154."
+
+[[row]]
+Z = 61
+n = 3
+l = 1
+zeff = 41.5539
+source = "clementi_zeff"
+note = "Pm 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.4461."
+
+[[row]]
+Z = 61
+n = 3
+l = 2
+zeff = 47.0982
+source = "clementi_zeff"
+note = "Pm 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.9018."
+
+[[row]]
+Z = 61
+n = 4
+l = 0
+zeff = 31.6396
+source = "clementi_zeff"
+note = "Pm 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.3604."
+
+[[row]]
+Z = 61
+n = 4
+l = 1
+zeff = 30.6232
+source = "clementi_zeff"
+note = "Pm 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 30.3768."
+
+[[row]]
+Z = 61
+n = 4
+l = 2
+zeff = 27.74
+source = "clementi_zeff"
+note = "Pm 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.26."
+
+[[row]]
+Z = 61
+n = 4
+l = 3
+zeff = 23.134
+source = "clementi_zeff"
+note = "Pm 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.866. 4f: paper lists two 4f exponents (4f, 4f'); mendeleev took '4f' (dominant per the authors)."
+
+[[row]]
+Z = 61
+n = 5
+l = 0
+zeff = 18.8355
+source = "clementi_zeff"
+note = "Pm 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 42.1645."
+
+[[row]]
+Z = 61
+n = 5
+l = 1
+zeff = 16.414
+source = "clementi_zeff"
+note = "Pm 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 44.586."
+
+[[row]]
+Z = 61
+n = 6
+l = 0
+zeff = 9.3954
+source = "clementi_zeff"
+note = "Pm 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.6046."
+
+[[row]]
+Z = 62
+n = 1
+l = 0
+zeff = 60.7783
+source = "clementi_zeff"
+note = "Sm 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.2217."
+
+[[row]]
+Z = 62
+n = 2
+l = 0
+zeff = 45.7348
+source = "clementi_zeff"
+note = "Sm 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.2652."
+
+[[row]]
+Z = 62
+n = 2
+l = 1
+zeff = 57.731
+source = "clementi_zeff"
+note = "Sm 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.269."
+
+[[row]]
+Z = 62
+n = 3
+l = 0
+zeff = 42.0264
+source = "clementi_zeff"
+note = "Sm 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.9736."
+
+[[row]]
+Z = 62
+n = 3
+l = 1
+zeff = 42.4185
+source = "clementi_zeff"
+note = "Sm 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.5815."
+
+[[row]]
+Z = 62
+n = 3
+l = 2
+zeff = 48.2289
+source = "clementi_zeff"
+note = "Sm 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.7711."
+
+[[row]]
+Z = 62
+n = 4
+l = 0
+zeff = 32.2924
+source = "clementi_zeff"
+note = "Sm 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 29.7076."
+
+[[row]]
+Z = 62
+n = 4
+l = 1
+zeff = 31.088
+source = "clementi_zeff"
+note = "Sm 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 30.912."
+
+[[row]]
+Z = 62
+n = 4
+l = 2
+zeff = 28.2396
+source = "clementi_zeff"
+note = "Sm 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.7604."
+
+[[row]]
+Z = 62
+n = 4
+l = 3
+zeff = 23.5316
+source = "clementi_zeff"
+note = "Sm 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.4684."
+
+[[row]]
+Z = 62
+n = 5
+l = 0
+zeff = 18.249
+source = "clementi_zeff"
+note = "Sm 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 43.751."
+
+[[row]]
+Z = 62
+n = 5
+l = 1
+zeff = 16.281
+source = "clementi_zeff"
+note = "Sm 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 45.719."
+
+[[row]]
+Z = 62
+n = 6
+l = 0
+zeff = 8.0118
+source = "clementi_zeff"
+note = "Sm 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.9882."
+
+[[row]]
+Z = 63
+n = 1
+l = 0
+zeff = 61.7609
+source = "clementi_zeff"
+note = "Eu 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.2391."
+
+[[row]]
+Z = 63
+n = 2
+l = 0
+zeff = 46.4708
+source = "clementi_zeff"
+note = "Eu 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.5292."
+
+[[row]]
+Z = 63
+n = 2
+l = 1
+zeff = 58.718
+source = "clementi_zeff"
+note = "Eu 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.282."
+
+[[row]]
+Z = 63
+n = 3
+l = 0
+zeff = 42.8682
+source = "clementi_zeff"
+note = "Eu 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.1318."
+
+[[row]]
+Z = 63
+n = 3
+l = 1
+zeff = 43.284
+source = "clementi_zeff"
+note = "Eu 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.716."
+
+[[row]]
+Z = 63
+n = 3
+l = 2
+zeff = 49.2528
+source = "clementi_zeff"
+note = "Eu 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.7472."
+
+[[row]]
+Z = 63
+n = 4
+l = 0
+zeff = 32.868
+source = "clementi_zeff"
+note = "Eu 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 30.132."
+
+[[row]]
+Z = 63
+n = 4
+l = 1
+zeff = 31.8748
+source = "clementi_zeff"
+note = "Eu 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.1252."
+
+[[row]]
+Z = 63
+n = 4
+l = 2
+zeff = 28.9408
+source = "clementi_zeff"
+note = "Eu 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.0592."
+
+[[row]]
+Z = 63
+n = 4
+l = 3
+zeff = 24.32
+source = "clementi_zeff"
+note = "Eu 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.68."
+
+[[row]]
+Z = 63
+n = 5
+l = 0
+zeff = 18.59
+source = "clementi_zeff"
+note = "Eu 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 44.41."
+
+[[row]]
+Z = 63
+n = 5
+l = 1
+zeff = 16.555
+source = "clementi_zeff"
+note = "Eu 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 46.445."
+
+[[row]]
+Z = 63
+n = 6
+l = 0
+zeff = 8.1216
+source = "clementi_zeff"
+note = "Eu 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 54.8784."
+
+[[row]]
+Z = 64
+n = 1
+l = 0
+zeff = 62.7435
+source = "clementi_zeff"
+note = "Gd 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.2565. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 2
+l = 0
+zeff = 47.217
+source = "clementi_zeff"
+note = "Gd 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 16.783. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 2
+l = 1
+zeff = 59.7054
+source = "clementi_zeff"
+note = "Gd 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.2946. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 3
+l = 0
+zeff = 43.7097
+source = "clementi_zeff"
+note = "Gd 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.2903. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 3
+l = 1
+zeff = 44.1492
+source = "clementi_zeff"
+note = "Gd 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.8508. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 3
+l = 2
+zeff = 50.277
+source = "clementi_zeff"
+note = "Gd 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.723. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 4
+l = 0
+zeff = 33.444
+source = "clementi_zeff"
+note = "Gd 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 30.556. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 4
+l = 1
+zeff = 32.6468
+source = "clementi_zeff"
+note = "Gd 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.3532. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 4
+l = 2
+zeff = 29.6336
+source = "clementi_zeff"
+note = "Gd 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.3664. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 4
+l = 3
+zeff = 25.0136
+source = "clementi_zeff"
+note = "Gd 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.9864. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 5
+l = 0
+zeff = 18.882
+source = "clementi_zeff"
+note = "Gd 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 45.118. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 5
+l = 1
+zeff = 16.764
+source = "clementi_zeff"
+note = "Gd 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 47.236. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 64
+n = 6
+l = 0
+zeff = 8.2146
+source = "clementi_zeff"
+note = "Gd 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 55.7854. Gd subshell set has no 5d, so the SCF configuration differs from the NIST ground configuration [Xe] 4f7 5d 6s2."
+
+[[row]]
+Z = 65
+n = 1
+l = 0
+zeff = 63.7261
+source = "clementi_zeff"
+note = "Tb 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.2739."
+
+[[row]]
+Z = 65
+n = 2
+l = 0
+zeff = 47.9722
+source = "clementi_zeff"
+note = "Tb 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.0278."
+
+[[row]]
+Z = 65
+n = 2
+l = 1
+zeff = 60.6924
+source = "clementi_zeff"
+note = "Tb 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.3076."
+
+[[row]]
+Z = 65
+n = 3
+l = 0
+zeff = 44.5515
+source = "clementi_zeff"
+note = "Tb 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.4485."
+
+[[row]]
+Z = 65
+n = 3
+l = 1
+zeff = 45.0147
+source = "clementi_zeff"
+note = "Tb 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.9853."
+
+[[row]]
+Z = 65
+n = 3
+l = 2
+zeff = 51.2985
+source = "clementi_zeff"
+note = "Tb 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.7015."
+
+[[row]]
+Z = 65
+n = 4
+l = 0
+zeff = 34.02
+source = "clementi_zeff"
+note = "Tb 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 30.98."
+
+[[row]]
+Z = 65
+n = 4
+l = 1
+zeff = 33.3988
+source = "clementi_zeff"
+note = "Tb 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.6012."
+
+[[row]]
+Z = 65
+n = 4
+l = 2
+zeff = 30.31
+source = "clementi_zeff"
+note = "Tb 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.69."
+
+[[row]]
+Z = 65
+n = 4
+l = 3
+zeff = 25.8648
+source = "clementi_zeff"
+note = "Tb 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.1352."
+
+[[row]]
+Z = 65
+n = 5
+l = 0
+zeff = 19.1705
+source = "clementi_zeff"
+note = "Tb 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 45.8295."
+
+[[row]]
+Z = 65
+n = 5
+l = 1
+zeff = 16.961
+source = "clementi_zeff"
+note = "Tb 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 48.039."
+
+[[row]]
+Z = 65
+n = 6
+l = 0
+zeff = 8.3004
+source = "clementi_zeff"
+note = "Tb 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 56.6996."
+
+[[row]]
+Z = 66
+n = 1
+l = 0
+zeff = 64.7086
+source = "clementi_zeff"
+note = "Dy 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.2914."
+
+[[row]]
+Z = 66
+n = 2
+l = 0
+zeff = 48.7094
+source = "clementi_zeff"
+note = "Dy 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.2906."
+
+[[row]]
+Z = 66
+n = 2
+l = 1
+zeff = 61.6796
+source = "clementi_zeff"
+note = "Dy 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.3204."
+
+[[row]]
+Z = 66
+n = 3
+l = 0
+zeff = 45.3933
+source = "clementi_zeff"
+note = "Dy 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.6067."
+
+[[row]]
+Z = 66
+n = 3
+l = 1
+zeff = 45.8805
+source = "clementi_zeff"
+note = "Dy 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.1195."
+
+[[row]]
+Z = 66
+n = 3
+l = 2
+zeff = 52.3299
+source = "clementi_zeff"
+note = "Dy 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.6701."
+
+[[row]]
+Z = 66
+n = 4
+l = 0
+zeff = 34.592
+source = "clementi_zeff"
+note = "Dy 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.408."
+
+[[row]]
+Z = 66
+n = 4
+l = 1
+zeff = 33.826
+source = "clementi_zeff"
+note = "Dy 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.174."
+
+[[row]]
+Z = 66
+n = 4
+l = 2
+zeff = 31.018
+source = "clementi_zeff"
+note = "Dy 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.982."
+
+[[row]]
+Z = 66
+n = 4
+l = 3
+zeff = 26.536
+source = "clementi_zeff"
+note = "Dy 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.464."
+
+[[row]]
+Z = 66
+n = 5
+l = 0
+zeff = 19.304
+source = "clementi_zeff"
+note = "Dy 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 46.696."
+
+[[row]]
+Z = 66
+n = 5
+l = 1
+zeff = 17.127
+source = "clementi_zeff"
+note = "Dy 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 48.873."
+
+[[row]]
+Z = 66
+n = 6
+l = 0
+zeff = 8.3436
+source = "clementi_zeff"
+note = "Dy 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 57.6564."
+
+[[row]]
+Z = 67
+n = 1
+l = 0
+zeff = 65.6912
+source = "clementi_zeff"
+note = "Ho 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.3088."
+
+[[row]]
+Z = 67
+n = 2
+l = 0
+zeff = 49.4556
+source = "clementi_zeff"
+note = "Ho 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.5444."
+
+[[row]]
+Z = 67
+n = 2
+l = 1
+zeff = 62.6668
+source = "clementi_zeff"
+note = "Ho 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.3332."
+
+[[row]]
+Z = 67
+n = 3
+l = 0
+zeff = 46.2351
+source = "clementi_zeff"
+note = "Ho 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.7649."
+
+[[row]]
+Z = 67
+n = 3
+l = 1
+zeff = 46.7454
+source = "clementi_zeff"
+note = "Ho 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.2546."
+
+[[row]]
+Z = 67
+n = 3
+l = 2
+zeff = 53.3469
+source = "clementi_zeff"
+note = "Ho 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.6531."
+
+[[row]]
+Z = 67
+n = 4
+l = 0
+zeff = 35.312
+source = "clementi_zeff"
+note = "Ho 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.688."
+
+[[row]]
+Z = 67
+n = 4
+l = 1
+zeff = 34.5628
+source = "clementi_zeff"
+note = "Ho 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.4372."
+
+[[row]]
+Z = 67
+n = 4
+l = 2
+zeff = 31.6716
+source = "clementi_zeff"
+note = "Ho 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.3284."
+
+[[row]]
+Z = 67
+n = 4
+l = 3
+zeff = 27.4696
+source = "clementi_zeff"
+note = "Ho 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.5304."
+
+[[row]]
+Z = 67
+n = 5
+l = 0
+zeff = 19.576
+source = "clementi_zeff"
+note = "Ho 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 47.424."
+
+[[row]]
+Z = 67
+n = 5
+l = 1
+zeff = 17.339
+source = "clementi_zeff"
+note = "Ho 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 49.661."
+
+[[row]]
+Z = 67
+n = 6
+l = 0
+zeff = 8.439
+source = "clementi_zeff"
+note = "Ho 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.561."
+
+[[row]]
+Z = 68
+n = 1
+l = 0
+zeff = 66.6737
+source = "clementi_zeff"
+note = "Er 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.3263."
+
+[[row]]
+Z = 68
+n = 2
+l = 0
+zeff = 50.2016
+source = "clementi_zeff"
+note = "Er 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 17.7984."
+
+[[row]]
+Z = 68
+n = 2
+l = 1
+zeff = 63.654
+source = "clementi_zeff"
+note = "Er 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.346."
+
+[[row]]
+Z = 68
+n = 3
+l = 0
+zeff = 47.0769
+source = "clementi_zeff"
+note = "Er 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.9231."
+
+[[row]]
+Z = 68
+n = 3
+l = 1
+zeff = 47.6109
+source = "clementi_zeff"
+note = "Er 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.3891."
+
+[[row]]
+Z = 68
+n = 3
+l = 2
+zeff = 54.3603
+source = "clementi_zeff"
+note = "Er 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.6397."
+
+[[row]]
+Z = 68
+n = 4
+l = 0
+zeff = 36.232
+source = "clementi_zeff"
+note = "Er 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.768."
+
+[[row]]
+Z = 68
+n = 4
+l = 1
+zeff = 35.1092
+source = "clementi_zeff"
+note = "Er 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.8908."
+
+[[row]]
+Z = 68
+n = 4
+l = 2
+zeff = 32.2712
+source = "clementi_zeff"
+note = "Er 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.7288."
+
+[[row]]
+Z = 68
+n = 4
+l = 3
+zeff = 27.9784
+source = "clementi_zeff"
+note = "Er 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 40.0216."
+
+[[row]]
+Z = 68
+n = 5
+l = 0
+zeff = 19.718
+source = "clementi_zeff"
+note = "Er 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 48.282."
+
+[[row]]
+Z = 68
+n = 5
+l = 1
+zeff = 17.472
+source = "clementi_zeff"
+note = "Er 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.528."
+
+[[row]]
+Z = 68
+n = 6
+l = 0
+zeff = 8.4762
+source = "clementi_zeff"
+note = "Er 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 59.5238."
+
+[[row]]
+Z = 69
+n = 1
+l = 0
+zeff = 67.6563
+source = "clementi_zeff"
+note = "Tm 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.3437."
+
+[[row]]
+Z = 69
+n = 2
+l = 0
+zeff = 50.9478
+source = "clementi_zeff"
+note = "Tm 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.0522."
+
+[[row]]
+Z = 69
+n = 2
+l = 1
+zeff = 64.6412
+source = "clementi_zeff"
+note = "Tm 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.3588."
+
+[[row]]
+Z = 69
+n = 3
+l = 0
+zeff = 47.9184
+source = "clementi_zeff"
+note = "Tm 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.0816."
+
+[[row]]
+Z = 69
+n = 3
+l = 1
+zeff = 48.4761
+source = "clementi_zeff"
+note = "Tm 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.5239."
+
+[[row]]
+Z = 69
+n = 3
+l = 2
+zeff = 55.3743
+source = "clementi_zeff"
+note = "Tm 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.6257."
+
+[[row]]
+Z = 69
+n = 4
+l = 0
+zeff = 37.1376
+source = "clementi_zeff"
+note = "Tm 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 31.8624."
+
+[[row]]
+Z = 69
+n = 4
+l = 1
+zeff = 35.988
+source = "clementi_zeff"
+note = "Tm 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.012."
+
+[[row]]
+Z = 69
+n = 4
+l = 2
+zeff = 32.944
+source = "clementi_zeff"
+note = "Tm 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.056."
+
+[[row]]
+Z = 69
+n = 4
+l = 3
+zeff = 28.634
+source = "clementi_zeff"
+note = "Tm 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 40.366."
+
+[[row]]
+Z = 69
+n = 5
+l = 0
+zeff = 20.037
+source = "clementi_zeff"
+note = "Tm 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 48.963."
+
+[[row]]
+Z = 69
+n = 5
+l = 1
+zeff = 17.728
+source = "clementi_zeff"
+note = "Tm 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.272."
+
+[[row]]
+Z = 69
+n = 6
+l = 0
+zeff = 8.5842
+source = "clementi_zeff"
+note = "Tm 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 60.4158."
+
+[[row]]
+Z = 70
+n = 1
+l = 0
+zeff = 68.6389
+source = "clementi_zeff"
+note = "Yb 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.3611."
+
+[[row]]
+Z = 70
+n = 2
+l = 0
+zeff = 51.694
+source = "clementi_zeff"
+note = "Yb 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.306."
+
+[[row]]
+Z = 70
+n = 2
+l = 1
+zeff = 65.6284
+source = "clementi_zeff"
+note = "Yb 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.3716."
+
+[[row]]
+Z = 70
+n = 3
+l = 0
+zeff = 48.7602
+source = "clementi_zeff"
+note = "Yb 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.2398."
+
+[[row]]
+Z = 70
+n = 3
+l = 1
+zeff = 49.3365
+source = "clementi_zeff"
+note = "Yb 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.6635."
+
+[[row]]
+Z = 70
+n = 3
+l = 2
+zeff = 56.3967
+source = "clementi_zeff"
+note = "Yb 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.6033."
+
+[[row]]
+Z = 70
+n = 4
+l = 0
+zeff = 37.5176
+source = "clementi_zeff"
+note = "Yb 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.4824."
+
+[[row]]
+Z = 70
+n = 4
+l = 1
+zeff = 36.402
+source = "clementi_zeff"
+note = "Yb 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.598."
+
+[[row]]
+Z = 70
+n = 4
+l = 2
+zeff = 33.5896
+source = "clementi_zeff"
+note = "Yb 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.4104."
+
+[[row]]
+Z = 70
+n = 4
+l = 3
+zeff = 29.432
+source = "clementi_zeff"
+note = "Yb 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 40.568."
+
+[[row]]
+Z = 70
+n = 5
+l = 0
+zeff = 20.15
+source = "clementi_zeff"
+note = "Yb 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 49.85."
+
+[[row]]
+Z = 70
+n = 5
+l = 1
+zeff = 17.8315
+source = "clementi_zeff"
+note = "Yb 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 52.1685."
+
+[[row]]
+Z = 70
+n = 6
+l = 0
+zeff = 8.5932
+source = "clementi_zeff"
+note = "Yb 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 61.4068."
+
+[[row]]
+Z = 71
+n = 1
+l = 0
+zeff = 69.6195
+source = "clementi_zeff"
+note = "Lu 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.3805."
+
+[[row]]
+Z = 71
+n = 2
+l = 0
+zeff = 52.4498
+source = "clementi_zeff"
+note = "Lu 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.5502."
+
+[[row]]
+Z = 71
+n = 2
+l = 1
+zeff = 66.611
+source = "clementi_zeff"
+note = "Lu 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.389."
+
+[[row]]
+Z = 71
+n = 3
+l = 0
+zeff = 49.5345
+source = "clementi_zeff"
+note = "Lu 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.4655."
+
+[[row]]
+Z = 71
+n = 3
+l = 1
+zeff = 50.1663
+source = "clementi_zeff"
+note = "Lu 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.8337."
+
+[[row]]
+Z = 71
+n = 3
+l = 2
+zeff = 57.4188
+source = "clementi_zeff"
+note = "Lu 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.5812."
+
+[[row]]
+Z = 71
+n = 4
+l = 0
+zeff = 38.2692
+source = "clementi_zeff"
+note = "Lu 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 32.7308."
+
+[[row]]
+Z = 71
+n = 4
+l = 1
+zeff = 37.1904
+source = "clementi_zeff"
+note = "Lu 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.8096."
+
+[[row]]
+Z = 71
+n = 4
+l = 2
+zeff = 35.2892
+source = "clementi_zeff"
+note = "Lu 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.7108."
+
+[[row]]
+Z = 71
+n = 4
+l = 3
+zeff = 30.9312
+source = "clementi_zeff"
+note = "Lu 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 40.0688."
+
+[[row]]
+Z = 71
+n = 5
+l = 0
+zeff = 20.955
+source = "clementi_zeff"
+note = "Lu 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.045."
+
+[[row]]
+Z = 71
+n = 5
+l = 1
+zeff = 18.68
+source = "clementi_zeff"
+note = "Lu 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 52.32."
+
+[[row]]
+Z = 71
+n = 5
+l = 2
+zeff = 20.113
+source = "clementi_zeff"
+note = "Lu 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.887. Trend anomaly: Lu 5d (20.113) is larger than Hf 5d (16.62); not verifiable here - check against the paper before display."
+
+[[row]]
+Z = 71
+n = 6
+l = 0
+zeff = 8.8044
+source = "clementi_zeff"
+note = "Lu 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 62.1956."
+
+[[row]]
+Z = 72
+n = 1
+l = 0
+zeff = 70.6016
+source = "clementi_zeff"
+note = "Hf 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.3984."
+
+[[row]]
+Z = 72
+n = 2
+l = 0
+zeff = 53.1898
+source = "clementi_zeff"
+note = "Hf 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 18.8102."
+
+[[row]]
+Z = 72
+n = 2
+l = 1
+zeff = 67.5988
+source = "clementi_zeff"
+note = "Hf 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.4012."
+
+[[row]]
+Z = 72
+n = 3
+l = 0
+zeff = 50.3115
+source = "clementi_zeff"
+note = "Hf 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.6885."
+
+[[row]]
+Z = 72
+n = 3
+l = 1
+zeff = 50.9832
+source = "clementi_zeff"
+note = "Hf 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.0168."
+
+[[row]]
+Z = 72
+n = 3
+l = 2
+zeff = 58.4298
+source = "clementi_zeff"
+note = "Hf 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.5702."
+
+[[row]]
+Z = 72
+n = 4
+l = 0
+zeff = 38.9772
+source = "clementi_zeff"
+note = "Hf 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.0228."
+
+[[row]]
+Z = 72
+n = 4
+l = 1
+zeff = 37.9296
+source = "clementi_zeff"
+note = "Hf 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.0704."
+
+[[row]]
+Z = 72
+n = 4
+l = 2
+zeff = 35.524
+source = "clementi_zeff"
+note = "Hf 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.476."
+
+[[row]]
+Z = 72
+n = 4
+l = 3
+zeff = 32.2096
+source = "clementi_zeff"
+note = "Hf 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.7904."
+
+[[row]]
+Z = 72
+n = 5
+l = 0
+zeff = 21.833
+source = "clementi_zeff"
+note = "Hf 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.167."
+
+[[row]]
+Z = 72
+n = 5
+l = 1
+zeff = 19.585
+source = "clementi_zeff"
+note = "Hf 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 52.415."
+
+[[row]]
+Z = 72
+n = 5
+l = 2
+zeff = 16.6195
+source = "clementi_zeff"
+note = "Hf 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 55.3805."
+
+[[row]]
+Z = 72
+n = 6
+l = 0
+zeff = 9.1644
+source = "clementi_zeff"
+note = "Hf 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 62.8356."
+
+[[row]]
+Z = 73
+n = 1
+l = 0
+zeff = 71.5837
+source = "clementi_zeff"
+note = "Ta 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.4163."
+
+[[row]]
+Z = 73
+n = 2
+l = 0
+zeff = 53.9298
+source = "clementi_zeff"
+note = "Ta 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.0702."
+
+[[row]]
+Z = 73
+n = 2
+l = 1
+zeff = 68.5864
+source = "clementi_zeff"
+note = "Ta 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.4136."
+
+[[row]]
+Z = 73
+n = 3
+l = 0
+zeff = 51.0915
+source = "clementi_zeff"
+note = "Ta 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.9085."
+
+[[row]]
+Z = 73
+n = 3
+l = 1
+zeff = 51.8004
+source = "clementi_zeff"
+note = "Ta 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.1996."
+
+[[row]]
+Z = 73
+n = 3
+l = 2
+zeff = 59.4411
+source = "clementi_zeff"
+note = "Ta 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.5589."
+
+[[row]]
+Z = 73
+n = 4
+l = 0
+zeff = 39.7588
+source = "clementi_zeff"
+note = "Ta 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.2412."
+
+[[row]]
+Z = 73
+n = 4
+l = 1
+zeff = 38.7348
+source = "clementi_zeff"
+note = "Ta 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.2652."
+
+[[row]]
+Z = 73
+n = 4
+l = 2
+zeff = 36.324
+source = "clementi_zeff"
+note = "Ta 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.676."
+
+[[row]]
+Z = 73
+n = 4
+l = 3
+zeff = 33.4704
+source = "clementi_zeff"
+note = "Ta 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.5296."
+
+[[row]]
+Z = 73
+n = 5
+l = 0
+zeff = 22.6935
+source = "clementi_zeff"
+note = "Ta 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.3065."
+
+[[row]]
+Z = 73
+n = 5
+l = 1
+zeff = 20.4735
+source = "clementi_zeff"
+note = "Ta 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 52.5265."
+
+[[row]]
+Z = 73
+n = 5
+l = 2
+zeff = 16.368
+source = "clementi_zeff"
+note = "Ta 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 56.632."
+
+[[row]]
+Z = 73
+n = 6
+l = 0
+zeff = 9.525
+source = "clementi_zeff"
+note = "Ta 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 63.475."
+
+[[row]]
+Z = 74
+n = 1
+l = 0
+zeff = 72.5657
+source = "clementi_zeff"
+note = "W 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.4343."
+
+[[row]]
+Z = 74
+n = 2
+l = 0
+zeff = 54.6698
+source = "clementi_zeff"
+note = "W 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.3302."
+
+[[row]]
+Z = 74
+n = 2
+l = 1
+zeff = 69.5742
+source = "clementi_zeff"
+note = "W 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.4258."
+
+[[row]]
+Z = 74
+n = 3
+l = 0
+zeff = 51.87
+source = "clementi_zeff"
+note = "W 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.13."
+
+[[row]]
+Z = 74
+n = 3
+l = 1
+zeff = 52.6176
+source = "clementi_zeff"
+note = "W 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.3824."
+
+[[row]]
+Z = 74
+n = 3
+l = 2
+zeff = 60.4524
+source = "clementi_zeff"
+note = "W 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.5476."
+
+[[row]]
+Z = 74
+n = 4
+l = 0
+zeff = 40.5588
+source = "clementi_zeff"
+note = "W 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.4412."
+
+[[row]]
+Z = 74
+n = 4
+l = 1
+zeff = 39.5484
+source = "clementi_zeff"
+note = "W 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.4516."
+
+[[row]]
+Z = 74
+n = 4
+l = 2
+zeff = 37.1732
+source = "clementi_zeff"
+note = "W 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.8268."
+
+[[row]]
+Z = 74
+n = 4
+l = 3
+zeff = 34.7108
+source = "clementi_zeff"
+note = "W 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.2892."
+
+[[row]]
+Z = 74
+n = 5
+l = 0
+zeff = 23.5415
+source = "clementi_zeff"
+note = "W 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.4585."
+
+[[row]]
+Z = 74
+n = 5
+l = 1
+zeff = 21.3255
+source = "clementi_zeff"
+note = "W 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 52.6745."
+
+[[row]]
+Z = 74
+n = 5
+l = 2
+zeff = 16.742
+source = "clementi_zeff"
+note = "W 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 57.258."
+
+[[row]]
+Z = 74
+n = 6
+l = 0
+zeff = 9.8544
+source = "clementi_zeff"
+note = "W 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 64.1456."
+
+[[row]]
+Z = 75
+n = 1
+l = 0
+zeff = 73.5478
+source = "clementi_zeff"
+note = "Re 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.4522."
+
+[[row]]
+Z = 75
+n = 2
+l = 0
+zeff = 55.4098
+source = "clementi_zeff"
+note = "Re 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.5902."
+
+[[row]]
+Z = 75
+n = 2
+l = 1
+zeff = 70.562
+source = "clementi_zeff"
+note = "Re 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.438."
+
+[[row]]
+Z = 75
+n = 3
+l = 0
+zeff = 52.6485
+source = "clementi_zeff"
+note = "Re 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.3515."
+
+[[row]]
+Z = 75
+n = 3
+l = 1
+zeff = 53.4345
+source = "clementi_zeff"
+note = "Re 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.5655."
+
+[[row]]
+Z = 75
+n = 3
+l = 2
+zeff = 61.4547
+source = "clementi_zeff"
+note = "Re 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.5453."
+
+[[row]]
+Z = 75
+n = 4
+l = 0
+zeff = 41.3564
+source = "clementi_zeff"
+note = "Re 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.6436."
+
+[[row]]
+Z = 75
+n = 4
+l = 1
+zeff = 40.3732
+source = "clementi_zeff"
+note = "Re 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.6268."
+
+[[row]]
+Z = 75
+n = 4
+l = 2
+zeff = 38.0544
+source = "clementi_zeff"
+note = "Re 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.9456."
+
+[[row]]
+Z = 75
+n = 4
+l = 3
+zeff = 35.9248
+source = "clementi_zeff"
+note = "Re 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 39.0752."
+
+[[row]]
+Z = 75
+n = 5
+l = 0
+zeff = 24.357
+source = "clementi_zeff"
+note = "Re 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.643."
+
+[[row]]
+Z = 75
+n = 5
+l = 1
+zeff = 22.144
+source = "clementi_zeff"
+note = "Re 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 52.856."
+
+[[row]]
+Z = 75
+n = 5
+l = 2
+zeff = 17.383
+source = "clementi_zeff"
+note = "Re 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 57.617."
+
+[[row]]
+Z = 75
+n = 6
+l = 0
+zeff = 10.116
+source = "clementi_zeff"
+note = "Re 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 64.884."
+
+[[row]]
+Z = 76
+n = 1
+l = 0
+zeff = 74.5299
+source = "clementi_zeff"
+note = "Os 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.4701."
+
+[[row]]
+Z = 76
+n = 2
+l = 0
+zeff = 56.1498
+source = "clementi_zeff"
+note = "Os 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 19.8502."
+
+[[row]]
+Z = 76
+n = 2
+l = 1
+zeff = 71.5498
+source = "clementi_zeff"
+note = "Os 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.4502."
+
+[[row]]
+Z = 76
+n = 3
+l = 0
+zeff = 53.4273
+source = "clementi_zeff"
+note = "Os 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.5727."
+
+[[row]]
+Z = 76
+n = 3
+l = 1
+zeff = 54.2517
+source = "clementi_zeff"
+note = "Os 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.7483."
+
+[[row]]
+Z = 76
+n = 3
+l = 2
+zeff = 62.4747
+source = "clementi_zeff"
+note = "Os 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.5253."
+
+[[row]]
+Z = 76
+n = 4
+l = 0
+zeff = 42.0952
+source = "clementi_zeff"
+note = "Os 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 33.9048."
+
+[[row]]
+Z = 76
+n = 4
+l = 1
+zeff = 41.144
+source = "clementi_zeff"
+note = "Os 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.856."
+
+[[row]]
+Z = 76
+n = 4
+l = 2
+zeff = 38.858
+source = "clementi_zeff"
+note = "Os 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.142."
+
+[[row]]
+Z = 76
+n = 4
+l = 3
+zeff = 37.1528
+source = "clementi_zeff"
+note = "Os 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.8472."
+
+[[row]]
+Z = 76
+n = 5
+l = 0
+zeff = 25.095
+source = "clementi_zeff"
+note = "Os 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 50.905."
+
+[[row]]
+Z = 76
+n = 5
+l = 1
+zeff = 22.91
+source = "clementi_zeff"
+note = "Os 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.09."
+
+[[row]]
+Z = 76
+n = 5
+l = 2
+zeff = 17.997
+source = "clementi_zeff"
+note = "Os 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.003."
+
+[[row]]
+Z = 76
+n = 6
+l = 0
+zeff = 10.323
+source = "clementi_zeff"
+note = "Os 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 65.677."
+
+[[row]]
+Z = 77
+n = 1
+l = 0
+zeff = 75.5119
+source = "clementi_zeff"
+note = "Ir 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.4881."
+
+[[row]]
+Z = 77
+n = 2
+l = 0
+zeff = 56.8898
+source = "clementi_zeff"
+note = "Ir 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.1102."
+
+[[row]]
+Z = 77
+n = 2
+l = 1
+zeff = 72.5376
+source = "clementi_zeff"
+note = "Ir 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.4624."
+
+[[row]]
+Z = 77
+n = 3
+l = 0
+zeff = 54.2058
+source = "clementi_zeff"
+note = "Ir 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.7942."
+
+[[row]]
+Z = 77
+n = 3
+l = 1
+zeff = 55.0689
+source = "clementi_zeff"
+note = "Ir 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.9311."
+
+[[row]]
+Z = 77
+n = 3
+l = 2
+zeff = 63.486
+source = "clementi_zeff"
+note = "Ir 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.514."
+
+[[row]]
+Z = 77
+n = 4
+l = 0
+zeff = 42.848
+source = "clementi_zeff"
+note = "Ir 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.152."
+
+[[row]]
+Z = 77
+n = 4
+l = 1
+zeff = 41.914
+source = "clementi_zeff"
+note = "Ir 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.086."
+
+[[row]]
+Z = 77
+n = 4
+l = 2
+zeff = 39.7372
+source = "clementi_zeff"
+note = "Ir 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.2628."
+
+[[row]]
+Z = 77
+n = 4
+l = 3
+zeff = 38.3448
+source = "clementi_zeff"
+note = "Ir 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.6552."
+
+[[row]]
+Z = 77
+n = 5
+l = 0
+zeff = 25.8455
+source = "clementi_zeff"
+note = "Ir 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.1545."
+
+[[row]]
+Z = 77
+n = 5
+l = 1
+zeff = 23.661
+source = "clementi_zeff"
+note = "Ir 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.339."
+
+[[row]]
+Z = 77
+n = 5
+l = 2
+zeff = 18.696
+source = "clementi_zeff"
+note = "Ir 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.304."
+
+[[row]]
+Z = 77
+n = 6
+l = 0
+zeff = 10.5666
+source = "clementi_zeff"
+note = "Ir 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 66.4334."
+
+[[row]]
+Z = 78
+n = 1
+l = 0
+zeff = 76.494
+source = "clementi_zeff"
+note = "Pt 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.506."
+
+[[row]]
+Z = 78
+n = 2
+l = 0
+zeff = 57.6298
+source = "clementi_zeff"
+note = "Pt 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.3702."
+
+[[row]]
+Z = 78
+n = 2
+l = 1
+zeff = 73.5254
+source = "clementi_zeff"
+note = "Pt 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.4746."
+
+[[row]]
+Z = 78
+n = 3
+l = 0
+zeff = 54.9843
+source = "clementi_zeff"
+note = "Pt 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.0157."
+
+[[row]]
+Z = 78
+n = 3
+l = 1
+zeff = 55.8861
+source = "clementi_zeff"
+note = "Pt 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.1139."
+
+[[row]]
+Z = 78
+n = 3
+l = 2
+zeff = 64.4973
+source = "clementi_zeff"
+note = "Pt 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.5027."
+
+[[row]]
+Z = 78
+n = 4
+l = 0
+zeff = 43.6388
+source = "clementi_zeff"
+note = "Pt 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.3612."
+
+[[row]]
+Z = 78
+n = 4
+l = 1
+zeff = 42.7304
+source = "clementi_zeff"
+note = "Pt 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.2696."
+
+[[row]]
+Z = 78
+n = 4
+l = 2
+zeff = 40.63
+source = "clementi_zeff"
+note = "Pt 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.37."
+
+[[row]]
+Z = 78
+n = 4
+l = 3
+zeff = 39.506
+source = "clementi_zeff"
+note = "Pt 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.494."
+
+[[row]]
+Z = 78
+n = 5
+l = 0
+zeff = 26.588
+source = "clementi_zeff"
+note = "Pt 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.412."
+
+[[row]]
+Z = 78
+n = 5
+l = 1
+zeff = 24.4195
+source = "clementi_zeff"
+note = "Pt 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.5805."
+
+[[row]]
+Z = 78
+n = 5
+l = 2
+zeff = 19.4075
+source = "clementi_zeff"
+note = "Pt 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.5925."
+
+[[row]]
+Z = 78
+n = 6
+l = 0
+zeff = 10.7514
+source = "clementi_zeff"
+note = "Pt 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 67.2486."
+
+[[row]]
+Z = 79
+n = 1
+l = 0
+zeff = 77.4761
+source = "clementi_zeff"
+note = "Au 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.5239."
+
+[[row]]
+Z = 79
+n = 2
+l = 0
+zeff = 58.3698
+source = "clementi_zeff"
+note = "Au 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.6302."
+
+[[row]]
+Z = 79
+n = 2
+l = 1
+zeff = 74.5132
+source = "clementi_zeff"
+note = "Au 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.4868."
+
+[[row]]
+Z = 79
+n = 3
+l = 0
+zeff = 55.7628
+source = "clementi_zeff"
+note = "Au 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.2372."
+
+[[row]]
+Z = 79
+n = 3
+l = 1
+zeff = 56.703
+source = "clementi_zeff"
+note = "Au 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.297."
+
+[[row]]
+Z = 79
+n = 3
+l = 2
+zeff = 65.5083
+source = "clementi_zeff"
+note = "Au 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.4917."
+
+[[row]]
+Z = 79
+n = 4
+l = 0
+zeff = 44.4132
+source = "clementi_zeff"
+note = "Au 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.5868."
+
+[[row]]
+Z = 79
+n = 4
+l = 1
+zeff = 43.5468
+source = "clementi_zeff"
+note = "Au 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.4532."
+
+[[row]]
+Z = 79
+n = 4
+l = 2
+zeff = 41.528
+source = "clementi_zeff"
+note = "Au 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.472."
+
+[[row]]
+Z = 79
+n = 4
+l = 3
+zeff = 40.6496
+source = "clementi_zeff"
+note = "Au 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.3504."
+
+[[row]]
+Z = 79
+n = 5
+l = 0
+zeff = 27.3275
+source = "clementi_zeff"
+note = "Au 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.6725."
+
+[[row]]
+Z = 79
+n = 5
+l = 1
+zeff = 25.17
+source = "clementi_zeff"
+note = "Au 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.83."
+
+[[row]]
+Z = 79
+n = 5
+l = 2
+zeff = 20.1265
+source = "clementi_zeff"
+note = "Au 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.8735."
+
+[[row]]
+Z = 79
+n = 6
+l = 0
+zeff = 10.938
+source = "clementi_zeff"
+note = "Au 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 68.062."
+
+[[row]]
+Z = 80
+n = 1
+l = 0
+zeff = 78.4581
+source = "clementi_zeff"
+note = "Hg 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.5419."
+
+[[row]]
+Z = 80
+n = 2
+l = 0
+zeff = 59.1094
+source = "clementi_zeff"
+note = "Hg 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 20.8906."
+
+[[row]]
+Z = 80
+n = 2
+l = 1
+zeff = 75.501
+source = "clementi_zeff"
+note = "Hg 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.499."
+
+[[row]]
+Z = 80
+n = 3
+l = 0
+zeff = 56.5413
+source = "clementi_zeff"
+note = "Hg 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.4587."
+
+[[row]]
+Z = 80
+n = 3
+l = 1
+zeff = 57.5202
+source = "clementi_zeff"
+note = "Hg 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.4798."
+
+[[row]]
+Z = 80
+n = 3
+l = 2
+zeff = 66.5196
+source = "clementi_zeff"
+note = "Hg 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.4804."
+
+[[row]]
+Z = 80
+n = 4
+l = 0
+zeff = 45.2448
+source = "clementi_zeff"
+note = "Hg 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.7552."
+
+[[row]]
+Z = 80
+n = 4
+l = 1
+zeff = 44.406
+source = "clementi_zeff"
+note = "Hg 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.594."
+
+[[row]]
+Z = 80
+n = 4
+l = 2
+zeff = 42.468
+source = "clementi_zeff"
+note = "Hg 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.532."
+
+[[row]]
+Z = 80
+n = 4
+l = 3
+zeff = 41.7608
+source = "clementi_zeff"
+note = "Hg 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.2392."
+
+[[row]]
+Z = 80
+n = 5
+l = 0
+zeff = 28.111
+source = "clementi_zeff"
+note = "Hg 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.889."
+
+[[row]]
+Z = 80
+n = 5
+l = 1
+zeff = 25.967
+source = "clementi_zeff"
+note = "Hg 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 54.033."
+
+[[row]]
+Z = 80
+n = 5
+l = 2
+zeff = 20.856
+source = "clementi_zeff"
+note = "Hg 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 59.144."
+
+[[row]]
+Z = 80
+n = 6
+l = 0
+zeff = 11.1534
+source = "clementi_zeff"
+note = "Hg 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 68.8466."
+
+[[row]]
+Z = 81
+n = 1
+l = 0
+zeff = 79.4409
+source = "clementi_zeff"
+note = "Tl 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.5591."
+
+[[row]]
+Z = 81
+n = 2
+l = 0
+zeff = 59.6842
+source = "clementi_zeff"
+note = "Tl 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.3158."
+
+[[row]]
+Z = 81
+n = 2
+l = 1
+zeff = 76.4862
+source = "clementi_zeff"
+note = "Tl 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.5138."
+
+[[row]]
+Z = 81
+n = 3
+l = 0
+zeff = 57.4191
+source = "clementi_zeff"
+note = "Tl 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.5809."
+
+[[row]]
+Z = 81
+n = 3
+l = 1
+zeff = 58.3665
+source = "clementi_zeff"
+note = "Tl 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.6335."
+
+[[row]]
+Z = 81
+n = 3
+l = 2
+zeff = 67.5342
+source = "clementi_zeff"
+note = "Tl 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.4658."
+
+[[row]]
+Z = 81
+n = 4
+l = 0
+zeff = 46.0788
+source = "clementi_zeff"
+note = "Tl 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 34.9212."
+
+[[row]]
+Z = 81
+n = 4
+l = 1
+zeff = 45.2168
+source = "clementi_zeff"
+note = "Tl 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.7832."
+
+[[row]]
+Z = 81
+n = 4
+l = 2
+zeff = 43.3888
+source = "clementi_zeff"
+note = "Tl 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.6112."
+
+[[row]]
+Z = 81
+n = 4
+l = 3
+zeff = 42.8676
+source = "clementi_zeff"
+note = "Tl 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.1324."
+
+[[row]]
+Z = 81
+n = 5
+l = 0
+zeff = 29.122
+source = "clementi_zeff"
+note = "Tl 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.878."
+
+[[row]]
+Z = 81
+n = 5
+l = 1
+zeff = 27.0885
+source = "clementi_zeff"
+note = "Tl 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.9115."
+
+[[row]]
+Z = 81
+n = 5
+l = 2
+zeff = 22.025
+source = "clementi_zeff"
+note = "Tl 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.975."
+
+[[row]]
+Z = 81
+n = 6
+l = 0
+zeff = 12.8196
+source = "clementi_zeff"
+note = "Tl 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 68.1804."
+
+[[row]]
+Z = 81
+n = 6
+l = 1
+zeff = 12.2538
+source = "clementi_zeff"
+note = "Tl 6p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 68.7462."
+
+[[row]]
+Z = 82
+n = 1
+l = 0
+zeff = 80.4195
+source = "clementi_zeff"
+note = "Pb 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.5805."
+
+[[row]]
+Z = 82
+n = 2
+l = 0
+zeff = 60.43
+source = "clementi_zeff"
+note = "Pb 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.57."
+
+[[row]]
+Z = 82
+n = 2
+l = 1
+zeff = 77.4766
+source = "clementi_zeff"
+note = "Pb 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.5234."
+
+[[row]]
+Z = 82
+n = 3
+l = 0
+zeff = 58.1523
+source = "clementi_zeff"
+note = "Pb 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.8477."
+
+[[row]]
+Z = 82
+n = 3
+l = 1
+zeff = 59.1495
+source = "clementi_zeff"
+note = "Pb 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.8505."
+
+[[row]]
+Z = 82
+n = 3
+l = 2
+zeff = 68.5467
+source = "clementi_zeff"
+note = "Pb 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.4533."
+
+[[row]]
+Z = 82
+n = 4
+l = 0
+zeff = 46.8928
+source = "clementi_zeff"
+note = "Pb 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.1072."
+
+[[row]]
+Z = 82
+n = 4
+l = 1
+zeff = 46.0336
+source = "clementi_zeff"
+note = "Pb 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.9664."
+
+[[row]]
+Z = 82
+n = 4
+l = 2
+zeff = 44.3196
+source = "clementi_zeff"
+note = "Pb 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.6804."
+
+[[row]]
+Z = 82
+n = 4
+l = 3
+zeff = 43.9688
+source = "clementi_zeff"
+note = "Pb 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.0312."
+
+[[row]]
+Z = 82
+n = 5
+l = 0
+zeff = 30.1315
+source = "clementi_zeff"
+note = "Pb 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.8685."
+
+[[row]]
+Z = 82
+n = 5
+l = 1
+zeff = 28.03
+source = "clementi_zeff"
+note = "Pb 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.97."
+
+[[row]]
+Z = 82
+n = 5
+l = 2
+zeff = 23.152
+source = "clementi_zeff"
+note = "Pb 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.848."
+
+[[row]]
+Z = 82
+n = 6
+l = 0
+zeff = 14.1
+source = "clementi_zeff"
+note = "Pb 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 67.9."
+
+[[row]]
+Z = 82
+n = 6
+l = 1
+zeff = 12.393
+source = "clementi_zeff"
+note = "Pb 6p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 69.607."
+
+[[row]]
+Z = 83
+n = 1
+l = 0
+zeff = 81.3982
+source = "clementi_zeff"
+note = "Bi 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.6018."
+
+[[row]]
+Z = 83
+n = 2
+l = 0
+zeff = 61.176
+source = "clementi_zeff"
+note = "Bi 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 21.824."
+
+[[row]]
+Z = 83
+n = 2
+l = 1
+zeff = 78.467
+source = "clementi_zeff"
+note = "Bi 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.533."
+
+[[row]]
+Z = 83
+n = 3
+l = 0
+zeff = 58.8855
+source = "clementi_zeff"
+note = "Bi 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 24.1145."
+
+[[row]]
+Z = 83
+n = 3
+l = 1
+zeff = 59.9322
+source = "clementi_zeff"
+note = "Bi 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.0678."
+
+[[row]]
+Z = 83
+n = 3
+l = 2
+zeff = 69.5415
+source = "clementi_zeff"
+note = "Bi 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.4585."
+
+[[row]]
+Z = 83
+n = 4
+l = 0
+zeff = 47.7072
+source = "clementi_zeff"
+note = "Bi 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.2928."
+
+[[row]]
+Z = 83
+n = 4
+l = 1
+zeff = 46.8504
+source = "clementi_zeff"
+note = "Bi 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.1496."
+
+[[row]]
+Z = 83
+n = 4
+l = 2
+zeff = 45.2392
+source = "clementi_zeff"
+note = "Bi 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.7608."
+
+[[row]]
+Z = 83
+n = 4
+l = 3
+zeff = 45.0692
+source = "clementi_zeff"
+note = "Bi 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.9308."
+
+[[row]]
+Z = 83
+n = 5
+l = 0
+zeff = 31.029
+source = "clementi_zeff"
+note = "Bi 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.971."
+
+[[row]]
+Z = 83
+n = 5
+l = 1
+zeff = 29.021
+source = "clementi_zeff"
+note = "Bi 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.979."
+
+[[row]]
+Z = 83
+n = 5
+l = 2
+zeff = 24.244
+source = "clementi_zeff"
+note = "Bi 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.756."
+
+[[row]]
+Z = 83
+n = 6
+l = 0
+zeff = 15.24
+source = "clementi_zeff"
+note = "Bi 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 67.76."
+
+[[row]]
+Z = 83
+n = 6
+l = 1
+zeff = 13.3398
+source = "clementi_zeff"
+note = "Bi 6p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 69.6602."
+
+[[row]]
+Z = 84
+n = 1
+l = 0
+zeff = 82.3768
+source = "clementi_zeff"
+note = "Po 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.6232."
+
+[[row]]
+Z = 84
+n = 2
+l = 0
+zeff = 61.9218
+source = "clementi_zeff"
+note = "Po 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.0782."
+
+[[row]]
+Z = 84
+n = 2
+l = 1
+zeff = 79.4572
+source = "clementi_zeff"
+note = "Po 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.5428."
+
+[[row]]
+Z = 84
+n = 3
+l = 0
+zeff = 59.6187
+source = "clementi_zeff"
+note = "Po 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 24.3813."
+
+[[row]]
+Z = 84
+n = 3
+l = 1
+zeff = 60.7149
+source = "clementi_zeff"
+note = "Po 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.2851."
+
+[[row]]
+Z = 84
+n = 3
+l = 2
+zeff = 70.572
+source = "clementi_zeff"
+note = "Po 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.428."
+
+[[row]]
+Z = 84
+n = 4
+l = 0
+zeff = 48.5216
+source = "clementi_zeff"
+note = "Po 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.4784."
+
+[[row]]
+Z = 84
+n = 4
+l = 1
+zeff = 47.6672
+source = "clementi_zeff"
+note = "Po 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.3328."
+
+[[row]]
+Z = 84
+n = 4
+l = 2
+zeff = 47.6672
+source = "clementi_zeff"
+note = "Po 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.3328."
+
+[[row]]
+Z = 84
+n = 4
+l = 3
+zeff = 46.1584
+source = "clementi_zeff"
+note = "Po 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.8416."
+
+[[row]]
+Z = 84
+n = 5
+l = 0
+zeff = 32.023
+source = "clementi_zeff"
+note = "Po 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 51.977."
+
+[[row]]
+Z = 84
+n = 5
+l = 1
+zeff = 30.0245
+source = "clementi_zeff"
+note = "Po 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.9755."
+
+[[row]]
+Z = 84
+n = 5
+l = 2
+zeff = 25.304
+source = "clementi_zeff"
+note = "Po 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.696."
+
+[[row]]
+Z = 84
+n = 6
+l = 0
+zeff = 16.3308
+source = "clementi_zeff"
+note = "Po 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 67.6692."
+
+[[row]]
+Z = 84
+n = 6
+l = 1
+zeff = 14.2206
+source = "clementi_zeff"
+note = "Po 6p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 69.7794."
+
+[[row]]
+Z = 85
+n = 1
+l = 0
+zeff = 83.3554
+source = "clementi_zeff"
+note = "At 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.6446."
+
+[[row]]
+Z = 85
+n = 2
+l = 0
+zeff = 62.6676
+source = "clementi_zeff"
+note = "At 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.3324."
+
+[[row]]
+Z = 85
+n = 2
+l = 1
+zeff = 80.4476
+source = "clementi_zeff"
+note = "At 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.5524."
+
+[[row]]
+Z = 85
+n = 3
+l = 0
+zeff = 60.3519
+source = "clementi_zeff"
+note = "At 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 24.6481."
+
+[[row]]
+Z = 85
+n = 3
+l = 1
+zeff = 61.4976
+source = "clementi_zeff"
+note = "At 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.5024."
+
+[[row]]
+Z = 85
+n = 3
+l = 2
+zeff = 71.5845
+source = "clementi_zeff"
+note = "At 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.4155."
+
+[[row]]
+Z = 85
+n = 4
+l = 0
+zeff = 49.3356
+source = "clementi_zeff"
+note = "At 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.6644."
+
+[[row]]
+Z = 85
+n = 4
+l = 1
+zeff = 48.484
+source = "clementi_zeff"
+note = "At 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.516."
+
+[[row]]
+Z = 85
+n = 4
+l = 2
+zeff = 47.0496
+source = "clementi_zeff"
+note = "At 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.9504."
+
+[[row]]
+Z = 85
+n = 4
+l = 3
+zeff = 47.2404
+source = "clementi_zeff"
+note = "At 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.7596."
+
+[[row]]
+Z = 85
+n = 5
+l = 0
+zeff = 32.9335
+source = "clementi_zeff"
+note = "At 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 52.0665."
+
+[[row]]
+Z = 85
+n = 5
+l = 1
+zeff = 31.04
+source = "clementi_zeff"
+note = "At 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 53.96."
+
+[[row]]
+Z = 85
+n = 5
+l = 2
+zeff = 26.339
+source = "clementi_zeff"
+note = "At 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.661."
+
+[[row]]
+Z = 85
+n = 6
+l = 0
+zeff = 17.2998
+source = "clementi_zeff"
+note = "At 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 67.7002."
+
+[[row]]
+Z = 85
+n = 6
+l = 1
+zeff = 15.1632
+source = "clementi_zeff"
+note = "At 6p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 69.8368."
+
+[[row]]
+Z = 86
+n = 1
+l = 0
+zeff = 84.3341
+source = "clementi_zeff"
+note = "Rn 1s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 1.6659."
+
+[[row]]
+Z = 86
+n = 2
+l = 0
+zeff = 63.4136
+source = "clementi_zeff"
+note = "Rn 2s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 22.5864."
+
+[[row]]
+Z = 86
+n = 2
+l = 1
+zeff = 81.438
+source = "clementi_zeff"
+note = "Rn 2p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 4.562."
+
+[[row]]
+Z = 86
+n = 3
+l = 0
+zeff = 61.0851
+source = "clementi_zeff"
+note = "Rn 3s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 24.9149."
+
+[[row]]
+Z = 86
+n = 3
+l = 1
+zeff = 62.2806
+source = "clementi_zeff"
+note = "Rn 3p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 23.7194."
+
+[[row]]
+Z = 86
+n = 3
+l = 2
+zeff = 72.5973
+source = "clementi_zeff"
+note = "Rn 3d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 13.4027."
+
+[[row]]
+Z = 86
+n = 4
+l = 0
+zeff = 50.15
+source = "clementi_zeff"
+note = "Rn 4s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 35.85."
+
+[[row]]
+Z = 86
+n = 4
+l = 1
+zeff = 49.3012
+source = "clementi_zeff"
+note = "Rn 4p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 36.6988."
+
+[[row]]
+Z = 86
+n = 4
+l = 2
+zeff = 47.9428
+source = "clementi_zeff"
+note = "Rn 4d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 38.0572."
+
+[[row]]
+Z = 86
+n = 4
+l = 3
+zeff = 48.3312
+source = "clementi_zeff"
+note = "Rn 4f: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 37.6688."
+
+[[row]]
+Z = 86
+n = 5
+l = 0
+zeff = 33.893
+source = "clementi_zeff"
+note = "Rn 5s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 52.107."
+
+[[row]]
+Z = 86
+n = 5
+l = 1
+zeff = 31.971
+source = "clementi_zeff"
+note = "Rn 5p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 54.029."
+
+[[row]]
+Z = 86
+n = 5
+l = 2
+zeff = 27.353
+source = "clementi_zeff"
+note = "Rn 5d: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 58.647."
+
+[[row]]
+Z = 86
+n = 6
+l = 0
+zeff = 18.324
+source = "clementi_zeff"
+note = "Rn 6s: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 67.676."
+
+[[row]]
+Z = 86
+n = 6
+l = 1
+zeff = 16.0758
+source = "clementi_zeff"
+note = "Rn 6p: n*zeta from Clementi, Raimondi & Reinhardt 1967; mendeleev 1.3.0 screening constant 69.9242."

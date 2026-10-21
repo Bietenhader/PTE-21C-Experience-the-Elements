@@ -16,6 +16,9 @@ from decimal import Decimal
 
 import jsonschema
 
+import build_images
+import curated
+import fetch_bipm
 import fetch_ciaaw
 import fetch_codata
 import fetch_iaea
@@ -52,6 +55,7 @@ PARSERS = {
     "iaea_livechart": fetch_iaea.parse,
     "nist_codata": fetch_codata.parse,
     "ciaaw": fetch_ciaaw.parse,
+    "bipm_frequencies": fetch_bipm.parse,
 }
 
 # PubChem "GroupBlock" → SPEC §7.3 category. PubChem separates halogens; the reference table
@@ -164,21 +168,44 @@ def atomic_weight(z, awic, ciaaw, iso_best, report):
         elif abr:
             report.add(
                 "Cross-checks",
-                f"Z={z}: CIAAW abridged {abr[2]} ± {abr[1]:g} does not cover the AWIC " f"interval {std}; not used.",
+                f"Z={z}: CIAAW abridged {abr[2]} ± {abr[1]:g} does not cover the AWIC interval {std}; not used.",
             )
         return out
     value, unc = parse_concise(std)
     return quantity(value, "u", "nist_awic", unc=unc)
 
 
-def ionization_energy(z, gsie, ev_to_kj):
+def ionization_energy(z, gsie, ev_to_kj, predicted=None):
     if gsie is None:
         return missing("source_unavailable_at_build", "NIST ASD could not be read at build time.")
     row = gsie.get(z)
+    if (row is None or not row["ie_eV"]) and predicted and "ie1_eV" in predicted:
+        ev = Decimal(repr(predicted["ie1_eV"]))
+        kj = float(ev * ev_to_kj)
+        unc = predicted.get("ie1_unc_eV")
+        if unc:
+            value, unc_kj = round_with_unc(kj, float(Decimal(repr(unc)) * ev_to_kj))
+            ev_txt = f"{predicted['ie1_eV']} ± {unc} eV"
+        else:
+            value, unc_kj = round_sig(kj, sig_digits(repr(predicted["ie1_eV"]))), None
+            ev_txt = f"{predicted['ie1_eV']} eV (no uncertainty given)"
+        q = quantity(
+            value,
+            "kJ/mol",
+            predicted["source"],
+            unc=unc_kj,
+            flag="predicted",
+            note=f"Theoretical prediction {ev_txt}, converted to kJ/mol with the exact CODATA 2022 factor. "
+            + predicted["note"].split(". ")[0]
+            + ".",
+        )
+        if predicted.get("doi"):
+            q["doi"] = predicted["doi"]
+        return q
     if row is None or not row["ie_eV"]:
         return missing(
             "predicted_only",
-            "NIST ASD lists no ionization energy for this element; " "only theoretical predictions exist.",
+            "NIST ASD lists no ionization energy for this element; only theoretical predictions exist.",
         )
     flag, why = IE_FLAG[row["prefix"]]
     ev = Decimal(row["ie_eV"])
@@ -215,6 +242,9 @@ PUBCHEM_NUMBERS = {
 }
 
 
+PROPERTY_NOTES = {(r["Z"], r["field"]): r["note"] for r in curated.load("property_notes.toml")}
+
+
 def pubchem_number(z, pub, field):
     column, unit, what, note = PUBCHEM_NUMBERS[field]
     if pub is None:
@@ -222,6 +252,9 @@ def pubchem_number(z, pub, field):
     text = pub[z][column].strip()
     if not text:
         return missing("not_measured", f"PubChem lists no {what} for this element.")
+    extra = PROPERTY_NOTES.get((z, field))
+    if extra:
+        note = f"{note} {extra}" if note else extra
     return quantity(float(text), unit, "pubchem", note=note)
 
 
@@ -292,9 +325,31 @@ def oxidation_states(z, pub, report):
     return out
 
 
-def configuration(z, gsie, pub, report):
+def configuration(z, gsie, pub, report, predicted=None):
     cfg_aufbau = madelung.aufbau(z)
-    if gsie is not None and z in gsie:
+    if predicted and predicted.get("configuration") and not (gsie is not None and z in gsie):
+        cfg = madelung.parse(predicted["configuration"])
+        source, extra = (
+            predicted["source"],
+            {
+                "flag": "predicted",
+                "note": "NIST ASD has no ground configuration for this element; this is a prediction of relativistic "
+                "calculations, as collected in the cited review.",
+            },
+        )
+        if predicted.get("doi"):
+            extra["doi"] = predicted["doi"]
+        if pub is not None:
+            try:
+                if madelung.parse(pub[z]["configuration"]) != cfg:
+                    report.add(
+                        "Cross-checks",
+                        f"Z={z}: PubChem predicted configuration {pub[z]['configuration']!r} ≠ "
+                        f"{madelung.notation(cfg)!r} (tools/curated/superheavy.toml), which is used.",
+                    )
+            except ValueError:
+                pass
+    elif gsie is not None and z in gsie:
         cfg, source, extra = gsie[z]["config"], "nist_gsie", {}
         if pub is not None:
             try:
@@ -330,12 +385,26 @@ def configuration(z, gsie, pub, report):
     }
 
 
-def ground_term(z, gsie):
+def ground_term(z, gsie, predicted=None, cfg=None):
     if gsie is None:
         return missing("source_unavailable_at_build", "NIST ASD could not be read at build time.")
+    if z not in gsie and predicted and predicted.get("ground_level"):
+        level = fetch_nist_gsie.parse_level(predicted["ground_level"])
+        if abs(level["J"] - predicted["J"]) > 1e-9:
+            raise ValueError(f"Z={z}: superheavy.toml ground level {predicted['ground_level']} and J disagree")
+        level["parity"] = "odd" if sum(k * l for (_n, l), k in cfg.items()) % 2 else "even"
+        level["term"] = level["term"].replace("*", "") + ("*" if level["parity"] == "odd" else "")
+        out = {**level, "source": predicted["source"], "flag": "predicted"}
+        out["note"] = (
+            "Predicted by relativistic calculations; NIST ASD lists no ground level for this element. "
+            "The state is close to jj coupling: the LS label names the level."
+        )
+        if predicted.get("doi"):
+            out["doi"] = predicted["doi"]
+        return out
     if z not in gsie:
         return missing(
-            "predicted_only", "NIST ASD lists no ground level for this element; only theoretical " "predictions exist."
+            "predicted_only", "NIST ASD lists no ground level for this element; only theoretical predictions exist."
         )
     return {**gsie[z]["level"], "source": "nist_gsie"}
 
@@ -361,14 +430,13 @@ def hyperfine_headline(z, symbol, iso, term, hfs_rows):
     if not natural:
         return missing(
             "no_stable_isotope",
-            "No naturally occurring isotope, so there is no reference isotope "
-            "for a ground-state hyperfine splitting.",
+            "No naturally occurring isotope, so there is no reference isotope for a ground-state hyperfine splitting.",
         )
     if is_missing(term):
         return missing(term["reason"], "The ground level J is not available.")
     if term["J"] == 0:
         return missing(
-            "not_applicable", f"The ground level has J = 0 ({pretty_term(term)}): it has no " "hyperfine splitting."
+            "not_applicable", f"The ground level has J = 0 ({pretty_term(term)}): it has no hyperfine splitting."
         )
     with_spin = [x for x in natural if x["I"]]
     if not with_spin:
@@ -380,24 +448,26 @@ def hyperfine_headline(z, symbol, iso, term, hfs_rows):
             "not_measured",
             f"Reference isotope {str(ref['A']).translate(_SUP)}{symbol} (I = {frac(ref['I'])}, "
             f"J = {frac(term['J'])}) has ground-state hyperfine structure, but its splitting is not yet "
-            "in tools/curated/hyperfine.toml (compiled in M2).",
+            "in our curated table (tools/curated/hyperfine.toml).",
         )
-    return {
-        "isotope": ref["A"],
-        "splitting": quantity(
-            row["splitting_Hz"],
-            "Hz",
-            row["source"],
-            unc=row["unc_Hz"],
-            flag="measured" if row["unc_Hz"] else None,
-            note=row.get("note"),
-        ),
-    }
+    splitting = quantity(
+        row["splitting_Hz"],
+        "Hz",
+        row["source"],
+        unc=row.get("unc_Hz"),
+        flag="measured" if row.get("unc_Hz") else None,
+        note=row.get("note"),
+    )
+    if row.get("splitting_text"):
+        splitting["text"] = row["splitting_text"]
+    if row.get("doi"):
+        splitting["doi"] = row["doi"]
+    return {"isotope": ref["A"], "splitting": splitting}
 
 
 def quantum_fact(symbol, cfg_entry, cfg, term, hfs):
     if cfg_entry.get("flag") == "predicted":
-        return f"Predicted ground configuration {madelung.pretty(madelung.valence(cfg))}; " "no measurement exists."
+        return f"Predicted ground configuration {madelung.pretty(madelung.valence(cfg))}; no measurement exists."
     if cfg_entry["anomalous"]:
         a, b = madelung.differing(cfg, madelung.aufbau(sum(cfg.values())))
         return f"Ground state {madelung.pretty(a)} — the Aufbau rule predicts {madelung.pretty(b)}."
@@ -405,13 +475,11 @@ def quantum_fact(symbol, cfg_entry, cfg, term, hfs):
         s = hfs["splitting"]
         value = group_digits(f"{s['value']:.0f}" if float(s["value"]).is_integer() else repr(s["value"]))
         exact = " (exact by definition)" if s.get("unc") == 0 else ""
-        return (
-            f"Ground-state hyperfine splitting of {str(hfs['isotope']).translate(_SUP)}{symbol}: " f"{value} Hz{exact}."
-        )
+        return f"Ground-state hyperfine splitting of {str(hfs['isotope']).translate(_SUP)}{symbol}: {value} Hz{exact}."
     if is_missing(term):
         return "No ground level is listed by NIST for this element."
     if term["coupling"] == "LS":
-        return f"Ground term {pretty_term(term)}: S = {frac(term['S'])}, L = {term['L']}, " f"J = {frac(term['J'])}."
+        return f"Ground term {pretty_term(term)}: S = {frac(term['S'])}, L = {term['L']}, J = {frac(term['J'])}."
     if term["coupling"] == "jj":
         return f"Ground level {pretty_term(term)} in jj coupling: J = {frac(term['J'])}."
     return f"Ground level J = {frac(term['J'])}; NIST assigns no term symbol."
@@ -420,6 +488,77 @@ def quantum_fact(symbol, cfg_entry, cfg, term, hfs):
 def longest_lived(iso):
     timed = [x for x in iso if x["halfLifeS"]]
     return max(timed, key=lambda x: x["halfLifeS"]) if timed else None
+
+
+def element_flags(bipm, symbols) -> dict[int, dict]:
+    """laserCooled, clockSpecies, siHistory, essentialHuman, essentialPlant from the curated tables
+    and the BIPM list. A flag whose table is missing is left out (schema: never default to false)."""
+    by_symbol = {v: k for k, v in symbols.items()}
+    out: dict[int, dict] = {z: {} for z in range(1, NUM_ELEMENTS + 1)}
+    tables = {
+        "laserCooled": ("lasercooling.toml", "row", lambda r: True),
+        "essentialHuman": ("biology.toml", "row", lambda r: r.get("essential_human") == "yes"),
+        "essentialPlant": ("biology.toml", "row", lambda r: r.get("essential_plant") == "yes"),
+    }
+    for flag, (name, table, test) in tables.items():
+        if not (CURATED_DIR / name).exists():
+            continue
+        hits = {r["Z"] for r in curated.load(name, table) if test(r)}
+        for z in out:
+            out[z][flag] = z in hits
+    # Clock species: a secondary representation of the second in the BIPM list, the caesium
+    # definition, or a measured nuclear clock transition (thorium-229).
+    clock = {r["Z"] for r in curated.load("clocks.toml", "clock")}
+    clock |= {by_symbol[i["symbol"]] for i in bipm or [] if i["srs"] and i["symbol"] in by_symbol}
+    si = {r["Z"] for r in curated.load("si_history.toml")}
+    si |= {by_symbol[s] for i in bipm or [] for s, _a in i["elements"] if s in by_symbol}
+    for z in out:
+        out[z]["clockSpecies"] = z in clock
+        out[z]["siHistory"] = z in si
+    return out
+
+
+def hyperfine_rows(bipm, symbols, report) -> dict[tuple[int, int, int], dict]:
+    """hyperfine.toml rows checked against their own A (and B), plus the ground-state hyperfine
+    frequencies in the BIPM list (rubidium-87), which are never typed by hand."""
+    rows = {}
+    for r in curated.load("hyperfine.toml"):
+        key = (r["Z"], r["A"], r.get("charge", 0))
+        if key in rows:
+            raise ValueError(f"hyperfine.toml: {key} listed twice")
+        if "A_MHz" in r:
+            width = curated.hyperfine_width_hz(r)
+            tol = max(3 * (r.get("unc_Hz") or 0), 1e-6 * r["splitting_Hz"], 1.0)
+            if abs(width - r["splitting_Hz"]) > tol:
+                raise ValueError(
+                    f"hyperfine.toml {key}: splitting {r['splitting_Hz']} Hz ≠ {width:.0f} Hz from A and B"
+                )
+        rows[key] = r
+    by_symbol = {v: k for k, v in symbols.items()}
+    for item in bipm or []:
+        t = item["transition"]
+        if item["molecular"] or item["charge"] or not re.search(r"\(F=\d+\).*\(F=\d+\)", t) or item["unit"] > 9:
+            continue
+        lower, _, upper = t.partition(" - ")
+        if re.sub(r"\(F=\d+\)", "", lower).strip() != re.sub(r"\(F=\d+\)", "", upper).strip():
+            continue  # not a hyperfine transition within one level
+        z = by_symbol.get(item["symbol"])
+        value = Decimal(item["valueText"]).scaleb(item["unit"])
+        unc = Decimal(item["uncText"]).scaleb(item["unit"]) / Decimal(repr(item["coverageFactor"]))
+        key = (z, item["A"], 0)
+        if key in rows:
+            report.add("Cross-checks", f"{key}: hyperfine.toml row replaced by the BIPM recommended value.")
+        rows[key] = {
+            "Z": z,
+            "A": item["A"],
+            "charge": 0,
+            "splitting_Hz": float(value),
+            "splitting_text": format(value, "f"),
+            "unc_Hz": float(unc),
+            "source": "bipm_frequencies",
+            "note": f"BIPM recommended value (secondary representation of the second, valid from {item['validFrom']}).",
+        }
+    return rows
 
 
 # --- main ---------------------------------------------------------------------------------
@@ -434,13 +573,19 @@ def build() -> int:
         except (SourceUnavailable, FileNotFoundError, OSError) as exc:
             data[sid] = None
             report.unavailable(sid, str(exc))
-    pub, gsie, awic, iaea, codata, ciaaw = (data[k] for k in PARSERS)
+    pub, gsie, awic, iaea, codata, ciaaw = (
+        data[k] for k in ("pubchem", "nist_gsie", "nist_awic", "iaea_livechart", "nist_codata", "ciaaw")
+    )
     if codata is None:
         raise SystemExit("CODATA constants are required for unit conversion; run the fetchers first.")
     ev_to_kj = fetch_codata.ev_to_kj_per_mol(codata)
 
     names = {row["Z"]: row for row in load_curated("names.toml")}
-    hfs_rows = {(r["Z"], r["A"], r.get("charge", 0)): r for r in load_curated("hyperfine.toml")}
+    hfs_rows = hyperfine_rows(data.get("bipm_frequencies"), {z: pub[z]["symbol"] for z in pub} if pub else {}, report)
+    flags = element_flags(data.get("bipm_frequencies"), {z: pub[z]["symbol"] for z in pub} if pub else {})
+    superheavy: dict[int, dict] = {}
+    for r in curated.load("superheavy.toml"):
+        superheavy.setdefault(r["Z"], {}).update({k: v for k, v in r.items() if k != "Z"} | {"note": r["note"]})
 
     elements = []
     for z in range(1, NUM_ELEMENTS + 1):
@@ -462,8 +607,8 @@ def build() -> int:
         if state_txt.startswith("Expected"):
             report.add("Rules applied", f"Z={z}: standard state {state_txt!r} (PubChem) → unknown.")
 
-        cfg, cfg_entry = configuration(z, gsie, pub, report)
-        term = ground_term(z, gsie)
+        cfg, cfg_entry = configuration(z, gsie, pub, report, superheavy.get(z))
+        term = ground_term(z, gsie, superheavy.get(z), cfg)
         best = longest_lived(iso) if iso else None
         radioactive = not any(x["stable"] for x in iso) if iso else True
         hfs = hyperfine_headline(z, symbol, iso, term, hfs_rows)
@@ -486,7 +631,7 @@ def build() -> int:
         entry.update(
             {
                 "radioactive": radioactive,
-                "ie1": ionization_energy(z, gsie, ev_to_kj),
+                "ie1": ionization_energy(z, gsie, ev_to_kj, superheavy.get(z)),
                 "electronegativityPauling": electronegativity(z, pub),
                 "electronAffinity": pubchem_number(z, pub, "electronAffinity"),
                 "radiusCovalent": covalent_radius(z, pub),
@@ -503,10 +648,17 @@ def build() -> int:
                 "hyperfineHeadline": hfs,
                 "quantumFact": quantum_fact(symbol, cfg_entry, cfg, term, hfs),
                 "images": [],
-                "flags": {"madelungAnomaly": cfg_entry["anomalous"] and cfg_entry.get("flag") != "predicted"},
+                "flags": {
+                    "madelungAnomaly": cfg_entry["anomalous"] and cfg_entry.get("flag") != "predicted",
+                    **flags.get(z, {}),
+                },
             }
         )
         elements.append(entry)
+
+    images = build_images.build_images({e["Z"]: e["name"] for e in elements}, iaea, report)
+    for e in elements:
+        e["images"] = images[e["Z"]]
 
     if awic and ciaaw:
         for z in range(1, NUM_ELEMENTS + 1):

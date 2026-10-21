@@ -1,0 +1,817 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Laser-cooled species and their cooling transitions (SPEC §6.2, §10.6). One row per species
+# (element, isotope or "natural", charge 0 = neutral atom, 1 = singly charged ion).
+#
+# Species list and the first "laser cooled and trapped" reference of each: S. Olmschenk's atom and
+# ion catalogs (olmschenk_catalog, read 2026-10-21). That reference is entered as first_mot (for
+# almost every element it was a magneto-optical trap; the note says where not), or as first_cooled
+# for hydrogen and the ions. BEC and degenerate-Fermi-gas firsts were checked against arXiv reviews
+# (Chomaz et al. 2201.02672; Stellmer et al. 1307.0601; Vassen et al. 1110.1361; Ketterle &
+# Zwierlein 0801.2500). Every year has a DOI, and every DOI was checked against Crossref; years are
+# publication years.
+#
+# wavelength_nm / repump_nm: vacuum wavelengths exactly as NIST ASD prints them (observed where NIST
+# has one, else Ritz; the note says which). The linewidth Γ is NOT typed here: the build takes the
+# Einstein coefficient A_ki of the same line from the fetched NIST data (tools/fetch_nist_lines.py
+# fetches a vacuum window around every wavelength below), and the app computes Doppler and recoil
+# temperatures from Γ, λ and the mass (SPEC §11.3).
+#
+# Columns: Z, A, charge, state ("ground" | "metastable"), lower, upper, wavelength_nm,
+#          wavelength_source, repump_nm, first_cooled_year/_doi, first_mot_year/_doi,
+#          bec_year/_doi, dfg_year/_doi, source, note.
+
+[[row]]
+Z = 1
+A = 1
+charge = 0
+state = "ground"
+lower = "1s 2S1/2"
+upper = "2p 2P3/2"
+wavelength_nm = 121.5668237310
+wavelength_source = "nist_lines"
+first_cooled_year = 1993
+first_cooled_doi = "10.1103/PhysRevLett.70.2257"
+bec_year = 1998
+bec_doi = "10.1103/PhysRevLett.81.3811"
+source = "olmschenk_catalog"
+note = "Lyman-alpha cooling of H already held in a magnetic trap (no MOT). Wavelength is NIST's Ritz value for the 2P3/2 component; NIST's observed 121.56699 nm is the unresolved doublet. The 1998 BEC was reached by evaporative cooling, not laser cooling."
+
+[[row]]
+Z = 2
+A = "natural"
+charge = 0
+state = "metastable"
+lower = "1s2s 3S1"
+upper = "1s2p 3P2"
+wavelength_nm = 1083.3306454
+wavelength_source = "nist_lines"
+first_mot_year = 1992
+first_mot_doi = "10.1209/0295-5075/20/8/003"
+source = "olmschenk_catalog"
+note = "Cooled in the metastable 2 3S1 state. Ritz value; NIST lists no observed wavelength for this component. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The MOT paper's title does not name the isotope."
+
+[[row]]
+Z = 2
+A = 4
+charge = 0
+state = "metastable"
+lower = "1s2s 3S1"
+upper = "1s2p 3P2"
+wavelength_nm = 1083.3306454
+wavelength_source = "nist_lines"
+bec_year = 2001
+bec_doi = "10.1126/science.1060622"
+source = "olmschenk_catalog"
+note = "BEC of metastable 4He reported in 2001 by two groups (Robert et al., Science, cited; Pereira Dos Santos et al., PRL 86, 3459, doi 10.1103/PhysRevLett.86.3459). Ritz value. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 2
+A = 3
+charge = 0
+state = "metastable"
+lower = "1s2s 3S1"
+upper = "1s2p 3P2"
+wavelength_nm = 1083.3306454
+wavelength_source = "nist_lines"
+dfg_year = 2006
+dfg_doi = "10.1103/PhysRevLett.97.080404"
+source = "olmschenk_catalog"
+note = "First degenerate Fermi gas of metastable helium (3He sympathetically cooled by 4He). Ritz value. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 3
+A = 7
+charge = 0
+state = "ground"
+lower = "2s 2S1/2"
+upper = "2p 2P3/2"
+wavelength_nm = 670.961
+wavelength_source = "nist_lines"
+first_mot_year = 1991
+first_mot_doi = "10.1143/JJAP.30.L1324"
+bec_year = 1995
+bec_doi = "10.1103/PhysRevLett.75.1687"
+source = "olmschenk_catalog"
+note = "The 1991 MOT paper trapped both 7Li and 6Li. The 1995 paper reported evidence of BEC; the 1997 follow-up (doi 10.1103/PhysRevLett.78.985) measured the condensate directly. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied. NIST Li I gives 3 decimals."
+
+[[row]]
+Z = 3
+A = 6
+charge = 0
+state = "ground"
+lower = "2s 2S1/2"
+upper = "2p 2P3/2"
+wavelength_nm = 670.961
+wavelength_source = "nist_lines"
+first_mot_year = 1991
+first_mot_doi = "10.1143/JJAP.30.L1324"
+dfg_year = 2001
+dfg_doi = "10.1126/science.1059318"
+source = "olmschenk_catalog"
+note = "Fermi degeneracy of 6Li reached in 2001 by Rice (Science, cited) and ENS Paris (PRL 87, 080403, doi 10.1103/PhysRevLett.87.080403). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 10
+A = "natural"
+charge = 0
+state = "metastable"
+lower = "2p5(2P3/2)3s 2[3/2]2"
+upper = "2p5(2P3/2)3p 2[5/2]3"
+wavelength_nm = 640.4018
+wavelength_source = "nist_lines"
+first_mot_year = 1989
+first_mot_doi = "10.1103/PhysRevA.39.2758"
+source = "olmschenk_catalog"
+note = "Cooled in the metastable 3s [3/2]2 (Paschen 1s5) state. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
+
+[[row]]
+Z = 11
+A = 23
+charge = 0
+state = "ground"
+lower = "3s 2S1/2"
+upper = "3p 2P3/2"
+wavelength_nm = 589.1583264
+wavelength_source = "nist_lines"
+first_mot_year = 1987
+first_mot_doi = "10.1103/PhysRevLett.59.2631"
+bec_year = 1995
+bec_doi = "10.1103/PhysRevLett.75.3969"
+source = "olmschenk_catalog"
+note = "The 1987 paper is the first magneto-optical trap of any atom; BEC 1995, one of the two first BECs. Repumping uses the other ground hyperfine level on the same D2 line, so no separate repump wavelength is given."
+
+[[row]]
+Z = 12
+A = "natural"
+charge = 0
+state = "ground"
+lower = "3s2 1S0"
+upper = "3s3p 1P1"
+wavelength_nm = 285.2965
+wavelength_source = "nist_lines"
+first_mot_year = 1993
+first_mot_doi = "10.1016/0030-4018(93)90645-l"
+source = "olmschenk_catalog"
+note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The paper reports Ramsey spectroscopy on laser cooled and trapped Mg; the isotope is not named in the title. NIST observed value."
+
+[[row]]
+Z = 18
+A = "natural"
+charge = 0
+state = "metastable"
+lower = "3p5(2P3/2)4s 2[3/2]2"
+upper = "3p5(2P3/2)4p 2[5/2]3"
+wavelength_nm = 811.7542
+wavelength_source = "nist_lines"
+first_mot_year = 1990
+first_mot_doi = "10.1143/JJAP.29.L2124"
+source = "olmschenk_catalog"
+note = "Cooled in the metastable 4s [3/2]2 (1s5) state; same paper as Kr. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 19
+A = "natural"
+charge = 0
+state = "ground"
+lower = "4s 2S1/2"
+upper = "4p 2P3/2"
+wavelength_nm = 766.7008906
+wavelength_source = "nist_lines"
+first_mot_year = 1995
+first_mot_doi = "10.1364/JOSAB.12.001393"
+source = "olmschenk_catalog"
+note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The title does not name the isotope. Repumping uses the other ground hyperfine level on the same D2 line."
+
+[[row]]
+Z = 19
+A = 39
+charge = 0
+state = "ground"
+lower = "4s 2S1/2"
+upper = "4p 2P3/2"
+wavelength_nm = 766.7008906
+wavelength_source = "nist_lines"
+bec_year = 2007
+bec_doi = "10.1103/PhysRevLett.99.010403"
+source = "olmschenk_catalog"
+note = "First 39K BEC (2007), reached with Feshbach-tuned interactions and sympathetic cooling by 87Rb. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 19
+A = 41
+charge = 0
+state = "ground"
+lower = "4s 2S1/2"
+upper = "4p 2P3/2"
+wavelength_nm = 766.7008906
+wavelength_source = "nist_lines"
+bec_year = 2001
+bec_doi = "10.1126/science.1066687"
+source = "olmschenk_catalog"
+note = "Potassium BEC reached in 2001 by sympathetic cooling with Rb. The paper title does not name the isotope; 41K follows because the 2007 39K paper says 39K had not yet been condensed. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 19
+A = 40
+charge = 0
+state = "ground"
+lower = "4s 2S1/2"
+upper = "4p 2P3/2"
+wavelength_nm = 766.7008906
+wavelength_source = "nist_lines"
+dfg_year = 1999
+dfg_doi = "10.1126/science.285.5434.1703"
+source = "olmschenk_catalog"
+note = "First degenerate Fermi gas of any atom (1999). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 20
+A = 40
+charge = 0
+state = "ground"
+lower = "4s2 1S0"
+upper = "4s4p 1P1"
+wavelength_nm = 422.792
+wavelength_source = "nist_lines"
+first_mot_year = 1990
+first_mot_doi = "10.1143/JJAP.29.L2127"
+bec_year = 2009
+bec_doi = "10.1103/PhysRevLett.103.130401"
+source = "olmschenk_catalog"
+note = "The 1990 paper (same as Sr) trapped 40,42,43,44Ca on this 1S0-1P1 line. First BEC of a true alkaline-earth element (2009); alkaline-earth-like Yb was first, in 2003. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied. NIST observed value, 3 decimals."
+
+[[row]]
+Z = 24
+A = "natural"
+charge = 0
+state = "ground"
+lower = "3d5 4s 7S3"
+upper = "3d5 4p 7P4"
+wavelength_nm = 425.55493
+wavelength_source = "nist_lines"
+first_mot_year = 1999
+first_mot_doi = "10.1209/epl/i1999-00140-7"
+source = "olmschenk_catalog"
+note = "MOT reported independently by Konstanz (EPL 1999, cited) and NIST (PRA 61, 053407 (2000), doi 10.1103/PhysRevA.61.053407). Wavelength: NIST observed value; NIST Ritz value is 425.553363 nm. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 24
+A = 52
+charge = 0
+state = "ground"
+lower = "3d5 4s 7S3"
+upper = "3d5 4p 7P4"
+wavelength_nm = 425.55493
+wavelength_source = "nist_lines"
+bec_year = 2005
+bec_doi = "10.1103/PhysRevLett.94.160401"
+source = "olmschenk_catalog"
+note = "First chromium BEC (experiment 2004, published 2005). NIST observed value (Ritz 425.553363 nm). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 24
+A = 53
+charge = 0
+state = "ground"
+lower = "3d5 4s 7S3"
+upper = "3d5 4p 7P4"
+wavelength_nm = 425.55493
+wavelength_source = "nist_lines"
+dfg_year = 2015
+dfg_doi = "10.1103/PhysRevA.91.011603"
+source = "olmschenk_catalog"
+note = "First chromium degenerate Fermi gas, via sympathetic cooling (review gives 2014; journal year 2015). NIST observed value (Ritz 425.553363 nm). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 36
+A = 84
+charge = 0
+state = "metastable"
+lower = "4p5(2P3/2)5s 2[3/2]2"
+upper = "4p5(2P3/2)5p 2[5/2]3"
+wavelength_nm = 811.51320
+wavelength_source = "nist_lines"
+first_mot_year = 1990
+first_mot_doi = "10.1143/JJAP.29.L2124"
+source = "olmschenk_catalog"
+note = "Cooled in the metastable 5s [3/2]2 (1s5) state; the paper traps the even isotopes separately and quotes atom numbers for 84Kr. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 37
+A = 87
+charge = 0
+state = "ground"
+lower = "5s 2S1/2"
+upper = "5p 2P3/2"
+wavelength_nm = 780.2414
+wavelength_source = "nist_lines"
+bec_year = 1995
+bec_doi = "10.1126/science.269.5221.198"
+source = "olmschenk_catalog"
+note = "One of the two first BECs of a dilute atomic gas (1995, with Na). No first_mot: the catalog's Rb entry (Walker et al., Phys. Lett. A 163, 309 (1992)) is a vortex-force trap, not a MOT. Repump is on the same D2 line from the other hyperfine level. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 37
+A = 85
+charge = 0
+state = "ground"
+lower = "5s 2S1/2"
+upper = "5p 2P3/2"
+wavelength_nm = 780.2414
+wavelength_source = "nist_lines"
+bec_year = 2000
+bec_doi = "10.1103/PhysRevLett.85.1795"
+source = "olmschenk_catalog"
+note = "85Rb BEC (2000) needed a Feshbach resonance to make interactions repulsive. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 38
+A = 88
+charge = 0
+state = "ground"
+lower = "5s2 1S0"
+upper = "5s5p 1P1"
+wavelength_nm = 460.8622
+wavelength_source = "nist_lines"
+first_mot_year = 1990
+first_mot_doi = "10.1143/JJAP.29.L2127"
+bec_year = 2010
+bec_doi = "10.1103/PhysRevA.81.051601"
+source = "olmschenk_catalog"
+note = "Most-used isotope. The 1990 MOT paper trapped 84, 86, 87 and 88Sr. 88Sr BEC (2010) needed sympathetic cooling with 87Sr. Quantum-gas work adds narrow-line cooling on 1S0-3P1 after this blue MOT. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 38
+A = 84
+charge = 0
+state = "ground"
+lower = "5s2 1S0"
+upper = "5s5p 1P1"
+wavelength_nm = 460.8622
+wavelength_source = "nist_lines"
+first_mot_year = 1990
+first_mot_doi = "10.1143/JJAP.29.L2127"
+bec_year = 2009
+bec_doi = "10.1103/PhysRevLett.103.200401"
+source = "olmschenk_catalog"
+note = "First strontium BEC (2009), Innsbruck (cited) and Rice (PRL 103, 200402, doi 10.1103/PhysRevLett.103.200402) at the same time. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 38
+A = 87
+charge = 0
+state = "ground"
+lower = "5s2 1S0"
+upper = "5s5p 1P1"
+wavelength_nm = 460.8622
+wavelength_source = "nist_lines"
+first_mot_year = 1990
+first_mot_doi = "10.1143/JJAP.29.L2127"
+dfg_year = 2010
+dfg_doi = "10.1103/PhysRevLett.105.030402"
+source = "olmschenk_catalog"
+note = "First strontium degenerate Fermi gas (2010, ten spin states). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 47
+A = "natural"
+charge = 0
+state = "ground"
+lower = "5s 2S1/2"
+upper = "5p 2P3/2"
+wavelength_nm = 328.1625
+wavelength_source = "nist_lines"
+first_mot_year = 2000
+first_mot_doi = "10.1103/PhysRevA.62.063404"
+source = "olmschenk_catalog"
+note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title. NIST observed value (Ritz 328.1629601 nm)."
+
+[[row]]
+Z = 48
+A = "natural"
+charge = 0
+state = "ground"
+lower = "5s2 1S0"
+upper = "5s5p 1P1"
+wavelength_nm = 228.87282
+wavelength_source = "nist_lines"
+first_mot_year = 2007
+first_mot_doi = "10.1103/PhysRevA.76.043411"
+source = "olmschenk_catalog"
+note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
+
+[[row]]
+Z = 54
+A = "natural"
+charge = 0
+state = "metastable"
+lower = "5p5(2P3/2)6s 2[3/2]2"
+upper = "5p5(2P3/2)6p 2[5/2]3"
+wavelength_nm = 882.18324
+wavelength_source = "nist_lines"
+first_mot_year = 1993
+first_mot_doi = "10.1103/PhysRevA.48.R879"
+source = "olmschenk_catalog"
+note = "Cooled in the metastable 6s [3/2]2 (1s5) state; the MOT paper measures isotope shifts, so several isotopes were trapped. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 55
+A = 133
+charge = 0
+state = "ground"
+lower = "6s 2S1/2"
+upper = "6p 2P3/2"
+wavelength_nm = 852.34727586
+wavelength_source = "nist_lines"
+first_mot_year = 1989
+first_mot_doi = "10.1103/PhysRevLett.63.961"
+bec_year = 2003
+bec_doi = "10.1126/science.1079699"
+source = "olmschenk_catalog"
+note = "The 1989 'light-force atom trap' (catalog's first trapping entry) is a MOT. BEC (2003) reached in an optical trap using Feshbach tuning. Repump is on the same D2 line from the other hyperfine level."
+
+[[row]]
+Z = 56
+A = "natural"
+charge = 0
+state = "ground"
+lower = "6s2 1S0"
+upper = "6s6p 1P1"
+wavelength_nm = 553.7018
+wavelength_source = "nist_lines"
+first_mot_year = 2009
+first_mot_doi = "10.1103/PhysRevA.79.041402"
+source = "olmschenk_catalog"
+note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Several repump lasers are needed, so no single repump is given."
+
+[[row]]
+Z = 80
+A = "natural"
+charge = 0
+state = "ground"
+lower = "6s2 1S0"
+upper = "6s6p 3P1"
+wavelength_nm = 253.7283
+wavelength_source = "nist_lines"
+first_mot_year = 2008
+first_mot_doi = "10.1103/PhysRevLett.100.053001"
+source = "olmschenk_catalog"
+note = "Cooled on the 1S0-3P1 intercombination line. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 87
+A = 210
+charge = 0
+state = "ground"
+lower = "7s 2S1/2"
+upper = "7p 2P3/2"
+wavelength_nm = 718.1845
+wavelength_source = "nist_lines"
+first_mot_year = 1996
+first_mot_doi = "10.1103/PhysRevLett.76.3522"
+source = "olmschenk_catalog"
+note = "Radioactive. NIST Fr I value; isotope shift not applied. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 88
+A = 226
+charge = 0
+state = "ground"
+lower = "7s2 1S0"
+upper = "7s7p 3P1"
+wavelength_nm = 714.31853
+wavelength_source = "nist_lines"
+first_mot_year = 2007
+first_mot_doi = "10.1103/PhysRevLett.98.093001"
+source = "olmschenk_catalog"
+note = "Radioactive. Cooled on the 1S0-3P1 intercombination line; the same paper trapped 225Ra and 226Ra. NIST Ra I value; isotope shift not applied. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 88
+A = 225
+charge = 0
+state = "ground"
+lower = "7s2 1S0"
+upper = "7s7p 3P1"
+wavelength_nm = 714.31853
+wavelength_source = "nist_lines"
+first_mot_year = 2007
+first_mot_doi = "10.1103/PhysRevLett.98.093001"
+source = "olmschenk_catalog"
+note = "Radioactive. Same 2007 trapping paper as 226Ra. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 66
+A = "natural"
+charge = 0
+state = "ground"
+lower = "4f10 6s2 5I8"
+upper = "4f10(5I8)6s6p(1P1) (8,1)9"
+wavelength_nm = 421.291
+wavelength_source = "nist_lines"
+first_mot_year = 2010
+first_mot_doi = "10.1103/PhysRevLett.104.063001"
+source = "olmschenk_catalog"
+note = "Broad 421 nm line; NIST observed value (Ritz 421.29015 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 66
+A = 164
+charge = 0
+state = "ground"
+lower = "4f10 6s2 5I8"
+upper = "4f10(5I8)6s6p(1P1) (8,1)9"
+wavelength_nm = 421.291
+wavelength_source = "nist_lines"
+bec_year = 2011
+bec_doi = "10.1103/PhysRevLett.107.190401"
+source = "olmschenk_catalog"
+note = "First BEC of an open-shell lanthanide (2011). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 66
+A = 161
+charge = 0
+state = "ground"
+lower = "4f10 6s2 5I8"
+upper = "4f10(5I8)6s6p(1P1) (8,1)9"
+wavelength_nm = 421.291
+wavelength_source = "nist_lines"
+dfg_year = 2012
+dfg_doi = "10.1103/PhysRevLett.108.215301"
+source = "olmschenk_catalog"
+note = "First degenerate dipolar Fermi gas (2012), sympathetically cooled with 164Dy. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 67
+A = 165
+charge = 0
+state = "ground"
+lower = "4f11 6s2 4I15/2"
+upper = "4f11(4I15/2)6s6p(1P1) (15/2,1)17/2"
+wavelength_nm = 410.500
+wavelength_source = "nist_lines"
+first_mot_year = 2014
+first_mot_doi = "10.1103/PhysRevA.89.041401"
+source = "olmschenk_catalog"
+note = "Only stable isotope. MOTs (catalog's two entries) reported in 2014 by Wisconsin (PRA, cited) and Harvard (New J. Phys. 16, 063070, doi 10.1088/1367-2630/16/6/063070). NIST observed 410.500 nm vs Ritz 410.4954 nm."
+
+[[row]]
+Z = 68
+A = "natural"
+charge = 0
+state = "ground"
+lower = "4f12 6s2 3H6"
+upper = "4f12(3H)6s6p J=7"
+wavelength_nm = 400.909
+wavelength_source = "nist_lines"
+first_mot_year = 2006
+first_mot_doi = "10.1103/PhysRevLett.96.143005"
+source = "olmschenk_catalog"
+note = "Broad 401 nm line; a MOT without repumping. NIST observed value (Ritz 400.90971 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 68
+A = 168
+charge = 0
+state = "ground"
+lower = "4f12 6s2 3H6"
+upper = "4f12(3H)6s6p J=7"
+wavelength_nm = 400.909
+wavelength_source = "nist_lines"
+bec_year = 2012
+bec_doi = "10.1103/PhysRevLett.108.210401"
+source = "olmschenk_catalog"
+note = "First erbium BEC (2012). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 68
+A = 167
+charge = 0
+state = "ground"
+lower = "4f12 6s2 3H6"
+upper = "4f12(3H)6s6p J=7"
+wavelength_nm = 400.909
+wavelength_source = "nist_lines"
+dfg_year = 2014
+dfg_doi = "10.1103/PhysRevLett.112.010404"
+source = "olmschenk_catalog"
+note = "First erbium degenerate Fermi gas, by direct evaporation of a spin-polarised gas. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 69
+A = 169
+charge = 0
+state = "ground"
+lower = "4f13 6s2 2F7/2"
+upper = "4f12(3H5)5d3/2 6s2 (5,3/2)9/2"
+wavelength_nm = 410.7000
+wavelength_source = "nist_lines"
+first_mot_year = 2010
+first_mot_doi = "10.1103/PhysRevA.82.011405"
+bec_year = 2020
+bec_doi = "10.1103/PhysRevA.102.011302"
+source = "olmschenk_catalog"
+note = "Only stable isotope. First thulium BEC (2020). NIST observed value. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 70
+A = "natural"
+charge = 0
+state = "ground"
+lower = "6s2 1S0"
+upper = "6s6p 1P1"
+wavelength_nm = 398.912
+wavelength_source = "nist_lines"
+first_mot_year = 1999
+first_mot_doi = "10.1103/PhysRevA.59.R934"
+source = "olmschenk_catalog"
+note = "Broad 1S0-1P1 line used for the first MOT; narrow-line MOTs use 1S0-3P1 (NIST 555.801 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+
+[[row]]
+Z = 70
+A = 174
+charge = 0
+state = "ground"
+lower = "6s2 1S0"
+upper = "6s6p 1P1"
+wavelength_nm = 398.912
+wavelength_source = "nist_lines"
+bec_year = 2003
+bec_doi = "10.1103/PhysRevLett.91.040404"
+source = "olmschenk_catalog"
+note = "First ytterbium BEC (2003); 174Yb per the 2007 Yb Fermi-gas paper. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 70
+A = 173
+charge = 0
+state = "ground"
+lower = "6s2 1S0"
+upper = "6s6p 1P1"
+wavelength_nm = 398.912
+wavelength_source = "nist_lines"
+dfg_year = 2007
+dfg_doi = "10.1103/PhysRevLett.98.030401"
+source = "olmschenk_catalog"
+note = "First ytterbium degenerate Fermi gas (2007). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+
+[[row]]
+Z = 4
+A = 9
+charge = 1
+state = "ground"
+lower = "2s 2S1/2"
+upper = "2p 2P3/2"
+wavelength_nm = 313.13292
+wavelength_source = "nist_lines"
+first_cooled_year = 1983
+first_cooled_doi = "10.1103/PhysRevLett.50.628"
+source = "olmschenk_catalog"
+note = "Only stable isotope. Wavelength: NIST observed value. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 12
+A = "natural"
+charge = 1
+state = "ground"
+lower = "3s 2S1/2"
+upper = "3p 2P3/2"
+wavelength_nm = 279.6352
+wavelength_source = "nist_lines"
+first_cooled_year = 1978
+first_cooled_doi = "10.1103/PhysRevLett.40.1639"
+source = "olmschenk_catalog"
+note = "Cooled in 1978, the same year as Ba+. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 20
+A = "natural"
+charge = 1
+state = "ground"
+lower = "4s 2S1/2"
+upper = "4p 2P1/2"
+wavelength_nm = 396.959
+wavelength_source = "nist_lines"
+repump_nm = 866.452
+first_cooled_year = 1992
+first_cooled_doi = "10.1364/OL.17.001140"
+source = "olmschenk_catalog"
+note = "Repump 3d 2D3/2 - 4p 2P1/2. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 30
+A = "natural"
+charge = 1
+state = "ground"
+lower = "4s 2S1/2"
+upper = "4p 2P3/2"
+wavelength_nm = 202.61371
+wavelength_source = "nist_lines"
+first_cooled_year = 2003
+first_cooled_doi = "10.1007/s00340-002-1081-7"
+source = "olmschenk_catalog"
+note = "Cooled at 202 nm; paper also measures isotope shifts. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 38
+A = "natural"
+charge = 1
+state = "ground"
+lower = "5s 2S1/2"
+upper = "5p 2P1/2"
+wavelength_nm = 421.6711
+wavelength_source = "nist_lines"
+repump_nm = 1091.7864
+first_cooled_year = 1990
+first_cooled_doi = "10.1364/OL.15.000634"
+source = "olmschenk_catalog"
+note = "Repump 4d 2D3/2 - 5p 2P1/2. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 48
+A = "natural"
+charge = 1
+state = "ground"
+lower = "5s 2S1/2"
+upper = "5p 2P3/2"
+wavelength_nm = 214.50697
+wavelength_source = "nist_lines"
+first_cooled_year = 1997
+first_cooled_doi = "10.1364/OL.22.001353"
+source = "olmschenk_catalog"
+note = "Paper also demonstrates isotope separation in the trap. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 49
+A = "natural"
+charge = 1
+state = "ground"
+lower = "5s2 1S0"
+upper = "5s5p 3P1"
+wavelength_nm = 230.677413
+wavelength_source = "nist_lines"
+first_cooled_year = 1994
+first_cooled_doi = "10.1103/PhysRevA.49.402"
+source = "olmschenk_catalog"
+note = "Cooled on the 1S0-3P1 intercombination line. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 56
+A = "natural"
+charge = 1
+state = "ground"
+lower = "6s 2S1/2"
+upper = "6p 2P1/2"
+wavelength_nm = 493.5454
+wavelength_source = "nist_lines"
+repump_nm = 649.8693
+first_cooled_year = 1978
+first_cooled_doi = "10.1103/PhysRevLett.41.233"
+source = "olmschenk_catalog"
+note = "Cooled in 1978, the same year as Mg+. Repump 5d 2D3/2 - 6p 2P1/2. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 70
+A = "natural"
+charge = 1
+state = "ground"
+lower = "6s 2S1/2"
+upper = "6p 2P1/2"
+wavelength_nm = 369.524
+wavelength_source = "nist_lines"
+first_cooled_year = 1990
+first_cooled_doi = "10.1007/bf00330086"
+source = "olmschenk_catalog"
+note = "The standard 935 nm repump (2D3/2 level) is not in NIST ASD, so repump_nm is left out. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+
+[[row]]
+Z = 80
+A = "natural"
+charge = 1
+state = "ground"
+lower = "6s 2S1/2"
+upper = "6p 2P1/2"
+wavelength_nm = 194.22729
+wavelength_source = "nist_lines"
+source = "olmschenk_catalog"
+note = "The catalog gives no year or reference for the first laser cooling of Hg+, so no milestone is listed."
+
+# ---------------------------------------------------------------------------------------------
+# Catalog species skipped, and milestones deliberately left out
+# ---------------------------------------------------------------------------------------------
+# SKIPPED  Th3+ (ion catalog, Z = 90): triply charged, outside this table's charge 0/1 scope.
+#          The catalog cites Campbell et al., Phys. Rev. Lett. 102, 233004 (2009) (not DOI-checked here).
+# No other catalog species was skipped: all 26 atom-catalog elements and 10 of the 11 ion-catalog
+# elements have rows (several elements have extra isotope rows for BEC / Fermi-gas milestones).
+# LEFT OUT (no row field written, by design):
+#  - first_cooled_year for neutral atoms other than H: the catalog gives one "laser cooled and trapped"
+#    reference per element, which is entered as first_mot; no separately sourced first-cooling paper.
+#  - Rb first_mot: the catalog's Rb paper (Walker, Hoffmann, Feng, Williamson, Phys. Lett. A 163, 309 (1992),
+#    doi 10.1016/0375-9601(92)91017-l, "A vortex-force atom trap") is not a MOT paper, so no first-MOT year.
+#  - Hg+ first_cooled: catalog entry is blank.
+#  - repump_nm for alkalis (same D2 line, other hyperfine level), for Sr, Ba, Cr (several repumps),
+#    and for Yb+ (935 nm line not in NIST ASD).
+#  - Other BEC isotopes (e.g. 86Sr, 170/176Yb, 162/160Dy, 166/170Er) were not added; only the element's first
+#    BEC and first degenerate Fermi gas, plus the main cooling isotope where it differs.

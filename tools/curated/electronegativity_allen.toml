@@ -1,0 +1,576 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# Allen electronegativity as configuration energy CE in eV (NOT Pauling units), transcribed by
+# mendeleev 1.3.0 (MIT), elements.db column elements.en_allen; mendeleev cites Mann2000a and Mann2000
+# for the whole column and states the values were 'taken as reported in eV without converting to
+# Pauling units'. Per-element ref below is INFERRED from block (see README.md):
+#   "Mann 2000a" = Mann, Meek, Allen, J. Am. Chem. Soc. 122, 2780 (2000), doi:10.1021/ja992866e (main group)
+#   "Mann 2000b" = Mann, Meek, Knight, Capitani, Allen, J. Am. Chem. Soc. 122, 5132 (2000), doi:10.1021/ja9928677 (d block)
+# No value is attributed to Allen 1989 (doi:10.1021/ja00207a003): mendeleev does not cite it for this column.
+
+[[row]]
+Z = 1
+chi = 13.61
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "H: CE = 13.61 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper). For an s1 atom CE should equal IE1; NIST IE1 = 13.5984 eV differs by more than rounding - stored value kept, check against the paper."
+
+[[row]]
+Z = 2
+chi = 24.59
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "He: CE = 24.59 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 3
+chi = 5.392
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Li: CE = 5.392 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 4
+chi = 9.323
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Be: CE = 9.323 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 5
+chi = 12.13
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "B: CE = 12.13 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 6
+chi = 15.05
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "C: CE = 15.05 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 7
+chi = 18.13
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "N: CE = 18.13 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 8
+chi = 21.36
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "O: CE = 21.36 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 9
+chi = 24.8
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "F: CE = 24.8 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 10
+chi = 28.31
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Ne: CE = 28.31 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 11
+chi = 5.14
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Na: CE = 5.14 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 12
+chi = 7.646
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Mg: CE = 7.646 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 13
+chi = 9.539
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Al: CE = 9.539 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 14
+chi = 11.33
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Si: CE = 11.33 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 15
+chi = 13.33
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "P: CE = 13.33 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 16
+chi = 15.31
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "S: CE = 15.31 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 17
+chi = 16.97
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Cl: CE = 16.97 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 18
+chi = 19.17
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Ar: CE = 19.17 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 19
+chi = 4.34
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "K: CE = 4.34 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 20
+chi = 6.113
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Ca: CE = 6.113 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 21
+chi = 7.042
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Sc: CE = 7.042 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 22
+chi = 8.17
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Ti: CE = 8.17 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 23
+chi = 9.063
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "V: CE = 9.063 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 24
+chi = 9.77
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Cr: CE = 9.77 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 25
+chi = 10.34
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Mn: CE = 10.34 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 26
+chi = 10.64
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Fe: CE = 10.64 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 27
+chi = 10.86
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Co: CE = 10.86 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 28
+chi = 11.13
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Ni: CE = 11.13 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 29
+chi = 10.96
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Cu: CE = 10.96 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 30
+chi = 9.395
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Zn: CE = 9.395 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3)). Group 12 assumed to be in the d-block paper (not checked against the paper)."
+
+[[row]]
+Z = 31
+chi = 10.39
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Ga: CE = 10.39 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 32
+chi = 11.8
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Ge: CE = 11.8 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 33
+chi = 13.08
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "As: CE = 13.08 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 34
+chi = 14.34
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Se: CE = 14.34 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 35
+chi = 15.88
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Br: CE = 15.88 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 36
+chi = 17.54
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Kr: CE = 17.54 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 37
+chi = 4.177
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Rb: CE = 4.177 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 38
+chi = 5.695
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Sr: CE = 5.695 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 39
+chi = 6.631
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Y: CE = 6.631 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 40
+chi = 7.808
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Zr: CE = 7.808 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 41
+chi = 8.34
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Nb: CE = 8.34 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 42
+chi = 8.71
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Mo: CE = 8.71 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 43
+chi = 8.94
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Tc: CE = 8.94 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 44
+chi = 9.1
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Ru: CE = 9.1 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 45
+chi = 9.259
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Rh: CE = 9.259 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 46
+chi = 9.402
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Pd: CE = 9.402 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 47
+chi = 11.05
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Ag: CE = 11.05 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 48
+chi = 8.995
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Cd: CE = 8.995 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3)). Group 12 assumed to be in the d-block paper (not checked against the paper)."
+
+[[row]]
+Z = 49
+chi = 9.793
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "In: CE = 9.793 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 50
+chi = 10.79
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Sn: CE = 10.79 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 51
+chi = 11.74
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Sb: CE = 11.74 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 52
+chi = 12.76
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Te: CE = 12.76 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 53
+chi = 13.95
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "I: CE = 13.95 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 54
+chi = 15.27
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Xe: CE = 15.27 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 55
+chi = 3.898
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Cs: CE = 3.898 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper). For an s1 atom CE should equal IE1; NIST IE1 = 3.8939 eV differs by more than rounding - stored value kept, check against the paper."
+
+[[row]]
+Z = 56
+chi = 5.211
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Ba: CE = 5.211 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 71
+chi = 6.455
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Lu: CE = 6.455 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 72
+chi = 6.83
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Hf: CE = 6.83 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 73
+chi = 7.93
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Ta: CE = 7.93 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 74
+chi = 8.67
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "W: CE = 8.67 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 75
+chi = 9.46
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Re: CE = 9.46 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 76
+chi = 9.78
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Os: CE = 9.78 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 77
+chi = 9.96
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Ir: CE = 9.96 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 78
+chi = 10.16
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Pt: CE = 10.16 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 79
+chi = 11.33
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Au: CE = 11.33 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3))."
+
+[[row]]
+Z = 80
+chi = 10.44
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000b"
+note = "Hg: CE = 10.44 eV as stored by mendeleev 1.3.0; ref inferred from block (d-block paper (groups 3-12, Lu in group 3)). Group 12 assumed to be in the d-block paper (not checked against the paper)."
+
+[[row]]
+Z = 82
+chi = 10.97
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Pb: CE = 10.97 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 83
+chi = 11.9
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Bi: CE = 11.9 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 84
+chi = 13.0
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Po: CE = 13.0 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 85
+chi = 14.1
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "At: CE = 14.1 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."
+
+[[row]]
+Z = 86
+chi = 15.4
+unit = "eV"
+source = "allen_en"
+ref = "Mann 2000a"
+note = "Rn: CE = 15.4 eV as stored by mendeleev 1.3.0; ref inferred from block (main-group paper)."

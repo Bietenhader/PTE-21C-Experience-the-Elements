@@ -117,3 +117,37 @@ def parse() -> dict[int, dict]:
                 "refs": get(row, "References"),
             }
     return out
+
+
+def parse_ladder() -> dict[int, list[dict]]:
+    """{Z: [{stage, prefix, ie_eV (str), unc_eV (str), refs}]} — every ionization stage NIST lists,
+    stage 1 = removing the first electron from the neutral atom."""
+    out: dict[int, list[dict]] = {}
+    with raw_path(SOURCE, CSV_FILE).open(encoding="utf-8") as fh:
+        reader = csv.reader(fh)
+        header = [h.strip() for h in next(reader)]
+        col = {name: i for i, name in enumerate(header)}
+
+        def get(row: list[str], name: str) -> str:
+            key = next(k for k in col if k.startswith(name))
+            return row[col[key]].strip().removeprefix("=").strip('"').strip()
+
+        for row in reader:
+            if len(row) < len(header) - 1:
+                continue
+            ie = get(row, "Ionization Energy")
+            if not ie:
+                continue
+            z = int(get(row, "At. num"))
+            out.setdefault(z, []).append(
+                {
+                    "stage": int(get(row, "Ion Charge")) + 1,
+                    "prefix": get(row, "Prefix"),
+                    "ie_eV": ie,
+                    "unc_eV": get(row, "Uncertainty"),
+                    "refs": get(row, "References"),
+                }
+            )
+    for stages in out.values():
+        stages.sort(key=lambda s: s["stage"])
+    return out

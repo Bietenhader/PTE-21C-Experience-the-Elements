@@ -76,7 +76,11 @@ def retrieved_date(source_id: str) -> str | None:
 
 
 def http_get(source_id: str, url: str, filename: str, *, refresh: bool = False, timeout: float = 120) -> Path:
-    """Return the cached raw file for `url`, downloading it first if needed."""
+    """Return the cached raw file for `url`, downloading it first if needed.
+
+    A 429 (too many requests) is answered by waiting as long as the server's Retry-After asks
+    (Wikimedia shares its limit across everyone behind one address), up to RATE_LIMIT_TRIES times.
+    """
     path = raw_path(source_id, filename)
     if path.exists() and not refresh:
         return path
@@ -84,7 +88,8 @@ def http_get(source_id: str, url: str, filename: str, *, refresh: bool = False, 
     host = urllib.parse.urlparse(url).hostname or ""
     interval = HOST_INTERVAL.get(host, DEFAULT_INTERVAL)
     last_error: Exception | None = None
-    for attempt in range(4):
+    attempt = rate_limited = 0
+    while attempt < 4:
         wait = _last_request.get(host, 0) + interval - time.monotonic()
         if wait > 0:
             time.sleep(wait)
@@ -100,12 +105,46 @@ def http_get(source_id: str, url: str, filename: str, *, refresh: bool = False, 
             return path
         except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
             last_error = exc
-            if isinstance(exc, urllib.error.HTTPError) and exc.code in (400, 401, 403, 404):
+            if isinstance(exc, urllib.error.HTTPError) and exc.code == 429 and rate_limited < RATE_LIMIT_TRIES:
+                rate_limited += 1
+                time.sleep(_retry_after(exc.headers.get("Retry-After")))
+                continue
+            if isinstance(exc, urllib.error.HTTPError) and exc.code in (400, 401, 403, 404, 429):
                 break  # not transient
             time.sleep(2**attempt)
+            attempt += 1
     if path.exists():
         return path  # stale cache beats nothing
     raise SourceUnavailable(f"{source_id}: {url} → {last_error}")
+
+
+RATE_LIMIT_TRIES = 30
+
+
+def _retry_after(header: str | None) -> float:
+    try:
+        return min(120.0, max(1.0, float(header or 5))) + 1
+    except ValueError:
+        return 10.0
+
+
+def element_symbols() -> dict[int, str]:
+    """{Z: symbol} from the cached PubChem table (fetched first by the pipeline), else from IAEA."""
+    table = raw_path("pubchem", "periodictable.json")
+    if table.exists():
+        doc = json.loads(table.read_text(encoding="utf-8"))
+        cols = doc["Table"]["Columns"]["Column"]
+        zi, si = cols.index("AtomicNumber"), cols.index("Symbol")
+        return {int(r["Cell"][zi]): r["Cell"][si] for r in doc["Table"]["Row"]}
+    iaea = raw_path("iaea_livechart", "ground_states.csv")
+    if iaea.exists():
+        out: dict[int, str] = {}
+        for line in iaea.read_text(encoding="utf-8").splitlines()[1:]:
+            z, _n, sym = line.split(",")[:3]
+            if z != "0":
+                out[int(z)] = sym
+        return out
+    raise SourceUnavailable("element symbols: neither PubChem nor IAEA is cached; fetch those first")
 
 
 # --- Quantity / Missing -------------------------------------------------------------------

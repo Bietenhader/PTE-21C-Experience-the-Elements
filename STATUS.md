@@ -1,15 +1,21 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M1 — Table interaction · **built; pull request open, waiting for Fin's review**
+**Current milestone:** M1 — Table interaction · **complete** (merged 2026-10-21; the site is live)
 **Last updated:** 2026-10-21
-**Next:** M2 (data complete for v0.1), after Fin merges M1.
+**Next:** M2 (data complete for v0.1), when Fin gives the go-ahead.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
-## For Fin: what to look at
+## After the merge (2026-10-21)
+
+Checked on the live site, desktop and phone: all 118 tiles, the zoom tip, a layout switch and an element
+sheet work; no request goes to any other site; no errors. The nightly all-browser run starts tonight; its
+results appear under *Actions → Nightly browsers*.
+
+## For Fin: what to look at (M1 review, done)
 
 1. **The 30-second recording** of the layouts morphing, at the top of the pull request (also
    `docs/media/m1-morph.mp4`), and the screenshots below it.

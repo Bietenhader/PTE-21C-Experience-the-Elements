@@ -172,7 +172,8 @@ export function formatValue(value: number, unit: string): string {
     case "K":
     case "°C":
     case "pm":
-      return significant(Math.round(value), 6);
+      // Whole numbers, except below 100 where that would hide the digits that matter (He melts at 0.95 K).
+      return Math.abs(value) < 100 ? significant(value, 2) : significant(Math.round(value), 6);
     case "eV":
       return significant(Number(value.toFixed(2)), 6);
     case "s":

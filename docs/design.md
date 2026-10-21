@@ -10,14 +10,17 @@ cheap.
 ## Tokens
 
 All colour, type and spacing live in [`src/app/tokens.css`](../src/app/tokens.css): page surfaces and text,
-tile ink, ten category fills and ten accents per palette, four block colours, three font stacks, spacing,
-and the table geometry (`--tile-full`, `--tile-min`, `--tile-aspect`). `src/app/palette.test.ts` fails if
-any tile text — normal or muted — drops below 4.5:1 on any category fill, in either palette or theme, or if
-a hover accent drops below the 3:1 non-text minimum.
+tile ink, ten category fills and ten accents per palette, four block colours, eight map tones and the
+hatching for missing values, three font stacks, spacing, and the table gaps. Tile width and proportions come
+from the zoom (`src/table/zoom.ts`). `src/app/palette.test.ts` fails if any tile text — normal or muted —
+drops below 4.5:1 on any category fill or map tone, in either palette or theme, or if a hover accent drops
+below the 3:1 non-text minimum.
 
 - **Palettes:** *Campion* (hues close to the reference table, darkened until the tile text passes) and
-  *Colour-safe* (hues from Okabe & Ito, distinguishable with deuteranopia and protanopia). The switch is a
-  setting in M1.
+  *Colour-safe* (hues from Okabe & Ito, distinguishable with deuteranopia and protanopia), chosen in
+  Settings.
+- **Heatmaps** use viridis with black or white text, whichever reads better; **maps** use eight muted tones
+  after Okabe & Ito and always print a short label on each tile.
 - **Blocks** use Janet's classic colours: s red, p yellow, d blue, f green — a thin bar along each tile's
   bottom, with the letter on full-size tiles, so the block is never carried by colour alone.
 - **Forced-colours mode** (Windows High Contrast): tiles get a visible border and the block bar a system colour.
@@ -46,3 +49,17 @@ a page uses them).
 ```
 
 Below 110 px the tile keeps Z, symbol, name and configuration; below 60 px, Z and symbol.
+
+## Motion and overlays (M1)
+
+- **The morph** is the hero animation: tiles fly on ease-in-out curves, staggered by Z so the eye can follow
+  a period; labels cross-fade. Settings → Motion offers *follow my system*, *reduce* and *full*; reduced means
+  no animation at all, not a faster one.
+- **The hover card** is a small raised panel beside the tile: photo strip (an honest placeholder until M2),
+  symbol in its category colour, name, Z, category, state, the one-line quantum fact, and how to pin it.
+- **The sheet** fills 92 % of a desktop screen over a dimmed backdrop, or the whole phone screen as a bottom
+  sheet that slides up (fades in on desktop). Header with photos, symbol, name and facts; then tabs, arrows
+  and dots over the swipeable panel strip.
+- **Trend arrows** are drawn in the page's text colour above and beside the table, never over the tiles;
+  exception markers are small numbered discs in the focus colour.
+

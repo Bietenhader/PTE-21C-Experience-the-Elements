@@ -9,15 +9,33 @@ A quantum-aware, photographic periodic table for the web. Every element gets its
 its nucleus and its place in the physics of measurement — and **every number on screen has a source**. Where
 nothing has been measured, the table says so and says why, instead of showing a plausible guess.
 
-> **Status: milestone M0 (skeleton).** The table renders all 118 elements from real, sourced data. Hover
-> cards, the four layouts, trends, search and the element sheets with their eleven panels arrive in
-> milestones M1–M4. See [STATUS.md](STATUS.md).
+> **Status: milestone M1 (table interaction).** All 118 elements from real, sourced data, in four layouts
+> that morph into one another, with trend arrows, heatmaps and maps, search, hover cards, pinch-zoom and the
+> frame of the element sheet. Photographs, the eleven panels' contents and the remaining data arrive in
+> milestones M2–M4. See [STATUS.md](STATUS.md).
 
-![The table on a desktop screen, compact tiles](docs/screenshots/m0-desktop.png)
+![The four layouts morphing into one another](docs/media/m1-morph.webp)
 
-| Full-size tiles | Phone |
+| Heatmap (melting point, long form) | Phone |
 |---|---|
-| ![Full-size tiles: rubidium to rutherfordium](docs/screenshots/m0-desktop-full-tiles.png) | ![The table on a phone](docs/screenshots/m0-phone.png) |
+| ![Melting-point heatmap in the 32-column long form](docs/screenshots/m1-desktop-heatmap.png) | ![The table on a phone](docs/screenshots/m1-phone-table.png) |
+
+## Using it
+
+- **Layouts:** *Standard* (18 columns), *Long form* (32 columns), *Janet* (left-step, rows by n + l) and
+  *ADOMAH* (rows by n). Tiles fly to their new places; with reduced motion the switch is instant.
+- **Group 3:** lutetium and lawrencium (the IUPAC default) or lanthanum and actinium.
+- **Trend:** eleven arrow trends with their causes and exceptions, twelve heatmaps (any one can be shown as a
+  chart or a table) and eight maps.
+- **Search:** a name, a symbol, an atomic number, a group of elements ("noble gas", "radioactive") or a
+  comparison ("ionization > 1000", "melting < 0 °C"). Enter opens the first match.
+- **Zoom:** pinch, Ctrl/⌘ + scroll, double-tap the background, or the zoom buttons. Bigger tiles show more.
+- **Hover** a tile (or focus it with Tab, or press and hold on a phone) for a quick card; **click** it for the
+  element's sheet, which has a tab for each of the eleven panels. Every view has its own link
+  (e.g. `#/Cs/amo`).
+- **Keyboard:** Tab follows Z, arrow keys move across the table, Enter opens, Esc closes, `/` search, `L`
+  next layout, `T` trend menu (the single-key shortcuts can be turned off in Settings).
+- **Settings:** dark or light, two colour palettes (one colour-blind safe), kJ/mol or eV, K or °C, motion.
 
 ## What a tile shows
 
@@ -41,7 +59,8 @@ or the physical reason an element has none.
    right-click the file, choose **Open**, then **Open** again. It installs what it needs (once) and opens the
    app in your browser. Close the Terminal window to stop it.
 
-For developers: `npm install`, then `npm run dev | build | preview | test | test:e2e | lint | typecheck`.
+For developers: `npm install`, then `npm run dev | build | preview | test | test:e2e | lint | typecheck`,
+and `npm run lighthouse` after a build for the performance budgets.
 
 ## Where the data comes from
 

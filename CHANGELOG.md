@@ -5,6 +5,27 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added — milestone M1 (table interaction)
+
+- Four layouts with a FLIP morph (600 ms, 8 ms stagger by Z, labels cross-fading; instant with reduced
+  motion) and the group-3 toggle.
+- Pan and zoom: native scrolling, pinch, Ctrl/⌘ + wheel, Safari gestures, double-tap, a zoom bar; tiles
+  disclose more fields as they grow.
+- Trends: all eleven arrow trends of SPEC §8.1 with exceptions, twelve heatmaps with a chart and table view,
+  eight categorical maps; new data for them (electron affinity, covalent and van der Waals radii, melting
+  and boiling points, density, discovery year, stable isotopes, longest half-life) in `index.json` and
+  `trends.json`.
+- Search with keywords and numeric comparisons; hover card (hover, focus, long-press); the element sheet's
+  frame (modal on desktop, bottom sheet on phones, swipeable panel strip, tabs, ←/→, deep links) with eleven
+  placeholder panels; settings dialog; hash routing; keyboard navigation and shortcuts.
+- A prerendered table in `index.html`, hydrated by the app; Lighthouse budgets in CI; a nightly end-to-end
+  run on Chromium, Firefox and WebKit.
+
+### Changed
+
+- The long-form caption describes the La/Ac variant accurately.
+- Tile names end "Press Enter for details." now that Enter opens the sheet.
+
 ### Added — milestone M0 (skeleton)
 
 - Data pipeline (`tools/`): fetchers for PubChem, NIST ASD ionization energies, NIST AWIC, IAEA LiveChart,

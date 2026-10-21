@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M0 — Skeleton · **complete** (merged 2026-10-20; the site is live)
-**Last updated:** 2026-10-20
-**Next:** M1 (table interaction), when Fin gives the go-ahead.
+**Current milestone:** M1 — Table interaction · **built; pull request open, waiting for Fin's review**
+**Last updated:** 2026-10-21
+**Next:** M2 (data complete for v0.1), after Fin merges M1.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
@@ -11,40 +11,60 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ## For Fin: what to look at
 
-- **The live site:** https://bietenhader.github.io/PTE-21C-Experience-the-Elements/ — published automatically
-  whenever `main` changes. (The one-time Pages switch, F2, is done.)
-- **The launcher on your Mac,** if you have not tried it yet: in the project folder, right-click
-  **`PTE-21C.command`** → **Open** → **Open** (macOS asks only the first time). It needs Node.js 22 once
-  (`brew install node@22`); the launcher tells you if it is missing.
+1. **The 30-second recording** of the layouts morphing, at the top of the pull request (also
+   `docs/media/m1-morph.mp4`), and the screenshots below it.
+2. **Merge when you are happy** (green "Merge pull request" button on the pull request page). The live site,
+   https://bietenhader.github.io/PTE-21C-Experience-the-Elements/, updates by itself about two minutes later,
+   and you can try everything there — on your computer and on your phone. Anything you do not like after
+   merging, tell me and I fix it; merging does not lock anything in.
+3. **Things worth trying on the live site:** switch the four layouts; choose a trend (try *First ionization
+   energy* as arrows, then as a heatmap); type `ionization > 1000` in the search box; hover a tile, then click
+   it; on the phone, pinch the table, press and hold a tile, tap a tile and swipe between the panels.
+4. **One question for you** (below, "Open question"). The default is in place, so nothing waits on it.
 
-## M0 acceptance criteria (SPEC §18)
+## M1 acceptance criteria (SPEC §18)
 
 | Criterion | State |
 |---|---|
-| Repo files from §4.2 | Done for everything M0 uses. Folders whose content belongs to later milestones (hover card, sheet, panels, images, isotope/spectra files, trends) are created when that content exists. |
-| Vite/React/TS app renders 118 tiles in `standard18` | Done |
-| … from `index.json` built by the PubChem, NIST GSIE and NIST AWIC fetchers + `build_layouts.py` | Done, plus three more fetchers M0 needed (IAEA, CODATA, CIAAW — see note 7) |
-| Schema + sources registry | Done (`schema/`, `tools/sources.toml` → `public/data/sources.json`) |
-| Every tile shows weight or (mass number), Z, IE₁, EN, oxidation states, symbol, name, configuration with ◆ | Done — all fields on full-size tiles; smaller tiles show fewer, as SPEC §7.1 prescribes |
-| Hyperfine slot renders `Missing` correctly | Done: 1 value (Cs-133), 24 *not applicable* (J = 0 or I = 0), 34 *no stable isotope*, 59 *not yet in the curated table* (decision 3) |
-| Schema and coverage tests pass | Done: 74 pipeline tests, 80 unit tests, 14 end-to-end tests pass locally |
-| CI green | Done: all three jobs green on the pull request and again on `main` after the merge |
-| Site live on Pages | Done: deployed on merge; checked in a browser — 118 tiles, no request to any other site, no errors |
-| `PTE-21C.command` works | Tested from a fresh copy (installs, starts, serves the table). Tested on Linux, not yet on a Mac |
+| Layout morphing across all four layouts | Done — FLIP morph, 600 ms, 8 ms stagger by Z, labels cross-fade; instant with reduced motion |
+| Group-3 toggle | Done — moves exactly La, Lu, Ac, Lr in the standard form; in the long form La↔Lu and Ac↔Lr change places between group 3 and the block (see the open question) |
+| Trends: all arrows, ≥ 10 heatmaps, ≥ 6 maps | Done — 11 arrow trends, 12 heatmaps (each also as a chart and a table), 8 maps |
+| Search | Done — names, symbols, Z, groups of elements and comparisons such as `ionization > 1000` |
+| Hover card (with placeholders) | Done — on hover, keyboard focus and long-press; an honest photo placeholder until M2 |
+| Pan/zoom | Done — pinch, trackpad, Ctrl/⌘ + scroll, double-tap, zoom buttons |
+| Mobile sheet shell | Done — bottom sheet on phones, modal on desktops; eleven swipeable panels (placeholders until M3/M4) |
+| Routing, settings, keyboard navigation | Done |
+| §13.3 tests for hover, layout, group 3, trends, mobile, routing pass | Done on Chromium, desktop and Android phone: 71 end-to-end tests pass. Firefox, Safari/WebKit and iPhone run in the new nightly job (not installable in this environment; first results after the merge) |
+| axe clean | Done — no critical or serious findings on the table (plain, every overlay kind, during a search), the settings dialog, and the sheet for Fe, Cs, U and Og |
+| Lighthouse budgets met | Done — mobile score 95–96 (budget ≥ 90), initial JavaScript 103 kB (≤ 300 kB), `index.json` 20 kB (≤ 150 kB), first table paint 1.23 s with phone throttling applied (< 1.5 s). Checked by a new CI job |
+| 30-second screen recording of the morph in the PR | Done (`docs/media/m1-morph.mp4`, animated preview `m1-morph.webp`) |
+
+Also: 151 unit tests and 84 pipeline tests pass; lint, type checks and the licence audit are clean.
 
 ## What changed this session
 
-- **Data pipeline** in `tools/`: six fetchers (PubChem, NIST ASD ionization energies, NIST AWIC, IAEA
-  LiveChart, CODATA 2022, IUPAC CIAAW), the build, the four layouts, the reports. Every source was reachable
-  from the cloud environment; nothing is marked `source_unavailable_at_build`. Raw data retrieved 2026-10-20.
-- **Data** in `public/data/`: `index.json` (118 elements, 13.6 kB compressed), `sources.json`, four layouts.
-  `tools/build-report.md` lists every disagreement between sources and every rule the build applied.
-- **The app**: the standard 18-column table, tiles with the reference table's fields and the hyperfine slot,
-  legend, block map, a "how to read a tile" key, dark theme, self-hosted fonts, a Compact / Full-size switch.
-- **Checks**: tests for schema, provenance, coverage, golden values and layouts; unit tests; end-to-end tests
-  including "no request leaves the site" and an accessibility scan (axe); a licence audit of dependencies.
-- **CI and deployment** workflows, the two launchers, README, NOTICE, CONTRIBUTING, CHANGELOG and five docs.
-  All decisions marked IMPLEMENTER'S CHOICE are recorded in `docs/approach.md`.
+- **Data for the trends:** `index.json` gained electron affinity, covalent and van der Waals radii, melting
+  and boiling points, density, year of discovery (PubChem), number of stable isotopes and longest half-life
+  (IAEA) — each with its source or a reasoned *Missing*. `trends.json` holds the arrow trends (causes and
+  exceptions in our own words), the heatmaps and the maps; the pipeline checks the arrow claims the data
+  can test (e.g. the ionization-energy dips at B, O, Al, S).
+- **The interactive table:** layouts and morph, group 3, zoom, trends, search, hover card, the sheet frame
+  with eleven placeholder panels, settings, links for every view, keyboard navigation and shortcuts.
+- **Speed:** the table is now drawn into the page at build time, so phones see it before any script has run;
+  the app then takes it over without redrawing it.
+- **Checks:** new unit and end-to-end tests, the Lighthouse budget job, and a nightly run on all browsers.
+- **Docs:** `docs/approach.md` (every M1 decision), `design.md`, `layouts.md`, README, CHANGELOG.
+
+## Open question for Fin
+
+**Long form with La and Ac in group 3.** The spec says the long form keeps its inline block 14 cells wide
+with the group-3 column to its right, and that the toggle swaps La↔Lu (and Ac↔Lr) "between the group-3
+column and the block" while Ce–Yb shift one column. That is what is built — but it means that with La/Ac in
+group 3, lanthanum stands to the *right* of lutetium, out of atomic-number order. Many printed 32-column
+tables instead move the whole group-3 column (Sc, Y, La, Ac) to the *left* of the block, which keeps the order
+but means the toggle moves Sc and Y rather than La and Lu. **Default:** keep the spec's version (the caption
+now describes it truthfully). Say the word if you prefer the other; it is a small change to
+`tools/build_layouts.py` and its tests.
 
 ## FIN items — defaults in use (SPEC §19)
 
@@ -58,41 +78,35 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ## Decisions made — Fin, 2026-10-20: "use the defaults"
 
-1. **Atomic weights stay with NIST AWIC**, as the spec says. NIST's table is IUPAC's 2013 edition; the 22
-   values IUPAC (CIAAW) has revised since — argon and lead are now ranges — keep being listed in
-   `tools/build-report.md` on every pipeline run.
-2. **Elements 109–118 keep today's honest handling:** the *predicted* configuration (marked †, source
-   PubChem/Los Alamos) and `Missing{predicted_only}` for IE₁ and the ground term, since NIST's database stops
-   at hassium (108). Consequence to revisit at M2: the SPEC §13.1 targets "ground term for all 118" and
-   "IE₁ for ≥ 110" cannot be met from NIST alone. They stay in `tools/coverage.toml` as written, and at M2 I
-   will bring a concrete proposal (a cited table of theoretical values, flagged as predictions) rather than
-   quietly lowering them.
-3. **The spec's wording stays:** `not_measured` also covers "measured, but not yet in our curated table", so
-   *hfs n/m* remains on tiles until M2 fills the hyperfine table; the hover text says which case applies.
+1. **Atomic weights stay with NIST AWIC**, as the spec says; the 22 values IUPAC has revised since keep being
+   listed in `tools/build-report.md`.
+2. **Elements 109–118 keep today's honest handling** (predicted configuration marked †, `Missing` for IE₁ and
+   the ground term). At M2 I bring a concrete proposal for the SPEC §13.1 targets that NIST alone cannot meet.
+3. **The spec's wording stays:** *hfs n/m* also covers "not yet in our curated table" until M2.
 
 ## Notes (things that differ from what you might expect)
 
-4. **Technetium shows (97), not the familiar (98).** The spec takes the mass number of the longest-lived
-   isotope from IAEA, and IAEA gives Tc-97 4.21 million years against Tc-98's 4.2 million. Both values are
-   uncertain; the tile follows the rule and the hover text explains.
-5. **Hydrogen's ionization energy is in parentheses, (1312).** NIST marks its hydrogen value as theoretical,
-   and the tile keeps NIST's markers: ( ) theoretical, [ ] semi-empirical.
-6. **On a phone, compact tiles scroll sideways a little.** Accessibility rules (WCAG 2.2) require touch
-   targets of at least 24 × 24 px, which is wider than 1/18 of a phone screen. Pinch-zoom in M1 makes this
-   smooth.
-7. **More sources than the M0 list.** IAEA (mass numbers, spins), CODATA (exact eV ↔ kJ/mol), IUPAC CIAAW (one
-   display value for elements whose weight is a range), the SI Brochure (caesium's exact value) and the IUPAC
-   Red Book (spellings *aluminium*, *caesium*). Reasons in `docs/approach.md`.
-8. **Tile names for screen readers** include the symbol: "Caesium (Cs), atomic number 55, alkali metal." —
-   so voice-control users can say "click Cs". "Press Enter for details." is added when the sheet exists (M3).
-9. **Only caesium has a hyperfine value in M0** — it is exact by the definition of the second. The rest of the
-   curated hyperfine table (SPEC §6.2) is compiled and checked against primary papers in M2.
+4. **A slip from M0, fixed:** M0 used IAEA data (mass numbers, nuclear spins) but the sources list still marked
+   IAEA "not yet used". Now that numbers on screen cite it, it is marked as used.
+5. **Arrows point the way a property grows.** For ionization energy the down-a-group arrow therefore points
+   *up*, labelled "decreases down a group" as in the spec's table; the legend says so.
+6. **"laser-cooled" and "clock" in the search** answer "no data yet" — that data arrives with the AMO tables
+   in M2. The search says so rather than finding nothing silently.
+7. **Shortcuts can be switched off.** `/`, `L` and `T` work as the spec says; accessibility rules (WCAG 2.1.4)
+   require that single-key shortcuts can be turned off, so Settings has a switch.
+8. **Helium's melting point shows 0.95 K** — PubChem's value, which needs pressure (helium does not freeze at
+   normal pressure). PubChem gives no note; the curated physical data in M2 will add one.
+9. **Elements without a value are hatched** on every heatmap and say why (e.g. *n/m*, *pred. only*), never 0 or
+   a blank.
+10. **On a phone the standard table is a little wider than the screen** at the smallest tile size (24 px, the
+    accessibility minimum); swipe sideways or pinch.
 
 ## Known issues and housekeeping
 
-- ESLint 9 (a developer tool) is past end of life, but the accessibility lint plugin does not support
-  ESLint 10 yet. Harmless for the app; revisit in M1.
-- The full end-to-end browser matrix (Safari/WebKit, Firefox, iPhone) and the nightly job come with M1;
-  M0 tests Chromium on a desktop and an Android phone profile.
-- Citations of sources not used yet (M2 and later) are recorded as given in the spec; each is checked when
-  its data is transcribed.
+- Firefox, Safari/WebKit and iPhone have not been tested yet — this environment can only run Chromium. The
+  nightly job covers them from the first night after the merge; any failure there becomes my first task.
+- Swipe, pinch and long-press are tested with real touch events on Chromium only (WebKit has no way to
+  script them); on iPhone they rely on the same code paths, plus Safari's own gesture events for pinch.
+- ESLint 9 (a developer tool) is past end of life, but the accessibility lint plugin still does not support
+  ESLint 10. Harmless for the app; revisited each milestone.
+- Lighthouse scores vary by a few points between machines; the CI job's numbers are in its log and report.

@@ -89,6 +89,8 @@ describe("number formatting", () => {
     expect(formatValue(8.988e-5, "g/cm³")).toBe("9.0·10⁻⁵");
     expect(formatValue(19.282, "g/cm³")).toBe("19.3");
     expect(formatValue(-38.83, "°C")).toBe("−39");
+    expect(formatValue(0.95, "K")).toBe("0.95");
+    expect(formatValue(1811, "K")).toBe("1811");
     expect(formatValue(4, "")).toBe("4");
   });
 });

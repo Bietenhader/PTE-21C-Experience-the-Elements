@@ -1,0 +1,41 @@
+{
+"schemaVersion":1,
+"Z":81,
+"symbol":"Tl",
+"source":"nist_lines",
+"window":{"low":380,"high":780,"unit":"nm","medium":"air"},
+"units":{"nm":"nm","Aki":"s⁻¹","eV":"eV"},
+"lines":[
+  {"nm":383.23,"charge":1,"intensity":10.0},
+  {"nm":386.915,"charge":1,"intensity":6.0},
+  {"nm":388.715,"charge":1,"intensity":10.0},
+  {"nm":422.305,"charge":1,"intensity":8.0},
+  {"nm":427.498,"charge":1,"intensity":20.0},
+  {"nm":430.68,"charge":1,"intensity":40.0},
+  {"nm":435.99,"charge":0,"intensity":2.0},
+  {"nm":449.077,"charge":1,"intensity":8.0},
+  {"nm":473.705,"charge":1,"intensity":20.0},
+  {"nm":498.135,"charge":1,"intensity":15.0},
+  {"nm":507.854,"charge":1,"intensity":25.0},
+  {"nm":515.214,"charge":1,"intensity":25.0},
+  {"nm":518.195,"charge":1,"intensity":6.0},
+  {"nm":518.31,"charge":1,"intensity":6.0},
+  {"nm":535.046,"charge":0,"intensity":18000.0,"Aki":70500000.0,"lower":{"conf":"6s2.6p","term":"2P*","J":"3/2","eV":0.96617},"upper":{"conf":"6s2.7s","term":"2S","J":"1/2","eV":3.28279}},
+  {"nm":538.485,"charge":1,"intensity":15.0,"intensityText":"15bl"},
+  {"nm":540.992,"charge":1,"intensity":7.0},
+  {"nm":541.097,"charge":1,"intensity":10.0},
+  {"nm":594.948,"charge":1,"intensity":25.0},
+  {"nm":617.998,"charge":1,"intensity":10.0},
+  {"nm":623.903,"charge":1,"intensity":8.0,"intensityText":"8bl"},
+  {"nm":637.832,"charge":1,"intensity":10.0},
+  {"nm":654.984,"charge":0,"intensity":16.0,"intensityText":"16w"},
+  {"nm":671.38,"charge":0,"intensity":6.0,"intensityText":"6w"},
+  {"nm":696.65,"charge":1,"intensity":10.0},
+  {"nm":749.36,"charge":0,"intensity":3.0},
+  {"nm":767.893,"charge":0,"intensity":2.0}
+],
+"species":[
+  {"charge":0,"label":"Tl I","linesInWindow":6,"kept":6},
+  {"charge":1,"label":"Tl II","linesInWindow":21,"kept":21}
+]
+}

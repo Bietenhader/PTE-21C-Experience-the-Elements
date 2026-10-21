@@ -1,0 +1,341 @@
+{
+ "schemaVersion": 1,
+ "Z": 1,
+ "symbol": "H",
+ "orbitals": {
+  "zeff": [],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -6.3531,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -6.3529,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 31.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 120.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 13.598434599702,
+     "unc": 1.2e-11,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.754,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.2,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 13.61,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 1
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 1400.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.40×10³ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 108000.0,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.08×10⁵ milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.7061,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 12.0,
+    "unc": 0.004,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed. A(H) = 12 by definition of the scale; the table nevertheless prints +-0.004."
+   },
+   "body": {
+    "value": 7000.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "solid para-hydrogen (H2)",
+   "structure": "hexagonal close-packed molecular crystal (hcp arrangement of H2 molecules)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 378.2,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 616.7,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 4.2,
+    "unit": "K",
+    "source": "cod"
+   },
+   "lowTemperatureSolid": true,
+   "codId": 9013073,
+   "reference": "Ishmaev, S. N.; Sadikov, I. P.; Chernyshev, A. A.; Vindryevsky, B. A.; Sukhoparov, V. A.; Telepnev, A. S.; Kobelyev, G. V. (1983). Zhurnal Eksperimental'noi i Teoreticheskoi Fiziki 84, 394.",
+   "source": "cod",
+   "note": "Low-temperature solid only. Entry of the series measured without applied pressure (the paper covers pressures up to 24 kbar). Molecules rotate freely; the CIF models H on site 4f (z = 0.123), giving 4 H atoms per cell, hence hP4 (hP2 if one counts molecule centres). Original paper: Zh. Eksp. Teor. Fiz. 84, 394 (1983); no DOI in CIF."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "bigBang": 1.0
+   },
+   "flag": "paper_statement",
+   "source": "kobayashi2020",
+   "note": "Paper Sect. 3.5: 'H and most of He are produced in Big Bang nucleosynthesis. The small green and blue areas also includes the amounts returned to the ISM via stellar mass loss'. Stars only destroy or return H, so the figure's green/blue (raw reading at the 9.2-Gyr line: AGB 0.14, massive 0.05; box saturated) are recycled Big-Bang H, not production. Value set from the statement, not read off the figure."
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 1,
+    "charge": 0,
+    "I": 0.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 1420.405751768,
+     "unit": "MHz",
+     "source": "karshenboim2005"
+    },
+    "splitting": {
+     "value": 1420405751.768,
+     "unc": 0.001,
+     "unit": "Hz",
+     "source": "karshenboim2005",
+     "note": "1s ground-state hyperfine interval, measured by hydrogen masers (several measurements; conservative average of Karshenboim 2000); as tabulated by Karshenboim (2005)."
+    }
+   },
+   {
+    "A": 2,
+    "charge": 0,
+    "I": 1.0,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 218.256235014667,
+     "unit": "MHz",
+     "source": "karshenboim2005",
+     "doi": "10.1103/PhysRevA.5.821"
+    },
+    "splitting": {
+     "value": 327384352.522,
+     "unc": 0.002,
+     "unit": "Hz",
+     "source": "karshenboim2005",
+     "note": "1s ground-state hyperfine interval, measured by Wineland and Ramsey, deuterium maser (1972); as tabulated by Karshenboim (2005).",
+     "doi": "10.1103/PhysRevA.5.821"
+    }
+   },
+   {
+    "A": 3,
+    "charge": 0,
+    "I": 0.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 1516.701470773,
+     "unit": "MHz",
+     "source": "karshenboim2005",
+     "doi": "10.1103/PhysRev.158.14"
+    },
+    "splitting": {
+     "value": 1516701470.773,
+     "unc": 0.008,
+     "unit": "Hz",
+     "source": "karshenboim2005",
+     "note": "1s ground-state hyperfine interval, measured by Mathur, Crampton, Kleppner and Ramsey (1967); as tabulated by Karshenboim (2005).",
+     "doi": "10.1103/PhysRev.158.14"
+    }
+   }
+  ],
+  "clocks": [
+   {
+    "Z": 1,
+    "species": "H",
+    "A": null,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "1233 THz",
+    "transition": "1S_{1/2} - 2S_{1/2}",
+    "srs": false,
+    "metre": true,
+    "frequency": {
+     "value": 1233030706593514.0,
+     "unc": 11.0,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2015-03-10.",
+     "text": "1233030706593514"
+    }
+   }
+  ],
+  "laserCooling": [
+   {
+    "A": 1,
+    "charge": 0,
+    "state": "ground",
+    "lower": "1s 2S1/2",
+    "upper": "2p 2P3/2",
+    "wavelength": {
+     "value": 121.566823731,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 99.706,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 6.265e+08 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstCooled": {
+     "year": 1993,
+     "doi": "10.1103/PhysRevLett.70.2257",
+     "source": "primary_literature"
+    },
+    "BEC": {
+     "year": 1998,
+     "doi": "10.1103/PhysRevLett.81.3811",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Lyman-alpha cooling of H already held in a magnetic trap (no MOT). Wavelength is NIST's Ritz value for the 2P3/2 component; NIST's observed 121.56699 nm is the unresolved doublet. The 1998 BEC was reached by evaporative cooling, not laser cooling."
+   }
+  ],
+  "siHistory": [
+   {
+    "Z": 1,
+    "unit": "kelvin",
+    "role": "definition",
+    "text": "The kelvin was 1/273.16 of the thermodynamic temperature of the triple point of water (hydrogen and oxygen). Since 2019 it is fixed by the Boltzmann constant.",
+    "source": "cgpm_resolutions",
+    "from": 1954,
+    "to": 2019,
+    "doi": "10.59161/CGPM1954RES3E",
+    "endDoi": "10.59161/CGPM2018RES1E"
+   },
+   {
+    "Z": 1,
+    "unit": "metre",
+    "role": "recommended_radiation",
+    "text": "H (1233 THz) is a recommended radiation for realizing the metre.",
+    "validFrom": "2015-03-10",
+    "source": "bipm_frequencies"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "structural",
+  "plantRole": {
+   "text": "Comes from water; part of every organic molecule, and the proton gradients across thylakoid and mitochondrial membranes drive ATP synthesis.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00001-7"
+  },
+  "humanRole": {
+   "text": "Part of water and of every organic molecule in the body.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  }
+ },
+ "history": {
+  "discovered": 1766,
+  "discoverers": [
+   "Henry Cavendish"
+  ],
+  "place": "London, United Kingdom",
+  "nameOrigin": "Coined by Lavoisier from the Greek hydor, 'water', and -genes, 'producing', because burning it yields water.",
+  "source": "pubchem",
+  "note": "Boyle had made the gas around 1671 without recognizing it as new; Cavendish showed it was a distinct substance. Los Alamos prints 1776, apparently a slip for 1766."
+ },
+ "prose": {
+  "text": "Hydrogen is the lightest element, a colourless gas of two-atom molecules and the main fuel of the stars; on Earth we meet it mostly bound into water and the molecules of living things. Its ordinary nucleus is a single proton, but about 0.0145 % of natural hydrogen is deuterium, whose nucleus also holds a neutron and which makes 'heavy water'. With one electron in the 1s orbital (ground term ²S₁/₂), hydrogen is the only neutral atom whose Schrödinger equation can be solved exactly. The deep red line in a hydrogen lamp's glow is the Balmer line at 656.3 nm, emitted as the electron falls from the third shell to the second.",
+  "sources": [
+   "nist_gsie",
+   "nist_lines",
+   "iaea_livechart"
+  ]
+ }
+}

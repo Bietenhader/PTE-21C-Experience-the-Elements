@@ -1,0 +1,564 @@
+{
+ "schemaVersion": 1,
+ "Z": 108,
+ "symbol": "Hs",
+ "orbitals": {
+  "zeff": [],
+  "eigenvalues": [],
+  "radii": {
+   "covalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "vdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.6,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 2,
+     "eV": 18.2,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 29.3,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 37.7,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 51.2,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 64.0,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 78.1,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 91.7,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 159.9,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 173.9,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 206.1,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 227.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 258.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 285.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 314.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 351.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 371.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 409.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 31,
+     "eV": 984.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 32,
+     "eV": 1020.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 33,
+     "eV": 1060.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 34,
+     "eV": 1101.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 35,
+     "eV": 1140.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 36,
+     "eV": 1180.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 37,
+     "eV": 1253.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 38,
+     "eV": 1294.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 39,
+     "eV": 1338.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 40,
+     "eV": 1379.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 63,
+     "eV": 4339.0,
+     "unc": 15.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 64,
+     "eV": 4425.0,
+     "unc": 19.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 65,
+     "eV": 4516.0,
+     "unc": 24.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 66,
+     "eV": 4610.0,
+     "unc": 30.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 67,
+     "eV": 4700.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 68,
+     "eV": 4790.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 69,
+     "eV": 5020.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 70,
+     "eV": 5110.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 71,
+     "eV": 5220.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 72,
+     "eV": 5310.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 73,
+     "eV": 5700.0,
+     "unc": 70.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 74,
+     "eV": 5780.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 75,
+     "eV": 5880.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 76,
+     "eV": 5980.0,
+     "unc": 100.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 77,
+     "eV": 6840.0,
+     "unc": 110.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 78,
+     "eV": 6950.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 79,
+     "eV": 7230.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 80,
+     "eV": 7340.0,
+     "unc": 140.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 81,
+     "eV": 11200.0,
+     "unc": 150.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 82,
+     "eV": 11390.0,
+     "unc": 160.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 83,
+     "eV": 11610.0,
+     "unc": 170.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 84,
+     "eV": 11830.0,
+     "unc": 190.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 85,
+     "eV": 12040.0,
+     "unc": 200.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 86,
+     "eV": 12250.0,
+     "unc": 220.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 87,
+     "eV": 12910.0,
+     "unc": 240.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 88,
+     "eV": 13130.0,
+     "unc": 250.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 89,
+     "eV": 13400.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 90,
+     "eV": 13600.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 91,
+     "eV": 14200.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 92,
+     "eV": 14400.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 93,
+     "eV": 14600.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 94,
+     "eV": 14800.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 95,
+     "eV": 17500.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 96,
+     "eV": 17700.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 97,
+     "eV": 18200.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 98,
+     "eV": 18400.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 99,
+     "eV": 35900.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 100,
+     "eV": 36400.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 101,
+     "eV": 37000.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 102,
+     "eV": 37500.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 103,
+     "eV": 47300.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 104,
+     "eV": 48100.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 105,
+     "eV": 49000.0,
+     "unc": 600.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 107,
+     "eV": 191784.0,
+     "unc": 12.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 108,
+     "eV": 194911.0,
+     "unc": 14.0,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 278
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No COD entry."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1984,
+  "discoverers": [
+   "Gesellschaft für Schwerionenforschung (GSI), Darmstadt",
+   "Joint Institute for Nuclear Research, Dubna"
+  ],
+  "place": "Darmstadt, Germany",
+  "nameOrigin": "From Hassia, the Latin name of the German state of Hesse, home of GSI.",
+  "symbolNote": "A 1994 IUPAC proposal would have called it hahnium (Hn); hassium was adopted in 1997. Temporary name: unniloctium (Uno).",
+  "source": "iupac_discovery",
+  "doi": "10.1351/pac199365081757",
+  "note": "The 1993 IUPAC/IUPAP report judged that simultaneous, independent 1984 work in Darmstadt and Dubna established element 108; the Darmstadt group named it. The PubChem texts credit GSI alone."
+ },
+ "prose": {
+  "text": "Hassium is a synthetic element in group 8, below osmium, named after Hesse, the German state in which Darmstadt lies. It was first made there at GSI in 1984 by fusing lead-208 with iron-58, giving atoms of hassium-265 with a half-life of about 2 milliseconds. Only a few atoms have been made since, yet chemists have turned a handful of them into a volatile tetroxide, just as osmium forms OsO₄. Its nucleus is notable too: hassium-270, with 108 protons and 162 neutrons, is regarded as a doubly magic deformed nucleus, and it survives for several seconds. Theory predicts the atom's configuration as [Rn] 5f¹⁴ 6d⁶ 7s², but it has not been measured.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "Z": 53,
+ "images": [
+  {
+   "file": "img/elements/53/1-800.webp",
+   "thumb": "img/elements/53/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Iodine crystals",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/iodine.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/iodine.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "crystal",
+   "pin": "iodine.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/53/2-800.webp",
+   "thumb": "img/elements/53/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Iodine evaporating to a violet vapour",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/iodine.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/iodine.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "iodine-2.jpg",
+   "k": 2
+  }
+ ]
+}

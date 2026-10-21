@@ -1,0 +1,21 @@
+{
+ "Z": 37,
+ "images": [
+  {
+   "file": "img/elements/37/1-800.webp",
+   "thumb": "img/elements/37/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Rubidium in a sealed ampoule",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/rubidium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/rubidium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "rubidium.jpg",
+   "k": 1
+  }
+ ]
+}

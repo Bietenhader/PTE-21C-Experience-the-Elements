@@ -1,0 +1,441 @@
+{
+ "schemaVersion": 1,
+ "Z": 12,
+ "symbol": "Mg",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 11.6089,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 7.392,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 7.8258,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 3.3075,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -1250.9936,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -1251.8616,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -79.015,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -79.2318,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -46.7756,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -46.7287,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -4.7736,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -4.7792,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 141.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 173.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.646236,
+     "unc": 4e-06
+    },
+    {
+     "stage": 2,
+     "eV": 15.035271,
+     "unc": 6e-06
+    },
+    {
+     "stage": 3,
+     "eV": 80.1436,
+     "unc": 0.0006
+    },
+    {
+     "stage": 4,
+     "eV": 109.2654,
+     "unc": 0.0012,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 141.33,
+     "unc": 0.03,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 186.76,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 225.02,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 265.924,
+     "unc": 0.019,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 327.99,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 367.489,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 1761.8049,
+     "unc": 0.001,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 1962.663889,
+     "unc": 7e-06,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 1.31,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 7.646,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 23300.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.33×10⁴ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 1290.0,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.29×10³ milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.0007701,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 7.57,
+    "unc": 0.01,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 19.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "magnesium (hcp)",
+   "structure": "hexagonal close-packed (hcp)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 320.93,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 521.03,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.15,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9012001,
+   "doi": "10.1063/1.1698520",
+   "reference": "Straumanis, M. E. (1949). Journal of Applied Physics 20, 726.",
+   "source": "cod",
+   "note": "Measured at 25 °C (CIF)."
+  },
+  "production": {
+   "commodity": "Magnesium metal",
+   "basis": "primary (smelter) production, magnesium metal",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 1100000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World primary (smelter) production, magnesium metal, 2025 (USGS: 1,100 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 7.05479,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, annual average: U.S. spot Western, dollars per pound [Magnesium Metal], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "magnesium",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.15,
+    "massiveStars": 0.85
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.128, massive_stars 0.867, white_dwarfs 0.005); quantised to 0.05. Stack height 78 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'Mg is slightly under-produced in the model.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 25,
+    "charge": 1,
+    "I": 2.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": -596.254250949,
+     "unc": 4.5e-08,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRevA.100.013409"
+    },
+    "splitting": {
+     "value": 1788762752.85,
+     "unc": 0.13,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Splitting measured directly by microwave Ramsey spectroscopy in an RF trap (Brewer et al. 2019). The A quoted is the authors' 'uncorrected' A' = splitting/3, which ignores higher-order hyperfine terms. The older 1981 Penning-trap A' (-596 254 376(54) Hz) lies about 2 sigma lower.",
+     "doi": "10.1103/PhysRevA.100.013409"
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [
+   {
+    "A": "natural",
+    "charge": 0,
+    "state": "ground",
+    "lower": "3s2 1S0",
+    "upper": "3s3p 1P1",
+    "wavelength": {
+     "value": 285.2965,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 78.145,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 4.91e+08 s⁻¹ (accuracy class A), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstMOT": {
+     "year": 1993,
+     "doi": "10.1016/0030-4018(93)90645-l",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The paper reports Ramsey spectroscopy on laser cooled and trapped Mg; the isotope is not named in the title. NIST observed value."
+   },
+   {
+    "A": "natural",
+    "charge": 1,
+    "state": "ground",
+    "lower": "3s 2S1/2",
+    "upper": "3p 2P3/2",
+    "wavelength": {
+     "value": 279.6352,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 41.38,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 2.6e+08 s⁻¹ (accuracy class A+), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstCooled": {
+     "year": 1978,
+     "doi": "10.1103/PhysRevLett.40.1639",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Cooled in 1978, the same year as Ba+. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+   }
+  ],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "macronutrient",
+  "plantRole": {
+   "text": "The atom at the centre of chlorophyll; it also binds ATP and holds ribosomes together.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+  },
+  "humanRole": {
+   "text": "Needed by hundreds of enzymes, above all those that use ATP, which acts as a magnesium complex.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": 1755,
+  "discoveredText": "1755 (recognized as an element; metal first obtained 1808)",
+  "discoverers": [
+   "Joseph Black"
+  ],
+  "place": "Edinburgh, United Kingdom",
+  "isolated": 1831,
+  "isolatedBy": [
+   "Antoine Bussy"
+  ],
+  "nameOrigin": "From Magnesia, a district of Thessaly in Greece, which gave its name to several minerals.",
+  "source": "pubchem",
+  "note": "PubChem's YearDiscovered (1808) is the year Davy first obtained the metal, in impure form; CIAAW credits Bussy with the pure metal in 1831, which Los Alamos calls the first coherent metal."
+ },
+ "prose": {
+  "text": "Magnesium is a light, silvery alkaline-earth metal that burns with a dazzling white flame, once used in photographers' flashes; alloyed, it lightens car and aircraft parts. Its most important place in biology is the centre of every chlorophyll molecule, where a single magnesium ion is gripped by four nitrogen atoms of the surrounding ring; leaves short of magnesium turn yellow between their veins. The atom has the closed configuration [Ne] 3s² (ground term ¹S₀). Of its three stable isotopes, only magnesium-25, about 10 % of the total, has a nuclear spin (5/2); the other two have none.",
+  "sources": [
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "Z": 21,
+ "images": [
+  {
+   "file": "img/elements/21/1-800.webp",
+   "thumb": "img/elements/21/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Scandium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/scandium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/scandium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "scandium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/21/2-800.webp",
+   "thumb": "img/elements/21/2-320.webp",
+   "width": 756,
+   "height": 756,
+   "title": "Scandium with a thin oxide layer",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/scandium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/scandium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "scandium-3.jpg",
+   "k": 2
+  }
+ ]
+}

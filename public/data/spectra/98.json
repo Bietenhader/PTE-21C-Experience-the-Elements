@@ -1,0 +1,32 @@
+{
+"schemaVersion":1,
+"Z":98,
+"symbol":"Cf",
+"source":"nist_lines",
+"window":{"low":380,"high":780,"unit":"nm","medium":"air"},
+"units":{"nm":"nm","Aki":"s⁻¹","eV":"eV"},
+"lines":[
+  {"nm":389.323,"charge":1,"intensity":10000.0,"intensityText":"10000s"},
+  {"nm":399.357,"charge":1,"intensity":10000.0,"intensityText":"10000l"},
+  {"nm":409.912,"charge":0,"intensity":10000.0},
+  {"nm":424.238,"charge":0,"intensity":10000.0},
+  {"nm":432.903,"charge":0,"intensity":10000.0},
+  {"nm":433.522,"charge":0,"intensity":10000.0},
+  {"nm":517.396,"charge":0,"intensity":10000.0},
+  {"nm":517.908,"charge":0,"intensity":10000.0},
+  {"nm":521.924,"charge":0,"intensity":10000.0},
+  {"nm":540.888,"charge":0,"intensity":10000.0},
+  {"nm":572.605,"charge":0,"intensity":10000.0},
+  {"nm":662.283,"charge":0,"intensity":10000.0},
+  {"nm":663.126,"charge":0,"intensity":10000.0},
+  {"nm":667.79,"charge":0,"intensity":10000.0},
+  {"nm":689.459,"charge":0,"intensity":10000.0},
+  {"nm":692.71,"charge":1,"intensity":10000.0},
+  {"nm":707.452,"charge":0,"intensity":10000.0,"intensityText":"10000l"},
+  {"nm":730.79,"charge":0,"intensity":10000.0,"intensityText":"10000s"}
+],
+"species":[
+  {"charge":0,"label":"Cf I","linesInWindow":15,"kept":15},
+  {"charge":1,"label":"Cf II","linesInWindow":3,"kept":3}
+]
+}

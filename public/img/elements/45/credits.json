@@ -1,0 +1,21 @@
+{
+ "Z": 45,
+ "images": [
+  {
+   "file": "img/elements/45/1-800.webp",
+   "thumb": "img/elements/45/1-320.webp",
+   "width": 400,
+   "height": 400,
+   "title": "A rhodium bead, 1 g",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/rhodium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/rhodium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "s/rhodium.jpg",
+   "k": 1
+  }
+ ]
+}

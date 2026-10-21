@@ -1,0 +1,302 @@
+{
+ "schemaVersion": 1,
+ "Z": 7,
+ "symbol": "N",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 6.6651,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 3.8474,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 3.834,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -381.2724,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -381.2399,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -18.399,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -18.4137,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -7.2463,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -7.2426,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 71.0,
+    "unc": 1.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 155.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 14.53413,
+     "unc": 4e-05
+    },
+    {
+     "stage": 2,
+     "eV": 29.60125,
+     "unc": 9e-05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 47.4453,
+     "unc": 0.0025,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 77.4735,
+     "unc": 0.0004
+    },
+    {
+     "stage": 5,
+     "eV": 97.8901,
+     "unc": 0.0004
+    },
+    {
+     "stage": 6,
+     "eV": 552.06741,
+     "unc": 8e-05,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 667.0461377,
+     "unc": 7e-07,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 3.04,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 18.13,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 19.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.9×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.5,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('5×10⁻¹ milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.001047,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 7.94,
+    "unc": 0.11,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 1800.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "α-nitrogen (α-N2)",
+   "structure": "cubic molecular crystal (α-N2 type)",
+   "lattice": "cubic",
+   "spaceGroup": "P a -3",
+   "spaceGroupNumber": 205,
+   "pearson": "cP8",
+   "atomsPerCell": 8,
+   "a": {
+    "value": 564.4,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 4.2,
+    "unit": "K",
+    "source": "cod"
+   },
+   "lowTemperatureSolid": true,
+   "codId": 9008571,
+   "reference": "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7.",
+   "source": "cod",
+   "note": "Low-temperature solid only, at 4.2 K, value from Wyckoff's compilation (no primary reference in CIF). Schuch & Mills 1970 (COD 9012480, DOI 10.1063/1.1672899) report space group P213 at 20 K, but that COD entry lists only 4 N atoms per cell (half of the 8 atoms of the 4 N2 molecules), so it was not used."
+  },
+  "production": {
+   "commodity": "Nitrogen (fixed)-ammonia",
+   "basis": "plant production of ammonia, nitrogen content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 160000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World plant production of ammonia, nitrogen content, 2025 (USGS: 160,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 0.49604,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average, free on board Gulf Coast, dollars per short ton [Nitrogen (Fixed)—Ammonia], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.75,
+    "massiveStars": 0.25
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.741, massive_stars 0.259); quantised to 0.05. Stack height 72 px. Cross-check with the paper's text: '74% of N are produced by AGB stars' (figure reading 0.741)."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "macronutrient",
+  "plantRole": {
+   "text": "Taken up as nitrate or ammonium; part of amino acids, proteins, nucleic acids and chlorophyll, and the nutrient that most often limits plant growth.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+  },
+  "humanRole": {
+   "text": "Part of every amino acid, protein and nucleic acid; obtained from dietary protein.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  }
+ },
+ "history": {
+  "discovered": 1772,
+  "discoverers": [
+   "Daniel Rutherford"
+  ],
+  "place": "Edinburgh, United Kingdom",
+  "nameOrigin": "From the French nitrogène, built from the Greek nitron ('native soda', i.e. nitre) and -genes ('producing'), because it is a constituent of nitre.",
+  "source": "pubchem",
+  "note": "Scheele, Cavendish and Priestley were studying the same unbreathable residue of air at about the same time."
+ },
+ "prose": {
+  "text": "Nitrogen is a colourless, unreactive gas that makes up most of the air we breathe, yet it is also a building block of every protein and every strand of DNA. Plants cannot use the gas directly, because the triple bond holding the two atoms of N₂ together is extraordinarily strong; legumes such as peas and clover solve this by housing bacteria in root nodules that turn it into ammonia. A nitrogen atom, [He] 2s² 2p³, has three 2p electrons, one in each p orbital with parallel spins (ground term ⁴S°₃/₂). This half-filled subshell is so stable that nitrogen's first ionisation energy, 1402 kJ/mol, exceeds oxygen's 1314 kJ/mol.",
+  "sources": [
+   "nist_gsie"
+  ]
+ }
+}

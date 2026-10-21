@@ -1,0 +1,754 @@
+{
+ "schemaVersion": 1,
+ "Z": 61,
+ "symbol": "Pm",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 59.7958,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 44.9704,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 56.7438,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 41.1846,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 41.5539,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 47.0982,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 31.6396,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 30.6232,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "value": 27.74,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "value": 23.134,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "value": 18.8355,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "value": 16.414,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "value": 9.3954,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -42530.8602,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -44743.7789,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -6693.1996,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -7284.4248,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -6352.6373,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -6515.6965,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -1453.8856,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -1588.8087,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -1304.0004,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -1346.5555,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -1023.8402,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -1012.4703,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -283.6176,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -315.3488,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -226.4122,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -235.6089,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -125.0859,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -122.5816,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "eV": -5.4466,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "eV": -2.4609,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -37.3412,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -41.8284,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "eV": -22.2508,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "eV": -22.7138,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "eV": -3.4573,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "eV": -3.6678,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 199.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 236.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 5.58187,
+     "unc": 4e-05
+    },
+    {
+     "stage": 2,
+     "eV": 10.938,
+     "unc": 0.02,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 22.44,
+     "unc": 0.08,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 41.17,
+     "unc": 0.09,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 61.7,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 85.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 101.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 116.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 138.0,
+     "unc": 7.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 155.0,
+     "unc": 8.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 174.0,
+     "unc": 9.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 202.0,
+     "unc": 10.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 229.0,
+     "unc": 11.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 248.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 269.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 430.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 462.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 497.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 534.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 569.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 21,
+     "eV": 609.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 22,
+     "eV": 651.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 23,
+     "eV": 689.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 24,
+     "eV": 730.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 767.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 916.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 27,
+     "eV": 956.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 28,
+     "eV": 998.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 29,
+     "eV": 1040.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 30,
+     "eV": 1113.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 31,
+     "eV": 1158.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 32,
+     "eV": 1261.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 33,
+     "eV": 1308.7,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 34,
+     "eV": 2251.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 35,
+     "eV": 2344.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 36,
+     "eV": 2443.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 37,
+     "eV": 2549.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 38,
+     "eV": 2652.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 39,
+     "eV": 2755.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 40,
+     "eV": 2892.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 41,
+     "eV": 2997.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 42,
+     "eV": 3112.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 43,
+     "eV": 3219.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 44,
+     "eV": 3519.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 45,
+     "eV": 3613.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 46,
+     "eV": 3718.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 47,
+     "eV": 3816.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 48,
+     "eV": 4056.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 49,
+     "eV": 4166.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 50,
+     "eV": 4371.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 51,
+     "eV": 4476.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 52,
+     "eV": 10115.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 53,
+     "eV": 10378.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 54,
+     "eV": 10671.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 55,
+     "eV": 10942.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 56,
+     "eV": 11819.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 57,
+     "eV": 12136.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 58,
+     "eV": 12532.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 59,
+     "eV": 12797.26,
+     "unc": 0.07,
+     "flag": "calculated"
+    },
+    {
+     "stage": 60,
+     "eV": 52144.29,
+     "unc": 0.06,
+     "flag": "calculated"
+    },
+    {
+     "stage": 61,
+     "eV": 53346.31,
+     "unc": 0.14,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 145
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No promethium entry in COD."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Promethium has no long-lived isotope, so none of it survives from before the Solar System; its box in Fig. 39 is empty."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1945,
+  "discoverers": [
+   "Jacob A. Marinsky",
+   "Lawrence E. Glendenin",
+   "Charles D. Coryell"
+  ],
+  "place": "Oak Ridge, United States",
+  "nameOrigin": "After Prometheus, the Titan of Greek myth who stole fire from the gods.",
+  "source": "pubchem",
+  "note": "Identified chemically by ion-exchange chromatography among uranium fission products at Clinton Laboratories (now Oak Ridge National Laboratory). Jefferson Lab dates the proof to 1944 and its announcement to after the war. Earlier claims, such as illinium and florentium in the 1920s, were not confirmed, and 1941–42 Ohio State work probably made it without chemical proof."
+ },
+ "prose": {
+  "text": "Promethium is the only lanthanide with no stable isotopes: the longest-lived, promethium-145, has a half-life of just 17.7 years, so any present when the Earth formed vanished long ago, and only fleeting traces arise from the fission of uranium in rocks. It was identified in the 1940s among fission products from a nuclear reactor and named after Prometheus, who stole fire from the gods. Promethium-147, a gentle beta emitter, has lit luminous dials and powered tiny nuclear batteries. The atom follows the filling rule, [Xe] 4f⁵ 6s², with five unpaired 4f electrons and the ground term ⁶H°₅/₂.",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

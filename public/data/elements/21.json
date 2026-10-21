@@ -1,0 +1,497 @@
+{
+ "schemaVersion": 1,
+ "Z": 21,
+ "symbol": "Sc",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 20.4566,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 14.5736,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 17.0546,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 10.3398,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 9.4062,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 7.1199,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 4.6324,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -4358.8317,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -4375.7204,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -468.2117,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -472.2549,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -387.4903,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -387.7537,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -54.1065,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -54.6457,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -33.5561,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -33.5621,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -3.5669,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -3.4435,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -4.258,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -4.2872,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 170.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 211.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 6.56149,
+     "unc": 6e-05
+    },
+    {
+     "stage": 2,
+     "eV": 12.79977,
+     "unc": 0.00025
+    },
+    {
+     "stage": 3,
+     "eV": 24.756839,
+     "unc": 1.2e-05
+    },
+    {
+     "stage": 4,
+     "eV": 73.4894,
+     "unc": 0.0004
+    },
+    {
+     "stage": 5,
+     "eV": 91.95,
+     "unc": 0.03,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 110.68,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 137.99,
+     "unc": 0.25,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 158.08,
+     "unc": 0.25,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 180.03,
+     "unc": 0.12
+    },
+    {
+     "stage": 10,
+     "eV": 225.18,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 249.798,
+     "unc": 0.005,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 687.36,
+     "unc": 0.12
+    },
+    {
+     "stage": 13,
+     "eV": 757.7,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 833.2,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 926.5,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 1008.6,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 1093.5,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 1213.1,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 1287.957,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 5674.9036,
+     "unc": 0.0004,
+     "flag": "calculated"
+    },
+    {
+     "stage": 21,
+     "eV": 6033.75643,
+     "unc": 9e-05,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.188,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.36,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 7.042,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 45
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 22.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.2×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 6e-07,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('6×10⁻⁷ milligrams per liter')."
+   },
+   "solar": {
+    "value": 4.634e-08,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 3.08,
+    "unc": 0.03,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "α-scandium",
+   "structure": "hexagonal close-packed (hcp)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 330.9,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 527.33,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9010985,
+   "doi": "10.1107/S0365110X5600156X",
+   "reference": "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559.",
+   "source": "cod",
+   "note": "Sample 99.6 % pure (CIF). Temperature not stated in CIF."
+  },
+  "production": {
+   "commodity": "Scandium",
+   "basis": "global production, scandium oxide equivalent",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 80.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World global production, scandium oxide equivalent, 2025 (USGS: 80 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 640.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, global, dollars per kilogram, range of average values: Scandium oxide, powder, 99.99% purity, 5- to 100-kilogram lot size [Scandium], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": false,
+   "listedAs": "scandium",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "massiveStars": 0.95,
+    "whiteDwarfs": 0.05
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.959, white_dwarfs 0.041); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 45,
+    "charge": 0,
+    "I": 3.5,
+    "J": 1.5,
+    "A_MHz": {
+     "value": 269.55817,
+     "unc": 5e-05,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1016/j.physletb.2022.136930"
+    },
+    "B_MHz": {
+     "value": -26.3531,
+     "unc": 0.0009,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1016/j.physletb.2022.136930"
+    },
+    "splitting": {
+     "value": 3242227497.0,
+     "unc": 860.0,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "3d4s2 2D3/2 ground level. Laser-rf double resonance on an atomic beam with resonance-ionisation detection (de Groote et al. 2022, arXiv:2005.00414 Table 2). These are the values fitted directly to the measured intervals, before second-order correction, so they reproduce the observed splitting. Childs (1971) gives B = -26.346(4) MHz, which differs by about 1.7 sigma. Splitting = width of the ground-level hyperfine manifold (F = 2 to 5), from A and B.",
+     "doi": "10.1016/j.physletb.2022.136930"
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1879,
+  "discoverers": [
+   "Lars Fredrik Nilson"
+  ],
+  "place": "Uppsala, Sweden",
+  "isolated": 1937,
+  "isolatedBy": [
+   "Werner Fischer",
+   "Karl Brünger",
+   "Hans Grieneisen"
+  ],
+  "nameOrigin": "From Scandia, the Latin name for Scandinavia, where its minerals were found.",
+  "source": "pubchem",
+  "note": "Cleve showed the same year that it was Mendeleev's predicted eka-boron. Los Alamos gives 1878. The 1937 metal preparation: Z. anorg. allg. Chem. 231, 54 (doi:10.1002/zaac.19372310107)."
+ },
+ "prose": {
+  "text": "Scandium is a light, silvery transition metal, named after Scandinavia, where its minerals were found; small additions of it strengthen the aluminium alloys used in some aircraft parts and sports equipment. Its existence was foreseen: Mendeleev left a gap in his table for an element he called eka-boron and predicted its properties, and scandium, discovered in 1879, filled that gap closely. Scandium is the first element to place an electron in a 3d orbital, giving [Ar] 3d¹ 4s² and the ground term ²D₃/₂, yet in compounds it almost always gives away all three outer electrons; with no d electrons left, its compounds are usually colourless.",
+  "sources": [
+   "pubchem",
+   "nist_gsie"
+  ]
+ }
+}

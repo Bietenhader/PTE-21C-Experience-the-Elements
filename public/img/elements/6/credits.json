@@ -1,0 +1,38 @@
+{
+ "Z": 6,
+ "images": [
+  {
+   "file": "img/elements/6/1-800.webp",
+   "thumb": "img/elements/6/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Ultrapure carbon as a graphite bar",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/carbon.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/carbon.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "carbon.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/6/2-800.webp",
+   "thumb": "img/elements/6/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "A rough diamond",
+   "author": "Unknown photographer",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://images-of-elements.com/carbon.php",
+   "attribution": "Unknown photographer, Public domain; via images-of-elements.com (https://images-of-elements.com/carbon.php)",
+   "source": "images_of_elements",
+   "kind": "crystal",
+   "pin": "diamond.jpg",
+   "k": 2,
+   "note": "The element page marks this photo as public domain."
+  }
+ ]
+}

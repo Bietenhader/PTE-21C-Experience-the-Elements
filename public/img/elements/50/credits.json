@@ -1,0 +1,37 @@
+{
+ "Z": 50,
+ "images": [
+  {
+   "file": "img/elements/50/1-800.webp",
+   "thumb": "img/elements/50/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "A solidified tin splash",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/tin.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/tin.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "tin.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/50/2-800.webp",
+   "thumb": "img/elements/50/2-320.webp",
+   "width": 400,
+   "height": 400,
+   "title": "A tin drop",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/tin.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/tin.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "s/tin-drop.jpg",
+   "k": 2
+  }
+ ]
+}

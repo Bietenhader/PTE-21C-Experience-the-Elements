@@ -1,0 +1,985 @@
+{
+ "schemaVersion": 1,
+ "clocks": [
+  {
+   "Z": 1,
+   "species": "H",
+   "A": null,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "1233 THz",
+   "transition": "1S_{1/2} - 2S_{1/2}",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 1233030706593514.0,
+    "unc": 11.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2015-03-10.",
+    "text": "1233030706593514"
+   }
+  },
+  {
+   "Z": 13,
+   "species": "27Al+",
+   "A": 27,
+   "charge": 1,
+   "kind": "atomic",
+   "label": "1121 THz",
+   "transition": "3s^2 ^1S_0 - 3s3p ^3P_0",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 1121015393207859.1,
+    "unc": 0.21,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2022-04-13.",
+    "text": "1121015393207859.16"
+   }
+  },
+  {
+   "Z": 20,
+   "species": "40Ca",
+   "A": 40,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "456 THz",
+   "transition": "4s^2 ^1S_0 - 4s4p ^3P_1",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 455986240494140.0,
+    "unc": 8.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2005-10-07.",
+    "text": "455986240494140"
+   }
+  },
+  {
+   "Z": 20,
+   "species": "40Ca+",
+   "A": 40,
+   "charge": 1,
+   "kind": "atomic",
+   "label": "411 THz",
+   "transition": "4s ^2S_{1/2} - 3d ^2D_{5/2}",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 411042129776400.3,
+    "unc": 0.23,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "411042129776400.3"
+   }
+  },
+  {
+   "Z": 36,
+   "species": "86Kr",
+   "A": 86,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "464 THz",
+   "transition": "2p_9 - 5d'_4",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 464213560000000.0,
+    "unc": 3333333.3333333335,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 10000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "464213560000000"
+   }
+  },
+  {
+   "Z": 36,
+   "species": "86Kr",
+   "A": 86,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "467 THz",
+   "transition": "2p_8 - 5d_4",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 466762830000000.0,
+    "unc": 3333333.3333333335,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 10000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "466762830000000"
+   }
+  },
+  {
+   "Z": 36,
+   "species": "86Kr",
+   "A": 86,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "495 THz",
+   "transition": "5d_5 - 2p_{10}",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 494886516400000.0,
+    "unc": 633333.3333333334,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 1900000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "494886516400000"
+   }
+  },
+  {
+   "Z": 36,
+   "species": "86Kr",
+   "A": 86,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "530 THz",
+   "transition": "1s_3 - 3p_10",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 530500150000000.0,
+    "unc": 3333333.3333333335,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 10000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "530500150000000"
+   }
+  },
+  {
+   "Z": 36,
+   "species": "86Kr",
+   "A": 86,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "666 THz",
+   "transition": "1s_4 - 3p_8",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 665670530000000.0,
+    "unc": 3333333.3333333335,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 10000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "665670530000000"
+   }
+  },
+  {
+   "Z": 37,
+   "species": "85Rb",
+   "A": 85,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "385 THz",
+   "transition": "5S_{1/2} (Fg=3) - 5D_{5/2} (Fe=5)",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 385285142375000.0,
+    "unc": 5000.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2005-10-07.",
+    "text": "385285142375000"
+   }
+  },
+  {
+   "Z": 37,
+   "species": "87Rb",
+   "A": 87,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "6.835 GHz",
+   "transition": "5s ^2S_{1/2} (F=1) - 5s ^2S_{1/2} (F=2)",
+   "srs": true,
+   "metre": false,
+   "frequency": {
+    "value": 6834682610.904313,
+    "unc": 2.3e-06,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "6834682610.9043129"
+   }
+  },
+  {
+   "Z": 37,
+   "species": "87Rb",
+   "A": 87,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "384 THz",
+   "transition": "D2",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 384227981900000.0,
+    "unc": 200000.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2015-03-10.",
+    "text": "384227981900000"
+   }
+  },
+  {
+   "Z": 38,
+   "species": "87Sr",
+   "A": 87,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "429 THz",
+   "transition": "5s^2 ^1S_0 - 5s5p ^3P_0",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 429228004229873.0,
+    "unc": 0.073,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "429228004229872.992"
+   }
+  },
+  {
+   "Z": 38,
+   "species": "88Sr",
+   "A": 88,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "429 THz",
+   "transition": "5s^2 ^1S_0 - 5s5p ^3P_0",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 429228066418007.0,
+    "unc": 0.082,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "429228066418007.008"
+   }
+  },
+  {
+   "Z": 38,
+   "species": "88Sr+",
+   "A": 88,
+   "charge": 1,
+   "kind": "atomic",
+   "label": "445 THz",
+   "transition": "5s ^2S_{1/2} - 4d ^2D_{5/2}",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 444779044095485.4,
+    "unc": 0.076,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "444779044095485.347"
+   }
+  },
+  {
+   "Z": 48,
+   "species": "114Cd",
+   "A": 114,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "465 THz",
+   "transition": "5^1P_1 - 5^1D_2",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 465498310000000.0,
+    "unc": 10000000.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 30000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "465498310000000"
+   }
+  },
+  {
+   "Z": 48,
+   "species": "114Cd",
+   "A": 114,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "589 THz",
+   "transition": "5^3P_2 - 6^3S_1",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 589303000000000.0,
+    "unc": 13333333.333333334,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 40000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "589303000000000"
+   }
+  },
+  {
+   "Z": 48,
+   "species": "114Cd",
+   "A": 114,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "624 THz",
+   "transition": "5^3P_1 - 6^3S_1",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 624404740000000.0,
+    "unc": 13333333.333333334,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 40000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "624404740000000"
+   }
+  },
+  {
+   "Z": 48,
+   "species": "114Cd",
+   "A": 114,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "641 THz",
+   "transition": "5^3P_0 - 6^3S_1",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 640656360000000.0,
+    "unc": 13333333.333333334,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 40000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "640656360000000"
+   }
+  },
+  {
+   "Z": 49,
+   "species": "115In+",
+   "A": 115,
+   "charge": 1,
+   "kind": "atomic",
+   "label": "1267 THz",
+   "transition": "5s^2 ^1S_0 - 5s5p ^3P_0",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 1267402452901039.0,
+    "unc": 0.23,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "1267402452901039.07"
+   }
+  },
+  {
+   "Z": 55,
+   "species": "133Cs",
+   "A": 133,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "defining frequency",
+   "transition": "6s 2S1/2 (F=3) – 6s 2S1/2 (F=4)",
+   "srs": false,
+   "metre": false,
+   "definesSecond": true,
+   "frequency": {
+    "value": 9192631770.0,
+    "unc": 0,
+    "unit": "Hz",
+    "source": "si_brochure",
+    "note": "Exact by definition: this frequency defines the SI second (1967; a fixed defining constant of the SI since 2019).",
+    "text": "9192631770"
+   }
+  },
+  {
+   "Z": 70,
+   "species": "171Yb",
+   "A": 171,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "518 THz",
+   "transition": "6s^2 ^1S_0 - 6s6p ^3P_0",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 518295836590863.6,
+    "unc": 0.088,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "518295836590863.632"
+   }
+  },
+  {
+   "Z": 70,
+   "species": "171Yb+",
+   "A": 171,
+   "charge": 1,
+   "kind": "atomic",
+   "label": "642 THz",
+   "transition": "6S ^2S_{1/2} (F=0) - 4f^{13}6s^2 ^2F_{7/2} (F=3)",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 642121496772645.1,
+    "unc": 0.11,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "642121496772645.18"
+   }
+  },
+  {
+   "Z": 70,
+   "species": "171Yb+",
+   "A": 171,
+   "charge": 1,
+   "kind": "atomic",
+   "label": "688 THz",
+   "transition": "6s ^2S_{1/2} (F=0,mF=0) - 5d ^2D_{3/2}(F=2,mF=0)",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 688358979309308.2,
+    "unc": 0.13,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "688358979309308.31"
+   }
+  },
+  {
+   "Z": 71,
+   "species": "176Lu+",
+   "A": 176,
+   "charge": 1,
+   "kind": "atomic",
+   "label": "353.6 THz",
+   "transition": "6s^2 ^1S_0 (F=7) – 5d6s ^3D_1 (F=6), 6s^2 ^1S_0 (F=7) – 5d6s ^3D_1 (F=7) and 6s^2 ^1S_0 (F=7) – 5d6s ^3D_1 (F=8)",
+   "srs": false,
+   "metre": false,
+   "frequency": {
+    "value": 353638794073800.4,
+    "unc": 0.99,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "353638794073800.35"
+   }
+  },
+  {
+   "Z": 80,
+   "species": "198Hg",
+   "A": 198,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "518 THz",
+   "transition": "6^1P_1 - 6^1D_2",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 517573500000000.0,
+    "unc": 10000000.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 30000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "517573500000000"
+   }
+  },
+  {
+   "Z": 80,
+   "species": "198Hg",
+   "A": 198,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "519 THz",
+   "transition": "6^1P_1 - 6^3D_2",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 519463100000000.0,
+    "unc": 10000000.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 30000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "519463100000000"
+   }
+  },
+  {
+   "Z": 80,
+   "species": "198Hg",
+   "A": 198,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "549 THz",
+   "transition": "6^3P_2 - 7^3S_1",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 548842200000000.0,
+    "unc": 10000000.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 30000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "548842200000000"
+   }
+  },
+  {
+   "Z": 80,
+   "species": "198Hg",
+   "A": 198,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "688 THz",
+   "transition": "6^3P_1-7^3S_1",
+   "srs": false,
+   "metre": true,
+   "frequency": {
+    "value": 687666400000000.0,
+    "unc": 0.0,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 0 Hz with coverage factor 3; the standard uncertainty is shown.",
+    "text": "687666400000000"
+   }
+  },
+  {
+   "Z": 80,
+   "species": "199Hg",
+   "A": 199,
+   "charge": 0,
+   "kind": "atomic",
+   "label": "1129 THz",
+   "transition": "6s^2 ^1S_0 - 6s6p ^3P_0",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 1128575290808154.2,
+    "unc": 0.28,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "1128575290808154.33"
+   }
+  },
+  {
+   "Z": 80,
+   "species": "199Hg+",
+   "A": 199,
+   "charge": 1,
+   "kind": "atomic",
+   "label": "1065 THz",
+   "transition": "5d^{10}6s 2S_{1/2} (F=0) - 5d^9 6s^2 ^2D_{5/2} (F=2)",
+   "srs": true,
+   "metre": true,
+   "frequency": {
+    "value": 1064721609899147.0,
+    "unc": 0.27,
+    "unit": "Hz",
+    "source": "bipm_frequencies",
+    "note": "BIPM recommended value, valid from 2026-03-27.",
+    "text": "1064721609899146.95"
+   }
+  },
+  {
+   "Z": 90,
+   "species": "229Th",
+   "A": 229,
+   "charge": 0,
+   "kind": "nuclear",
+   "label": "nuclear transition",
+   "transition": "229Th nucleus, ground state 5/2+ – isomer 3/2+ (in a CaF2 crystal)",
+   "srs": false,
+   "metre": false,
+   "definesSecond": false,
+   "frequency": {
+    "value": 2020407384335000.0,
+    "unc": 2000,
+    "unit": "Hz",
+    "source": "primary_literature",
+    "flag": "measured",
+    "note": "Isomer transition frequency in calcium fluoride, measured as a frequency ratio to the JILA strontium-87 clock: 2 020 407 384 335(2) kHz (Zhang et al., Nature 2024). The energy is about 8.4 eV, a vacuum-ultraviolet photon of 148 nm.",
+    "text": "2020407384335000",
+    "doi": "10.1038/s41586-024-07839-6",
+    "arxiv": "2406.18719"
+   }
+  }
+ ],
+ "siHistory": [
+  {
+   "Z": 1,
+   "unit": "kelvin",
+   "role": "definition",
+   "text": "The kelvin was 1/273.16 of the thermodynamic temperature of the triple point of water (hydrogen and oxygen). Since 2019 it is fixed by the Boltzmann constant.",
+   "source": "cgpm_resolutions",
+   "from": 1954,
+   "to": 2019,
+   "doi": "10.59161/CGPM1954RES3E",
+   "endDoi": "10.59161/CGPM2018RES1E"
+  },
+  {
+   "Z": 1,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "H (1233 THz) is a recommended radiation for realizing the metre.",
+   "validFrom": "2015-03-10",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 2,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "The He–Ne laser (633 nm, helium and neon) is a recommended radiation for realizing the metre.",
+   "validFrom": "2007-11-09",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 6,
+   "unit": "mole",
+   "role": "definition",
+   "text": "The mole was the amount of substance containing as many entities as there are atoms in 0.012 kg of carbon-12. Since 2019 it is fixed by the Avogadro constant.",
+   "source": "cgpm_resolutions",
+   "A": 12,
+   "from": 1971,
+   "to": 2019,
+   "doi": "10.59161/CGPM1971RES3E",
+   "endDoi": "10.59161/CGPM2018RES1E"
+  },
+  {
+   "Z": 8,
+   "unit": "kelvin",
+   "role": "definition",
+   "text": "The kelvin was 1/273.16 of the thermodynamic temperature of the triple point of water (hydrogen and oxygen). Since 2019 it is fixed by the Boltzmann constant.",
+   "source": "cgpm_resolutions",
+   "from": 1954,
+   "to": 2019,
+   "doi": "10.59161/CGPM1954RES3E",
+   "endDoi": "10.59161/CGPM2018RES1E"
+  },
+  {
+   "Z": 10,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "The He–Ne laser (633 nm, helium and neon) is a recommended radiation for realizing the metre.",
+   "validFrom": "2007-11-09",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 13,
+   "A": 27,
+   "unit": "second",
+   "role": "srs",
+   "text": "27Al+ (1121 THz) is a secondary representation of the second.",
+   "validFrom": "2022-04-13",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 14,
+   "unit": "kilogram",
+   "role": "realization",
+   "text": "One of the two primary ways to realize the kilogram counts atoms: a near-perfect sphere of silicon enriched in silicon-28 is measured by X-ray crystal density (XRCD), and its mass follows from the Planck constant.",
+   "source": "bipm_mep_kilogram",
+   "A": 28,
+   "from": 2019
+  },
+  {
+   "Z": 20,
+   "A": 40,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "40Ca (456 THz) is a recommended radiation for realizing the metre.",
+   "validFrom": "2005-10-07",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 20,
+   "A": 40,
+   "unit": "second",
+   "role": "srs",
+   "text": "40Ca+ (411 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 36,
+   "unit": "metre",
+   "role": "definition",
+   "text": "The metre was 1 650 763.73 wavelengths, in vacuum, of the orange-red line of krypton-86. Since 1983 the metre is fixed by the speed of light.",
+   "source": "cgpm_resolutions",
+   "A": 86,
+   "from": 1960,
+   "to": 1983,
+   "doi": "10.59161/CGPM1960RES6E",
+   "endDoi": "10.59161/CGPM1983RES1E"
+  },
+  {
+   "Z": 36,
+   "A": 86,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "86Kr (464 THz) is a recommended radiation for realizing the metre.",
+   "validFrom": "2003-10-10",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 37,
+   "A": 85,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "85Rb (385 THz) is a recommended radiation for realizing the metre.",
+   "validFrom": "2005-10-07",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 37,
+   "A": 87,
+   "unit": "second",
+   "role": "srs",
+   "text": "87Rb (6.835 GHz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 38,
+   "A": 87,
+   "unit": "second",
+   "role": "srs",
+   "text": "87Sr (429 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 38,
+   "A": 88,
+   "unit": "second",
+   "role": "srs",
+   "text": "88Sr (429 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 38,
+   "A": 88,
+   "unit": "second",
+   "role": "srs",
+   "text": "88Sr+ (445 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 48,
+   "A": 114,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "114Cd (465 THz) is a recommended radiation for realizing the metre.",
+   "validFrom": "2003-10-10",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 49,
+   "A": 115,
+   "unit": "second",
+   "role": "srs",
+   "text": "115In+ (1267 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 53,
+   "A": 127,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "Lasers locked to iodine-127 molecules (468 THz) are recommended radiations for realizing the metre.",
+   "validFrom": "2003-10-10",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 55,
+   "unit": "second",
+   "role": "definition",
+   "text": "The second is the duration of 9 192 631 770 periods of the caesium-133 ground-state hyperfine transition. Since 2019 the same number is a fixed defining constant of the whole SI.",
+   "source": "cgpm_resolutions",
+   "A": 133,
+   "from": 1967,
+   "doi": "10.59161/CGPM1967RES1E"
+  },
+  {
+   "Z": 70,
+   "A": 171,
+   "unit": "second",
+   "role": "srs",
+   "text": "171Yb (518 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 70,
+   "A": 171,
+   "unit": "second",
+   "role": "srs",
+   "text": "171Yb+ (642 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 70,
+   "A": 171,
+   "unit": "second",
+   "role": "srs",
+   "text": "171Yb+ (688 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 71,
+   "A": 176,
+   "unit": "frequency",
+   "role": "standard_frequency",
+   "text": "176Lu+ (353.6 THz) is a recommended standard frequency.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 77,
+   "unit": "kilogram",
+   "role": "prototype",
+   "text": "Iridium (10 %) made up part of the international prototype of the kilogram.",
+   "source": "cgpm_resolutions",
+   "from": 1889,
+   "to": 2019,
+   "doi": "10.59161/CGPM1889DECLE",
+   "endDoi": "10.59161/CGPM2018RES1E"
+  },
+  {
+   "Z": 77,
+   "unit": "metre",
+   "role": "prototype",
+   "text": "Iridium (10 %) hardened the platinum of the international prototype of the metre.",
+   "source": "cgpm_resolutions",
+   "from": 1889,
+   "to": 1960,
+   "doi": "10.59161/CGPM1889DECLE",
+   "endDoi": "10.59161/CGPM1960RES6E"
+  },
+  {
+   "Z": 78,
+   "unit": "kilogram",
+   "role": "prototype",
+   "text": "The kilogram was the mass of the international prototype, a cylinder of platinum with 10 % iridium kept at the BIPM. Since 2019 the kilogram is fixed by the Planck constant.",
+   "source": "cgpm_resolutions",
+   "from": 1889,
+   "to": 2019,
+   "doi": "10.59161/CGPM1889DECLE",
+   "endDoi": "10.59161/CGPM2018RES1E"
+  },
+  {
+   "Z": 78,
+   "unit": "metre",
+   "role": "prototype",
+   "text": "The international prototype of the metre was a bar of platinum alloyed with 10 % iridium; the metre was the distance between two marks on it.",
+   "source": "cgpm_resolutions",
+   "from": 1889,
+   "to": 1960,
+   "doi": "10.59161/CGPM1889DECLE",
+   "endDoi": "10.59161/CGPM1960RES6E"
+  },
+  {
+   "Z": 78,
+   "unit": "candela",
+   "role": "definition",
+   "text": "The candela was based on a black body at the freezing temperature of platinum: 1/600 000 square metre of it, seen perpendicularly, had a luminous intensity of one candela.",
+   "source": "cgpm_resolutions",
+   "from": 1948,
+   "to": 1979,
+   "doi": "10.59161/CGPM1967RES5E",
+   "endDoi": "10.59161/CGPM1979RES3E"
+  },
+  {
+   "Z": 80,
+   "A": 198,
+   "unit": "metre",
+   "role": "recommended_radiation",
+   "text": "198Hg (518 THz) is a recommended radiation for realizing the metre.",
+   "validFrom": "2003-10-10",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 80,
+   "A": 199,
+   "unit": "second",
+   "role": "srs",
+   "text": "199Hg (1129 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  },
+  {
+   "Z": 80,
+   "A": 199,
+   "unit": "second",
+   "role": "srs",
+   "text": "199Hg+ (1065 THz) is a secondary representation of the second.",
+   "validFrom": "2026-03-27",
+   "source": "bipm_frequencies"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1967,
+   "text": "The 13th CGPM defines the second by the caesium-133 hyperfine transition: 9 192 631 770 periods.",
+   "source": "cgpm_resolutions",
+   "doi": "10.59161/CGPM1967RES1E"
+  },
+  {
+   "year": 2018,
+   "text": "The 26th CGPM revises the SI (in force 20 May 2019): seven fixed constants define all units; the second keeps the caesium frequency as one of them.",
+   "source": "cgpm_resolutions",
+   "doi": "10.59161/CGPM2018RES1E"
+  },
+  {
+   "year": 2022,
+   "text": "The 27th CGPM asks for a roadmap to a new definition of the second based on optical clocks, to be adopted at the 29th CGPM in 2030.",
+   "source": "cgpm_resolutions",
+   "doi": "10.59161/CGPM2022RES5E"
+  },
+  {
+   "year": 2024,
+   "text": "Thorium-229: a laser excites an atomic nucleus for the first time — the 8.4 eV isomer, in a crystal.",
+   "source": "primary_literature",
+   "doi": "10.1103/PhysRevLett.132.182501"
+  },
+  {
+   "year": 2024,
+   "text": "Thorium-229: the nuclear transition frequency is measured against a strontium optical clock, to 2 kHz in 2 PHz.",
+   "source": "primary_literature",
+   "doi": "10.1038/s41586-024-07839-6"
+  },
+  {
+   "year": 2026,
+   "text": "The 28th CGPM finds no consensus yet on which atom or ion (or ensemble) should define the second, and asks for a proposal for the new definition at the 29th CGPM in 2030.",
+   "source": "cgpm_resolutions",
+   "doi": "10.59161/CGPM2026RES4E"
+  },
+  {
+   "year": 2026,
+   "text": "Thorium-229: a laser is kept locked to the nuclear transition and compared continuously with an ion clock — a working, if not yet precise, nuclear clock.",
+   "source": "primary_literature",
+   "arxiv": "2606.04997"
+  },
+  {
+   "year": 2030,
+   "text": "Planned: the 29th CGPM is to decide on a new definition of the second.",
+   "source": "cgpm_resolutions",
+   "doi": "10.59161/CGPM2026RES4E"
+  }
+ ]
+}

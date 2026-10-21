@@ -1,0 +1,324 @@
+{
+ "schemaVersion": 1,
+ "Z": 10,
+ "symbol": "Ne",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 9.6421,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 5.7584,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 5.7584,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -824.6643,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -824.9291,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -35.9955,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -36.0858,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -13.5522,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -13.5391,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 58.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 154.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 21.564541,
+     "unc": 7e-06
+    },
+    {
+     "stage": 2,
+     "eV": 40.96297,
+     "unc": 4e-05
+    },
+    {
+     "stage": 3,
+     "eV": 63.4233,
+     "unc": 0.0003
+    },
+    {
+     "stage": 4,
+     "eV": 97.19,
+     "unc": 0.0025,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 126.247,
+     "unc": 0.012
+    },
+    {
+     "stage": 6,
+     "eV": 157.934,
+     "unc": 0.005
+    },
+    {
+     "stage": 7,
+     "eV": 207.271,
+     "unc": 0.012
+    },
+    {
+     "stage": 8,
+     "eV": 239.097,
+     "unc": 0.0019,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 1195.8082,
+     "unc": 0.0004,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 1362.199256,
+     "unc": 4e-06,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "value": 28.31,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 0.005,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('5×10⁻³ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.00012,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.2×10⁻⁴ milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.00244,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 8.15,
+    "unc": 0.12,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar value with theoretical considerations; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "neon (fcc)",
+   "structure": "face-centred cubic (fcc)",
+   "lattice": "cubic",
+   "spaceGroup": "F m -3 m",
+   "spaceGroupNumber": 225,
+   "pearson": "cF4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 446.2,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 4.2,
+    "unit": "K",
+    "source": "cod"
+   },
+   "lowTemperatureSolid": true,
+   "codId": 9011633,
+   "reference": "Bolz, L. H.; Mauer, F. A. (1962). Physical Review 111, 242.",
+   "source": "cod",
+   "note": "Low-temperature solid only, at 4.2 K, on the 20Ne isotope (natural neon is mostly 20Ne; COD 9011634 gives 22Ne). The CIF cites Phys. Rev. 111, 242 (1962) without DOI; volume and year look inconsistent, so check the citation before display."
+  },
+  "production": {
+   "commodity": "Neon",
+   "basis": "world production, neon (million liters)",
+   "edition": "MCS 2026"
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.15,
+    "massiveStars": 0.85
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.142, massive_stars 0.858); quantised to 0.05. Stack height 77 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [
+   {
+    "A": "natural",
+    "charge": 0,
+    "state": "metastable",
+    "lower": "2p5(2P3/2)3s 2[3/2]2",
+    "upper": "2p5(2P3/2)3p 2[5/2]3",
+    "wavelength": {
+     "value": 640.4018,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 8.1949,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 5.149e+07 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstMOT": {
+     "year": 1989,
+     "doi": "10.1103/PhysRevA.39.2758",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Cooled in the metastable 3s [3/2]2 (Paschen 1s5) state. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
+   }
+  ],
+  "siHistory": [
+   {
+    "Z": 10,
+    "unit": "metre",
+    "role": "recommended_radiation",
+    "text": "The He–Ne laser (633 nm, helium and neon) is a recommended radiation for realizing the metre.",
+    "validFrom": "2007-11-09",
+    "source": "bipm_frequencies"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1898,
+  "discoverers": [
+   "William Ramsay",
+   "Morris Travers"
+  ],
+  "place": "London, United Kingdom",
+  "nameOrigin": "From the Greek neos, 'new'.",
+  "source": "pubchem",
+  "note": "Identified by its bright spectral lines in a fraction of liquefied air, shortly after krypton."
+ },
+ "prose": {
+  "text": "Neon is a noble gas present in air only in traces and obtained by distilling liquefied air. Its fame comes from glowing signs: an electric current through neon at low pressure gives a warm red-orange light, and only that colour is true neon, the other shades coming from different gases or from coatings on the tube. Neon's ten electrons fill the first two shells completely ([He] 2s² 2p⁶, ground term ¹S₀), and only helium holds its outermost electron more tightly, with neon's first ionisation energy at 2081 kJ/mol. No stable chemical compound of neon is known.",
+  "sources": [
+   "nist_gsie"
+  ]
+ }
+}

@@ -1,0 +1,805 @@
+{
+ "schemaVersion": 1,
+ "Z": 59,
+ "symbol": "Pr",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 57.8306,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 43.462,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 54.7694,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 39.501,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 39.8244,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 45.1524,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 30.3332,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 29.0568,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "value": 26.2972,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "value": 21.1008,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "value": 17.613,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "value": 15.2835,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "value": 7.7466,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -39656.189,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -41560.6657,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -6188.5866,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -6695.0685,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -5861.8309,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -6000.2782,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -1331.3169,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -1444.674,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -1188.9348,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -1223.7759,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -922.8468,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -911.6713,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -260.6156,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -286.6793,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -207.1632,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -214.2825,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -113.0423,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -110.3765,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "eV": -4.2215,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "eV": -1.54,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -35.2688,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -38.9944,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "eV": -21.1717,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "eV": -21.5031,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "eV": -3.3869,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "eV": -3.58,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 203.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 239.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 5.4702,
+     "unc": 0.0004,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 2,
+     "eV": 10.631,
+     "unc": 0.02,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 21.6237,
+     "unc": 0.0025
+    },
+    {
+     "stage": 4,
+     "eV": 38.981,
+     "unc": 0.025,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 57.53,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 82.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 97.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 112.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 131.0,
+     "unc": 7.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 148.0,
+     "unc": 7.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 162.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 196.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 217.02,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 350.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 378.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 412.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 445.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 478.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 516.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 554.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 21,
+     "eV": 590.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 22,
+     "eV": 627.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 23,
+     "eV": 663.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 24,
+     "eV": 803.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 840.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 880.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 27,
+     "eV": 920.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 28,
+     "eV": 985.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 29,
+     "eV": 1028.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 30,
+     "eV": 1124.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 31,
+     "eV": 1169.9,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 32,
+     "eV": 2019.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 33,
+     "eV": 2108.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 34,
+     "eV": 2202.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 35,
+     "eV": 2304.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 36,
+     "eV": 2400.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 37,
+     "eV": 2501.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 38,
+     "eV": 2628.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 39,
+     "eV": 2729.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 40,
+     "eV": 2838.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 41,
+     "eV": 2941.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 42,
+     "eV": 3227.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 43,
+     "eV": 3319.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 44,
+     "eV": 3419.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 45,
+     "eV": 3512.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 46,
+     "eV": 3729.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 47,
+     "eV": 3832.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 48,
+     "eV": 4030.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 49,
+     "eV": 4130.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 50,
+     "eV": 9378.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 51,
+     "eV": 9632.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 52,
+     "eV": 9913.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 53,
+     "eV": 10175.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 54,
+     "eV": 10959.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 55,
+     "eV": 11262.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 56,
+     "eV": 11641.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 57,
+     "eV": 11895.89,
+     "unc": 0.06,
+     "flag": "calculated"
+    },
+    {
+     "stage": 58,
+     "eV": 48571.71,
+     "unc": 0.05,
+     "flag": "calculated"
+    },
+    {
+     "stage": 59,
+     "eV": 49722.44,
+     "unc": 0.04,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 1.13,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 9.2,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('9.2 milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 6.4e-07,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('6.4×10⁻⁷ milligrams per liter')."
+   },
+   "solar": {
+    "value": 7.697e-10,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 0.8,
+    "unc": 0.02,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "α-praseodymium",
+   "structure": "double hexagonal close-packed (dhcp)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 367.25,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 1183.54,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9008527,
+   "reference": "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7.",
+   "source": "cod",
+   "note": "Wyckoff's entry chosen because it lists both dhcp sites; cell identical to Spedding et al. 1956 (COD 9010988, DOI 10.1107/S0365110X5600156X). Temperature not stated."
+  },
+  "production": {
+   "commodity": "Praseodymium",
+   "basis": "mine production (only reported as rare-earths group total, REO equivalent)",
+   "edition": "MCS 2026",
+   "unitValue": {
+    "value": 74.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average, dollars per kilogram: Praseodymium oxide, 99.99% minimum [Praseodymium], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "light rare earth elements",
+   "source": "eu_crm",
+   "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.85,
+    "massiveStars": 0.15
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.825, massive_stars 0.158, neutron_star_mergers 0.017); quantised to 0.05. Stack height 95 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1885,
+  "discoverers": [
+   "Carl Auer von Welsbach"
+  ],
+  "place": "Vienna, Austria",
+  "nameOrigin": "From the Greek prasios, 'leek-green', and didymos, 'twin', for its green salts and its origin in 'didymium'.",
+  "source": "pubchem",
+  "note": "Auer split Mosander's 'didymium' into two elements, this one and neodymium."
+ },
+ "prose": {
+  "text": "Praseodymium is a soft, silvery lanthanide that grows a green oxide skin in air; its name means ‘green twin’, because in 1885 Carl Auer von Welsbach split it from ‘didymium’, a supposed element that was really a mixture of praseodymium and neodymium. Its salts give glass and ceramic glazes a clean yellow, and glasses containing both twins are worn by glassblowers to cut out the yellow glare of hot glass. The atom keeps its filling-rule configuration, [Xe] 4f³ 6s², with three unpaired 4f electrons (ground term ⁴I°₉/₂). Its only stable isotope, praseodymium-141, has 82 neutrons, a magic number.",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

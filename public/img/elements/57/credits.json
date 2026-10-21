@@ -1,0 +1,37 @@
+{
+ "Z": 57,
+ "images": [
+  {
+   "file": "img/elements/57/1-800.webp",
+   "thumb": "img/elements/57/1-320.webp",
+   "width": 672,
+   "height": 672,
+   "title": "Lanthanum under argon",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/lanthanum.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/lanthanum.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "lanthanum.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/57/2-800.webp",
+   "thumb": "img/elements/57/2-320.webp",
+   "width": 708,
+   "height": 708,
+   "title": "Lanthanum pieces",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/lanthanum.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/lanthanum.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "lanthanum-2.jpg",
+   "k": 2
+  }
+ ]
+}

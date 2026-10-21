@@ -1,0 +1,974 @@
+{
+ "schemaVersion": 1,
+ "Z": 82,
+ "symbol": "Pb",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 80.4195,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 60.43,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 77.4766,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 58.1523,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 59.1495,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 68.5467,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 46.8928,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 46.0336,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "value": 44.3196,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "value": 43.9688,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "value": 30.1315,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "value": 28.03,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 2,
+    "value": 23.152,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "value": 14.1,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 6,
+    "l": 1,
+    "value": 12.393,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -78942.3556,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -87508.0868,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -13302.1048,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -15667.9178,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -12813.2373,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -13461.0667,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -3170.8572,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -3763.2617,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -2937.4798,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -3129.3635,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -2500.4522,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -2480.9297,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -700.7838,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -851.2367,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -598.3937,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -643.0752,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -408.9878,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -401.5375,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "eV": -152.1805,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "eV": -133.7022,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -114.4728,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -143.7357,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "eV": -80.0466,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "eV": -85.7349,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 2,
+    "eV": -24.5554,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 2,
+    "eV": -21.3548,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "eV": -9.7196,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "eV": -12.2662,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 1,
+    "eV": -3.8594,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 1,
+    "eV": -3.7038,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 146.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 202.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.4166799,
+     "unc": 6e-07
+    },
+    {
+     "stage": 2,
+     "eV": 15.032499,
+     "unc": 7e-06
+    },
+    {
+     "stage": 3,
+     "eV": 31.9373,
+     "unc": 0.0006
+    },
+    {
+     "stage": 4,
+     "eV": 42.33256,
+     "unc": 0.0001
+    },
+    {
+     "stage": 5,
+     "eV": 68.8,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 82.9,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 100.1,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 120.0,
+     "unc": 2.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 138.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 158.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 182.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 203.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 224.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 245.1,
+     "unc": 2.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 338.1,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 374.0,
+     "unc": 19.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 401.0,
+     "unc": 20.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 427.0,
+     "unc": 21.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 478.0,
+     "unc": 24.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 507.0,
+     "unc": 25.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 21,
+     "eV": 570.0,
+     "unc": 30.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 22,
+     "eV": 610.0,
+     "unc": 30.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 23,
+     "eV": 650.0,
+     "unc": 30.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 24,
+     "eV": 690.0,
+     "unc": 30.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 750.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 810.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 27,
+     "eV": 870.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 28,
+     "eV": 930.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 29,
+     "eV": 990.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 30,
+     "eV": 1050.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 31,
+     "eV": 1120.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 32,
+     "eV": 1180.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 33,
+     "eV": 1240.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 34,
+     "eV": 1300.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 35,
+     "eV": 1360.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 36,
+     "eV": 1430.0,
+     "unc": 70.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 37,
+     "eV": 1704.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 38,
+     "eV": 1760.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 39,
+     "eV": 1819.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 40,
+     "eV": 1884.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 41,
+     "eV": 1945.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 42,
+     "eV": 2004.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 43,
+     "eV": 2101.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 44,
+     "eV": 2163.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 45,
+     "eV": 2230.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 46,
+     "eV": 2292.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 47,
+     "eV": 2543.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 48,
+     "eV": 2605.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 49,
+     "eV": 2671.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 50,
+     "eV": 2735.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 51,
+     "eV": 2965.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 52,
+     "eV": 3036.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 53,
+     "eV": 3211.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 54,
+     "eV": 3282.1,
+     "unc": 2.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 55,
+     "eV": 5414.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 56,
+     "eV": 5555.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 57,
+     "eV": 5703.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 58,
+     "eV": 5862.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 59,
+     "eV": 6015.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 60,
+     "eV": 6162.0,
+     "unc": 7.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 61,
+     "eV": 6442.0,
+     "unc": 10.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 62,
+     "eV": 6597.0,
+     "unc": 12.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 63,
+     "eV": 6767.0,
+     "unc": 15.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 64,
+     "eV": 6924.0,
+     "unc": 19.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 65,
+     "eV": 7362.0,
+     "unc": 24.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 66,
+     "eV": 7500.0,
+     "unc": 30.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 67,
+     "eV": 7650.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 68,
+     "eV": 7790.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 69,
+     "eV": 8520.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 70,
+     "eV": 8680.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 71,
+     "eV": 9000.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 72,
+     "eV": 9150.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 73,
+     "eV": 19590.0,
+     "unc": 70.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 74,
+     "eV": 19970.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 75,
+     "eV": 20380.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 76,
+     "eV": 20750.0,
+     "unc": 100.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 77,
+     "eV": 23460.0,
+     "unc": 110.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 78,
+     "eV": 23940.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 79,
+     "eV": 24550.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 80,
+     "eV": 24938.2,
+     "unc": 0.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 81,
+     "eV": 99491.8,
+     "unc": 0.3,
+     "flag": "calculated"
+    },
+    {
+     "stage": 82,
+     "eV": 101336.7,
+     "unc": 0.3,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.36,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.33,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 10.97,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 14.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.4×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 3e-05,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('3×10⁻⁵ milligrams per liter')."
+   },
+   "solar": {
+    "value": 2.088e-08,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 2.07,
+    "unc": 0.03,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 0.12,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "lead (fcc)",
+   "structure": "face-centred cubic (fcc)",
+   "lattice": "cubic",
+   "spaceGroup": "F m -3 m",
+   "spaceGroupNumber": 225,
+   "pearson": "cF4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 495.004,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.15,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9012004,
+   "doi": "10.1063/1.1698520",
+   "reference": "Straumanis, M. E. (1949). Journal of Applied Physics 20, 726.",
+   "source": "cod",
+   "note": "Measured at 25 °C; COD multiplied the published kX value by 1.00202 (note in CIF)."
+  },
+  "production": {
+   "commodity": "Lead",
+   "basis": "mine production, lead content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 4500000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, lead content, 2025 (USGS: 4,500 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 2.3369,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average, North American, cents per pound [Lead], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "For lead, the AGB-star band in Fig. 39 runs off the top of its box at the Sun's formation, so the shares cannot be read; the paper says only that AGB stars are the main source of lead."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": "antiquity",
+  "nameOrigin": "From the Old English lead, a Germanic word of unknown origin.",
+  "symbolNote": "Pb comes from the Latin plumbum.",
+  "source": "pubchem"
+ },
+ "prose": {
+  "text": "Lead is the soft, dense, bluish-white metal that people have smelted since antiquity for pipes, roofing, solder, batteries and radiation shielding, and that we now handle with care because it is a cumulative poison. Three of its four natural isotopes are endpoints: lead-206, lead-207 and lead-208 are where the decay chains of uranium-238, uranium-235 and thorium-232 finally stop, so uranium-bearing minerals slowly accumulate lead, a clock that geologists use to date rocks. Lead-208 is doubly magic: its 82 protons and 126 neutrons each complete a nuclear shell, which makes it exceptionally tightly bound.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart"
+  ]
+ }
+}

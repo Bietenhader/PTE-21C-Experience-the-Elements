@@ -1,0 +1,12 @@
+{
+"schemaVersion":1,
+"Z":93,
+"symbol":"Np",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":1,
+"levels":[
+  {"eV":0.0,"configuration":"5f4.6d.7s2","term":"6L","J":"11/2","parity":"even"}
+],
+"ionizationLimit":{"value":6.265608,"unc":1.9e-05,"unit":"eV","source":"nist_levels","note":"Limit: Np II (5f4.6d.7s 7L<5>)."}
+}

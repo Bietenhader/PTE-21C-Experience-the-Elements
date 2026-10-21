@@ -1,0 +1,53 @@
+{
+ "Z": 15,
+ "images": [
+  {
+   "file": "img/elements/15/1-800.webp",
+   "thumb": "img/elements/15/1-320.webp",
+   "width": 676,
+   "height": 676,
+   "title": "White phosphorus under water",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/phosphorus.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/phosphorus.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "white-phosphorus.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/15/2-800.webp",
+   "thumb": "img/elements/15/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Red phosphorus",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/phosphorus.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/phosphorus.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "powder",
+   "pin": "red-phosphorus.jpg",
+   "k": 2
+  },
+  {
+   "file": "img/elements/15/3-800.webp",
+   "thumb": "img/elements/15/3-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Violet phosphorus",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/phosphorus.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/phosphorus.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "phosphorus.jpg",
+   "k": 3
+  }
+ ]
+}

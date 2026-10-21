@@ -1,0 +1,22 @@
+{
+ "Z": 99,
+ "images": [
+  {
+   "file": "img/elements/99/1-800.webp",
+   "thumb": "img/elements/99/1-320.webp",
+   "width": 400,
+   "height": 400,
+   "title": "About 300 µg of einsteinium-253, glowing from its own radiation",
+   "author": "U.S. Department of Energy",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://images-of-elements.com/einsteinium.php",
+   "attribution": "U.S. Department of Energy, Public domain; via images-of-elements.com (https://images-of-elements.com/einsteinium.php)",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "s/einsteinium-253.jpg",
+   "k": 1,
+   "note": "U.S. Government work (credited so on the element page)."
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "Z": 52,
+ "images": [
+  {
+   "file": "img/elements/52/1-800.webp",
+   "thumb": "img/elements/52/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Tellurium crystals",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/tellurium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/tellurium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "crystal",
+   "pin": "tellurium-crystals.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/52/2-800.webp",
+   "thumb": "img/elements/52/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "A tellurium disk",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/tellurium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/tellurium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "tellurium-2.jpg",
+   "k": 2
+  }
+ ]
+}

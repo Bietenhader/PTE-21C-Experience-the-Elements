@@ -1,0 +1,37 @@
+{
+ "Z": 11,
+ "images": [
+  {
+   "file": "img/elements/11/1-800.webp",
+   "thumb": "img/elements/11/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Sodium under paraffin oil",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/sodium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/sodium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "sodium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/11/2-800.webp",
+   "thumb": "img/elements/11/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "A sodium-vapour lamp",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/sodium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/sodium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "discharge_tube",
+   "pin": "sodium-vapor-lamp.jpg",
+   "k": 2
+  }
+ ]
+}

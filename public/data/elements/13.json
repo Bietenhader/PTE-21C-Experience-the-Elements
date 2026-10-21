@@ -1,0 +1,441 @@
+{
+ "schemaVersion": 1,
+ "Z": 13,
+ "symbol": "Al",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 12.591,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 8.2136,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 8.9634,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 4.1172,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 4.0656,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -1500.8724,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -1502.2697,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -107.0721,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -107.4116,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -69.7705,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -69.7167,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -7.8065,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -7.8255,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -2.7904,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -2.784,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 121.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 184.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 5.985769,
+     "unc": 3e-06
+    },
+    {
+     "stage": 2,
+     "eV": 18.82855,
+     "unc": 5e-05
+    },
+    {
+     "stage": 3,
+     "eV": 28.447642,
+     "unc": 2.5e-05
+    },
+    {
+     "stage": 4,
+     "eV": 119.9924,
+     "unc": 0.0019
+    },
+    {
+     "stage": 5,
+     "eV": 153.8252,
+     "unc": 0.0025,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 190.49,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 241.76,
+     "unc": 0.09,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 284.64,
+     "unc": 0.07,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 330.21,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 398.65,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 442.005,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 2085.97693,
+     "unc": 0.00016,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 2304.140359,
+     "unc": 1.2e-05,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.441,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.61,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 9.539,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 27
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 82300.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('8.23×10⁴ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.002,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('2×10⁻³ milligrams per liter')."
+   },
+   "solar": {
+    "value": 6.692e-05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 6.46,
+    "unc": 0.03,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 0.061,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "aluminium (fcc)",
+   "structure": "face-centred cubic (fcc)",
+   "lattice": "cubic",
+   "spaceGroup": "F m -3 m",
+   "spaceGroupNumber": 225,
+   "pearson": "cF4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 404.961,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.15,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9012002,
+   "doi": "10.1063/1.1698520",
+   "reference": "Straumanis, M. E. (1949). Journal of Applied Physics 20, 726.",
+   "source": "cod",
+   "note": "Measured at 25 °C. The original paper reported kX units; COD multiplied the cell constant by 1.00202 to give ångström (note in CIF)."
+  },
+  "production": {
+   "commodity": "Aluminum",
+   "basis": "primary smelter production, aluminium metal",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 74000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World primary smelter production, aluminium metal, 2025 (USGS: 74,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 3.96832,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, ingot, average U.S. market (spot), cents per pound [Aluminum], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "bauxite/alumina/aluminium",
+   "source": "eu_crm",
+   "note": "Ore (bauxite), intermediate (alumina) and metal (aluminium) listed as one entry; aluminium is named, so the mapping is direct."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.9
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.109, massive_stars 0.891); quantised to 0.05. Stack height 71 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 27,
+    "charge": 0,
+    "I": 2.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 502.0336,
+     "unc": 0.0005,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1139/p72-233"
+    },
+    "splitting": {
+     "value": 1506100800,
+     "unc": 1500,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Atomic-beam measurement (Harvey, Evans and Lew 1972), as tabulated in arXiv:2511.08881 Table I. Splitting derived as 3A.",
+     "doi": "10.1139/p72-233"
+    }
+   }
+  ],
+  "clocks": [
+   {
+    "Z": 13,
+    "species": "27Al+",
+    "A": 27,
+    "charge": 1,
+    "kind": "atomic",
+    "label": "1121 THz",
+    "transition": "3s^2 ^1S_0 - 3s3p ^3P_0",
+    "srs": true,
+    "metre": true,
+    "frequency": {
+     "value": 1121015393207859.1,
+     "unc": 0.21,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2022-04-13.",
+     "text": "1121015393207859.16"
+    }
+   }
+  ],
+  "laserCooling": [],
+  "siHistory": [
+   {
+    "Z": 13,
+    "A": 27,
+    "unit": "second",
+    "role": "srs",
+    "text": "27Al+ (1121 THz) is a secondary representation of the second.",
+    "validFrom": "2022-04-13",
+    "source": "bipm_frequencies"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "beneficial",
+  "essentialHuman": "no",
+  "plantClass": "beneficial",
+  "plantRole": {
+   "text": "At low concentrations it stimulates growth in some species, such as tea; in acid soils dissolved aluminium is instead a major cause of poor root growth.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+  },
+  "humanRole": {
+   "text": "No known role in the body.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  }
+ },
+ "history": {
+  "discovered": 1825,
+  "discoveredText": "1825 (impure metal)",
+  "discoverers": [
+   "Hans Christian Ørsted"
+  ],
+  "place": "Copenhagen, Denmark",
+  "isolated": 1827,
+  "isolatedBy": [
+   "Friedrich Wöhler"
+  ],
+  "nameOrigin": "From alumina and alum (Latin alumen), the compounds in which the metal was first suspected.",
+  "source": "pubchem",
+  "note": "PubChem lists the year as 'Ancient' because alum was used in antiquity; the metal itself was unknown before 1825. Lavoisier had suspected alumina to be the oxide of an unknown metal (1787)."
+ },
+ "prose": {
+  "text": "Aluminium is a light, silvery metal and the most abundant metal in Earth's crust; we meet it as drink cans, kitchen foil, window frames and aircraft skins. It looks reactive on paper, yet it barely corrodes, because a thin, transparent oxide film seals its surface within moments of exposure to air. Its radioactive isotope aluminium-26, with a half-life of about 717,000 years, was a major heat source that melted some of the first small planetary bodies of the young Solar System. The atom's single 3p electron ([Ne] 3s² 3p¹, ground term ²P°₁/₂) is easier to remove than magnesium's outer 3s electron: 578 kJ/mol against 738 kJ/mol.",
+  "sources": [
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

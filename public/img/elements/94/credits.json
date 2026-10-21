@@ -1,0 +1,22 @@
+{
+ "Z": 94,
+ "images": [
+  {
+   "file": "img/elements/94/1-800.webp",
+   "thumb": "img/elements/94/1-320.webp",
+   "width": 400,
+   "height": 400,
+   "title": "Plutonium metal (1945)",
+   "author": "U.S. Department of Energy",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://images-of-elements.com/plutonium.php",
+   "attribution": "U.S. Department of Energy, Public domain; via images-of-elements.com (https://images-of-elements.com/plutonium.php)",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "s/plutonium.jpg",
+   "k": 1,
+   "note": "U.S. Government work, 1945 (credited so on the element page)."
+  }
+ ]
+}

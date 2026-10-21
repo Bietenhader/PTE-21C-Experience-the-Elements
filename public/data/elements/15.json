@@ -1,0 +1,408 @@
+{
+ "schemaVersion": 1,
+ "Z": 15,
+ "symbol": "P",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 14.5578,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 9.825,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 10.9612,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 5.6418,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 4.8864,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -2069.7497,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -2072.8373,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -172.2303,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -172.9628,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -124.5361,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -124.4794,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -13.9421,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -14.0056,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -5.6077,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -5.5983,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 107.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 180.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 10.486686,
+     "unc": 1.5e-05
+    },
+    {
+     "stage": 2,
+     "eV": 19.76949,
+     "unc": 4e-05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 30.20264,
+     "unc": 9e-05
+    },
+    {
+     "stage": 4,
+     "eV": 51.44387,
+     "unc": 0.00012
+    },
+    {
+     "stage": 5,
+     "eV": 65.02511,
+     "unc": 0.00012
+    },
+    {
+     "stage": 6,
+     "eV": 220.43,
+     "unc": 0.005,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 263.57,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 309.6,
+     "unc": 0.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 372.31,
+     "unc": 0.21,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 424.4,
+     "unc": 0.09,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 479.44,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 560.62,
+     "unc": 0.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 611.741,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 2816.90868,
+     "unc": 0.00019,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 3069.842145,
+     "unc": 1.4e-05,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.746,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.19,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 13.33,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 1050.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.05×10³ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.06,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('6×10⁻² milligrams per liter')."
+   },
+   "solar": {
+    "value": 7.948e-06,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 5.48,
+    "unc": 0.04,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 580.0,
+    "unit": "g",
+    "source": "kerr1982",
+    "note": "In a 70 kg reference adult. ICRP Publication 23 (1975) Table 110 prints 780 g; Kerr (1982) gives 580 g, the value corrected in a 1980 erratum to Publication 23."
+   }
+  },
+  "crystal": {
+   "allotrope": "black phosphorus",
+   "structure": "orthorhombic (puckered layers, black-phosphorus type)",
+   "lattice": "orthorhombic",
+   "spaceGroup": "C m c a",
+   "spaceGroupNumber": 64,
+   "pearson": "oS8",
+   "atomsPerCell": 8,
+   "a": {
+    "value": 331.64,
+    "unc": 0.05,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "b": {
+    "value": 1048.4,
+    "unc": 0.3,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 437.93,
+    "unc": 0.05,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 293.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 4307698,
+   "doi": "10.1021/ic062192q",
+   "reference": "Stefan Lange; Peer Schmidt; Tom Nilges (2007). Inorganic Chemistry 46, 4028.",
+   "source": "cod",
+   "note": "Black phosphorus is the thermodynamically stable allotrope at ambient conditions and was chosen here. White phosphorus (P4 molecules) is the conventional thermodynamic reference state, but its room-temperature α form is orientationally disordered and has no COD entry (COD has β-white P at 158 K, 9013110, and a white-P polymorph at 100 K, 1570230). Space group given as 'C m c a', the older symbol of Cmce (No. 64). Measured at 293 K."
+  },
+  "production": {
+   "commodity": "Phosphate rock",
+   "basis": "mine production, marketable phosphate rock (gross weight)",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 250000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, marketable phosphate rock (gross weight), 2025 (USGS: 250,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 0.1,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average value, f.o.b. mine, dollars per metric ton [Phosphate Rock], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025,
+   "viaMineral": true
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": false,
+   "listedAs": "phosphate rock + phosphorus",
+   "source": "eu_crm",
+   "note": "Phosphate rock is a sedimentary rock (mainly apatite) mined for phosphorus; listed as the rock. Elemental (white) phosphorus, listed separately from phosphate rock."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.9
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.096, massive_stars 0.901, white_dwarfs 0.003); quantised to 0.05. Stack height 67 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "macronutrient",
+  "plantRole": {
+   "text": "Taken up as phosphate; carries energy in ATP and forms the backbone of DNA, RNA and membrane phospholipids.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+  },
+  "humanRole": {
+   "text": "Bone mineral (calcium phosphate), ATP, DNA and RNA, and cell membranes.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": 1669,
+  "discoverers": [
+   "Hennig Brand"
+  ],
+  "place": "Hamburg, Germany",
+  "nameOrigin": "From the Greek phosphoros, 'light-bearer', because white phosphorus glows in the dark.",
+  "source": "pubchem",
+  "note": "Brand, an alchemist, prepared it by boiling down large amounts of urine."
+ },
+ "prose": {
+  "text": "Phosphorus is a reactive nonmetal found in several forms: waxy white phosphorus, which must be kept under water, the red phosphorus of matchbox strikers, and violet and black varieties. Life cannot do without it, in DNA, in the energy carrier ATP, in bones, and as one of the three main nutrients in crop fertilisers. In 1669 the alchemist Hennig Brand isolated it by boiling down large amounts of urine; the green glow of white phosphorus in air comes from slow oxidation, a kind of chemiluminescence, not from phosphorescence. The atom has a half-filled 3p subshell, [Ne] 3s² 3p³ (ground term ⁴S°₃/₂), and phosphorus-31, its only stable isotope, has nuclear spin 1/2, ideal for NMR.",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

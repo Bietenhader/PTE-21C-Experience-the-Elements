@@ -1,0 +1,514 @@
+{
+ "schemaVersion": 1,
+ "Z": 28,
+ "symbol": "Ni",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 27.3526,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 20.2126,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 24.0952,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 14.961,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 14.085,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 12.5295,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 5.7108,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -8105.478,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -8172.013,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -960.8915,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -977.7956,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -839.9618,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -843.1592,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -107.5045,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -110.2487,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -70.5906,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -71.1835,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -9.4886,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -9.1678,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -5.7352,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -5.8495,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 124.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 163.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.639878,
+     "unc": 1.7e-05
+    },
+    {
+     "stage": 2,
+     "eV": 18.168838,
+     "unc": 2.5e-05
+    },
+    {
+     "stage": 3,
+     "eV": 35.187,
+     "unc": 0.019
+    },
+    {
+     "stage": 4,
+     "eV": 54.92,
+     "unc": 0.25,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 76.06,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 108.0,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 132.0,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 162.0,
+     "unc": 2.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 193.2,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 224.7,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 319.5,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 351.6,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 384.5,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 429.3,
+     "unc": 0.8,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 462.8,
+     "unc": 1.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 495.4,
+     "unc": 1.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 571.07,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 607.02,
+     "unc": 0.019,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 1540.1,
+     "unc": 0.5
+    },
+    {
+     "stage": 20,
+     "eV": 1646.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 1758.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 1880.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 2008.1,
+     "unc": 1.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 2130.5,
+     "unc": 0.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 2295.6,
+     "unc": 2.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 26,
+     "eV": 2399.259,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 27,
+     "eV": 10288.8848,
+     "unc": 0.001,
+     "flag": "calculated"
+    },
+    {
+     "stage": 28,
+     "eV": 10775.3948,
+     "unc": 0.0004,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 1.156,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.91,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 11.13,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 84.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('8.4×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.00056,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('5.6×10⁻⁴ milligrams per liter')."
+   },
+   "solar": {
+    "value": 8.985e-05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 6.25,
+    "unc": 0.01,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 0.01,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "nickel (fcc)",
+   "structure": "face-centred cubic (fcc)",
+   "lattice": "cubic",
+   "spaceGroup": "F m -3 m",
+   "spaceGroupNumber": 225,
+   "pearson": "cF4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 352.4,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 293.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9013024,
+   "doi": "10.1007/BF01174717",
+   "reference": "Suh, I.-K.; Ohta, H.; Waseda, Y. (1988). Journal of Materials Science 23, 757.",
+   "source": "cod",
+   "note": "Measured at 293 K (CIF)."
+  },
+  "production": {
+   "commodity": "Nickel",
+   "basis": "mine production, nickel content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 3900000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, nickel content, 2025 (USGS: 3,900,000 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 15.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average annual, London Metal Exchange (LME), cash: Dollars per metric ton [Nickel], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "nickel — battery grade",
+   "source": "eu_crm",
+   "note": "Only battery-grade nickel is listed. The 2023 study: nickel does not meet the CRM thresholds but is included because it is a strategic raw material."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.25,
+    "whiteDwarfs": 0.65
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.082, massive_stars 0.244, white_dwarfs 0.674); quantised to 0.05. Stack height 73 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "probable",
+  "plantClass": "micronutrient",
+  "plantRole": {
+   "text": "The metal in urease, which breaks down urea; the last element shown to be essential for plants, in barley grown over generations without nickel.",
+   "source": "primary_literature",
+   "doi": "10.1104/pp.85.3.801"
+  },
+  "humanRole": {
+   "text": "No essential role in humans is proven; it is used by enzymes of some microbes in the gut.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  },
+  "note": "Plant: Brown, Welch & Cary (1987). Human: no EFSA dietary reference value."
+ },
+ "history": {
+  "discovered": 1751,
+  "discoverers": [
+   "Axel Fredrik Cronstedt"
+  ],
+  "place": "Stockholm, Sweden",
+  "nameOrigin": "Shortened from the German Kupfernickel, a miners' name (roughly 'copper demon') for the ore niccolite, which looked like copper ore but yielded no copper.",
+  "source": "pubchem"
+ },
+ "prose": {
+  "text": "Nickel is a silvery, corrosion-resistant metal used mainly in stainless steel, as well as in coins and rechargeable batteries; it also forms, with iron, the metal of most iron meteorites. Plants need a trace of it for urease, the enzyme that breaks down urea. In the nucleus, nickel holds a record: nickel-62 has the highest binding energy per nucleon of any nucleus, about 8.79 MeV, slightly more than iron-56. The free atom's ground configuration is [Ar] 3d⁸ 4s² (term ³F₄), but a level from the rival arrangement 3d⁹ 4s¹ lies only 0.025 eV above it, so the two are almost tied.",
+  "sources": [
+   "iaea_livechart",
+   "nist_levels",
+   "nist_gsie"
+  ]
+ }
+}

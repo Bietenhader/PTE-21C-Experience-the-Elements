@@ -1,0 +1,921 @@
+{
+ "schemaVersion": 1,
+ "Z": 74,
+ "symbol": "W",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 72.5657,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 54.6698,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 69.5742,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 51.87,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 52.6176,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 60.4524,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 40.5588,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 39.5484,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "value": 37.1732,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "value": 34.7108,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "value": 23.5415,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "value": 21.3255,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 2,
+    "value": 16.742,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "value": 9.8544,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -63703.0222,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -69025.0077,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -10472.4695,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -11927.4926,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -10041.3817,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -10448.0564,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -2391.0044,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -2747.9826,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -2190.5738,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -2308.824,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -1815.674,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -1801.5066,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -478.1257,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -566.0522,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -394.4318,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -421.6346,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -241.6288,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -238.0081,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "eV": -42.2004,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 3,
+    "eV": -33.7212,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -65.199,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -78.9254,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "eV": -40.9384,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 1,
+    "eV": -43.276,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 2,
+    "eV": -6.0029,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 2,
+    "eV": -4.7079,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "eV": -4.9365,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 6,
+    "l": 0,
+    "eV": -5.8762,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 162.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 210.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.86403,
+     "unc": 0.0001
+    },
+    {
+     "stage": 2,
+     "eV": 16.37,
+     "unc": 0.15,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 26.0,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 38.2,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 51.6,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 64.77,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 122.01,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 141.2,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 160.2,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 179.0,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 208.9,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 231.6,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 258.3,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 290.7,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 325.3,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 361.9,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 387.9,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 420.7,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 462.1,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 20,
+     "eV": 502.6,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 543.4,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 594.5,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 640.6,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 685.6,
+     "unc": 1.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 734.1,
+     "unc": 1.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 26,
+     "eV": 784.4,
+     "unc": 1.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 27,
+     "eV": 833.4,
+     "unc": 1.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 28,
+     "eV": 881.4,
+     "unc": 1.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 29,
+     "eV": 1132.2,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 30,
+     "eV": 1180.0,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 31,
+     "eV": 1230.4,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 32,
+     "eV": 1283.4,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 33,
+     "eV": 1335.1,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 34,
+     "eV": 1386.8,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 35,
+     "eV": 1459.9,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 36,
+     "eV": 1512.4,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 37,
+     "eV": 1569.1,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 38,
+     "eV": 1621.7,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 39,
+     "eV": 1829.8,
+     "unc": 1.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 40,
+     "eV": 1882.9,
+     "unc": 2.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 41,
+     "eV": 1940.6,
+     "unc": 2.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 42,
+     "eV": 1994.8,
+     "unc": 2.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 43,
+     "eV": 2149.1,
+     "unc": 2.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 44,
+     "eV": 2210.0,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 45,
+     "eV": 2354.5,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 46,
+     "eV": 2414.1,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 47,
+     "eV": 4057.0,
+     "unc": 3.0
+    },
+    {
+     "stage": 48,
+     "eV": 4180.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 49,
+     "eV": 4309.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 50,
+     "eV": 4446.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 51,
+     "eV": 4578.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 52,
+     "eV": 4709.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 53,
+     "eV": 4927.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 54,
+     "eV": 5063.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 55,
+     "eV": 5209.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 56,
+     "eV": 5348.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 57,
+     "eV": 5719.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 58,
+     "eV": 5840.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 59,
+     "eV": 5970.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 60,
+     "eV": 6093.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 61,
+     "eV": 6596.0,
+     "unc": 7.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 62,
+     "eV": 6735.0,
+     "unc": 7.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 63,
+     "eV": 7000.0,
+     "unc": 7.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 64,
+     "eV": 7130.0,
+     "unc": 7.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 65,
+     "eV": 15566.0,
+     "unc": 11.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 66,
+     "eV": 15896.0,
+     "unc": 11.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 67,
+     "eV": 16252.0,
+     "unc": 11.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 68,
+     "eV": 16588.0,
+     "unc": 11.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 69,
+     "eV": 18476.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 70,
+     "eV": 18872.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 71,
+     "eV": 19362.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 72,
+     "eV": 19686.74,
+     "unc": 0.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 73,
+     "eV": 79181.94,
+     "unc": 0.19,
+     "flag": "calculated"
+    },
+    {
+     "stage": 74,
+     "eV": 80755.91,
+     "unc": 0.14,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.815,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.36,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 8.67,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 1.25,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.25 milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.0001,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1×10⁻⁴ milligrams per liter')."
+   },
+   "solar": {
+    "value": 8.096e-10,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 0.71,
+    "unc": 0.05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "α-tungsten",
+   "structure": "body-centred cubic (bcc)",
+   "lattice": "cubic",
+   "spaceGroup": "I m -3 m",
+   "spaceGroupNumber": 229,
+   "pearson": "cI2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 316.48,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9006486,
+   "doi": "10.1007/s002690050070",
+   "reference": "Dubrovinsky, L. S.; Saxena, S. K. (1997). Physics and Chemistry of Minerals 24, 547.",
+   "source": "cod",
+   "note": "Measured at 298 K (CIF)."
+  },
+  "production": {
+   "commodity": "Tungsten",
+   "basis": "mine production, tungsten content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 85000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, tungsten content, 2025 (USGS: 85,000 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 38.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, concentrate, average in-warehouse Rotterdam, dollars per dry metric ton unit of tungsten trioxide [Tungsten], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "tungsten",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.5,
+    "massiveStars": 0.4,
+    "neutronStarMergers": 0.1
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.510, massive_stars 0.402, neutron_star_mergers 0.087); quantised to 0.05. Stack height 90 px."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1783,
+  "discoveredText": "1783 (tungstic acid found by Scheele in 1781)",
+  "discoverers": [
+   "Juan José Elhuyar",
+   "Fausto Elhuyar"
+  ],
+  "place": "Bergara, Spain",
+  "nameOrigin": "From the Swedish tung sten, 'heavy stone', the old name of the mineral now called scheelite.",
+  "symbolNote": "W comes from wolfram, the element's name in German and several other languages, after the ore wolframite.",
+  "source": "pubchem",
+  "note": "CIAAW credits Scheele (1781) with the discovery and the Elhuyar brothers (1783) with the first isolation, while PubChem's year and Jefferson Lab credit the brothers, who reduced the acid from wolframite with charcoal. Woulfe had suspected a new substance in wolframite in 1779."
+ },
+ "prose": {
+  "text": "Tungsten is a dense, steel-grey transition metal with the highest melting point of any metal, 3695 K, which is why it made the glowing filaments of incandescent bulbs and still forms welding electrodes and X-ray targets. Its name is Swedish for ‘heavy stone’, while its symbol, W, comes from wolfram, after the ore wolframite; tungsten carbide, extremely hard, tips drills and cutting tools. In the atom, relativity shows: chromium and molybdenum above it take a d⁵ s¹ arrangement, but tungsten keeps two 6s electrons, [Xe] 4f¹⁴ 5d⁴ 6s² (ground term ⁵D₀), because relativistic effects draw the 6s orbital inward and lower its energy.",
+  "sources": [
+   "pubchem",
+   "nist_gsie"
+  ]
+ }
+}

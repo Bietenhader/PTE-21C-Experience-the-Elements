@@ -1,0 +1,737 @@
+{
+ "schemaVersion": 1,
+ "Z": 95,
+ "symbol": "Am",
+ "orbitals": {
+  "zeff": [],
+  "eigenvalues": [],
+  "radii": {
+   "covalent": {
+    "value": 180.0,
+    "unc": 6.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 244.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 5.97381,
+     "unc": 0.00025
+    },
+    {
+     "stage": 2,
+     "eV": 11.7,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 21.7,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 36.8,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 50.0,
+     "unc": 1.9,
+     "flag": "calculated"
+    },
+    {
+     "stage": 6,
+     "eV": 67.9,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 95.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 110.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 125.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 141.0,
+     "unc": 7.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 163.0,
+     "unc": 8.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 184.0,
+     "unc": 9.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 206.0,
+     "unc": 10.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 225.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 242.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 284.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 305.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 424.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 451.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 481.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 21,
+     "eV": 511.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 22,
+     "eV": 541.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 23,
+     "eV": 571.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 24,
+     "eV": 616.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 646.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 680.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 27,
+     "eV": 711.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 28,
+     "eV": 870.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 29,
+     "eV": 900.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 30,
+     "eV": 940.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 31,
+     "eV": 980.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 32,
+     "eV": 1090.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 33,
+     "eV": 1130.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 34,
+     "eV": 1240.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 35,
+     "eV": 1280.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 36,
+     "eV": 1410.0,
+     "unc": 70.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 37,
+     "eV": 1490.0,
+     "unc": 70.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 38,
+     "eV": 1570.0,
+     "unc": 80.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 39,
+     "eV": 1650.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 40,
+     "eV": 1730.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 41,
+     "eV": 1820.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 42,
+     "eV": 1900.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 43,
+     "eV": 1980.0,
+     "unc": 100.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 44,
+     "eV": 2070.0,
+     "unc": 100.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 45,
+     "eV": 2160.0,
+     "unc": 110.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 46,
+     "eV": 2240.0,
+     "unc": 110.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 47,
+     "eV": 2320.0,
+     "unc": 110.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 48,
+     "eV": 2410.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 49,
+     "eV": 2480.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 50,
+     "eV": 2874.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 51,
+     "eV": 2946.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 52,
+     "eV": 3021.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 53,
+     "eV": 3101.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 54,
+     "eV": 3178.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 55,
+     "eV": 3251.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 56,
+     "eV": 3402.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 57,
+     "eV": 3479.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 58,
+     "eV": 3563.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 59,
+     "eV": 3641.0,
+     "unc": 6.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 60,
+     "eV": 3956.0,
+     "unc": 7.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 61,
+     "eV": 4033.0,
+     "unc": 10.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 62,
+     "eV": 4115.0,
+     "unc": 12.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 63,
+     "eV": 4191.0,
+     "unc": 15.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 64,
+     "eV": 4642.0,
+     "unc": 19.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 65,
+     "eV": 4733.0,
+     "unc": 24.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 66,
+     "eV": 4960.0,
+     "unc": 30.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 67,
+     "eV": 5050.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 68,
+     "eV": 8040.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 69,
+     "eV": 8210.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 70,
+     "eV": 8390.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 71,
+     "eV": 8590.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 72,
+     "eV": 8770.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 73,
+     "eV": 8950.0,
+     "unc": 70.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 74,
+     "eV": 9380.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 75,
+     "eV": 9560.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 76,
+     "eV": 9770.0,
+     "unc": 100.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 77,
+     "eV": 9960.0,
+     "unc": 110.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 78,
+     "eV": 10490.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 79,
+     "eV": 10650.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 80,
+     "eV": 10830.0,
+     "unc": 140.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 81,
+     "eV": 11000.0,
+     "unc": 150.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 82,
+     "eV": 12400.0,
+     "unc": 160.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 83,
+     "eV": 12600.0,
+     "unc": 170.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 84,
+     "eV": 13000.0,
+     "unc": 190.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 85,
+     "eV": 13190.0,
+     "unc": 200.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 86,
+     "eV": 27110.0,
+     "unc": 220.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 87,
+     "eV": 27550.0,
+     "unc": 240.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 88,
+     "eV": 28040.0,
+     "unc": 250.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 89,
+     "eV": 28500.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 90,
+     "eV": 33700.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 91,
+     "eV": 34300.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 92,
+     "eV": 35100.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 93,
+     "eV": 35549.4,
+     "unc": 0.7,
+     "flag": "calculated"
+    },
+    {
+     "stage": 94,
+     "eV": 139769.5,
+     "unc": 0.7,
+     "flag": "calculated"
+    },
+    {
+     "stage": 95,
+     "eV": 142153.5,
+     "unc": 0.9,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 1.3,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 243
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "α-americium",
+   "structure": "double hexagonal close-packed (dhcp)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 347.4,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 1125.0,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9008524,
+   "reference": "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7.",
+   "source": "cod",
+   "note": "Wyckoff's compilation; temperature not stated."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1944,
+  "discoverers": [
+   "Glenn T. Seaborg",
+   "Ralph A. James",
+   "Leon O. Morgan",
+   "Albert Ghiorso"
+  ],
+  "place": "Chicago, United States",
+  "nameOrigin": "After the Americas, by analogy with europium, its counterpart among the lanthanides.",
+  "source": "pubchem",
+  "note": "Made by successive neutron captures in plutonium at the wartime Metallurgical Laboratory of the University of Chicago; announced in November 1945."
+ },
+ "prose": {
+  "text": "Americium is a silvery, radioactive actinide that many people keep at home without knowing it: a tiny amount of americium-241, half-life about 430 years, ionises the air inside common smoke detectors. Glenn Seaborg's team made it in 1944 at the wartime Metallurgical Laboratory in Chicago and named it after America, echoing europium, the lanthanide above it, which is named after Europe. The news first reached the public on a children's radio quiz in November 1945, when a young listener asked Seaborg whether any new elements had been made. The atom has an exactly half-filled 5f shell, [Rn] 5f⁷ 7s², with seven parallel spins and no net orbital momentum: an ⁸S°₇/₂ ground term.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

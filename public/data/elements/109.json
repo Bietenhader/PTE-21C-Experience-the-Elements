@@ -1,0 +1,532 @@
+{
+ "schemaVersion": 1,
+ "Z": 109,
+ "symbol": "Mt",
+ "orbitals": {
+  "zeff": [],
+  "eigenvalues": [],
+  "radii": {
+   "covalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "vdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 5,
+     "eV": 50.0,
+     "unc": 1.9,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 94.0,
+     "unc": 2.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 109.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 187.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 202.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 235.9,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 257.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 289.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 318.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 346.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 386.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 406.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 445.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 32,
+     "eV": 1035.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 33,
+     "eV": 1072.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 34,
+     "eV": 1112.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 35,
+     "eV": 1154.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 36,
+     "eV": 1195.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 37,
+     "eV": 1234.0,
+     "unc": 5.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 38,
+     "eV": 1311.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 39,
+     "eV": 1352.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 40,
+     "eV": 1397.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 41,
+     "eV": 1439.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 64,
+     "eV": 4464.0,
+     "unc": 19.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 65,
+     "eV": 4551.0,
+     "unc": 24.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 66,
+     "eV": 4640.0,
+     "unc": 30.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 67,
+     "eV": 4740.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 68,
+     "eV": 4830.0,
+     "unc": 40.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 69,
+     "eV": 4920.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 70,
+     "eV": 5160.0,
+     "unc": 50.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 71,
+     "eV": 5250.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 72,
+     "eV": 5360.0,
+     "unc": 60.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 73,
+     "eV": 5450.0,
+     "unc": 70.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 74,
+     "eV": 5840.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 75,
+     "eV": 5930.0,
+     "unc": 90.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 76,
+     "eV": 6030.0,
+     "unc": 100.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 77,
+     "eV": 6130.0,
+     "unc": 110.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 78,
+     "eV": 7030.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 79,
+     "eV": 7150.0,
+     "unc": 120.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 80,
+     "eV": 7430.0,
+     "unc": 140.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 81,
+     "eV": 7550.0,
+     "unc": 150.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 82,
+     "eV": 11460.0,
+     "unc": 160.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 83,
+     "eV": 11660.0,
+     "unc": 170.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 84,
+     "eV": 11870.0,
+     "unc": 190.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 85,
+     "eV": 12100.0,
+     "unc": 200.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 86,
+     "eV": 12320.0,
+     "unc": 220.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 87,
+     "eV": 12530.0,
+     "unc": 240.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 88,
+     "eV": 13200.0,
+     "unc": 250.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 89,
+     "eV": 13400.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 90,
+     "eV": 13700.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 91,
+     "eV": 13900.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 92,
+     "eV": 14500.0,
+     "unc": 300.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 93,
+     "eV": 14700.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 94,
+     "eV": 14900.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 95,
+     "eV": 15100.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 96,
+     "eV": 17900.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 97,
+     "eV": 18200.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 98,
+     "eV": 18700.0,
+     "unc": 400.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 99,
+     "eV": 18900.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 100,
+     "eV": 36700.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 101,
+     "eV": 37200.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 102,
+     "eV": 37800.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 103,
+     "eV": 38300.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 104,
+     "eV": 48500.0,
+     "unc": 500.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 105,
+     "eV": 49400.0,
+     "unc": 600.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 106,
+     "eV": 50300.0,
+     "unc": 600.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 108,
+     "eV": 196392.0,
+     "unc": 14.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 109,
+     "eV": 199605.0,
+     "unc": 15.0,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 282
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No COD entry."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1982,
+  "discoverers": [
+   "Gesellschaft für Schwerionenforschung (GSI), Darmstadt"
+  ],
+  "place": "Darmstadt, Germany",
+  "nameOrigin": "After Lise Meitner, co-discoverer of protactinium-231 and of the explanation of nuclear fission.",
+  "symbolNote": "Temporary name: unnilennium (Une).",
+  "source": "iupac_discovery",
+  "doi": "10.1351/pac199365081757",
+  "note": "A single atom was observed on 29 August 1982, made by fusing iron-58 with bismuth-209."
+ },
+ "prose": {
+  "text": "Meitnerium is a synthetic element in group 9, below iridium, named after Lise Meitner, who helped to explain nuclear fission; it is the only element named after a woman alone. It was first made at GSI in Darmstadt on 29 August 1982, when a week of bombarding bismuth-209 with iron-58 produced a single fused nucleus of meitnerium-266, an isotope with a half-life of about 2 milliseconds. Only a few atoms have been made since; its heavier isotopes survive for seconds, and its chemistry has never been studied. The configuration [Rn] 5f¹⁴ 6d⁷ 7s², the same outer pattern as iridium, is a theoretical prediction, not a measurement.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart"
+  ]
+ }
+}

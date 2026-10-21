@@ -1,0 +1,22 @@
+{
+ "Z": 93,
+ "images": [
+  {
+   "file": "img/elements/93/1-800.webp",
+   "thumb": "img/elements/93/1-320.webp",
+   "width": 400,
+   "height": 400,
+   "title": "A 6 kg sphere of neptunium-237 (2002)",
+   "author": "Los Alamos National Laboratory",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://images-of-elements.com/neptunium.php",
+   "attribution": "Los Alamos National Laboratory, Public domain; via images-of-elements.com (https://images-of-elements.com/neptunium.php)",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "s/neptunium.jpg",
+   "k": 1,
+   "note": "U.S. Government work, released as public domain (credited so on the element page)."
+  }
+ ]
+}

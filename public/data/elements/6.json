@@ -1,0 +1,316 @@
+{
+ "schemaVersion": 1,
+ "Z": 6,
+ "symbol": "C",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 5.6727,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 3.2166,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 3.1358,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -270.6912,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -270.6485,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -13.6293,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -13.6354,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -5.4201,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -5.4181,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 76.0,
+    "unc": 1.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832. Value for sp3; also 73(2)[sp2], 69(1)[sp]."
+   },
+   "vdw": {
+    "value": 170.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 11.260288,
+     "unc": 1.1e-06
+    },
+    {
+     "stage": 2,
+     "eV": 24.383143,
+     "unc": 1.2e-05
+    },
+    {
+     "stage": 3,
+     "eV": 47.88778,
+     "unc": 0.00025
+    },
+    {
+     "stage": 4,
+     "eV": 64.49352,
+     "unc": 0.00019
+    },
+    {
+     "stage": 5,
+     "eV": 392.09056,
+     "unc": 4e-05,
+     "flag": "calculated"
+    },
+    {
+     "stage": 6,
+     "eV": 489.99320779,
+     "unc": 2.2e-07,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 1.263,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.55,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 15.05,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 200.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.00×10² milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 28.0,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('2.8×10¹ milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.003336,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 8.51,
+    "unc": 0.09,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 16000.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "graphite (hexagonal, AB stacking)",
+   "structure": "hexagonal layered (graphite)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 246.4,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 671.1,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9011577,
+   "doi": "10.1038/258136a0",
+   "reference": "Trucano, P.; Chen, R. (1975). Nature 258, 136.",
+   "source": "cod",
+   "note": "Graphite is the standard state of carbon; diamond is metastable at ambient conditions. Natural crystals, neutron diffraction. Temperature not stated in CIF."
+  },
+  "production": {
+   "commodity": "Graphite (natural)",
+   "basis": "mine production, natural graphite (gross weight of graphite)",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 1800000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, natural graphite (gross weight of graphite), 2025 (USGS: 1,800,000 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 1.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average unit value of imports, dollars per metric ton at foreign ports: Flake [Graphite (Natural)], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025,
+   "viaMineral": true
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "coking coal + graphite",
+   "source": "eu_crm",
+   "viaMineral": true,
+   "note": "Coking coal is a sedimentary rock/fuel (mostly carbon, with H, O, N, S and ash) used to make metallurgical coke; it is listed as a material, not as elemental carbon. Graphite is a mineral form (allotrope) of carbon; the 2023 study assessed 'natural graphite', the Regulation's critical list says 'graphite'. Strategic entry 'graphite — battery grade' is not restricted to natural graphite: Art. 3(3) asks the Commission to assess at the first review 'whether ... synthetic graphite should remain in the list of strategic raw materials'."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.5,
+    "massiveStars": 0.5
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.489, massive_stars 0.511); quantised to 0.05. Stack height 48 px. Cross-check with the paper's text: '49% of C ... produced by AGB stars (at t=9.2 Gyr)' (figure reading 0.489)."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": [
+   {
+    "Z": 6,
+    "unit": "mole",
+    "role": "definition",
+    "text": "The mole was the amount of substance containing as many entities as there are atoms in 0.012 kg of carbon-12. Since 2019 it is fixed by the Avogadro constant.",
+    "source": "cgpm_resolutions",
+    "A": 12,
+    "from": 1971,
+    "to": 2019,
+    "doi": "10.59161/CGPM1971RES3E",
+    "endDoi": "10.59161/CGPM2018RES1E"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "structural",
+  "plantRole": {
+   "text": "Fixed from atmospheric CO2 in photosynthesis; the backbone of all organic matter.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00001-7"
+  },
+  "humanRole": {
+   "text": "The backbone of proteins, fats, carbohydrates and nucleic acids.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  }
+ },
+ "history": {
+  "discovered": "antiquity",
+  "nameOrigin": "From the Latin carbo, 'charcoal'.",
+  "source": "pubchem",
+  "note": "Known since prehistory as charcoal and soot; Smithson Tennant showed in 1797 that diamond is pure carbon."
+ },
+ "prose": {
+  "text": "Carbon is the nonmetal on which all known life is built, and we meet it as soot, pencil graphite and diamond, and in every food, fuel and living cell. Its radioactive isotope carbon-14, made continually by cosmic rays in the upper air, decays with a half-life of 5700 years, which lets archaeologists date wood, bone and seeds up to tens of thousands of years old. A free carbon atom, [He] 2s² 2p², has two unpaired electrons (ground term ³P₀), yet in methane or diamond it forms four equivalent bonds, which chemists describe as one 2s electron being promoted and the orbitals mixing into sp³ hybrids.",
+  "sources": [
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

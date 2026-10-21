@@ -1,0 +1,355 @@
+{
+ "schemaVersion": 1,
+ "Z": 3,
+ "symbol": "Li",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 2.6906,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 1.2792,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -51.1183,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -51.1092,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -2.8719,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -2.8719,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 128.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 182.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 5.391714996,
+     "unc": 2.2e-08
+    },
+    {
+     "stage": 2,
+     "eV": 75.640097,
+     "unc": 1.2e-06,
+     "flag": "calculated"
+    },
+    {
+     "stage": 3,
+     "eV": 122.45435913,
+     "unc": 1.1e-07,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.618,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 0.98,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 5.392,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 7
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 20.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.0×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.18,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.8×10⁻¹ milligrams per liter')."
+   },
+   "solar": {
+    "value": 1.19e-08,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 3.3,
+    "unc": 0.02,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "lithium (bcc)",
+   "structure": "body-centred cubic (bcc)",
+   "lattice": "cubic",
+   "spaceGroup": "I m -3 m",
+   "spaceGroupNumber": 229,
+   "pearson": "cI2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 350.92,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 293.15,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9012448,
+   "doi": "10.1063/1.1743926",
+   "reference": "Covington, E. J.; Montgomery, D. J. (1957). Journal of Chemical Physics 27, 1030.",
+   "source": "cod",
+   "note": "Measured on separated 7Li (natural lithium is mostly 7Li); COD 9012447 gives the 6Li value from the same paper. bcc is the room-temperature form; lithium transforms to close-packed forms on cooling (not covered here)."
+  },
+  "production": {
+   "commodity": "Lithium",
+   "basis": "mine production, lithium content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 290000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, lithium content, 2025 (USGS: 290,000 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 9.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, annual average-real, battery-grade lithium carbonate, dollars per metric ton [Lithium], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "lithium",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "The paper calls its lithium model 'very uncertain' and leaves out cosmic rays and novae, which make some lithium; its box in Fig. 39 is full to the top, so no split is quoted."
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 6,
+    "charge": 0,
+    "I": 1.0,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 152.1368407,
+     "unc": 2e-06,
+     "unit": "MHz",
+     "source": "allegrini2022",
+     "doi": "10.1103/RevModPhys.49.31"
+    },
+    "splitting": {
+     "value": 228205261.05,
+     "unc": 3,
+     "unit": "Hz",
+     "source": "allegrini2022",
+     "note": "Ground-state A constant (From Arimondo, Inguscio and Violino (1977)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2).",
+     "doi": "10.1103/RevModPhys.49.31"
+    }
+   },
+   {
+    "A": 7,
+    "charge": 0,
+    "I": 1.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 401.7520433,
+     "unc": 5e-07,
+     "unit": "MHz",
+     "source": "allegrini2022"
+    },
+    "splitting": {
+     "value": 803504086.6,
+     "unc": 1,
+     "unit": "Hz",
+     "source": "allegrini2022",
+     "note": "Ground-state A constant (Beckmann, Böklen and Elke (1974)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [
+   {
+    "A": 7,
+    "charge": 0,
+    "state": "ground",
+    "lower": "2s 2S1/2",
+    "upper": "2p 2P3/2",
+    "wavelength": {
+     "value": 670.961,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 5.8714,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 3.689e+07 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstMOT": {
+     "year": 1991,
+     "doi": "10.1143/JJAP.30.L1324",
+     "source": "primary_literature"
+    },
+    "BEC": {
+     "year": 1995,
+     "doi": "10.1103/PhysRevLett.75.1687",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "The 1991 MOT paper trapped both 7Li and 6Li. The 1995 paper reported evidence of BEC; the 1997 follow-up (doi 10.1103/PhysRevLett.78.985) measured the condensate directly. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied. NIST Li I gives 3 decimals."
+   },
+   {
+    "A": 6,
+    "charge": 0,
+    "state": "ground",
+    "lower": "2s 2S1/2",
+    "upper": "2p 2P3/2",
+    "wavelength": {
+     "value": 670.961,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 5.8714,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 3.689e+07 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstMOT": {
+     "year": 1991,
+     "doi": "10.1143/JJAP.30.L1324",
+     "source": "primary_literature"
+    },
+    "DFG": {
+     "year": 2001,
+     "doi": "10.1126/science.1059318",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Fermi degeneracy of 6Li reached in 2001 by Rice (Science, cited) and ENS Paris (PRL 87, 080403, doi 10.1103/PhysRevLett.87.080403). Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+   }
+  ],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1817,
+  "discoverers": [
+   "Johan August Arfwedson"
+  ],
+  "place": "Stockholm, Sweden",
+  "nameOrigin": "From the Greek lithos, 'stone', since it was first found in a mineral (petalite).",
+  "source": "pubchem",
+  "note": "Arfwedson worked in Berzelius's Stockholm laboratory. CIAAW gives 1818. Sources differ on the first isolation of the metal: Jefferson Lab credits electrolysis by Brande and Davy, while CIAAW names Bunsen and Matthiessen (1855), who made it in quantity."
+ },
+ "prose": {
+  "text": "Lithium is the lightest metal, a soft, silvery alkali metal that tarnishes quickly in moist air; today we meet it mainly inside the rechargeable batteries of phones and electric cars. With a density of only 0.534 g/cm³ it is the least dense solid element and would float on water, although it reacts with the water as it does so. Its configuration [He] 2s¹ leaves one outer electron alone in the 2s orbital (ground term ²S₁/₂). When that electron is lifted to 2p and falls back, it emits the deep red line near 670.8 nm that colours lithium flames crimson.",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "nist_lines"
+  ]
+ }
+}

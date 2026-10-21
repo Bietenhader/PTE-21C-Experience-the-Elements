@@ -1,0 +1,37 @@
+{
+ "Z": 49,
+ "images": [
+  {
+   "file": "img/elements/49/1-800.webp",
+   "thumb": "img/elements/49/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "An indium ingot",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/indium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/indium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "indium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/49/2-800.webp",
+   "thumb": "img/elements/49/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Freshly cut indium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/indium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/indium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "indium-3.jpg",
+   "k": 2
+  }
+ ]
+}

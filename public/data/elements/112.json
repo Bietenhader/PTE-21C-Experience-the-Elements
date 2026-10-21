@@ -1,0 +1,123 @@
+{
+ "schemaVersion": 1,
+ "Z": 112,
+ "symbol": "Cn",
+ "orbitals": {
+  "zeff": [],
+  "eigenvalues": [],
+  "radii": {
+   "covalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "vdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": []
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 286
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No COD entry."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1996,
+  "discoverers": [
+   "Gesellschaft für Schwerionenforschung (GSI), Darmstadt"
+  ],
+  "place": "Darmstadt, Germany",
+  "nameOrigin": "After the astronomer Nicolaus Copernicus.",
+  "symbolNote": "Temporary name: ununbium (Uub). The discoverers first proposed the symbol Cp, changed to Cn because Cp had once stood for cassiopeium (lutetium).",
+  "source": "iupac_discovery",
+  "doi": "10.1351/PAC-REP-08-03-05",
+  "note": "First atom made on 9 February 1996 from zinc-70 on lead-208; the 2009 IUPAC/IUPAP report credited the 1996 and 2002 GSI work, and the name followed in 2010."
+ },
+ "prose": {
+  "text": "Copernicium is a synthetic element in group 12, below zinc, cadmium and mercury, named after the astronomer Nicolaus Copernicus. It was first made at GSI in Darmstadt on 9 February 1996 by fusing lead-208 with zinc-70; its first atoms, of copernicium-277, lasted less than a millisecond. Heavier isotopes live longer, copernicium-285 for about half a minute, and experiments on single atoms show it to be an extremely volatile metal, even more so than mercury. Only small numbers of atoms have ever been made. Calculations predict a closed-shell [Rn] 5f¹⁴ 6d¹⁰ 7s² configuration, with relativity binding the 7s pair so tightly that some studies expect copernicium to be a liquid at room temperature.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart"
+  ]
+ }
+}

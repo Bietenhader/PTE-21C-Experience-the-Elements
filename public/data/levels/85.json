@@ -1,0 +1,14 @@
+{
+"schemaVersion":1,
+"Z":85,
+"symbol":"At",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":3,
+"levels":[
+  {"eV":0.0,"configuration":"6p5","term":"2P*","J":"3/2","parity":"odd"},
+  {"eV":5.52341,"unc":5e-05,"configuration":"6p4.(3P).7s","term":"4P","J":"5/2","parity":"even"},
+  {"eV":5.73224,"unc":5e-05,"configuration":"6p4.(3P).7s","term":"4P","J":"3/2","parity":"even"}
+],
+"ionizationLimit":{"value":9.31751,"unc":8e-05,"unit":"eV","source":"nist_levels","note":"Limit: At II (6p4 3P<2>)."}
+}

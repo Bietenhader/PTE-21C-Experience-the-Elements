@@ -1,0 +1,325 @@
+{
+ "schemaVersion": 1,
+ "Z": 2,
+ "symbol": "He",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 1.6875,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -15.5221,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -15.52,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 28.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 140.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 24.587389011,
+     "unc": 2.5e-08
+    },
+    {
+     "stage": 2,
+     "eV": 54.4177655282,
+     "unc": 1e-09,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "value": 24.59,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 0.008,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('8×10⁻³ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 7e-06,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('7×10⁻⁶ milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.2752,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 10.922,
+    "unc": 0.012,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar value with theoretical considerations; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "solid helium-4 (hcp)",
+   "structure": "hexagonal close-packed (hcp)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 365.0,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 594.5,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 1.73,
+    "unit": "K",
+    "source": "cod"
+   },
+   "pressure": {
+    "value": 3000.0,
+    "unit": "kPa",
+    "source": "cod"
+   },
+   "lowTemperatureSolid": true,
+   "codId": 9011639,
+   "doi": "10.1103/PhysRevLett.8.469",
+   "reference": "Schuch, A. F.; Mills, R. L. (1962). Physical Review Letters 8, 469.",
+   "source": "cod",
+   "note": "Helium does not solidify at ambient pressure; this hcp 4He entry was measured at 1.73 K under 3000 kPa (3 MPa), the lowest stated pressure among the hcp helium entries in COD (others: 9011630 at 7 MPa and 1.1 K; Wyckoff's 9008500 at 2 K gives no pressure)."
+  },
+  "production": {
+   "commodity": "Helium",
+   "basis": "world production, helium gas (volume at 101.325 kPa, 15 degC)",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 32000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World world production, helium gas (volume at 101.325 kPa, 15 degC), 2025 (USGS: 190 million cubic meters)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 70.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "estimated base price for Grade-A helium (excl. f.o.b./transport; producers posted surcharges), chapter prose, 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": false,
+   "listedAs": "helium",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Fig. 39 cannot be read for helium: its box is full to the top, and the paper says the coloured areas include helium that stars merely returned to space. Most helium was made in the Big Bang, but the figure gives no split we can quote."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [
+   {
+    "A": "natural",
+    "charge": 0,
+    "state": "metastable",
+    "lower": "1s2s 3S1",
+    "upper": "1s2p 3P2",
+    "wavelength": {
+     "value": 1083.3306454,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 1.6259,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 1.022e+07 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstMOT": {
+     "year": 1992,
+     "doi": "10.1209/0295-5075/20/8/003",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Cooled in the metastable 2 3S1 state. Ritz value; NIST lists no observed wavelength for this component. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The MOT paper's title does not name the isotope."
+   },
+   {
+    "A": 4,
+    "charge": 0,
+    "state": "metastable",
+    "lower": "1s2s 3S1",
+    "upper": "1s2p 3P2",
+    "wavelength": {
+     "value": 1083.3306454,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 1.6259,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 1.022e+07 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "BEC": {
+     "year": 2001,
+     "doi": "10.1126/science.1060622",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "BEC of metastable 4He reported in 2001 by two groups (Robert et al., Science, cited; Pereira Dos Santos et al., PRL 86, 3459, doi 10.1103/PhysRevLett.86.3459). Ritz value. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+   },
+   {
+    "A": 3,
+    "charge": 0,
+    "state": "metastable",
+    "lower": "1s2s 3S1",
+    "upper": "1s2p 3P2",
+    "wavelength": {
+     "value": 1083.3306454,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 1.6259,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 1.022e+07 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "DFG": {
+     "year": 2006,
+     "doi": "10.1103/PhysRevLett.97.080404",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "First degenerate Fermi gas of metastable helium (3He sympathetically cooled by 4He). Ritz value. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+   }
+  ],
+  "siHistory": [
+   {
+    "Z": 2,
+    "unit": "metre",
+    "role": "recommended_radiation",
+    "text": "The He–Ne laser (633 nm, helium and neon) is a recommended radiation for realizing the metre.",
+    "validFrom": "2007-11-09",
+    "source": "bipm_frequencies"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1868,
+  "discoverers": [
+   "Pierre Janssen",
+   "Norman Lockyer"
+  ],
+  "place": "Guntur, India",
+  "isolated": 1895,
+  "isolatedBy": [
+   "William Ramsay"
+  ],
+  "nameOrigin": "From the Greek helios, 'Sun', because it was first seen as an unexplained yellow line in the solar spectrum.",
+  "source": "pubchem",
+  "note": "Janssen recorded the line during the solar eclipse of August 1868 (the map dot is his observing site) and Lockyer argued it came from an unknown element. Ramsay found the gas on Earth in the uranium mineral cleveite in 1895; Cleve and Langlet found it there independently."
+ },
+ "prose": {
+  "text": "Helium is a noble gas, the second lightest element and the second most common in the universe; on Earth it is collected from natural gas, where it has gathered after being released as alpha particles by uranium and thorium decaying in rocks. It was first spotted in 1868 as a yellow line near 587.6 nm in the light of the Sun, long before anyone found it on Earth. Its two electrons fill the 1s shell (ground term ¹S₀), giving helium the highest first ionisation energy of any element, about 2372 kJ/mol, so it forms no stable compounds under ordinary conditions.",
+  "sources": [
+   "pubchem",
+   "nist_lines",
+   "nist_gsie"
+  ]
+ }
+}

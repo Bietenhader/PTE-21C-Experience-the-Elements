@@ -1,0 +1,511 @@
+{
+ "schemaVersion": 1,
+ "Z": 27,
+ "symbol": "Co",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 26.3668,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 19.405,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 23.0924,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 14.3223,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 13.4346,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 11.8554,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 5.5764,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -7499.9108,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -7556.0695,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -881.0981,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -895.2954,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -766.0575,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -768.585,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -99.3709,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -101.6535,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -64.9885,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -65.4522,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -8.7721,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -8.4873,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -5.5646,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -5.6642,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 126.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832. Value for l.s.; also 150(7)[h.s.]."
+   },
+   "vdw": {
+    "value": 192.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.88101,
+     "unc": 0.00012
+    },
+    {
+     "stage": 2,
+     "eV": 17.0844,
+     "unc": 0.0012
+    },
+    {
+     "stage": 3,
+     "eV": 33.5,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 51.27,
+     "unc": 0.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 79.5,
+     "unc": 0.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 102.0,
+     "unc": 0.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 128.9,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 157.8,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 186.14,
+     "unc": 0.25
+    },
+    {
+     "stage": 10,
+     "eV": 275.4,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 305.32,
+     "unc": 0.23,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 336.1,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 378.5,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 410.0,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 441.1,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 511.96,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 546.588,
+     "unc": 0.015,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 1397.2,
+     "unc": 0.5
+    },
+    {
+     "stage": 19,
+     "eV": 1504.5,
+     "unc": 1.2
+    },
+    {
+     "stage": 20,
+     "eV": 1606.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 1724.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 1844.0,
+     "unc": 1.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 1960.8,
+     "unc": 0.8,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 2119.4,
+     "unc": 1.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 2218.876,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 9544.1817,
+     "unc": 0.001,
+     "flag": "calculated"
+    },
+    {
+     "stage": 27,
+     "eV": 10012.1297,
+     "unc": 0.0004,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.661,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.88,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 10.86,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 25.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.5×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 2e-05,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('2×10⁻⁵ milligrams per liter')."
+   },
+   "solar": {
+    "value": 4.073e-06,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies). SOURCE INCONSISTENCY: Table A13 lists N(Si=1e6) = 2290 for Co but its mass fraction 4.073E-06 corresponds to N = 2260 (the isotopic-abundance column of the same row); Table 6 gives N = 2292 +- 116, i.e. ~1.3 % higher. Printed value kept; difference is well inside the 5 % sigma."
+   },
+   "solarLogEps": {
+    "value": 4.91,
+    "unc": 0.02,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 0.0015,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "hcp cobalt (low-temperature form)",
+   "structure": "hexagonal close-packed (hcp)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 250.74,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 406.99,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9010967,
+   "doi": "10.1107/S0365110X50000732",
+   "reference": "Taylor, A.; Floyd, R. W. (1950). Acta Crystallographica 3, 285.",
+   "source": "cod",
+   "note": "The CIF states only 'T < 450 C' (the hcp stability range); the actual measurement temperature is not given. Above that range cobalt is fcc."
+  },
+  "production": {
+   "commodity": "Cobalt",
+   "basis": "mine production, cobalt content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 310000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, cobalt content, 2025 (USGS: 310,000 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 46.2971,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average, dollars per pound: U.S. spot, cathode [Cobalt], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "cobalt",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.15,
+    "massiveStars": 0.55,
+    "whiteDwarfs": 0.3
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.148, massive_stars 0.570, white_dwarfs 0.283); quantised to 0.05. Stack height 42 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "beneficial",
+  "essentialHuman": "yes",
+  "plantClass": "beneficial",
+  "plantRole": {
+   "text": "Needed by the nitrogen-fixing bacteria in legume root nodules, which use it in vitamin B12 (cobalamin); not needed by the plant itself.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+  },
+  "humanRole": {
+   "text": "The metal at the heart of vitamin B12, which we must take in already made.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "note": "Human: EFSA sets its value for cobalamin (vitamin B12), not for cobalt itself."
+ },
+ "history": {
+  "discovered": 1735,
+  "discoverers": [
+   "Georg Brandt"
+  ],
+  "place": "Stockholm, Sweden",
+  "nameOrigin": "From the German Kobold, a goblin of mining folklore blamed for ores that gave no useful metal and gave off poisonous fumes.",
+  "source": "pubchem",
+  "note": "Brandt showed that the blue colour of cobalt glass comes from this metal rather than from bismuth. Jefferson Lab gives 1739."
+ },
+ "prose": {
+  "text": "Cobalt is a hard, bluish-silver metal and one of the few elements that are magnetic at room temperature; it gives glass and porcelain their deep 'cobalt blue' and sits in the cathodes of many lithium-ion batteries. Its name comes from the Kobold, a goblin that German miners blamed for ores that gave off poisonous arsenic fumes instead of useful metal. Cobalt is the metal at the heart of vitamin B₁₂, and the bacteria in legume root nodules need it to fix nitrogen. The atom, [Ar] 3d⁷ 4s² (ground term ⁴F₉/₂), has three unpaired d electrons, and its single stable isotope, cobalt-59, has nuclear spin 7/2.",
+  "sources": [
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

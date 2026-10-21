@@ -1,0 +1,12 @@
+{
+"schemaVersion":1,
+"Z":97,
+"symbol":"Bk",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":1,
+"levels":[
+  {"eV":0.0,"configuration":"5f9.7s2","term":"6H*","J":"15/2","parity":"odd"}
+],
+"ionizationLimit":{"value":6.19785,"unc":0.00025,"unit":"eV","source":"nist_levels","note":"Limit: Bk II (5f9.7s 7H*<8>)."}
+}

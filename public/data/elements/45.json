@@ -1,0 +1,654 @@
+{
+ "schemaVersion": 1,
+ "Z": 45,
+ "symbol": "Rh",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 44.0756,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 33.1546,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 40.9404,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 28.4385,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 28.1544,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 30.405,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 18.5816,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 17.1396,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "value": 13.4424,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "value": 6.6395,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -22344.2699,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -22912.2391,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -3178.479,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -3326.1594,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -2948.5623,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -2986.1514,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -565.0608,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -594.0461,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -473.8944,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -481.7645,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -305.2369,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -300.928,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -76.8859,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -82.2918,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -49.1562,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -50.4485,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -6.515,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -6.1633,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -4.2075,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -4.5673,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 142.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 195.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.4589,
+     "unc": 5e-05
+    },
+    {
+     "stage": 2,
+     "eV": 18.08,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 31.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 42.0,
+     "unc": 1.7,
+     "flag": "calculated"
+    },
+    {
+     "stage": 5,
+     "eV": 63.0,
+     "unc": 1.9,
+     "flag": "calculated"
+    },
+    {
+     "stage": 6,
+     "eV": 80.0,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 97.0,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 115.1,
+     "unc": 2.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 135.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 207.51,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 228.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 252.1,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 277.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 306.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 331.58,
+     "unc": 0.14,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 389.3,
+     "unc": 0.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 415.97,
+     "unc": 0.14,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 739.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 794.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 857.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 21,
+     "eV": 921.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 22,
+     "eV": 984.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 23,
+     "eV": 1061.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 24,
+     "eV": 1131.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 1202.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 1274.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 27,
+     "eV": 1344.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 28,
+     "eV": 1544.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 29,
+     "eV": 1604.9,
+     "unc": 1.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 30,
+     "eV": 1677.6,
+     "unc": 2.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 31,
+     "eV": 1763.0,
+     "unc": 7.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 32,
+     "eV": 1851.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 33,
+     "eV": 1903.0,
+     "unc": 9.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 34,
+     "eV": 2063.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 35,
+     "eV": 2129.22,
+     "unc": 0.07,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 36,
+     "eV": 5018.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 37,
+     "eV": 5203.0,
+     "unc": 8.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 38,
+     "eV": 5406.0,
+     "unc": 11.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 39,
+     "eV": 5600.0,
+     "unc": 40.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 40,
+     "eV": 5940.0,
+     "unc": 7.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 41,
+     "eV": 6161.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 42,
+     "eV": 6444.0,
+     "unc": 6.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 43,
+     "eV": 6623.262,
+     "unc": 0.02,
+     "flag": "calculated"
+    },
+    {
+     "stage": 44,
+     "eV": 27486.979,
+     "unc": 0.012,
+     "flag": "calculated"
+    },
+    {
+     "stage": 45,
+     "eV": 28312.031,
+     "unc": 0.006,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 1.137,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.28,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 9.259,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 0.001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1×10⁻³ milligrams per kilogram')."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "value": 1.072e-09,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 1.08,
+    "unc": 0.02,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "rhodium (fcc)",
+   "structure": "face-centred cubic (fcc)",
+   "lattice": "cubic",
+   "spaceGroup": "F m -3 m",
+   "spaceGroupNumber": 225,
+   "pearson": "cF4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 380.31,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9008482,
+   "reference": "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7.",
+   "source": "cod",
+   "note": "Wyckoff's compilation; temperature not stated."
+  },
+  "production": {
+   "commodity": "Rhodium",
+   "basis": "mine production, rhodium",
+   "edition": "MCS 2026",
+   "unitValue": {
+    "value": 186474.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, dollars per troy ounce: Rhodium [Rhodium], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "platinum group metals",
+   "source": "eu_crm",
+   "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.15,
+    "massiveStars": 0.75,
+    "neutronStarMergers": 0.1
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.171, massive_stars 0.737, neutron_star_mergers 0.093); quantised to 0.05. Stack height 74 px."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1803,
+  "discoverers": [
+   "William Hyde Wollaston"
+  ],
+  "place": "London, United Kingdom",
+  "nameOrigin": "From the Greek rhodon, 'rose', for the rose-red colour of its salts in solution.",
+  "source": "pubchem",
+  "note": "Found in South American platinum ore just after palladium; Los Alamos dates the work to 1803–1804."
+ },
+ "prose": {
+  "text": "Rhodium is a rare, hard, highly reflective platinum-group metal. Most of it goes into the catalytic converters of cars, where it helps turn nitrogen oxides into harmless nitrogen, and it is electroplated onto white-gold jewellery for a bright finish that does not tarnish. William Hyde Wollaston found it in 1803 and named it after the Greek for rose, for the rose-red colour of its salts. Its electrons defy the simple filling rule: the ground state is [Kr] 4d⁸ 5s¹ rather than 4d⁷ 5s². Its only stable isotope, rhodium-103, has nuclear spin 1/2 but a tiny magnetic moment, making it one of the hardest nuclei to detect by NMR.",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

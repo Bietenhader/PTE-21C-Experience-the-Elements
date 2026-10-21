@@ -1,0 +1,591 @@
+{
+ "schemaVersion": 1,
+ "Z": 31,
+ "symbol": "Ga",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 30.3094,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 22.599,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 27.0908,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 16.9962,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 16.2036,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 15.0933,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 7.0668,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 6.2216,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -10072.8562,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -10179.1442,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1229.9783,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1257.1664,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1090.9953,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1096.7267,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -142.6324,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -147.071,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -97.5437,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -98.5415,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -20.0331,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -19.4462,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -8.9259,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -9.1541,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -2.7656,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -2.7341,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 122.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 187.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 5.999302,
+     "unc": 1.2e-06
+    },
+    {
+     "stage": 2,
+     "eV": 20.51514,
+     "unc": 0.00012
+    },
+    {
+     "stage": 3,
+     "eV": 30.72576,
+     "unc": 0.00025
+    },
+    {
+     "stage": 4,
+     "eV": 63.241,
+     "unc": 0.009
+    },
+    {
+     "stage": 5,
+     "eV": 86.01,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 112.7,
+     "unc": 1.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 140.8,
+     "unc": 1.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 169.9,
+     "unc": 1.7,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 211.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 244.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 280.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 319.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 356.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 471.2,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 508.8,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 548.3,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 599.8,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 640.0,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 677.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 20,
+     "eV": 765.7,
+     "unc": 0.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 807.308,
+     "unc": 0.025,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 2010.0,
+     "unc": 1.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 2129.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 2258.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 2391.0,
+     "unc": 18.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 26,
+     "eV": 2543.9,
+     "unc": 2.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 27,
+     "eV": 2683.0,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 28,
+     "eV": 2868.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 29,
+     "eV": 2984.426,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 30,
+     "eV": 12696.5581,
+     "unc": 0.0016,
+     "flag": "calculated"
+    },
+    {
+     "stage": 31,
+     "eV": 13239.5029,
+     "unc": 0.0007,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.3,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.81,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 10.39,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 69
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 19.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.9×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 3e-05,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('3×10⁻⁵ milligrams per liter')."
+   },
+   "solar": {
+    "value": 7.673e-08,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 3.11,
+    "unc": 0.03,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "α-gallium",
+   "structure": "orthorhombic (α-gallium type, Ga2 pairs)",
+   "lattice": "orthorhombic",
+   "spaceGroup": "C m c e",
+   "spaceGroupNumber": 64,
+   "pearson": "oS8",
+   "atomsPerCell": 8,
+   "a": {
+    "value": 452.3,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "b": {
+    "value": 766.1,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 452.4,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9008085,
+   "reference": "Sharma, B. D.; Donohue, J. (1962). Zeitschrift fur Kristallographie 117, 293.",
+   "source": "cod",
+   "note": "Original paper Z. Kristallogr. 117, 293 (1962); no DOI in CIF; temperature not stated. 'C m c e' is space group 64."
+  },
+  "production": {
+   "commodity": "Gallium",
+   "basis": "primary production, low-purity gallium, gallium content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 900.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World primary production, low-purity gallium, gallium content, 2025 (USGS: 900,000 kilograms)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 580.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average unit value of imports, dollars per kilogram [Gallium], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "gallium",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.9
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.109, massive_stars 0.889, neutron_star_mergers 0.002); quantised to 0.05. Stack height 61 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 69,
+    "charge": 0,
+    "I": 1.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 1338.99375,
+     "unc": 0.0005,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRev.101.79"
+    },
+    "splitting": {
+     "value": 2677987500,
+     "unc": 1000,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "F=2 to F=1 interval from atomic-beam work (Lurio and Prodell 1956), as quoted in arXiv:0808.2821. A derived as splitting/2; positive sign as in arXiv:2608.18811 Table III.",
+     "doi": "10.1103/PhysRev.101.79"
+    }
+   },
+   {
+    "A": 71,
+    "charge": 0,
+    "I": 1.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 1701.3473,
+     "unc": 0.00065,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRev.101.79"
+    },
+    "splitting": {
+     "value": 3402694600,
+     "unc": 1300,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "F=2 to F=1 interval from atomic-beam work (Lurio and Prodell 1956), as quoted in arXiv:0808.2821. A derived as splitting/2 (positive, as for 69Ga).",
+     "doi": "10.1103/PhysRev.101.79"
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1875,
+  "discoverers": [
+   "Paul-Émile Lecoq de Boisbaudran"
+  ],
+  "nameOrigin": "From Gallia, the Latin name of France; it may also pun on the discoverer's name, since the Latin gallus means 'rooster' (le coq).",
+  "source": "pubchem",
+  "note": "Mendeleev's predicted eka-aluminium, found by its spectrum in zinc blende. Jefferson Lab and Los Alamos say Lecoq obtained the metal by electrolysis the same year; CIAAW dates the first isolation to 1878, together with Jungfleisch."
+ },
+ "prose": {
+  "text": "Gallium is a soft, silvery metal that melts at 302.91 K (about 30 °C), so a lump turns liquid in a warm hand, yet it does not boil until 2477 K; like water, it expands as it freezes. It was discovered in 1875 through two new violet lines, at 403.3 and 417.2 nm, in the spectrum of a zinc ore, and today gallium nitride makes the blue and white LEDs in lamps and screens. The atom is [Ar] 3d¹⁰ 4s² 4p¹ (ground term ²P°₁/₂). Its filled 3d subshell shields the nucleus poorly, so its first ionisation energy, 579 kJ/mol, almost equals aluminium's despite eighteen extra protons.",
+  "sources": [
+   "pubchem",
+   "nist_lines",
+   "nist_gsie"
+  ]
+ }
+}

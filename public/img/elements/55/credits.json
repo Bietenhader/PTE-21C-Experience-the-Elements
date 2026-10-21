@@ -1,0 +1,21 @@
+{
+ "Z": 55,
+ "images": [
+  {
+   "file": "img/elements/55/1-800.webp",
+   "thumb": "img/elements/55/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Caesium in a sealed ampoule",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/caesium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/caesium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "caesium-3.jpg",
+   "k": 1
+  }
+ ]
+}

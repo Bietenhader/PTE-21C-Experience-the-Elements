@@ -1,0 +1,22 @@
+{
+ "Z": 92,
+ "images": [
+  {
+   "file": "img/elements/92/1-800.webp",
+   "thumb": "img/elements/92/1-320.webp",
+   "width": 400,
+   "height": 400,
+   "title": "Depleted uranium (uranium-238)",
+   "author": "Unknown photographer",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://images-of-elements.com/uranium.php",
+   "attribution": "Unknown photographer, Public domain; via images-of-elements.com (https://images-of-elements.com/uranium.php)",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "s/uranium.jpg",
+   "k": 1,
+   "note": "The element page marks this photo as public domain."
+  }
+ ]
+}

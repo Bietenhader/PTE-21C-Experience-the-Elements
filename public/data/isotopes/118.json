@@ -1,0 +1,9 @@
+{
+"schemaVersion":1,
+"Z":118,
+"symbol":"Og",
+"source":"iaea_livechart",
+"isotopes":[
+  {"A":294,"N":176,"stable":false,"halfLife":{"value":0.00058,"unc":0.00031,"unit":"s","source":"iaea_livechart"},"halfLifeText":"0.58 ms","jp":"0+","I":0.0,"decays":[{"mode":"A","branching":{"value":100.0,"unit":"%","source":"iaea_livechart"}},{"mode":"SF","branching":{"value":20.0,"unit":"%","source":"iaea_livechart"}}],"abundance":{"missing":true,"reason":"not_applicable","note":"Not part of the natural isotopic composition."},"mass":{"value":294.213979,"unc":0.000594,"unit":"u","source":"iaea_livechart","flag":"estimated","note":"Atomic Mass Evaluation estimate from systematic trends."},"massExcess":{"value":199320.0,"unc":553.0,"unit":"keV","source":"iaea_livechart","flag":"estimated","note":"Atomic Mass Evaluation estimate from systematic trends."},"bindingPerNucleon":{"value":7079.0,"unc":2.0,"unit":"keV","source":"iaea_livechart","flag":"estimated","note":"Atomic Mass Evaluation estimate from systematic trends."},"mu":{"missing":true,"reason":"not_applicable","note":"I = 0: a spinless nucleus has no magnetic dipole moment."},"Q":{"missing":true,"reason":"not_applicable","note":"I = 0: no electric quadrupole moment (needs I ≥ 1)."},"discoveryYear":2004}
+]
+}

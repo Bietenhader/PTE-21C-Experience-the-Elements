@@ -1,0 +1,37 @@
+{
+ "Z": 34,
+ "images": [
+  {
+   "file": "img/elements/34/1-800.webp",
+   "thumb": "img/elements/34/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Black selenium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/selenium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/selenium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "selenium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/34/2-800.webp",
+   "thumb": "img/elements/34/2-320.webp",
+   "width": 529,
+   "height": 529,
+   "title": "Grey selenium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/selenium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/selenium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "grey-selenium.jpg",
+   "k": 2
+  }
+ ]
+}

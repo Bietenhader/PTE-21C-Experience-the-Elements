@@ -1,0 +1,21 @@
+{
+ "Z": 58,
+ "images": [
+  {
+   "file": "img/elements/58/1-800.webp",
+   "thumb": "img/elements/58/1-320.webp",
+   "width": 788,
+   "height": 788,
+   "title": "Cerium under argon",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/cerium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/cerium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "cerium.jpg",
+   "k": 1
+  }
+ ]
+}

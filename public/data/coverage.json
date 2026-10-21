@@ -1,0 +1,272 @@
+{
+ "schemaVersion": 1,
+ "total": 118,
+ "fields": [
+  {
+   "label": "Standard atomic weight (or most-stable mass number)",
+   "count": 118,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Ground configuration (NIST)",
+   "count": 108,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Ground configuration (NIST or published prediction)",
+   "count": 118,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Ground term / level (NIST)",
+   "count": 108,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Ground term / level (NIST or published prediction)",
+   "count": 118,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "First ionization energy (NIST)",
+   "count": 108,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "First ionization energy (NIST or published prediction)",
+   "count": 118,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Pauling electronegativity",
+   "count": 95,
+   "missing": {
+    "not_measured": 23
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Oxidation states",
+   "count": 117,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Ground-state hyperfine headline",
+   "count": 18,
+   "missing": {
+    "not_applicable": 24,
+    "not_measured": 42,
+    "no_stable_isotope": 34
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Electron affinity",
+   "count": 57,
+   "missing": {
+    "not_measured": 61
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Covalent radius",
+   "count": 96,
+   "missing": {
+    "not_measured": 22
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Van der Waals radius",
+   "count": 99,
+   "missing": {
+    "not_measured": 19
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Melting point",
+   "count": 103,
+   "missing": {
+    "not_measured": 15
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Boiling point",
+   "count": 93,
+   "missing": {
+    "not_measured": 25
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Density",
+   "count": 96,
+   "missing": {
+    "not_measured": 22
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Number of stable isotopes",
+   "count": 118,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Longest half-life (elements without a stable isotope)",
+   "count": 38,
+   "missing": {
+    "not_applicable": 80
+   },
+   "file": "index.json"
+  },
+  {
+   "label": "Photograph (not a placeholder)",
+   "count": 90,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Photograph or honest placeholder",
+   "count": 118,
+   "missing": {},
+   "file": "index.json"
+  },
+  {
+   "label": "Isotope records (IAEA)",
+   "count": 118,
+   "missing": {},
+   "file": "iaea_livechart"
+  },
+  {
+   "label": "Visible spectrum of the neutral atom (NIST lines)",
+   "count": 98,
+   "missing": {},
+   "file": "nist_lines"
+  },
+  {
+   "label": "Energy levels of the neutral atom (NIST)",
+   "count": 108,
+   "missing": {},
+   "file": "nist_levels"
+  },
+  {
+   "label": "Ionization energies, all stages listed by NIST",
+   "count": 110,
+   "missing": {},
+   "file": "nist_gsie"
+  },
+  {
+   "label": "Clementi–Raimondi effective nuclear charges",
+   "count": 85,
+   "missing": {},
+   "file": "clementi_zeff"
+  },
+  {
+   "label": "Orbital eigenvalues (NIST SRD 141)",
+   "count": 92,
+   "missing": {},
+   "file": "nist_srd141"
+  },
+  {
+   "label": "Allen electronegativity",
+   "count": 71,
+   "missing": {},
+   "file": "allen_en"
+  },
+  {
+   "label": "Hyperfine structure, any isotope or ion",
+   "count": 27,
+   "missing": {},
+   "file": "hyperfine.toml"
+  },
+  {
+   "label": "Clock or standard frequency",
+   "count": 13,
+   "missing": {},
+   "file": "bipm_frequencies, clocks.toml"
+  },
+  {
+   "label": "Laser cooling",
+   "count": 29,
+   "missing": {},
+   "file": "lasercooling.toml"
+  },
+  {
+   "label": "Role in the SI",
+   "count": 20,
+   "missing": {},
+   "file": "si_history.toml, bipm_frequencies"
+  },
+  {
+   "label": "Abundance in the Earth's crust",
+   "count": 88,
+   "missing": {},
+   "file": "pubchem"
+  },
+  {
+   "label": "Abundance in sea water",
+   "count": 80,
+   "missing": {},
+   "file": "pubchem"
+  },
+  {
+   "label": "Solar-system abundance (log ε)",
+   "count": 83,
+   "missing": {},
+   "file": "lodders2025"
+  },
+  {
+   "label": "Amount in the human body",
+   "count": 30,
+   "missing": {},
+   "file": "icrp23"
+  },
+  {
+   "label": "Crystal structure",
+   "count": 91,
+   "missing": {},
+   "file": "cod"
+  },
+  {
+   "label": "Annual production",
+   "count": 76,
+   "missing": {},
+   "file": "production.toml"
+  },
+  {
+   "label": "Cosmic origin (nucleosynthesis)",
+   "count": 80,
+   "missing": {},
+   "file": "kobayashi2020"
+  },
+  {
+   "label": "Biology: a known role",
+   "count": 26,
+   "missing": {},
+   "file": "biology.toml"
+  },
+  {
+   "label": "History: discovery",
+   "count": 118,
+   "missing": {},
+   "file": "history.toml"
+  },
+  {
+   "label": "Our own short text",
+   "count": 118,
+   "missing": {},
+   "file": "prose/{Z}.md"
+  }
+ ]
+}

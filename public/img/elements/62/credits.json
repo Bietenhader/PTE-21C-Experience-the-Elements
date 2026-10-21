@@ -1,0 +1,37 @@
+{
+ "Z": 62,
+ "images": [
+  {
+   "file": "img/elements/62/1-800.webp",
+   "thumb": "img/elements/62/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Samarium under argon",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/samarium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/samarium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "samarium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/62/2-800.webp",
+   "thumb": "img/elements/62/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Sublimed samarium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/samarium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/samarium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "samarium-2.jpg",
+   "k": 2
+  }
+ ]
+}

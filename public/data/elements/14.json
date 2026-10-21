@@ -1,0 +1,398 @@
+{
+ "schemaVersion": 1,
+ "Z": 14,
+ "symbol": "Si",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 13.5745,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 9.02,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 9.945,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 4.9032,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 4.2852,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -1773.7586,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -1775.8815,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -138.0993,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -138.6073,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -95.6463,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -95.5886,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -10.8339,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -10.8717,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -4.1713,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -4.1636,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 111.0,
+    "unc": 2.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 210.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 8.15168,
+     "unc": 3e-05
+    },
+    {
+     "stage": 2,
+     "eV": 16.34585,
+     "unc": 4e-05
+    },
+    {
+     "stage": 3,
+     "eV": 33.493,
+     "unc": 9e-05
+    },
+    {
+     "stage": 4,
+     "eV": 45.14179,
+     "unc": 7e-05
+    },
+    {
+     "stage": 5,
+     "eV": 166.767,
+     "unc": 0.003
+    },
+    {
+     "stage": 6,
+     "eV": 205.279,
+     "unc": 0.005,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 246.57,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 303.59,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 351.28,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 401.38,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 476.273,
+     "unc": 0.019,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 523.415,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 2437.65805,
+     "unc": 0.00017,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 2673.177958,
+     "unc": 1.7e-05,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 1.385,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.9,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 11.33,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 282000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.82×10⁵ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 2.2,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('2.2 milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.0008589,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 7.55,
+    "unc": 0.01,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 18.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "silicon (diamond cubic)",
+   "structure": "diamond cubic",
+   "lattice": "cubic",
+   "spaceGroup": "F d -3 m :1",
+   "spaceGroupNumber": 227,
+   "pearson": "cF8",
+   "atomsPerCell": 8,
+   "a": {
+    "value": 543.0941,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.15,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9011998,
+   "doi": "10.1107/S0021889875010965",
+   "reference": "Hom, T.; Kiszenick, W.; Post, B. (1975). Journal of Applied Crystallography 8, 457.",
+   "source": "cod",
+   "note": "Measured at 25 °C (CIF). Space-group origin choice 1 as in the CIF."
+  },
+  "production": {
+   "commodity": "Silicon metal",
+   "basis": "production, silicon metal (metallurgical grade), silicon content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 4600000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World production, silicon metal (metallurgical grade), silicon content, 2025 (USGS: 4,600 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 2.86601,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average, cents per pound of silicon: Silicon metal [Silicon], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "silicon metal",
+   "source": "eu_crm",
+   "note": "Silicon metal only (not silica minerals; silica sand was assessed and is not critical)."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.7,
+    "whiteDwarfs": 0.2
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.102, massive_stars 0.681, white_dwarfs 0.217); quantised to 0.05. Stack height 82 px. Cross-check with the paper's text: '22% of Si ... come from SNe Ia' (figure reading 0.217). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": [
+   {
+    "Z": 14,
+    "unit": "kilogram",
+    "role": "realization",
+    "text": "One of the two primary ways to realize the kilogram counts atoms: a near-perfect sphere of silicon enriched in silicon-28 is measured by X-ray crystal density (XRCD), and its mass follows from the Planck constant.",
+    "source": "bipm_mep_kilogram",
+    "A": 28,
+    "from": 2019
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "beneficial",
+  "essentialHuman": "probable",
+  "plantClass": "beneficial",
+  "plantRole": {
+   "text": "Deposited as silica in cell walls, it stiffens stems and leaves and protects against pests, fungi and drought; grasses such as rice accumulate the most.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+  },
+  "humanRole": {
+   "text": "May help bone and connective tissue form; essentiality in humans is not proven.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  }
+ },
+ "history": {
+  "discovered": 1824,
+  "discoverers": [
+   "Jöns Jacob Berzelius"
+  ],
+  "place": "Stockholm, Sweden",
+  "nameOrigin": "From the Latin silex (genitive silicis), 'flint', with the ending of carbon and boron.",
+  "source": "pubchem",
+  "note": "PubChem's YearDiscovered (1854) is the year Deville first made crystalline silicon. Gay-Lussac and Thénard had probably made impure silicon in 1811."
+ },
+ "prose": {
+  "text": "Silicon is a hard, grey, shiny metalloid and, after oxygen, the most abundant element in Earth's crust, where it is locked in sand, quartz and nearly all rocks. Purified, it is the material of computer chips and solar cells; in nature, grasses and horsetails lay down tiny glassy silica bodies that stiffen their leaves and stems. Near-perfect spheres of silicon enriched in silicon-28, which makes up about 92 % of natural silicon, were used to count atoms precisely enough to help fix the constants behind the new definition of the kilogram. Like carbon above it, the atom has two unpaired p electrons: [Ne] 3s² 3p², ground term ³P₀.",
+  "sources": [
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

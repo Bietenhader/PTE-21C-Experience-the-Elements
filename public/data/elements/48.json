@@ -1,0 +1,869 @@
+{
+ "schemaVersion": 1,
+ "Z": 48,
+ "symbol": "Cd",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 47.0256,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 35.3858,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 43.909,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 30.8412,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 30.6915,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 33.6069,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 20.8692,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 19.4112,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "value": 15.8768,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "value": 8.192,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -25618.8847,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -26376.2733,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -3723.4017,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -3921.1601,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -3473.1285,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -3524.5017,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -690.6225,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -730.6006,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -588.787,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -599.8969,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -399.6061,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -393.8695,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -97.854,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -105.5007,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -65.1783,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -66.8794,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -12.8038,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -11.9347,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -5.5573,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -5.9381,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 144.0,
+    "unc": 9.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 158.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 8.99382,
+     "unc": 1.6e-05
+    },
+    {
+     "stage": 2,
+     "eV": 16.908313,
+     "unc": 1.2e-05
+    },
+    {
+     "stage": 3,
+     "eV": 37.468,
+     "unc": 0.006
+    },
+    {
+     "stage": 4,
+     "eV": 51.0,
+     "unc": 1.7,
+     "flag": "calculated"
+    },
+    {
+     "stage": 5,
+     "eV": 67.9,
+     "unc": 1.9,
+     "flag": "calculated"
+    },
+    {
+     "stage": 6,
+     "eV": 87.0,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 105.0,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 130.1,
+     "unc": 2.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 150.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 173.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 195.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 218.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 305.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 329.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 358.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 385.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 421.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 452.6,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 513.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 546.19,
+     "unc": 0.17,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 963.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 22,
+     "eV": 1026.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 23,
+     "eV": 1095.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 24,
+     "eV": 1167.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 1237.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 1320.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 27,
+     "eV": 1401.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 28,
+     "eV": 1477.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 29,
+     "eV": 1558.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 30,
+     "eV": 1635.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 31,
+     "eV": 1852.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 32,
+     "eV": 1917.9,
+     "unc": 2.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 33,
+     "eV": 1998.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 34,
+     "eV": 2091.0,
+     "unc": 8.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 35,
+     "eV": 2195.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 36,
+     "eV": 2250.0,
+     "unc": 10.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 37,
+     "eV": 2427.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 38,
+     "eV": 2498.62,
+     "unc": 0.08,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 39,
+     "eV": 5839.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 40,
+     "eV": 6039.0,
+     "unc": 9.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 41,
+     "eV": 6257.0,
+     "unc": 12.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 42,
+     "eV": 6460.0,
+     "unc": 40.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 43,
+     "eV": 6869.0,
+     "unc": 8.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 44,
+     "eV": 7109.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 45,
+     "eV": 7414.0,
+     "unc": 7.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 46,
+     "eV": 7607.95,
+     "unc": 0.03,
+     "flag": "calculated"
+    },
+    {
+     "stage": 47,
+     "eV": 31451.07,
+     "unc": 0.017,
+     "flag": "calculated"
+    },
+    {
+     "stage": 48,
+     "eV": 32341.587,
+     "unc": 0.009,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 1.69,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 8.995,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 0.15,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.5×10⁻¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.00011,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.1×10⁻⁴ milligrams per liter')."
+   },
+   "solar": {
+    "value": 5.482e-09,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 1.75,
+    "unc": 0.03,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 0.05,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "cadmium (hcp)",
+   "structure": "hexagonal close-packed (hcp, elongated c axis)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 297.887,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 561.765,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9008490,
+   "reference": "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7.",
+   "source": "cod",
+   "note": "Wyckoff's compilation; temperature not stated. The other COD cadmium entry is in kX units."
+  },
+  "production": {
+   "commodity": "Cadmium",
+   "basis": "refinery production, cadmium",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 23000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World refinery production, cadmium, 2025 (USGS: 23,000 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 3.9,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, metal, annual average, dollars per kilogram [Cadmium], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.4,
+    "massiveStars": 0.55,
+    "neutronStarMergers": 0.05
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.391, massive_stars 0.544, neutron_star_mergers 0.065); quantised to 0.05. Stack height 77 px."
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 111,
+    "charge": 1,
+    "I": 0.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": -14530.5073499,
+     "unc": 1.1e-06,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRevA.86.022523"
+    },
+    "splitting": {
+     "value": 14530507349.9,
+     "unc": 1.1,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Laser-microwave double resonance on trapped ions (Zhang et al. 2012), as quoted in arXiv:2201.06719. Sources give only the splitting; the minus sign on A is inferred from the negative nuclear g-factor quoted in arXiv:1802.02740 Table II caption.",
+     "doi": "10.1103/PhysRevA.86.022523"
+    }
+   },
+   {
+    "A": 113,
+    "charge": 1,
+    "I": 0.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": -15199.86285502799,
+     "unc": 2.7e-10,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1364/OL.444045"
+    },
+    "splitting": {
+     "value": 15199862855.02799,
+     "unc": 0.00027,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Microwave clock on laser-cooled trapped ions (Miao et al. 2021); agrees with earlier values listed in that paper's Table 2. Source gives only the splitting; minus sign on A inferred from the negative nuclear g-factor (arXiv:1802.02740 Table II caption).",
+     "text": "15199862855.02799",
+     "doi": "10.1364/OL.444045"
+    }
+   }
+  ],
+  "clocks": [
+   {
+    "Z": 48,
+    "species": "114Cd",
+    "A": 114,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "465 THz",
+    "transition": "5^1P_1 - 5^1D_2",
+    "srs": false,
+    "metre": true,
+    "frequency": {
+     "value": 465498310000000.0,
+     "unc": 10000000.0,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 30000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+     "text": "465498310000000"
+    }
+   },
+   {
+    "Z": 48,
+    "species": "114Cd",
+    "A": 114,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "589 THz",
+    "transition": "5^3P_2 - 6^3S_1",
+    "srs": false,
+    "metre": true,
+    "frequency": {
+     "value": 589303000000000.0,
+     "unc": 13333333.333333334,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 40000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+     "text": "589303000000000"
+    }
+   },
+   {
+    "Z": 48,
+    "species": "114Cd",
+    "A": 114,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "624 THz",
+    "transition": "5^3P_1 - 6^3S_1",
+    "srs": false,
+    "metre": true,
+    "frequency": {
+     "value": 624404740000000.0,
+     "unc": 13333333.333333334,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 40000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+     "text": "624404740000000"
+    }
+   },
+   {
+    "Z": 48,
+    "species": "114Cd",
+    "A": 114,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "641 THz",
+    "transition": "5^3P_0 - 6^3S_1",
+    "srs": false,
+    "metre": true,
+    "frequency": {
+     "value": 640656360000000.0,
+     "unc": 13333333.333333334,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2003-10-10. BIPM quotes an uncertainty of 40000000 Hz with coverage factor 3; the standard uncertainty is shown.",
+     "text": "640656360000000"
+    }
+   }
+  ],
+  "laserCooling": [
+   {
+    "A": "natural",
+    "charge": 0,
+    "state": "ground",
+    "lower": "5s2 1S0",
+    "upper": "5s5p 1P1",
+    "wavelength": {
+     "value": 228.87282,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 84.352,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 5.3e+08 s⁻¹ (accuracy class C), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstMOT": {
+     "year": 2007,
+     "doi": "10.1103/PhysRevA.76.043411",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
+   },
+   {
+    "A": "natural",
+    "charge": 1,
+    "state": "ground",
+    "lower": "5s 2S1/2",
+    "upper": "5p 2P3/2",
+    "wavelength": {
+     "value": 214.50697,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 60.129,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 3.778e+08 s⁻¹ (accuracy class AA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstCooled": {
+     "year": 1997,
+     "doi": "10.1364/OL.22.001353",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Paper also demonstrates isotope separation in the trap. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+   }
+  ],
+  "siHistory": [
+   {
+    "Z": 48,
+    "A": 114,
+    "unit": "metre",
+    "role": "recommended_radiation",
+    "text": "114Cd (465 THz) is a recommended radiation for realizing the metre.",
+    "validFrom": "2003-10-10",
+    "source": "bipm_frequencies"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1817,
+  "discoverers": [
+   "Friedrich Stromeyer"
+  ],
+  "place": "Göttingen, Germany",
+  "nameOrigin": "From the Latin cadmia (Greek kadmeia), the old name for calamine, the zinc ore in which it was found.",
+  "source": "pubchem",
+  "note": "Noticed because some zinc carbonate samples turned yellow on heating."
+ },
+ "prose": {
+  "text": "Cadmium is a soft, bluish-white metal obtained as a by-product of zinc refining; it is highly toxic, yet it has served in nickel–cadmium batteries, in reactor control rods because it swallows neutrons, and in the vivid cadmium yellows and reds of artists’ paints. Friedrich Stromeyer found it in 1817 after noticing that a zinc carbonate sample turned yellow when heated, a sign of an unknown impurity. Its closed-shell atom ([Kr] 4d¹⁰ 5s², ground term ¹S₀) emits a sharp red spectral line at 643.8 nm, between two excited singlet levels, so reproducible that it served for decades as an international reference for measuring length.",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "nist_lines"
+  ]
+ }
+}

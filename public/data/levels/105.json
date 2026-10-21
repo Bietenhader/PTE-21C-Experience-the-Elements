@@ -1,0 +1,12 @@
+{
+"schemaVersion":1,
+"Z":105,
+"symbol":"Db",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":1,
+"levels":[
+  {"eV":0.0,"configuration":"6d3.7s2","term":"4F","J":"3/2","parity":"even"}
+],
+"ionizationLimit":{"value":6.8,"unc":0.5,"unit":"eV","source":"nist_levels","note":"Limit: Db II (6d2.7s2 3F<2>)."}
+}

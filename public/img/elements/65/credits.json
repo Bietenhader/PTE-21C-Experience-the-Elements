@@ -1,0 +1,21 @@
+{
+ "Z": 65,
+ "images": [
+  {
+   "file": "img/elements/65/1-800.webp",
+   "thumb": "img/elements/65/1-320.webp",
+   "width": 704,
+   "height": 704,
+   "title": "Terbium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/terbium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/terbium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "terbium.jpg",
+   "k": 1
+  }
+ ]
+}

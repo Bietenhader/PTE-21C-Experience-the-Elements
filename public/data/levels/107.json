@@ -1,0 +1,12 @@
+{
+"schemaVersion":1,
+"Z":107,
+"symbol":"Bh",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":1,
+"levels":[
+  {"eV":0.0,"configuration":"6d5.7s2","term":"","J":"5/2","parity":"even"}
+],
+"ionizationLimit":{"value":7.7,"unc":0.5,"unit":"eV","source":"nist_levels","note":"Limit: Bh II (6d4.7s2 <0>)."}
+}

@@ -1,0 +1,331 @@
+{
+ "schemaVersion": 1,
+ "Z": 9,
+ "symbol": "F",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 8.6501,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 5.1276,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 5.1,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -658.2269,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -658.3283,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -29.5749,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -29.629,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -11.3092,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -11.3001,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 57.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 135.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 17.42282,
+     "unc": 5e-05
+    },
+    {
+     "stage": 2,
+     "eV": 34.97081,
+     "unc": 0.00012
+    },
+    {
+     "stage": 3,
+     "eV": 62.70798,
+     "unc": 0.00025,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 87.175,
+     "unc": 0.017,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 114.249,
+     "unc": 0.006,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 157.16311,
+     "unc": 0.00025
+    },
+    {
+     "stage": 7,
+     "eV": 185.1868,
+     "unc": 0.0006
+    },
+    {
+     "stage": 8,
+     "eV": 953.8983,
+     "unc": 0.0003,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 1103.1175302,
+     "unc": 1.9e-06,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 3.339,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 3.98,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 24.8,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 585.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('5.85×10² milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 1.3,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.3 milligrams per liter')."
+   },
+   "solar": {
+    "value": 7.424e-07,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 4.66,
+    "unc": 0.09,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 2.6,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "α-fluorine (α-F2)",
+   "structure": "monoclinic molecular crystal",
+   "lattice": "monoclinic",
+   "spaceGroup": "C 1 2/c 1",
+   "spaceGroupNumber": 15,
+   "pearson": "mS8",
+   "atomsPerCell": 8,
+   "a": {
+    "value": 550.0,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "b": {
+    "value": 328.0,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 728.0,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 102.17,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 23.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "lowTemperatureSolid": true,
+   "codId": 9012106,
+   "doi": "10.1016/0022-4596(70)90074-5",
+   "reference": "Pauling, L.; Keaveny, I.; Robinson, A. B. (1970). Journal of Solid State Chemistry 2, 225.",
+   "source": "cod",
+   "note": "Low-temperature solid only, at 23 K. CIF note: the α phase is stable below 45.6 K."
+  },
+  "production": {
+   "commodity": "Fluorspar",
+   "basis": "mine production, fluorspar (gross weight, all grades)",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 10000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, fluorspar (gross weight, all grades), 2025 (USGS: 10,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 0.47,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average unit value of imports, cost, insurance, and freight, dollars per metric ton: Acid grade [Fluorspar], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025,
+   "viaMineral": true
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": false,
+   "listedAs": "fluorspar",
+   "source": "eu_crm",
+   "viaMineral": true,
+   "note": "Fluorspar (fluorite, CaF2) is a mineral and the main industrial source of fluorine (via hydrofluoric acid); listed as the mineral."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.5,
+    "massiveStars": 0.5
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.501, massive_stars 0.499); quantised to 0.05. Stack height 48 px. Cross-check with the paper's text: '51% of F ... produced by AGB stars' (figure reading 0.501)."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "probable",
+  "humanRole": {
+   "text": "Strengthens tooth enamel against decay; EFSA sets an adequate intake for this reason but does not consider it essential.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": 1771,
+  "discoveredText": "1771 (in hydrofluoric acid; the element was isolated in 1886)",
+  "discoverers": [
+   "Carl Wilhelm Scheele"
+  ],
+  "place": "Uppsala, Sweden",
+  "isolated": 1886,
+  "isolatedBy": [
+   "Henri Moissan"
+  ],
+  "nameOrigin": "From fluorspar (fluorite), whose name comes from the Latin fluere, 'to flow', because miners added the mineral to ores to help them melt.",
+  "source": "pubchem",
+  "note": "PubChem's YearDiscovered (1670) is the date of the earliest known use of a fluorine compound to etch glass, not of the element. Los Alamos prints the isolation year as 1866, a slip for 1886. Moissan isolated the gas by electrolysis in a platinum apparatus."
+ },
+ "prose": {
+  "text": "Fluorine is a pale-yellow, poisonous gas and the most reactive of all elements; we meet it tamed, as fluoride in toothpaste, in non-stick pan coatings and in the mineral fluorite. Fluorite often glows under ultraviolet light, and it lent its name both to the element and to the word 'fluorescence'. A fluorine atom, [He] 2s² 2p⁵, is one electron short of a closed shell (ground term ²P°₃/₂), and it pulls on shared electrons harder than any other atom, with the highest Pauling electronegativity, 3.98. Its only stable isotope, fluorine-19, has nuclear spin 1/2, which makes fluorine-containing drugs easy to follow by NMR.",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

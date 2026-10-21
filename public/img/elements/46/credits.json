@@ -1,0 +1,37 @@
+{
+ "Z": 46,
+ "images": [
+  {
+   "file": "img/elements/46/1-800.webp",
+   "thumb": "img/elements/46/1-320.webp",
+   "width": 730,
+   "height": 730,
+   "title": "Palladium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/palladium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/palladium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "palladium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/46/2-800.webp",
+   "thumb": "img/elements/46/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Tiny palladium crystals",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/palladium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/palladium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "crystal",
+   "pin": "palladium-crystals.jpg",
+   "k": 2
+  }
+ ]
+}

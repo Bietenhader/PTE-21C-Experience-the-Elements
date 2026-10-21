@@ -1,0 +1,12 @@
+{
+"schemaVersion":1,
+"Z":101,
+"symbol":"Md",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":1,
+"levels":[
+  {"eV":0.0,"configuration":"5f13.7s2","term":"2F*","J":"7/2","parity":"odd"}
+],
+"ionizationLimit":{"value":6.58,"unc":0.07,"unit":"eV","source":"nist_levels","note":"Limit: Md II (5f13.7s 3F*<4>)."}
+}

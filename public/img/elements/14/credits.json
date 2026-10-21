@@ -1,0 +1,37 @@
+{
+ "Z": 14,
+ "images": [
+  {
+   "file": "img/elements/14/1-800.webp",
+   "thumb": "img/elements/14/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "A piece of silicon",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/silicon.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/silicon.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "silicon.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/14/2-800.webp",
+   "thumb": "img/elements/14/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Pure silicon with a rough surface",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/silicon.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/silicon.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "silicon-3.jpg",
+   "k": 2
+  }
+ ]
+}

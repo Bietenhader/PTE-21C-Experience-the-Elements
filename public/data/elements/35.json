@@ -1,0 +1,570 @@
+{
+ "schemaVersion": 1,
+ "Z": 35,
+ "symbol": "Br",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 34.2471,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 25.6434,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 31.0564,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 20.2185,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 19.5708,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 19.5591,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 10.5528,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 9.028,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -13066.4354,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -13250.343,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1679.2152,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1726.1642,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1515.0745,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1525.4958,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -228.8221,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -236.6164,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -171.3992,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -173.005,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -68.6301,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -67.061,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -19.594,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -20.2792,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -8.0364,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -8.0044,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 120.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 183.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 11.81381,
+     "unc": 6e-05
+    },
+    {
+     "stage": 2,
+     "eV": 21.591
+    },
+    {
+     "stage": 3,
+     "eV": 34.871,
+     "unc": 0.019
+    },
+    {
+     "stage": 4,
+     "eV": 47.782,
+     "unc": 0.012
+    },
+    {
+     "stage": 5,
+     "eV": 59.595,
+     "unc": 0.025
+    },
+    {
+     "stage": 6,
+     "eV": 87.39,
+     "unc": 0.025
+    },
+    {
+     "stage": 7,
+     "eV": 103.03,
+     "unc": 0.19,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 192.61,
+     "unc": 0.06
+    },
+    {
+     "stage": 9,
+     "eV": 224.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 261.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 301.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 338.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 393.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 436.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 481.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 530.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 577.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 716.3,
+     "unc": 2.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 761.0,
+     "unc": 0.8,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 20,
+     "eV": 809.8,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 870.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 920.8,
+     "unc": 2.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 963.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 1070.6,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 1119.17,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 26,
+     "eV": 2731.4,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 27,
+     "eV": 2869.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 28,
+     "eV": 3021.0,
+     "unc": 7.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 29,
+     "eV": 3169.0,
+     "unc": 24.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 30,
+     "eV": 3361.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 31,
+     "eV": 3523.1,
+     "unc": 2.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 32,
+     "eV": 3735.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 33,
+     "eV": 3868.986,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 34,
+     "eV": 16317.014,
+     "unc": 0.004,
+     "flag": "calculated"
+    },
+    {
+     "stage": 35,
+     "eV": 16937.1497,
+     "unc": 0.0015,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 3.365,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.96,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 15.88,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 2.4,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.4 milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 67.3,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('6.73×10¹ milligrams per liter')."
+   },
+   "solar": {
+    "value": 3.033e-08,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 2.65,
+    "unc": 0.09,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 0.2,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "solid bromine (Br2)",
+   "structure": "orthorhombic molecular crystal (layers of Br2 molecules)",
+   "lattice": "orthorhombic",
+   "spaceGroup": "C m c e",
+   "spaceGroupNumber": 64,
+   "pearson": "oS8",
+   "atomsPerCell": 8,
+   "a": {
+    "value": 672.65,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "b": {
+    "value": 464.51,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 870.23,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 250.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "lowTemperatureSolid": true,
+   "codId": 9013119,
+   "doi": "10.1080/00268978400102741",
+   "reference": "Powell, B. M.; Heal, K. M.; Torrie, B. H. (1984). Molecular Physics 53, 929.",
+   "source": "cod",
+   "note": "Liquid at room temperature; solid Br2 at 250 K, the highest temperature in this series (also 5, 80, 170 K)."
+  },
+  "production": {
+   "commodity": "Bromine",
+   "basis": "production, bromine content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 430000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World production, bromine content, 2025 (USGS: 430,000 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 3.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average unit value of imports (cost, insurance, and freight), dollars per kilogram, bromine content [Bromine], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.15,
+    "massiveStars": 0.85
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.131, massive_stars 0.845, neutron_star_mergers 0.024); quantised to 0.05. Stack height 82 px."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1826,
+  "discoveredText": "1826 (Löwig prepared it in 1825)",
+  "discoverers": [
+   "Antoine-Jérôme Balard",
+   "Carl Jacob Löwig"
+  ],
+  "place": "Montpellier, France",
+  "nameOrigin": "From the Greek bromos, 'stench', for its strong smell.",
+  "source": "pubchem",
+  "note": "Löwig made it first, as a student in Heidelberg, but Balard published first (1826) and is usually credited; the map dot marks Balard's Montpellier."
+ },
+ "prose": {
+  "text": "Bromine is a halogen and one of only two elements that are liquid at room temperature, the other being mercury: a dark red-brown liquid giving off an orange, foul-smelling vapour, which earned it a name from the Greek for 'stench'. Surprisingly, the Tyrian purple prized by ancient emperors, extracted from sea snails, is a bromine compound. The atom, [Ar] 3d¹⁰ 4s² 4p⁵ (ground term ²P°₃/₂), lacks one electron to fill its shell. Natural bromine is an almost even mix of two stable isotopes, 50.65 % bromine-79 and 49.35 % bromine-81, so molecules containing it show a tell-tale pair of nearly equal peaks in a mass spectrum.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

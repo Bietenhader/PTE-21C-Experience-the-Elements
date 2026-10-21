@@ -1,0 +1,565 @@
+{
+ "schemaVersion": 1,
+ "Z": 20,
+ "symbol": "Ca",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 19.473,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 13.7764,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 16.0414,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 9.6015,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 8.6583,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 4.398,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -3916.6758,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -3929.93,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -409.4471,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -412.5479,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -334.3021,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -334.379,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -46.4316,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -46.7876,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -28.0433,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -27.9917,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -3.848,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -3.861,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 176.0,
+    "unc": 10.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 231.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 6.113154921,
+     "unc": 5e-10
+    },
+    {
+     "stage": 2,
+     "eV": 11.871719,
+     "unc": 4e-06
+    },
+    {
+     "stage": 3,
+     "eV": 50.91316,
+     "unc": 0.00025
+    },
+    {
+     "stage": 4,
+     "eV": 67.2732,
+     "unc": 0.0021,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 84.34,
+     "unc": 0.08,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 108.78,
+     "unc": 0.25,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 127.21,
+     "unc": 0.25,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 147.24,
+     "unc": 0.12
+    },
+    {
+     "stage": 9,
+     "eV": 188.54,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 211.275,
+     "unc": 0.004,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 591.6,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 658.2,
+     "unc": 0.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 728.6,
+     "unc": 1.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 817.2,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 894.0,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 973.7,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 1086.8,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 1157.726,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 5128.8576,
+     "unc": 0.0003,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 5469.86358,
+     "unc": 6e-05,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 1.0,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 6.113,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 41500.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('4.15×10⁴ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 412.0,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('4.12×10² milligrams per liter')."
+   },
+   "solar": {
+    "value": 7.397e-05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 6.33,
+    "unc": 0.01,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 1000.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "α-calcium",
+   "structure": "face-centred cubic (fcc)",
+   "lattice": "cubic",
+   "spaceGroup": "F m -3 m",
+   "spaceGroupNumber": 225,
+   "pearson": "cF4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 558.84,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 299.15,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9011033,
+   "doi": "10.1107/S0365110X59001268",
+   "reference": "Bernstein, B. T.; Smith, J. F. (1959). Acta Crystallographica 12, 419.",
+   "source": "cod",
+   "note": "Measured at 26 °C (CIF)."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.5,
+    "whiteDwarfs": 0.4
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.092, massive_stars 0.512, white_dwarfs 0.397); quantised to 0.05. Stack height 80 px. Cross-check with the paper's text: '39% of Ca ... come from SNe Ia' (figure reading 0.397). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 43,
+    "charge": 1,
+    "I": 3.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": -806.4020716,
+     "unc": 7.5e-08,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1007/BF01426573"
+    },
+    "splitting": {
+     "value": 3225608286.4,
+     "unc": 0.3,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Measured by Arbes et al. (1994) with stored ions, as quoted in arXiv:1011.5949 Sec. I and arXiv:physics/0611134. A uncertainty derived as splitting uncertainty / 4. Negative A: inverted structure.",
+     "doi": "10.1007/BF01426573"
+    }
+   }
+  ],
+  "clocks": [
+   {
+    "Z": 20,
+    "species": "40Ca",
+    "A": 40,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "456 THz",
+    "transition": "4s^2 ^1S_0 - 4s4p ^3P_1",
+    "srs": false,
+    "metre": true,
+    "frequency": {
+     "value": 455986240494140.0,
+     "unc": 8.0,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2005-10-07.",
+     "text": "455986240494140"
+    }
+   },
+   {
+    "Z": 20,
+    "species": "40Ca+",
+    "A": 40,
+    "charge": 1,
+    "kind": "atomic",
+    "label": "411 THz",
+    "transition": "4s ^2S_{1/2} - 3d ^2D_{5/2}",
+    "srs": true,
+    "metre": true,
+    "frequency": {
+     "value": 411042129776400.3,
+     "unc": 0.23,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2026-03-27.",
+     "text": "411042129776400.3"
+    }
+   }
+  ],
+  "laserCooling": [
+   {
+    "A": 40,
+    "charge": 0,
+    "state": "ground",
+    "lower": "4s2 1S0",
+    "upper": "4s4p 1P1",
+    "wavelength": {
+     "value": 422.792,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 34.696,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 2.18e+08 s⁻¹ (accuracy class B+), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstMOT": {
+     "year": 1990,
+     "doi": "10.1143/JJAP.29.L2127",
+     "source": "primary_literature"
+    },
+    "BEC": {
+     "year": 2009,
+     "doi": "10.1103/PhysRevLett.103.130401",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "The 1990 paper (same as Sr) trapped 40,42,43,44Ca on this 1S0-1P1 line. First BEC of a true alkaline-earth element (2009); alkaline-earth-like Yb was first, in 2003. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied. NIST observed value, 3 decimals."
+   },
+   {
+    "A": "natural",
+    "charge": 1,
+    "state": "ground",
+    "lower": "4s 2S1/2",
+    "upper": "4p 2P1/2",
+    "wavelength": {
+     "value": 396.959,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 22.282,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 1.4e+08 s⁻¹ (accuracy class C), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "repump": {
+     "value": 866.452,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "firstCooled": {
+     "year": 1992,
+     "doi": "10.1364/OL.17.001140",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Repump 3d 2D3/2 - 4p 2P1/2. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+   }
+  ],
+  "siHistory": [
+   {
+    "Z": 20,
+    "A": 40,
+    "unit": "metre",
+    "role": "recommended_radiation",
+    "text": "40Ca (456 THz) is a recommended radiation for realizing the metre.",
+    "validFrom": "2005-10-07",
+    "source": "bipm_frequencies"
+   },
+   {
+    "Z": 20,
+    "A": 40,
+    "unit": "second",
+    "role": "srs",
+    "text": "40Ca+ (411 THz) is a secondary representation of the second.",
+    "validFrom": "2026-03-27",
+    "source": "bipm_frequencies"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "macronutrient",
+  "plantRole": {
+   "text": "Binds the pectins of cell walls, stabilizes membranes, and acts as a messenger inside the cell; it moves only in the xylem, so young tissue shows a shortage first.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+  },
+  "humanRole": {
+   "text": "Builds bones and teeth, and signals muscle contraction, nerve transmission and blood clotting.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": 1808,
+  "discoverers": [
+   "Humphry Davy"
+  ],
+  "place": "London, United Kingdom",
+  "nameOrigin": "From the Latin calx, 'lime' (calcium oxide).",
+  "source": "pubchem",
+  "note": "PubChem lists the year as 'Ancient' because lime was used in antiquity. Davy obtained the impure metal, building on Berzelius and Pontin's electrolysis of lime into a mercury amalgam."
+ },
+ "prose": {
+  "text": "Calcium is a reactive alkaline-earth metal that we almost never see pure; instead we meet it in bones and teeth, in seashells, chalk, limestone and marble, and in the pectin 'glue' that holds neighbouring plant cells together. Calcium-48, only 0.187 % of natural calcium, is remarkably rich in neutrons yet almost stable, decaying with a half-life of about 2.9 × 10¹⁹ years. The reason is a nuclear shell effect: its 20 protons and 28 neutrons are both 'magic numbers' that close nuclear shells, so it is doubly magic. Beams of calcium-48 were used to create the heaviest elements yet made. The atom itself is [Ar] 4s², ground term ¹S₀.",
+  "sources": [
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

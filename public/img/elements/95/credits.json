@@ -1,0 +1,22 @@
+{
+ "Z": 95,
+ "images": [
+  {
+   "file": "img/elements/95/1-800.webp",
+   "thumb": "img/elements/95/1-320.webp",
+   "width": 400,
+   "height": 400,
+   "title": "A small disc of americium-241 under a microscope",
+   "author": "Bionerd",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/americium.php",
+   "attribution": "Bionerd, CC BY 3.0 — https://creativecommons.org/licenses/by/3.0/; via images-of-elements.com (https://images-of-elements.com/americium.php)",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "s/americium.jpg",
+   "k": 1,
+   "note": "Credited to Bionerd, CC BY 3.0, on the element page."
+  }
+ ]
+}

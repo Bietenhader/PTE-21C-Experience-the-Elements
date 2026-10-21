@@ -1,0 +1,37 @@
+{
+ "Z": 12,
+ "images": [
+  {
+   "file": "img/elements/12/1-800.webp",
+   "thumb": "img/elements/12/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Magnesium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/magnesium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/magnesium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "magnesium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/12/2-800.webp",
+   "thumb": "img/elements/12/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Magnesium turnings",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/magnesium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/magnesium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "magnesium-swarf.jpg",
+   "k": 2
+  }
+ ]
+}

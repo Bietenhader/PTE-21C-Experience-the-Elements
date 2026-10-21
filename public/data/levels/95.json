@@ -1,0 +1,12 @@
+{
+"schemaVersion":1,
+"Z":95,
+"symbol":"Am",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":1,
+"levels":[
+  {"eV":0.0,"configuration":"5f7.7s2","term":"8S*","J":"7/2","parity":"odd"}
+],
+"ionizationLimit":{"value":5.97381,"unc":0.00025,"unit":"eV","source":"nist_levels","note":"Limit: Am II (5f7.7s 9S*<4>)."}
+}

@@ -1,0 +1,401 @@
+{
+ "schemaVersion": 1,
+ "Z": 16,
+ "symbol": "S",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 15.5409,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 10.6288,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 11.977,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 6.3669,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 5.4819,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -2388.8859,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -2393.2244,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -209.526,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -210.5505,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -156.4997,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -156.4512,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -17.168,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -17.2657,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -7.1206,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -7.1092,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 105.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 180.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 10.3600167,
+     "unc": 1.4e-06
+    },
+    {
+     "stage": 2,
+     "eV": 23.33788,
+     "unc": 0.00025
+    },
+    {
+     "stage": 3,
+     "eV": 34.86,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 47.222,
+     "unc": 0.012,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 72.5945,
+     "unc": 0.0004
+    },
+    {
+     "stage": 6,
+     "eV": 88.0529,
+     "unc": 0.0004
+    },
+    {
+     "stage": 7,
+     "eV": 280.954,
+     "unc": 0.007
+    },
+    {
+     "stage": 8,
+     "eV": 328.794,
+     "unc": 0.007
+    },
+    {
+     "stage": 9,
+     "eV": 379.84,
+     "unc": 0.21,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 447.7,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 504.55,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 564.41,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 651.96,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 706.994,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 3223.78057,
+     "unc": 0.0002,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 3494.188518,
+     "unc": 1.9e-05,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 2.077,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.58,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 15.31,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 350.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('3.50×10² milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 905.0,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('9.05×10² milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.0004165,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 7.18,
+    "unc": 0.04,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 140.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "α-sulfur (orthorhombic, S8 rings)",
+   "structure": "orthorhombic (S8 crown-shaped rings)",
+   "lattice": "orthorhombic",
+   "spaceGroup": "F d d d :2",
+   "spaceGroupNumber": 70,
+   "pearson": "oF128",
+   "atomsPerCell": 128,
+   "a": {
+    "value": 1046.46,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "b": {
+    "value": 1286.6,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 2448.6,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9011362,
+   "doi": "10.1107/S0108270187088152",
+   "reference": "Rettig, S. J.; Trotter, J. (1987). Acta Crystallographica, Section C 43, 2260.",
+   "source": "cod",
+   "note": "α-S8 at 298 K. COD 9011363 is the same paper's high-angle refinement. Space-group origin choice 2 as in the CIF."
+  },
+  "production": {
+   "commodity": "Sulfur",
+   "basis": "production, sulfur in all forms, sulfur content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 84000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World production, sulfur in all forms, sulfur content, 2025 (USGS: 84,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 0.18,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average unit value, free on board, mine and (or) plant, dollars per metric ton of elemental sulfur [Sulfur], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.6,
+    "whiteDwarfs": 0.3
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.100, massive_stars 0.613, white_dwarfs 0.288); quantised to 0.05. Stack height 81 px. Cross-check with the paper's text: '29% of S ... come from SNe Ia' (figure reading 0.288). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "macronutrient",
+  "plantRole": {
+   "text": "Taken up as sulfate; part of the amino acids cysteine and methionine, of glutathione and of iron–sulfur clusters.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+  },
+  "humanRole": {
+   "text": "Part of the amino acids methionine and cysteine; obtained from dietary protein.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  }
+ },
+ "history": {
+  "discovered": "antiquity",
+  "nameOrigin": "From the Latin sulfur (also spelled sulphur), the Romans' name for the substance.",
+  "source": "pubchem",
+  "note": "Known since prehistory as brimstone. Jefferson Lab credits Lavoisier with persuading chemists around 1777 that it is an element; CIAAW credits Gay-Lussac and Thénard with proving it in 1809."
+ },
+ "prose": {
+  "text": "Sulfur is a bright-yellow nonmetal, the 'brimstone' of old texts, found around volcanic vents and in large underground deposits; it is an essential part of proteins and of the sharp garlic and mustard compounds that plants make to defend themselves. Pure sulfur hardly smells; the rotten-egg odour belongs to hydrogen sulfide. Melted, it is a runny yellow liquid, but heated further it suddenly turns dark red and as thick as treacle, because its eight-atom rings break open and link into long chains. The atom, [Ne] 3s² 3p⁴ (ground term ³P₂), has two unpaired 3p electrons, and nature provides four stable isotopes, mostly sulfur-32.",
+  "sources": [
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

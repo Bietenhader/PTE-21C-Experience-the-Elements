@@ -1,0 +1,16 @@
+{
+"schemaVersion":1,
+"Z":2,
+"symbol":"He",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":842,
+"levels":[
+  {"eV":58.311,"unc":0.006,"configuration":"2s.2p","term":"3P*","J":"0,1,2","parity":"odd"},
+  {"eV":59.67378,"unc":0.00015,"configuration":"2p2","term":"3P","J":"0,1,2","parity":"even"},
+  {"eV":63.119,"unc":0.006,"configuration":"2p.3p","term":"3D","J":"1,2,3","parity":"even"},
+  {"eV":63.78658,"unc":0.00015,"configuration":"2p.3d","term":"3D*","J":"1,2,3","parity":"odd"},
+  {"eV":64.0719,"unc":0.0006,"configuration":"2p.3d","term":"3P*","J":"0,1,2","parity":"odd"}
+],
+"ionizationLimit":{"value":24.587389011,"unc":2.5e-08,"unit":"eV","source":"nist_levels","note":"Limit: He II (1s 2S<1/2>)."}
+}

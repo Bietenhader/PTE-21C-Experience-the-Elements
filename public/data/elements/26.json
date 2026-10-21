@@ -1,0 +1,493 @@
+{
+ "schemaVersion": 1,
+ "Z": 26,
+ "symbol": "Fe",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 25.381,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 18.599,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 22.0888,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 13.6761,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 12.7779,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 11.1798,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 5.434,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -6917.8284,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -6964.8807,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -804.5008,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -816.3289,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -695.299,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -697.2564,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -91.4472,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -93.3259,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -59.5255,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -59.8785,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -8.0287,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -7.7772,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -5.3873,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -5.4732,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 132.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832. Value for l.s.; also 152(6)[h.s.]."
+   },
+   "vdw": {
+    "value": 194.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.9024681,
+     "unc": 1.2e-06
+    },
+    {
+     "stage": 2,
+     "eV": 16.19921,
+     "unc": 5e-05
+    },
+    {
+     "stage": 3,
+     "eV": 30.651,
+     "unc": 0.012
+    },
+    {
+     "stage": 4,
+     "eV": 54.91,
+     "unc": 0.04
+    },
+    {
+     "stage": 5,
+     "eV": 75.0,
+     "unc": 0.15,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 98.985,
+     "unc": 0.015
+    },
+    {
+     "stage": 7,
+     "eV": 124.9671,
+     "unc": 0.0025
+    },
+    {
+     "stage": 8,
+     "eV": 151.06,
+     "unc": 0.012
+    },
+    {
+     "stage": 9,
+     "eV": 233.6,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 262.1,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 290.9,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 330.8,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 361.0,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 392.2,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 456.2,
+     "unc": 0.5
+    },
+    {
+     "stage": 16,
+     "eV": 489.312,
+     "unc": 0.014,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 1262.7,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 1357.8,
+     "unc": 1.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 1460.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 20,
+     "eV": 1575.6,
+     "unc": 0.5
+    },
+    {
+     "stage": 21,
+     "eV": 1687.0,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 1798.4,
+     "unc": 0.8,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 1950.4,
+     "unc": 1.8,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 2045.759,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 8828.1864,
+     "unc": 0.0012,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 9277.6886,
+     "unc": 0.0003,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.163,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.83,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 10.64,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 56300.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('5.63×10⁴ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.002,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('2×10⁻³ milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.001492,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 7.49,
+    "unc": 0.01,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 4.2,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "α-iron (ferrite)",
+   "structure": "body-centred cubic (bcc)",
+   "lattice": "cubic",
+   "spaceGroup": "I m -3 m",
+   "spaceGroupNumber": 229,
+   "pearson": "cI2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 286.54,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "pressure": {
+    "value": 0.0,
+    "unit": "kPa",
+    "source": "cod"
+   },
+   "codId": 9006587,
+   "doi": "10.1007/s002690050178",
+   "reference": "Zhang, J.; Guyot, F. (1999). Physics and Chemistry of Minerals 26, 206.",
+   "source": "cod",
+   "note": "Measured at 298 K and 0 GPa, first point of a P–T series. Wyckoff's compilation (COD 9008536) gives 2.8665 Å at 298 K."
+  },
+  "production": {
+   "commodity": "Iron ore",
+   "basis": "mine production, iron ore, iron content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 1600000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, iron ore, iron content, 2025 (USGS: 1,600,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 0.089,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average unit value reported by mines, dollars per metric ton [Iron Ore], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.3,
+    "whiteDwarfs": 0.6
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.079, massive_stars 0.313, white_dwarfs 0.608); quantised to 0.05. Stack height 75 px. Cross-check with the paper's text: 'the fraction [of Fe from SNe Ia] is only 60% in our model, and the rest is mainly produced by HNe' (figure reading 0.608). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "micronutrient",
+  "plantRole": {
+   "text": "Carries electrons in cytochromes and iron–sulfur proteins of photosynthesis and respiration, and is needed to make chlorophyll; shortage yellows young leaves between the veins.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+  },
+  "humanRole": {
+   "text": "Binds oxygen in haemoglobin and myoglobin and carries electrons in respiration.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": "antiquity",
+  "nameOrigin": "From the Old English iren (isern), a word of Germanic origin.",
+  "symbolNote": "Fe comes from the Latin ferrum.",
+  "source": "pubchem"
+ },
+ "prose": {
+  "text": "Iron is the most used of all metals, mostly as steel, and the main ingredient of Earth's core; in our blood it carries oxygen inside haemoglobin, and plants need it to make chlorophyll, so iron-starved leaves turn pale. Its common isotope, iron-56, about 91.8 % of natural iron, has one of the most tightly bound nuclei of all, which is why the fusion fires of massive stars stop releasing energy once their cores turn to iron. The atom, [Ar] 3d⁶ 4s² (ground term ⁵D₄), has four unpaired d electrons, and in the solid metal the spins of neighbouring atoms line up, making iron magnetic.",
+  "sources": [
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

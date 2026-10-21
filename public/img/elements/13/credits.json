@@ -1,0 +1,37 @@
+{
+ "Z": 13,
+ "images": [
+  {
+   "file": "img/elements/13/1-800.webp",
+   "thumb": "img/elements/13/1-320.webp",
+   "width": 706,
+   "height": 706,
+   "title": "A chunk of aluminium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/aluminium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/aluminium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "aluminium-4.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/13/2-800.webp",
+   "thumb": "img/elements/13/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Aluminium foil",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/aluminium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/aluminium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "aluminium.jpg",
+   "k": 2
+  }
+ ]
+}

@@ -1,0 +1,311 @@
+{
+ "schemaVersion": 1,
+ "Z": 8,
+ "symbol": "O",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 7.6579,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 4.4916,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 4.4532,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -510.4378,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -510.4474,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -23.711,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -23.7408,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -9.2078,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -9.2018,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 66.0,
+    "unc": 2.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 152.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 13.618055,
+     "unc": 7e-06
+    },
+    {
+     "stage": 2,
+     "eV": 35.12112,
+     "unc": 6e-05
+    },
+    {
+     "stage": 3,
+     "eV": 54.93554,
+     "unc": 0.00012,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 77.4135,
+     "unc": 0.00025
+    },
+    {
+     "stage": 5,
+     "eV": 113.899,
+     "unc": 0.0005
+    },
+    {
+     "stage": 6,
+     "eV": 138.1189,
+     "unc": 0.0021,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 739.32697,
+     "unc": 0.00015,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 871.4099138,
+     "unc": 1.2e-06,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 1.461,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 3.44,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 21.36,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 461000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('4.61×10⁵ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 857000.0,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('8.57×10⁵ milligrams per liter')."
+   },
+   "solar": {
+    "value": 0.007902,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 8.76,
+    "unc": 0.05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 43000.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "α-oxygen (α-O2)",
+   "structure": "monoclinic molecular crystal",
+   "lattice": "monoclinic",
+   "spaceGroup": "C 1 2/m 1",
+   "spaceGroupNumber": 12,
+   "pearson": "mS4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 540.3,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "b": {
+    "value": 342.9,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 508.6,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 132.53,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "lowTemperatureSolid": true,
+   "codId": 1528336,
+   "reference": "Barrett, C.S.; Meyer, L.; Wasserman, J. (1967). Journal of Chemical Physics 47, 592.",
+   "source": "cod",
+   "note": "Lowest-temperature solid phase of oxygen (antiferromagnetic). Measurement temperature not stated in CIF; original paper J. Chem. Phys. 47, 592 (1967), no DOI in CIF. Cell given in a non-reduced setting (β = 132.53°) as in the CIF."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.9
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.104, massive_stars 0.888, white_dwarfs 0.008); quantised to 0.05. Stack height 85 px."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": [
+   {
+    "Z": 8,
+    "unit": "kelvin",
+    "role": "definition",
+    "text": "The kelvin was 1/273.16 of the thermodynamic temperature of the triple point of water (hydrogen and oxygen). Since 2019 it is fixed by the Boltzmann constant.",
+    "source": "cgpm_resolutions",
+    "from": 1954,
+    "to": 2019,
+    "doi": "10.59161/CGPM1954RES3E",
+    "endDoi": "10.59161/CGPM2018RES1E"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "structural",
+  "plantRole": {
+   "text": "Comes from CO2 and water; part of most organic molecules, and needed by roots and all other non-green tissues for respiration.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00001-7"
+  },
+  "humanRole": {
+   "text": "Part of water and most biomolecules; the final electron acceptor of respiration.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  }
+ },
+ "history": {
+  "discovered": 1774,
+  "discoverers": [
+   "Joseph Priestley",
+   "Carl Wilhelm Scheele"
+  ],
+  "place": "Calne, United Kingdom",
+  "nameOrigin": "Named by Lavoisier from the Greek oxys, 'sharp' or 'acid', and -genes, 'producing', because he wrongly thought every acid contains it.",
+  "source": "pubchem",
+  "note": "Scheele made it first (1771 according to CIAAW) but his book appeared only in 1777, so Priestley, who published in 1774, is usually credited. The map dot marks Priestley's laboratory at Bowood, near Calne."
+ },
+ "prose": {
+  "text": "Oxygen is a reactive nonmetal and, by mass, the most common element in Earth's crust, bound up in water and in silicate rocks. Almost all the free oxygen in the air was released by photosynthesis, as algae and plants split water molecules using the energy of sunlight. Cooled below its boiling point of 90.2 K, oxygen becomes a pale-blue liquid that clings to the poles of a strong magnet. That magnetism has a quantum origin: the O₂ molecule keeps two unpaired electrons, a triplet state that simple bonding diagrams miss, and the free atom, [He] 2s² 2p⁴, also has two unpaired electrons and the ground term ³P₂.",
+  "sources": [
+   "pubchem",
+   "nist_gsie"
+  ]
+ }
+}

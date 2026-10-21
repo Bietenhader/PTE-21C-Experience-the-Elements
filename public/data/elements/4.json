@@ -1,0 +1,319 @@
+{
+ "schemaVersion": 1,
+ "Z": 4,
+ "symbol": "Be",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 3.6848,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 1.912,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -104.9383,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -104.9164,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -5.5986,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -5.5988,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 96.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 153.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 9.322699,
+     "unc": 7e-06
+    },
+    {
+     "stage": 2,
+     "eV": 18.21115,
+     "unc": 4e-05
+    },
+    {
+     "stage": 3,
+     "eV": 153.896205,
+     "unc": 4e-06,
+     "flag": "calculated"
+    },
+    {
+     "stage": 4,
+     "eV": 217.71858459,
+     "unc": 1e-07,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 1.57,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 9.323,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 2.8,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.8 milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 5.6e-06,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('5.6×10⁻⁶ milligrams per liter')."
+   },
+   "solar": {
+    "value": 1.81e-10,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 1.37,
+    "unc": 0.02,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 3.6e-05,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "α-beryllium",
+   "structure": "hexagonal close-packed (hcp)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 228.58,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 358.43,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.15,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9012008,
+   "doi": "10.1063/1.1698252",
+   "reference": "Gordon, P. (1949). Journal of Applied Physics 20, 908.",
+   "source": "cod",
+   "note": "Measured at 25 °C (CIF)."
+  },
+  "production": {
+   "commodity": "Beryllium",
+   "basis": "mine production, beryllium content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 430.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, beryllium content, 2025 (USGS: 430 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 1600.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium [Beryllium], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": false,
+   "listedAs": "beryllium",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "cosmicRays": 1.0
+   },
+   "flag": "paper_statement",
+   "source": "kobayashi2020",
+   "note": "Paper Sect. 3.5: 'Be and B are supposed to be produced by cosmic rays [Prantzos et al. 1993], which is not included in our model either.' Empty box in Fig. 39. Value is the paper's qualitative statement, not a modelled fraction."
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 9,
+    "charge": 1,
+    "I": 1.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": -625.008837044,
+     "unc": 1.2e-08,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRevA.84.012510"
+    },
+    "splitting": {
+     "value": 1250017674.088,
+     "unc": 0.024,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Zero-field A0 from Penning-trap hyperfine-Zeeman spectroscopy (Shiga, Itano, Bollinger 2011), extrapolated over the diamagnetic shift. Splitting derived as 2|A0|. Negative A: inverted structure (F=1 above F=2).",
+     "doi": "10.1103/PhysRevA.84.012510"
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [
+   {
+    "A": 9,
+    "charge": 1,
+    "state": "ground",
+    "lower": "2s 2S1/2",
+    "upper": "2p 2P3/2",
+    "wavelength": {
+     "value": 313.13292,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 17.972,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 1.129e+08 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstCooled": {
+     "year": 1983,
+     "doi": "10.1103/PhysRevLett.50.628",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Only stable isotope. Wavelength: NIST observed value. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+   }
+  ],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1798,
+  "discoveredText": "1798 (as its oxide, beryllia)",
+  "discoverers": [
+   "Louis-Nicolas Vauquelin"
+  ],
+  "place": "Paris, France",
+  "isolated": 1828,
+  "isolatedBy": [
+   "Friedrich Wöhler",
+   "Antoine Bussy"
+  ],
+  "nameOrigin": "From beryl (Greek beryllos), the gemstone that contains it.",
+  "symbolNote": "Long called glucinium (symbol Gl), after the sweet taste of its salts; IUPAC chose the name beryllium in 1949.",
+  "source": "pubchem",
+  "note": "CIAAW dates Vauquelin's discovery to 1797. Wöhler and Bussy obtained the metal independently, both by reducing the chloride with potassium."
+ },
+ "prose": {
+  "text": "Beryllium is a light, stiff, steel-grey metal of the alkaline-earth group, found in the mineral beryl, of which emerald and aquamarine are coloured varieties. Because X-rays pass through it easily, thin beryllium sheets serve as windows in X-ray tubes, and gold-coated beryllium forms the mirror segments of the James Webb Space Telescope. Beryllium has only one stable isotope, beryllium-9, whose nucleus has spin 3/2; the lighter beryllium-8 falls apart into two helium nuclei almost instantly, a bottleneck stars must overcome to make carbon. Its four electrons fill the 1s and 2s orbitals, giving [He] 2s² and the ground term ¹S₀.",
+  "sources": [
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "schemaVersion": 1,
+ "Z": 115,
+ "symbol": "Mc",
+ "orbitals": {
+  "zeff": [],
+  "eigenvalues": [],
+  "radii": {
+   "covalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "vdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": []
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 290
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No COD entry."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 2003,
+  "discoveredText": "2003 (experiments; announced 2004)",
+  "discoverers": [
+   "Joint Institute for Nuclear Research, Dubna",
+   "Lawrence Livermore National Laboratory, Livermore",
+   "Oak Ridge National Laboratory, Oak Ridge"
+  ],
+  "place": "Dubna, Russia",
+  "nameOrigin": "After the Moscow region, in which Dubna lies.",
+  "symbolNote": "Temporary name: ununpentium (Uup); named moscovium in 2016.",
+  "source": "iupac_discovery",
+  "doi": "10.1515/pac-2015-0502",
+  "note": "Made from calcium-48 on americium-243 in July–August 2003; the 2016 IUPAC/IUPAP report found the Dubna–Livermore–Oak Ridge claims compliant. Los Alamos also lists Vanderbilt University among the discoverers."
+ },
+ "prose": {
+  "text": "Moscovium is a synthetic element in group 15, below bismuth, named after the Moscow region, home of the Dubna laboratory where it was made. Between July and August 2003 a Russian–American team fired calcium-48 ions at americium-243 and recorded four atoms, which decayed within a fraction of a second; the results were announced in February 2004. Its longest-lived known isotope, moscovium-290, has a half-life of only about 0.65 seconds, and only small numbers of atoms have ever been made. The predicted configuration, [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p³, places a single electron above a closed 7p₁/₂ pair, so theorists expect a +1 state to matter far more than it does for bismuth.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart"
+  ]
+ }
+}

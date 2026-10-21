@@ -1,0 +1,397 @@
+{
+ "schemaVersion": 1,
+ "Z": 11,
+ "symbol": "Na",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 10.6259,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 6.5714,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 6.8018,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 2.5074,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -1026.4128,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -1026.9202,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -56.148,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -56.2893,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -28.8614,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -28.8332,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -2.8141,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -2.817,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 166.0,
+    "unc": 9.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 227.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 5.13907696,
+     "unc": 2.5e-07
+    },
+    {
+     "stage": 2,
+     "eV": 47.28636,
+     "unc": 0.00025
+    },
+    {
+     "stage": 3,
+     "eV": 71.62,
+     "unc": 0.0012,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 98.936,
+     "unc": 0.012,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 138.404,
+     "unc": 0.012
+    },
+    {
+     "stage": 6,
+     "eV": 172.23,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 208.504,
+     "unc": 0.012,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 264.192,
+     "unc": 0.022,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 299.856,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 1465.0992,
+     "unc": 0.0007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 1648.702285,
+     "unc": 5e-06,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.548,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 0.93,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 5.14,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 23
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 23600.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('2.36×10⁴ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 10800.0,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.08×10⁴ milligrams per liter')."
+   },
+   "solar": {
+    "value": 3.93e-05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 6.3,
+    "unc": 0.01,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 100.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "sodium (bcc)",
+   "structure": "body-centred cubic (bcc)",
+   "lattice": "cubic",
+   "spaceGroup": "I m -3 m",
+   "spaceGroupNumber": 229,
+   "pearson": "cI2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 429.06,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 293.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9008545,
+   "reference": "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7.",
+   "source": "cod",
+   "note": "bcc at 293 K, value from Wyckoff's compilation (no primary reference in CIF). Sodium transforms to close-packed forms at low temperature (not covered here)."
+  },
+  "production": {
+   "commodity": "Salt",
+   "basis": "mine production, salt (NaCl, gross weight, all types)",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 270000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, salt (NaCl, gross weight, all types), 2025 (USGS: 270,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "viaMineral": true
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.15,
+    "massiveStars": 0.85
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.137, massive_stars 0.863); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 23,
+    "charge": 0,
+    "I": 1.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 885.8130644,
+     "unc": 5e-07,
+     "unit": "MHz",
+     "source": "allegrini2022",
+     "doi": "10.1103/RevModPhys.49.31"
+    },
+    "splitting": {
+     "value": 1771626128.8,
+     "unc": 1,
+     "unit": "Hz",
+     "source": "allegrini2022",
+     "note": "Ground-state A constant (From Arimondo, Inguscio and Violino (1977)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2).",
+     "doi": "10.1103/RevModPhys.49.31"
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [
+   {
+    "A": 23,
+    "charge": 0,
+    "state": "ground",
+    "lower": "3s 2S1/2",
+    "upper": "3p 2P3/2",
+    "wavelength": {
+     "value": 589.1583264,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 9.8039,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 6.16e+07 s⁻¹ (accuracy class AA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstMOT": {
+     "year": 1987,
+     "doi": "10.1103/PhysRevLett.59.2631",
+     "source": "primary_literature"
+    },
+    "BEC": {
+     "year": 1995,
+     "doi": "10.1103/PhysRevLett.75.3969",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "The 1987 paper is the first magneto-optical trap of any atom; BEC 1995, one of the two first BECs. Repumping uses the other ground hyperfine level on the same D2 line, so no separate repump wavelength is given."
+   }
+  ],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "beneficial",
+  "essentialHuman": "yes",
+  "plantClass": "beneficial",
+  "plantRole": {
+   "text": "Essential for some C4 and CAM plants, which use it to move pyruvate into chloroplasts; can partly replace potassium as an osmoticum, and halophytes store it in large amounts.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+  },
+  "humanRole": {
+   "text": "The main positive ion outside cells; controls water balance and, with potassium, nerve signals.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": 1807,
+  "discoverers": [
+   "Humphry Davy"
+  ],
+  "place": "London, United Kingdom",
+  "nameOrigin": "Named by Davy after soda (caustic soda), the compound he split by electrolysis to obtain it.",
+  "symbolNote": "Na comes from the Latin natrium, after natron, a naturally occurring soda salt.",
+  "source": "pubchem",
+  "note": "Obtained by electrolysis of molten caustic soda at the Royal Institution, soon after potassium."
+ },
+ "prose": {
+  "text": "Sodium is a soft, silvery alkali metal that can be cut with a knife and must be kept under oil, because it reacts vigorously with water; we meet it every day in table salt and as the ions that help carry signals along our nerves. It melts at about 371 K (98 °C), below the boiling point of water. The yellow glow of salt in a flame, and of old street lamps, is a pair of lines at 589.0 and 589.6 nm. Both come from the lone 3s electron ([Ne] 3s¹) falling back from 3p, a level split in two by spin–orbit coupling into ²P°₃/₂ and ²P°₁/₂.",
+  "sources": [
+   "pubchem",
+   "nist_lines",
+   "nist_gsie"
+  ]
+ }
+}

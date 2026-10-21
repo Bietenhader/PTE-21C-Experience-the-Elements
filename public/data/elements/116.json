@@ -1,0 +1,124 @@
+{
+ "schemaVersion": 1,
+ "Z": 116,
+ "symbol": "Lv",
+ "orbitals": {
+  "zeff": [],
+  "eigenvalues": [],
+  "radii": {
+   "covalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "vdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": []
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 293
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No COD entry."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 2000,
+  "discoverers": [
+   "Joint Institute for Nuclear Research, Dubna",
+   "Lawrence Livermore National Laboratory, Livermore"
+  ],
+  "place": "Dubna, Russia",
+  "nameOrigin": "After Lawrence Livermore National Laboratory and its home town, Livermore, California.",
+  "symbolNote": "Temporary name: ununhexium (Uuh); named livermorium in 2012.",
+  "source": "iupac_discovery",
+  "doi": "10.1351/PAC-REP-10-05-01",
+  "note": "First reported in 2000 from calcium-48 on curium-248; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration."
+ },
+ "prose": {
+  "text": "Livermorium is a synthetic element in group 16, below polonium, named after Lawrence Livermore National Laboratory in California, whose scientists worked with the Dubna team that announced it in December 2000. It was made by fusing calcium-48 with curium-248, and every known isotope is fleeting: livermorium-293, the longest-lived measured so far, has a half-life of only about a tenth of a second. Only small numbers of atoms have ever been made, and its chemistry is unexplored. Calculations predict [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁴, with a closed 7p₁/₂ pair and two electrons in the higher 7p₃/₂ level, which should make +2 its most important oxidation state.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart"
+  ]
+ }
+}

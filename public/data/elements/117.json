@@ -1,0 +1,125 @@
+{
+ "schemaVersion": 1,
+ "Z": 117,
+ "symbol": "Ts",
+ "orbitals": {
+  "zeff": [],
+  "eigenvalues": [],
+  "radii": {
+   "covalent": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no covalent radius for this element."
+   },
+   "vdw": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no van der Waals radius for this element."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": []
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "PubChem lists no Pauling electronegativity for this element."
+   },
+   "allen": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 294
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No COD entry."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 2010,
+  "discoverers": [
+   "Joint Institute for Nuclear Research, Dubna",
+   "Lawrence Livermore National Laboratory, Livermore",
+   "Oak Ridge National Laboratory, Oak Ridge"
+  ],
+  "place": "Dubna, Russia",
+  "nameOrigin": "After the US state of Tennessee, where Oak Ridge National Laboratory produced the berkelium target used to make it.",
+  "symbolNote": "Temporary name: ununseptium (Uus); named tennessine in 2016.",
+  "source": "iupac_discovery",
+  "doi": "10.1515/pac-2015-0502",
+  "note": "Made from calcium-48 on berkelium-249; the 2016 IUPAC/IUPAP report found the Dubna–Livermore–Oak Ridge claim compliant. The name also acknowledges Vanderbilt University and the University of Tennessee."
+ },
+ "prose": {
+  "text": "Tennessine is a synthetic element in group 17, below astatine, named after the US state of Tennessee, home of Oak Ridge National Laboratory, Vanderbilt University and the University of Tennessee. Its discovery, announced in April 2010 by a Russian–American team at Dubna, depended on a rare target: berkelium-249 bred in a reactor at Oak Ridge. Because that berkelium decays with a half-life of 330 days, it had to be shipped and bombarded with calcium-48 promptly. Only a few atoms resulted, and its two known isotopes have half-lives of only about 21 and 51 milliseconds. Calculations predict [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁵, and strong spin–orbit effects should make it less like a typical halogen than iodine is.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart"
+  ]
+ }
+}

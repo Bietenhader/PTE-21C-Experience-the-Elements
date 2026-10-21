@@ -1,0 +1,37 @@
+{
+ "Z": 60,
+ "images": [
+  {
+   "file": "img/elements/60/1-800.webp",
+   "thumb": "img/elements/60/1-320.webp",
+   "width": 782,
+   "height": 782,
+   "title": "Neodymium under argon",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/neodymium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/neodymium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "neodymium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/60/2-800.webp",
+   "thumb": "img/elements/60/2-320.webp",
+   "width": 600,
+   "height": 600,
+   "title": "Neodymium with an oxidized surface",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/neodymium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/neodymium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "neodymium-ox.jpg",
+   "k": 2
+  }
+ ]
+}

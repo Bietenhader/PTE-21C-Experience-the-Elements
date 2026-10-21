@@ -1,0 +1,12 @@
+{
+"schemaVersion":1,
+"Z":91,
+"symbol":"Pa",
+"source":"nist_levels",
+"units":{"eV":"eV"},
+"levelsInDatabase":1,
+"levels":[
+  {"eV":0.0,"configuration":"5f2.6d.7s2","term":"4K","J":"11/2","parity":"even"}
+],
+"ionizationLimit":{"value":5.89,"unc":0.12,"unit":"eV","source":"nist_levels","note":"Limit: Pa II (5f2.7s2 3H<4>)."}
+}

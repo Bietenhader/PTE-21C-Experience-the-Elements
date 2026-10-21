@@ -1,0 +1,16 @@
+{
+"schemaVersion":1,
+"Z":99,
+"symbol":"Es",
+"source":"nist_lines",
+"window":{"low":380,"high":780,"unit":"nm","medium":"air"},
+"units":{"nm":"nm","Aki":"s⁻¹","eV":"eV"},
+"lines":[
+  {"nm":516.174,"charge":0,"intensity":10000.0,"intensityText":"10000s"},
+  {"nm":520.44,"charge":0,"intensity":10000.0,"intensityText":"10000l"},
+  {"nm":561.551,"charge":0,"intensity":3000.0,"intensityText":"3000l"}
+],
+"species":[
+  {"charge":0,"label":"Es I","linesInWindow":3,"kept":3}
+]
+}

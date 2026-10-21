@@ -1,0 +1,37 @@
+{
+ "Z": 32,
+ "images": [
+  {
+   "file": "img/elements/32/1-800.webp",
+   "thumb": "img/elements/32/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Germanium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/germanium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/germanium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "germanium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/32/2-800.webp",
+   "thumb": "img/elements/32/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Polycrystalline germanium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/germanium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/germanium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "germanium-3.jpg",
+   "k": 2
+  }
+ ]
+}

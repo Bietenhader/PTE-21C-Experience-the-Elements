@@ -1,0 +1,37 @@
+{
+ "Z": 71,
+ "images": [
+  {
+   "file": "img/elements/71/1-800.webp",
+   "thumb": "img/elements/71/1-320.webp",
+   "width": 788,
+   "height": 788,
+   "title": "Lutetium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/lutetium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/lutetium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "lutetium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/71/2-800.webp",
+   "thumb": "img/elements/71/2-320.webp",
+   "width": 727,
+   "height": 727,
+   "title": "A piece of lutetium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/lutetium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/lutetium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "lutetium-2.jpg",
+   "k": 2
+  }
+ ]
+}

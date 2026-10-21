@@ -1,0 +1,552 @@
+{
+ "schemaVersion": 1,
+ "Z": 30,
+ "symbol": "Zn",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 29.3245,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 21.828,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 26.098,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 16.2192,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 15.3693,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 13.8783,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 5.9652,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -9387.1053,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -9478.6723,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1130.1249,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1153.5828,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -997.2637,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1002.1426,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -124.4388,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -128.3006,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -82.2427,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -83.1574,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -10.8558,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -10.4549,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -6.0607,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -6.2081,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 122.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 139.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 9.394197,
+     "unc": 6e-06
+    },
+    {
+     "stage": 2,
+     "eV": 17.96439,
+     "unc": 0.00025
+    },
+    {
+     "stage": 3,
+     "eV": 39.7233,
+     "unc": 0.00012
+    },
+    {
+     "stage": 4,
+     "eV": 59.573,
+     "unc": 0.019
+    },
+    {
+     "stage": 5,
+     "eV": 82.6,
+     "unc": 0.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 108.0,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 133.9,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 173.9,
+     "unc": 1.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 203.0,
+     "unc": 2.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 238.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 274.4,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 310.8,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 417.6,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 453.4,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 490.6,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 540.0,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 577.8,
+     "unc": 1.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 613.3,
+     "unc": 2.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 697.5,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 20,
+     "eV": 737.366,
+     "unc": 0.021,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 1846.8,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 1961.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 2085.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 2214.0,
+     "unc": 8.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 2358.0,
+     "unc": 1.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 26,
+     "eV": 2491.5,
+     "unc": 1.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 27,
+     "eV": 2669.9,
+     "unc": 2.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 28,
+     "eV": 2781.996,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 29,
+     "eV": 11864.9401,
+     "unc": 0.0014,
+     "flag": "calculated"
+    },
+    {
+     "stage": 30,
+     "eV": 12388.9427,
+     "unc": 0.0006,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 1.65,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 9.395,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 70.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('7.0×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.0049,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('4.9×10⁻³ milligrams per liter')."
+   },
+   "solar": {
+    "value": 2.496e-06,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 4.65,
+    "unc": 0.03,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 2.3,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "zinc (hcp)",
+   "structure": "hexagonal close-packed (hcp, elongated c axis)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 266.48,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 494.67,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9008522,
+   "reference": "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7.",
+   "source": "cod",
+   "note": "Wyckoff's compilation; temperature not stated. Older COD zinc entries are in kX units."
+  },
+  "production": {
+   "commodity": "Zinc",
+   "basis": "mine production, zinc content of concentrates and direct shipping ores",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 13000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, zinc content of concentrates and direct shipping ores, 2025 (USGS: 13,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 3.28489,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average, cents per pound: North American [Zinc], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.8,
+    "whiteDwarfs": 0.1
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.097, massive_stars 0.809, white_dwarfs 0.094); quantised to 0.05. Stack height 70 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [
+   {
+    "A": "natural",
+    "charge": 1,
+    "state": "ground",
+    "lower": "4s 2S1/2",
+    "upper": "4p 2P3/2",
+    "wavelength": {
+     "value": 202.61371,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 64.776,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 4.07e+08 s⁻¹ (accuracy class B+), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "firstCooled": {
+     "year": 2003,
+     "doi": "10.1007/s00340-002-1081-7",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "Cooled at 202 nm; paper also measures isotope shifts. first_cooled = the paper the Olmschenk ion catalog lists as first 'trapped/laser cooled'."
+   }
+  ],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "micronutrient",
+  "plantRole": {
+   "text": "Holds the shape of many enzymes and of DNA-binding 'zinc finger' proteins; needed for auxin and protein synthesis.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+  },
+  "humanRole": {
+   "text": "Needed by hundreds of enzymes and by zinc-finger proteins that control genes; important for growth and immunity.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": 1746,
+  "discoveredText": "1746 (metal produced earlier in India)",
+  "discoverers": [
+   "Andreas Sigismund Marggraf"
+  ],
+  "place": "Berlin, Germany",
+  "nameOrigin": "From the German Zink, a word of uncertain origin.",
+  "source": "pubchem",
+  "note": "Zinc ores were used for brass since antiquity and the metal was smelted in India long before Marggraf: Los Alamos says the 13th century, Jefferson Lab the 1400s, and CIAAW says it was recognized as a metal by 1374."
+ },
+ "prose": {
+  "text": "Zinc is a bluish-white metal used mostly to coat steel against rust: on galvanised steel the zinc corrodes first, protecting the iron even where the coating is scratched. It is also an essential trace element that helps thousands of proteins keep their shape or do their work, and zinc-deficient crops grow small, crowded leaves. All its electrons are paired, [Ar] 3d¹⁰ 4s² (ground term ¹S₀), and zinc never opens its filled 3d subshell in ordinary chemistry. Its ion Zn²⁺ keeps all ten d electrons, which is why zinc salts are colourless and why, by the strict IUPAC definition, zinc is not a true transition element.",
+  "sources": [
+   "nist_gsie"
+  ]
+ }
+}

@@ -1,0 +1,558 @@
+{
+ "schemaVersion": 1,
+ "Z": 29,
+ "symbol": "Cu",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 28.3386,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 21.0198,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 25.097,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 15.5943,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 14.7306,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 13.2006,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 5.8424,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -8729.1003,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -8807.6262,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1037.8779,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1058.0776,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -911.0711,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -915.2656,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -110.4089,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -113.8499,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -71.0011,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -71.9283,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -5.5041,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -5.3389,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -4.6819,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -4.8447,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 132.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 140.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.72638,
+     "unc": 4e-06
+    },
+    {
+     "stage": 2,
+     "eV": 20.29239,
+     "unc": 6e-05
+    },
+    {
+     "stage": 3,
+     "eV": 36.841,
+     "unc": 0.012
+    },
+    {
+     "stage": 4,
+     "eV": 57.38,
+     "unc": 0.05,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 79.8,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 103.0,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 139.0,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 166.0,
+     "unc": 2.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 198.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 232.2,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 265.33,
+     "unc": 0.25
+    },
+    {
+     "stage": 12,
+     "eV": 367.0,
+     "unc": 0.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 401.0,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 436.0,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 483.1,
+     "unc": 0.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 518.7,
+     "unc": 1.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 552.8,
+     "unc": 2.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 632.5,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 670.608,
+     "unc": 0.02,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 20,
+     "eV": 1690.5,
+     "unc": 0.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 1800.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 1918.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 2044.0,
+     "unc": 6.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 2179.4,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 2307.3,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 26,
+     "eV": 2479.1,
+     "unc": 2.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 27,
+     "eV": 2586.954,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 28,
+     "eV": 11062.4309,
+     "unc": 0.0011,
+     "flag": "calculated"
+    },
+    {
+     "stage": 29,
+     "eV": 11567.6237,
+     "unc": 0.0005,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 1.228,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.9,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 10.96,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 63
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 60.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('6.0×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.00025,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('2.5×10⁻⁴ milligrams per liter')."
+   },
+   "solar": {
+    "value": 1.071e-06,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 4.29,
+    "unc": 0.05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 0.072,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "copper (fcc)",
+   "structure": "face-centred cubic (fcc)",
+   "lattice": "cubic",
+   "spaceGroup": "F m -3 m",
+   "spaceGroupNumber": 225,
+   "pearson": "cF4",
+   "atomsPerCell": 4,
+   "a": {
+    "value": 361.3,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 293.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9013014,
+   "doi": "10.1007/BF01174717",
+   "reference": "Suh, I.-K.; Ohta, H.; Waseda, Y. (1988). Journal of Materials Science 23, 757.",
+   "source": "cod",
+   "note": "Measured at 293 K; value given to four significant figures. Otte 1961 (COD 9012043, no temperature) gives 3.6150 Å."
+  },
+  "production": {
+   "commodity": "Copper (mine)",
+   "basis": "mine production, copper content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 23000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, copper content, 2025 (USGS: 23,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 10.8027,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, annual average, cents per pound: U.S. producer, cathode (COMEX + premium) [Copper], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "copper",
+   "source": "eu_crm",
+   "note": "The 2023 study: copper does not meet the CRM thresholds but is included because it is a strategic raw material (Art. 4(2) requires strategic raw materials to be on the critical list)."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.15,
+    "massiveStars": 0.85
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.139, massive_stars 0.854, neutron_star_mergers 0.001, white_dwarfs 0.006); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 63,
+    "charge": 0,
+    "I": 1.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 5866.915,
+     "unc": 0.005,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRev.105.581"
+    },
+    "splitting": {
+     "value": 11733830000,
+     "unc": 10000,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Atomic-beam microwave measurement (Ting and Lew 1957), as quoted in arXiv:2210.11425. A derived as splitting/2.",
+     "doi": "10.1103/PhysRev.105.581"
+    }
+   },
+   {
+    "A": 65,
+    "charge": 0,
+    "I": 1.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 6284.405,
+     "unc": 0.005,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRev.105.581"
+    },
+    "splitting": {
+     "value": 12568810000,
+     "unc": 10000,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Atomic-beam microwave measurement (Ting and Lew 1957), as quoted in arXiv:2210.11425; the same A appears as the reference value in arXiv:1011.5420.",
+     "doi": "10.1103/PhysRev.105.581"
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "micronutrient",
+  "plantRole": {
+   "text": "Carries electrons in plastocyanin of photosynthesis and in cytochrome c oxidase; also needed for lignin and pollen formation.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+  },
+  "humanRole": {
+   "text": "Part of cytochrome c oxidase, superoxide dismutase and the proteins that handle iron.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": "antiquity",
+  "nameOrigin": "From the Latin cuprum, from aes Cyprium, 'metal of Cyprus', the Romans' main source.",
+  "symbolNote": "Cu comes from the Latin cuprum.",
+  "source": "pubchem"
+ },
+ "prose": {
+  "text": "Copper is a soft, reddish metal that conducts electricity better than any other except silver, which is why it runs through our walls as wiring; alloyed with tin it gave the Bronze Age its name, and with zinc it becomes brass. Plants need traces of it too, for plastocyanin, a small copper protein that ferries electrons in photosynthesis. Copper breaks the simple filling rule: the Aufbau order predicts [Ar] 3d⁹ 4s², but measurement shows [Ar] 3d¹⁰ 4s¹, a completely filled d subshell plus one s electron (ground term ²S₁/₂). In the metal, those d electrons absorb blue and green light, leaving copper its warm colour.",
+  "sources": [
+   "nist_gsie"
+  ]
+ }
+}

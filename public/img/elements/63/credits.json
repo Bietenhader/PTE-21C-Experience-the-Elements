@@ -1,0 +1,37 @@
+{
+ "Z": 63,
+ "images": [
+  {
+   "file": "img/elements/63/1-800.webp",
+   "thumb": "img/elements/63/1-320.webp",
+   "width": 792,
+   "height": 792,
+   "title": "Weakly oxidized europium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/europium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/europium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "europium-3.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/63/2-800.webp",
+   "thumb": "img/elements/63/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Strongly oxidized europium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/europium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/europium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "europium.jpg",
+   "k": 2
+  }
+ ]
+}

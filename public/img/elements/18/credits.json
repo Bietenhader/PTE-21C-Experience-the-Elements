@@ -1,0 +1,21 @@
+{
+ "Z": 18,
+ "images": [
+  {
+   "file": "img/elements/18/1-800.webp",
+   "thumb": "img/elements/18/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Argon glowing in a discharge tube",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/argon.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/argon.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "discharge_tube",
+   "pin": "argon.jpg",
+   "k": 1
+  }
+ ]
+}

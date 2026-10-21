@@ -1,0 +1,754 @@
+{
+ "schemaVersion": 1,
+ "Z": 37,
+ "symbol": "Rb",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 36.2078,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 27.1568,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 33.0388,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 21.8427,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 21.3033,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 21.6792,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 12.388,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 10.8808,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "value": 4.9845,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -14720.193,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -14956.1788,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1939.9324,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -2000.1833,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1762.8809,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1776.5347,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -286.0967,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -296.2784,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -222.1923,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -224.2539,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -106.5464,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -104.2822,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -30.8863,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -31.9131,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -16.1138,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -16.0371,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -2.3232,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -2.3594,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 220.0,
+    "unc": 9.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 303.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 4.1771281,
+     "unc": 1.2e-06
+    },
+    {
+     "stage": 2,
+     "eV": 27.28954,
+     "unc": 6e-05
+    },
+    {
+     "stage": 3,
+     "eV": 39.247,
+     "unc": 0.003,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 52.2,
+     "unc": 0.25,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 68.44,
+     "unc": 0.15,
+     "flag": "calculated"
+    },
+    {
+     "stage": 6,
+     "eV": 82.9,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 98.67,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 8,
+     "eV": 132.79,
+     "unc": 0.25,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 150.628,
+     "unc": 0.025
+    },
+    {
+     "stage": 10,
+     "eV": 277.12,
+     "unc": 0.12
+    },
+    {
+     "stage": 11,
+     "eV": 313.1,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 356.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 400.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 443.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 502.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 550.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 601.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 654.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 706.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 857.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 905.3,
+     "unc": 1.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 958.9,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 1024.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 1080.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 1125.0,
+     "unc": 5.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 26,
+     "eV": 1242.5,
+     "unc": 1.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 27,
+     "eV": 1294.57,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 28,
+     "eV": 3133.3,
+     "unc": 1.8,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 29,
+     "eV": 3281.0,
+     "unc": 6.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 30,
+     "eV": 3443.0,
+     "unc": 8.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 31,
+     "eV": 3600.0,
+     "unc": 30.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 32,
+     "eV": 3815.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 33,
+     "eV": 3988.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 34,
+     "eV": 4214.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 35,
+     "eV": 4356.865,
+     "unc": 0.01,
+     "flag": "calculated"
+    },
+    {
+     "stage": 36,
+     "eV": 18305.886,
+     "unc": 0.004,
+     "flag": "calculated"
+    },
+    {
+     "stage": 37,
+     "eV": 18965.5484,
+     "unc": 0.002,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.468,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 0.82,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 4.177,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 85
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 90.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('9.0×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.12,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.2×10⁻¹ milligrams per liter')."
+   },
+   "solar": {
+    "value": 1.855e-08,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 2.39,
+    "unc": 0.02,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "rubidium (bcc)",
+   "structure": "body-centred cubic (bcc)",
+   "lattice": "cubic",
+   "spaceGroup": "I m -3 m",
+   "spaceGroupNumber": 229,
+   "pearson": "cI2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 570.0,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 297.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "doubtful": true,
+   "codId": 9012876,
+   "doi": "10.1139/p55-003",
+   "reference": "Kelly, F. M.; Pearson, W. B. (1955). Canadian Journal of Physics 33, 17.",
+   "source": "cod",
+   "note": "At 297 K. CIF note: the lattice parameter of this specimen at this temperature is estimated. COD 9012879 (another specimen, same paper) gives 5.697 Å."
+  },
+  "production": {
+   "commodity": "Rubidium",
+   "basis": "mine production, rubidium",
+   "edition": "MCS 2026",
+   "unitValue": {
+    "value": 138000.0,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "1?gram ampoules of 99.75% (metal basis) rubidium [Rubidium], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.25,
+    "massiveStars": 0.65,
+    "neutronStarMergers": 0.1
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.258, massive_stars 0.635, neutron_star_mergers 0.107); quantised to 0.05. Stack height 71 px."
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 85,
+    "charge": 0,
+    "I": 2.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 1011.910813,
+     "unc": 2e-06,
+     "unit": "MHz",
+     "source": "allegrini2022"
+    },
+    "splitting": {
+     "value": 3035732439,
+     "unc": 6,
+     "unit": "Hz",
+     "source": "allegrini2022",
+     "note": "Ground-state A constant (Tetu, Fortin and Savard (1976)), as tabulated by Allegrini, Arimondo and Orozco (2022); splitting = |A|(I + 1/2)."
+    }
+   },
+   {
+    "A": 87,
+    "charge": 0,
+    "splitting": {
+     "value": 6834682610.904313,
+     "unc": 2.3e-06,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value (secondary representation of the second, valid from 2026-03-27).",
+     "text": "6834682610.9043129"
+    }
+   }
+  ],
+  "clocks": [
+   {
+    "Z": 37,
+    "species": "85Rb",
+    "A": 85,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "385 THz",
+    "transition": "5S_{1/2} (Fg=3) - 5D_{5/2} (Fe=5)",
+    "srs": false,
+    "metre": true,
+    "frequency": {
+     "value": 385285142375000.0,
+     "unc": 5000.0,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2005-10-07.",
+     "text": "385285142375000"
+    }
+   },
+   {
+    "Z": 37,
+    "species": "87Rb",
+    "A": 87,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "6.835 GHz",
+    "transition": "5s ^2S_{1/2} (F=1) - 5s ^2S_{1/2} (F=2)",
+    "srs": true,
+    "metre": false,
+    "frequency": {
+     "value": 6834682610.904313,
+     "unc": 2.3e-06,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2026-03-27.",
+     "text": "6834682610.9043129"
+    }
+   },
+   {
+    "Z": 37,
+    "species": "87Rb",
+    "A": 87,
+    "charge": 0,
+    "kind": "atomic",
+    "label": "384 THz",
+    "transition": "D2",
+    "srs": false,
+    "metre": true,
+    "frequency": {
+     "value": 384227981900000.0,
+     "unc": 200000.0,
+     "unit": "Hz",
+     "source": "bipm_frequencies",
+     "note": "BIPM recommended value, valid from 2015-03-10.",
+     "text": "384227981900000"
+    }
+   }
+  ],
+  "laserCooling": [
+   {
+    "A": 87,
+    "charge": 0,
+    "state": "ground",
+    "lower": "5s 2S1/2",
+    "upper": "5p 2P3/2",
+    "wavelength": {
+     "value": 780.2414,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 6.067,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 3.812e+07 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "BEC": {
+     "year": 1995,
+     "doi": "10.1126/science.269.5221.198",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "One of the two first BECs of a dilute atomic gas (1995, with Na). No first_mot: the catalog's Rb entry (Walker et al., Phys. Lett. A 163, 309 (1992)) is a vortex-force trap, not a MOT. Repump is on the same D2 line from the other hyperfine level. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+   },
+   {
+    "A": 85,
+    "charge": 0,
+    "state": "ground",
+    "lower": "5s 2S1/2",
+    "upper": "5p 2P3/2",
+    "wavelength": {
+     "value": 780.2414,
+     "unit": "nm",
+     "source": "nist_lines",
+     "note": "Vacuum wavelength, NIST ASD."
+    },
+    "gamma": {
+     "value": 6.067,
+     "unit": "MHz",
+     "source": "nist_lines",
+     "note": "Γ/2π from NIST's A_ki = 3.812e+07 s⁻¹ (accuracy class AAA), taking the upper level to decay only on this line; where it has other decay channels the true linewidth is slightly larger."
+    },
+    "BEC": {
+     "year": 2000,
+     "doi": "10.1103/PhysRevLett.85.1795",
+     "source": "primary_literature"
+    },
+    "source": "olmschenk_catalog",
+    "note": "85Rb BEC (2000) needed a Feshbach resonance to make interactions repulsive. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+   }
+  ],
+  "siHistory": [
+   {
+    "Z": 37,
+    "A": 85,
+    "unit": "metre",
+    "role": "recommended_radiation",
+    "text": "85Rb (385 THz) is a recommended radiation for realizing the metre.",
+    "validFrom": "2005-10-07",
+    "source": "bipm_frequencies"
+   },
+   {
+    "Z": 37,
+    "A": 87,
+    "unit": "second",
+    "role": "srs",
+    "text": "87Rb (6.835 GHz) is a secondary representation of the second.",
+    "validFrom": "2026-03-27",
+    "source": "bipm_frequencies"
+   }
+  ]
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1861,
+  "discoverers": [
+   "Robert Bunsen",
+   "Gustav Kirchhoff"
+  ],
+  "place": "Heidelberg, Germany",
+  "isolated": 1863,
+  "isolatedBy": [
+   "Robert Bunsen"
+  ],
+  "nameOrigin": "From the Latin rubidus, 'deep red', for the red lines in its spectrum.",
+  "source": "pubchem",
+  "note": "Found with the spectroscope in the mineral lepidolite."
+ },
+ "prose": {
+  "text": "Rubidium is a soft, silvery alkali metal that melts at 312.46 K (about 39 °C) and bursts into flame in air. It was discovered in 1861 by examining with a prism the light of a mineral heated in a flame, and named from the Latin for 'deep red' after two red lines in its spectrum. Over a quarter of natural rubidium, 27.83 %, is radioactive rubidium-87, decaying so slowly, with a half-life of 4.97 × 10¹⁰ years, that geologists use it to date ancient rocks. The atom, [Kr] 5s¹ (ground term ²S₁/₂), has one outer electron whose two hyperfine levels set the tick of rubidium atomic clocks, and rubidium-87 formed the first Bose–Einstein condensate.",
+  "sources": [
+   "pubchem",
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

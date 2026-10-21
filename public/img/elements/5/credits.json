@@ -1,0 +1,37 @@
+{
+ "Z": 5,
+ "images": [
+  {
+   "file": "img/elements/5/1-800.webp",
+   "thumb": "img/elements/5/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Crystalline boron",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/boron.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/boron.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "boron.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/5/2-800.webp",
+   "thumb": "img/elements/5/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Amorphous brown boron powder",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/boron.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/boron.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "powder",
+   "pin": "brown-boron.jpg",
+   "k": 2
+  }
+ ]
+}

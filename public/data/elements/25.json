@@ -1,0 +1,523 @@
+{
+ "schemaVersion": 1,
+ "Z": 25,
+ "symbol": "Mn",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 24.3957,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 17.7938,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 21.084,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 13.0179,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 12.1092,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 10.5282,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 5.2832,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -6359.2169,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -6398.3222,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -731.0787,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -740.8451,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -627.6659,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -629.143,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -83.7196,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -85.2466,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -54.1901,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -54.449,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -7.2529,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -7.0322,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -5.2011,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -5.2745,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 139.0,
+    "unc": 5.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832. Value for l.s.; also 161(8)[h.s.]."
+   },
+   "vdw": {
+    "value": 197.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.434038,
+     "unc": 1.2e-06
+    },
+    {
+     "stage": 2,
+     "eV": 15.63999,
+     "unc": 7e-05
+    },
+    {
+     "stage": 3,
+     "eV": 33.668,
+     "unc": 0.012
+    },
+    {
+     "stage": 4,
+     "eV": 51.21,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 72.41,
+     "unc": 0.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 95.604,
+     "unc": 0.025
+    },
+    {
+     "stage": 7,
+     "eV": 119.203,
+     "unc": 0.012
+    },
+    {
+     "stage": 8,
+     "eV": 195.5,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 9,
+     "eV": 221.89,
+     "unc": 0.17,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 10,
+     "eV": 248.6,
+     "unc": 0.3,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 286.1,
+     "unc": 0.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 314.4,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 343.6,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 402.95,
+     "unc": 0.25,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 435.172,
+     "unc": 0.007,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 1133.7,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 1224.1,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 1320.3,
+     "unc": 2.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 1430.9,
+     "unc": 2.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 20,
+     "eV": 1537.2,
+     "unc": 0.8,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 1643.2,
+     "unc": 0.7,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 1788.7,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 1879.873,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 24,
+     "eV": 8140.7864,
+     "unc": 0.0014,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 8571.95438,
+     "unc": 0.00022,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no electron affinity for this element."
+  },
+  "en": {
+   "pauling": {
+    "value": 1.55,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 10.34,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 55
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 950.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('9.50×10² milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 0.0002,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('2×10⁻⁴ milligrams per liter')."
+   },
+   "solar": {
+    "value": 1.558e-05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 5.52,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values. The table prints +-0.00 dex (i.e. below 0.005 dex); unc omitted so that no zero uncertainty is displayed."
+   },
+   "body": {
+    "value": 0.012,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "α-manganese",
+   "structure": "cubic, α-Mn type (complex body-centred cubic cell)",
+   "lattice": "cubic",
+   "spaceGroup": "I -4 3 m",
+   "spaceGroupNumber": 217,
+   "pearson": "cI58",
+   "atomsPerCell": 58,
+   "a": {
+    "value": 891.25,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 298.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9011068,
+   "doi": "10.1107/S0365110X67001689",
+   "reference": "Gazzara, C. P.; Middleton, R. M.; Weiss, R. J.; Hall, E. O. (1967). Acta Crystallographica 22, 859.",
+   "source": "cod",
+   "note": "α-Mn has 58 atoms per conventional cell on four independent sites. Measured at 298 K."
+  },
+  "production": {
+   "commodity": "Manganese",
+   "basis": "mine production, manganese content",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 20000000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World mine production, manganese content, 2025 (USGS: 20,000 thousand metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 0.45,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average, manganese content, cost, insurance, and freight, China, dollars per metric ton unit [Manganese], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "manganese",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.1,
+    "massiveStars": 0.15,
+    "whiteDwarfs": 0.75
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.080, massive_stars 0.151, white_dwarfs 0.768); quantised to 0.05. Stack height 63 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 55,
+    "charge": 0,
+    "I": 2.5,
+    "J": 2.5,
+    "A_MHz": {
+     "value": -72.4299,
+     "unc": 0.015,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRevA.3.1220"
+    },
+    "B_MHz": {
+     "value": -0.019031,
+     "unc": 1.5e-05,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1103/PhysRevA.3.1220"
+    },
+    "splitting": {
+     "value": 1086439936.0,
+     "unc": 240000.0,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "3d5 4s2 a6S5/2 ground level, Davis, Wright and Balling (1971). A is converted from -2.416e-3 cm-1 in arXiv:2211.12797 Table 1 (1 cm-1 = 29979.2458 MHz). That document gives no uncertainty, so A_unc is only the rounding of the tabulated digits and limits the splitting. The B magnitude and uncertainty come from arXiv:1508.06207, which prints it as positive. The sign follows arXiv:2211.12797 (negative). Changing the sign moves the width by only 0.017 MHz, which is included in unc_Hz. Splitting = width of the ground-level hyperfine manifold (F = 0 to 5), from A and B.",
+     "doi": "10.1103/PhysRevA.3.1220"
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "micronutrient",
+  "plantRole": {
+   "text": "Four manganese atoms and one calcium atom form the cluster in photosystem II that splits water and releases oxygen.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+  },
+  "humanRole": {
+   "text": "Part of enzymes such as mitochondrial superoxide dismutase and arginase.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": 1774,
+  "discoverers": [
+   "Carl Wilhelm Scheele",
+   "Johan Gottlieb Gahn"
+  ],
+  "place": "Uppsala, Sweden",
+  "nameOrigin": "From manganesia, a medieval variant of magnesia, the old name shared by its black oxide ore (pyrolusite).",
+  "source": "pubchem",
+  "note": "Scheele recognized a new metal in pyrolusite and Gahn reduced the oxide to the metal the same year; the map dot marks Scheele's Uppsala. CIAAW instead links the name to the Latin magnes, 'magnet'."
+ },
+ "prose": {
+  "text": "Manganese is a hard, brittle, grey transition metal; most of it goes into steel, which it toughens, and it also forms the dark manganese dioxide inside ordinary alkaline batteries. Life uses it in a remarkable place: in photosystem II of plants and algae, a cluster of four manganese atoms and one calcium atom pulls electrons from water, and almost all the oxygen in the air was released there. The atom has a half-filled 3d subshell, [Ar] 3d⁵ 4s², with five unpaired electrons whose spins all point the same way; their orbital motions cancel, giving an S-type ground term, ⁶S₅/₂.",
+  "sources": [
+   "nist_gsie"
+  ]
+ }
+}

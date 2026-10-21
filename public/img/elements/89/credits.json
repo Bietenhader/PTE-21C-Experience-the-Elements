@@ -1,0 +1,21 @@
+{
+ "Z": 89,
+ "images": [
+  {
+   "file": "img/elements/89/1-800.webp",
+   "thumb": "img/elements/89/1-320.webp",
+   "width": 640,
+   "height": 800,
+   "title": "Actinium-225 in a vial; the blue glow is air ionized by its radiation",
+   "author": "Oak Ridge National Laboratory",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Actinium_sample_(31481701837).png",
+   "attribution": "Oak Ridge National Laboratory, CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/; https://commons.wikimedia.org/wiki/File:Actinium_sample_(31481701837).png",
+   "source": "commons",
+   "kind": "sample",
+   "pin": "File:Actinium sample (31481701837).png",
+   "k": 1
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "Z": 31,
+ "images": [
+  {
+   "file": "img/elements/31/1-800.webp",
+   "thumb": "img/elements/31/1-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Gallium crystallizing",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/gallium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/gallium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "crystal",
+   "pin": "gallium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/31/2-800.webp",
+   "thumb": "img/elements/31/2-320.webp",
+   "width": 800,
+   "height": 800,
+   "title": "Solid gallium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/gallium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/gallium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "gallium-3.jpg",
+   "k": 2
+  }
+ ]
+}

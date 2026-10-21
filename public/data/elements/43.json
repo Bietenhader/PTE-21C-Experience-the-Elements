@@ -1,0 +1,626 @@
+{
+ "schemaVersion": 1,
+ "Z": 43,
+ "symbol": "Tc",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 42.109,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 31.6282,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 38.9408,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 26.7912,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 26.3841,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 28.353,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 17.1984,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 15.8112,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "value": 12.882,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "value": 7.2265,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -20292.6743,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -20755.829,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -2845.4268,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -2965.1609,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -2628.8977,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -2658.5114,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -493.4867,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -516.0882,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -409.3065,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -414.9787,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -254.1505,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -250.1742,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -69.4084,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -73.197,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -44.7146,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -45.3513,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -7.3542,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 2,
+    "eV": -6.8375,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -4.997,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 5,
+    "l": 0,
+    "eV": -5.2455,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 147.0,
+    "unc": 7.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 209.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 7.11938,
+     "unc": 3e-05
+    },
+    {
+     "stage": 2,
+     "eV": 15.26,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 3,
+     "eV": 29.55,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 41.0,
+     "unc": 1.7,
+     "flag": "calculated"
+    },
+    {
+     "stage": 5,
+     "eV": 57.0,
+     "unc": 1.9,
+     "flag": "calculated"
+    },
+    {
+     "stage": 6,
+     "eV": 72.0,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 7,
+     "eV": 88.0,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 150.0,
+     "unc": 2.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 169.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 189.9,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 214.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 239.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 262.08,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 311.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 338.55,
+     "unc": 0.17,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 16,
+     "eV": 604.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 655.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 18,
+     "eV": 713.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 19,
+     "eV": 773.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 20,
+     "eV": 829.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 21,
+     "eV": 904.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 22,
+     "eV": 968.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 23,
+     "eV": 1032.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 24,
+     "eV": 1102.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 25,
+     "eV": 1166.0,
+     "unc": 4.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 26,
+     "eV": 1354.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 27,
+     "eV": 1411.6,
+     "unc": 1.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 28,
+     "eV": 1479.5,
+     "unc": 2.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 29,
+     "eV": 1559.0,
+     "unc": 6.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 30,
+     "eV": 1638.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 31,
+     "eV": 1689.0,
+     "unc": 8.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 32,
+     "eV": 1838.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 33,
+     "eV": 1900.28,
+     "unc": 0.06,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 34,
+     "eV": 4505.0,
+     "unc": 2.5,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 35,
+     "eV": 4681.0,
+     "unc": 8.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 36,
+     "eV": 4874.0,
+     "unc": 10.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 37,
+     "eV": 5060.0,
+     "unc": 40.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 38,
+     "eV": 5361.0,
+     "unc": 6.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 39,
+     "eV": 5570.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 40,
+     "eV": 5838.0,
+     "unc": 6.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 41,
+     "eV": 6008.391,
+     "unc": 0.017,
+     "flag": "calculated"
+    },
+    {
+     "stage": 42,
+     "eV": 25004.531,
+     "unc": 0.01,
+     "flag": "calculated"
+    },
+    {
+     "stage": 43,
+     "eV": 25787.047,
+     "unc": 0.016,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.55,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 1.9,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 8.94,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 97
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "solarLogEps": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system abundance for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "technetium (hcp)",
+   "structure": "hexagonal close-packed (hcp)",
+   "lattice": "hexagonal",
+   "spaceGroup": "P 63/m m c",
+   "spaceGroupNumber": 194,
+   "pearson": "hP2",
+   "atomsPerCell": 2,
+   "a": {
+    "value": 274.0,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 439.8,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "doubtful": true,
+   "codId": 1541062,
+   "reference": "Trzebiatowski, W.; Rudzinski, J. (1964). Journal of the Less-Common Metals 6, 244.",
+   "source": "cod",
+   "note": "The only COD entry for technetium metal, from a study of technetium nitride and borides (J. Less-Common Met. 1964); a given to three significant figures; temperature not stated."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Technetium has no long-lived isotope, so none of it survives from before the Solar System; its box in Fig. 39 is empty."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1937,
+  "discoverers": [
+   "Carlo Perrier",
+   "Emilio Segrè"
+  ],
+  "place": "Palermo, Italy",
+  "nameOrigin": "From the Greek technetos, 'artificial', as the first element to be made artificially.",
+  "symbolNote": "Some older tables showed element 43 as masurium (Ma), from a 1925 claim that was never confirmed.",
+  "source": "pubchem",
+  "note": "Found in a molybdenum sample bombarded with deuterons in Lawrence's Berkeley cyclotron. Kenna and Kuroda found traces in nature in 1962."
+ },
+ "prose": {
+  "text": "Technetium is a silvery transition metal with no stable isotopes; in 1937 it became the first element made artificially, from molybdenum bombarded in a cyclotron, and its name comes from the Greek for ‘artificial’. A short-lived excited form of technetium-99 is now the most widely used tracer in nuclear-medicine scans. Even its longest-lived isotopes survive only about four million years, so when astronomers found technetium lines in the light of certain red giant stars, it proved that stars forge new elements. Its ground configuration, [Kr] 4d⁵ 5s², follows the filling rule and leaves a half-filled 4d shell (⁶S₅/₂).",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+{
+"schemaVersion":1,
+"Z":84,
+"symbol":"Po",
+"source":"nist_lines",
+"window":{"low":380,"high":780,"unit":"nm","medium":"air"},
+"units":{"nm":"nm","Aki":"s⁻¹","eV":"eV"},
+"lines":[
+  {"nm":386.193,"charge":0,"intensity":500.0},
+  {"nm":417.052,"charge":0,"intensity":1200.0,"lower":{"conf":"6p4","term":"3P","J":"1","eV":2.086854},"upper":{"conf":"6p3.(4S*).7s","term":"3S*","J":"1","eV":5.05889}},
+  {"nm":449.321,"charge":0,"intensity":800.0},
+  {"nm":461.144,"charge":0,"intensity":350.0},
+  {"nm":487.624,"charge":0,"intensity":400.0},
+  {"nm":532.323,"charge":0,"intensity":350.0},
+  {"nm":574.485,"charge":0,"intensity":300.0}
+],
+"species":[
+  {"charge":0,"label":"Po I","linesInWindow":7,"kept":7}
+]
+}

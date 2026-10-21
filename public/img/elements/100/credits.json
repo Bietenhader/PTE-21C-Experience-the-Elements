@@ -1,0 +1,22 @@
+{
+ "Z": 100,
+ "images": [
+  {
+   "file": "img/elements/100/1-800.webp",
+   "thumb": "img/elements/100/1-320.webp",
+   "width": 400,
+   "height": 400,
+   "title": "The Ivy Mike test (1952), in whose debris fermium was discovered",
+   "author": "U.S. Department of Energy",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://images-of-elements.com/fermium.php",
+   "attribution": "U.S. Department of Energy, Public domain; via images-of-elements.com (https://images-of-elements.com/fermium.php)",
+   "source": "images_of_elements",
+   "kind": "historical",
+   "pin": "s/fermium.jpg",
+   "k": 1,
+   "note": "U.S. Government work, 1952 (credited so on the element page)."
+  }
+ ]
+}

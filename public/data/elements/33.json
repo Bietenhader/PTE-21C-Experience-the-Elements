@@ -1,0 +1,552 @@
+{
+ "schemaVersion": 1,
+ "Z": 33,
+ "symbol": "As",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 32.2783,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 24.127,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 29.0736,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 18.5955,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 17.8497,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "value": 17.3784,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "value": 8.944,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "value": 7.4492,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -11519.5773,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -11660.6421,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1444.7365,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -1480.7576,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1293.2992,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -1301.0946,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -183.1532,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -189.0418,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -132.0222,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -133.2632,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -41.9808,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 2,
+    "eV": -40.95,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -14.2498,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 0,
+    "eV": -14.6724,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -5.3742,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 4,
+    "l": 1,
+    "eV": -5.3431,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 119.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 185.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 9.78855,
+     "unc": 0.00025
+    },
+    {
+     "stage": 2,
+     "eV": 18.5892,
+     "unc": 0.001
+    },
+    {
+     "stage": 3,
+     "eV": 28.349,
+     "unc": 0.012
+    },
+    {
+     "stage": 4,
+     "eV": 50.15,
+     "unc": 0.06
+    },
+    {
+     "stage": 5,
+     "eV": 62.77,
+     "unc": 0.06
+    },
+    {
+     "stage": 6,
+     "eV": 121.19,
+     "unc": 0.06
+    },
+    {
+     "stage": 7,
+     "eV": 147.0,
+     "unc": 2.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 8,
+     "eV": 180.0,
+     "unc": 2.1,
+     "flag": "calculated"
+    },
+    {
+     "stage": 9,
+     "eV": 213.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 10,
+     "eV": 247.0,
+     "unc": 2.2,
+     "flag": "calculated"
+    },
+    {
+     "stage": 11,
+     "eV": 296.0,
+     "unc": 2.4,
+     "flag": "calculated"
+    },
+    {
+     "stage": 12,
+     "eV": 333.0,
+     "unc": 2.5,
+     "flag": "calculated"
+    },
+    {
+     "stage": 13,
+     "eV": 375.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 14,
+     "eV": 418.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 15,
+     "eV": 460.0,
+     "unc": 3.0,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 587.6,
+     "unc": 1.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 17,
+     "eV": 628.8,
+     "unc": 0.6,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 18,
+     "eV": 672.9,
+     "unc": 0.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 19,
+     "eV": 728.9,
+     "unc": 2.2,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 20,
+     "eV": 774.0,
+     "unc": 1.8,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 21,
+     "eV": 814.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 22,
+     "eV": 911.7,
+     "unc": 1.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 23,
+     "eV": 956.79,
+     "unc": 0.03,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 24,
+     "eV": 2356.9,
+     "unc": 1.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 25,
+     "eV": 2486.0,
+     "unc": 4.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 26,
+     "eV": 2626.0,
+     "unc": 6.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 27,
+     "eV": 2766.0,
+     "unc": 21.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 28,
+     "eV": 2938.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 29,
+     "eV": 3088.1,
+     "unc": 1.9,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 30,
+     "eV": 3287.0,
+     "unc": 3.0,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 31,
+     "eV": 3411.643,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 32,
+     "eV": 14447.6799,
+     "unc": 0.0025,
+     "flag": "calculated"
+    },
+    {
+     "stage": 33,
+     "eV": 15028.9251,
+     "unc": 0.001,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.81,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.18,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 13.08,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 1.8,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.8 milligrams per kilogram')."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "value": 1.41e-08,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 2.34,
+    "unc": 0.04,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
+  },
+  "crystal": {
+   "allotrope": "grey arsenic (α-As)",
+   "structure": "rhombohedral (α-arsenic type, puckered layers)",
+   "lattice": "trigonal",
+   "spaceGroup": "R -3 m :H",
+   "spaceGroupNumber": 166,
+   "pearson": "hR2",
+   "atomsPerCell": 6,
+   "a": {
+    "value": 375.98,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 1054.75,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "cellAxes": "hexagonal",
+   "temperature": {
+    "value": 299.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "codId": 9009652,
+   "doi": "10.1107/S0021889869006443",
+   "reference": "Schiferl, D.; Barrett, C. S. (1969). Journal of Applied Crystallography 2, 30.",
+   "source": "cod",
+   "note": "Measured at 299 K. Cell on hexagonal axes; Pearson count per primitive rhombohedral cell."
+  },
+  "production": {
+   "commodity": "Arsenic",
+   "basis": "production, arsenic trioxide (As2O3, gross weight)",
+   "edition": "MCS 2026",
+   "tonnesPerYear": {
+    "value": 61000.0,
+    "unit": "t/yr",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "World production, arsenic trioxide (As2O3, gross weight), 2025 (USGS: 61,000 metric tons)."
+   },
+   "year": 2025,
+   "unitValue": {
+    "value": 4.07855,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, metal, annual average, U.S. warehouse, dollars per pound [Arsenic], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": false,
+   "listedAs": "arsenic",
+   "source": "eu_crm"
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "agb": 0.3,
+    "massiveStars": 0.7
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.302, massive_stars 0.687, neutron_star_mergers 0.011); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total."
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "no",
+  "essentialHuman": "no",
+  "note": "Not known to be essential for plants or for humans."
+ },
+ "history": {
+  "discovered": 1250,
+  "discoveredText": "c. 1250 (the element; its sulfides were known in antiquity)",
+  "discoverers": [
+   "Albertus Magnus"
+  ],
+  "nameOrigin": "From the Greek arsenikon, the name of the yellow pigment orpiment (an arsenic sulfide), via the Latin arsenicum.",
+  "source": "pubchem",
+  "note": "PubChem lists the year as 'Ancient' because arsenic compounds were known in antiquity; crediting Albertus Magnus with the element is traditional rather than certain. Schroeder published two ways of preparing it in 1649."
+ },
+ "prose": {
+  "text": "Arsenic is a grey, brittle metalloid, infamous as a poison yet useful in the gallium arsenide chips of mobile phones and laser diodes. Rice can carry more of it than other cereals, because in flooded paddy soils dissolved arsenite slips into roots through the channels the plant uses to take up silicon. Heated at normal pressure, solid arsenic never melts: it turns straight into vapour at about 887 K and becomes liquid only under pressure. Like nitrogen and phosphorus above it, arsenic has three unpaired p electrons, one in each 4p orbital ([Ar] 3d¹⁰ 4s² 4p³, ground term ⁴S°₃/₂), and nature makes only one stable isotope, arsenic-75.",
+  "sources": [
+   "pubchem",
+   "nist_gsie",
+   "iaea_livechart"
+  ]
+ }
+}

@@ -1,0 +1,394 @@
+{
+ "schemaVersion": 1,
+ "Z": 17,
+ "symbol": "Cl",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 16.5239,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 11.4304,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 12.9932,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "value": 7.0683,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "value": 6.1161,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -2731.1859,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -2737.1126,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -250.018,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -251.414,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -191.5677,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -191.537,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -20.5298,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 0,
+    "eV": -20.6718,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -8.718,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 3,
+    "l": 1,
+    "eV": -8.7046,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 102.0,
+    "unc": 4.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 175.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 12.967633,
+     "unc": 1.6e-05
+    },
+    {
+     "stage": 2,
+     "eV": 23.81364,
+     "unc": 0.00012
+    },
+    {
+     "stage": 3,
+     "eV": 39.8,
+     "unc": 0.11,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 4,
+     "eV": 53.24,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 5,
+     "eV": 67.68,
+     "unc": 0.1,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 6,
+     "eV": 96.94,
+     "unc": 0.04,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 7,
+     "eV": 114.2013,
+     "unc": 0.0006
+    },
+    {
+     "stage": 8,
+     "eV": 348.306,
+     "unc": 0.007
+    },
+    {
+     "stage": 9,
+     "eV": 400.851,
+     "unc": 0.012
+    },
+    {
+     "stage": 10,
+     "eV": 456.7,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 11,
+     "eV": 530.0,
+     "unc": 0.4,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 12,
+     "eV": 591.58,
+     "unc": 0.19,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 13,
+     "eV": 656.3,
+     "unc": 0.12,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 14,
+     "eV": 750.23,
+     "unc": 0.19,
+     "flag": "interpolated"
+    },
+    {
+     "stage": 15,
+     "eV": 809.198,
+     "unc": 0.007,
+     "flag": "calculated"
+    },
+    {
+     "stage": 16,
+     "eV": 3658.34366,
+     "unc": 0.00022,
+     "flag": "calculated"
+    },
+    {
+     "stage": 17,
+     "eV": 3946.29179,
+     "unc": 7e-05,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 3.617,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 3.16,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 16.97,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {},
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 145.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.45×10² milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 19400.0,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('1.94×10⁴ milligrams per liter')."
+   },
+   "solar": {
+    "value": 5.768e-06,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 5.28,
+    "unc": 0.06,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "value": 95.0,
+    "unit": "g",
+    "source": "icrp23",
+    "note": "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110).",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
+  },
+  "crystal": {
+   "allotrope": "solid chlorine (Cl2)",
+   "structure": "orthorhombic molecular crystal (layers of Cl2 molecules)",
+   "lattice": "orthorhombic",
+   "spaceGroup": "C m c e",
+   "spaceGroupNumber": 64,
+   "pearson": "oS8",
+   "atomsPerCell": 8,
+   "a": {
+    "value": 629.29,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "b": {
+    "value": 453.61,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 816.17,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "temperature": {
+    "value": 160.0,
+    "unit": "K",
+    "source": "cod"
+   },
+   "lowTemperatureSolid": true,
+   "codId": 9013123,
+   "doi": "10.1080/00268978400102741",
+   "reference": "Powell, B. M.; Heal, K. M.; Torrie, B. H. (1984). Molecular Physics 53, 929.",
+   "source": "cod",
+   "note": "Low-temperature solid only, at 160 K, the highest temperature in this series (same paper also gives 22, 55 and 100 K)."
+  },
+  "production": {},
+  "critical": {
+   "eu2023": false
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "massiveStars": 1.0
+   },
+   "flag": "estimated",
+   "source": "kobayashi2020",
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.989, white_dwarfs 0.011); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+  }
+ },
+ "amo": {
+  "hyperfine": [],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "yes",
+  "plantClass": "micronutrient",
+  "plantRole": {
+   "text": "Taken up as chloride; balances charges, helps stomata open and close, and is needed by the water-splitting step of photosynthesis.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+  },
+  "humanRole": {
+   "text": "The main negative ion outside cells; part of stomach acid.",
+   "source": "efsa_drv",
+   "doi": "10.2903/sp.efsa.2017.e15121"
+  }
+ },
+ "history": {
+  "discovered": 1774,
+  "discoveredText": "1774 (recognized as an element 1810)",
+  "discoverers": [
+   "Carl Wilhelm Scheele"
+  ],
+  "place": "Uppsala, Sweden",
+  "nameOrigin": "From the Greek chloros, 'pale green' or 'yellow-green', the colour of the gas.",
+  "source": "pubchem",
+  "note": "Scheele made the gas from pyrolusite and hydrochloric acid but thought it contained oxygen; Davy showed in 1810 that it is an element and named it."
+ },
+ "prose": {
+  "text": "Chlorine is a greenish-yellow, choking gas from the halogen group; we meet it bound and harmless in table salt, while small doses of chlorine or its compounds keep drinking water and swimming pools free of microbes. Natural chlorine is a mixture of two stable isotopes, about 75.8 % chlorine-35 and 24.2 % chlorine-37, which is why its atomic weight, about 35.45, is so far from a whole number. The atom, [Ne] 3s² 3p⁵ (ground term ²P°₃/₂), lacks one electron to close its shell, and it releases more energy on capturing an extra electron than any other element, even fluorine.",
+  "sources": [
+   "iaea_livechart",
+   "nist_awic",
+   "nist_gsie",
+   "pubchem"
+  ]
+ }
+}

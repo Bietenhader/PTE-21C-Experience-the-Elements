@@ -1,0 +1,317 @@
+{
+ "schemaVersion": 1,
+ "Z": 5,
+ "symbol": "B",
+ "orbitals": {
+  "zeff": [
+   {
+    "n": 1,
+    "l": 0,
+    "value": 4.6795,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "value": 2.5762,
+    "source": "clementi_zeff"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "value": 2.4214,
+    "source": "clementi_zeff"
+   }
+  ],
+  "eigenvalues": [
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -178.625,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 1,
+    "l": 0,
+    "eV": -178.5894,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -9.3798,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 0,
+    "eV": -9.3816,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -3.7172,
+    "method": "LDA",
+    "source": "nist_srd141"
+   },
+   {
+    "n": 2,
+    "l": 1,
+    "eV": -3.7162,
+    "method": "ScRLDA",
+    "source": "nist_srd141"
+   }
+  ],
+  "radii": {
+   "covalent": {
+    "value": 84.0,
+    "unc": 3.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Covalent radius; PubChem's values are those of Cordero et al., Dalton Trans. 2008, 2832."
+   },
+   "vdw": {
+    "value": 192.0,
+    "unit": "pm",
+    "source": "pubchem",
+    "note": "Van der Waals radius (Los Alamos National Laboratory)."
+   }
+  }
+ },
+ "em": {
+  "ionizationEnergies": {
+   "source": "nist_gsie",
+   "unit": "eV",
+   "stages": [
+    {
+     "stage": 1,
+     "eV": 8.298019,
+     "unc": 3e-06
+    },
+    {
+     "stage": 2,
+     "eV": 25.15483,
+     "unc": 5e-05
+    },
+    {
+     "stage": 3,
+     "eV": 37.93059,
+     "unc": 7e-05
+    },
+    {
+     "stage": 4,
+     "eV": 259.374379,
+     "unc": 9e-06,
+     "flag": "calculated"
+    },
+    {
+     "stage": 5,
+     "eV": 340.2260225,
+     "unc": 6e-07,
+     "flag": "calculated"
+    }
+   ]
+  },
+  "electronAffinity": {
+   "value": 0.277,
+   "unit": "eV",
+   "source": "pubchem"
+  },
+  "en": {
+   "pauling": {
+    "value": 2.04,
+    "unit": "",
+    "source": "pubchem",
+    "note": "Pauling scale"
+   },
+   "allen": {
+    "value": 12.13,
+    "unit": "eV",
+    "source": "allen_en",
+    "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
+   }
+  }
+ },
+ "probability": {
+  "referenceIsotope": 11
+ },
+ "physical": {
+  "abundance": {
+   "crust": {
+    "value": 10.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for Earth's crust, via PubChem ('1.0×10¹ milligrams per kilogram')."
+   },
+   "ocean": {
+    "value": 4.44,
+    "unit": "mg/L",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Jefferson Lab estimate for sea water, via PubChem ('4.44 milligrams per liter')."
+   },
+   "solar": {
+    "value": 5.984e-09,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+   },
+   "solarLogEps": {
+    "value": 2.81,
+    "unc": 0.05,
+    "unit": "",
+    "source": "lodders2025",
+    "note": "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.048 g."
+   }
+  },
+  "crystal": {
+   "allotrope": "β-rhombohedral boron",
+   "structure": "rhombohedral (β-boron type: framework of B12 icosahedra)",
+   "lattice": "trigonal",
+   "spaceGroup": "R -3 m :H",
+   "spaceGroupNumber": 166,
+   "pearson": "hR105",
+   "atomsPerCell": 314.7,
+   "a": {
+    "value": 1092.51,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "c": {
+    "value": 2381.43,
+    "unit": "pm",
+    "source": "cod"
+   },
+   "alpha": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "beta": {
+    "value": 90.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "gamma": {
+    "value": 120.0,
+    "unit": "°",
+    "source": "cod"
+   },
+   "cellAxes": "hexagonal",
+   "temperature": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The COD entry does not state the temperature of the measurement."
+   },
+   "codId": 9011170,
+   "doi": "10.1107/S0567740877007389",
+   "reference": "Callmer, B. (1977). Acta Crystallographica, Section B 33, 1951.",
+   "source": "cod",
+   "note": "β-rhombohedral boron is the thermodynamically stable form at ambient conditions; α-rhombohedral boron (COD 9017847) is metastable. Cell given on hexagonal axes. Two sites are partially occupied; the occupancy-weighted atom count per hexagonal cell is given in atoms_per_cell, and divided by 3 for the primitive rhombohedral cell (Pearson hR105; hR111 and hR141 also appear in the literature depending on how partial sites are counted). Temperature not stated in CIF."
+  },
+  "production": {
+   "commodity": "Boron",
+   "basis": "world production, all forms (boron minerals and compounds)",
+   "edition": "MCS 2026",
+   "unitValue": {
+    "value": 0.54,
+    "unit": "USD/kg",
+    "source": "usgs_mcs",
+    "flag": "estimated",
+    "note": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton [Boron], 2025; per kg of the material named, as USGS gives it."
+   },
+   "priceYear": 2025
+  },
+  "critical": {
+   "eu2023": true,
+   "strategic": true,
+   "listedAs": "boron",
+   "source": "eu_crm",
+   "note": "The 2023 study assessed 'boron/borate' (borate minerals); the Regulation lists 'boron'."
+  }
+ },
+ "nucleus": {
+  "origin": {
+   "fractions": {
+    "cosmicRays": 1.0
+   },
+   "flag": "paper_statement",
+   "source": "kobayashi2020",
+   "note": "Paper Sect. 3.5: 'Be and B are supposed to be produced by cosmic rays [Prantzos et al. 1993], which is not included in our model either.' Empty box in Fig. 39. Value is the paper's qualitative statement, not a modelled fraction."
+  }
+ },
+ "amo": {
+  "hyperfine": [
+   {
+    "A": 11,
+    "charge": 0,
+    "I": 1.5,
+    "J": 0.5,
+    "A_MHz": {
+     "value": 366.0765,
+     "unc": 0.0015,
+     "unit": "MHz",
+     "source": "primary_literature",
+     "doi": "10.1139/p60-091"
+    },
+    "splitting": {
+     "value": 732153000,
+     "unc": 3000,
+     "unit": "Hz",
+     "source": "primary_literature",
+     "note": "Atomic-beam magnetic resonance (Lew and Title 1960), as tabulated in arXiv:1511.08928 Table V. Splitting derived as 2A. Another review attributes the same number to Harvey, Evans and Lew (1972).",
+     "doi": "10.1139/p60-091"
+    }
+   }
+  ],
+  "clocks": [],
+  "laserCooling": [],
+  "siHistory": []
+ },
+ "biology": {
+  "essentialPlant": "yes",
+  "essentialHuman": "probable",
+  "plantClass": "micronutrient",
+  "plantRole": {
+   "text": "Taken up as boric acid; cross-links the pectin rhamnogalacturonan II in cell walls, so a shortage first harms growing tips, flowers and pollen tubes.",
+   "source": "marschner2012",
+   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+  },
+  "humanRole": {
+   "text": "May help bone and brain function, but no essential role in humans has been proven.",
+   "source": "zoroddu2019",
+   "doi": "10.1016/j.jinorgbio.2019.03.013"
+  },
+  "note": "Human: no EFSA dietary reference value."
+ },
+ "history": {
+  "discovered": 1808,
+  "discoverers": [
+   "Joseph Louis Gay-Lussac",
+   "Louis Jacques Thénard",
+   "Humphry Davy"
+  ],
+  "place": "Paris, France",
+  "nameOrigin": "From borax, its best-known compound (a word traced to the Arabic buraq and Persian burah), given the ending of carbon.",
+  "source": "pubchem",
+  "note": "Gay-Lussac and Thénard in Paris and Davy in London obtained it independently in 1808, all by heating boric acid with potassium."
+ },
+ "prose": {
+  "text": "Boron is a hard metalloid that appears as black, glittering crystals or a brown powder; we meet it in borax, in heat-resistant borosilicate glassware and, invisibly, in crops and other flowering plants, which need traces of it to hold their cell walls together. About 19.65 % of natural boron is boron-10, a nucleus that captures slow neutrons so readily that it is used in reactor control rods and radiation shielding. The atom's ground configuration, [He] 2s² 2p¹, leaves a single unpaired p electron (ground term ²P°₁/₂), and boron-10 has an unusually large nuclear spin, 3, for so light a nucleus.",
+  "sources": [
+   "iaea_livechart",
+   "nist_gsie"
+  ]
+ }
+}

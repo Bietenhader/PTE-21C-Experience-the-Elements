@@ -1,0 +1,37 @@
+{
+ "Z": 56,
+ "images": [
+  {
+   "file": "img/elements/56/1-800.webp",
+   "thumb": "img/elements/56/1-320.webp",
+   "width": 710,
+   "height": 710,
+   "title": "Barium under argon",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/barium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/barium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "barium.jpg",
+   "k": 1
+  },
+  {
+   "file": "img/elements/56/2-800.webp",
+   "thumb": "img/elements/56/2-320.webp",
+   "width": 470,
+   "height": 470,
+   "title": "A piece of barium",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/barium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/barium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "barium-3.jpg",
+   "k": 2
+  }
+ ]
+}

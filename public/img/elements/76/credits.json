@@ -1,0 +1,21 @@
+{
+ "Z": 76,
+ "images": [
+  {
+   "file": "img/elements/76/1-800.webp",
+   "thumb": "img/elements/76/1-320.webp",
+   "width": 452,
+   "height": 452,
+   "title": "An osmium bead",
+   "author": "Jürgen Kummer (images-of-elements.com)",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "sourceUrl": "https://images-of-elements.com/osmium.php",
+   "attribution": "Photo: Jürgen Kummer, images-of-elements.com — https://images-of-elements.com/osmium.php — CC BY 3.0",
+   "source": "images_of_elements",
+   "kind": "sample",
+   "pin": "osmium.jpg",
+   "k": 1
+  }
+ ]
+}

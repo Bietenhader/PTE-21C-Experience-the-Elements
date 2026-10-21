@@ -41,6 +41,12 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 Also: 151 unit tests and 84 pipeline tests pass; lint, type checks and the licence audit are clean.
 
+## Fin's feedback on the PR (2026-10-21)
+
+- "Infos appear when zooming in — makes it explorative; maybe a small hint." Added: a one-line tip next to the
+  zoom buttons ("Tip: zoom in to see more of every element…", worded for a phone or a computer). It goes away
+  by itself once you have zoomed, or with its ×, and stays away on later visits.
+
 ## What changed this session
 
 - **Data for the trends:** `index.json` gained electron affinity, covalent and van der Waals radii, melting

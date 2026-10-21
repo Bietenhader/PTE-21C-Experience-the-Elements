@@ -217,6 +217,23 @@ test.describe("search (SPEC §7.4)", () => {
 });
 
 test.describe("zoom", () => {
+  test("a tip explains zooming until the visitor has zoomed once", async ({ page }) => {
+    await open(page);
+    const hint = page.getByTestId("zoom-hint");
+    await expect(hint).toBeVisible();
+    await page.getByRole("button", { name: "Zoom in" }).click();
+    await expect(hint).toHaveCount(0);
+    await page.reload();
+    await page.waitForSelector("html[data-ready]", { state: "attached" });
+    await expect(hint).toHaveCount(0);
+  });
+
+  test("the tip can be dismissed", async ({ page }) => {
+    await open(page);
+    await page.getByRole("button", { name: "Hide this tip" }).click();
+    await expect(page.getByTestId("zoom-hint")).toHaveCount(0);
+  });
+
   test("the zoom buttons change the tile size and disclose fields", async ({ page }) => {
     await open(page);
     const name = tile(page, 26).locator('[data-field="name"]');

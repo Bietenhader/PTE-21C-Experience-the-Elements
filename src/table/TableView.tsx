@@ -19,6 +19,7 @@ import {
 } from "react";
 import { openElement } from "../app/actions";
 import type { Group3, Overlay } from "../app/route";
+import { useSettings } from "../app/store";
 import type { ArrowTrend, ElementIndexEntry, LayoutFile, SourcesFile } from "../data/types";
 import type { EnergyUnit } from "../physics/units";
 import { TrendArrows } from "../trends/TrendArrows";
@@ -117,18 +118,17 @@ export function TableView(props: Props) {
   useEffect(() => hide(), [layout.id, group3, hide]);
 
   /** Zoom to width `w`, keeping the content under (clientX, clientY) where it is. */
-  const zoomTo = useCallback(
-    (w: number | "fit", clientX?: number, clientY?: number, keep?: Anchor) => {
-      const vp = viewport.current;
-      if (!vp) return;
-      const box = vp.getBoundingClientRect();
-      const x = clientX ?? box.left + box.width / 2;
-      const y = clientY ?? Math.min(box.top + box.height / 2, window.innerHeight / 2);
-      anchor.current = keep ? { ...keep, clientX: x, clientY: y } : nearestTile(vp, x, y);
-      setZoom(w === "fit" ? { mode: "fit" } : { mode: "manual", w: clampTileWidth(w, readMetrics()) });
-    },
-    [],
-  );
+  const zoomTo = useCallback((w: number | "fit", clientX?: number, clientY?: number, keep?: Anchor) => {
+    const vp = viewport.current;
+    if (!vp) return;
+    const box = vp.getBoundingClientRect();
+    const x = clientX ?? box.left + box.width / 2;
+    const y = clientY ?? Math.min(box.top + box.height / 2, window.innerHeight / 2);
+    anchor.current = keep ? { ...keep, clientX: x, clientY: y } : nearestTile(vp, x, y);
+    setZoom(w === "fit" ? { mode: "fit" } : { mode: "manual", w: clampTileWidth(w, readMetrics()) });
+    // Whoever zooms has found the feature: the tip has done its job.
+    if (w !== "fit" && !useSettings.getState().zoomHintSeen) useSettings.getState().set("zoomHintSeen", true);
+  }, []);
 
   // When the live table first paints (the prerendered copy marks "pte:table" earlier).
   useEffect(() => {
@@ -167,7 +167,11 @@ export function TableView(props: Props) {
     const centre = (t: TouchList) => {
       const [a, b] = [t[0], t[1]];
       if (!a || !b) return null;
-      return { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2, d: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY) };
+      return {
+        x: (a.clientX + b.clientX) / 2,
+        y: (a.clientY + b.clientY) / 2,
+        d: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY),
+      };
     };
     const onTouchStart = (e: TouchEvent) => {
       const c = e.touches.length === 2 ? centre(e.touches) : null;
@@ -263,22 +267,29 @@ export function TableView(props: Props) {
 
   return (
     <figure className={styles.figure}>
-      <div className={styles.zoomBar} role="toolbar" aria-label="Zoom">
-        <button type="button" onClick={() => zoomTo(currentWidth() / ZOOM_STEP)} aria-label="Zoom out">
-          −
-        </button>
-        <output className={styles.percent} aria-live="polite" title="Tile size, as a share of full size">
-          {percent}%
-        </output>
-        <button type="button" onClick={() => zoomTo(currentWidth() * ZOOM_STEP)} aria-label="Zoom in">
-          +
-        </button>
-        <button type="button" onClick={() => zoomTo("fit")} aria-pressed={zoom.mode === "fit"}>
-          Fit width
-        </button>
-        <button type="button" onClick={() => zoomTo(full)} aria-pressed={zoom.mode === "manual" && Math.abs(zoom.w - full) < 0.5}>
-          Full-size tiles
-        </button>
+      <div className={styles.zoomRow}>
+        <ZoomHint />
+        <div className={styles.zoomBar} role="toolbar" aria-label="Zoom">
+          <button type="button" onClick={() => zoomTo(currentWidth() / ZOOM_STEP)} aria-label="Zoom out">
+            −
+          </button>
+          <output className={styles.percent} aria-live="polite" title="Tile size, as a share of full size">
+            {percent}%
+          </output>
+          <button type="button" onClick={() => zoomTo(currentWidth() * ZOOM_STEP)} aria-label="Zoom in">
+            +
+          </button>
+          <button type="button" onClick={() => zoomTo("fit")} aria-pressed={zoom.mode === "fit"}>
+            Fit width
+          </button>
+          <button
+            type="button"
+            onClick={() => zoomTo(full)}
+            aria-pressed={zoom.mode === "manual" && Math.abs(zoom.w - full) < 0.5}
+          >
+            Full-size tiles
+          </button>
+        </div>
       </div>
       {/* Pointer handlers here only add hover cards, long-press peeks and zoom gestures to the
           tile buttons inside; every one of those has a keyboard route (focus, Enter, the zoom bar). */}
@@ -315,7 +326,12 @@ export function TableView(props: Props) {
             hintId={hintId}
           />
           {arrowTrend && (
-            <TrendArrows trend={arrowTrend} variant={variant} elements={elements} deps={[tileWidth, layout.id, group3, overlay?.id]} />
+            <TrendArrows
+              trend={arrowTrend}
+              variant={variant}
+              elements={elements}
+              deps={[tileWidth, layout.id, group3, overlay?.id]}
+            />
           )}
           <div ref={ghosts} className={styles.ghosts} aria-hidden="true" />
         </div>
@@ -333,6 +349,31 @@ export function TableView(props: Props) {
   );
 }
 
+/** A one-line tip until the visitor has zoomed once or dismissed it: bigger tiles show more. */
+function ZoomHint() {
+  const seen = useSettings((s) => s.zoomHintSeen);
+  if (seen) return null;
+  return (
+    <p className={styles.hint} data-testid="zoom-hint">
+      <span>
+        <b>Tip:</b>{" "}
+        <span className={styles.hintPointer}>
+          zoom in to see more of every element — Ctrl/⌘ + scroll, double-click an empty spot, or the + button.
+        </span>
+        <span className={styles.hintTouch}>pinch or double-tap an empty spot to zoom in — bigger tiles show more.</span>
+      </span>
+      <button
+        type="button"
+        className={styles.hintClose}
+        onClick={() => useSettings.getState().set("zoomHintSeen", true)}
+      >
+        <span aria-hidden="true">×</span>
+        <span className="visually-hidden">Hide this tip</span>
+      </button>
+    </p>
+  );
+}
+
 /** The tile nearest to a point, and where in that tile the point lies. */
 function nearestTile(vp: HTMLElement, x: number, y: number): Anchor {
   let best: Anchor = { z: 1, fx: 0.5, fy: 0.5, clientX: x, clientY: y };
@@ -344,7 +385,13 @@ function nearestTile(vp: HTMLElement, x: number, y: number): Anchor {
     const d = dx * dx + dy * dy;
     if (d < bestD) {
       bestD = d;
-      best = { z: Number(el.dataset.z), fx: (x - r.left) / r.width, fy: (y - r.top) / r.height, clientX: x, clientY: y };
+      best = {
+        z: Number(el.dataset.z),
+        fx: (x - r.left) / r.width,
+        fy: (y - r.top) / r.height,
+        clientX: x,
+        clientY: y,
+      };
       if (d === 0) break;
     }
   }

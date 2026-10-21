@@ -5,13 +5,69 @@
   margin: 0;
 }
 
+.zoomRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2) var(--space-4);
+  margin: 0 var(--space-2) var(--space-2);
+}
+
 .zoomBar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   gap: var(--space-1);
-  margin: 0 var(--space-2) var(--space-2);
+}
+
+/* "Zoom in to see more": worded for a mouse or for a touch screen. */
+.hint {
+  display: flex;
+  flex: 1 1 18rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.hint b {
+  color: var(--text);
+}
+
+.hintTouch {
+  display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .hintPointer {
+    display: none;
+  }
+  .hintTouch {
+    display: inline;
+  }
+}
+
+.hint .hintClose {
+  flex: none;
+  min-inline-size: 1.75rem;
+  min-block-size: 1.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.hint .hintClose:hover {
+  background: var(--surface-raised);
+  color: var(--text);
 }
 
 .zoomBar button {

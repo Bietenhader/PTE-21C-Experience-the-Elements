@@ -124,7 +124,9 @@ Every rule below is also logged per element in `tools/build-report.md`.
 - **Zoom (I1).** Pinch (touch events, so one-finger panning stays native), trackpad pinch and Ctrl/⌘+wheel,
   Safari's gesture events, double-tap or double-click on the background (tiles open the sheet instead), and a
   zoom bar: − / + (×1.25), *Fit width*, *Full-size tiles*. The point under the fingers or pointer stays still.
-  Tile width runs from 24 px (WCAG 2.5.8 minimum target) to 1.5 × full size.
+  Tile width runs from 24 px (WCAG 2.5.8 minimum target) to 1.5 × full size. Because zooming is how the
+  detail is discovered, a one-line tip beside the zoom bar says so (worded for touch or for a mouse); it is
+  remembered as seen once the visitor zooms or dismisses it (Fin, M1 review).
 - **Keyboard (SPEC §9.5).** Tab follows Z; arrow keys, Home and End move by layout cells
   (`src/table/neighbours.ts`, tested to reach all 118 tiles in every layout); `/`, `L` (Shift+L backwards)
   and `T` are single-key shortcuts, ignored while typing or with a dialog open, and **can be turned off in

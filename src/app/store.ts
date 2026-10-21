@@ -30,6 +30,8 @@ export interface Settings {
   shortcuts: boolean;
   /** The panel the sheet opens on (SPEC §9.2: the last one opened). */
   lastPanel: PanelSlug;
+  /** The "zoom in to see more" tip has done its job (dismissed, or the user has zoomed). */
+  zoomHintSeen: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -42,6 +44,7 @@ export const DEFAULT_SETTINGS: Settings = {
   temperatureUnit: "K",
   shortcuts: true,
   lastPanel: "orbitals",
+  zoomHintSeen: false,
 };
 
 const CHOICES: { [K in keyof Settings]: (v: unknown) => v is Settings[K] } = {
@@ -54,6 +57,7 @@ const CHOICES: { [K in keyof Settings]: (v: unknown) => v is Settings[K] } = {
   temperatureUnit: (v): v is TemperatureUnit => v === "K" || v === "°C",
   shortcuts: (v): v is boolean => typeof v === "boolean",
   lastPanel: (v): v is PanelSlug => typeof v === "string" && isPanelSlug(v),
+  zoomHintSeen: (v): v is boolean => typeof v === "boolean",
 };
 
 /** Keeps only saved values that are still valid choices; everything else falls back to the default. */

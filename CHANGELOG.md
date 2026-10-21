@@ -18,6 +18,8 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 - Search with keywords and numeric comparisons; hover card (hover, focus, long-press); the element sheet's
   frame (modal on desktop, bottom sheet on phones, swipeable panel strip, tabs, ←/→, deep links) with eleven
   placeholder panels; settings dialog; hash routing; keyboard navigation and shortcuts.
+- A one-line tip above the table ("zoom in to see more"), worded for mouse or touch, that goes away once
+  the visitor has zoomed or dismissed it.
 - A prerendered table in `index.html`, hydrated by the app; Lighthouse budgets in CI; a nightly end-to-end
   run on Chromium, Firefox and WebKit.
 

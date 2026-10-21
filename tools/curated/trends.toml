@@ -352,7 +352,7 @@ classes = [
   { id = "both", label = "Atoms and ions", short = "A+I", description = "Both the neutral atom and the singly charged ion have been laser-cooled.", tone = 2 },
   { id = "neutral", label = "Neutral atoms", short = "A", description = "Neutral atoms have been laser-cooled.", tone = 1 },
   { id = "ion", label = "Ions only", short = "I", description = "Singly charged ions have been laser-cooled; neutral atoms not (yet).", tone = 5 },
-  { id = "none", label = "Not laser-cooled", short = "–", description = "No laser cooling of this element is in our table.", tone = 8 },
+  { id = "none", label = "Not laser-cooled", short = "no", description = "No laser cooling of this element is in our table.", tone = 8 },
 ]
 
 [[map]]
@@ -364,7 +364,7 @@ classes = [
   { id = "defines", label = "Defines the second", short = "SI s", description = "The caesium-133 hyperfine frequency is fixed at exactly 9 192 631 770 Hz.", tone = 6 },
   { id = "srs", label = "Secondary representation", short = "SRS", description = "A transition of this element is a BIPM secondary representation of the second.", tone = 2 },
   { id = "standard", label = "Standard or candidate frequency", short = "ν", description = "On the BIPM list of recommended frequencies but not a secondary representation, or a nuclear-clock candidate.", tone = 1 },
-  { id = "none", label = "None", short = "–", description = "No clock or standard frequency of this element is listed.", tone = 8 },
+  { id = "none", label = "None", short = "no", description = "No clock or standard frequency of this element is listed.", tone = 8 },
 ]
 
 [[map]]
@@ -375,7 +375,7 @@ sources = ["bipm_frequencies", "cgpm_resolutions"]
 classes = [
   { id = "current", label = "Role in today's SI", short = "now", description = "Defines or realizes an SI unit today.", tone = 2 },
   { id = "historical", label = "Past role only", short = "past", description = "Was part of a definition or a prototype that has since been replaced.", tone = 4 },
-  { id = "none", label = "None", short = "–", description = "No role in the definition or realization of SI units.", tone = 8 },
+  { id = "none", label = "None", short = "no", description = "No role in the definition or realization of SI units.", tone = 8 },
 ]
 
 [[map]]
@@ -386,7 +386,7 @@ sources = ["marschner2012", "primary_literature"]
 classes = [
   { id = "yes", label = "Essential", short = "ess.", description = "Required by all higher plants.", tone = 3 },
   { id = "beneficial", label = "Beneficial", short = "ben.", description = "Promotes growth in some plants, or is required by some taxa only.", tone = 2 },
-  { id = "no", label = "Not essential", short = "–", description = "Not known to be essential or beneficial for plants.", tone = 8 },
+  { id = "no", label = "Not essential", short = "no", description = "Not known to be essential or beneficial for plants.", tone = 8 },
 ]
 
 [[map]]
@@ -397,7 +397,7 @@ sources = ["efsa_drv", "zoroddu2019", "primary_literature"]
 classes = [
   { id = "yes", label = "Essential", short = "ess.", description = "A dietary requirement is established.", tone = 3 },
   { id = "probable", label = "Probably essential", short = "prob.", description = "Evidence for a requirement exists but is not conclusive.", tone = 6 },
-  { id = "no", label = "Not essential", short = "–", description = "Not known to be essential for humans.", tone = 8 },
+  { id = "no", label = "Not essential", short = "no", description = "Not known to be essential for humans.", tone = 8 },
 ]
 
 [[map]]
@@ -413,5 +413,5 @@ classes = [
   { id = "neutron-star-mergers", label = "Merging neutron stars", short = "NSM", description = "Made by rapid neutron capture when neutron stars collide.", tone = 5 },
   { id = "white-dwarfs", label = "Exploding white dwarfs", short = "SN Ia", description = "Made in type Ia supernovae, the explosions of white dwarfs.", tone = 6 },
   { id = "even", label = "Two equal shares", short = "½+½", description = "Two processes made about the same share.", tone = 7 },
-  { id = "none", label = "Not given", short = "–", description = "Not in the model, or the figure cannot be read for this element.", tone = 8 },
+  { id = "none", label = "Not given", short = "?", description = "Not in the model, or the figure cannot be read for this element.", tone = 8 },
 ]

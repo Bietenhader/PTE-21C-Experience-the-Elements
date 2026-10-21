@@ -41,7 +41,7 @@ M3 and M4. What you can see now:
 | Images fetched, curated and credited | Done for 90 elements (144 photos); 4 chosen Commons photos are waiting for a download (see "Blocked") |
 | PROVENANCE.md and CREDITS.md generated | Done (`python tools/report.py`; CI checks they are current) |
 | Coverage report in the About page | Done (`#/about`) |
-| §13.1 passes, including the licence audit | Done — 110 pipeline tests pass; licence audit clean |
+| §13.1 passes, including the licence audit | Done — 111 pipeline tests pass; licence audit clean |
 | Golden values pass | Done — Fe configuration and term, Cs IE₁, U-238, Madelung set, H-1 and Cs-133 hyperfine, Rb-87 hyperfine = BIPM to 1 mHz, Rb-87 D2 Doppler/recoil limits within 0.5 % |
 | Fin has reviewed the image report and biology.toml once | **Waiting for you** |
 

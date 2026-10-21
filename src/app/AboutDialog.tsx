@@ -192,9 +192,12 @@ function Coverage() {
                 {f.count} / {total}
               </td>
               <td className={styles.reasons}>
-                {Object.entries(f.missing)
-                  .map(([reason, n]) => `${MISSING_TEXT[reason as MissingReason]?.long ?? reason}: ${n}`)
-                  .join(" · ") || (f.count === total ? "" : "reasons not recorded for this field")}
+                {[
+                  ...Object.entries(f.missing).map(
+                    ([reason, n]) => `${MISSING_TEXT[reason as MissingReason]?.long ?? reason}: ${n}`,
+                  ),
+                  ...(f.note ? [f.note] : []),
+                ].join(" · ")}
               </td>
             </tr>
           ))}

@@ -223,6 +223,21 @@ def convert(src: Path, dest_dir: Path, k: int) -> tuple[int, int]:
     return size
 
 
+HALF_LIFE_UNITS = {"Y": "years", "d": "days", "h": "hours", "m": "minutes", "s": "seconds", "ms": "milliseconds"}
+_SUP = str.maketrans("0123456789-+", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺")
+
+
+def readable_half_life(text: str) -> str:
+    """IAEA's "4.21E+6 Y" as "4.21 × 10⁶ years" for the placeholder sentence (the note keeps the original)."""
+    m = re.fullmatch(r"([\d.]+)(?:E([+-]?\d+))?\s*([A-Za-z]+)", text.strip())
+    if not m or m.group(3) not in HALF_LIFE_UNITS:
+        return text
+    number = m.group(1)
+    if m.group(2):
+        number += " × 10" + str(int(m.group(2))).translate(_SUP)
+    return f"{number} {HALF_LIFE_UNITS[m.group(3)]}"
+
+
 def placeholder(z: int, kind: str, name: str, iso: list[dict] | None) -> dict:
     text = PLACEHOLDER_TEXT[kind].format(name=name)
     out: dict = {"kind": "placeholder", "reason": kind}
@@ -240,7 +255,9 @@ def placeholder(z: int, kind: str, name: str, iso: list[dict] | None) -> dict:
                 "note": f"IAEA: t½ = {best['halfLifeText']}.",
             },
         }
-        text += f" Longest-lived isotope: {best['A']} (t½ = {best['halfLifeText']})."
+        text += (
+            f" Longest-lived isotope: {name.lower()}-{best['A']}, half-life {readable_half_life(best['halfLifeText'])}."
+        )
     out["text"] = text
     return out
 

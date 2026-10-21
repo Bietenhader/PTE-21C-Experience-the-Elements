@@ -65,6 +65,35 @@ INDEX_FIELDS = [
 ]
 
 
+# Why a field covers fewer than 118 elements, where the data records no Missing reason itself.
+COVERAGE_NOTES = {
+    "Ground configuration (NIST)": "NIST ASD stops at Z = 108; Z ≥ 109 are published predictions.",
+    "Ground term / level (NIST)": "NIST ASD stops at Z = 108; Z ≥ 109 are published predictions.",
+    "First ionization energy (NIST)": "NIST ASD stops at Z = 108; Z ≥ 109 are published predictions.",
+    "Oxidation states": "PubChem lists none for nihonium.",
+    "Photograph (not a placeholder)": "The rest show a placeholder saying why there is no photograph.",
+    "Visible spectrum of the neutral atom (NIST lines)": "NIST lists no visible line of the neutral atom.",
+    "Energy levels of the neutral atom (NIST)": "NIST ASD stops at Z = 108.",
+    "Ionization energies, all stages listed by NIST": "NIST lists none above Z = 110.",
+    "Clementi–Raimondi effective nuclear charges": "The tables cover helium to radon; hydrogen needs none.",
+    "Orbital eigenvalues (NIST SRD 141)": "NIST SRD 141 covers Z = 1–92.",
+    "Allen electronegativity": "Allen's configuration energies (Mann et al. 2000) cover these elements only.",
+    "Hyperfine structure, any isotope or ion": "Not yet compiled for the rest, or there is none (I = 0 or J = 0).",
+    "Clock or standard frequency": "Only these elements have a clock or a recommended frequency.",
+    "Laser cooling": "Only these elements have been laser-cooled.",
+    "Role in the SI": "Only these elements define or realize, or once defined, an SI unit.",
+    "Abundance in the Earth's crust": "Not estimated for the rest (radioactive or synthetic elements).",
+    "Abundance in sea water": "Not estimated for the rest: radioactive or synthetic elements, and seven rare "
+    "ones (As, Rh, Pd, Te, Os, Ir, Pt).",
+    "Solar-system abundance (log ε)": "Not tabulated: no long-lived isotope, or not measured.",
+    "Amount in the human body": "ICRP Publication 23 gives amounts for these elements only.",
+    "Crystal structure": "The Crystallography Open Database has no entry for the rest.",
+    "Annual production": "USGS gives no world production for the rest (none at all for hydrogen and oxygen).",
+    "Cosmic origin (nucleosynthesis)": "Not in the model (Kobayashi et al. 2020), or its figure cannot be read.",
+    "Biology: a known role": "No known role in plants or humans.",
+}
+
+
 def has_value(e: dict, key: str, mode: str | None) -> bool:
     v = e[key]
     if mode == "mass":
@@ -155,6 +184,9 @@ def coverage(index: dict, details: dict[int, dict]) -> dict:
         fields.append({"label": label, "count": count, "missing": reasons, "file": "index.json"})
     for label, count, src in detail_counts(details):
         fields.append({"label": label, "count": count, "missing": {}, "file": src})
+    for f in fields:
+        if f["count"] < NUM_ELEMENTS and f["label"] in COVERAGE_NOTES:
+            f["note"] = COVERAGE_NOTES[f["label"]]
     return {"schemaVersion": 1, "total": NUM_ELEMENTS, "fields": fields}
 
 

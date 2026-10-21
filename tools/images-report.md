@@ -592,7 +592,7 @@ Credits on the page (they override the site's CC BY 3.0): 43 Tc Technetium Trans
 | `s/technetium.jpg` | Technetium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Technetium-sample-cropped.jpg` | Technetium-sample-cropped.jpg | selected | pinned in images.toml |
 
-Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Technetium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: 97 (t½ = 4.21E+6 Y).
+Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Technetium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: technetium-97, half-life 4.21 × 10⁶ years.
 
 **Problem:** File:Technetium-sample-cropped.jpg: not cached and no earlier conversion — run tools/fetch_images.py
 
@@ -830,7 +830,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 | `promethium.jpg` | Promethium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Promethium Metal Buttons.png` | Promethium Metal Buttons.png | selected | pinned in images.toml |
 
-Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Promethium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: 145 (t½ = 17.7 Y).
+Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Promethium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: promethium-145, half-life 17.7 years.
 
 **Problem:** File:Promethium Metal Buttons.png: not cached and no earlier conversion — run tools/fetch_images.py
 
@@ -1141,7 +1141,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 |---|---|---|---|
 | `polonium.jpg` | Polonium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 
-Shown: placeholder: No openly licensed photograph was found: Polonium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: 209 (t½ = 124 Y).
+Shown: placeholder: No openly licensed photograph was found: Polonium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: polonium-209, half-life 124 years.
 
 ## 85 Astatine
 
@@ -1153,7 +1153,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 |---|---|---|---|
 | `astatine.jpg` | Astatine | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 
-Shown: placeholder: No photograph exists: Astatine has never been produced in a visible quantity. Longest-lived isotope: 210 (t½ = 8.1 h).
+Shown: placeholder: No photograph exists: Astatine has never been produced in a visible quantity. Longest-lived isotope: astatine-210, half-life 8.1 hours.
 
 ## 86 Radon
 
@@ -1165,7 +1165,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 |---|---|---|---|
 | `radon.jpg` | Radon | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 
-Shown: placeholder: No openly licensed photograph was found: Radon has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: 222 (t½ = 3.8235 d).
+Shown: placeholder: No openly licensed photograph was found: Radon has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: radon-222, half-life 3.8235 days.
 
 ## 87 Francium
 
@@ -1177,7 +1177,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 |---|---|---|---|
 | `francium.jpg` | Francium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 
-Shown: placeholder: No photograph exists: Francium has never been produced in a visible quantity. Longest-lived isotope: 223 (t½ = 22.00 m).
+Shown: placeholder: No photograph exists: Francium has never been produced in a visible quantity. Longest-lived isotope: francium-223, half-life 22.00 minutes.
 
 ## 88 Radium
 
@@ -1189,7 +1189,7 @@ Element page: https://images-of-elements.com/radium.php
 | `radium-glow.jpg` | Glowing radium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:US radium standard 1927.jpg` | US radium standard 1927.jpg | selected | pinned in images.toml |
 
-Shown: placeholder: No openly licensed photograph was found: Radium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: 226 (t½ = 1600 Y).
+Shown: placeholder: No openly licensed photograph was found: Radium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: radium-226, half-life 1600 years.
 
 **Problem:** File:US radium standard 1927.jpg: not cached and no earlier conversion — run tools/fetch_images.py
 
@@ -1218,7 +1218,7 @@ Credits on the page (they override the site's CC BY 3.0): 90 Th Thorium Actinoid
 | `File:Thorium bead 1.jpg` | Thorium bead 1.jpg | selected | pinned in images.toml |
 | `File:Thorium sample 0.1g.jpg` | Thorium sample 0.1g.jpg | selected | pinned in images.toml |
 
-Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Thorium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: 232 (t½ = 1.40E10 Y).
+Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Thorium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: thorium-232, half-life 1.40 × 10¹⁰ years.
 
 **Problem:** File:Thorium bead 1.jpg: not cached and no earlier conversion — run tools/fetch_images.py
 
@@ -1235,7 +1235,7 @@ Credits on the page (they override the site's CC BY 3.0): Photo: © European Uni
 | `s/protactinium-231.jpg` | Protactinium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Protactinium-233.jpg` | Protactinium-233.jpg | selected | pinned in images.toml |
 
-Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Protactinium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: 231 (t½ = 32570 Y).
+Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Protactinium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: protactinium-231, half-life 32570 years.
 
 **Problem:** File:Protactinium-233.jpg: not cached and no earlier conversion — run tools/fetch_images.py
 
@@ -1301,7 +1301,7 @@ Credits on the page (they override the site's CC BY 3.0): Photo: © European Uni
 | `s/curium-glow.jpg` | Curium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Curium hydroxide Nobel Lectures in Chemistry.png` | Curium hydroxide Nobel Lectures in Chemistry.png | selected | pinned in images.toml |
 
-Shown: placeholder: No openly licensed photograph was found: Curium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: 247 (t½ = 1.56E+7 Y).
+Shown: placeholder: No openly licensed photograph was found: Curium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: curium-247, half-life 1.56 × 10⁷ years.
 
 **Problem:** File:Curium hydroxide Nobel Lectures in Chemistry.png: not cached and no earlier conversion — run tools/fetch_images.py
 
@@ -1351,7 +1351,7 @@ Credits on the page (they override the site's CC BY 3.0): Photo: U.S. / Departme
 |---|---|---|---|
 | `s/fermium.jpg` | Fermium | selected | pinned in images.toml |
 
-Shown: placeholder: No photograph exists: Fermium has never been produced in a visible quantity. Longest-lived isotope: 257 (t½ = 100.5 d).; The Ivy Mike test (1952), in whose debris fermium was discovered — Public domain
+Shown: placeholder: No photograph exists: Fermium has never been produced in a visible quantity. Longest-lived isotope: fermium-257, half-life 100.5 days.; The Ivy Mike test (1952), in whose debris fermium was discovered — Public domain
 
 ## 101 Mendelevium
 
@@ -1363,7 +1363,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 |---|---|---|---|
 | `s/mendelevium.jpg` | Mendelevium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 
-Shown: placeholder: No photograph exists: Mendelevium has never been produced in a visible quantity. Longest-lived isotope: 258 (t½ = 51.50 d).
+Shown: placeholder: No photograph exists: Mendelevium has never been produced in a visible quantity. Longest-lived isotope: mendelevium-258, half-life 51.50 days.
 
 ## 102 Nobelium
 
@@ -1375,7 +1375,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 |---|---|---|---|
 | `nobelium.jpg` | Nobelium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 
-Shown: placeholder: No photograph exists: Nobelium has never been produced in a visible quantity. Longest-lived isotope: 259 (t½ = 58 m).
+Shown: placeholder: No photograph exists: Nobelium has never been produced in a visible quantity. Longest-lived isotope: nobelium-259, half-life 58 minutes.
 
 ## 103 Lawrencium
 
@@ -1387,7 +1387,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 |---|---|---|---|
 | `lawrencium.jpg` | Lawrencium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 
-Shown: placeholder: No photograph exists: Lawrencium has never been produced in a visible quantity. Longest-lived isotope: 266 (t½ = 11 h).
+Shown: placeholder: No photograph exists: Lawrencium has never been produced in a visible quantity. Longest-lived isotope: lawrencium-266, half-life 11 hours.
 
 ## 104 Rutherfordium
 
@@ -1399,7 +1399,7 @@ Credits on the page (they override the site's CC BY 3.0): Image © CERN.
 |---|---|---|---|
 | `s/rutherfordium.jpg` | Rutherfordium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 
-Shown: placeholder: No photograph exists: Rutherfordium has never been produced in a visible quantity. Longest-lived isotope: 267 (t½ = 1.3 h).
+Shown: placeholder: No photograph exists: Rutherfordium has never been produced in a visible quantity. Longest-lived isotope: rutherfordium-267, half-life 1.3 hours.
 
 ## 105 Dubnium
 
@@ -1409,7 +1409,7 @@ Element page: https://images-of-elements.com/dubnium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Dubnium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Dubnium has never been produced in a visible quantity. Longest-lived isotope: 268 (t½ = 28 h).
+Shown: placeholder: No photograph exists: Dubnium has never been produced in a visible quantity. Longest-lived isotope: dubnium-268, half-life 28 hours.
 
 ## 106 Seaborgium
 
@@ -1419,7 +1419,7 @@ Element page: https://images-of-elements.com/seaborgium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Seaborgium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Seaborgium has never been produced in a visible quantity. Longest-lived isotope: 269 (t½ = 1.3E2 s).
+Shown: placeholder: No photograph exists: Seaborgium has never been produced in a visible quantity. Longest-lived isotope: seaborgium-269, half-life 1.3 × 10² seconds.
 
 ## 107 Bohrium
 
@@ -1429,7 +1429,7 @@ Element page: https://images-of-elements.com/bohrium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Bohrium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Bohrium has never been produced in a visible quantity. Longest-lived isotope: 278 (t½ = 19 m).
+Shown: placeholder: No photograph exists: Bohrium has never been produced in a visible quantity. Longest-lived isotope: bohrium-278, half-life 19 minutes.
 
 ## 108 Hassium
 
@@ -1439,7 +1439,7 @@ Element page: https://images-of-elements.com/hassium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Hassium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Hassium has never been produced in a visible quantity. Longest-lived isotope: 278 (t½ = 19 m).
+Shown: placeholder: No photograph exists: Hassium has never been produced in a visible quantity. Longest-lived isotope: hassium-278, half-life 19 minutes.
 
 ## 109 Meitnerium
 
@@ -1449,7 +1449,7 @@ Element page: https://images-of-elements.com/meitnerium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Meitnerium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Meitnerium has never been produced in a visible quantity. Longest-lived isotope: 282 (t½ = 1.1 m).
+Shown: placeholder: No photograph exists: Meitnerium has never been produced in a visible quantity. Longest-lived isotope: meitnerium-282, half-life 1.1 minutes.
 
 ## 110 Darmstadtium
 
@@ -1459,7 +1459,7 @@ Element page: https://images-of-elements.com/darmstadtium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Darmstadtium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Darmstadtium has never been produced in a visible quantity. Longest-lived isotope: 282 (t½ = 1.1 m).
+Shown: placeholder: No photograph exists: Darmstadtium has never been produced in a visible quantity. Longest-lived isotope: darmstadtium-282, half-life 1.1 minutes.
 
 ## 111 Roentgenium
 
@@ -1469,7 +1469,7 @@ Element page: https://images-of-elements.com/roentgenium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Roentgenium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Roentgenium has never been produced in a visible quantity. Longest-lived isotope: 286 (t½ = 11 m).
+Shown: placeholder: No photograph exists: Roentgenium has never been produced in a visible quantity. Longest-lived isotope: roentgenium-286, half-life 11 minutes.
 
 ## 112 Copernicium
 
@@ -1479,7 +1479,7 @@ Element page: https://images-of-elements.com/copernicium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Copernicium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Copernicium has never been produced in a visible quantity. Longest-lived isotope: 286 (t½ = 11 m).
+Shown: placeholder: No photograph exists: Copernicium has never been produced in a visible quantity. Longest-lived isotope: copernicium-286, half-life 11 minutes.
 
 ## 113 Nihonium
 
@@ -1489,7 +1489,7 @@ Element page: https://images-of-elements.com/nihonium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Nihonium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Nihonium has never been produced in a visible quantity. Longest-lived isotope: 286 (t½ = 9.5 s).
+Shown: placeholder: No photograph exists: Nihonium has never been produced in a visible quantity. Longest-lived isotope: nihonium-286, half-life 9.5 seconds.
 
 ## 114 Flerovium
 
@@ -1499,7 +1499,7 @@ Element page: https://images-of-elements.com/flerovium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Flerovium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Flerovium has never been produced in a visible quantity. Longest-lived isotope: 290 (t½ = 19 s).
+Shown: placeholder: No photograph exists: Flerovium has never been produced in a visible quantity. Longest-lived isotope: flerovium-290, half-life 19 seconds.
 
 ## 115 Moscovium
 
@@ -1509,7 +1509,7 @@ Element page: https://images-of-elements.com/moscovium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Moscovium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Moscovium has never been produced in a visible quantity. Longest-lived isotope: 290 (t½ = 0.65 s).
+Shown: placeholder: No photograph exists: Moscovium has never been produced in a visible quantity. Longest-lived isotope: moscovium-290, half-life 0.65 seconds.
 
 ## 116 Livermorium
 
@@ -1519,7 +1519,7 @@ Element page: https://images-of-elements.com/livermorium.php
 |---|---|---|---|
 | `s/transactinoid.png` | Livermorium | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Livermorium has never been produced in a visible quantity. Longest-lived isotope: 293 (t½ = 95 ms).
+Shown: placeholder: No photograph exists: Livermorium has never been produced in a visible quantity. Longest-lived isotope: livermorium-293, half-life 95 milliseconds.
 
 ## 117 Tennessine
 
@@ -1529,7 +1529,7 @@ Element page: https://images-of-elements.com/tenessine.php
 |---|---|---|---|
 | `s/transactinoid.png` | Tennessine | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Tennessine has never been produced in a visible quantity. Longest-lived isotope: 294 (t½ = 51 ms).
+Shown: placeholder: No photograph exists: Tennessine has never been produced in a visible quantity. Longest-lived isotope: tennessine-294, half-life 51 milliseconds.
 
 ## 118 Oganesson
 
@@ -1539,5 +1539,5 @@ Element page: https://images-of-elements.com/oganesson.php
 |---|---|---|---|
 | `s/transactinoid.png` | Oganesson | rejected | not chosen: another photo of this element shows it better or differently |
 
-Shown: placeholder: No photograph exists: Oganesson has never been produced in a visible quantity. Longest-lived isotope: 294 (t½ = 0.58 ms).
+Shown: placeholder: No photograph exists: Oganesson has never been produced in a visible quantity. Longest-lived isotope: oganesson-294, half-life 0.58 milliseconds.
 

@@ -829,5 +829,9 @@ export interface CoverageFile {
       [k: string]: number;
     };
     file: string;
+    /**
+     * Why the rest are missing, where the data records no reason itself.
+     */
+    note?: string;
   }[];
 }

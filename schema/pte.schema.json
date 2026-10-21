@@ -2746,6 +2746,10 @@
               },
               "file": {
                 "type": "string"
+              },
+              "note": {
+                "type": "string",
+                "description": "Why the rest are missing, where the data records no reason itself."
               }
             },
             "required": [

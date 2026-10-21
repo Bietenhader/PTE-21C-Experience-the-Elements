@@ -36,6 +36,13 @@ def test_every_map_classifies_every_element(trends):
         assert set(m["values"].values()) <= {c["id"] for c in m["classes"]}, m["id"]
 
 
+def test_map_labels_never_a_bare_dash(trends):
+    """SPEC §2.2: absence is said in words, never as a bare dash."""
+    for m in trends["maps"]:
+        for c in m["classes"]:
+            assert c["short"].strip() not in {"-", "–", "—", ""}, (m["id"], c["id"])
+
+
 def test_heatmap_fields_exist(trends, elements):
     for h in trends["heatmaps"]:
         if h["field"].startswith("computed:"):

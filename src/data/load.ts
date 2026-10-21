@@ -7,7 +7,7 @@
 
 import { useEffect, useState } from "react";
 import { LAYOUT_IDS, type LayoutId } from "../app/route";
-import type { IndexFile, LayoutFile, SourcesFile, TrendsFile } from "./types";
+import type { CoverageFile, ElementDetailFile, IndexFile, LayoutFile, SourcesFile, TrendsFile } from "./types";
 
 export function dataUrl(path: string): string {
   return `${import.meta.env.BASE_URL}data/${path}`;
@@ -61,3 +61,41 @@ export function useDataset(initial: Dataset): { data: Dataset; problem: string |
   }, [initial]);
   return { data, problem };
 }
+
+// --- Files loaded on demand (SPEC §12): an element's detail file when its sheet opens, the
+// coverage table when the About page opens. Each is fetched once and kept for the session.
+
+export type Loaded<T> = { state: "loading" } | { state: "ready"; value: T } | { state: "failed"; message: string };
+
+const cache = new Map<string, Promise<unknown>>();
+
+function cachedJson<T>(path: string): Promise<T> {
+  let p = cache.get(path);
+  if (!p) {
+    p = getJson<T>(path);
+    cache.set(path, p);
+    p.catch(() => cache.delete(path)); // a failed request may be retried by the next open
+  }
+  return p as Promise<T>;
+}
+
+/** The file at `path` (relative to public/data), or null for nothing to load. */
+export function useJson<T>(path: string | null): Loaded<T> {
+  const [result, setResult] = useState<{ path: string | null; loaded: Loaded<T> }>({ path, loaded: { state: "loading" } });
+  useEffect(() => {
+    if (!path) return;
+    let live = true;
+    cachedJson<T>(path).then(
+      (value) => live && setResult({ path, loaded: { state: "ready", value } }),
+      (err: unknown) => live && setResult({ path, loaded: { state: "failed", message: err instanceof Error ? err.message : String(err) } }),
+    );
+    return () => {
+      live = false;
+    };
+  }, [path]);
+  return result.path === path ? result.loaded : { state: "loading" };
+}
+
+export const useElementDetail = (z: number | null) => useJson<ElementDetailFile>(z === null ? null : `elements/${z}.json`);
+export const useCoverage = (open: boolean) => useJson<CoverageFile>(open ? "coverage.json" : null);
+

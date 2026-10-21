@@ -278,6 +278,9 @@ test("a full session makes no request outside its own origin (SPEC §2.7)", asyn
   await tile(page, 55).click();
   await expect(page.getByTestId("sheet")).toBeVisible();
   for (let i = 0; i < 11; i++) await page.getByRole("button", { name: /^Next panel/ }).click();
+  await page.keyboard.press("Escape");
+  await page.getByRole("button", { name: "About", exact: true }).click();
+  await expect(page.getByTestId("coverage")).toBeVisible();
   await page.waitForLoadState("networkidle");
   expect(foreign).toEqual([]);
 });

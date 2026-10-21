@@ -47,10 +47,12 @@ describe("search", () => {
     expect(find("anomalous").matches).toContain(79);
   });
 
-  it("says plainly when the data does not exist yet", () => {
-    const r = find("laser-cooled");
-    expect(r.matches).toEqual([]);
-    expect(r.message).toMatch(/No data yet/);
+  it("finds the elements behind the AMO and biology flags", () => {
+    const cooled = find("laser-cooled").matches;
+    expect(cooled).toEqual(expect.arrayContaining([3, 11, 19, 37, 55, 38, 70]));
+    expect(find("laser cooled").matches).toEqual(cooled);
+    expect(find("clock").matches).toEqual(expect.arrayContaining([13, 38, 55, 70, 90]));
+    expect(find("essential").matches).toEqual(expect.arrayContaining([1, 6, 7, 8, 15, 26, 53]));
   });
 
   it("tells the user when nothing matches", () => {

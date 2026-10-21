@@ -48,7 +48,7 @@ export function applyRoute(route: Route, data: Dataset & { trends: TrendsFile })
   const panel = element ? (route.panel ?? useSettings.getState().lastPanel) : null;
   // A panel opened from a link counts as the last one opened (SPEC §9.2).
   if (element && route.panel) useSettings.getState().set("lastPanel", route.panel);
-  useView.setState({ overlay, element, panel });
+  useView.setState({ overlay, element: route.about ? null : element, panel, aboutOpen: route.about });
   writeUrl();
 }
 
@@ -68,7 +68,9 @@ export function useRouteSync(data: Dataset | null): void {
     window.addEventListener("popstate", apply);
     window.addEventListener("hashchange", apply);
     const unView = useView.subscribe((s, prev) => {
-      if (s.overlay !== prev.overlay || s.panel !== prev.panel || s.element !== prev.element) writeUrl();
+      if (s.overlay !== prev.overlay || s.panel !== prev.panel || s.element !== prev.element || s.aboutOpen !== prev.aboutOpen) {
+        writeUrl();
+      }
     });
     const unSettings = useSettings.subscribe((s, prev) => {
       if (s.layout !== prev.layout || s.group3 !== prev.group3) writeUrl();

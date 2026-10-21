@@ -123,17 +123,18 @@ const KEYWORDS: Record<string, Keyword> = {
   "laser-cooled": {
     label: "laser-cooled",
     test: (e) => e.flags.laserCooled,
-    pending: "Laser-cooling data arrives with the AMO data in milestone M2.",
   },
   "laser cooled": {
     label: "laser-cooled",
     test: (e) => e.flags.laserCooled,
-    pending: "Laser-cooling data arrives with the AMO data in milestone M2.",
   },
   clock: {
-    label: "used in atomic clocks",
+    label: "used in atomic clocks or as standard frequencies",
     test: (e) => e.flags.clockSpecies,
-    pending: "Clock data arrives with the AMO data in milestone M2.",
+  },
+  essential: {
+    label: "essential for humans or for plants",
+    test: (e) => e.flags.essentialHuman || e.flags.essentialPlant,
   },
 };
 

@@ -31,7 +31,8 @@ test("full-size tiles show every reference-table field and the hyperfine slot", 
   await expect(field(43, "weight")).toHaveText("(97)");
   await expect(field(58, "hfs")).toHaveText("no hfs (I = 0)");
   await expect(field(2, "hfs")).toHaveText("no hfs (J = 0)");
-  await expect(field(1, "hfs")).toHaveText("hfs n/m");
+  await expect(field(1, "hfs")).toHaveText(/1\u202f420\u202f405\u202f751\.768 Hz/);
+  await expect(field(7, "hfs")).toHaveText("hfs n/m");
   await expect(field(118, "hfs")).toHaveText("hfs: no stable isotope");
   await expect(field(79, "config")).toContainText("◆");
   await expect(field(26, "config")).not.toContainText("◆");

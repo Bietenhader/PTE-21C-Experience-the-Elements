@@ -43,15 +43,20 @@ describe("tile text (SPEC §7.1)", () => {
   it("marks NIST's semi-empirical and theoretical ionization energies as NIST does", () => {
     expect(el("Md").ie.text).toMatch(/^\[.*\]$/);
     expect(el("H").ie.text).toMatch(/^\(.*\)$/);
-    expect(el("Og").ie).toMatchObject({ text: "pred. only", missing: true });
+    // Z ≥ 109: NIST lists nothing; a published prediction is shown, marked †.
+    expect(el("Og").ie).toMatchObject({ missing: false });
+    expect(el("Og").ie.text).toMatch(/†$/);
+    expect(el("Og").ie.title).toMatch(/predicted/);
   });
 
   it("renders the hyperfine Missing states correctly", () => {
     expect(el("Ce").hfs.text).toBe("no hfs (I = 0)");
     expect(el("He").hfs.text).toBe("no hfs (J = 0)");
-    expect(el("H").hfs.text).toBe("hfs n/m");
+    expect(el("N").hfs.text).toBe("hfs n/m");
     expect(el("Tc").hfs.text).toBe("hfs: no stable isotope");
-    for (const sym of ["Ce", "He", "H", "Tc"]) expect(el(sym).hfs.title.length).toBeGreaterThan(30);
+    for (const sym of ["Ce", "He", "N", "Tc"]) expect(el(sym).hfs.title.length).toBeGreaterThan(30);
+    // A compiled value: hydrogen's 21 cm line.
+    expect(el("H").hfs.text).toMatch(/^1\u202f420\u202f405\u202f751\.768 Hz$/);
   });
 
   it("lists oxidation states highest first with the common ones marked", () => {

@@ -44,9 +44,13 @@ export function setQuery(query: string): void {
 let suppressUrlWrite = false;
 export const urlWritesSuppressed = () => suppressUrlWrite;
 
-export function currentHash(element = useView.getState().element, panel = useView.getState().panel): string {
+export function currentHash(
+  element = useView.getState().element,
+  panel = useView.getState().panel,
+  about = useView.getState().aboutOpen,
+): string {
   const { layout, group3 } = useSettings.getState();
-  return formatHash(element, panel, { layout, group3, overlay: useView.getState().overlay });
+  return formatHash(element, panel, { layout, group3, overlay: useView.getState().overlay }, about);
 }
 
 /** Opens an element's sheet on the remembered panel, as a new history entry (Back closes it). */
@@ -67,6 +71,23 @@ export function closeSheet(): void {
   const pushed = (history.state as { pteSheet?: boolean } | null)?.pteSheet === true;
   suppressUrlWrite = pushed;
   useView.setState({ element: null, panel: null });
+  suppressUrlWrite = false;
+  if (pushed) history.back();
+}
+
+/** Opens the About page as a new history entry (Back closes it), over the table. */
+export function openAbout(): void {
+  if (useView.getState().aboutOpen) return;
+  history.pushState({ pteAbout: true }, "", currentHash(null, null, true));
+  useView.setState({ aboutOpen: true, element: null, panel: null });
+}
+
+/** Closes the About page: steps back if we opened it, otherwise rewrites the URL to the table. */
+export function closeAbout(): void {
+  if (!useView.getState().aboutOpen) return;
+  const pushed = (history.state as { pteAbout?: boolean } | null)?.pteAbout === true;
+  suppressUrlWrite = pushed;
+  useView.setState({ aboutOpen: false });
   suppressUrlWrite = false;
   if (pushed) history.back();
 }

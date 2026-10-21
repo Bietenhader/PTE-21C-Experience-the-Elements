@@ -6,9 +6,35 @@
  */
 export type SourceId = string;
 /**
- * The units table (SPEC §5.2). Stored units are fixed per field; display conversions live in src/physics/units.ts. "" means dimensionless.
+ * The units table (SPEC §5.2). Stored units are fixed per field; display conversions live in src/physics/units.ts. "" means dimensionless. Å³ / a.u. (a₀³) for polarizabilities; s⁻¹ for Einstein coefficients; mg/kg and mg/L for abundances in rock and sea water; t/yr and USD/kg for production; ° and kPa for crystal-cell angles and the pressure of a measurement.
  */
-export type Unit = "" | "u" | "kJ/mol" | "eV" | "Hz" | "MHz" | "pm" | "K" | "g/cm³" | "s" | "μ_N" | "b";
+export type Unit =
+  | ""
+  | "u"
+  | "kJ/mol"
+  | "eV"
+  | "keV"
+  | "Hz"
+  | "MHz"
+  | "pm"
+  | "fm"
+  | "nm"
+  | "K"
+  | "g/cm³"
+  | "s"
+  | "s⁻¹"
+  | "%"
+  | "μ_N"
+  | "b"
+  | "Å³"
+  | "a.u."
+  | "mg/kg"
+  | "mg/L"
+  | "t/yr"
+  | "USD/kg"
+  | "g"
+  | "°"
+  | "kPa";
 export type QuantityFlag = "measured" | "calculated" | "interpolated" | "estimated" | "predicted";
 export type MissingReason =
   "not_measured" | "not_applicable" | "no_stable_isotope" | "predicted_only" | "source_unavailable_at_build";
@@ -29,7 +55,7 @@ export type Category =
   | "unknown";
 
 /**
- * A number with its unit and source. `unc` is the standard uncertainty in the same unit, when the source gives one; 0 means exact by definition.
+ * A number with its unit and source. `unc` is the standard uncertainty in the same unit, when the source gives one; 0 means exact by definition. `text` keeps the exact decimal where `value` (an IEEE double) would lose digits.
  */
 export interface Quantity {
   value: number;
@@ -38,6 +64,18 @@ export interface Quantity {
   source: SourceId;
   flag?: QuantityFlag;
   note?: string;
+  /**
+   * The source's own decimal text, when a double cannot hold every digit (clock frequencies).
+   */
+  text?: string;
+  /**
+   * DOI of the primary paper, where `source` is a collective key such as primary_literature.
+   */
+  doi?: string;
+  /**
+   * arXiv identifier of the paper, where it has no DOI yet.
+   */
+  arxiv?: string;
 }
 /**
  * An absent value, always with a reason (SPEC §2.2). Never 0, never a bare dash.
@@ -77,9 +115,13 @@ export interface Configuration {
   source: SourceId;
   flag?: "predicted";
   note?: string;
+  /**
+   * DOI of the primary paper, where `source` is a collective key such as primary_literature.
+   */
+  doi?: string;
 }
 /**
- * Ground level. `term` is NIST's designation, e.g. "2S1/2", "1G*4" (* = odd parity), "(1/2,1/2)0". S and L are present only for LS coupling.
+ * Ground level. `term` is NIST's designation, e.g. "2S1/2", "1G*4" (* = odd parity), "(1/2,1/2)0". S and L are present only for LS coupling. For Z ≥ 109, where NIST has no data, a relativistic prediction flagged "predicted".
  */
 export interface GroundTerm {
   term: string;
@@ -93,6 +135,12 @@ export interface GroundTerm {
   parity: "even" | "odd";
   gJ?: Q;
   source: SourceId;
+  /**
+   * DOI of the primary paper, where `source` is a collective key such as primary_literature.
+   */
+  doi?: string;
+  flag?: "predicted";
+  note?: string;
 }
 /**
  * Ground-state hyperfine splitting of the reference isotope (SPEC §5.1).
@@ -108,6 +156,9 @@ export interface OxidationStates {
   flag?: "predicted";
   note?: string;
 }
+/**
+ * A vendored photograph (SPEC §12): 800 px and 320 px WebP, resized only, with full credit (SPEC §15.4).
+ */
 export interface ImageRef {
   file: string;
   thumb: string;
@@ -118,7 +169,12 @@ export interface ImageRef {
   licence: string;
   licenceUrl: string;
   sourceUrl: string;
-  kind: "sample" | "discharge_tube" | "crystal" | "powder" | "liquid" | "historical" | "placeholder";
+  kind: "sample" | "discharge_tube" | "crystal" | "powder" | "liquid" | "historical";
+  /**
+   * The attribution line the licence requires, ready to show.
+   */
+  attribution: string;
+  source: SourceId;
 }
 /**
  * Boolean maps. A flag whose curated source table does not exist yet is omitted, never defaulted to false.
@@ -163,18 +219,38 @@ export interface ElementIndexEntry {
   hyperfineHeadline: HyperfineHeadline | Missing;
   quantumFact: string;
   /**
+   * @minItems 1
    * @maxItems 3
    */
-  images: [] | [ImageRef] | [ImageRef, ImageRef] | [ImageRef, ImageRef, ImageRef];
+  images:
+    | [ImageRef | ImagePlaceholder]
+    | [ImageRef | ImagePlaceholder, ImageRef | ImagePlaceholder]
+    | [ImageRef | ImagePlaceholder, ImageRef | ImagePlaceholder, ImageRef | ImagePlaceholder];
   flags: ElementFlags;
 }
 /**
- * Discovery year as PubChem gives it; elements known since antiquity have no year.
+ * Discovery year from tools/curated/history.toml (which resolves disagreements between PubChem and the IUPAC reports) or PubChem; elements known since antiquity have no year.
  */
 export interface Discovery {
   year?: number;
   text: string;
   source: SourceId;
+  doi?: string;
+}
+/**
+ * An honest placeholder (SPEC §12.5): no free photograph of the element exists or was found. The app draws the card; nothing is stored as an image.
+ */
+export interface ImagePlaceholder {
+  kind: "placeholder";
+  /**
+   * The sentence the card shows, values from IAEA.
+   */
+  text: string;
+  reason: "never_visible" | "no_free_photo";
+  longestLived?: {
+    A: number;
+    halfLife: Quantity;
+  };
 }
 export interface IndexFile {
   schemaVersion: 1;
@@ -335,4 +411,423 @@ export interface TrendsFile {
   arrows: ArrowTrend[];
   heatmaps: Heatmap[];
   maps: CategoricalMap[];
+}
+export interface Decay {
+  /**
+   * IAEA decay-mode code, e.g. B-, EC+B+, A, SF, IT, B-N, P.
+   */
+  mode: string;
+  branching: Q;
+}
+/**
+ * One nuclide's ground state (IAEA LiveChart, from ENSDF and AME). Bulk numbers carry the file's source.
+ */
+export interface Isotope {
+  A: number;
+  N: number;
+  stable: boolean;
+  /**
+   * Absent for stable nuclides.
+   */
+  halfLife?: Quantity | Missing;
+  /**
+   * IAEA's own value, unit and operator, e.g. '> 1.0E26 y'.
+   */
+  halfLifeText?: string;
+  /**
+   * Spin-parity as ENSDF gives it; brackets mark tentative assignments.
+   */
+  jp: string;
+  I: number | Missing;
+  decays: Decay[];
+  abundance: Q;
+  mass: Q;
+  massExcess: Q;
+  bindingPerNucleon: Q;
+  mu: Q;
+  Q: Q;
+  chargeRadius?: Q;
+  discoveryYear?: number;
+}
+/**
+ * public/data/isotopes/{Z}.json (SPEC §10.7).
+ */
+export interface IsotopesFile {
+  schemaVersion: 1;
+  Z: number;
+  symbol: string;
+  source: SourceId;
+  /**
+   * @minItems 1
+   */
+  isotopes: [Isotope, ...Isotope[]];
+}
+/**
+ * Lower or upper level of a line, as NIST classifies it; fields NIST leaves empty are omitted.
+ */
+export interface LevelLabel {
+  conf?: string;
+  term?: string;
+  J?: string;
+  eV?: number;
+}
+/**
+ * One line: wavelength in nm (medium as the file says), NIST relative intensity (comparable only within one species), Einstein coefficient A_ki in s⁻¹; lower/upper are absent for unclassified lines.
+ */
+export interface SpectralLine {
+  nm: number;
+  intensity?: number;
+  intensityText?: string;
+  Aki?: number;
+  lower?: LevelLabel;
+  upper?: LevelLabel;
+  /**
+   * 0 = neutral atom (I), 1 = singly charged ion (II).
+   */
+  charge: number;
+}
+export interface SpectrumSpecies {
+  charge: number;
+  label: string;
+  /**
+   * Lines NIST lists in the window.
+   */
+  linesInWindow: number;
+  /**
+   * Lines kept in this file: the strongest, up to the SPEC §10.8 cap.
+   */
+  kept: number;
+}
+/**
+ * public/data/spectra/{Z}.json (SPEC §10.8): visible lines of the neutral atom and the singly charged ion.
+ */
+export interface SpectraFile {
+  schemaVersion: 1;
+  Z: number;
+  symbol: string;
+  source: SourceId;
+  window: {
+    low: number;
+    high: number;
+    unit: "nm";
+    medium: "air" | "vacuum";
+  };
+  units: {
+    nm: "nm";
+    Aki: "s⁻¹";
+    eV: "eV";
+  };
+  /**
+   * Every kept line of every species, by wavelength.
+   */
+  lines: SpectralLine[];
+  species: SpectrumSpecies[];
+}
+export interface EnergyLevel {
+  eV: number;
+  unc?: number;
+  configuration: string;
+  term: string;
+  J: string;
+  parity: "even" | "odd";
+  gJ?: number;
+  /**
+   * NIST's [ ] and ( ) markers on the level energy.
+   */
+  flag?: "interpolated" | "calculated";
+}
+/**
+ * public/data/levels/{Z}.json (SPEC §10.8): the lowest levels of the neutral atom and its ionization limit.
+ */
+export interface LevelsFile {
+  schemaVersion: 1;
+  Z: number;
+  symbol: string;
+  source: SourceId;
+  units: {
+    eV: "eV";
+  };
+  levelsInDatabase: number;
+  /**
+   * @minItems 1
+   */
+  levels: [EnergyLevel, ...EnergyLevel[]];
+  ionizationLimit: Q;
+}
+/**
+ * A dated milestone with the paper that reports it.
+ */
+export interface Citation {
+  year: number;
+  doi: string;
+  source: SourceId;
+}
+export interface SourcedText {
+  text: string;
+  source: SourceId;
+  doi?: string;
+}
+export interface Zeff {
+  n: number;
+  l: number;
+  value: number;
+  source: SourceId;
+}
+/**
+ * Orbital eigenvalue of the neutral atom (NIST SRD 141), in eV.
+ */
+export interface Eigenvalue {
+  n: number;
+  l: number;
+  eV: number;
+  method: "LDA" | "LSD" | "RLDA" | "ScRLDA";
+  source: SourceId;
+}
+export interface IonizationStage {
+  stage: number;
+  eV: number;
+  unc?: number;
+  flag?: "interpolated" | "calculated";
+}
+export interface IonizationLadder {
+  source: SourceId;
+  unit: "eV";
+  stages: IonizationStage[];
+}
+export interface HyperfineRecord {
+  A: number;
+  charge: number;
+  I?: number;
+  J?: number;
+  A_MHz?: Quantity;
+  B_MHz?: Quantity;
+  splitting: Quantity;
+}
+export interface ClockRecord {
+  Z: number;
+  species: string;
+  A: number | null;
+  charge: number;
+  kind: "atomic" | "nuclear" | "molecular";
+  label: string;
+  transition: string;
+  /**
+   * A secondary representation of the second.
+   */
+  srs: boolean;
+  /**
+   * Usable for realizing the metre (BIPM).
+   */
+  metre: boolean;
+  definesSecond?: boolean;
+  frequency: Quantity;
+}
+export interface SIRole {
+  Z: number;
+  A?: number;
+  unit: string;
+  role: string;
+  from?: number;
+  to?: number;
+  text: string;
+  validFrom?: string;
+  source: SourceId;
+  doi?: string;
+  endDoi?: string;
+}
+export interface LaserCooling {
+  A: number | "natural";
+  charge: number;
+  state: "ground" | "metastable";
+  lower: string;
+  upper: string;
+  wavelength: Quantity;
+  gamma: Q;
+  repump?: Quantity;
+  firstCooled?: Citation;
+  firstMOT?: Citation;
+  BEC?: Citation;
+  DFG?: Citation;
+  source: SourceId;
+  note?: string;
+}
+export interface Biology {
+  essentialPlant: "yes" | "beneficial" | "no";
+  essentialHuman: "yes" | "probable" | "no";
+  plantClass?: "macronutrient" | "micronutrient" | "beneficial" | "structural";
+  plantRole?: SourcedText;
+  humanRole?: SourcedText;
+  note?: string;
+}
+/**
+ * public/data/elements/{Z}.json: per-panel detail, loaded when the sheet opens (SPEC §5, §10). Sections are keyed by panel slug.
+ */
+export interface ElementDetailFile {
+  schemaVersion: 1;
+  Z: number;
+  symbol: string;
+  orbitals: {
+    zeff: Zeff[];
+    eigenvalues: Eigenvalue[];
+    radii: {
+      covalent: Q;
+      vdw: Q;
+      metallic?: Q;
+      calculated?: Q;
+    };
+  };
+  em: {
+    ionizationEnergies: IonizationLadder;
+    electronAffinity: Q;
+    en: {
+      pauling: Q;
+      allen: Q;
+    };
+    polarizability?: Q;
+  };
+  probability: {
+    referenceIsotope?: number;
+  };
+  physical: {
+    abundance: {
+      crust: Q;
+      ocean: Q;
+      /**
+       * Proto-solar mass fraction (dimensionless), Lodders et al. 2025.
+       */
+      solar: Quantity | Missing;
+      /**
+       * Present-day solar-system abundance on the astronomers' log scale, A = log10(N/N_H) + 12 (dex, stored with unit "").
+       */
+      solarLogEps: Quantity | Missing;
+      body: Q;
+    };
+    crystal: CrystalStructure | Missing;
+    production: {
+      commodity?: string;
+      basis?: string;
+      edition?: string;
+      tonnesPerYear?: Quantity;
+      year?: number;
+      unitValue?: Quantity;
+      priceYear?: number;
+      viaMineral?: boolean;
+    };
+    critical: {
+      eu2023: boolean;
+      strategic?: boolean;
+      listedAs?: string;
+      source?: SourceId;
+      viaMineral?: boolean;
+      doubtful?: boolean;
+      note?: string;
+    };
+  };
+  amo: {
+    hyperfine: HyperfineRecord[];
+    clocks: ClockRecord[];
+    laserCooling: LaserCooling[];
+    siHistory: SIRole[];
+  };
+  nucleus: {
+    origin: CosmicOrigin | Missing;
+  };
+  biology: Biology;
+  history?: {
+    discovered: number | "antiquity";
+    discoveredText?: string;
+    discoverers?: string[];
+    place?: string;
+    isolated?: number;
+    isolatedBy?: string[];
+    nameOrigin: string;
+    symbolNote?: string;
+    source: SourceId;
+    doi?: string;
+    note?: string;
+  };
+  /**
+   * Our own 60–120-word text (tools/curated/prose/{Z}.md): what it is, one surprising fact, one quantum fact.
+   */
+  prose?: {
+    text: string;
+    /**
+     * @minItems 1
+     */
+    sources: [SourceId, ...SourceId[]];
+  };
+}
+/**
+ * Room-temperature crystal structure from one COD entry (SPEC §10.4); gases and liquids as low-temperature solids, flagged.
+ */
+export interface CrystalStructure {
+  allotrope?: string;
+  structure: string;
+  lattice: "cubic" | "tetragonal" | "orthorhombic" | "hexagonal" | "trigonal" | "monoclinic" | "triclinic";
+  spaceGroup: string;
+  spaceGroupNumber: number;
+  pearson: string;
+  atomsPerCell?: number;
+  a: Quantity;
+  b?: Quantity;
+  c?: Quantity;
+  alpha: Quantity;
+  beta: Quantity;
+  gamma: Quantity;
+  cellAxes?: string;
+  temperature: Q;
+  pressure?: Quantity;
+  lowTemperatureSolid?: boolean;
+  doubtful?: boolean;
+  codId: number;
+  doi?: string;
+  reference: string;
+  source: SourceId;
+  note?: string;
+}
+/**
+ * Share of the element made by each process when the Solar System formed (SPEC §10.7), read off Fig. 39 of Kobayashi, Karakas & Lugaro (2020): an approximation, flagged as such. Keys with zero share are omitted; the shares sum to 1.
+ */
+export interface CosmicOrigin {
+  fractions: {
+    bigBang?: number;
+    cosmicRays?: number;
+    agb?: number;
+    massiveStars?: number;
+    neutronStarMergers?: number;
+    whiteDwarfs?: number;
+  };
+  flag: "estimated" | "paper_statement";
+  source: SourceId;
+  note: string;
+}
+/**
+ * public/data/metrology.json: every clock and standard frequency, every SI role, and the timeline of the second (SPEC §10.6).
+ */
+export interface MetrologyFile {
+  schemaVersion: 1;
+  clocks: ClockRecord[];
+  siHistory: SIRole[];
+  timeline: {
+    year: number;
+    text: string;
+    source: SourceId;
+    doi?: string;
+    arxiv?: string;
+  }[];
+}
+/**
+ * Per-field coverage over the 118 elements (SPEC §6.4, §13.1), written by tools/report.py for the About page.
+ */
+export interface CoverageFile {
+  schemaVersion: 1;
+  total: number;
+  fields: {
+    label: string;
+    count: number;
+    missing: {
+      [k: string]: number;
+    };
+    file: string;
+  }[];
 }

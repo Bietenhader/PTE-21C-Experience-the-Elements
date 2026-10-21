@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 // App shell: header, controls, the table in its zoom viewport, the trend legend, the legend,
-// footer, the element sheet and the settings dialog.
+// footer, the element sheet, the settings dialog and the About page.
 
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { type Dataset, useDataset } from "../data/load";
@@ -11,6 +11,8 @@ import { Legend } from "../table/Legend";
 import { TableView } from "../table/TableView";
 import { TrendLegend } from "../trends/TrendLegend";
 import { useOverlay } from "../trends/useOverlay";
+import { AboutDialog } from "./AboutDialog";
+import { openAbout } from "./actions";
 import styles from "./App.module.css";
 import { useReducedMotion } from "./motion";
 import { SettingsDialog } from "./SettingsDialog";
@@ -76,17 +78,22 @@ export function App({ boot }: { boot: Boot }) {
           </h1>
           <p className={styles.subtitle}>A fresh perspective on the Periodic Table of the Elements</p>
         </div>
-        <button type="button" className={styles.settings} onClick={() => useView.setState({ settingsOpen: true })}>
-          Settings
-        </button>
+        <div className={styles.headerButtons}>
+          <button type="button" className={styles.settings} onClick={openAbout}>
+            About
+          </button>
+          <button type="button" className={styles.settings} onClick={() => useView.setState({ settingsOpen: true })}>
+            Settings
+          </button>
+        </div>
       </header>
 
       <Toolbar trends={trends} symbols={symbols} search={result} searchRef={searchRef} trendRef={trendRef} />
 
       <main className={styles.main}>
         <p className={styles.preview} role="note">
-          Preview (milestone M1): layouts, trends, search, hover cards and the element sheet's frame work. Photographs,
-          the panels' contents and the remaining data arrive in milestones M2–M4.
+          Preview (milestone M2): layouts, trends, search, photographs and all the data for version 0.1 are in. The
+          eleven panels of the element sheet get their contents in milestones M3–M4.
         </p>
         {problem && (
           <p className={styles.status} role="alert">
@@ -115,6 +122,7 @@ export function App({ boot }: { boot: Boot }) {
               energyUnit={energy}
             />
             <ElementSheet elements={elements} sources={data.sources.sources} />
+            <AboutDialog elements={elements} sources={data.sources.sources} />
           </>
         )}
         <SettingsDialog />
@@ -122,9 +130,13 @@ export function App({ boot }: { boot: Boot }) {
 
       <footer className={styles.footer}>
         <p>
-          Every number has a source: PubChem, the NIST Atomic Spectra Database, NIST Atomic Weights and Isotopic
-          Compositions, IUPAC CIAAW, the IAEA LiveChart of Nuclides and CODATA 2022. See{" "}
-          <a href={`${REPO}/blob/main/PROVENANCE.md`}>PROVENANCE.md</a> for versions, licences and retrieval dates.
+          Every number has a source — among them PubChem, the NIST Atomic Spectra Database, the IAEA LiveChart of
+          Nuclides, CODATA 2022, the BIPM and the Crystallography Open Database. The{" "}
+          <button type="button" className={styles.linkButton} onClick={openAbout}>
+            About page
+          </button>{" "}
+          lists them all with licences and retrieval dates, and shows how complete the data is; see also{" "}
+          <a href={`${REPO}/blob/main/PROVENANCE.md`}>PROVENANCE.md</a>.
         </p>
         <p>
           Privacy: no cookies, no analytics, and no requests to any other site — everything this page shows is

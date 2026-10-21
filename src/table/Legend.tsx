@@ -131,7 +131,8 @@ export function Legend({ elements, variant, sources, energyUnit = "kJ/mol", keyS
           </li>
           <li>
             Ionization energies in <b>[ ]</b> are semi-empirical (interpolated or extrapolated) and in <b>( )</b>{" "}
-            theoretical, exactly as NIST marks them.
+            theoretical, exactly as NIST marks them. <b className="system-glyph">†</b> marks a published prediction for
+            the heaviest elements (Z ≥ 109), which NIST does not list; hover it for the paper.
           </li>
           <li>
             Missing values are never shown as 0 or a dash: <i>n/m</i> not measured, <i>n/a</i> not applicable,{" "}

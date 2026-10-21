@@ -95,7 +95,9 @@ function ionization(e: ElementIndexEntry, sources: Sources, unit: EnergyUnit): F
   if (isMissing(q)) return missingField(q, "First ionization energy");
   const ev = kjPerMolToEv(q.value);
   const v = unit === "eV" ? tileNumber(ev, 2) : tileNumber(q.value, 1);
-  const text = q.flag === "interpolated" ? `[${v}]` : q.flag === "calculated" ? `(${v})` : v;
+  // NIST's own markers for semi-empirical [ ] and theoretical ( ) values; † for a published
+  // prediction where NIST has none (Z ≥ 109), as on predicted configurations.
+  const text = q.flag === "interpolated" ? `[${v}]` : q.flag === "calculated" ? `(${v})` : q.flag === "predicted" ? `${v}†` : v;
   return {
     text,
     title:

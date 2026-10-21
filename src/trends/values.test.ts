@@ -48,9 +48,13 @@ describe("heat values", () => {
   });
 
   it("keeps NIST's markers for semi-empirical and theoretical values", () => {
-    const flagged = elements.map((e) => heatValue(e, heat("ie1"), kj)).filter((v) => v.ok && v.flag && v.flag !== "measured");
-    expect(flagged.length).toBeGreaterThan(0);
-    for (const v of flagged) expect(v.text).toMatch(/^[[(].*[\])]$/);
+    const values = elements.map((e) => heatValue(e, heat("ie1"), kj));
+    const nist = values.filter((v) => v.ok && (v.flag === "interpolated" || v.flag === "calculated"));
+    expect(nist.length).toBeGreaterThan(0);
+    for (const v of nist) expect(v.text).toMatch(/^[[(].*[\])]$/);
+    const predicted = values.filter((v) => v.ok && v.flag === "predicted");
+    expect(predicted.length).toBe(10); // Mt–Og: published calculations, not in NIST
+    for (const v of predicted) expect(v.text).toMatch(/†$/);
   });
 
   it("renders Missing with its reason, never as zero", () => {

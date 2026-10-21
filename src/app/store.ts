@@ -130,6 +130,7 @@ export interface View {
   query: string;
   zoom: Zoom;
   settingsOpen: boolean;
+  aboutOpen: boolean;
 }
 
 export const useView = create<View>()(() => ({
@@ -139,4 +140,5 @@ export const useView = create<View>()(() => ({
   query: "",
   zoom: { mode: "fit" },
   settingsOpen: false,
+  aboutOpen: false,
 }));

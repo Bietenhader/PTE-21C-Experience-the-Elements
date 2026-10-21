@@ -98,6 +98,7 @@ export function heatValue(e: ElementIndexEntry, h: Heatmap, units: Units): HeatV
   let text = formatValue(value, unit as Unit | EnergyUnit | TemperatureUnit);
   if (q.flag === "interpolated") text = `[${text}]`;
   if (q.flag === "calculated" && !h.field.startsWith("computed:")) text = `(${text})`;
+  if (q.flag === "predicted") text = `${text}†`;
   const flagWord = q.flag && q.flag !== "measured" ? `, ${q.flag}` : "";
   const detail = `${formatLong(value, unit)}${flagWord}${q.note ? ` (${q.note})` : ""}`;
   return { ok: true, value, unit, flag: q.flag, source: q.source, note: q.note, text, detail, long: `${h.label}: ${detail}` };

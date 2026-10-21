@@ -130,6 +130,15 @@
   margin: 0;
 }
 
+.prose p + p {
+  margin-block-start: var(--space-1);
+}
+
+.consulted {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
 .nav {
   display: flex;
   align-items: center;

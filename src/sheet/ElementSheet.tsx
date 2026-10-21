@@ -10,6 +10,7 @@ import { closeSheet, setPanel } from "../app/actions";
 import { useReducedMotion } from "../app/motion";
 import { useView } from "../app/store";
 import { isTyping } from "../app/useShortcuts";
+import { useElementDetail } from "../data/load";
 import type { ElementIndexEntry, SourcesFile } from "../data/types";
 import { PANELS } from "../panels/registry";
 import type { PanelSlug } from "../panels/slugs";
@@ -68,6 +69,32 @@ export function ElementSheet({ elements, sources }: Props) {
     >
       {shown && <SheetBody key={shown.Z} element={shown} panel={panel} sources={sources} onDismiss={() => dialog.current?.close()} />}
     </dialog>
+  );
+}
+
+/** Our own short text from public/data/elements/{Z}.json, with the sources consulted for it. */
+function Description({ z, sources }: { z: number; sources: SourcesFile["sources"] }) {
+  const detail = useElementDetail(z);
+  if (detail.state === "loading") return <p className={styles.muted}>Loading the description…</p>;
+  if (detail.state === "failed") {
+    return <p className={styles.muted}>The description could not be loaded ({detail.message}).</p>;
+  }
+  const prose = detail.value.prose;
+  if (!prose) return null;
+  return (
+    <p data-testid="sheet-prose">
+      {prose.text}{" "}
+      <span className={styles.consulted}>
+        Sources consulted:{" "}
+        {prose.sources.map((id, i) => (
+          <span key={id}>
+            {i > 0 && ", "}
+            <SourceChip id={id} sources={sources} />
+          </span>
+        ))}
+        .
+      </span>
+    </p>
   );
 }
 
@@ -191,10 +218,10 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
           <ElementImages element={e} size="large" max={3} />
         </div>
         <div className={styles.prose}>
+          <Description z={e.Z} sources={sources} />
           <p>{e.quantumFact}</p>
           <p className={styles.muted}>
-            Discovered: {e.discovery.text} <SourceChip id={e.discovery.source} sources={sources} />. A short description
-            in our own words arrives with the panels (milestones M3–M4).
+            Discovered: {e.discovery.text} <SourceChip id={e.discovery.source} sources={sources} />.
           </p>
         </div>
       </header>

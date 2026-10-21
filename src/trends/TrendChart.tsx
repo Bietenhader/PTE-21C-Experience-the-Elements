@@ -72,8 +72,8 @@ export default function TrendChart({ heatmap: h, elements, units, sources }: Pro
     <div className={styles.chart} ref={box}>
       <p id={captionId} className={styles.caption}>
         Plotted: {yLabel} against atomic number Z (top) and against group (bottom; “f” is the f-block)
-        {log ? ", logarithmic axis" : ""}. Data: {sourceNames}. Hollow points are semi-empirical or theoretical
-        values. {gaps > 0 ? `${gaps} elements have no value and are left out of the lines.` : "Every element has a value."}
+        {log ? ", logarithmic axis" : ""}. Data: {sourceNames}. Hollow points are semi-empirical, theoretical
+        or predicted values. {gaps > 0 ? `${gaps} elements have no value and are left out of the lines.` : "Every element has a value."}
       </p>
       <svg width={width} height={H} role="img" aria-labelledby={captionId} data-testid="trend-chart-z">
         {axisY}

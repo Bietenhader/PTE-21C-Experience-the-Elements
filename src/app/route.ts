@@ -6,6 +6,7 @@
 //   #/?layout=janet&g3=la&trend=ie1&view=heat   table state
 //   #/Cs                                 Caesium's sheet at the remembered panel
 //   #/Cs/amo                             Caesium's sheet on the AMO panel
+//   #/about                              the About page (coverage, sources, privacy)
 //
 // Table state may follow any route (#/Cs/amo?layout=janet), so a shared link reproduces the table
 // behind the sheet too. Only values that differ from the defaults are written.
@@ -32,6 +33,8 @@ export interface Route {
   /** Trend id; `view` may be absent when the id names only one kind of overlay. */
   trend: string | null;
   view: OverlayKind | null;
+  /** The About page is open (#/about). */
+  about: boolean;
 }
 
 export const DEFAULT_LAYOUT: LayoutId = "standard18";
@@ -41,7 +44,15 @@ const SYMBOL = /^[A-Za-z]{1,3}$/;
 const TREND_ID = /^[a-z0-9-]{1,40}$/;
 const VIEWS: Record<string, OverlayKind> = { arrows: "arrows", heat: "heat", map: "map" };
 
-export const EMPTY_ROUTE: Route = { element: null, panel: null, layout: null, group3: null, trend: null, view: null };
+export const EMPTY_ROUTE: Route = {
+  element: null,
+  panel: null,
+  layout: null,
+  group3: null,
+  trend: null,
+  view: null,
+  about: false,
+};
 
 function canonicalSymbol(s: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
@@ -55,7 +66,9 @@ export function parseHash(hash: string): Route {
   const route: Route = { ...EMPTY_ROUTE };
 
   const [symbol, panel] = parts;
-  if (symbol && SYMBOL.test(symbol)) {
+  if (symbol?.toLowerCase() === "about" && !panel) {
+    route.about = true;
+  } else if (symbol && SYMBOL.test(symbol)) {
     route.element = canonicalSymbol(symbol);
     if (panel && isPanelSlug(panel.toLowerCase())) route.panel = panel.toLowerCase() as PanelSlug;
   }
@@ -87,10 +100,14 @@ export interface TableState {
   overlay: Overlay | null;
 }
 
-/** The canonical hash for a sheet (or the table, when `element` is null) over the given table state. */
-export function formatHash(element: string | null, panel: PanelSlug | null, table: TableState): string {
+/**
+ * The canonical hash for a sheet (or the table, when `element` is null, or the About page) over the
+ * given table state.
+ */
+export function formatHash(element: string | null, panel: PanelSlug | null, table: TableState, about = false): string {
   let path = "#/";
-  if (element) path += panel ? `${element}/${panel}` : element;
+  if (about) path += "about";
+  else if (element) path += panel ? `${element}/${panel}` : element;
   const q = new URLSearchParams();
   if (table.layout !== DEFAULT_LAYOUT) q.set("layout", table.layout);
   if (table.group3 !== DEFAULT_GROUP3) q.set("g3", table.group3);

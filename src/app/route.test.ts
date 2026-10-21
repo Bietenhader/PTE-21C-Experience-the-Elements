@@ -40,6 +40,15 @@ describe("parseHash", () => {
   });
 });
 
+describe("the About page", () => {
+  it("has its own route, which is not an element symbol", () => {
+    expect(parseHash("#/about")).toEqual({ ...EMPTY_ROUTE, about: true });
+    expect(parseHash("#/About?layout=adomah")).toEqual({ ...EMPTY_ROUTE, about: true, layout: "adomah" });
+    expect(parseHash("#/about/amo")).toEqual(EMPTY_ROUTE);
+    expect(formatHash("Cs", "amo", table, true)).toBe("#/about");
+  });
+});
+
 describe("formatHash", () => {
   it("writes only what differs from the defaults", () => {
     expect(formatHash(null, null, table)).toBe("#/");
@@ -51,13 +60,18 @@ describe("formatHash", () => {
   });
 
   it("round-trips", () => {
-    for (const hash of ["#/", "#/Fe/orbitals", "#/U/nucleus?layout=long32", "#/?g3=la&trend=madelung&view=map"]) {
+    for (const hash of ["#/", "#/Fe/orbitals", "#/U/nucleus?layout=long32", "#/?g3=la&trend=madelung&view=map", "#/about?layout=janet"]) {
       const r = parseHash(hash);
-      const back = formatHash(r.element, r.panel, {
-        layout: r.layout ?? "standard18",
-        group3: r.group3 ?? "lu",
-        overlay: r.trend && r.view ? { id: r.trend, kind: r.view } : null,
-      });
+      const back = formatHash(
+        r.element,
+        r.panel,
+        {
+          layout: r.layout ?? "standard18",
+          group3: r.group3 ?? "lu",
+          overlay: r.trend && r.view ? { id: r.trend, kind: r.view } : null,
+        },
+        r.about,
+      );
       expect(back).toBe(hash);
     }
   });

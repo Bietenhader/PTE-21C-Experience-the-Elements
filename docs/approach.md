@@ -198,6 +198,13 @@ Every rule below is also logged per element in `tools/build-report.md`.
   come before 1.5 s with Lighthouse's mobile throttling *applied* (slow 4G, 4× CPU), not merely simulated.
   Measured in the cloud environment: score 96 (94 with a 6× CPU slowdown standing in for a slower CI
   machine), 103 kB, 20 kB, about 1.2 s.
+- **Calibrated CPU slowdown (since M2).** Lighthouse slows the CPU of whatever machine it runs on by a
+  fixed 4×, so GitHub's shared runners — some much slower than others — imitated different phones from run
+  to run: the same M1 commit scored 95 on one run and 86 on the next. Following Lighthouse's throttling
+  guide, `tools/lighthouse.mjs` now scales the slowdown by the machine's benchmark index (4× at the ≈ 2400
+  of the machine the budgets were set on, less on a slower machine, never more than 4×) and takes the
+  median of three runs. Both numbers are printed with the result. Measured side by side at a 10× slowdown,
+  M1 and M2 score the same (86–89 and 88–89), so M2's data did not slow the page.
 - **Cross-browser.** Pushes and pull requests run the end-to-end tests on Chromium (desktop and an Android
   phone); the nightly workflow adds Firefox, WebKit and an iPhone. Swipe, pinch and long-press tests drive
   real touch events through the DevTools protocol and therefore run on Chromium only.

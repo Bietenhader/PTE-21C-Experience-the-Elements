@@ -12,7 +12,8 @@
    "label": "Ground configuration (NIST)",
    "count": 108,
    "missing": {},
-   "file": "index.json"
+   "file": "index.json",
+   "note": "NIST ASD stops at Z = 108; Z ≥ 109 are published predictions."
   },
   {
    "label": "Ground configuration (NIST or published prediction)",
@@ -24,7 +25,8 @@
    "label": "Ground term / level (NIST)",
    "count": 108,
    "missing": {},
-   "file": "index.json"
+   "file": "index.json",
+   "note": "NIST ASD stops at Z = 108; Z ≥ 109 are published predictions."
   },
   {
    "label": "Ground term / level (NIST or published prediction)",
@@ -36,7 +38,8 @@
    "label": "First ionization energy (NIST)",
    "count": 108,
    "missing": {},
-   "file": "index.json"
+   "file": "index.json",
+   "note": "NIST ASD stops at Z = 108; Z ≥ 109 are published predictions."
   },
   {
    "label": "First ionization energy (NIST or published prediction)",
@@ -56,7 +59,8 @@
    "label": "Oxidation states",
    "count": 117,
    "missing": {},
-   "file": "index.json"
+   "file": "index.json",
+   "note": "PubChem lists none for nihonium."
   },
   {
    "label": "Ground-state hyperfine headline",
@@ -134,7 +138,8 @@
    "label": "Photograph (not a placeholder)",
    "count": 90,
    "missing": {},
-   "file": "index.json"
+   "file": "index.json",
+   "note": "The rest show a placeholder saying why there is no photograph."
   },
   {
    "label": "Photograph or honest placeholder",
@@ -152,109 +157,127 @@
    "label": "Visible spectrum of the neutral atom (NIST lines)",
    "count": 98,
    "missing": {},
-   "file": "nist_lines"
+   "file": "nist_lines",
+   "note": "NIST lists no visible line of the neutral atom."
   },
   {
    "label": "Energy levels of the neutral atom (NIST)",
    "count": 108,
    "missing": {},
-   "file": "nist_levels"
+   "file": "nist_levels",
+   "note": "NIST ASD stops at Z = 108."
   },
   {
    "label": "Ionization energies, all stages listed by NIST",
    "count": 110,
    "missing": {},
-   "file": "nist_gsie"
+   "file": "nist_gsie",
+   "note": "NIST lists none above Z = 110."
   },
   {
    "label": "Clementi–Raimondi effective nuclear charges",
    "count": 85,
    "missing": {},
-   "file": "clementi_zeff"
+   "file": "clementi_zeff",
+   "note": "The tables cover helium to radon; hydrogen needs none."
   },
   {
    "label": "Orbital eigenvalues (NIST SRD 141)",
    "count": 92,
    "missing": {},
-   "file": "nist_srd141"
+   "file": "nist_srd141",
+   "note": "NIST SRD 141 covers Z = 1–92."
   },
   {
    "label": "Allen electronegativity",
    "count": 71,
    "missing": {},
-   "file": "allen_en"
+   "file": "allen_en",
+   "note": "Allen's configuration energies (Mann et al. 2000) cover these elements only."
   },
   {
    "label": "Hyperfine structure, any isotope or ion",
    "count": 27,
    "missing": {},
-   "file": "hyperfine.toml"
+   "file": "hyperfine.toml",
+   "note": "Not yet compiled for the rest, or there is none (I = 0 or J = 0)."
   },
   {
    "label": "Clock or standard frequency",
    "count": 13,
    "missing": {},
-   "file": "bipm_frequencies, clocks.toml"
+   "file": "bipm_frequencies, clocks.toml",
+   "note": "Only these elements have a clock or a recommended frequency."
   },
   {
    "label": "Laser cooling",
    "count": 29,
    "missing": {},
-   "file": "lasercooling.toml"
+   "file": "lasercooling.toml",
+   "note": "Only these elements have been laser-cooled."
   },
   {
    "label": "Role in the SI",
    "count": 20,
    "missing": {},
-   "file": "si_history.toml, bipm_frequencies"
+   "file": "si_history.toml, bipm_frequencies",
+   "note": "Only these elements define or realize, or once defined, an SI unit."
   },
   {
    "label": "Abundance in the Earth's crust",
    "count": 88,
    "missing": {},
-   "file": "pubchem"
+   "file": "pubchem",
+   "note": "Not estimated for the rest (radioactive or synthetic elements)."
   },
   {
    "label": "Abundance in sea water",
    "count": 80,
    "missing": {},
-   "file": "pubchem"
+   "file": "pubchem",
+   "note": "Not estimated for the rest: radioactive or synthetic elements, and seven rare ones (As, Rh, Pd, Te, Os, Ir, Pt)."
   },
   {
    "label": "Solar-system abundance (log ε)",
    "count": 83,
    "missing": {},
-   "file": "lodders2025"
+   "file": "lodders2025",
+   "note": "Not tabulated: no long-lived isotope, or not measured."
   },
   {
    "label": "Amount in the human body",
    "count": 30,
    "missing": {},
-   "file": "icrp23"
+   "file": "icrp23",
+   "note": "ICRP Publication 23 gives amounts for these elements only."
   },
   {
    "label": "Crystal structure",
    "count": 91,
    "missing": {},
-   "file": "cod"
+   "file": "cod",
+   "note": "The Crystallography Open Database has no entry for the rest."
   },
   {
    "label": "Annual production",
    "count": 76,
    "missing": {},
-   "file": "production.toml"
+   "file": "production.toml",
+   "note": "USGS gives no world production for the rest (none at all for hydrogen and oxygen)."
   },
   {
    "label": "Cosmic origin (nucleosynthesis)",
    "count": 80,
    "missing": {},
-   "file": "kobayashi2020"
+   "file": "kobayashi2020",
+   "note": "Not in the model (Kobayashi et al. 2020), or its figure cannot be read."
   },
   {
    "label": "Biology: a known role",
    "count": 26,
    "missing": {},
-   "file": "biology.toml"
+   "file": "biology.toml",
+   "note": "No known role in plants or humans."
   },
   {
    "label": "History: discovery",

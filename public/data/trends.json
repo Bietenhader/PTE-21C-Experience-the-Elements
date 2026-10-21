@@ -1717,7 +1717,7 @@
     {
      "id": "none",
      "label": "Not laser-cooled",
-     "short": "–",
+     "short": "no",
      "description": "No laser cooling of this element is in our table.",
      "tone": 8
     }
@@ -1877,7 +1877,7 @@
     {
      "id": "none",
      "label": "None",
-     "short": "–",
+     "short": "no",
      "description": "No clock or standard frequency of this element is listed.",
      "tone": 8
     }
@@ -2029,7 +2029,7 @@
     {
      "id": "none",
      "label": "None",
-     "short": "–",
+     "short": "no",
      "description": "No role in the definition or realization of SI units.",
      "tone": 8
     }
@@ -2181,7 +2181,7 @@
     {
      "id": "no",
      "label": "Not essential",
-     "short": "–",
+     "short": "no",
      "description": "Not known to be essential or beneficial for plants.",
      "tone": 8
     }
@@ -2334,7 +2334,7 @@
     {
      "id": "no",
      "label": "Not essential",
-     "short": "–",
+     "short": "no",
      "description": "Not known to be essential for humans.",
      "tone": 8
     }
@@ -2520,7 +2520,7 @@
     {
      "id": "none",
      "label": "Not given",
-     "short": "–",
+     "short": "?",
      "description": "Not in the model, or the figure cannot be read for this element.",
      "tone": 8
     }

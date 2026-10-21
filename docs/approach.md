@@ -178,13 +178,22 @@ Every rule below is also logged per element in `tools/build-report.md`.
 - **Loading order.** `index.json`, `sources.json` and the active layout are preloaded; the script and those
   preloads are `fetchpriority="low"` so they do not compete with the prerendered page's fonts. The other three
   layouts and `trends.json` load after the first render.
+- **Fonts** use `font-display: optional`, and the three faces the first screen needs (Plex Sans, Alegreya
+  Sans 400 and 800) are preloaded. A web font that arrives late is skipped for that visit instead of
+  swapped in, because each swap re-lays out all 118 tiles — on a slow phone that is a long, blocking task.
+  On a normal connection the fonts arrive within the short wait and are used; afterwards they come from the
+  cache.
+- **The first measurement is a transition.** Until the table's width has been measured it fits to width in
+  CSS, which looks identical, so the re-render with the measured width runs as an interruptible
+  `startTransition` update instead of blocking the first frame.
 - **Below the fold** the legend uses `content-visibility: auto`.
 - **Budgets** are checked by `tools/lighthouse.mjs` (`npm run lighthouse`, a CI job): the build is served
   gzip-compressed under the Pages path, like GitHub Pages; Lighthouse's mobile profile must score ≥ 90;
   the JavaScript of the initial load must be ≤ 300 kB gzip; `index.json` ≤ 150 kB gzip; and "first table
   paint" — the first frame after the prerendered table is parsed, recorded as the `pte:table` mark — must
   come before 1.5 s with Lighthouse's mobile throttling *applied* (slow 4G, 4× CPU), not merely simulated.
-  Measured in the cloud environment: score 95–96, 103 kB, 20 kB, 1.23 s.
+  Measured in the cloud environment: score 96 (94 with a 6× CPU slowdown standing in for a slower CI
+  machine), 103 kB, 20 kB, about 1.2 s.
 - **Cross-browser.** Pushes and pull requests run the end-to-end tests on Chromium (desktop and an Android
   phone); the nightly workflow adds Firefox, WebKit and an iPhone. Swipe, pinch and long-press tests drive
   real touch events through the DevTools protocol and therefore run on Chromium only.

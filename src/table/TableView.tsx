@@ -13,6 +13,7 @@ import {
   useId,
   useLayoutEffect,
   useMemo,
+  startTransition,
   useRef,
   useState,
 } from "react";
@@ -78,12 +79,17 @@ export function TableView(props: Props) {
   useLayoutEffect(() => {
     const el = viewport.current;
     if (!el) return;
+    // A transition: until it lands the table fits to width in CSS and looks the same, so the
+    // re-render need not block the first paint or the main thread (SPEC §13.4 budgets).
     const update = () => {
       const cs = getComputedStyle(el);
-      setAvailable(el.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight));
-      setMetrics(readMetrics());
+      const width = el.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      const m = readMetrics();
+      startTransition(() => {
+        setAvailable(width);
+        setMetrics(m);
+      });
     };
-    update();
     const ro = new ResizeObserver(update);
     ro.observe(el);
     return () => ro.disconnect();
@@ -96,10 +102,15 @@ export function TableView(props: Props) {
   const measured = available > 0;
   const tileWidth = zoom.mode === "fit" ? fit : zoom.w;
 
-  const tileRef = useRef(tileWidth);
+  // The width a zoom starts from: the state once measured, the tiles themselves before that.
+  const tileRef = useRef<number | null>(null);
   useLayoutEffect(() => {
-    tileRef.current = tileWidth;
-  }, [tileWidth]);
+    tileRef.current = measured || zoom.mode === "manual" ? tileWidth : null;
+  }, [tileWidth, measured, zoom.mode]);
+  const currentWidth = useCallback(
+    () => tileRef.current ?? viewport.current?.querySelector("[data-z]")?.getBoundingClientRect().width ?? 24,
+    [],
+  );
 
   const hover = useHoverCard(sheetOpen);
   const { hide } = hover;
@@ -151,7 +162,7 @@ export function TableView(props: Props) {
       e.preventDefault();
       const dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaMode === 2 ? e.deltaY * 400 : e.deltaY;
       const factor = Math.min(2, Math.max(0.5, Math.exp(-dy / 200)));
-      zoomTo(tileRef.current * factor, e.clientX, e.clientY);
+      zoomTo(currentWidth() * factor, e.clientX, e.clientY);
     };
     const centre = (t: TouchList) => {
       const [a, b] = [t[0], t[1]];
@@ -161,7 +172,7 @@ export function TableView(props: Props) {
     const onTouchStart = (e: TouchEvent) => {
       const c = e.touches.length === 2 ? centre(e.touches) : null;
       if (!c || c.d < 10) return;
-      pinch = { d0: c.d, w0: tileRef.current, keep: nearestTile(vp, c.x, c.y) };
+      pinch = { d0: c.d, w0: currentWidth(), keep: nearestTile(vp, c.x, c.y) };
     };
     const onTouchMove = (e: TouchEvent) => {
       const c = pinch && e.touches.length === 2 ? centre(e.touches) : null;
@@ -177,7 +188,7 @@ export function TableView(props: Props) {
     const onGestureStart = (e: Event) => {
       e.preventDefault();
       const g = e as GestureEvent;
-      if (!pinch) gesture = { w0: tileRef.current, keep: nearestTile(vp, g.clientX, g.clientY) };
+      if (!pinch) gesture = { w0: currentWidth(), keep: nearestTile(vp, g.clientX, g.clientY) };
     };
     const onGestureChange = (e: Event) => {
       e.preventDefault();
@@ -206,7 +217,7 @@ export function TableView(props: Props) {
       vp.removeEventListener("gesturechange", onGestureChange);
       vp.removeEventListener("gestureend", onGestureEnd);
     };
-  }, [zoomTo]);
+  }, [zoomTo, currentWidth]);
 
   // Double-tap / double-click on the background (tiles open the sheet instead): zoom in on that
   // region; at the largest size, back to fit.
@@ -214,8 +225,9 @@ export function TableView(props: Props) {
   const lastPointer = useRef<string>("mouse");
   const backgroundZoom = (x: number, y: number) => {
     const max = clampTileWidth(Infinity, metrics);
-    if (tileWidth >= max - 0.5) zoomTo("fit", x, y);
-    else zoomTo(Math.max(tileWidth * 2, full * 0.75), x, y);
+    const w = currentWidth();
+    if (w >= max - 0.5) zoomTo("fit", x, y);
+    else zoomTo(Math.max(w * 2, full * 0.75), x, y);
   };
   const onPointerDown = (e: PointerEvent) => {
     lastPointer.current = e.pointerType;
@@ -252,13 +264,13 @@ export function TableView(props: Props) {
   return (
     <figure className={styles.figure}>
       <div className={styles.zoomBar} role="toolbar" aria-label="Zoom">
-        <button type="button" onClick={() => zoomTo(tileWidth / ZOOM_STEP)} aria-label="Zoom out">
+        <button type="button" onClick={() => zoomTo(currentWidth() / ZOOM_STEP)} aria-label="Zoom out">
           −
         </button>
         <output className={styles.percent} aria-live="polite" title="Tile size, as a share of full size">
           {percent}%
         </output>
-        <button type="button" onClick={() => zoomTo(tileWidth * ZOOM_STEP)} aria-label="Zoom in">
+        <button type="button" onClick={() => zoomTo(currentWidth() * ZOOM_STEP)} aria-label="Zoom in">
           +
         </button>
         <button type="button" onClick={() => zoomTo("fit")} aria-pressed={zoom.mode === "fit"}>

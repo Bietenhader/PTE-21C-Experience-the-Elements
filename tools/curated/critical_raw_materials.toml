@@ -1,0 +1,749 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# EU critical and strategic raw materials (2023 list, Regulation (EU) 2024/1252), mapped to elements
+# (SPEC §10.4 critical.eu2023).
+# EU critical (Annex II, Section 1) and strategic (Annex I, Section 1) raw materials, mapped to elements.
+# Source: Regulation (EU) 2024/1252 of the European Parliament and of the Council of 11 April 2024 establishing a framework
+#   for ensuring a secure and sustainable supply of critical raw materials (Critical Raw Materials Act), OJ L, 2024/1252, 3.5.2024,
+#   CELEX 32024R1252, ELI http://data.europa.eu/eli/reg/2024/1252/oj. Text read from the Publications Office (Cellar) XHTML
+#   manifestation aa3c49f7-08e7-11ef-a251-01aa75ed71a1.0006.03 (EUR-Lex HTML/PDF returned HTTP 202 bot-challenge to this client).
+# NB: in the adopted Regulation the STRATEGIC list is Annex I, Section 1 and the CRITICAL list is Annex II, Section 1
+#   (Annex II, Section 2 is the economic-importance / supply-risk methodology).
+# English corrigenda 2024/90330 (3.6.2024) and 2024/90589 (1.10.2024) do not touch Annex I or II. Cellar lists no amending act
+#   (checked 2026-10-21); the lists are due for review by 24 May 2027 (Art. 3(3), 4(3)).
+# Group memberships (HREE, LREE, PGM) are NOT defined in the Regulation; they come from Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585.
+# Reuse: EU legislative texts are reusable under Commission Decision 2011/833/EU (source acknowledged).
+
+[meta]
+source = "eu_crm"
+celex = "32024R1252"
+oj = "OJ L, 2024/1252, 3.5.2024"
+eli = "http://data.europa.eu/eli/reg/2024/1252/oj"
+strategic_list = "Annex I, Section 1 (17 entries, points (a)-(q))"
+critical_list = "Annex II, Section 1 (34 entries, points (a)-(ah))"
+group_definitions_from = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+retrieved = "2026-10-21"
+
+[[row]]
+Z = 2
+symbol = "He"
+critical = true
+strategic = false
+listed_as = "helium"
+critical_entries = "Annex II(1)(p) 'helium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 3
+symbol = "Li"
+critical = true
+strategic = true
+listed_as = "lithium"
+critical_entries = "Annex II(1)(s) 'lithium'"
+strategic_listed_as = "lithium — battery grade"
+strategic_entries = "Annex I(1)(h) 'lithium — battery grade'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 4
+symbol = "Be"
+critical = true
+strategic = false
+listed_as = "beryllium"
+critical_entries = "Annex II(1)(e) 'beryllium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 5
+symbol = "B"
+critical = true
+strategic = true
+listed_as = "boron"
+critical_entries = "Annex II(1)(g) 'boron'"
+strategic_listed_as = "boron — metallurgy grade"
+strategic_entries = "Annex I(1)(c) 'boron — metallurgy grade'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "The 2023 study assessed 'boron/borate' (borate minerals); the Regulation lists 'boron'."
+
+[[row]]
+Z = 6
+symbol = "C"
+critical = true
+strategic = true
+listed_as = "coking coal + graphite"
+critical_entries = "Annex II(1)(i) 'coking coal'; Annex II(1)(v) 'graphite'"
+strategic_listed_as = "graphite — battery grade"
+strategic_entries = "Annex I(1)(k) 'graphite — battery grade'"
+via_mineral = true
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Coking coal is a sedimentary rock/fuel (mostly carbon, with H, O, N, S and ash) used to make metallurgical coke; it is listed as a material, not as elemental carbon. Graphite is a mineral form (allotrope) of carbon; the 2023 study assessed 'natural graphite', the Regulation's critical list says 'graphite'. Strategic entry 'graphite — battery grade' is not restricted to natural graphite: Art. 3(3) asks the Commission to assess at the first review 'whether ... synthetic graphite should remain in the list of strategic raw materials'."
+
+[[row]]
+Z = 9
+symbol = "F"
+critical = true
+strategic = false
+listed_as = "fluorspar"
+critical_entries = "Annex II(1)(l) 'fluorspar'"
+via_mineral = true
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Fluorspar (fluorite, CaF2) is a mineral and the main industrial source of fluorine (via hydrofluoric acid); listed as the mineral."
+
+[[row]]
+Z = 12
+symbol = "Mg"
+critical = true
+strategic = true
+listed_as = "magnesium"
+critical_entries = "Annex II(1)(t) 'magnesium'"
+strategic_listed_as = "magnesium metal"
+strategic_entries = "Annex I(1)(i) 'magnesium metal'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 13
+symbol = "Al"
+critical = true
+strategic = true
+listed_as = "bauxite/alumina/aluminium"
+critical_entries = "Annex II(1)(c) 'bauxite/alumina/aluminium'"
+strategic_listed_as = "bauxite/alumina/aluminium"
+strategic_entries = "Annex I(1)(a) 'bauxite/alumina/aluminium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Ore (bauxite), intermediate (alumina) and metal (aluminium) listed as one entry; aluminium is named, so the mapping is direct."
+
+[[row]]
+Z = 14
+symbol = "Si"
+critical = true
+strategic = true
+listed_as = "silicon metal"
+critical_entries = "Annex II(1)(ac) 'silicon metal'"
+strategic_listed_as = "silicon metal"
+strategic_entries = "Annex I(1)(o) 'silicon metal'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Silicon metal only (not silica minerals; silica sand was assessed and is not critical)."
+
+[[row]]
+Z = 15
+symbol = "P"
+critical = true
+strategic = false
+listed_as = "phosphate rock + phosphorus"
+critical_entries = "Annex II(1)(y) 'phosphate rock'; Annex II(1)(z) 'phosphorus'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Phosphate rock is a sedimentary rock (mainly apatite) mined for phosphorus; listed as the rock. Elemental (white) phosphorus, listed separately from phosphate rock."
+
+[[row]]
+Z = 21
+symbol = "Sc"
+critical = true
+strategic = false
+listed_as = "scandium"
+critical_entries = "Annex II(1)(ab) 'scandium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 22
+symbol = "Ti"
+critical = true
+strategic = true
+listed_as = "titanium metal"
+critical_entries = "Annex II(1)(af) 'titanium metal'"
+strategic_listed_as = "titanium metal"
+strategic_entries = "Annex I(1)(p) 'titanium metal'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Titanium metal only; the 2023 study assessed 'titanium' (minerals) and 'titanium metal' separately, and only titanium metal is critical."
+
+[[row]]
+Z = 23
+symbol = "V"
+critical = true
+strategic = false
+listed_as = "vanadium"
+critical_entries = "Annex II(1)(ah) 'vanadium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 25
+symbol = "Mn"
+critical = true
+strategic = true
+listed_as = "manganese"
+critical_entries = "Annex II(1)(u) 'manganese'"
+strategic_listed_as = "manganese — battery grade"
+strategic_entries = "Annex I(1)(j) 'manganese — battery grade'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 27
+symbol = "Co"
+critical = true
+strategic = true
+listed_as = "cobalt"
+critical_entries = "Annex II(1)(h) 'cobalt'"
+strategic_listed_as = "cobalt"
+strategic_entries = "Annex I(1)(d) 'cobalt'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 28
+symbol = "Ni"
+critical = true
+strategic = true
+listed_as = "nickel — battery grade"
+critical_entries = "Annex II(1)(w) 'nickel — battery grade'"
+strategic_listed_as = "nickel — battery grade"
+strategic_entries = "Annex I(1)(l) 'nickel — battery grade'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Only battery-grade nickel is listed. The 2023 study: nickel does not meet the CRM thresholds but is included because it is a strategic raw material."
+
+[[row]]
+Z = 29
+symbol = "Cu"
+critical = true
+strategic = true
+listed_as = "copper"
+critical_entries = "Annex II(1)(j) 'copper'"
+strategic_listed_as = "copper"
+strategic_entries = "Annex I(1)(e) 'copper'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "The 2023 study: copper does not meet the CRM thresholds but is included because it is a strategic raw material (Art. 4(2) requires strategic raw materials to be on the critical list)."
+
+[[row]]
+Z = 31
+symbol = "Ga"
+critical = true
+strategic = true
+listed_as = "gallium"
+critical_entries = "Annex II(1)(m) 'gallium'"
+strategic_listed_as = "gallium"
+strategic_entries = "Annex I(1)(f) 'gallium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 32
+symbol = "Ge"
+critical = true
+strategic = true
+listed_as = "germanium"
+critical_entries = "Annex II(1)(n) 'germanium'"
+strategic_listed_as = "germanium"
+strategic_entries = "Annex I(1)(g) 'germanium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 33
+symbol = "As"
+critical = true
+strategic = false
+listed_as = "arsenic"
+critical_entries = "Annex II(1)(b) 'arsenic'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 38
+symbol = "Sr"
+critical = true
+strategic = false
+listed_as = "strontium"
+critical_entries = "Annex II(1)(ad) 'strontium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 39
+symbol = "Y"
+critical = true
+strategic = false
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+
+[[row]]
+Z = 41
+symbol = "Nb"
+critical = true
+strategic = false
+listed_as = "niobium"
+critical_entries = "Annex II(1)(x) 'niobium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 44
+symbol = "Ru"
+critical = true
+strategic = true
+listed_as = "platinum group metals"
+critical_entries = "Annex II(1)(aa) 'platinum group metals'"
+strategic_listed_as = "platinum group metals"
+strategic_entries = "Annex I(1)(m) 'platinum group metals'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+
+[[row]]
+Z = 45
+symbol = "Rh"
+critical = true
+strategic = true
+listed_as = "platinum group metals"
+critical_entries = "Annex II(1)(aa) 'platinum group metals'"
+strategic_listed_as = "platinum group metals"
+strategic_entries = "Annex I(1)(m) 'platinum group metals'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+
+[[row]]
+Z = 46
+symbol = "Pd"
+critical = true
+strategic = true
+listed_as = "platinum group metals"
+critical_entries = "Annex II(1)(aa) 'platinum group metals'"
+strategic_listed_as = "platinum group metals"
+strategic_entries = "Annex I(1)(m) 'platinum group metals'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+
+[[row]]
+Z = 51
+symbol = "Sb"
+critical = true
+strategic = false
+listed_as = "antimony"
+critical_entries = "Annex II(1)(a) 'antimony'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 56
+symbol = "Ba"
+critical = true
+strategic = false
+listed_as = "baryte"
+critical_entries = "Annex II(1)(d) 'baryte'"
+via_mineral = true
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Baryte (barite, BaSO4) is a mineral, listed for the mineral itself (mainly used as a weighting agent in drilling fluids), not for barium metal or compounds."
+
+[[row]]
+Z = 57
+symbol = "La"
+critical = true
+strategic = false
+listed_as = "light rare earth elements"
+critical_entries = "Annex II(1)(r) 'light rare earth elements'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed."
+
+[[row]]
+Z = 58
+symbol = "Ce"
+critical = true
+strategic = true
+listed_as = "light rare earth elements"
+critical_entries = "Annex II(1)(r) 'light rare earth elements'"
+strategic_listed_as = "rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)"
+strategic_entries = "Annex I(1)(n) 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+
+[[row]]
+Z = 59
+symbol = "Pr"
+critical = true
+strategic = true
+listed_as = "light rare earth elements"
+critical_entries = "Annex II(1)(r) 'light rare earth elements'"
+strategic_listed_as = "rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)"
+strategic_entries = "Annex I(1)(n) 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+
+[[row]]
+Z = 60
+symbol = "Nd"
+critical = true
+strategic = true
+listed_as = "light rare earth elements"
+critical_entries = "Annex II(1)(r) 'light rare earth elements'"
+strategic_listed_as = "rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)"
+strategic_entries = "Annex I(1)(n) 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+
+[[row]]
+Z = 62
+symbol = "Sm"
+critical = true
+strategic = true
+listed_as = "light rare earth elements"
+critical_entries = "Annex II(1)(r) 'light rare earth elements'"
+strategic_listed_as = "rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)"
+strategic_entries = "Annex I(1)(n) 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+
+[[row]]
+Z = 63
+symbol = "Eu"
+critical = true
+strategic = false
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+
+[[row]]
+Z = 64
+symbol = "Gd"
+critical = true
+strategic = true
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+strategic_listed_as = "rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)"
+strategic_entries = "Annex I(1)(n) 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+
+[[row]]
+Z = 65
+symbol = "Tb"
+critical = true
+strategic = true
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+strategic_listed_as = "rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)"
+strategic_entries = "Annex I(1)(n) 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+
+[[row]]
+Z = 66
+symbol = "Dy"
+critical = true
+strategic = true
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+strategic_listed_as = "rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)"
+strategic_entries = "Annex I(1)(n) 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+
+[[row]]
+Z = 67
+symbol = "Ho"
+critical = true
+strategic = false
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+
+[[row]]
+Z = 68
+symbol = "Er"
+critical = true
+strategic = false
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+
+[[row]]
+Z = 69
+symbol = "Tm"
+critical = true
+strategic = false
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+
+[[row]]
+Z = 70
+symbol = "Yb"
+critical = true
+strategic = false
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+
+[[row]]
+Z = 71
+symbol = "Lu"
+critical = true
+strategic = false
+listed_as = "heavy rare earth elements"
+critical_entries = "Annex II(1)(q) 'heavy rare earth elements'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+
+[[row]]
+Z = 72
+symbol = "Hf"
+critical = true
+strategic = false
+listed_as = "hafnium"
+critical_entries = "Annex II(1)(o) 'hafnium'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 73
+symbol = "Ta"
+critical = true
+strategic = false
+listed_as = "tantalum"
+critical_entries = "Annex II(1)(ae) 'tantalum'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 74
+symbol = "W"
+critical = true
+strategic = true
+listed_as = "tungsten"
+critical_entries = "Annex II(1)(ag) 'tungsten'"
+strategic_listed_as = "tungsten"
+strategic_entries = "Annex I(1)(q) 'tungsten'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 77
+symbol = "Ir"
+critical = true
+strategic = true
+listed_as = "platinum group metals"
+critical_entries = "Annex II(1)(aa) 'platinum group metals'"
+strategic_listed_as = "platinum group metals"
+strategic_entries = "Annex I(1)(m) 'platinum group metals'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+
+[[row]]
+Z = 78
+symbol = "Pt"
+critical = true
+strategic = true
+listed_as = "platinum group metals"
+critical_entries = "Annex II(1)(aa) 'platinum group metals'"
+strategic_listed_as = "platinum group metals"
+strategic_entries = "Annex I(1)(m) 'platinum group metals'"
+via_mineral = false
+via_group = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+
+[[row]]
+Z = 83
+symbol = "Bi"
+critical = true
+strategic = true
+listed_as = "bismuth"
+critical_entries = "Annex II(1)(f) 'bismuth'"
+strategic_listed_as = "bismuth"
+strategic_entries = "Annex I(1)(b) 'bismuth'"
+via_mineral = false
+via_group = false
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = ""
+
+[[row]]
+Z = 76
+symbol = "Os"
+critical = true
+strategic = true
+listed_as = "platinum group metals"
+critical_entries = "Annex II(1)(aa) 'platinum group metals'"
+strategic_listed_as = "platinum group metals"
+strategic_entries = "Annex I(1)(m) 'platinum group metals'"
+via_mineral = false
+via_group = true
+doubtful = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II and Annex I (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+group_ref = "Study on the Critical Raw Materials for the EU 2023 - Final Report (European Commission, DG GROW, 2023), doi:10.2873/725585"
+note = "DOUBTFUL: osmium is a platinum-group metal by the usual chemical definition and the Regulation does not define the group, but the Commission's 2023 study did not assess osmium ('excluded from the 2017, 2020 and 2023 exercises' for lack of data, footnote 18, p. 17) and lists the PGM group as Ir, Pd, Pt, Rh, Ru. Show as 'possibly covered' or omit."
+
+[[unmapped]]
+listed_as = "feldspar"
+critical_entries = "Annex II(1)(k) 'feldspar'"
+via_mineral = true
+source = "eu_crm"
+ref = "Regulation (EU) 2024/1252, Annex II (CELEX 32024R1252; OJ L, 2024/1252, 3.5.2024)"
+note = "Feldspar is a group of framework aluminosilicate minerals (K-, Na- and Ca-feldspars, e.g. KAlSi3O8, NaAlSi3O8, CaAl2Si2O8) used as a flux in glass and ceramics; it is not a source of one particular element, so no element is flagged. If the app wants a hint, it could mention feldspar on Al, Si, K, Na and Ca as 'contained in a critical mineral' - not 'critical'."
+

@@ -491,6 +491,78 @@ def hyperfine_record(row: dict) -> dict:
     return out
 
 
+def curated_abundance(rows: list[dict]) -> dict:
+    """{quantity: Q} from tools/curated/abundance.toml rows of one element."""
+    out = {}
+    for r in rows:
+        extra = {"doi": r["doi"]} if r.get("doi") else {}
+        if r.get("limit") == "upper":
+            out[r["quantity"]] = missing("not_measured", r["note"])
+        else:
+            out[r["quantity"]] = {
+                **quantity(
+                    r["value"], r["unit"], r["source"], unc=r.get("unc"), flag=r.get("flag"), note=r.get("note")
+                ),
+                **extra,
+            }
+    out.setdefault(
+        "body",
+        missing(
+            "not_measured",
+            "Our table from ICRP Publication 23 has no amount for this element in the reference body "
+            "(tools/curated/abundance.toml lists what was left out and why).",
+        ),
+    )
+    return out
+
+
+def production_record(rows: list[dict]) -> dict:
+    """SPEC §10.4: the main USGS row of the element; a price only with its year, and only if recent."""
+    main = next((r for r in rows if r.get("primary")), rows[0] if rows else None)
+    if not main:
+        return {}
+    out: dict = {"commodity": main["commodity"], "basis": main["basis"], "edition": main["edition"]}
+    if main.get("tonnes_per_year") is not None:
+        out["tonnesPerYear"] = quantity(
+            main["tonnes_per_year"],
+            "t/yr",
+            "usgs_mcs",
+            flag="estimated" if main.get("estimated") else None,
+            note=f"World {main['basis']}, {main['year']} (USGS: {main['original_value']} {main['original_unit']}).",
+        )
+        out["year"] = main["year"]
+    if main.get("unit_value_usd_per_kg") is not None and main.get("price_year", 0) >= 2021:
+        out["unitValue"] = quantity(
+            main["unit_value_usd_per_kg"],
+            "USD/kg",
+            "usgs_mcs",
+            flag="estimated" if main.get("price_estimated") else None,
+            note=f"{main['price_basis']}, {main['price_year']}; per kg of the material named, as USGS gives it.",
+        )
+        out["priceYear"] = main["price_year"]
+    if main.get("via_mineral"):
+        out["viaMineral"] = True
+    return out
+
+
+def critical_record(row: dict | None) -> dict:
+    if not row:
+        return {"eu2023": False}
+    out = {
+        "eu2023": bool(row["critical"]),
+        "strategic": bool(row["strategic"]),
+        "listedAs": row["listed_as"],
+        "source": "eu_crm",
+    }
+    if row.get("via_mineral"):
+        out["viaMineral"] = True
+    if row.get("doubtful"):
+        out["doubtful"] = True
+    if row.get("note"):
+        out["note"] = row["note"]
+    return out
+
+
 def abundance_record(pub: dict | None) -> dict:
     out = {}
     for key, label in (("crust", "Earth's crust"), ("ocean", "sea water")):
@@ -503,7 +575,120 @@ def abundance_record(pub: dict | None) -> dict:
                 flag="estimated",
                 note=f"Jefferson Lab estimate for {label}, via PubChem ('{item['text']}').",
             )
+        else:
+            out[key] = missing("not_measured", f"The Jefferson Lab table on PubChem gives no estimate for {label}.")
     return out
+
+
+SOLAR_FIELDS = {
+    ("mass_fraction", "protosolar"): "solar",
+    ("log_eps", "present"): "solarLogEps",
+}
+
+
+def solar_record(rows: list[dict]) -> dict:
+    """SPEC §10.4: the proto-solar mass fraction and today's log ε from Lodders et al. (2025)."""
+    out = {
+        "solar": missing("not_measured", "Lodders et al. (2025) give no solar-system mass fraction for this element."),
+        "solarLogEps": missing(
+            "not_measured", "Lodders et al. (2025) give no solar-system abundance for this element."
+        ),
+    }
+    for r in rows:
+        key = SOLAR_FIELDS.get((r["quantity"], r["epoch"]))
+        if key:
+            out[key] = quantity(r["value"], "", r["source"], unc=r.get("unc"), note=r["note"])
+    if out["solar"].get("missing") and not out["solarLogEps"].get("missing"):
+        out["solar"]["note"] = (
+            "Lodders et al. (2025) give this element's atom count but its mass-fraction row is not usable "
+            "(see tools/curated/abundance.toml)."
+        )
+    return out
+
+
+def lattice_family(number: int) -> str:
+    """Crystal family from the space-group number (International Tables, Vol. A)."""
+    for upper, name in (
+        (2, "triclinic"),
+        (15, "monoclinic"),
+        (74, "orthorhombic"),
+        (142, "tetragonal"),
+        (167, "trigonal"),
+        (194, "hexagonal"),
+        (230, "cubic"),
+    ):
+        if number <= upper:
+            return name
+    raise ValueError(number)
+
+
+def crystal_record(row: dict | None, omitted: dict | None) -> dict:
+    """SPEC §10.4 crystal{lattice, spaceGroup, pearson, a, b, c, alpha, beta, gamma} from crystal.toml."""
+    if not row:
+        note = omitted["reason"] if omitted else "No crystal structure of this element is in our table."
+        return missing("not_measured", note)
+    flags = set(row.get("flags", []))
+    src = row["source"]
+    out: dict = {
+        "allotrope": row["allotrope"],
+        "structure": row["structure"],
+        "lattice": lattice_family(row["space_group_number"]),
+        "spaceGroup": row["space_group"],
+        "spaceGroupNumber": row["space_group_number"],
+        "pearson": row["pearson"],
+        "atomsPerCell": row["atoms_per_cell"],
+    }
+    for axis in ("a", "b", "c"):
+        if f"{axis}_pm" in row:
+            out[axis] = quantity(row[f"{axis}_pm"], "pm", src, unc=row.get(f"{axis}_unc_pm"))
+    for angle in ("alpha", "beta", "gamma"):
+        out[angle] = quantity(row[angle], "°", src)
+    if row.get("cell_axes"):
+        out["cellAxes"] = row["cell_axes"]
+    if "temperature_K" in row:
+        out["temperature"] = quantity(row["temperature_K"], "K", src)
+    else:
+        out["temperature"] = missing("not_measured", "The COD entry does not state the temperature of the measurement.")
+    if "pressure_kPa" in row:
+        out["pressure"] = quantity(row["pressure_kPa"], "kPa", src)
+    if "not_solid_at_rtp" in flags:
+        out["lowTemperatureSolid"] = True
+    if "doubtful" in flags:
+        out["doubtful"] = True
+    out["codId"] = row["cod_id"]
+    if row.get("doi"):
+        out["doi"] = row["doi"]
+    out["reference"] = row["reference"]
+    out["source"] = src
+    out["note"] = row["note"]
+    return out
+
+
+ORIGIN_KEYS = {
+    "bigbang": "bigBang",
+    "cosmic_rays": "cosmicRays",
+    "agb": "agb",
+    "massive_stars": "massiveStars",
+    "neutron_star_mergers": "neutronStarMergers",
+    "white_dwarfs": "whiteDwarfs",
+}
+
+
+def origin_record(row: dict | None, omitted: dict | None) -> dict:
+    """SPEC §10.7 cosmic origin: Kobayashi et al. (2020) Fig. 39, read off the figure (approximate)."""
+    if row:
+        fractions = {ORIGIN_KEYS[k]: row[k] for k in ORIGIN_KEYS if row.get(k)}
+        total = sum(fractions.values())
+        if abs(total - 1) > 1e-9:
+            raise ValueError(f"nucleosynthesis.toml Z={row['Z']}: fractions sum to {total}")
+        return {"fractions": fractions, "flag": row["flag"], "source": row["source"], "note": row["note"]}
+    if omitted:
+        return missing("not_measured", omitted["note"])
+    return missing(
+        "not_measured",
+        "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; "
+        "this element is not among them.",
+    )
 
 
 def biology_record(row: dict | None) -> dict:
@@ -551,6 +736,28 @@ def load_prose(z: int, symbol: str) -> dict | None:
     return {"text": body, "sources": sources}
 
 
+def history_record(row: dict | None) -> dict:
+    if not row:
+        return {}
+    out: dict = {"discovered": row["discovered"]}
+    keys = {
+        "discovered_text": "discoveredText",
+        "discoverers": "discoverers",
+        "place": "place",
+        "isolated": "isolated",
+        "isolated_by": "isolatedBy",
+        "name_origin": "nameOrigin",
+        "symbol_note": "symbolNote",
+        "source": "source",
+        "doi": "doi",
+        "note": "note",
+    }
+    for k, v in keys.items():
+        if row.get(k) not in (None, "", []):
+            out[v] = row[k]
+    return out
+
+
 def build_elements(index: dict, report: Report) -> int:
     import curated
     import fetch_codata
@@ -591,6 +798,21 @@ def build_elements(index: dict, report: Report) -> int:
     for r in curated.load("lasercooling.toml"):
         cooling.setdefault(r["Z"], []).append(r)
     biology = {r["Z"]: r for r in curated.load("biology.toml")}
+    prod_rows: dict[int, list] = {}
+    for r in curated.load("production.toml"):
+        prod_rows.setdefault(r["Z"], []).append(r)
+    crit = {r["Z"]: r for r in curated.load("critical_raw_materials.toml")}
+    history = {r["Z"]: r for r in curated.load("history.toml")}
+    abund_rows: dict[int, list] = {}
+    for r in curated.load("abundance.toml"):
+        abund_rows.setdefault(r["Z"], []).append(r)
+    solar_rows: dict[int, list] = {}
+    for r in curated.load("abundance.toml", "solar"):
+        solar_rows.setdefault(r["Z"], []).append(r)
+    crystal = {r["Z"]: r for r in curated.load("crystal.toml")}
+    crystal_omitted = {r["Z"]: r for r in curated.load("crystal.toml", "omitted")}
+    origin = {r["Z"]: r for r in curated.load("nucleosynthesis.toml")}
+    origin_omitted = {r["Z"]: r for r in curated.load("nucleosynthesis.toml", "omitted")}
 
     folder = DATA_DIR / "elements"
     clear(folder)
@@ -629,7 +851,15 @@ def build_elements(index: dict, report: Report) -> int:
             if (ref_iso or e.get("mostStableMassNumber"))
             else {}
         )
-        doc["physical"] = {"abundance": abundance_record(abundance.get(z))}
+        doc["physical"] = {
+            "abundance": abundance_record(abundance.get(z))
+            | solar_record(solar_rows.get(z, []))
+            | curated_abundance(abund_rows.get(z, [])),
+            "crystal": crystal_record(crystal.get(z), crystal_omitted.get(z)),
+            "production": production_record(prod_rows.get(z, [])),
+            "critical": critical_record(crit.get(z)),
+        }
+        doc["nucleus"] = {"origin": origin_record(origin.get(z), origin_omitted.get(z))}
         amo = metrology.get(z, {"clocks": [], "siHistory": []})
         doc["amo"] = {
             "hyperfine": [
@@ -640,6 +870,9 @@ def build_elements(index: dict, report: Report) -> int:
             "siHistory": amo["siHistory"],
         }
         doc["biology"] = biology_record(biology.get(z))
+        hist = history_record(history.get(z))
+        if hist:
+            doc["history"] = hist
         prose = load_prose(z, e["symbol"])
         if prose:
             doc["prose"] = prose

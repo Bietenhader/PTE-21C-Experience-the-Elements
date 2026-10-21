@@ -1,0 +1,725 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# Fractions of each element made by six processes at the time the Solar System formed, from
+#   C. Kobayashi, A. I. Karakas & M. Lugaro (2020), 'The Origin of Elements from Carbon to Uranium',
+#   ApJ 900, 179, doi:10.3847/1538-4357/abae65 (arXiv:2008.04660), Fig. 39 and Sect. 3.5 text.
+# No table or data file exists; values were READ OFF THE FIGURE (lossless 2336x1169 raster from the arXiv
+# PDF / source) by pixel classification, see README. flag = 'estimated' for every figure value;
+# flag = 'paper_statement' where the paper gives a qualitative statement instead (H, Be, B).
+# Process keys: bigbang (black), cosmic_rays (not in the model), agb (green), massive_stars (blue: SNe II,
+# hypernovae, electron-capture SNe, magneto-rotational SNe), neutron_star_mergers (magenta),
+# white_dwarfs (red: SNe Ia). Zero-valued keys omitted. Fractions are of the MODEL abundance at t = 9.2 Gyr.
+# Method, per-element raw readings and checks: docs/approach.md (M2, cosmic origin).
+# Omitted: He, Li, Tc, Pm, Pb (see README) and all elements not in the figure (Po-Ac, Pa, Z > 92).
+
+[[row]]
+Z = 1
+bigbang = 1.00
+flag = "paper_statement"
+source = "kobayashi2020"
+note = "Paper Sect. 3.5: 'H and most of He are produced in Big Bang nucleosynthesis. The small green and blue areas also includes the amounts returned to the ISM via stellar mass loss'. Stars only destroy or return H, so the figure's green/blue (raw reading at the 9.2-Gyr line: AGB 0.14, massive 0.05; box saturated) are recycled Big-Bang H, not production. Value set from the statement, not read off the figure."
+
+[[row]]
+Z = 4
+cosmic_rays = 1.00
+flag = "paper_statement"
+source = "kobayashi2020"
+note = "Paper Sect. 3.5: 'Be and B are supposed to be produced by cosmic rays [Prantzos et al. 1993], which is not included in our model either.' Empty box in Fig. 39. Value is the paper's qualitative statement, not a modelled fraction."
+
+[[row]]
+Z = 5
+cosmic_rays = 1.00
+flag = "paper_statement"
+source = "kobayashi2020"
+note = "Paper Sect. 3.5: 'Be and B are supposed to be produced by cosmic rays [Prantzos et al. 1993], which is not included in our model either.' Empty box in Fig. 39. Value is the paper's qualitative statement, not a modelled fraction."
+
+[[row]]
+Z = 6
+agb = 0.50
+massive_stars = 0.50
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.489, massive_stars 0.511); quantised to 0.05. Stack height 48 px. Cross-check with the paper's text: '49% of C ... produced by AGB stars (at t=9.2 Gyr)' (figure reading 0.489)."
+
+[[row]]
+Z = 7
+agb = 0.75
+massive_stars = 0.25
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.741, massive_stars 0.259); quantised to 0.05. Stack height 72 px. Cross-check with the paper's text: '74% of N are produced by AGB stars' (figure reading 0.741)."
+
+[[row]]
+Z = 8
+agb = 0.10
+massive_stars = 0.90
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.104, massive_stars 0.888, white_dwarfs 0.008); quantised to 0.05. Stack height 85 px."
+
+[[row]]
+Z = 9
+agb = 0.50
+massive_stars = 0.50
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.501, massive_stars 0.499); quantised to 0.05. Stack height 48 px. Cross-check with the paper's text: '51% of F ... produced by AGB stars' (figure reading 0.501)."
+
+[[row]]
+Z = 10
+agb = 0.15
+massive_stars = 0.85
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.142, massive_stars 0.858); quantised to 0.05. Stack height 77 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 11
+agb = 0.15
+massive_stars = 0.85
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.137, massive_stars 0.863); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 12
+agb = 0.15
+massive_stars = 0.85
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.128, massive_stars 0.867, white_dwarfs 0.005); quantised to 0.05. Stack height 78 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'Mg is slightly under-produced in the model.'"
+
+[[row]]
+Z = 13
+agb = 0.10
+massive_stars = 0.90
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.109, massive_stars 0.891); quantised to 0.05. Stack height 71 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 14
+agb = 0.10
+massive_stars = 0.70
+white_dwarfs = 0.20
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.102, massive_stars 0.681, white_dwarfs 0.217); quantised to 0.05. Stack height 82 px. Cross-check with the paper's text: '22% of Si ... come from SNe Ia' (figure reading 0.217). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 15
+agb = 0.10
+massive_stars = 0.90
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.096, massive_stars 0.901, white_dwarfs 0.003); quantised to 0.05. Stack height 67 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 16
+agb = 0.10
+massive_stars = 0.60
+white_dwarfs = 0.30
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.100, massive_stars 0.613, white_dwarfs 0.288); quantised to 0.05. Stack height 81 px. Cross-check with the paper's text: '29% of S ... come from SNe Ia' (figure reading 0.288). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 17
+massive_stars = 1.00
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.989, white_dwarfs 0.011); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 18
+agb = 0.10
+massive_stars = 0.55
+white_dwarfs = 0.35
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.103, massive_stars 0.556, white_dwarfs 0.342); quantised to 0.05. Stack height 80 px. Cross-check with the paper's text: '34% of Ar ... come from SNe Ia' (figure reading 0.342). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 19
+massive_stars = 0.95
+white_dwarfs = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.963, white_dwarfs 0.037); quantised to 0.05. Stack height 13 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.08 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
+
+[[row]]
+Z = 20
+agb = 0.10
+massive_stars = 0.50
+white_dwarfs = 0.40
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.092, massive_stars 0.512, white_dwarfs 0.397); quantised to 0.05. Stack height 80 px. Cross-check with the paper's text: '39% of Ca ... come from SNe Ia' (figure reading 0.397). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 21
+massive_stars = 0.95
+white_dwarfs = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.959, white_dwarfs 0.041); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
+
+[[row]]
+Z = 22
+agb = 0.05
+massive_stars = 0.55
+white_dwarfs = 0.40
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.079, massive_stars 0.537, white_dwarfs 0.384); quantised to 0.05. Stack height 43 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
+
+[[row]]
+Z = 23
+agb = 0.05
+massive_stars = 0.55
+white_dwarfs = 0.40
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.058, massive_stars 0.566, white_dwarfs 0.376); quantised to 0.05. Stack height 36 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
+
+[[row]]
+Z = 24
+agb = 0.10
+massive_stars = 0.35
+white_dwarfs = 0.55
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.087, massive_stars 0.359, white_dwarfs 0.554); quantised to 0.05. Stack height 78 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 25
+agb = 0.10
+massive_stars = 0.15
+white_dwarfs = 0.75
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.080, massive_stars 0.151, white_dwarfs 0.768); quantised to 0.05. Stack height 63 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 26
+agb = 0.10
+massive_stars = 0.30
+white_dwarfs = 0.60
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.079, massive_stars 0.313, white_dwarfs 0.608); quantised to 0.05. Stack height 75 px. Cross-check with the paper's text: 'the fraction [of Fe from SNe Ia] is only 60% in our model, and the rest is mainly produced by HNe' (figure reading 0.608). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 27
+agb = 0.15
+massive_stars = 0.55
+white_dwarfs = 0.30
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.148, massive_stars 0.570, white_dwarfs 0.283); quantised to 0.05. Stack height 42 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 28
+agb = 0.10
+massive_stars = 0.25
+white_dwarfs = 0.65
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.082, massive_stars 0.244, white_dwarfs 0.674); quantised to 0.05. Stack height 73 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 29
+agb = 0.15
+massive_stars = 0.85
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.139, massive_stars 0.854, neutron_star_mergers 0.001, white_dwarfs 0.006); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 30
+agb = 0.10
+massive_stars = 0.80
+white_dwarfs = 0.10
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.097, massive_stars 0.809, white_dwarfs 0.094); quantised to 0.05. Stack height 70 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 31
+agb = 0.10
+massive_stars = 0.90
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.109, massive_stars 0.889, neutron_star_mergers 0.002); quantised to 0.05. Stack height 61 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 32
+agb = 0.10
+massive_stars = 0.90
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.090, massive_stars 0.909, neutron_star_mergers 0.001); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
+
+[[row]]
+Z = 33
+agb = 0.30
+massive_stars = 0.70
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.302, massive_stars 0.687, neutron_star_mergers 0.011); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total."
+
+[[row]]
+Z = 34
+agb = 0.20
+massive_stars = 0.80
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.170, massive_stars 0.817, neutron_star_mergers 0.012); quantised to 0.05. Stack height 81 px."
+
+[[row]]
+Z = 35
+agb = 0.15
+massive_stars = 0.85
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.131, massive_stars 0.845, neutron_star_mergers 0.024); quantised to 0.05. Stack height 82 px."
+
+[[row]]
+Z = 36
+agb = 0.40
+massive_stars = 0.55
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.389, massive_stars 0.562, neutron_star_mergers 0.049); quantised to 0.05. Stack height 46 px."
+
+[[row]]
+Z = 37
+agb = 0.25
+massive_stars = 0.65
+neutron_star_mergers = 0.10
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.258, massive_stars 0.635, neutron_star_mergers 0.107); quantised to 0.05. Stack height 71 px."
+
+[[row]]
+Z = 38
+agb = 0.70
+massive_stars = 0.30
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.692, massive_stars 0.291, neutron_star_mergers 0.017); quantised to 0.05. Stack height 67 px. Text: '32% of [this element] can be produced from ECSNe ... which is included in the blue areas'; the figure's whole blue band reads lower (0.291), probably because the text percentage is relative to the solar value while the model overproduces s-process elements. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 39
+agb = 0.80
+massive_stars = 0.20
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.784, massive_stars 0.187, neutron_star_mergers 0.029); quantised to 0.05. Stack height 66 px. Text: '22% of [this element] can be produced from ECSNe ... which is included in the blue areas'; the figure's whole blue band reads lower (0.187), probably because the text percentage is relative to the solar value while the model overproduces s-process elements. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 40
+agb = 0.55
+massive_stars = 0.40
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.562, massive_stars 0.395, neutron_star_mergers 0.043); quantised to 0.05. Stack height 73 px. Text: '44% of [this element] can be produced from ECSNe ... which is included in the blue areas'; the figure's whole blue band reads lower (0.395), probably because the text percentage is relative to the solar value while the model overproduces s-process elements. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 41
+agb = 0.60
+massive_stars = 0.35
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.613, massive_stars 0.330, neutron_star_mergers 0.057); quantised to 0.05. Stack height 67 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 42
+agb = 0.35
+massive_stars = 0.60
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.328, massive_stars 0.623, neutron_star_mergers 0.049); quantised to 0.05. Stack height 74 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 44
+agb = 0.25
+massive_stars = 0.60
+neutron_star_mergers = 0.15
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.265, massive_stars 0.612, neutron_star_mergers 0.123); quantised to 0.05. Stack height 70 px."
+
+[[row]]
+Z = 45
+agb = 0.15
+massive_stars = 0.75
+neutron_star_mergers = 0.10
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.171, massive_stars 0.737, neutron_star_mergers 0.093); quantised to 0.05. Stack height 74 px."
+
+[[row]]
+Z = 46
+agb = 0.25
+massive_stars = 0.70
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.234, massive_stars 0.717, neutron_star_mergers 0.049); quantised to 0.05. Stack height 76 px."
+
+[[row]]
+Z = 47
+agb = 0.15
+massive_stars = 0.80
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.154, massive_stars 0.800, neutron_star_mergers 0.045); quantised to 0.05. Stack height 81 px. Paper: 'Ag is over-produced by a factor of 6'; fractions are of the model's (too high) Ag."
+
+[[row]]
+Z = 48
+agb = 0.40
+massive_stars = 0.55
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.391, massive_stars 0.544, neutron_star_mergers 0.065); quantised to 0.05. Stack height 77 px."
+
+[[row]]
+Z = 49
+agb = 0.55
+massive_stars = 0.25
+neutron_star_mergers = 0.20
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.562, massive_stars 0.243, neutron_star_mergers 0.196); quantised to 0.05. Stack height 64 px."
+
+[[row]]
+Z = 50
+agb = 0.80
+massive_stars = 0.10
+neutron_star_mergers = 0.10
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.805, massive_stars 0.111, neutron_star_mergers 0.084); quantised to 0.05. Stack height 75 px."
+
+[[row]]
+Z = 51
+agb = 0.25
+massive_stars = 0.30
+neutron_star_mergers = 0.45
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.250, massive_stars 0.303, neutron_star_mergers 0.447); quantised to 0.05. Stack height 72 px."
+
+[[row]]
+Z = 52
+agb = 0.15
+massive_stars = 0.80
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.159, massive_stars 0.817, neutron_star_mergers 0.024); quantised to 0.05. Stack height 82 px."
+
+[[row]]
+Z = 53
+agb = 0.10
+massive_stars = 0.85
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.123, massive_stars 0.845, neutron_star_mergers 0.033); quantised to 0.05. Stack height 83 px."
+
+[[row]]
+Z = 54
+agb = 0.25
+massive_stars = 0.70
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.270, massive_stars 0.698, neutron_star_mergers 0.032); quantised to 0.05. Stack height 82 px."
+
+[[row]]
+Z = 55
+agb = 0.35
+massive_stars = 0.50
+neutron_star_mergers = 0.15
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.374, massive_stars 0.499, neutron_star_mergers 0.127); quantised to 0.05. Stack height 68 px."
+
+[[row]]
+Z = 56
+agb = 0.95
+massive_stars = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.959, massive_stars 0.035, neutron_star_mergers 0.006); quantised to 0.05. Stack height 85 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 57
+agb = 0.95
+massive_stars = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.956, massive_stars 0.033, neutron_star_mergers 0.011); quantised to 0.05. Stack height 91 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 58
+agb = 0.95
+massive_stars = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.956, massive_stars 0.030, neutron_star_mergers 0.015); quantised to 0.05. Stack height 98 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 59
+agb = 0.85
+massive_stars = 0.15
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.825, massive_stars 0.158, neutron_star_mergers 0.017); quantised to 0.05. Stack height 95 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 60
+agb = 0.80
+massive_stars = 0.15
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.824, massive_stars 0.135, neutron_star_mergers 0.041); quantised to 0.05. Stack height 89 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
+
+[[row]]
+Z = 62
+agb = 0.45
+massive_stars = 0.50
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.454, massive_stars 0.491, neutron_star_mergers 0.056); quantised to 0.05. Stack height 90 px."
+
+[[row]]
+Z = 63
+agb = 0.20
+massive_stars = 0.70
+neutron_star_mergers = 0.10
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.197, massive_stars 0.720, neutron_star_mergers 0.084); quantised to 0.05. Stack height 80 px."
+
+[[row]]
+Z = 64
+agb = 0.25
+massive_stars = 0.70
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.232, massive_stars 0.710, neutron_star_mergers 0.059); quantised to 0.05. Stack height 79 px."
+
+[[row]]
+Z = 65
+agb = 0.15
+massive_stars = 0.80
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.154, massive_stars 0.801, neutron_star_mergers 0.045); quantised to 0.05. Stack height 83 px."
+
+[[row]]
+Z = 66
+agb = 0.30
+massive_stars = 0.65
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.293, massive_stars 0.661, neutron_star_mergers 0.046); quantised to 0.05. Stack height 85 px."
+
+[[row]]
+Z = 67
+agb = 0.20
+massive_stars = 0.75
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.213, massive_stars 0.729, neutron_star_mergers 0.057); quantised to 0.05. Stack height 80 px."
+
+[[row]]
+Z = 68
+agb = 0.30
+massive_stars = 0.65
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.319, massive_stars 0.629, neutron_star_mergers 0.052); quantised to 0.05. Stack height 87 px."
+
+[[row]]
+Z = 69
+agb = 0.25
+massive_stars = 0.70
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.234, massive_stars 0.721, neutron_star_mergers 0.046); quantised to 0.05. Stack height 83 px."
+
+[[row]]
+Z = 70
+agb = 0.50
+massive_stars = 0.45
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.508, massive_stars 0.448, neutron_star_mergers 0.044); quantised to 0.05. Stack height 92 px."
+
+[[row]]
+Z = 71
+agb = 0.35
+massive_stars = 0.60
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.382, massive_stars 0.585, neutron_star_mergers 0.033); quantised to 0.05. Stack height 87 px."
+
+[[row]]
+Z = 72
+agb = 0.65
+massive_stars = 0.35
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.642, massive_stars 0.338, neutron_star_mergers 0.019); quantised to 0.05. Stack height 95 px."
+
+[[row]]
+Z = 73
+agb = 0.45
+massive_stars = 0.50
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.474, massive_stars 0.477, neutron_star_mergers 0.049); quantised to 0.05. Stack height 91 px."
+
+[[row]]
+Z = 74
+agb = 0.50
+massive_stars = 0.40
+neutron_star_mergers = 0.10
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.510, massive_stars 0.402, neutron_star_mergers 0.087); quantised to 0.05. Stack height 90 px."
+
+[[row]]
+Z = 75
+agb = 0.15
+massive_stars = 0.70
+neutron_star_mergers = 0.15
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.169, massive_stars 0.711, neutron_star_mergers 0.120); quantised to 0.05. Stack height 78 px."
+
+[[row]]
+Z = 76
+agb = 0.15
+massive_stars = 0.85
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.137, massive_stars 0.846, neutron_star_mergers 0.017); quantised to 0.05. Stack height 80 px."
+
+[[row]]
+Z = 77
+agb = 0.10
+massive_stars = 0.90
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.104, massive_stars 0.890, neutron_star_mergers 0.006); quantised to 0.05. Stack height 82 px."
+
+[[row]]
+Z = 78
+agb = 0.20
+massive_stars = 0.75
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.191, massive_stars 0.768, neutron_star_mergers 0.042); quantised to 0.05. Stack height 85 px."
+
+[[row]]
+Z = 79
+agb = 0.45
+massive_stars = 0.35
+neutron_star_mergers = 0.20
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.472, massive_stars 0.346, neutron_star_mergers 0.182); quantised to 0.05. Stack height 18 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.06 of the total. Paper: 'Au is under-produced by a factor of 5'; fractions are of the model's (too low) Au."
+
+[[row]]
+Z = 80
+agb = 0.70
+massive_stars = 0.30
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.691, massive_stars 0.304, neutron_star_mergers 0.005); quantised to 0.05. Stack height 98 px."
+
+[[row]]
+Z = 81
+agb = 0.80
+massive_stars = 0.20
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.818, massive_stars 0.182); quantised to 0.05. Stack height 96 px."
+
+[[row]]
+Z = 83
+agb = 0.45
+massive_stars = 0.50
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.458, massive_stars 0.484, neutron_star_mergers 0.058); quantised to 0.05. Stack height 61 px. Bi box: the model stack at t = 9.2 Gyr lies well below the X/Xsun = 1 line."
+
+[[row]]
+Z = 90
+agb = 0.10
+massive_stars = 0.85
+neutron_star_mergers = 0.05
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.107, massive_stars 0.855, neutron_star_mergers 0.038); quantised to 0.05. Stack height 85 px."
+
+[[row]]
+Z = 92
+agb = 0.10
+massive_stars = 0.90
+flag = "estimated"
+source = "kobayashi2020"
+note = "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.079, massive_stars 0.910, neutron_star_mergers 0.011); quantised to 0.05. Stack height 103 px. Paper: 'U is also over-produced.'"
+
+
+# --- Elements the figure cannot give -----------------------------------------------------------
+# The build shows these as Missing with the reason below; elements not in Fig. 39 at all (Po–Ac, Pa,
+# Z > 92) get a generic note from the build.
+
+[[omitted]]
+Z = 2
+source = "kobayashi2020"
+note = "Fig. 39 cannot be read for helium: its box is full to the top, and the paper says the coloured areas include helium that stars merely returned to space. Most helium was made in the Big Bang, but the figure gives no split we can quote."
+
+[[omitted]]
+Z = 3
+source = "kobayashi2020"
+note = "The paper calls its lithium model 'very uncertain' and leaves out cosmic rays and novae, which make some lithium; its box in Fig. 39 is full to the top, so no split is quoted."
+
+[[omitted]]
+Z = 43
+source = "kobayashi2020"
+note = "Technetium has no long-lived isotope, so none of it survives from before the Solar System; its box in Fig. 39 is empty."
+
+[[omitted]]
+Z = 61
+source = "kobayashi2020"
+note = "Promethium has no long-lived isotope, so none of it survives from before the Solar System; its box in Fig. 39 is empty."
+
+[[omitted]]
+Z = 82
+source = "kobayashi2020"
+note = "For lead, the AGB-star band in Fig. 39 runs off the top of its box at the Sun's formation, so the shares cannot be read; the paper says only that AGB stars are the main source of lead."

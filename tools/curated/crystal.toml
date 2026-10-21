@@ -1,0 +1,2443 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Crystal structures of the elements in their standard state (SPEC §6.2, §10.4), one entry of the
+# Crystallography Open Database (COD, CC0) per element; every number is read from the CIF named by
+# cod_id (Å × 100 → pm), and DOIs were checked against Crossref. Gases and liquids are given as
+# low-temperature solids and flagged not_solid_at_rtp. A temperature is given only where the CIF
+# states one (temperature_missing otherwise); nothing is guessed.
+#
+# Pearson symbols: crystal family + centring (A/B/C-centred → S, the IUCr convention; older texts
+# write C) + atoms per conventional cell, counted by applying the CIF symmetry operators to the CIF
+# sites; for R lattices per primitive rhombohedral cell (hexagonal cell / 3).
+#
+# Review notes: rows flagged doubtful (Ar, Rb, Tc, Hg, Eu) say why in their note; phosphorus is
+# black phosphorus (COD has no room-temperature white phosphorus); caesium is at 78 K.
+
+[[row]]
+Z = 1
+symbol = "H"
+allotrope = "solid para-hydrogen (H2)"
+structure = "hexagonal close-packed molecular crystal (hcp arrangement of H2 molecules)"
+state_at_rtp = "gas"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP4"
+atoms_per_cell = 4
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 378.2
+c_pm = 616.7
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_K = 4.2
+cod_id = 9013073
+source = "cod"
+reference = "Ishmaev, S. N.; Sadikov, I. P.; Chernyshev, A. A.; Vindryevsky, B. A.; Sukhoparov, V. A.; Telepnev, A. S.; Kobelyev, G. V. (1983). Zhurnal Eksperimental'noi i Teoreticheskoi Fiziki 84, 394."
+cif_title = "Neutron structural investigations of solid para-hydrogen at pressures up to 24 kbar Sample: at T = 4.2 K Note: known as para-hydrogen"
+flags = ["not_solid_at_rtp", "measured_below_rt", "no_doi"]
+note = "Low-temperature solid only. Entry of the series measured without applied pressure (the paper covers pressures up to 24 kbar). Molecules rotate freely; the CIF models H on site 4f (z = 0.123), giving 4 H atoms per cell, hence hP4 (hP2 if one counts molecule centres). Original paper: Zh. Eksp. Teor. Fiz. 84, 394 (1983); no DOI in CIF."
+
+[[row]]
+Z = 2
+symbol = "He"
+allotrope = "solid helium-4 (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "gas"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 365.0
+c_pm = 594.5
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_K = 1.73
+pressure_kPa = 3000.0
+cod_id = 9011639
+source = "cod"
+doi = "10.1103/PhysRevLett.8.469"
+doi_check = "crossref: resolves; title \"Structure of the γ Form of Solid He 4\""
+reference = "Schuch, A. F.; Mills, R. L. (1962). Physical Review Letters 8, 469."
+cif_title = "Structure of the gamma form of solid He4 Sample: at T = 1.73 K & P = .003 GPa"
+flags = ["not_solid_at_rtp", "measured_below_rt", "elevated_pressure"]
+note = "Helium does not solidify at ambient pressure; this hcp 4He entry was measured at 1.73 K under 3000 kPa (3 MPa), the lowest stated pressure among the hcp helium entries in COD (others: 9011630 at 7 MPa and 1.1 K; Wyckoff's 9008500 at 2 K gives no pressure)."
+
+[[row]]
+Z = 3
+symbol = "Li"
+allotrope = "lithium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 350.92
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 293.15
+cod_id = 9012448
+source = "cod"
+doi = "10.1063/1.1743926"
+doi_check = "crossref: resolves; title \"Lattice Constants of Separated Lithium Isotopes\""
+reference = "Covington, E. J.; Montgomery, D. J. (1957). Journal of Chemical Physics 27, 1030."
+cif_title = "Sample: at T = 20 C Note: Li7 isotope"
+flags = ["isotope_specific"]
+note = "Measured on separated 7Li (natural lithium is mostly 7Li); COD 9012447 gives the 6Li value from the same paper. bcc is the room-temperature form; lithium transforms to close-packed forms on cooling (not covered here)."
+
+[[row]]
+Z = 4
+symbol = "Be"
+allotrope = "α-beryllium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 228.58
+c_pm = 358.43
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_K = 298.15
+cod_id = 9012008
+source = "cod"
+doi = "10.1063/1.1698252"
+doi_check = "crossref: resolves; title \"A High Temperature Precision X-Ray Camera: Some Measurements of the Thermal Coefficients of Expansion of Beryllium\""
+reference = "Gordon, P. (1949). Journal of Applied Physics 20, 908."
+cif_title = "A high temperature precision X-ray camera: some measurements of the thermal coefficients of expansion of beryllium Sample: at T = 25 C"
+flags = []
+note = "Measured at 25 °C (CIF)."
+
+[[row]]
+Z = 5
+symbol = "B"
+allotrope = "β-rhombohedral boron"
+structure = "rhombohedral (β-boron type: framework of B12 icosahedra)"
+state_at_rtp = "solid"
+space_group = "R -3 m :H"
+space_group_number = 166
+pearson = "hR105"
+atoms_per_cell = 314.7
+pearson_derivation = "hexagonal/trigonal (SG 166), centring R, 314.7 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites, divided by 3 for the primitive rhombohedral cell, occupancy-weighted, rounded"
+a_pm = 1092.51
+c_pm = 2381.43
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+cell_axes = "hexagonal"
+temperature_missing = "not stated in CIF"
+cod_id = 9011170
+source = "cod"
+doi = "10.1107/S0567740877007389"
+doi_check = "crossref: resolves; title \"An accurate refinement of the β-rhombohedral boron structure\""
+reference = "Callmer, B. (1977). Acta Crystallographica, Section B 33, 1951."
+cif_title = "An accurate refinement of the beta-rhombohedral boron structure"
+flags = ["temperature_missing", "partial_occupancy"]
+note = "β-rhombohedral boron is the thermodynamically stable form at ambient conditions; α-rhombohedral boron (COD 9017847) is metastable. Cell given on hexagonal axes. Two sites are partially occupied; the occupancy-weighted atom count per hexagonal cell is given in atoms_per_cell, and divided by 3 for the primitive rhombohedral cell (Pearson hR105; hR111 and hR141 also appear in the literature depending on how partial sites are counted). Temperature not stated in CIF."
+
+[[row]]
+Z = 6
+symbol = "C"
+allotrope = "graphite (hexagonal, AB stacking)"
+structure = "hexagonal layered (graphite)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP4"
+atoms_per_cell = 4
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 246.4
+c_pm = 671.1
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9011577
+source = "cod"
+doi = "10.1038/258136a0"
+doi_check = "crossref: resolves; title \"Structure of graphite by neutron diffraction\""
+reference = "Trucano, P.; Chen, R. (1975). Nature 258, 136."
+cif_title = "Structure of graphite by neutron diffraction Note: natural crystals"
+flags = ["temperature_missing"]
+note = "Graphite is the standard state of carbon; diamond is metastable at ambient conditions. Natural crystals, neutron diffraction. Temperature not stated in CIF."
+
+[[row]]
+Z = 7
+symbol = "N"
+allotrope = "α-nitrogen (α-N2)"
+structure = "cubic molecular crystal (α-N2 type)"
+state_at_rtp = "gas"
+space_group = "P a -3"
+space_group_number = 205
+pearson = "cP8"
+atoms_per_cell = 8
+pearson_derivation = "cubic (SG 205), centring P, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 564.4
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 4.2
+cod_id = 9008571
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Sample at T = 4.2 K"
+flags = ["not_solid_at_rtp", "measured_below_rt", "secondary_compilation", "no_doi"]
+note = "Low-temperature solid only, at 4.2 K, value from Wyckoff's compilation (no primary reference in CIF). Schuch & Mills 1970 (COD 9012480, DOI 10.1063/1.1672899) report space group P213 at 20 K, but that COD entry lists only 4 N atoms per cell (half of the 8 atoms of the 4 N2 molecules), so it was not used."
+
+[[row]]
+Z = 8
+symbol = "O"
+allotrope = "α-oxygen (α-O2)"
+structure = "monoclinic molecular crystal"
+state_at_rtp = "gas"
+space_group = "C 1 2/m 1"
+space_group_number = 12
+pearson = "mS4"
+atoms_per_cell = 4
+pearson_derivation = "monoclinic (SG 12), centring C -> S, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 540.3
+b_pm = 342.9
+c_pm = 508.6
+alpha = 90.0
+beta = 132.53
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 1528336
+source = "cod"
+reference = "Barrett, C.S.; Meyer, L.; Wasserman, J. (1967). Journal of Chemical Physics 47, 592."
+cif_title = "Antiferromagnetic and crystal structures of alpha-oxygen"
+flags = ["not_solid_at_rtp", "measured_below_rt", "temperature_missing", "no_doi"]
+note = "Lowest-temperature solid phase of oxygen (antiferromagnetic). Measurement temperature not stated in CIF; original paper J. Chem. Phys. 47, 592 (1967), no DOI in CIF. Cell given in a non-reduced setting (β = 132.53°) as in the CIF."
+
+[[row]]
+Z = 9
+symbol = "F"
+allotrope = "α-fluorine (α-F2)"
+structure = "monoclinic molecular crystal"
+state_at_rtp = "gas"
+space_group = "C 1 2/c 1"
+space_group_number = 15
+pearson = "mS8"
+atoms_per_cell = 8
+pearson_derivation = "monoclinic (SG 15), centring C -> S, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 550.0
+b_pm = 328.0
+c_pm = 728.0
+alpha = 90.0
+beta = 102.17
+gamma = 90.0
+temperature_K = 23.0
+cod_id = 9012106
+source = "cod"
+doi = "10.1016/0022-4596(70)90074-5"
+doi_check = "crossref: resolves; title \"The crystal structure of α-fluorine\""
+reference = "Pauling, L.; Keaveny, I.; Robinson, A. B. (1970). Journal of Solid State Chemistry 2, 225."
+cif_title = "The crystal structure of alpha-fluorine Sample: stable below 45.6 K Note: alpha phase"
+flags = ["not_solid_at_rtp", "measured_below_rt"]
+note = "Low-temperature solid only, at 23 K. CIF note: the α phase is stable below 45.6 K."
+
+[[row]]
+Z = 10
+symbol = "Ne"
+allotrope = "neon (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "gas"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 446.2
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 4.2
+cod_id = 9011633
+source = "cod"
+reference = "Bolz, L. H.; Mauer, F. A. (1962). Physical Review 111, 242."
+cif_title = "Measurement of the lattice constants of neon isotopes in the temperature range 4-24 K Locality: synthetic Sample: at T = 4.2 K Note: this is isotope 20 Ne"
+flags = ["not_solid_at_rtp", "measured_below_rt", "isotope_specific", "no_doi", "citation_check"]
+note = "Low-temperature solid only, at 4.2 K, on the 20Ne isotope (natural neon is mostly 20Ne; COD 9011634 gives 22Ne). The CIF cites Phys. Rev. 111, 242 (1962) without DOI; volume and year look inconsistent, so check the citation before display."
+
+[[row]]
+Z = 11
+symbol = "Na"
+allotrope = "sodium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 429.06
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 293.0
+cod_id = 9008545
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Sample at T = 293 K Body centered cubic, bcc, structure"
+flags = ["secondary_compilation", "no_doi"]
+note = "bcc at 293 K, value from Wyckoff's compilation (no primary reference in CIF). Sodium transforms to close-packed forms at low temperature (not covered here)."
+
+[[row]]
+Z = 12
+symbol = "Mg"
+allotrope = "magnesium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 320.93
+c_pm = 521.03
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_K = 298.15
+cod_id = 9012001
+source = "cod"
+doi = "10.1063/1.1698520"
+doi_check = "crossref: resolves; title \"The Precision Determination of Lattice Constants by the Powder and Rotating Crystal Methods and Applications\""
+reference = "Straumanis, M. E. (1949). Journal of Applied Physics 20, 726."
+cif_title = "The precision determination of lattice constants by the powder and rotation crystal methods and applications Sample: at T = 25 C"
+flags = []
+note = "Measured at 25 °C (CIF)."
+
+[[row]]
+Z = 13
+symbol = "Al"
+allotrope = "aluminium (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 404.961
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.15
+cod_id = 9012002
+source = "cod"
+doi = "10.1063/1.1698520"
+doi_check = "crossref: resolves; title \"The Precision Determination of Lattice Constants by the Powder and Rotating Crystal Methods and Applications\""
+reference = "Straumanis, M. E. (1949). Journal of Applied Physics 20, 726."
+cif_title = "The precision determination of lattice constants by the powder and rotation crystal methods and applications Locality: synthetic Sample: at T = 25 C"
+flags = ["kx_converted"]
+note = "Measured at 25 °C. The original paper reported kX units; COD multiplied the cell constant by 1.00202 to give ångström (note in CIF)."
+
+[[row]]
+Z = 14
+symbol = "Si"
+allotrope = "silicon (diamond cubic)"
+structure = "diamond cubic"
+state_at_rtp = "solid"
+space_group = "F d -3 m :1"
+space_group_number = 227
+pearson = "cF8"
+atoms_per_cell = 8
+pearson_derivation = "cubic (SG 227), centring F, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 543.0941
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.15
+cod_id = 9011998
+source = "cod"
+doi = "10.1107/S0021889875010965"
+doi_check = "crossref: resolves; title \"Accurate lattice constants from multiple reflection measurements. II. Lattice constants of germanium silicon, and diamond\""
+reference = "Hom, T.; Kiszenick, W.; Post, B. (1975). Journal of Applied Crystallography 8, 457."
+cif_title = "Accurate lattice constants from multiple reflection mesurements II. lattice constants of germanium, silicon and diamond Sample: at T = 25 C"
+flags = []
+note = "Measured at 25 °C (CIF). Space-group origin choice 1 as in the CIF."
+
+[[row]]
+Z = 15
+symbol = "P"
+allotrope = "black phosphorus"
+structure = "orthorhombic (puckered layers, black-phosphorus type)"
+state_at_rtp = "solid"
+space_group = "C m c a"
+space_group_number = 64
+pearson = "oS8"
+atoms_per_cell = 8
+pearson_derivation = "orthorhombic (SG 64), centring C -> S, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 331.64
+a_unc_pm = 0.05
+b_pm = 1048.4
+b_unc_pm = 0.3
+c_pm = 437.93
+c_unc_pm = 0.05
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 293.0
+cod_id = 4307698
+source = "cod"
+doi = "10.1021/ic062192q"
+doi_check = "crossref: resolves; title \"Au 3 SnP 7 @Black Phosphorus: An Easy Access to Black Phosphorus\""
+reference = "Stefan Lange; Peer Schmidt; Tom Nilges (2007). Inorganic Chemistry 46, 4028."
+cif_title = "Au3SnP7@Black Phosphorus: An Easy Access to Black Phosphorus"
+flags = ["allotrope_choice"]
+note = "Black phosphorus is the thermodynamically stable allotrope at ambient conditions and was chosen here. White phosphorus (P4 molecules) is the conventional thermodynamic reference state, but its room-temperature α form is orientationally disordered and has no COD entry (COD has β-white P at 158 K, 9013110, and a white-P polymorph at 100 K, 1570230). Space group given as 'C m c a', the older symbol of Cmce (No. 64). Measured at 293 K."
+
+[[row]]
+Z = 16
+symbol = "S"
+allotrope = "α-sulfur (orthorhombic, S8 rings)"
+structure = "orthorhombic (S8 crown-shaped rings)"
+state_at_rtp = "solid"
+space_group = "F d d d :2"
+space_group_number = 70
+pearson = "oF128"
+atoms_per_cell = 128
+pearson_derivation = "orthorhombic (SG 70), centring F, 128 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 1046.46
+b_pm = 1286.60
+c_pm = 2448.60
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.0
+cod_id = 9011362
+source = "cod"
+doi = "10.1107/S0108270187088152"
+doi_check = "crossref: resolves; title \"Refinement of the structure of orthorhombic sulfur, α-S8\""
+reference = "Rettig, S. J.; Trotter, J. (1987). Acta Crystallographica, Section C 43, 2260."
+cif_title = "Refinement of the structure of orthorhombic sulfur, alpha-S8 Locality: synthetic Sample: at T = 298 K Note: alpha phase"
+flags = []
+note = "α-S8 at 298 K. COD 9011363 is the same paper's high-angle refinement. Space-group origin choice 2 as in the CIF."
+
+[[row]]
+Z = 17
+symbol = "Cl"
+allotrope = "solid chlorine (Cl2)"
+structure = "orthorhombic molecular crystal (layers of Cl2 molecules)"
+state_at_rtp = "gas"
+space_group = "C m c e"
+space_group_number = 64
+pearson = "oS8"
+atoms_per_cell = 8
+pearson_derivation = "orthorhombic (SG 64), centring C -> S, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 629.29
+b_pm = 453.61
+c_pm = 816.17
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 160.0
+cod_id = 9013123
+source = "cod"
+doi = "10.1080/00268978400102741"
+doi_check = "crossref: resolves; title \"The temperature dependence of the crystal structures of the solid halogens, bromine and chlorine\""
+reference = "Powell, B. M.; Heal, K. M.; Torrie, B. H. (1984). Molecular Physics 53, 929."
+cif_title = "The temperature dependence of the crystal structures of the solid halogens, bromine and chlorine Locality: synthetic Sample: at T = 160 K"
+flags = ["not_solid_at_rtp", "measured_below_rt"]
+note = "Low-temperature solid only, at 160 K, the highest temperature in this series (same paper also gives 22, 55 and 100 K)."
+
+[[row]]
+Z = 18
+symbol = "Ar"
+allotrope = "argon (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "gas"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 525.0
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 4.2
+cod_id = 9011635
+source = "cod"
+doi = "10.1103/PhysRev.111.1470"
+doi_check = "crossref: resolves; title \"Atomic Distribution in Liquid and Solid Neon and Solid Argon by Neutron Diffraction\""
+reference = "Henshaw, D. G. (1958). Physical Review 111, 1470."
+cif_title = "Atomic distribution in liquid and solid neon and solid argon by neutron diffraction Locality: synthetic Sample: at T = 4.2 K"
+flags = ["not_solid_at_rtp", "measured_below_rt", "doubtful"]
+note = "Low-temperature solid only, at 4.2 K, neutron diffraction. Doubtful: a is given to three significant figures and COD's other ambient-pressure argon entries disagree (Wyckoff 9008462: 5.256 Å at 4.2 K; Dobbs et al. 1956, 1541541: 5.4 Å, no temperature). Check against a modern precision measurement before display."
+
+[[row]]
+Z = 19
+symbol = "K"
+allotrope = "potassium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 532.8
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+pressure_kPa = 0.0
+cod_id = 9011970
+source = "cod"
+doi = "10.1016/0022-3697(86)90073-9"
+doi_check = "crossref: resolves; title \"Compression and polymorphism of potassium to 400 kbar\""
+reference = "Liu, L. (1986). Journal of Physics and Chemistry of Solids 47, 1067."
+cif_title = "Compression and polymorphism of potassium to 400 Kbar Sample: bcc at P = 0 GPa"
+flags = ["temperature_missing"]
+note = "bcc at 0 GPa, the first point of a compression series. Temperature not stated in CIF. COD's other ambient-pressure potassium entries are at 5–78 K."
+
+[[row]]
+Z = 20
+symbol = "Ca"
+allotrope = "α-calcium"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 558.84
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 299.15
+cod_id = 9011033
+source = "cod"
+doi = "10.1107/S0365110X59001268"
+doi_check = "crossref: resolves; title \"Coefficients of thermal expansion for face-centered cubic and body-centered cubic calcium\""
+reference = "Bernstein, B. T.; Smith, J. F. (1959). Acta Crystallographica 12, 419."
+cif_title = "Coefficients of thermal expansion for face-centered cubic and body-centered cubic calcium Sample: at T = 26 C"
+flags = []
+note = "Measured at 26 °C (CIF)."
+
+[[row]]
+Z = 21
+symbol = "Sc"
+allotrope = "α-scandium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 330.90
+c_pm = 527.33
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010985
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.6% pure"
+flags = ["temperature_missing"]
+note = "Sample 99.6 % pure (CIF). Temperature not stated in CIF."
+
+[[row]]
+Z = 22
+symbol = "Ti"
+allotrope = "α-titanium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 295.0
+c_pm = 468.6
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008517
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation (no primary reference in CIF); temperature not stated. COD 9017383 (natural titanium mineral) lists the same cell."
+
+[[row]]
+Z = 23
+symbol = "V"
+allotrope = "vanadium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 302.41
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.15
+cod_id = 9012770
+source = "cod"
+reference = "James, W. J.; Straumanis, M. E. (1960). Journal of the Electrochemical Society 107, 69."
+cif_title = "Lattice parameter and expansion coefficient of vanadium Sample: at T = 25C"
+flags = ["no_doi"]
+note = "Measured at 25 °C. Original paper J. Electrochem. Soc. 107, 69 (1960); no DOI in CIF."
+
+[[row]]
+Z = 24
+symbol = "Cr"
+allotrope = "chromium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 288.39
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 5000220
+source = "cod"
+reference = "Swanson, H E; Gilfrich, N T; Ugrinic, G M (1955). National Bureau of Standards (U.S.), Circular 539, 5."
+cif_title = "Standard X-ray diffraction powder patterns"
+flags = ["temperature_missing", "no_doi"]
+note = "Standard powder pattern, NBS Circular 539 vol. 5 (1955); temperature not stated in CIF."
+
+[[row]]
+Z = 25
+symbol = "Mn"
+allotrope = "α-manganese"
+structure = "cubic, α-Mn type (complex body-centred cubic cell)"
+state_at_rtp = "solid"
+space_group = "I -4 3 m"
+space_group_number = 217
+pearson = "cI58"
+atoms_per_cell = 58
+pearson_derivation = "cubic (SG 217), centring I, 58 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 891.25
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.0
+cod_id = 9011068
+source = "cod"
+doi = "10.1107/S0365110X67001689"
+doi_check = "crossref: resolves; title \"A refinement of the parameters of α-manganese\""
+reference = "Gazzara, C. P.; Middleton, R. M.; Weiss, R. J.; Hall, E. O. (1967). Acta Crystallographica 22, 859."
+cif_title = "A refinement of the parameters of alpha manganese Localilty: synthetic Sample: at T = 298K"
+flags = []
+note = "α-Mn has 58 atoms per conventional cell on four independent sites. Measured at 298 K."
+
+[[row]]
+Z = 26
+symbol = "Fe"
+allotrope = "α-iron (ferrite)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 286.54
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.0
+pressure_kPa = 0.0
+cod_id = 9006587
+source = "cod"
+doi = "10.1007/s002690050178"
+doi_check = "crossref: resolves; title \"Thermal equation of state of iron and Fe 0.91 Si 0.09\""
+reference = "Zhang, J.; Guyot, F. (1999). Physics and Chemistry of Minerals 26, 206."
+cif_title = "Thermal equation of iron and Fe0.91Si0.09 Sample: P = 0.0 GPa, T = 298 K, prior to experiment"
+flags = []
+note = "Measured at 298 K and 0 GPa, first point of a P–T series. Wyckoff's compilation (COD 9008536) gives 2.8665 Å at 298 K."
+
+[[row]]
+Z = 27
+symbol = "Co"
+allotrope = "hcp cobalt (low-temperature form)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 250.74
+c_pm = 406.99
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010967
+source = "cod"
+doi = "10.1107/S0365110X50000732"
+doi_check = "crossref: resolves; title \"Precision measurements of lattice parameters of non-cubic crystals\""
+reference = "Taylor, A.; Floyd, R. W. (1950). Acta Crystallographica 3, 285."
+cif_title = "Precision measurements of lattice parameters of non-cubic crystals Sample: at T < 450 C"
+flags = ["temperature_missing"]
+note = "The CIF states only 'T < 450 C' (the hcp stability range); the actual measurement temperature is not given. Above that range cobalt is fcc."
+
+[[row]]
+Z = 28
+symbol = "Ni"
+allotrope = "nickel (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 352.4
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 293.0
+cod_id = 9013024
+source = "cod"
+doi = "10.1007/BF01174717"
+doi_check = "crossref: resolves; title \"High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction\""
+reference = "Suh, I.-K.; Ohta, H.; Waseda, Y. (1988). Journal of Materials Science 23, 757."
+cif_title = "High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 293 K"
+flags = []
+note = "Measured at 293 K (CIF)."
+
+[[row]]
+Z = 29
+symbol = "Cu"
+allotrope = "copper (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 361.3
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 293.0
+cod_id = 9013014
+source = "cod"
+doi = "10.1007/BF01174717"
+doi_check = "crossref: resolves; title \"High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction\""
+reference = "Suh, I.-K.; Ohta, H.; Waseda, Y. (1988). Journal of Materials Science 23, 757."
+cif_title = "High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 293 K"
+flags = []
+note = "Measured at 293 K; value given to four significant figures. Otte 1961 (COD 9012043, no temperature) gives 3.6150 Å."
+
+[[row]]
+Z = 30
+symbol = "Zn"
+allotrope = "zinc (hcp)"
+structure = "hexagonal close-packed (hcp, elongated c axis)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 266.48
+c_pm = 494.67
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008522
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. Older COD zinc entries are in kX units."
+
+[[row]]
+Z = 31
+symbol = "Ga"
+allotrope = "α-gallium"
+structure = "orthorhombic (α-gallium type, Ga2 pairs)"
+state_at_rtp = "solid"
+space_group = "C m c e"
+space_group_number = 64
+pearson = "oS8"
+atoms_per_cell = 8
+pearson_derivation = "orthorhombic (SG 64), centring C -> S, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 452.3
+b_pm = 766.1
+c_pm = 452.4
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008085
+source = "cod"
+reference = "Sharma, B. D.; Donohue, J. (1962). Zeitschrift fur Kristallographie 117, 293."
+cif_title = "A refinement of the crystal structure of gallium"
+flags = ["temperature_missing", "no_doi"]
+note = "Original paper Z. Kristallogr. 117, 293 (1962); no DOI in CIF; temperature not stated. 'C m c e' is space group 64."
+
+[[row]]
+Z = 32
+symbol = "Ge"
+allotrope = "germanium (diamond cubic)"
+structure = "diamond cubic"
+state_at_rtp = "solid"
+space_group = "F d -3 m :1"
+space_group_number = 227
+pearson = "cF8"
+atoms_per_cell = 8
+pearson_derivation = "cubic (SG 227), centring F, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 565.7820
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.15
+cod_id = 9011999
+source = "cod"
+doi = "10.1107/S0021889875010965"
+doi_check = "crossref: resolves; title \"Accurate lattice constants from multiple reflection measurements. II. Lattice constants of germanium silicon, and diamond\""
+reference = "Hom, T.; Kiszenick, W.; Post, B. (1975). Journal of Applied Crystallography 8, 457."
+cif_title = "Accurate lattice constants from multiple reflection mesurements II. lattice constants of germanium, silicon and diamond Sample: at T = 25 C"
+flags = []
+note = "Measured at 25 °C (CIF)."
+
+[[row]]
+Z = 33
+symbol = "As"
+allotrope = "grey arsenic (α-As)"
+structure = "rhombohedral (α-arsenic type, puckered layers)"
+state_at_rtp = "solid"
+space_group = "R -3 m :H"
+space_group_number = 166
+pearson = "hR2"
+atoms_per_cell = 6
+pearson_derivation = "hexagonal/trigonal (SG 166), centring R, 6 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites, divided by 3 for the primitive rhombohedral cell"
+a_pm = 375.98
+c_pm = 1054.75
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+cell_axes = "hexagonal"
+temperature_K = 299.0
+cod_id = 9009652
+source = "cod"
+doi = "10.1107/S0021889869006443"
+doi_check = "crossref: resolves; title \"The crystal structure of arsenic at 4.2, 78 and 299°K\""
+reference = "Schiferl, D.; Barrett, C. S. (1969). Journal of Applied Crystallography 2, 30."
+cif_title = "The crystal structure of arsenic at 4.2, 78 and 299 K Sample: T = 299 K"
+flags = []
+note = "Measured at 299 K. Cell on hexagonal axes; Pearson count per primitive rhombohedral cell."
+
+[[row]]
+Z = 34
+symbol = "Se"
+allotrope = "grey (trigonal) selenium"
+structure = "trigonal (helical chains)"
+state_at_rtp = "solid"
+space_group = "P 31 2 1"
+space_group_number = 152
+pearson = "hP3"
+atoms_per_cell = 3
+pearson_derivation = "hexagonal/trigonal (SG 152), centring P, 3 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 436.62
+c_pm = 495.36
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9012501
+source = "cod"
+doi = "10.1021/ic50054a037"
+doi_check = "crossref: resolves; title \"The crystal structure of trigonal selenium\""
+reference = "Cherin, P.; Unger, P. (1967). Inorganic Chemistry 6, 1589."
+cif_title = "The crystal structure of trigonal selenium"
+flags = ["temperature_missing"]
+note = "Grey selenium is the stable form. P3121 as in the CIF (the enantiomorph P3221 describes the mirror-image crystal). Temperature not stated."
+
+[[row]]
+Z = 35
+symbol = "Br"
+allotrope = "solid bromine (Br2)"
+structure = "orthorhombic molecular crystal (layers of Br2 molecules)"
+state_at_rtp = "liquid"
+space_group = "C m c e"
+space_group_number = 64
+pearson = "oS8"
+atoms_per_cell = 8
+pearson_derivation = "orthorhombic (SG 64), centring C -> S, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 672.65
+b_pm = 464.51
+c_pm = 870.23
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 250.0
+cod_id = 9013119
+source = "cod"
+doi = "10.1080/00268978400102741"
+doi_check = "crossref: resolves; title \"The temperature dependence of the crystal structures of the solid halogens, bromine and chlorine\""
+reference = "Powell, B. M.; Heal, K. M.; Torrie, B. H. (1984). Molecular Physics 53, 929."
+cif_title = "The temperature dependence of the crystal structures of the solid halogens, bromine and chlorine Locality: synthetic Sample: at T = 250 K"
+flags = ["not_solid_at_rtp", "measured_below_rt"]
+note = "Liquid at room temperature; solid Br2 at 250 K, the highest temperature in this series (also 5, 80, 170 K)."
+
+[[row]]
+Z = 36
+symbol = "Kr"
+allotrope = "krypton (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "gas"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 572.1
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 58.0
+cod_id = 9008471
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Sample at T = 58 K Cubic closest packed, ccp, structure"
+flags = ["not_solid_at_rtp", "measured_below_rt", "secondary_compilation", "no_doi"]
+note = "Low-temperature solid only, at 58 K; the only ambient-pressure krypton entry in COD (Wyckoff's compilation)."
+
+[[row]]
+Z = 37
+symbol = "Rb"
+allotrope = "rubidium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 570.0
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 297.0
+cod_id = 9012876
+source = "cod"
+doi = "10.1139/p55-003"
+doi_check = "crossref: resolves; title \"THE RUBIDIUM TRANSITION AT ~ 180°K.\""
+reference = "Kelly, F. M.; Pearson, W. B. (1955). Canadian Journal of Physics 33, 17."
+cif_title = "The rubidium transition at ~180 K Sample: at T = 297 K Note: specimen III lattice parameter for this T is estimated"
+flags = ["doubtful"]
+note = "At 297 K. CIF note: the lattice parameter of this specimen at this temperature is estimated. COD 9012879 (another specimen, same paper) gives 5.697 Å."
+
+[[row]]
+Z = 38
+symbol = "Sr"
+allotrope = "α-strontium"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 608.47
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008484
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. Hirst et al. 1956 (COD 9012726, DOI 10.1021/j150537a011) give a noticeably smaller 6.076 Å at 25 °C."
+
+[[row]]
+Z = 39
+symbol = "Y"
+allotrope = "α-yttrium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 364.74
+c_pm = 573.06
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010984
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.4% pure"
+flags = ["temperature_missing"]
+note = "Sample 99.4 % pure (CIF). Temperature not stated."
+
+[[row]]
+Z = 40
+symbol = "Zr"
+allotrope = "α-zirconium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 323.2
+c_pm = 514.7
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008523
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated; the only ambient-pressure hcp zirconium entry in COD."
+
+[[row]]
+Z = 41
+symbol = "Nb"
+allotrope = "niobium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 330.04
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008546
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Body centered cubic, bcc, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. Roberge 1975 (COD 1539041, no temperature in CIF) gives 3.3063 Å."
+
+[[row]]
+Z = 42
+symbol = "Mo"
+allotrope = "molybdenum (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 314.73
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008543
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Body centered cubic, bcc, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. Older COD molybdenum entries are in kX units."
+
+[[row]]
+Z = 43
+symbol = "Tc"
+allotrope = "technetium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 274.0
+c_pm = 439.8
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 1541062
+source = "cod"
+reference = "Trzebiatowski, W.; Rudzinski, J. (1964). Journal of the Less-Common Metals 6, 244."
+cif_title = "The composition and structure of technetium nitride and technetium borides"
+flags = ["temperature_missing", "no_doi", "doubtful"]
+note = "The only COD entry for technetium metal, from a study of technetium nitride and borides (J. Less-Common Met. 1964); a given to three significant figures; temperature not stated."
+
+[[row]]
+Z = 44
+symbol = "Ru"
+allotrope = "ruthenium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 270.389
+c_pm = 428.168
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008513
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated."
+
+[[row]]
+Z = 45
+symbol = "Rh"
+allotrope = "rhodium (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 380.31
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008482
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated."
+
+[[row]]
+Z = 46
+symbol = "Pd"
+allotrope = "palladium (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 388.98
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008478
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. Ellner 1981 (COD 9009820, DOI 10.1016/0022-5088(81)90140-5) gives 3.893 Å."
+
+[[row]]
+Z = 47
+symbol = "Ag"
+allotrope = "silver (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 408.6
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 293.0
+cod_id = 9013045
+source = "cod"
+doi = "10.1007/BF01174717"
+doi_check = "crossref: resolves; title \"High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction\""
+reference = "Suh, I.-K.; Ohta, H.; Waseda, Y. (1988). Journal of Materials Science 23, 757."
+cif_title = "High-temperature thermal expansion of six metallic elements measured by dilatation method and X-ray diffraction Sample: at T = 293 K"
+flags = []
+note = "Measured at 293 K (CIF)."
+
+[[row]]
+Z = 48
+symbol = "Cd"
+allotrope = "cadmium (hcp)"
+structure = "hexagonal close-packed (hcp, elongated c axis)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 297.887
+c_pm = 561.765
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008490
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. The other COD cadmium entry is in kX units."
+
+[[row]]
+Z = 49
+symbol = "In"
+allotrope = "indium (body-centred tetragonal)"
+structure = "body-centred tetragonal"
+state_at_rtp = "solid"
+space_group = "I 4/m m m"
+space_group_number = 139
+pearson = "tI2"
+atoms_per_cell = 2
+pearson_derivation = "tetragonal (SG 139), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 325.30
+c_pm = 494.55
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9017521
+source = "cod"
+reference = "Smith, J. F.; Schneider, V. L. (1964). Journal of the Less-Common Metals 7, 17."
+cif_title = "Anisotropic thermal expansion of indium Sample: 99.9999% indium Note: converted from kx units"
+flags = ["temperature_missing", "no_doi", "kx_converted"]
+note = "99.9999 % indium. CIF note: converted from kX units. Temperature not stated. COD 9012374–9012380 hold the same paper's data still in kX units and on a face-centred tetragonal cell (labelled I4/mmm); not used."
+
+[[row]]
+Z = 50
+symbol = "Sn"
+allotrope = "white tin (β-Sn)"
+structure = "body-centred tetragonal (β-tin type)"
+state_at_rtp = "solid"
+space_group = "I 41/a m d :1"
+space_group_number = 141
+pearson = "tI4"
+atoms_per_cell = 4
+pearson_derivation = "tetragonal (SG 141), centring I, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 583.146
+c_pm = 318.129
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.15
+cod_id = 9012005
+source = "cod"
+doi = "10.1063/1.1698520"
+doi_check = "crossref: resolves; title \"The Precision Determination of Lattice Constants by the Powder and Rotating Crystal Methods and Applications\""
+reference = "Straumanis, M. E. (1949). Journal of Applied Physics 20, 726."
+cif_title = "The precision determination of lattice constants by the powder and rotation crystal methods and applications Locality: synthetic Sample: at T = 25 C"
+flags = ["kx_converted"]
+note = "White β-tin is the room-temperature form; grey α-tin (diamond cubic) is the low-temperature form. Measured at 25 °C; COD multiplied the published kX values by 1.00202 (note in CIF)."
+
+[[row]]
+Z = 51
+symbol = "Sb"
+allotrope = "grey antimony"
+structure = "rhombohedral (α-arsenic type, puckered layers)"
+state_at_rtp = "solid"
+space_group = "R -3 m :H"
+space_group_number = 166
+pearson = "hR2"
+atoms_per_cell = 6
+pearson_derivation = "hexagonal/trigonal (SG 166), centring R, 6 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites, divided by 3 for the primitive rhombohedral cell"
+a_pm = 430.84
+c_pm = 1127.40
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+cell_axes = "hexagonal"
+temperature_K = 299.0
+cod_id = 9009655
+source = "cod"
+doi = "10.1107/S0021889869006443"
+doi_check = "crossref: resolves; title \"The crystal structure of arsenic at 4.2, 78 and 299°K\""
+reference = "Schiferl, D.; Barrett, C. S. (1969). Journal of Applied Crystallography 2, 30."
+cif_title = "The crystal structure of arsenic at 4.2, 78 and 299 K Sample: T = 299 K"
+flags = []
+note = "At 299 K, hexagonal axes. Same values as Barrett, Cucka & Haefner 1963 (COD 5000214, DOI 10.1107/S0365110X63001262, Crossref-checked), which gives s.u. of 0.0002 Å (a) and 0.006 Å (c)."
+
+[[row]]
+Z = 52
+symbol = "Te"
+allotrope = "trigonal tellurium"
+structure = "trigonal (helical chains)"
+state_at_rtp = "solid"
+space_group = "P 31 2 1"
+space_group_number = 152
+pearson = "hP3"
+atoms_per_cell = 3
+pearson_derivation = "hexagonal/trigonal (SG 152), centring P, 3 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 445.6
+c_pm = 592.1
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 2020222
+source = "cod"
+reference = "Adenis, C.; Langer, V.; Lindqvist, O. (1989). Acta Crystallographica C (39,1983-) 45, 941."
+cif_title = "Reinvestigation of the structure of tellurium"
+flags = ["temperature_missing", "no_doi"]
+note = "Original paper Acta Cryst. C 45, 941 (1989); no DOI in CIF; temperature not stated."
+
+[[row]]
+Z = 53
+symbol = "I"
+allotrope = "solid iodine (I2)"
+structure = "orthorhombic molecular crystal (layers of I2 molecules)"
+state_at_rtp = "solid"
+space_group = "B m e b"
+space_group_number = 64
+pearson = "oS8"
+atoms_per_cell = 8
+pearson_derivation = "orthorhombic (SG 64), centring B -> S, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 727.007
+b_pm = 979.344
+c_pm = 479.004
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008595
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York"
+flags = ["temperature_missing", "secondary_compilation", "nonstandard_setting", "no_doi"]
+note = "Given in the non-standard setting 'B m e b' of space group 64; the standard Cmce setting swaps b and c. Wyckoff's compilation; temperature not stated. A modern refinement at 100 K is COD 4511285 (DOI 10.1021/cg5005159)."
+
+[[row]]
+Z = 54
+symbol = "Xe"
+allotrope = "xenon (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "gas"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 620.23
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 75.0
+cod_id = 9012464
+source = "cod"
+doi = "10.1063/1.1733133"
+doi_check = "crossref: resolves; title \"Density and Expansivity of Solid Xenon\""
+reference = "Sears, D. R.; Klug, H. P. (1962). Journal of Chemical Physics 37, 3002."
+cif_title = "Density and expansivity of solid xenon Sample: at T = 75 K"
+flags = ["not_solid_at_rtp", "measured_below_rt"]
+note = "Low-temperature solid only, at 75 K, the highest temperature in this series (5–75 K)."
+
+[[row]]
+Z = 55
+symbol = "Cs"
+allotrope = "caesium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 606.7
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 78.0
+cod_id = 9011011
+source = "cod"
+doi = "10.1107/S0365110X56001790"
+doi_check = "crossref: resolves; title \"X-ray study of the alkali metals at low temperatures\""
+reference = "Barrett, C. S. (1956). Acta Crystallographica 9, 671."
+cif_title = "X-ray study of the alkali metals at low temperatures Locality: synthetic Sample: at T = 78 K Note: lattice parameters are average of 6 values"
+flags = ["measured_below_rt"]
+note = "COD has no room-temperature, ambient-pressure caesium entry; this bcc value is at 78 K (average of 6 values, CIF note)."
+
+[[row]]
+Z = 56
+symbol = "Ba"
+allotrope = "barium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 502.5
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 300.0
+cod_id = 9008529
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Sample at T = 300 K Body centered cubic, bcc, structure"
+flags = ["secondary_compilation", "no_doi"]
+note = "At 300 K, Wyckoff's compilation. Hirst et al. 1956 (COD 9012729, DOI 10.1021/j150537a011) give a smaller 5.013 Å at 25 °C."
+
+[[row]]
+Z = 57
+symbol = "La"
+allotrope = "α-lanthanum"
+structure = "double hexagonal close-packed (dhcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP4"
+atoms_per_cell = 4
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 377.0
+c_pm = 1215.9
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008525
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Double hexagonal closest packed, dhcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's entry chosen because it lists both dhcp sites; its cell is identical to Spedding et al. 1956 (COD 9010986, DOI 10.1107/S0365110X5600156X), whose COD CIF lists only one of the two sites. Temperature not stated."
+
+[[row]]
+Z = 58
+symbol = "Ce"
+allotrope = "γ-cerium"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 516.12
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010987
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.9% pure"
+flags = ["temperature_missing"]
+note = "γ-Ce (fcc) is the usual room-temperature form; the dhcp β form can also be present depending on thermal history. Sample 99.9 % pure; temperature not stated."
+
+[[row]]
+Z = 59
+symbol = "Pr"
+allotrope = "α-praseodymium"
+structure = "double hexagonal close-packed (dhcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP4"
+atoms_per_cell = 4
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 367.25
+c_pm = 1183.54
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008527
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Double hexagonal closest packed, dhcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's entry chosen because it lists both dhcp sites; cell identical to Spedding et al. 1956 (COD 9010988, DOI 10.1107/S0365110X5600156X). Temperature not stated."
+
+[[row]]
+Z = 60
+symbol = "Nd"
+allotrope = "α-neodymium"
+structure = "double hexagonal close-packed (dhcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP4"
+atoms_per_cell = 4
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 365.79
+c_pm = 1179.92
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008526
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Double hexagonal closest packed, dhcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's entry chosen because it lists both dhcp sites; cell identical to Spedding et al. 1956 (COD 9010989, DOI 10.1107/S0365110X5600156X). Temperature not stated."
+
+[[row]]
+Z = 62
+symbol = "Sm"
+allotrope = "α-samarium"
+structure = "rhombohedral (samarium type, nine-layer close packing)"
+state_at_rtp = "solid"
+space_group = "R -3 m :R"
+space_group_number = 166
+pearson = "hR3"
+atoms_per_cell = 3
+pearson_derivation = "hexagonal/trigonal (SG 166), centring R, 3 atom(s) per CIF cell (rhombohedral axes = primitive cell) counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 899.6
+alpha = 23.22
+beta = 23.22
+gamma = 23.22
+cell_axes = "rhombohedral"
+temperature_missing = "not stated in CIF"
+cod_id = 9014498
+source = "cod"
+doi = "10.1107/S0365110X54001818"
+doi_check = "crossref: resolves; title \"The crystal structure of samarium\""
+reference = "Daane, A. H.; Rundle, R. E.; Smith, H. G.; Spedding, F. H. (1954). Acta Crystallographica 7, 532."
+cif_title = "The crystal structure of samarium Note: sample 99% pure"
+flags = ["temperature_missing"]
+note = "Cell on rhombohedral axes as in the CIF (a = b = c, small rhombohedral angle); 3 atoms per primitive cell. Sample 99 % pure; temperature not stated."
+
+[[row]]
+Z = 63
+symbol = "Eu"
+allotrope = "europium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 460.6
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010990
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 98-99% pure"
+flags = ["temperature_missing", "doubtful"]
+note = "Sample only 98–99 % pure (CIF), the lowest purity in this 1956 series; treat with caution. Temperature not stated. The only other ambient-pressure europium entry in COD is Wyckoff's 9008534 (4.551 Å at 5 K)."
+
+[[row]]
+Z = 64
+symbol = "Gd"
+allotrope = "α-gadolinium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 363.60
+c_pm = 578.26
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010991
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Note: sample 99.7% pure"
+flags = ["temperature_missing"]
+note = "Temperature not stated in this CIF; Wyckoff's entry COD 9008499 lists the identical cell at 293 K."
+
+[[row]]
+Z = 65
+symbol = "Tb"
+allotrope = "α-terbium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 360.10
+c_pm = 569.36
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010992
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.9% pure"
+flags = ["temperature_missing"]
+note = "Temperature not stated."
+
+[[row]]
+Z = 66
+symbol = "Dy"
+allotrope = "α-dysprosium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 359.03
+c_pm = 564.75
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010993
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Note: sample 99.8% pure"
+flags = ["temperature_missing"]
+note = "Temperature not stated in this CIF; Wyckoff's entry COD 9008495 lists the identical cell at 293 K."
+
+[[row]]
+Z = 67
+symbol = "Ho"
+allotrope = "holmium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 357.73
+c_pm = 561.58
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010994
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.4% pure"
+flags = ["temperature_missing"]
+note = "Sample 99.4 % pure (CIF). Temperature not stated."
+
+[[row]]
+Z = 68
+symbol = "Er"
+allotrope = "erbium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 355.88
+c_pm = 558.74
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010995
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.8% pure"
+flags = ["temperature_missing"]
+note = "Temperature not stated."
+
+[[row]]
+Z = 69
+symbol = "Tm"
+allotrope = "thulium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 353.75
+c_pm = 555.46
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010996
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.9% pure"
+flags = ["temperature_missing"]
+note = "Temperature not stated."
+
+[[row]]
+Z = 70
+symbol = "Yb"
+allotrope = "ytterbium (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 548.62
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010997
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.9% pure"
+flags = ["temperature_missing"]
+note = "fcc is the usual room-temperature form. Temperature not stated."
+
+[[row]]
+Z = 71
+symbol = "Lu"
+allotrope = "lutetium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 350.31
+c_pm = 555.09
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9010998
+source = "cod"
+doi = "10.1107/S0365110X5600156X"
+doi_check = "crossref: resolves; title \"The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals\""
+reference = "Spedding, F. H.; Daane, A. H.; Herrmann, K. W. (1956). Acta Crystallographica 9, 559."
+cif_title = "The crystal structures and lattice parameters of high-purity scandium, yttrium and the rare earth metals Locality: synthetic Note: sample 99.9% pure"
+flags = ["temperature_missing"]
+note = "Temperature not stated."
+
+[[row]]
+Z = 72
+symbol = "Hf"
+allotrope = "α-hafnium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 319.64
+c_pm = 505.11
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 1539076
+source = "cod"
+reference = "Russell, R. (1953). Journal of Applied Physics 24, 232."
+cif_title = "On the Zr-Hf system"
+flags = ["temperature_missing", "no_doi"]
+note = "From a study of the Zr–Hf system (J. Appl. Phys. 1953); no DOI in CIF; temperature not stated. Wyckoff (COD 9008501) gives a = 3.1967 Å, c = 5.0578 Å."
+
+[[row]]
+Z = 73
+symbol = "Ta"
+allotrope = "α-tantalum"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 330.256
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 1541266
+source = "cod"
+doi = "10.1016/0036-9748(77)90141-7"
+doi_check = "crossref: resolves; title \"The lattice parameter of tantalum\""
+reference = "Mueller, M. H. (1977). Scripta Metallurgica 11, 693."
+cif_title = "The lattice parameter of tantalum"
+flags = ["temperature_missing"]
+note = "bcc α-Ta; the tetragonal β-Ta in COD is a metastable (thin-film) phase. Temperature not stated."
+
+[[row]]
+Z = 74
+symbol = "W"
+allotrope = "α-tungsten"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 316.48
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.0
+cod_id = 9006486
+source = "cod"
+doi = "10.1007/s002690050070"
+doi_check = "crossref: resolves; title \"Thermal Expansion of Periclase (MgO) and Tungsten (W) to Melting Temperatures\""
+reference = "Dubrovinsky, L. S.; Saxena, S. K. (1997). Physics and Chemistry of Minerals 24, 547."
+cif_title = "Thermal expansion of periclase (MgO) and tungsten (W) to melting temperatures Sample: T = 298 K"
+flags = []
+note = "Measured at 298 K (CIF)."
+
+[[row]]
+Z = 75
+symbol = "Re"
+allotrope = "rhenium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 276.08
+c_pm = 445.82
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008512
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated."
+
+[[row]]
+Z = 76
+symbol = "Os"
+allotrope = "osmium (hcp)"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 273.52
+c_pm = 431.90
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008510
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Hexagonal closest packed, hcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated."
+
+[[row]]
+Z = 77
+symbol = "Ir"
+allotrope = "iridium (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 383.94
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008470
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated."
+
+[[row]]
+Z = 78
+symbol = "Pt"
+allotrope = "platinum (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 392.31
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008480
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. Most other COD platinum entries are pre-1947 (kX era) or pressure-calibrant data."
+
+[[row]]
+Z = 79
+symbol = "Au"
+allotrope = "gold (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 407.825
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008463
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. Chosen over Suh et al. 1988 (COD 9013035: 4.072 Å at 293 K), which is lower than all other COD gold entries."
+
+[[row]]
+Z = 80
+symbol = "Hg"
+allotrope = "α-mercury"
+structure = "rhombohedral (α-mercury type)"
+state_at_rtp = "liquid"
+space_group = "R -3 m :H"
+space_group_number = 166
+pearson = "hR1"
+atoms_per_cell = 3
+pearson_derivation = "hexagonal/trigonal (SG 166), centring R, 3 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites, divided by 3 for the primitive rhombohedral cell"
+a_pm = 345.8
+c_pm = 668.4
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+cell_axes = "hexagonal"
+temperature_missing = "not stated in CIF"
+cod_id = 1523182
+source = "cod"
+reference = "Amand, R.S.; Giessen, B.C. (1978). Journal of the Less-Common Metals 58, 161."
+cif_title = "On the metastable system mercury-thallium"
+flags = ["not_solid_at_rtp", "measured_below_rt", "temperature_missing", "no_doi", "doubtful"]
+note = "Liquid at room temperature; α-Hg is the low-temperature solid. Pure-Hg entry from a study of the metastable Hg–Tl system (J. Less-Common Met. 58, 161, 1978); measurement temperature not stated, no DOI. Doubtful; the other COD mercury entries are from 1930 (kX era)."
+
+[[row]]
+Z = 81
+symbol = "Tl"
+allotrope = "α-thallium"
+structure = "hexagonal close-packed (hcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP2"
+atoms_per_cell = 2
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 345.6
+c_pm = 552.5
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_K = 297.0
+cod_id = 9008519
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Sample at T = 297 K Hexagonal closest packed, hcp, structure"
+flags = ["secondary_compilation", "no_doi"]
+note = "At 297 K, Wyckoff's compilation."
+
+[[row]]
+Z = 82
+symbol = "Pb"
+allotrope = "lead (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 495.004
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 298.15
+cod_id = 9012004
+source = "cod"
+doi = "10.1063/1.1698520"
+doi_check = "crossref: resolves; title \"The Precision Determination of Lattice Constants by the Powder and Rotating Crystal Methods and Applications\""
+reference = "Straumanis, M. E. (1949). Journal of Applied Physics 20, 726."
+cif_title = "The precision determination of lattice constants by the powder and rotation crystal methods and applications Locality: synthetic Sample: at T = 25 C"
+flags = ["kx_converted"]
+note = "Measured at 25 °C; COD multiplied the published kX value by 1.00202 (note in CIF)."
+
+[[row]]
+Z = 83
+symbol = "Bi"
+allotrope = "bismuth (rhombohedral)"
+structure = "rhombohedral (α-arsenic type, puckered layers)"
+state_at_rtp = "solid"
+space_group = "R -3 m :H"
+space_group_number = 166
+pearson = "hR2"
+atoms_per_cell = 6
+pearson_derivation = "hexagonal/trigonal (SG 166), centring R, 6 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites, divided by 3 for the primitive rhombohedral cell"
+a_pm = 454.60
+c_pm = 1186.2
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+cell_axes = "hexagonal"
+temperature_K = 298.0
+cod_id = 9009658
+source = "cod"
+doi = "10.1107/S0021889869006443"
+doi_check = "crossref: resolves; title \"The crystal structure of arsenic at 4.2, 78 and 299°K\""
+reference = "Schiferl, D.; Barrett, C. S. (1969). Journal of Applied Crystallography 2, 30."
+cif_title = "The crystal structure of arsenic at 4.2, 78 and 299 K Sample: T = 298 K"
+flags = []
+note = "At 298 K, hexagonal axes. Note: COD 5000215 (Cucka & Barrett 1962) carries a smaller cell identical to the 78 K entry 9009657 without a temperature tag; not used."
+
+[[row]]
+Z = 84
+symbol = "Po"
+allotrope = "α-polonium"
+structure = "simple cubic"
+state_at_rtp = "solid"
+space_group = "P m -3 m"
+space_group_number = 221
+pearson = "cP1"
+atoms_per_cell = 1
+pearson_derivation = "cubic (SG 221), centring P, 1 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 334.5
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_K = 283.0
+cod_id = 1509138
+source = "cod"
+doi = "10.1063/1.1747155"
+doi_check = "crossref: resolves; title \"Physical Properties of Polonium. II. X-Ray Studies and Crystal Structure\""
+reference = "William H. Beamer; Charles R. Maxwell (1949). Journal of Chemical Physics 17, 1293."
+cif_title = "Physical Properties of Polonium. II. X-Ray Studies and Crystal Structure"
+flags = []
+note = "α-Po, the only element with a simple-cubic room-temperature structure. Measured at 283 K (CIF)."
+
+[[row]]
+Z = 88
+symbol = "Ra"
+allotrope = "radium (bcc)"
+structure = "body-centred cubic (bcc)"
+state_at_rtp = "solid"
+space_group = "I m -3 m"
+space_group_number = 229
+pearson = "cI2"
+atoms_per_cell = 2
+pearson_derivation = "cubic (SG 229), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 514.8
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 1509139
+source = "cod"
+doi = "10.1524/ract.1968.10.12.78"
+doi_check = "crossref: resolves; title \"Zur Kristallchemie des Radiums\""
+reference = "Weigel, F.; Trinkl, A. (1968). Radiochimica Acta 10, 78."
+cif_title = "Zur Kristallchemie des Radiums, III. Darstellung, Kristallstruktur und Atomradius des metallischen Radiums"
+flags = ["temperature_missing"]
+note = "Temperature not stated."
+
+[[row]]
+Z = 89
+symbol = "Ac"
+allotrope = "actinium (fcc)"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 531.1
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008458
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated; the only COD actinium entry."
+
+[[row]]
+Z = 90
+symbol = "Th"
+allotrope = "α-thorium"
+structure = "face-centred cubic (fcc)"
+state_at_rtp = "solid"
+space_group = "F m -3 m"
+space_group_number = 225
+pearson = "cF4"
+atoms_per_cell = 4
+pearson_derivation = "cubic (SG 225), centring F, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 508.43
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008485
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Cubic closest packed, ccp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated."
+
+[[row]]
+Z = 91
+symbol = "Pa"
+allotrope = "α-protactinium"
+structure = "body-centred tetragonal"
+state_at_rtp = "solid"
+space_group = "I 4/m m m"
+space_group_number = 139
+pearson = "tI2"
+atoms_per_cell = 2
+pearson_derivation = "tetragonal (SG 139), centring I, 2 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 392.5
+c_pm = 323.8
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 2310022
+source = "cod"
+doi = "10.1107/S0365110X5200006X"
+doi_check = "crossref: resolves; title \"Crystal chemical studies of the 5 f -series of elements. XVI. Identification and crystal structure of protactinium metal and of protactinium monoxide\""
+reference = "W. H. Zachariasen (1952). Acta Crystallographica 5, 19."
+cif_title = "Crystal chemical studies of the 5f - series of elements. XVI. Identification and crystal structure of protactinium metal and of protactinium monoxide"
+flags = ["temperature_missing"]
+note = "Temperature not stated."
+
+[[row]]
+Z = 92
+symbol = "U"
+allotrope = "α-uranium"
+structure = "orthorhombic (α-uranium type)"
+state_at_rtp = "solid"
+space_group = "C m c m"
+space_group_number = 63
+pearson = "oS4"
+atoms_per_cell = 4
+pearson_derivation = "orthorhombic (SG 63), centring C -> S, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 285.4
+b_pm = 586.9
+c_pm = 495.5
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008584
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated. 'C m c m' (No. 63)."
+
+[[row]]
+Z = 93
+symbol = "Np"
+allotrope = "α-neptunium"
+structure = "orthorhombic (α-neptunium type)"
+state_at_rtp = "solid"
+space_group = "P m c n"
+space_group_number = 62
+pearson = "oP8"
+atoms_per_cell = 8
+pearson_derivation = "orthorhombic (SG 62), centring P, 8 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 472.3
+b_pm = 488.7
+c_pm = 666.3
+alpha = 90.0
+beta = 90.0
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008585
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Sample is stable at room conditions"
+flags = ["temperature_missing", "secondary_compilation", "nonstandard_setting", "no_doi"]
+note = "Wyckoff's compilation; CIF note: stable at room conditions. 'P m c n' is a non-standard setting of Pnma (No. 62)."
+
+[[row]]
+Z = 94
+symbol = "Pu"
+allotrope = "α-plutonium"
+structure = "monoclinic (α-plutonium type)"
+state_at_rtp = "solid"
+space_group = "P 1 21/m 1"
+space_group_number = 11
+pearson = "mP16"
+atoms_per_cell = 16
+pearson_derivation = "monoclinic (SG 11), centring P, 16 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 618.35
+b_pm = 482.44
+c_pm = 1097.3
+alpha = 90.0
+beta = 101.80
+gamma = 90.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008587
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Sample is stable room conditions to 110 C"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; CIF note: stable from room conditions to 110 °C. 16 atoms per cell on 8 independent sites."
+
+[[row]]
+Z = 95
+symbol = "Am"
+allotrope = "α-americium"
+structure = "double hexagonal close-packed (dhcp)"
+state_at_rtp = "solid"
+space_group = "P 63/m m c"
+space_group_number = 194
+pearson = "hP4"
+atoms_per_cell = 4
+pearson_derivation = "hexagonal/trigonal (SG 194), centring P, 4 atom(s) per conventional cell counted by applying the CIF symmetry operators to the CIF sites"
+a_pm = 347.4
+c_pm = 1125.0
+alpha = 90.0
+beta = 90.0
+gamma = 120.0
+temperature_missing = "not stated in CIF"
+cod_id = 9008524
+source = "cod"
+reference = "Wyckoff, R. W. G. (1963). Crystal Structures 1, 7."
+cif_title = "Second edition. Interscience Publishers, New York, New York Double hexagonal closest packed, dhcp, structure"
+flags = ["temperature_missing", "secondary_compilation", "no_doi"]
+note = "Wyckoff's compilation; temperature not stated."
+
+# Elements with no suitable COD entry (omitted):
+[[omitted]]
+Z = 61
+symbol = "Pm"
+source = "cod"
+reason = "No promethium entry in COD."
+
+[[omitted]]
+Z = 85
+symbol = "At"
+source = "cod"
+reason = "No astatine entry in COD."
+
+[[omitted]]
+Z = 86
+symbol = "Rn"
+source = "cod"
+reason = "No radon entry in COD."
+
+[[omitted]]
+Z = 87
+symbol = "Fr"
+source = "cod"
+reason = "No francium entry in COD."
+
+[[omitted]]
+Z = 96
+symbol = "Cm"
+source = "cod"
+reason = "No curium metal entry in COD."
+
+[[omitted]]
+Z = 97
+symbol = "Bk"
+source = "cod"
+reason = "No berkelium metal entry in COD."
+
+[[omitted]]
+Z = 98
+symbol = "Cf"
+source = "cod"
+reason = "No californium metal entry in COD."
+
+[[omitted]]
+Z = 99
+symbol = "Es"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 100
+symbol = "Fm"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 101
+symbol = "Md"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 102
+symbol = "No"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 103
+symbol = "Lr"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 104
+symbol = "Rf"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 105
+symbol = "Db"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 106
+symbol = "Sg"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 107
+symbol = "Bh"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 108
+symbol = "Hs"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 109
+symbol = "Mt"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 110
+symbol = "Ds"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 111
+symbol = "Rg"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 112
+symbol = "Cn"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 113
+symbol = "Nh"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 114
+symbol = "Fl"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 115
+symbol = "Mc"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 116
+symbol = "Lv"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 117
+symbol = "Ts"
+source = "cod"
+reason = "No COD entry."
+
+[[omitted]]
+Z = 118
+symbol = "Og"
+source = "cod"
+reason = "No COD entry."

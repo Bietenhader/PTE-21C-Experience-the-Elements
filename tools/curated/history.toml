@@ -1,0 +1,1173 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Discovery history and naming, one row per element (SPEC §6.2, §10.11). All prose is our own wording.
+# Facts were checked against the cached PubChem element pages (History section: Los Alamos National
+# Laboratory, Jefferson Lab and IUPAC CIAAW texts; YearDiscovered from the PubChem periodic table) and,
+# for Z >= 101, against the IUPAC/IUPAP Transfermium Working Group (1993) and Joint Working Party reports
+# (DOIs confirmed on Crossref). Where those sources disagree, the row says so in `note`.
+#
+# Columns: Z; discovered (year, or "antiquity"); discovered_text (qualifier, optional);
+#          discoverers (people, or for Z >= 101 the laboratories credited by IUPAC/IUPAP);
+#          place (city of the discovery, modern country; omitted when unknown or uncertain, and for
+#          antiquity; map coordinates will come from a public-domain gazetteer, not from this file); isolated, isolated_by (only when the pure element was first
+#          obtained in a different year; isolated_by omitted when the source names nobody);
+#          name_origin; symbol_note (only when the symbol is not from the English name, or changed);
+#          source (pubchem | iupac_discovery | primary_literature); doi; note.
+
+[[row]]
+Z = 1
+discovered = 1766
+discoverers = ["Henry Cavendish"]
+place = "London, United Kingdom"
+name_origin = "Coined by Lavoisier from the Greek hydor, 'water', and -genes, 'producing', because burning it yields water."
+source = "pubchem"
+note = "Boyle had made the gas around 1671 without recognizing it as new; Cavendish showed it was a distinct substance. Los Alamos prints 1776, apparently a slip for 1766."
+
+[[row]]
+Z = 2
+discovered = 1868
+discoverers = ["Pierre Janssen", "Norman Lockyer"]
+place = "Guntur, India"
+isolated = 1895
+isolated_by = ["William Ramsay"]
+name_origin = "From the Greek helios, 'Sun', because it was first seen as an unexplained yellow line in the solar spectrum."
+source = "pubchem"
+note = "Janssen recorded the line during the solar eclipse of August 1868 (the map dot is his observing site) and Lockyer argued it came from an unknown element. Ramsay found the gas on Earth in the uranium mineral cleveite in 1895; Cleve and Langlet found it there independently."
+
+[[row]]
+Z = 3
+discovered = 1817
+discoverers = ["Johan August Arfwedson"]
+place = "Stockholm, Sweden"
+name_origin = "From the Greek lithos, 'stone', since it was first found in a mineral (petalite)."
+source = "pubchem"
+note = "Arfwedson worked in Berzelius's Stockholm laboratory. CIAAW gives 1818. Sources differ on the first isolation of the metal: Jefferson Lab credits electrolysis by Brande and Davy, while CIAAW names Bunsen and Matthiessen (1855), who made it in quantity."
+
+[[row]]
+Z = 4
+discovered = 1798
+discovered_text = "1798 (as its oxide, beryllia)"
+discoverers = ["Louis-Nicolas Vauquelin"]
+place = "Paris, France"
+isolated = 1828
+isolated_by = ["Friedrich Wöhler", "Antoine Bussy"]
+name_origin = "From beryl (Greek beryllos), the gemstone that contains it."
+symbol_note = "Long called glucinium (symbol Gl), after the sweet taste of its salts; IUPAC chose the name beryllium in 1949."
+source = "pubchem"
+note = "CIAAW dates Vauquelin's discovery to 1797. Wöhler and Bussy obtained the metal independently, both by reducing the chloride with potassium."
+
+[[row]]
+Z = 5
+discovered = 1808
+discoverers = ["Joseph Louis Gay-Lussac", "Louis Jacques Thénard", "Humphry Davy"]
+place = "Paris, France"
+name_origin = "From borax, its best-known compound (a word traced to the Arabic buraq and Persian burah), given the ending of carbon."
+source = "pubchem"
+note = "Gay-Lussac and Thénard in Paris and Davy in London obtained it independently in 1808, all by heating boric acid with potassium."
+
+[[row]]
+Z = 6
+discovered = "antiquity"
+name_origin = "From the Latin carbo, 'charcoal'."
+source = "pubchem"
+note = "Known since prehistory as charcoal and soot; Smithson Tennant showed in 1797 that diamond is pure carbon."
+
+[[row]]
+Z = 7
+discovered = 1772
+discoverers = ["Daniel Rutherford"]
+place = "Edinburgh, United Kingdom"
+name_origin = "From the French nitrogène, built from the Greek nitron ('native soda', i.e. nitre) and -genes ('producing'), because it is a constituent of nitre."
+source = "pubchem"
+note = "Scheele, Cavendish and Priestley were studying the same unbreathable residue of air at about the same time."
+
+[[row]]
+Z = 8
+discovered = 1774
+discoverers = ["Joseph Priestley", "Carl Wilhelm Scheele"]
+place = "Calne, United Kingdom"
+name_origin = "Named by Lavoisier from the Greek oxys, 'sharp' or 'acid', and -genes, 'producing', because he wrongly thought every acid contains it."
+source = "pubchem"
+note = "Scheele made it first (1771 according to CIAAW) but his book appeared only in 1777, so Priestley, who published in 1774, is usually credited. The map dot marks Priestley's laboratory at Bowood, near Calne."
+
+[[row]]
+Z = 9
+discovered = 1771
+discovered_text = "1771 (in hydrofluoric acid; the element was isolated in 1886)"
+discoverers = ["Carl Wilhelm Scheele"]
+place = "Uppsala, Sweden"
+isolated = 1886
+isolated_by = ["Henri Moissan"]
+name_origin = "From fluorspar (fluorite), whose name comes from the Latin fluere, 'to flow', because miners added the mineral to ores to help them melt."
+source = "pubchem"
+note = "PubChem's YearDiscovered (1670) is the date of the earliest known use of a fluorine compound to etch glass, not of the element. Los Alamos prints the isolation year as 1866, a slip for 1886. Moissan isolated the gas by electrolysis in a platinum apparatus."
+
+[[row]]
+Z = 10
+discovered = 1898
+discoverers = ["William Ramsay", "Morris Travers"]
+place = "London, United Kingdom"
+name_origin = "From the Greek neos, 'new'."
+source = "pubchem"
+note = "Identified by its bright spectral lines in a fraction of liquefied air, shortly after krypton."
+
+[[row]]
+Z = 11
+discovered = 1807
+discoverers = ["Humphry Davy"]
+place = "London, United Kingdom"
+name_origin = "Named by Davy after soda (caustic soda), the compound he split by electrolysis to obtain it."
+symbol_note = "Na comes from the Latin natrium, after natron, a naturally occurring soda salt."
+source = "pubchem"
+note = "Obtained by electrolysis of molten caustic soda at the Royal Institution, soon after potassium."
+
+[[row]]
+Z = 12
+discovered = 1755
+discovered_text = "1755 (recognized as an element; metal first obtained 1808)"
+discoverers = ["Joseph Black"]
+place = "Edinburgh, United Kingdom"
+isolated = 1831
+isolated_by = ["Antoine Bussy"]
+name_origin = "From Magnesia, a district of Thessaly in Greece, which gave its name to several minerals."
+source = "pubchem"
+note = "PubChem's YearDiscovered (1808) is the year Davy first obtained the metal, in impure form; CIAAW credits Bussy with the pure metal in 1831, which Los Alamos calls the first coherent metal."
+
+[[row]]
+Z = 13
+discovered = 1825
+discovered_text = "1825 (impure metal)"
+discoverers = ["Hans Christian Ørsted"]
+place = "Copenhagen, Denmark"
+isolated = 1827
+isolated_by = ["Friedrich Wöhler"]
+name_origin = "From alumina and alum (Latin alumen), the compounds in which the metal was first suspected."
+source = "pubchem"
+note = "PubChem lists the year as 'Ancient' because alum was used in antiquity; the metal itself was unknown before 1825. Lavoisier had suspected alumina to be the oxide of an unknown metal (1787)."
+
+[[row]]
+Z = 14
+discovered = 1824
+discoverers = ["Jöns Jacob Berzelius"]
+place = "Stockholm, Sweden"
+name_origin = "From the Latin silex (genitive silicis), 'flint', with the ending of carbon and boron."
+source = "pubchem"
+note = "PubChem's YearDiscovered (1854) is the year Deville first made crystalline silicon. Gay-Lussac and Thénard had probably made impure silicon in 1811."
+
+[[row]]
+Z = 15
+discovered = 1669
+discoverers = ["Hennig Brand"]
+place = "Hamburg, Germany"
+name_origin = "From the Greek phosphoros, 'light-bearer', because white phosphorus glows in the dark."
+source = "pubchem"
+note = "Brand, an alchemist, prepared it by boiling down large amounts of urine."
+
+[[row]]
+Z = 16
+discovered = "antiquity"
+name_origin = "From the Latin sulfur (also spelled sulphur), the Romans' name for the substance."
+source = "pubchem"
+note = "Known since prehistory as brimstone. Jefferson Lab credits Lavoisier with persuading chemists around 1777 that it is an element; CIAAW credits Gay-Lussac and Thénard with proving it in 1809."
+
+[[row]]
+Z = 17
+discovered = 1774
+discovered_text = "1774 (recognized as an element 1810)"
+discoverers = ["Carl Wilhelm Scheele"]
+place = "Uppsala, Sweden"
+name_origin = "From the Greek chloros, 'pale green' or 'yellow-green', the colour of the gas."
+source = "pubchem"
+note = "Scheele made the gas from pyrolusite and hydrochloric acid but thought it contained oxygen; Davy showed in 1810 that it is an element and named it."
+
+[[row]]
+Z = 18
+discovered = 1894
+discoverers = ["Lord Rayleigh (John William Strutt)", "William Ramsay"]
+place = "London, United Kingdom"
+name_origin = "From the Greek argos, 'idle' or 'inactive', because it would not combine with anything."
+symbol_note = "Its symbol was A until IUPAC changed it to Ar in 1957."
+source = "pubchem"
+note = "Cavendish had noticed an unreactive residue of air in 1785. CIAAW names the discoverer as Robert John Strutt, but the Lord Rayleigh who found argon was his father, John William Strutt."
+
+[[row]]
+Z = 19
+discovered = 1807
+discoverers = ["Humphry Davy"]
+place = "London, United Kingdom"
+name_origin = "Named by Davy after potash ('pot ashes'), the alkali he electrolysed to obtain it."
+symbol_note = "K comes from the New Latin kalium, from the Arabic al-qali, 'plant ashes'."
+source = "pubchem"
+note = "The first metal ever obtained by electrolysis, from molten caustic potash."
+
+[[row]]
+Z = 20
+discovered = 1808
+discoverers = ["Humphry Davy"]
+place = "London, United Kingdom"
+name_origin = "From the Latin calx, 'lime' (calcium oxide)."
+source = "pubchem"
+note = "PubChem lists the year as 'Ancient' because lime was used in antiquity. Davy obtained the impure metal, building on Berzelius and Pontin's electrolysis of lime into a mercury amalgam."
+
+[[row]]
+Z = 21
+discovered = 1879
+discoverers = ["Lars Fredrik Nilson"]
+place = "Uppsala, Sweden"
+isolated = 1937
+isolated_by = ["Werner Fischer", "Karl Brünger", "Hans Grieneisen"]
+name_origin = "From Scandia, the Latin name for Scandinavia, where its minerals were found."
+source = "pubchem"
+note = "Cleve showed the same year that it was Mendeleev's predicted eka-boron. Los Alamos gives 1878. The 1937 metal preparation: Z. anorg. allg. Chem. 231, 54 (doi:10.1002/zaac.19372310107)."
+
+[[row]]
+Z = 22
+discovered = 1791
+discoverers = ["William Gregor"]
+isolated = 1910
+isolated_by = ["Matthew A. Hunter"]
+name_origin = "Named by Klaproth after the Titans, the giant children of Earth and Sky in Greek myth."
+source = "pubchem"
+note = "Gregor found it in a Cornish mineral and called it menachanite; Klaproth rediscovered and named it in 1795. Nilson and Pettersson made impure metal in 1887; Hunter made the first pure metal by heating the tetrachloride with sodium."
+
+[[row]]
+Z = 23
+discovered = 1801
+discovered_text = "1801 (rediscovered 1830)"
+discoverers = ["Andrés Manuel del Río", "Nils Gabriel Sefström"]
+place = "Mexico City, Mexico"
+isolated = 1867
+isolated_by = ["Henry Enfield Roscoe"]
+name_origin = "From Vanadís, an Old Norse name of the goddess Freyja, chosen by Sefström for the element's many colourful compounds."
+source = "pubchem"
+note = "Del Río called it erythronium but withdrew after French chemists judged it impure chromium; Sefström rediscovered it in Sweden in 1830, and CIAAW credits him. The map dot marks del Río's Mexico City. CIAAW gives 1869 for Roscoe's isolation; Jefferson Lab and Los Alamos give 1867."
+
+[[row]]
+Z = 24
+discovered = 1797
+discoverers = ["Louis-Nicolas Vauquelin"]
+place = "Paris, France"
+isolated = 1798
+isolated_by = ["Louis-Nicolas Vauquelin"]
+name_origin = "From the Greek chroma, 'colour', for its brightly coloured compounds."
+source = "pubchem"
+note = "Found in crocoite, the 'Siberian red lead' mineral; Vauquelin obtained the metal the following year by heating the oxide with charcoal."
+
+[[row]]
+Z = 25
+discovered = 1774
+discoverers = ["Carl Wilhelm Scheele", "Johan Gottlieb Gahn"]
+place = "Uppsala, Sweden"
+name_origin = "From manganesia, a medieval variant of magnesia, the old name shared by its black oxide ore (pyrolusite)."
+source = "pubchem"
+note = "Scheele recognized a new metal in pyrolusite and Gahn reduced the oxide to the metal the same year; the map dot marks Scheele's Uppsala. CIAAW instead links the name to the Latin magnes, 'magnet'."
+
+[[row]]
+Z = 26
+discovered = "antiquity"
+name_origin = "From the Old English iren (isern), a word of Germanic origin."
+symbol_note = "Fe comes from the Latin ferrum."
+source = "pubchem"
+
+[[row]]
+Z = 27
+discovered = 1735
+discoverers = ["Georg Brandt"]
+place = "Stockholm, Sweden"
+name_origin = "From the German Kobold, a goblin of mining folklore blamed for ores that gave no useful metal and gave off poisonous fumes."
+source = "pubchem"
+note = "Brandt showed that the blue colour of cobalt glass comes from this metal rather than from bismuth. Jefferson Lab gives 1739."
+
+[[row]]
+Z = 28
+discovered = 1751
+discoverers = ["Axel Fredrik Cronstedt"]
+place = "Stockholm, Sweden"
+name_origin = "Shortened from the German Kupfernickel, a miners' name (roughly 'copper demon') for the ore niccolite, which looked like copper ore but yielded no copper."
+source = "pubchem"
+
+[[row]]
+Z = 29
+discovered = "antiquity"
+name_origin = "From the Latin cuprum, from aes Cyprium, 'metal of Cyprus', the Romans' main source."
+symbol_note = "Cu comes from the Latin cuprum."
+source = "pubchem"
+
+[[row]]
+Z = 30
+discovered = 1746
+discovered_text = "1746 (metal produced earlier in India)"
+discoverers = ["Andreas Sigismund Marggraf"]
+place = "Berlin, Germany"
+name_origin = "From the German Zink, a word of uncertain origin."
+source = "pubchem"
+note = "Zinc ores were used for brass since antiquity and the metal was smelted in India long before Marggraf: Los Alamos says the 13th century, Jefferson Lab the 1400s, and CIAAW says it was recognized as a metal by 1374."
+
+[[row]]
+Z = 31
+discovered = 1875
+discoverers = ["Paul-Émile Lecoq de Boisbaudran"]
+name_origin = "From Gallia, the Latin name of France; it may also pun on the discoverer's name, since the Latin gallus means 'rooster' (le coq)."
+source = "pubchem"
+note = "Mendeleev's predicted eka-aluminium, found by its spectrum in zinc blende. Jefferson Lab and Los Alamos say Lecoq obtained the metal by electrolysis the same year; CIAAW dates the first isolation to 1878, together with Jungfleisch."
+
+[[row]]
+Z = 32
+discovered = 1886
+discoverers = ["Clemens Winkler"]
+place = "Freiberg, Germany"
+name_origin = "From Germania, the Latin name of Germany, Winkler's country."
+source = "pubchem"
+note = "Mendeleev's predicted eka-silicon, found in the silver mineral argyrodite; Winkler isolated it the same year."
+
+[[row]]
+Z = 33
+discovered = 1250
+discovered_text = "c. 1250 (the element; its sulfides were known in antiquity)"
+discoverers = ["Albertus Magnus"]
+name_origin = "From the Greek arsenikon, the name of the yellow pigment orpiment (an arsenic sulfide), via the Latin arsenicum."
+source = "pubchem"
+note = "PubChem lists the year as 'Ancient' because arsenic compounds were known in antiquity; crediting Albertus Magnus with the element is traditional rather than certain. Schroeder published two ways of preparing it in 1649."
+
+[[row]]
+Z = 34
+discovered = 1817
+discoverers = ["Jöns Jacob Berzelius"]
+place = "Stockholm, Sweden"
+name_origin = "From the Greek selene, 'Moon', as a companion to tellurium, which is named after the Earth."
+source = "pubchem"
+note = "Found in residue from a Swedish sulfuric acid works; Berzelius first took it for tellurium."
+
+[[row]]
+Z = 35
+discovered = 1826
+discovered_text = "1826 (Löwig prepared it in 1825)"
+discoverers = ["Antoine-Jérôme Balard", "Carl Jacob Löwig"]
+place = "Montpellier, France"
+name_origin = "From the Greek bromos, 'stench', for its strong smell."
+source = "pubchem"
+note = "Löwig made it first, as a student in Heidelberg, but Balard published first (1826) and is usually credited; the map dot marks Balard's Montpellier."
+
+[[row]]
+Z = 36
+discovered = 1898
+discoverers = ["William Ramsay", "Morris Travers"]
+place = "London, United Kingdom"
+name_origin = "From the Greek kryptos, 'hidden'."
+source = "pubchem"
+note = "Found on 30 May 1898 in what remained when nearly all of a liquid-air sample had evaporated."
+
+[[row]]
+Z = 37
+discovered = 1861
+discoverers = ["Robert Bunsen", "Gustav Kirchhoff"]
+place = "Heidelberg, Germany"
+isolated = 1863
+isolated_by = ["Robert Bunsen"]
+name_origin = "From the Latin rubidus, 'deep red', for the red lines in its spectrum."
+source = "pubchem"
+note = "Found with the spectroscope in the mineral lepidolite."
+
+[[row]]
+Z = 38
+discovered = 1790
+discoverers = ["Adair Crawford"]
+place = "London, United Kingdom"
+isolated = 1808
+isolated_by = ["Humphry Davy"]
+name_origin = "From Strontian, a village in the Scottish Highlands whose lead mines yielded the mineral strontianite."
+source = "pubchem"
+note = "Crawford recognized that strontianite contained a new 'earth'; CIAAW instead credits Thomas Charles Hope, who studied it in 1792 and noted its red flame colour."
+
+[[row]]
+Z = 39
+discovered = 1794
+discoverers = ["Johan Gadolin"]
+place = "Turku, Finland"
+name_origin = "From Ytterby, the Swedish village whose quarry supplied the mineral (later named gadolinite)."
+source = "pubchem"
+note = "Gadolin found a new 'earth', yttria; Jefferson Lab gives 1789. Mosander showed in 1843 that yttria also held the oxides of erbium and terbium."
+
+[[row]]
+Z = 40
+discovered = 1789
+discoverers = ["Martin Heinrich Klaproth"]
+place = "Berlin, Germany"
+isolated = 1914
+isolated_by = ["D. Lely Jr.", "L. Hamburger"]
+name_origin = "From the mineral zircon, a name that goes back through Arabic to the Persian zargun, 'gold-coloured'."
+source = "pubchem"
+note = "Berzelius made impure metal in 1824; Lely and Hamburger made the pure metal (Z. anorg. Chem. 87, 209, 1914; doi:10.1002/zaac.19140870114)."
+
+[[row]]
+Z = 41
+discovered = 1801
+discoverers = ["Charles Hatchett"]
+place = "London, United Kingdom"
+isolated = 1864
+isolated_by = ["Christian Wilhelm Blomstrand"]
+name_origin = "From Niobe, daughter of Tantalus in Greek myth, because the element is so hard to tell apart from tantalum."
+symbol_note = "Hatchett called it columbium (symbol Cb), a name that stayed in American use; IUPAC chose niobium in 1949 (Los Alamos says 1950)."
+source = "pubchem"
+note = "Wollaston wrongly declared it identical to tantalum in 1809; Heinrich Rose re-established it (1844 per Jefferson Lab, 1846 per CIAAW) and named it niobium, and Marignac confirmed the distinction in 1866. CIAAW's 1846 date for Blomstrand's isolation conflicts with the 1864 of the other two sources."
+
+[[row]]
+Z = 42
+discovered = 1778
+discoverers = ["Carl Wilhelm Scheele"]
+place = "Köping, Sweden"
+isolated = 1781
+isolated_by = ["Peter Jacob Hjelm"]
+name_origin = "From the Greek molybdos, 'lead', because its ore molybdenite was long confused with lead ore and graphite."
+source = "pubchem"
+note = "Los Alamos dates Hjelm's (impure) metal to 1782."
+
+[[row]]
+Z = 43
+discovered = 1937
+discoverers = ["Carlo Perrier", "Emilio Segrè"]
+place = "Palermo, Italy"
+name_origin = "From the Greek technetos, 'artificial', as the first element to be made artificially."
+symbol_note = "Some older tables showed element 43 as masurium (Ma), from a 1925 claim that was never confirmed."
+source = "pubchem"
+note = "Found in a molybdenum sample bombarded with deuterons in Lawrence's Berkeley cyclotron. Kenna and Kuroda found traces in nature in 1962."
+
+[[row]]
+Z = 44
+discovered = 1844
+discoverers = ["Karl Karlovich Klaus (Karl Ernst Claus)"]
+place = "Kazan, Russia"
+name_origin = "From Ruthenia, a Medieval Latin name for Russia, where the platinum ore came from."
+source = "pubchem"
+note = "PubChem's YearDiscovered (1827) refers to Osann's claim (1828 in CIAAW); Klaus showed that Osann's material was impure and obtained the metal itself. Śniadecki's 1807 claim had been withdrawn."
+
+[[row]]
+Z = 45
+discovered = 1803
+discoverers = ["William Hyde Wollaston"]
+place = "London, United Kingdom"
+name_origin = "From the Greek rhodon, 'rose', for the rose-red colour of its salts in solution."
+source = "pubchem"
+note = "Found in South American platinum ore just after palladium; Los Alamos dates the work to 1803–1804."
+
+[[row]]
+Z = 46
+discovered = 1803
+discoverers = ["William Hyde Wollaston"]
+place = "London, United Kingdom"
+name_origin = "After the asteroid Pallas, discovered in 1802 and named after the goddess Pallas Athena."
+source = "pubchem"
+note = "Wollaston first announced it anonymously, without describing how he had made it."
+
+[[row]]
+Z = 47
+discovered = "antiquity"
+name_origin = "From the Old English seolfor, a Germanic word of unknown origin."
+symbol_note = "Ag comes from the Latin argentum."
+source = "pubchem"
+
+[[row]]
+Z = 48
+discovered = 1817
+discoverers = ["Friedrich Stromeyer"]
+place = "Göttingen, Germany"
+name_origin = "From the Latin cadmia (Greek kadmeia), the old name for calamine, the zinc ore in which it was found."
+source = "pubchem"
+note = "Noticed because some zinc carbonate samples turned yellow on heating."
+
+[[row]]
+Z = 49
+discovered = 1863
+discoverers = ["Ferdinand Reich", "Hieronymus Theodor Richter"]
+place = "Freiberg, Germany"
+name_origin = "From indigo, for the bright indigo-blue line in its spectrum."
+source = "pubchem"
+note = "Found while searching zinc ores for thallium; the discoverers later isolated the metal (CIAAW gives 1867)."
+
+[[row]]
+Z = 50
+discovered = "antiquity"
+name_origin = "From the Old English tin, a Germanic word of unknown origin."
+symbol_note = "Sn comes from the Latin stannum."
+source = "pubchem"
+
+[[row]]
+Z = 51
+discovered = "antiquity"
+name_origin = "From the Medieval Latin antimonium, a word of uncertain origin (often explained as the Greek anti + monos, 'not alone')."
+symbol_note = "Sb comes from the Latin stibium, the old name of its black sulfide, which was used as eye make-up."
+source = "pubchem"
+note = "Its compounds were known in antiquity and the metal by the early 1600s, possibly much earlier (Los Alamos)."
+
+[[row]]
+Z = 52
+discovered = 1782
+discoverers = ["Franz-Joseph Müller von Reichenstein"]
+name_origin = "From the Latin tellus, 'earth'."
+source = "pubchem"
+note = "Müller found it in a Transylvanian gold ore; Klaproth confirmed it in 1798, named it and credited Müller (CIAAW and Los Alamos call Klaproth's 1798 work its isolation). Kitaibel found it independently in 1789."
+
+[[row]]
+Z = 53
+discovered = 1811
+discoverers = ["Bernard Courtois"]
+place = "Paris, France"
+name_origin = "From the Greek iodes, 'violet', the colour of its vapour."
+source = "pubchem"
+note = "Courtois found it in seaweed ash; Gay-Lussac showed it is an element and named it (CIAAW dates this to 1814)."
+
+[[row]]
+Z = 54
+discovered = 1898
+discoverers = ["William Ramsay", "Morris Travers"]
+place = "London, United Kingdom"
+name_origin = "From the Greek xenos, 'stranger' or 'foreigner'."
+source = "pubchem"
+note = "Found on 12 July 1898 in the least volatile fraction of liquefied air, weeks after krypton and neon."
+
+[[row]]
+Z = 55
+discovered = 1860
+discoverers = ["Robert Bunsen", "Gustav Kirchhoff"]
+place = "Heidelberg, Germany"
+isolated = 1882
+isolated_by = ["Carl Setterberg"]
+name_origin = "From the Latin caesius, 'sky-blue' or 'blue-grey', for the blue lines in its spectrum."
+source = "pubchem"
+note = "The first element discovered with the spectroscope, in mineral water from Dürkheim."
+
+[[row]]
+Z = 56
+discovered = 1808
+discoverers = ["Humphry Davy"]
+place = "London, United Kingdom"
+name_origin = "From the Greek barys, 'heavy', via baryta, the oxide named after the dense mineral barite."
+source = "pubchem"
+note = "Scheele had distinguished baryta from lime in 1774; Davy isolated the metal by electrolysis."
+
+[[row]]
+Z = 57
+discovered = 1839
+discoverers = ["Carl Gustaf Mosander"]
+place = "Stockholm, Sweden"
+isolated = 1923
+name_origin = "From the Greek lanthanein, 'to lie hidden', because it was concealed in cerium minerals."
+source = "pubchem"
+note = "Mosander extracted its oxide from impure cerium nitrate and soon afterwards split off 'didymium', itself later found to be two elements. Los Alamos dates the first fairly pure metal to 1923 without naming who made it."
+
+[[row]]
+Z = 58
+discovered = 1803
+discoverers = ["Jöns Jacob Berzelius", "Wilhelm Hisinger", "Martin Heinrich Klaproth"]
+place = "Stockholm, Sweden"
+isolated = 1875
+isolated_by = ["William Francis Hillebrand", "Thomas H. Norton"]
+name_origin = "After the asteroid (now dwarf planet) Ceres, discovered in 1801 and named after the Roman goddess of agriculture."
+source = "pubchem"
+note = "Found independently by Berzelius and Hisinger in Sweden and by Klaproth in Germany; the map dot marks Stockholm."
+
+[[row]]
+Z = 59
+discovered = 1885
+discoverers = ["Carl Auer von Welsbach"]
+place = "Vienna, Austria"
+name_origin = "From the Greek prasios, 'leek-green', and didymos, 'twin', for its green salts and its origin in 'didymium'."
+source = "pubchem"
+note = "Auer split Mosander's 'didymium' into two elements, this one and neodymium."
+
+[[row]]
+Z = 60
+discovered = 1885
+discoverers = ["Carl Auer von Welsbach"]
+place = "Vienna, Austria"
+isolated = 1925
+name_origin = "From the Greek neos, 'new', and didymos, 'twin': the new twin separated from 'didymium'."
+source = "pubchem"
+note = "CIAAW gives 1841 and Mosander, meaning the discovery of 'didymium', the mixture from which Auer separated it. Los Alamos dates the first fairly pure metal to 1925 without naming who made it."
+
+[[row]]
+Z = 61
+discovered = 1945
+discoverers = ["Jacob A. Marinsky", "Lawrence E. Glendenin", "Charles D. Coryell"]
+place = "Oak Ridge, United States"
+name_origin = "After Prometheus, the Titan of Greek myth who stole fire from the gods."
+source = "pubchem"
+note = "Identified chemically by ion-exchange chromatography among uranium fission products at Clinton Laboratories (now Oak Ridge National Laboratory). Jefferson Lab dates the proof to 1944 and its announcement to after the war. Earlier claims, such as illinium and florentium in the 1920s, were not confirmed, and 1941–42 Ohio State work probably made it without chemical proof."
+
+[[row]]
+Z = 62
+discovered = 1879
+discoverers = ["Paul-Émile Lecoq de Boisbaudran"]
+name_origin = "From the mineral samarskite, named after the Russian mining official Vasili Samarsky-Bykhovets, so it was the first element named, indirectly, after a person."
+source = "pubchem"
+note = "Delafontaine reported 'decipium' in 1878, part of which proved to be samarium (CIAAW); Jefferson Lab says Marignac had seen its spectral lines in 1853."
+
+[[row]]
+Z = 63
+discovered = 1901
+discovered_text = "1901 (separated; first detected 1896)"
+discoverers = ["Eugène-Anatole Demarçay"]
+place = "Paris, France"
+name_origin = "After the continent of Europe."
+source = "pubchem"
+note = "Demarçay suspected it in samarium in 1896, the year CIAAW and Jefferson Lab give, and separated it in fairly pure form in 1901; Lecoq de Boisbaudran had seen some of its spectral lines in 1890."
+
+[[row]]
+Z = 64
+discovered = 1880
+discoverers = ["Jean Charles Galissard de Marignac"]
+place = "Geneva, Switzerland"
+name_origin = "From the mineral gadolinite, named after the Finnish chemist Johan Gadolin."
+source = "pubchem"
+note = "Marignac separated its oxide in 1880; Lecoq de Boisbaudran obtained it independently and named it in 1886. CIAAW dates Marignac's discovery to 1886."
+
+[[row]]
+Z = 65
+discovered = 1843
+discoverers = ["Carl Gustaf Mosander"]
+place = "Stockholm, Sweden"
+name_origin = "From Ytterby, the Swedish village whose quarry gave the mineral it came from."
+source = "pubchem"
+note = "Mosander split yttria into three oxides; the names terbia and erbia were later swapped, so today's terbium is not the oxide he first called terbia."
+
+[[row]]
+Z = 66
+discovered = 1886
+discoverers = ["Paul-Émile Lecoq de Boisbaudran"]
+name_origin = "From the Greek dysprositos, 'hard to get at', for the difficulty of separating it."
+source = "pubchem"
+note = "Sources disagree on its isolation: CIAAW and Jefferson Lab credit Georges Urbain (1906), while Los Alamos says fairly pure oxide and metal only became available through ion-exchange work around 1950. Delafontaine's 1878 'philippia' was an earlier, mistaken claim (CIAAW)."
+
+[[row]]
+Z = 67
+discovered = 1878
+discovered_text = "1878 (by its spectrum); 1879 (chemically, by Cleve)"
+discoverers = ["Marc Delafontaine", "Jacques-Louis Soret", "Per Teodor Cleve"]
+name_origin = "From Holmia, the Latin name of Stockholm, Cleve's home city."
+source = "pubchem"
+note = "Delafontaine and Soret saw its absorption bands and called it 'element X'; Cleve independently separated its oxide from erbia and named it. CIAAW and Los Alamos say pure holmia (the oxide) was first prepared in 1911."
+
+[[row]]
+Z = 68
+discovered = 1843
+discoverers = ["Carl Gustaf Mosander"]
+place = "Stockholm, Sweden"
+isolated = 1934
+isolated_by = ["Wilhelm Klemm", "Heinrich Bommer"]
+name_origin = "From Ytterby, the Swedish village whose quarry gave the mineral it came from."
+source = "pubchem"
+note = "Los Alamos dates Mosander's separation to 1842. The later 'erbia' turned out to be a mixture of the oxides of five elements: erbium, scandium, holmium, thulium and ytterbium. Klemm and Bommer made fairly pure metal by reducing the chloride with potassium vapour."
+
+[[row]]
+Z = 69
+discovered = 1879
+discoverers = ["Per Teodor Cleve"]
+place = "Uppsala, Sweden"
+name_origin = "From Thule, the ancient name of a far-northern land, here standing for Scandinavia."
+source = "pubchem"
+note = "Cleve separated its oxide from erbia along with holmia. CIAAW credits the American chemist Charles James with its first isolation in 1911."
+
+[[row]]
+Z = 70
+discovered = 1878
+discoverers = ["Jean Charles Galissard de Marignac"]
+place = "Geneva, Switzerland"
+name_origin = "From Ytterby, the Swedish village whose quarry gave the mineral it came from."
+source = "pubchem"
+note = "Urbain showed in 1907, as Auer von Welsbach did independently, that Marignac's ytterbia also contained a second element, lutetium."
+
+[[row]]
+Z = 71
+discovered = 1907
+discoverers = ["Georges Urbain", "Carl Auer von Welsbach"]
+place = "Paris, France"
+name_origin = "From Lutetia, the Latin name of Paris."
+symbol_note = "Spelled lutecium until 1949; German-speaking chemists long called it cassiopeium (symbol Cp), Auer's name."
+source = "pubchem"
+note = "Urbain published first and won the naming; Auer von Welsbach separated it independently at about the same time."
+
+[[row]]
+Z = 72
+discovered = 1923
+discoverers = ["Dirk Coster", "George de Hevesy"]
+place = "Copenhagen, Denmark"
+name_origin = "From Hafnia, the Latin name of Copenhagen, where it was found."
+source = "pubchem"
+note = "Found by X-ray spectroscopy in zirconium minerals, as Bohr's theory of electron shells predicted; Urbain's earlier 'celtium', sought among the rare earths, was a mistaken claim. Van Arkel and de Boer later made the metal."
+
+[[row]]
+Z = 73
+discovered = 1802
+discoverers = ["Anders Gustaf Ekeberg"]
+place = "Uppsala, Sweden"
+isolated = 1903
+isolated_by = ["Werner von Bolton"]
+name_origin = "From Tantalus of Greek myth, who stood in water he could never drink, because the oxide takes up no acid even when soaked in it."
+source = "pubchem"
+note = "Long confused with niobium until Marignac separated them in 1866. Los Alamos credits von Bolton with the first fairly pure, ductile metal in 1903; Jefferson Lab gives 1907 for the first fairly pure samples."
+
+[[row]]
+Z = 74
+discovered = 1783
+discovered_text = "1783 (tungstic acid found by Scheele in 1781)"
+discoverers = ["Juan José Elhuyar", "Fausto Elhuyar"]
+place = "Bergara, Spain"
+name_origin = "From the Swedish tung sten, 'heavy stone', the old name of the mineral now called scheelite."
+symbol_note = "W comes from wolfram, the element's name in German and several other languages, after the ore wolframite."
+source = "pubchem"
+note = "CIAAW credits Scheele (1781) with the discovery and the Elhuyar brothers (1783) with the first isolation, while PubChem's year and Jefferson Lab credit the brothers, who reduced the acid from wolframite with charcoal. Woulfe had suspected a new substance in wolframite in 1779."
+
+[[row]]
+Z = 75
+discovered = 1925
+discoverers = ["Walter Noddack", "Ida Tacke", "Otto Berg"]
+place = "Berlin, Germany"
+isolated = 1928
+name_origin = "From Rhenus, the Latin name of the Rhine."
+source = "pubchem"
+note = "Detected by X-ray spectroscopy in platinum ores and columbite; in 1928 about 1 g was won from some 660 kg of molybdenite (Jefferson Lab names Noddack and Berg for this step)."
+
+[[row]]
+Z = 76
+discovered = 1803
+discoverers = ["Smithson Tennant"]
+place = "London, United Kingdom"
+name_origin = "From the Greek osme, 'smell', for the sharp odour of its volatile oxide."
+source = "pubchem"
+note = "Found together with iridium in the black, insoluble remains of crude platinum treated with aqua regia."
+
+[[row]]
+Z = 77
+discovered = 1803
+discoverers = ["Smithson Tennant"]
+place = "London, United Kingdom"
+name_origin = "From Iris, the Greek goddess of the rainbow, for the many colours of its salts."
+source = "pubchem"
+note = "Collet-Descotils reported it independently in France and published slightly earlier; Tennant is usually credited, perhaps because he also found osmium (CIAAW)."
+
+[[row]]
+Z = 78
+discovered = 1735
+discoverers = ["Antonio de Ulloa"]
+name_origin = "From the Spanish platina, 'little silver', a diminutive of plata."
+source = "pubchem"
+note = "Used by pre-Columbian peoples of South America. Credit for its European discovery goes to Ulloa (1735), with Charles Wood reporting it in 1741; CIAAW says William Brownrigg prepared purified metal in 1750."
+
+[[row]]
+Z = 79
+discovered = "antiquity"
+name_origin = "From the Old English gold, a Germanic word related to 'yellow'."
+symbol_note = "Au comes from the Latin aurum."
+source = "pubchem"
+
+[[row]]
+Z = 80
+discovered = "antiquity"
+name_origin = "After the Roman god and planet Mercury, a name the alchemists gave to the quick, mobile liquid metal."
+symbol_note = "Hg comes from hydrargyrum, the Latinized form of the Greek for 'water-silver'."
+source = "pubchem"
+note = "Found in Egyptian tombs of about 1500 BCE (Los Alamos)."
+
+[[row]]
+Z = 81
+discovered = 1861
+discoverers = ["William Crookes"]
+place = "London, United Kingdom"
+isolated = 1862
+isolated_by = ["William Crookes", "Claude-Auguste Lamy"]
+name_origin = "From the Greek thallos, 'green shoot' or 'twig', for its bright green spectral line."
+source = "pubchem"
+note = "Found by its spectrum in residue from sulfuric acid production; Crookes and Lamy each isolated the metal independently in 1862."
+
+[[row]]
+Z = 82
+discovered = "antiquity"
+name_origin = "From the Old English lead, a Germanic word of unknown origin."
+symbol_note = "Pb comes from the Latin plumbum."
+source = "pubchem"
+
+[[row]]
+Z = 83
+discovered = 1753
+discoverers = ["Claude François Geoffroy"]
+place = "Paris, France"
+name_origin = "From the German Wismut (Latinized bisemutum), a miners' word of uncertain origin, possibly from weisse Masse, 'white mass'."
+source = "pubchem"
+note = "The metal was handled long before but confused with tin and lead; Geoffroy the Younger showed that it is distinct from lead."
+
+[[row]]
+Z = 84
+discovered = 1898
+discoverers = ["Marie Curie", "Pierre Curie"]
+place = "Paris, France"
+name_origin = "After Poland, Marie Curie's native country."
+source = "pubchem"
+note = "Found in pitchblende from Joachimsthal (Jáchymov) by tracking its radioactivity; the first element the Curies found. The PubChem texts name Marie Curie alone; the July 1898 announcement was signed by both."
+
+[[row]]
+Z = 85
+discovered = 1940
+discoverers = ["Dale R. Corson", "Kenneth Ross MacKenzie", "Emilio Segrè"]
+place = "Berkeley, United States"
+name_origin = "From the Greek astatos, 'unstable', since all its isotopes are short-lived."
+source = "pubchem"
+note = "Made by bombarding bismuth-209 with alpha particles from the Berkeley cyclotron. Jefferson Lab misspells Corson as 'Carson'."
+
+[[row]]
+Z = 86
+discovered = 1900
+discoverers = ["Friedrich Ernst Dorn"]
+place = "Halle, Germany"
+isolated = 1908
+isolated_by = ["William Ramsay", "Robert Whytlaw-Gray"]
+name_origin = "From radium, whose decay produces it, with the -on ending of the other noble gases."
+symbol_note = "First called radium emanation, then niton (symbol Nt); the name radon (Rn) has been used since 1923."
+source = "pubchem"
+note = "Dorn found the gas given off by radium; Ramsay and Gray isolated it and found it denser than any other gas."
+
+[[row]]
+Z = 87
+discovered = 1939
+discoverers = ["Marguerite Perey"]
+place = "Paris, France"
+name_origin = "After France, Perey's home country."
+source = "pubchem"
+note = "Found at the Curie Institute among the decay products of actinium-227; no weighable amount has ever been isolated."
+
+[[row]]
+Z = 88
+discovered = 1898
+discoverers = ["Marie Curie", "Pierre Curie"]
+place = "Paris, France"
+isolated = 1910
+isolated_by = ["Marie Curie", "André-Louis Debierne"]
+name_origin = "From the Latin radius, 'ray', for its intense radioactivity."
+source = "pubchem"
+note = "Gustave Bémont co-signed the 1898 announcement. Los Alamos dates the isolation of the metal (electrolysis of radium chloride on a mercury cathode, then distillation of the amalgam) to 1911; the Curie–Debierne paper appeared in 1910 (Comptes rendus 151)."
+
+[[row]]
+Z = 89
+discovered = 1899
+discoverers = ["André-Louis Debierne", "Friedrich Oskar Giesel"]
+place = "Paris, France"
+name_origin = "From the Greek aktis (genitive aktinos), 'ray' or 'beam'."
+source = "pubchem"
+note = "Debierne reported it in 1899 and Giesel found it independently in 1902; the map dot marks Debierne's Paris. Jefferson Lab gives Giesel's middle name as Otto."
+
+[[row]]
+Z = 90
+discovered = 1828
+discoverers = ["Jöns Jacob Berzelius"]
+place = "Stockholm, Sweden"
+isolated = 1914
+isolated_by = ["D. Lely Jr.", "L. Hamburger"]
+name_origin = "After Thor, the thunder god of Norse mythology."
+source = "pubchem"
+note = "The mineral (now thorite) came from Løvøya, Norway, by way of Morten and Jens Esmark. Los Alamos dates Berzelius's identification to 1829. Lely and Hamburger's metal: Z. anorg. Chem. 87, 209 (1914; doi:10.1002/zaac.19140870114)."
+
+[[row]]
+Z = 91
+discovered = 1913
+discovered_text = "1913 (short-lived isotope); 1917–18 (long-lived protactinium-231)"
+discoverers = ["Kasimir Fajans", "Oswald Helmuth Göhring"]
+place = "Karlsruhe, Germany"
+isolated = 1934
+isolated_by = ["Aristid von Grosse"]
+name_origin = "From the Greek protos, 'first', joined to actinium, because it decays into actinium."
+source = "pubchem"
+note = "Fajans and Göhring named their short-lived isotope brevium. Hahn and Meitner in Berlin and Soddy and Cranston in Britain independently found protactinium-231 in 1917–18; IUPAC shortened protoactinium to protactinium in 1949."
+
+[[row]]
+Z = 92
+discovered = 1789
+discoverers = ["Martin Heinrich Klaproth"]
+place = "Berlin, Germany"
+isolated = 1841
+isolated_by = ["Eugène-Melchior Péligot"]
+name_origin = "After the planet Uranus, discovered by William Herschel in 1781."
+source = "pubchem"
+note = "What Klaproth obtained was an oxide; Péligot first made the metal by reducing uranium tetrachloride with potassium."
+
+[[row]]
+Z = 93
+discovered = 1940
+discoverers = ["Edwin McMillan", "Philip Abelson"]
+place = "Berkeley, United States"
+name_origin = "After Neptune, the planet beyond Uranus."
+source = "pubchem"
+note = "The first transuranium element, made as neptunium-239 by neutron capture in uranium-238. Fermi's 1934 claim to have made element 93 turned out to be nuclear fission."
+
+[[row]]
+Z = 94
+discovered = 1940
+discovered_text = "1940 (December; chemical proof early 1941)"
+discoverers = ["Glenn T. Seaborg", "Edwin McMillan", "Joseph W. Kennedy", "Arthur C. Wahl"]
+place = "Berkeley, United States"
+isolated = 1943
+name_origin = "After Pluto, then counted as the planet beyond Neptune."
+source = "pubchem"
+note = "Made by bombarding uranium-238 with deuterons from the 60-inch cyclotron at Berkeley; the paper was submitted in January 1941 but withheld until 1946 for wartime secrecy. The first metal was made in November 1943 (Los Alamos). Jefferson Lab gives 1941 and spells Wahl as 'Wohl'."
+
+[[row]]
+Z = 95
+discovered = 1944
+discoverers = ["Glenn T. Seaborg", "Ralph A. James", "Leon O. Morgan", "Albert Ghiorso"]
+place = "Chicago, United States"
+name_origin = "After the Americas, by analogy with europium, its counterpart among the lanthanides."
+source = "pubchem"
+note = "Made by successive neutron captures in plutonium at the wartime Metallurgical Laboratory of the University of Chicago; announced in November 1945."
+
+[[row]]
+Z = 96
+discovered = 1944
+discoverers = ["Glenn T. Seaborg", "Ralph A. James", "Albert Ghiorso"]
+place = "Chicago, United States"
+isolated = 1951
+isolated_by = ["W. W. T. Crane", "J. C. Wallmann", "B. B. Cunningham"]
+name_origin = "After Marie and Pierre Curie, by analogy with gadolinium, which is named after Gadolin."
+source = "pubchem"
+note = "Made by helium-ion bombardment of plutonium-239 in the Berkeley cyclotron and identified at the Metallurgical Laboratory in Chicago (Jefferson Lab places the work at Berkeley). Werner and Perlman isolated the first visible amount of a compound in 1947."
+
+[[row]]
+Z = 97
+discovered = 1949
+discoverers = ["Stanley G. Thompson", "Albert Ghiorso", "Glenn T. Seaborg"]
+place = "Berkeley, United States"
+name_origin = "After Berkeley, California, where it was made, in the way terbium was named after Ytterby."
+source = "pubchem"
+note = "Made in December 1949 by alpha bombardment of americium-241 and published in 1950 (Phys. Rev. 77, 838). Jefferson Lab also lists Kenneth Street Jr., who is not an author of the discovery paper."
+
+[[row]]
+Z = 98
+discovered = 1950
+discoverers = ["Stanley G. Thompson", "Kenneth Street Jr.", "Albert Ghiorso", "Glenn T. Seaborg"]
+place = "Berkeley, United States"
+name_origin = "After California, the state and the university where it was made."
+source = "pubchem"
+note = "Made by helium-ion bombardment of microgram amounts of curium-242 in the Berkeley 60-inch cyclotron."
+
+[[row]]
+Z = 99
+discovered = 1952
+discoverers = ["Albert Ghiorso et al. (Berkeley, Argonne and Los Alamos)"]
+place = "Berkeley, United States"
+name_origin = "After Albert Einstein."
+source = "pubchem"
+note = "Identified in December 1952 in fallout from the 'Ivy Mike' thermonuclear test (Enewetak Atoll, November 1952); the results were kept secret until 1955."
+
+[[row]]
+Z = 100
+discovered = 1952
+discoverers = ["Albert Ghiorso et al. (Berkeley, Argonne and Los Alamos)"]
+place = "Berkeley, United States"
+name_origin = "After Enrico Fermi."
+source = "pubchem"
+note = "Identified in coral from the 'Ivy Mike' test site about two months after the November 1952 explosion, so possibly in early 1953; published in 1955. A Stockholm group independently reported element 100 in 1954."
+
+[[row]]
+Z = 101
+discovered = 1955
+discovered_text = "1955 (confirmed with certainty 1958)"
+discoverers = ["University of California Radiation Laboratory, Berkeley"]
+place = "Berkeley, United States"
+name_origin = "After Dmitri Mendeleev, creator of the periodic table."
+symbol_note = "Proposed with the symbol Mv; IUPAC changed it to Md in 1957."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "First made one atom at a time by Ghiorso, Harvey, Choppin, Thompson and Seaborg, by bombarding einsteinium-253 with helium ions. The 1993 IUPAC/IUPAP report credits the Berkeley group."
+
+[[row]]
+Z = 102
+discovered = 1966
+discovered_text = "1966 (Dubna papers submitted 1965)"
+discoverers = ["Joint Institute for Nuclear Research, Dubna"]
+place = "Dubna, Russia"
+name_origin = "After Alfred Nobel; the name was proposed for a 1957 claim from the Nobel Institute in Stockholm and was kept."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "PubChem gives 1957, the year of the Stockholm claim, which could not be reproduced. Berkeley reported work in 1958 and Jefferson Lab says Berkeley was eventually credited, but the 1993 IUPAC/IUPAP report gives the credit to two 1966 Dubna papers."
+
+[[row]]
+Z = 103
+discovered = 1961
+discovered_text = "1961–1971 (credit shared)"
+discoverers = ["Lawrence Radiation Laboratory, Berkeley", "Joint Institute for Nuclear Research, Dubna"]
+place = "Berkeley, United States"
+name_origin = "After Ernest O. Lawrence, inventor of the cyclotron."
+symbol_note = "Proposed with the symbol Lw; later changed to Lr."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "The 1993 IUPAC/IUPAP report found no single conclusive paper: confidence grew over roughly ten years of Berkeley and Dubna work, so credit is shared. The isotope first reported in 1961 was later reassigned."
+
+[[row]]
+Z = 104
+discovered = 1969
+discovered_text = "1969 (Dubna first claimed it in 1964)"
+discoverers = ["Joint Institute for Nuclear Research, Dubna", "Lawrence Radiation Laboratory, Berkeley"]
+place = "Dubna, Russia"
+name_origin = "After Ernest Rutherford, pioneer of nuclear physics."
+symbol_note = "Dubna proposed kurchatovium (Ku) and Berkeley rutherfordium (Rf); a 1994 IUPAC proposal would have called it dubnium, but rutherfordium was adopted in 1997. Its temporary systematic name was unnilquadium (Unq)."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "The 1993 IUPAC/IUPAP report judged the Dubna chemistry experiments and the Berkeley experiments of 1969 practically simultaneous, and both demonstrated element 104; PubChem gives the 1964 Dubna claim."
+
+[[row]]
+Z = 105
+discovered = 1970
+discovered_text = "1970 (Dubna claims from 1967)"
+discoverers = ["Lawrence Radiation Laboratory, Berkeley", "Joint Institute for Nuclear Research, Dubna"]
+place = "Berkeley, United States"
+name_origin = "After Dubna, the Russian town that is home to the Joint Institute for Nuclear Research."
+symbol_note = "Berkeley proposed hahnium (Ha) and Dubna nielsbohrium (Ns); IUPAC proposed joliotium (Jl) in 1994 before adopting dubnium (Db) in 1997. Temporary name: unnilpentium (Unp)."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "The 1993 IUPAC/IUPAP report found Berkeley's and Dubna's 1970 reports practically simultaneous and of equal weight, so credit is shared; PubChem gives 1967, the year of Dubna's first report."
+
+[[row]]
+Z = 106
+discovered = 1974
+discoverers = ["Lawrence Berkeley Laboratory, Berkeley", "Lawrence Livermore Laboratory, Livermore"]
+place = "Berkeley, United States"
+name_origin = "After Glenn T. Seaborg, who took part in the discovery of several transuranium elements; it was named in his lifetime."
+symbol_note = "A 1994 IUPAC proposal would have given this element the name rutherfordium; seaborgium was adopted in 1997. Temporary name: unnilhexium (Unh)."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "A Dubna claim from the same year was judged less convincing by the 1993 IUPAC/IUPAP report. Los Alamos wrongly places Seaborg in the Dubna group."
+
+[[row]]
+Z = 107
+discovered = 1981
+discovered_text = "1981 (a Dubna claim dates from 1976)"
+discoverers = ["Gesellschaft für Schwerionenforschung (GSI), Darmstadt"]
+place = "Darmstadt, Germany"
+name_origin = "After Niels Bohr, pioneer of the quantum theory of the atom."
+symbol_note = "Proposed as nielsbohrium (Ns); shortened to bohrium (Bh) in 1997. Temporary name: unnilseptium (Uns)."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "PubChem gives 1976, the year of a Dubna claim; the 1993 IUPAC/IUPAP report found the 1981 Darmstadt work convincing."
+
+[[row]]
+Z = 108
+discovered = 1984
+discoverers = ["Gesellschaft für Schwerionenforschung (GSI), Darmstadt", "Joint Institute for Nuclear Research, Dubna"]
+place = "Darmstadt, Germany"
+name_origin = "From Hassia, the Latin name of the German state of Hesse, home of GSI."
+symbol_note = "A 1994 IUPAC proposal would have called it hahnium (Hn); hassium was adopted in 1997. Temporary name: unniloctium (Uno)."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "The 1993 IUPAC/IUPAP report judged that simultaneous, independent 1984 work in Darmstadt and Dubna established element 108; the Darmstadt group named it. The PubChem texts credit GSI alone."
+
+[[row]]
+Z = 109
+discovered = 1982
+discoverers = ["Gesellschaft für Schwerionenforschung (GSI), Darmstadt"]
+place = "Darmstadt, Germany"
+name_origin = "After Lise Meitner, co-discoverer of protactinium-231 and of the explanation of nuclear fission."
+symbol_note = "Temporary name: unnilennium (Une)."
+source = "iupac_discovery"
+doi = "10.1351/pac199365081757"
+note = "A single atom was observed on 29 August 1982, made by fusing iron-58 with bismuth-209."
+
+[[row]]
+Z = 110
+discovered = 1994
+discovered_text = "1994 (published 1995)"
+discoverers = ["Gesellschaft für Schwerionenforschung (GSI), Darmstadt"]
+place = "Darmstadt, Germany"
+name_origin = "After Darmstadt, the German city where GSI is located."
+symbol_note = "Temporary name: ununnilium (Uun); named darmstadtium in 2003."
+source = "iupac_discovery"
+doi = "10.1351/pac200173060959"
+note = "First atom detected on 9 November 1994 from nickel ions fired at lead; the 2001 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI."
+
+[[row]]
+Z = 111
+discovered = 1994
+discovered_text = "1994 (published 1995)"
+discoverers = ["Gesellschaft für Schwerionenforschung (GSI), Darmstadt"]
+place = "Darmstadt, Germany"
+name_origin = "After Wilhelm Conrad Röntgen, discoverer of X-rays."
+symbol_note = "Temporary name: unununium (Uuu); named roentgenium in 2004."
+source = "iupac_discovery"
+doi = "10.1351/pac200375101601"
+note = "Three atoms made in late 1994 from nickel-64 on bismuth-209; the 2003 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI."
+
+[[row]]
+Z = 112
+discovered = 1996
+discoverers = ["Gesellschaft für Schwerionenforschung (GSI), Darmstadt"]
+place = "Darmstadt, Germany"
+name_origin = "After the astronomer Nicolaus Copernicus."
+symbol_note = "Temporary name: ununbium (Uub). The discoverers first proposed the symbol Cp, changed to Cn because Cp had once stood for cassiopeium (lutetium)."
+source = "iupac_discovery"
+doi = "10.1351/PAC-REP-08-03-05"
+note = "First atom made on 9 February 1996 from zinc-70 on lead-208; the 2009 IUPAC/IUPAP report credited the 1996 and 2002 GSI work, and the name followed in 2010."
+
+[[row]]
+Z = 113
+discovered = 2004
+discoverers = ["RIKEN Nishina Center for Accelerator-Based Science, Wako"]
+place = "Wako, Japan"
+name_origin = "From Nihon, one of the Japanese names for Japan."
+symbol_note = "Temporary name: ununtrium (Uut); named nihonium in 2016."
+source = "iupac_discovery"
+doi = "10.1515/pac-2015-0502"
+note = "First atom made on 23 July 2004 from zinc-70 on bismuth-209; the 2016 IUPAC/IUPAP report credited the RIKEN collaboration. The first element discovered in Asia."
+
+[[row]]
+Z = 114
+discovered = 1998
+discovered_text = "1998 (first reported); credit rests on experiments published in 2004"
+discoverers = ["Joint Institute for Nuclear Research, Dubna", "Lawrence Livermore National Laboratory, Livermore"]
+place = "Dubna, Russia"
+name_origin = "After the Flerov Laboratory of Nuclear Reactions at Dubna, named for the physicist Georgy Flerov."
+symbol_note = "Temporary name: ununquadium (Uuq); named flerovium in 2012."
+source = "iupac_discovery"
+doi = "10.1351/PAC-REP-10-05-01"
+note = "Made from calcium-48 and plutonium; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration on the strength of its 2004 experiments. Los Alamos gives 1999, the year the first report was published."
+
+[[row]]
+Z = 115
+discovered = 2003
+discovered_text = "2003 (experiments; announced 2004)"
+discoverers = ["Joint Institute for Nuclear Research, Dubna", "Lawrence Livermore National Laboratory, Livermore", "Oak Ridge National Laboratory, Oak Ridge"]
+place = "Dubna, Russia"
+name_origin = "After the Moscow region, in which Dubna lies."
+symbol_note = "Temporary name: ununpentium (Uup); named moscovium in 2016."
+source = "iupac_discovery"
+doi = "10.1515/pac-2015-0502"
+note = "Made from calcium-48 on americium-243 in July–August 2003; the 2016 IUPAC/IUPAP report found the Dubna–Livermore–Oak Ridge claims compliant. Los Alamos also lists Vanderbilt University among the discoverers."
+
+[[row]]
+Z = 116
+discovered = 2000
+discoverers = ["Joint Institute for Nuclear Research, Dubna", "Lawrence Livermore National Laboratory, Livermore"]
+place = "Dubna, Russia"
+name_origin = "After Lawrence Livermore National Laboratory and its home town, Livermore, California."
+symbol_note = "Temporary name: ununhexium (Uuh); named livermorium in 2012."
+source = "iupac_discovery"
+doi = "10.1351/PAC-REP-10-05-01"
+note = "First reported in 2000 from calcium-48 on curium-248; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration."
+
+[[row]]
+Z = 117
+discovered = 2010
+discoverers = ["Joint Institute for Nuclear Research, Dubna", "Lawrence Livermore National Laboratory, Livermore", "Oak Ridge National Laboratory, Oak Ridge"]
+place = "Dubna, Russia"
+name_origin = "After the US state of Tennessee, where Oak Ridge National Laboratory produced the berkelium target used to make it."
+symbol_note = "Temporary name: ununseptium (Uus); named tennessine in 2016."
+source = "iupac_discovery"
+doi = "10.1515/pac-2015-0502"
+note = "Made from calcium-48 on berkelium-249; the 2016 IUPAC/IUPAP report found the Dubna–Livermore–Oak Ridge claim compliant. The name also acknowledges Vanderbilt University and the University of Tennessee."
+
+[[row]]
+Z = 118
+discovered = 2006
+discovered_text = "2006 (first decay chain seen in 2002)"
+discoverers = ["Joint Institute for Nuclear Research, Dubna", "Lawrence Livermore National Laboratory, Livermore"]
+place = "Dubna, Russia"
+name_origin = "After the nuclear physicist Yuri Oganessian, a leader of superheavy-element research; the second element named after a living person."
+symbol_note = "Temporary name: ununoctium (Uuo); named oganesson in 2016."
+source = "iupac_discovery"
+doi = "10.1515/pac-2015-0501"
+note = "Made from calcium-48 on californium-249; the 2016 IUPAC/IUPAP report credited the Dubna–Livermore collaboration. A 1999 Berkeley claim was retracted."

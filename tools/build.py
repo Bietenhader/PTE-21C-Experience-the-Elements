@@ -196,8 +196,7 @@ def ionization_energy(z, gsie, ev_to_kj, predicted=None):
             unc=unc_kj,
             flag="predicted",
             note=f"Theoretical prediction {ev_txt}, converted to kJ/mol with the exact CODATA 2022 factor. "
-            + predicted["note"].split(". ")[0]
-            + ".",
+            + first_sentence(predicted["note"]),
         )
         if predicted.get("doi"):
             q["doi"] = predicted["doi"]
@@ -272,7 +271,26 @@ def covalent_radius(z, pub):
     return quantity(value, "pm", "pubchem", unc=unc, note=note)
 
 
-def discovery(z, pub):
+HISTORY = {r["Z"]: r for r in curated.load("history.toml")}
+
+
+def discovery(z, pub, report=None):
+    """tools/curated/history.toml where it has the element (it resolves the disagreements between
+    PubChem's YearDiscovered and the discovery texts and IUPAC reports); PubChem otherwise."""
+    row = HISTORY.get(z)
+    if row:
+        out = {"text": row.get("discovered_text") or str(row["discovered"]).capitalize(), "source": row["source"]}
+        if isinstance(row["discovered"], int):
+            out["year"] = row["discovered"]
+        if row.get("doi"):
+            out["doi"] = row["doi"]
+        if pub is not None and report is not None:
+            text = pub[z]["yearDiscovered"].strip()
+            if text.isdigit() and int(text) != out.get("year"):
+                report.add(
+                    "Rules applied", f"Z={z}: discovery {text} (PubChem) → {out['text']} (tools/curated/history.toml)."
+                )
+        return out
     if pub is None:
         return {"text": "unknown", "source": "pubchem"}
     text = pub[z]["yearDiscovered"].strip()
@@ -641,7 +659,7 @@ def build() -> int:
                 "density": pubchem_number(z, pub, "density"),
                 "stableIsotopes": stable_count,
                 "longestHalfLife": longest,
-                "discovery": discovery(z, pub),
+                "discovery": discovery(z, pub, report),
                 "oxidationStates": oxidation_states(z, pub, report),
                 "configuration": cfg_entry,
                 "groundTerm": term,
@@ -682,6 +700,12 @@ def build() -> int:
     return 0
 
 
+def first_sentence(text: str) -> str:
+    """Up to the first full stop that ends a sentence (not the one in "et al.")."""
+    head = re.split(r"(?<!\bal)\.\s", text, maxsplit=1)[0]
+    return head if head.endswith(".") else head + "."
+
+
 def _report_ie_flags(elements, report):
     for e in elements:
         q = e["ie1"]
@@ -694,6 +718,8 @@ def _sources_used(obj, acc: set) -> set:
     if isinstance(obj, dict):
         if isinstance(obj.get("source"), str):
             acc.add(obj["source"])
+        if isinstance(obj.get("sources"), list):
+            acc.update(x for x in obj["sources"] if isinstance(x, str))
         for v in obj.values():
             _sources_used(v, acc)
     elif isinstance(obj, list):
@@ -729,6 +755,37 @@ def build_sources(index, data):
     if unknown:
         raise ValueError(f"sources used but not in tools/sources.toml: {sorted(unknown)}")
     return {"schemaVersion": 1, "sources": out}
+
+
+def refresh_source_status() -> set:
+    """After every data file is written: mark each source used anywhere in public/data as ok.
+
+    build() writes sources.json from index.json alone, before the per-element files, trends and
+    layouts exist; this pass looks at all of them. Unavailable sources stay unavailable.
+    """
+    path = DATA_DIR / "sources.json"
+    doc = load_json(path)
+    used = {"nist_codata"}
+    for f in DATA_DIR.rglob("*.json"):
+        if f != path:
+            _sources_used(load_json(f), used)
+    unknown = used - set(doc["sources"])
+    if unknown:
+        raise ValueError(f"sources used but not in tools/sources.toml: {sorted(unknown)}")
+    registry = load_sources_toml()
+    for sid, entry in doc["sources"].items():
+        if entry["status"] == "unavailable":
+            continue
+        entry["status"] = "ok" if sid in used else "not_yet_used"
+        entry.pop("retrieved", None)
+        if registry[sid]["kind"] == "fetched" and entry["status"] == "ok" and (date := retrieved_date(sid)):
+            entry["retrieved"] = date
+        # keep the key order of build_sources (retrieved before notes)
+        if "notes" in entry:
+            entry["notes"] = entry.pop("notes")
+    validate("SourcesFile", doc)
+    dump_json(path, doc)
+    return used
 
 
 def validate(definition: str, obj) -> None:

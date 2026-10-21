@@ -72,6 +72,7 @@ def main(argv: list[str] | None = None) -> int:
     build_details.build_details()
     build_layouts.build_layouts()
     build_trends.build_trends()
+    build.refresh_source_status()
     if failed:
         print(f"\n!!! Unavailable sources: {', '.join(failed)} — see tools/build-report.md and STATUS.md")
     return 0

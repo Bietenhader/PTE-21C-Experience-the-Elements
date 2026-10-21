@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import build
 from common import DATA_DIR, NUM_ELEMENTS, REPO_ROOT, is_missing, load_json
 
 # SPEC §15.3 allow-list for images (names as recorded in credits).
@@ -89,6 +90,9 @@ def detail_counts(details: dict[int, dict]) -> list[tuple[str, int, str]]:
     def n(test) -> int:
         return sum(1 for d in details.values() if test(d))
 
+    def present(section: dict, key: str) -> bool:
+        return key in section and not is_missing(section[key])
+
     rows = [
         ("Isotope records (IAEA)", len(list((DATA_DIR / "isotopes").glob("*.json"))), "iaea_livechart"),
         (
@@ -113,15 +117,20 @@ def detail_counts(details: dict[int, dict]) -> list[tuple[str, int, str]]:
         ("Clock or standard frequency", n(lambda d: d["amo"]["clocks"]), "bipm_frequencies, clocks.toml"),
         ("Laser cooling", n(lambda d: d["amo"]["laserCooling"]), "lasercooling.toml"),
         ("Role in the SI", n(lambda d: d["amo"]["siHistory"]), "si_history.toml, bipm_frequencies"),
-        ("Abundance in the Earth's crust", n(lambda d: "crust" in d["physical"]["abundance"]), "pubchem"),
-        ("Abundance in sea water", n(lambda d: "ocean" in d["physical"]["abundance"]), "pubchem"),
-        ("Solar-system abundance", n(lambda d: "solar" in d["physical"]["abundance"]), "abundance.toml"),
-        ("Crystal structure", n(lambda d: bool(d["physical"].get("crystal"))), "crystal.toml"),
+        ("Abundance in the Earth's crust", n(lambda d: present(d["physical"]["abundance"], "crust")), "pubchem"),
+        ("Abundance in sea water", n(lambda d: present(d["physical"]["abundance"], "ocean")), "pubchem"),
+        (
+            "Solar-system abundance (log ε)",
+            n(lambda d: present(d["physical"]["abundance"], "solarLogEps")),
+            "lodders2025",
+        ),
+        ("Amount in the human body", n(lambda d: present(d["physical"]["abundance"], "body")), "icrp23"),
+        ("Crystal structure", n(lambda d: present(d["physical"], "crystal")), "cod"),
         ("Annual production", n(lambda d: bool(d["physical"].get("production"))), "production.toml"),
         (
             "Cosmic origin (nucleosynthesis)",
-            n(lambda d: bool(d.get("nucleus", {}).get("nucleosynthesis"))),
-            "nucleosynthesis.toml",
+            n(lambda d: present(d["nucleus"], "origin")),
+            "kobayashi2020",
         ),
         (
             "Biology: a known role",
@@ -267,6 +276,7 @@ def main(argv: list[str] | None = None) -> int:
     sources = load_json(DATA_DIR / "sources.json")
     details = {int(p.stem): load_json(p) for p in (DATA_DIR / "elements").glob("*.json")}
     cov = coverage(index, details)
+    build.validate("CoverageFile", cov)
     files = {
         REPO_ROOT / "PROVENANCE.md": provenance(index, sources, cov),
         REPO_ROOT / "CREDITS.md": credits(index),

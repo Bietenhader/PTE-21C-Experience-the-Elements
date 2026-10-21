@@ -314,7 +314,7 @@ caption = "Whether the ground level of the reference isotope has hyperfine struc
 sources = ["nist_gsie", "iaea_livechart"]
 classes = [
   { id = "value", label = "Value compiled", short = "ν", description = "The splitting is in the curated table.", tone = 2 },
-  { id = "pending", label = "Exists, not yet compiled", short = "n/m", description = "Hyperfine structure exists; the value is compiled in M2.", tone = 1 },
+  { id = "pending", label = "Exists, not yet compiled", short = "n/m", description = "Hyperfine structure exists; the value is not yet in our curated table.", tone = 1 },
   { id = "j0", label = "None: ground level J = 0", short = "J=0", description = "A J = 0 ground level cannot split.", tone = 3 },
   { id = "i0", label = "None: nuclear spin I = 0", short = "I=0", description = "Every naturally occurring isotope has I = 0.", tone = 4 },
   { id = "no-natural", label = "No natural isotope", short = "no iso", description = "No naturally occurring isotope to serve as reference.", tone = 8 },
@@ -329,7 +329,7 @@ classes = [
   { id = "measured", label = "Measured", short = "exp", description = "Derived from evaluated experimental data.", tone = 3 },
   { id = "semi", label = "Semi-empirical [ ]", short = "[ ]", description = "Interpolated or extrapolated from known values.", tone = 6 },
   { id = "theory", label = "Theoretical ( )", short = "( )", description = "From an ab-initio calculation.", tone = 7 },
-  { id = "none", label = "None in NIST", short = "pred.", description = "Only theoretical predictions in the literature.", tone = 8 },
+  { id = "none", label = "None in NIST", short = "pred.", description = "NIST lists none; a published prediction is shown, flagged as predicted.", tone = 8 },
 ]
 
 [[map]]
@@ -341,4 +341,77 @@ classes = [
   { id = "value", label = "Single value", short = "±", description = "One value with its uncertainty.", tone = 3 },
   { id = "interval", label = "Interval", short = "[ , ]", description = "Varies in nature; IUPAC gives a range.", tone = 2 },
   { id = "none", label = "None", short = "( )", description = "No stable isotope: the mass number of the longest-lived isotope is shown.", tone = 8 },
+]
+
+[[map]]
+id = "laser-cooled"
+label = "Laser-cooled"
+caption = "Elements whose neutral atoms, singly charged ions or both have been laser-cooled, from the curated table tools/curated/lasercooling.toml (first-cooling papers cited per row)."
+sources = ["olmschenk_catalog"]
+classes = [
+  { id = "both", label = "Atoms and ions", short = "A+I", description = "Both the neutral atom and the singly charged ion have been laser-cooled.", tone = 2 },
+  { id = "neutral", label = "Neutral atoms", short = "A", description = "Neutral atoms have been laser-cooled.", tone = 1 },
+  { id = "ion", label = "Ions only", short = "I", description = "Singly charged ions have been laser-cooled; neutral atoms not (yet).", tone = 5 },
+  { id = "none", label = "Not laser-cooled", short = "–", description = "No laser cooling of this element is in our table.", tone = 8 },
+]
+
+[[map]]
+id = "clocks"
+label = "Clock species"
+caption = "Atoms and ions on the BIPM list of recommended standard frequencies, the caesium transition that defines the second, and the thorium-229 nuclear transition."
+sources = ["bipm_frequencies", "cgpm_resolutions", "primary_literature"]
+classes = [
+  { id = "defines", label = "Defines the second", short = "SI s", description = "The caesium-133 hyperfine frequency is fixed at exactly 9 192 631 770 Hz.", tone = 6 },
+  { id = "srs", label = "Secondary representation", short = "SRS", description = "A transition of this element is a BIPM secondary representation of the second.", tone = 2 },
+  { id = "standard", label = "Standard or candidate frequency", short = "ν", description = "On the BIPM list of recommended frequencies but not a secondary representation, or a nuclear-clock candidate.", tone = 1 },
+  { id = "none", label = "None", short = "–", description = "No clock or standard frequency of this element is listed.", tone = 8 },
+]
+
+[[map]]
+id = "si-history"
+label = "Elements in the SI"
+caption = "Elements that define or realize SI units today (including recommended radiations for the metre), and those that did so only in the past (definitions and prototypes), from the BIPM and the CGPM resolutions."
+sources = ["bipm_frequencies", "cgpm_resolutions"]
+classes = [
+  { id = "current", label = "Role in today's SI", short = "now", description = "Defines or realizes an SI unit today.", tone = 2 },
+  { id = "historical", label = "Past role only", short = "past", description = "Was part of a definition or a prototype that has since been replaced.", tone = 4 },
+  { id = "none", label = "None", short = "–", description = "No role in the definition or realization of SI units.", tone = 8 },
+]
+
+[[map]]
+id = "essential-plants"
+label = "Essential for plants"
+caption = "Elements plants cannot complete their life cycle without, and elements that benefit some plants, from tools/curated/biology.toml (Marschner's Mineral Nutrition of Higher Plants and cited reviews)."
+sources = ["marschner2012", "primary_literature"]
+classes = [
+  { id = "yes", label = "Essential", short = "ess.", description = "Required by all higher plants.", tone = 3 },
+  { id = "beneficial", label = "Beneficial", short = "ben.", description = "Promotes growth in some plants, or is required by some taxa only.", tone = 2 },
+  { id = "no", label = "Not essential", short = "–", description = "Not known to be essential or beneficial for plants.", tone = 8 },
+]
+
+[[map]]
+id = "essential-humans"
+label = "Essential for humans"
+caption = "Elements the human body needs, and elements whose need is probable but not proven, from tools/curated/biology.toml (EFSA dietary reference values and cited reviews)."
+sources = ["efsa_drv", "zoroddu2019", "primary_literature"]
+classes = [
+  { id = "yes", label = "Essential", short = "ess.", description = "A dietary requirement is established.", tone = 3 },
+  { id = "probable", label = "Probably essential", short = "prob.", description = "Evidence for a requirement exists but is not conclusive.", tone = 6 },
+  { id = "no", label = "Not essential", short = "–", description = "Not known to be essential for humans.", tone = 8 },
+]
+
+[[map]]
+id = "origin"
+label = "Cosmic origin (approximate)"
+caption = "The process that made most of each element present when the Solar System formed, read off Fig. 39 of Kobayashi, Karakas & Lugaro (2020) — an approximate transcription of a model, not a measurement."
+sources = ["kobayashi2020"]
+classes = [
+  { id = "bigbang", label = "Big Bang", short = "BB", description = "Made in the first minutes after the Big Bang.", tone = 1 },
+  { id = "cosmic-rays", label = "Cosmic rays", short = "CR", description = "Split off heavier nuclei by fast cosmic-ray particles.", tone = 4 },
+  { id = "agb", label = "Dying low-mass stars", short = "AGB", description = "Made in asymptotic-giant-branch stars and blown off in their winds.", tone = 3 },
+  { id = "massive-stars", label = "Exploding massive stars", short = "SN", description = "Made in massive stars and their supernova explosions.", tone = 2 },
+  { id = "neutron-star-mergers", label = "Merging neutron stars", short = "NSM", description = "Made by rapid neutron capture when neutron stars collide.", tone = 5 },
+  { id = "white-dwarfs", label = "Exploding white dwarfs", short = "SN Ia", description = "Made in type Ia supernovae, the explosions of white dwarfs.", tone = 6 },
+  { id = "even", label = "Two equal shares", short = "½+½", description = "Two processes made about the same share.", tone = 7 },
+  { id = "none", label = "Not given", short = "–", description = "Not in the model, or the figure cannot be read for this element.", tone = 8 },
 ]

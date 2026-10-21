@@ -1,0 +1,4405 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Abundances (SPEC §6.2, §10.4). The crust and sea-water estimates are not here: they are read
+# from the PubChem element pages (Jefferson Lab estimates) by the build.
+#
+# body: mass of the element in the ICRP "Reference Man" (adult male, 70 kg), as printed in
+# ICRP Publication 23 (1975), Table 110, pp. 327-328 (read from the page scan hosted by
+# BioNumbers, BNID 110328); the major elements agree with Kerr (1982), ORNL/TM-8318, Table 1,
+# which reprints them. Values printed as "<" are upper limits and are entered as limits, not as
+# values. Rubidium is left out: its printed row repeats the strontium row and other sources
+# give a different figure. These are 1970s estimates for one reference body, not a precise or
+# universal composition; the app says so.
+#
+# Columns: Z, quantity ("body" | "solar"), value, unit, limit ("upper"), source, doi, note.
+
+
+[[row]]
+Z = 1
+quantity = "body"
+value = 7000.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 4
+quantity = "body"
+value = 3.6e-05
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 5
+quantity = "body"
+value = 0.048
+unit = "g"
+limit = "upper"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.048 g."
+
+[[row]]
+Z = 6
+quantity = "body"
+value = 16000.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 7
+quantity = "body"
+value = 1800.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 8
+quantity = "body"
+value = 43000.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 9
+quantity = "body"
+value = 2.6
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 11
+quantity = "body"
+value = 100.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 12
+quantity = "body"
+value = 19.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 13
+quantity = "body"
+value = 0.061
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 14
+quantity = "body"
+value = 18.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 15
+quantity = "body"
+value = 580.0
+unit = "g"
+source = "kerr1982"
+note = "In a 70 kg reference adult. ICRP Publication 23 (1975) Table 110 prints 780 g; Kerr (1982) gives 580 g, the value corrected in a 1980 erratum to Publication 23."
+
+[[row]]
+Z = 16
+quantity = "body"
+value = 140.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 17
+quantity = "body"
+value = 95.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 19
+quantity = "body"
+value = 140.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 20
+quantity = "body"
+value = 1000.0
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 24
+quantity = "body"
+value = 0.0018
+unit = "g"
+limit = "upper"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.0018 g."
+
+[[row]]
+Z = 25
+quantity = "body"
+value = 0.012
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 26
+quantity = "body"
+value = 4.2
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 27
+quantity = "body"
+value = 0.0015
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 28
+quantity = "body"
+value = 0.01
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 29
+quantity = "body"
+value = 0.072
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 30
+quantity = "body"
+value = 2.3
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 35
+quantity = "body"
+value = 0.2
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 38
+quantity = "body"
+value = 0.32
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 42
+quantity = "body"
+value = 0.0093
+unit = "g"
+limit = "upper"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.0093 g."
+
+[[row]]
+Z = 48
+quantity = "body"
+value = 0.05
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 50
+quantity = "body"
+value = 0.017
+unit = "g"
+limit = "upper"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.017 g."
+
+[[row]]
+Z = 53
+quantity = "body"
+value = 0.013
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 55
+quantity = "body"
+value = 0.0015
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 56
+quantity = "body"
+value = 0.022
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 79
+quantity = "body"
+value = 0.01
+unit = "g"
+limit = "upper"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.010 g."
+
+[[row]]
+Z = 82
+quantity = "body"
+value = 0.12
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 88
+quantity = "body"
+value = 3.1e-11
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+[[row]]
+Z = 92
+quantity = "body"
+value = 9e-05
+unit = "g"
+source = "icrp23"
+doi = "10.1016/S0074-2740(75)80022-5"
+note = "In a 70 kg reference adult (ICRP Publication 23, 1975, Table 110)."
+
+
+# --- Solar system ------------------------------------------------------------------------------
+#
+# Solar-system elemental abundances, copied as printed from
+#   K. Lodders, M. Bergemann & H. Palme (2025), 'Solar System Elemental Abundances from the Solar
+#   Photosphere and CI-Chondrites', Space Sci. Rev. 221, 23, doi:10.1007/s11214-025-01146-w (CC BY 4.0).
+# Table 6 = main text (pp. 47-50); Table A13 = Electronic Supplementary Material (11214_2025_1146_MOESM1_ESM.pdf).
+# quantity: mass_fraction (dimensionless) | atoms_per_1e6_Si (N(Si) = 1e6) | log_eps (A(E) = log10(N_E/N_H) + 12, dex)
+# epoch: present = present-day solar system (photosphere/CI); protosolar = 4.567 Ga ago (settling + decay corrected)
+# Not tabulated (omitted): Tc, Pm (no values), Po-Ac, Pa, Z > 92. Sm mass fraction omitted (corrupted row; see README).
+#
+# The build uses the proto-solar mass fraction as abundance.solar and the present-day log ε as
+# abundance.solarLogEps; the other columns are kept for the panels and for checking.
+
+[[solar]]
+Z = 1
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 0.7061
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 1
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 2.81e+10
+unc = 2.57e+08
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: solar (photospheric) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 1
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 2.29e+10
+unc = 2.1e+08
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: solar (photospheric) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 1
+quantity = "log_eps"
+epoch = "present"
+value = 12.000
+unc = 0.004
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed. A(H) = 12 by definition of the scale; the table nevertheless prints +-0.004."
+
+[[solar]]
+Z = 1
+quantity = "log_eps"
+epoch = "protosolar"
+value = 12.000
+unc = 0.004
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed. A(H) = 12 by definition of the scale; the table nevertheless prints +-0.004."
+
+[[solar]]
+Z = 2
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 0.2752
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 2
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 2.34e+09
+unc = 7e+07
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: solar value with theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 2
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 2.25e+09
+unc = 6e+07
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: solar value with theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 2
+quantity = "log_eps"
+epoch = "present"
+value = 10.922
+unc = 0.012
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar value with theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 2
+quantity = "log_eps"
+epoch = "protosolar"
+value = 10.992
+unc = 0.012
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: solar value with theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 3
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.190e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 3
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 56.1
+unc = 2.7
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 3
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 56.1
+unc = 2.7
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 3
+quantity = "log_eps"
+epoch = "present"
+value = 3.30
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 3
+quantity = "log_eps"
+epoch = "protosolar"
+value = 3.39
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 4
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.810e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 4
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.657
+unc = 0.038
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 4
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.657
+unc = 0.038
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 4
+quantity = "log_eps"
+epoch = "present"
+value = 1.37
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 4
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.46
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 5
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 5.984e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 5
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 18.1
+unc = 2.3
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 5
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 18.1
+unc = 2.3
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 5
+quantity = "log_eps"
+epoch = "present"
+value = 2.81
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 5
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.90
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 6
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.336e-03
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 6
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 9.08e+06
+unc = 2.10e+06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: solar (photospheric) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 6
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 9.08e+06
+unc = 2.10e+06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: solar (photospheric) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 6
+quantity = "log_eps"
+epoch = "present"
+value = 8.51
+unc = 0.09
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 6
+quantity = "log_eps"
+epoch = "protosolar"
+value = 8.60
+unc = 0.09
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 7
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.047e-03
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 7
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 2.44e+06
+unc = 7e+05
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: solar (photospheric) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 7
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 2.44e+06
+unc = 7.1e+05
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: solar (photospheric) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 7
+quantity = "log_eps"
+epoch = "present"
+value = 7.94
+unc = 0.11
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 7
+quantity = "log_eps"
+epoch = "protosolar"
+value = 8.03
+unc = 0.11
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 8
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.902e-03
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 8
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.62e+07
+unc = 2.0e+06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: solar (photospheric) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 8
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.62e+07
+unc = 2.0e+06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: solar (photospheric) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 8
+quantity = "log_eps"
+epoch = "present"
+value = 8.76
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 8
+quantity = "log_eps"
+epoch = "protosolar"
+value = 8.85
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: solar (photospheric) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 9
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.424e-07
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 9
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1278
+unc = 277
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 9
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1278
+unc = 277
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 9
+quantity = "log_eps"
+epoch = "present"
+value = 4.66
+unc = 0.09
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 9
+quantity = "log_eps"
+epoch = "protosolar"
+value = 4.75
+unc = 0.09
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 10
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.440e-03
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 10
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 3.96e+06
+unc = 1.26e+06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: solar value with theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 10
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 3.96e+06
+unc = 1.26e+06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: solar value with theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 10
+quantity = "log_eps"
+epoch = "present"
+value = 8.15
+unc = 0.12
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar value with theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 10
+quantity = "log_eps"
+epoch = "protosolar"
+value = 8.24
+unc = 0.12
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: solar value with theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 11
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.930e-05
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 11
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 55852
+unc = 1414
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 11
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 55852
+unc = 1414
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 11
+quantity = "log_eps"
+epoch = "present"
+value = 6.30
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 11
+quantity = "log_eps"
+epoch = "protosolar"
+value = 6.39
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 12
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.701e-04
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 12
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.04e+06
+unc = 2e+04
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 12
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.04e+06
+unc = 2e+04
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 12
+quantity = "log_eps"
+epoch = "present"
+value = 7.57
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 12
+quantity = "log_eps"
+epoch = "protosolar"
+value = 7.66
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 13
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 6.692e-05
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 13
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 81102
+unc = 4956
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 13
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 81102
+unc = 4956
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 13
+quantity = "log_eps"
+epoch = "present"
+value = 6.46
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 13
+quantity = "log_eps"
+epoch = "protosolar"
+value = 6.55
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 14
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 8.589e-04
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 14
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.00e+06
+unc = 1e+04
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 14
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.00e+06
+unc = 1e+04
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 14
+quantity = "log_eps"
+epoch = "present"
+value = 7.55
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 14
+quantity = "log_eps"
+epoch = "protosolar"
+value = 7.64
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 15
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.948e-06
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 15
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 8395
+unc = 757
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 15
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 8395
+unc = 757
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 15
+quantity = "log_eps"
+epoch = "present"
+value = 5.48
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 15
+quantity = "log_eps"
+epoch = "protosolar"
+value = 5.56
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 16
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 4.165e-04
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 16
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 424747
+unc = 37798
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 16
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 424747
+unc = 37798
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 16
+quantity = "log_eps"
+epoch = "present"
+value = 7.18
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 16
+quantity = "log_eps"
+epoch = "protosolar"
+value = 7.27
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 17
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 5.768e-06
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 17
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 5315
+unc = 817
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 17
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 5315
+unc = 817
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 17
+quantity = "log_eps"
+epoch = "present"
+value = 5.28
+unc = 0.06
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 17
+quantity = "log_eps"
+epoch = "protosolar"
+value = 5.37
+unc = 0.06
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 18
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 9.843e-05
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 18
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 88752
+unc = 28305
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: solar value with theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 18
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 88751
+unc = 28305
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: solar value with theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 18
+quantity = "log_eps"
+epoch = "present"
+value = 6.50
+unc = 0.12
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: solar value with theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 18
+quantity = "log_eps"
+epoch = "protosolar"
+value = 6.59
+unc = 0.12
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: solar value with theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 19
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 4.378e-06
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 19
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 3659
+unc = 276
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 19
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 3664
+unc = 277
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 19
+quantity = "log_eps"
+epoch = "present"
+value = 5.12
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 19
+quantity = "log_eps"
+epoch = "protosolar"
+value = 5.20
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 20
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.397e-05
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 20
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 60382
+unc = 2000
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 20
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 60378
+unc = 2000
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 20
+quantity = "log_eps"
+epoch = "present"
+value = 6.33
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 20
+quantity = "log_eps"
+epoch = "protosolar"
+value = 6.42
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 21
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 4.634e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 21
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 33.7
+unc = 2.2
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 21
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 33.7
+unc = 2.2
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 21
+quantity = "log_eps"
+epoch = "present"
+value = 3.08
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 21
+quantity = "log_eps"
+epoch = "protosolar"
+value = 3.17
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 22
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.554e-06
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 22
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 2428
+unc = 165
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 22
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 2428
+unc = 165
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 22
+quantity = "log_eps"
+epoch = "present"
+value = 4.94
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 22
+quantity = "log_eps"
+epoch = "protosolar"
+value = 5.03
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 23
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 4.2735e-07
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 23
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 274
+unc = 20
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 23
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 274
+unc = 20
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 23
+quantity = "log_eps"
+epoch = "present"
+value = 3.99
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 23
+quantity = "log_eps"
+epoch = "protosolar"
+value = 4.08
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 24
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.107e-05
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 24
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 13227
+unc = 588
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 24
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 13227
+unc = 588
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 24
+quantity = "log_eps"
+epoch = "present"
+value = 5.67
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 24
+quantity = "log_eps"
+epoch = "protosolar"
+value = 5.76
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 25
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.558e-05
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 25
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 9272
+unc = 22
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 25
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 9272
+unc = 22
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 25
+quantity = "log_eps"
+epoch = "present"
+value = 5.52
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values. The table prints +-0.00 dex (i.e. below 0.005 dex); unc omitted so that no zero uncertainty is displayed."
+
+[[solar]]
+Z = 25
+quantity = "log_eps"
+epoch = "protosolar"
+value = 5.61
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: average of solar and meteoritic values. The table prints +-0.00 dex (i.e. below 0.005 dex); unc omitted so that no zero uncertainty is displayed."
+
+[[solar]]
+Z = 26
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.492e-03
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 26
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 8.74e+05
+unc = 2.6e+04
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 26
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 8.74e+05
+unc = 2.6e+04
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 26
+quantity = "log_eps"
+epoch = "present"
+value = 7.49
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 26
+quantity = "log_eps"
+epoch = "protosolar"
+value = 7.58
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 27
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 4.073e-06
+flag = "source_internal_inconsistency"
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies). SOURCE INCONSISTENCY: Table A13 lists N(Si=1e6) = 2290 for Co but its mass fraction 4.073E-06 corresponds to N = 2260 (the isotopic-abundance column of the same row); Table 6 gives N = 2292 +- 116, i.e. ~1.3 % higher. Printed value kept; difference is well inside the 5 % sigma."
+
+[[solar]]
+Z = 27
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 2292
+unc = 116
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 27
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 2292
+unc = 116
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 27
+quantity = "log_eps"
+epoch = "present"
+value = 4.91
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 27
+quantity = "log_eps"
+epoch = "protosolar"
+value = 5.00
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 28
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 8.985e-05
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 28
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 50026
+unc = 926
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 28
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 50026
+unc = 926
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: average of solar and meteoritic values; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 28
+quantity = "log_eps"
+epoch = "present"
+value = 6.25
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 28
+quantity = "log_eps"
+epoch = "protosolar"
+value = 6.34
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: average of solar and meteoritic values; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 29
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.071e-06
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 29
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 551
+unc = 62
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 29
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 551
+unc = 62
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 29
+quantity = "log_eps"
+epoch = "present"
+value = 4.29
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 29
+quantity = "log_eps"
+epoch = "protosolar"
+value = 4.38
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 30
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.496e-06
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 30
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1248
+unc = 89
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 30
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1248
+unc = 89
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 30
+quantity = "log_eps"
+epoch = "present"
+value = 4.65
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 30
+quantity = "log_eps"
+epoch = "protosolar"
+value = 4.74
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 31
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.673e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 31
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 36
+unc = 3
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 31
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 36.0
+unc = 2.6
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 31
+quantity = "log_eps"
+epoch = "present"
+value = 3.11
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 31
+quantity = "log_eps"
+epoch = "protosolar"
+value = 3.20
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 32
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.697e-07
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 32
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 121
+unc = 8
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 32
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 121
+unc = 8
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 32
+quantity = "log_eps"
+epoch = "present"
+value = 3.64
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 32
+quantity = "log_eps"
+epoch = "protosolar"
+value = 3.72
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 33
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.410e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 33
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 6.15
+unc = 0.60
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 33
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 6.15
+unc = 0.60
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 33
+quantity = "log_eps"
+epoch = "present"
+value = 2.34
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 33
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.43
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 34
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.728e-07
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 34
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 71.5
+unc = 2.3
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 34
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 71.5
+unc = 2.3
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 34
+quantity = "log_eps"
+epoch = "present"
+value = 3.41
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 34
+quantity = "log_eps"
+epoch = "protosolar"
+value = 3.49
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 35
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.033e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 35
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 12.4
+unc = 3.0
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 35
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 12.4
+unc = 3.0
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 35
+quantity = "log_eps"
+epoch = "present"
+value = 2.65
+unc = 0.09
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 35
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.73
+unc = 0.09
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 36
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.468e-07
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 36
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 57.3
+unc = 18.3
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 36
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 57.3
+unc = 18.3
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 36
+quantity = "log_eps"
+epoch = "present"
+value = 3.31
+unc = 0.12
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 36
+quantity = "log_eps"
+epoch = "protosolar"
+value = 3.40
+unc = 0.12
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 37
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.855e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 37
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 6.96
+unc = 0.37
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 37
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 7.09
+unc = 0.38
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 37
+quantity = "log_eps"
+epoch = "present"
+value = 2.39
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 37
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.49
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 38
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 6.433e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 38
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 24.1
+unc = 0.8
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 38
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 24.0
+unc = 0.8
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 38
+quantity = "log_eps"
+epoch = "present"
+value = 2.93
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 38
+quantity = "log_eps"
+epoch = "protosolar"
+value = 3.02
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 39
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.221e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 39
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 4.49
+unc = 0.40
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 39
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 4.49
+unc = 0.40
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 39
+quantity = "log_eps"
+epoch = "present"
+value = 2.20
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 39
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.29
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 40
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.931e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 40
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 10.5
+unc = 0.6
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 40
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 10.5
+unc = 0.6
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 40
+quantity = "log_eps"
+epoch = "present"
+value = 2.57
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 40
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.66
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 41
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.176e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 41
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.77
+unc = 0.06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 41
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.77
+unc = 0.06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 41
+quantity = "log_eps"
+epoch = "present"
+value = 1.44
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 41
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.52
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 42
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.615e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 42
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 2.60
+unc = 0.27
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 42
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 2.60
+unc = 0.27
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 42
+quantity = "log_eps"
+epoch = "present"
+value = 1.97
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 42
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.05
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 44
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 5.464e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 44
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.77
+unc = 0.11
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 44
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.77
+unc = 0.11
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 44
+quantity = "log_eps"
+epoch = "present"
+value = 1.80
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 44
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.89
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 45
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.072e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 45
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.341
+unc = 0.015
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 45
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.341
+unc = 0.015
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 45
+quantity = "log_eps"
+epoch = "present"
+value = 1.08
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 45
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.17
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 46
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 4.509e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 46
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.39
+unc = 0.06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 46
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.39
+unc = 0.06
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 46
+quantity = "log_eps"
+epoch = "present"
+value = 1.69
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 46
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.78
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 47
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.658e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 47
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.503
+unc = 0.046
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 47
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.503
+unc = 0.046
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 47
+quantity = "log_eps"
+epoch = "present"
+value = 1.25
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 47
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.34
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 48
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 5.482e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 48
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.59
+unc = 0.11
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 48
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.59
+unc = 0.11
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 48
+quantity = "log_eps"
+epoch = "present"
+value = 1.75
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 48
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.84
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 49
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 6.279e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 49
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.179
+unc = 0.013
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 49
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.179
+unc = 0.013
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 49
+quantity = "log_eps"
+epoch = "present"
+value = 0.80
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 49
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.89
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 50
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.340e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 50
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 3.69
+unc = 0.44
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 50
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 3.69
+unc = 0.44
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 50
+quantity = "log_eps"
+epoch = "present"
+value = 2.12
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 50
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.21
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 51
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.263e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 51
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.339
+unc = 0.056
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 51
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.339
+unc = 0.056
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 51
+quantity = "log_eps"
+epoch = "present"
+value = 1.08
+unc = 0.07
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 51
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.17
+unc = 0.07
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 52
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.851e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 52
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 4.74
+unc = 0.19
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 52
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 4.74
+unc = 0.19
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 52
+quantity = "log_eps"
+epoch = "present"
+value = 2.23
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 52
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.32
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 53
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 6.171e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 53
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.60
+unc = 0.64
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 53
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.60
+unc = 0.64
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 53
+quantity = "log_eps"
+epoch = "present"
+value = 1.76
+unc = 0.15
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 53
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.84
+unc = 0.15
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 54
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.247e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 54
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 5.60
+unc = 1.79
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 54
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 5.60
+unc = 1.79
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: theoretical considerations; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 54
+quantity = "log_eps"
+epoch = "present"
+value = 2.30
+unc = 0.12
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 54
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.39
+unc = 0.12
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: theoretical considerations; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 55
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.492e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 55
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.367
+unc = 0.024
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 55
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.367
+unc = 0.024
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 55
+quantity = "log_eps"
+epoch = "present"
+value = 1.12
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 55
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.20
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 56
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.937e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 56
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 4.61
+unc = 0.27
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 56
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 4.61
+unc = 0.27
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 56
+quantity = "log_eps"
+epoch = "present"
+value = 2.22
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 56
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.30
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 57
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.992e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 57
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.469
+unc = 0.019
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 57
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.469
+unc = 0.019
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 57
+quantity = "log_eps"
+epoch = "present"
+value = 1.22
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 57
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.31
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 58
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 5.088e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 58
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.187
+unc = 0.049
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 58
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.187
+unc = 0.049
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 58
+quantity = "log_eps"
+epoch = "present"
+value = 1.63
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 58
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.71
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 59
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.697e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 59
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.179
+unc = 0.008
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 59
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.179
+unc = 0.008
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 59
+quantity = "log_eps"
+epoch = "present"
+value = 0.80
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 59
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.89
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 60
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.870e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 60
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.879
+unc = 0.046
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 60
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.877
+unc = 0.046
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 60
+quantity = "log_eps"
+epoch = "present"
+value = 1.50
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 60
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.58
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 62
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.273
+unc = 0.014
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 62
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.274
+unc = 0.014
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 62
+quantity = "log_eps"
+epoch = "present"
+value = 0.99
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 62
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.08
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 63
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 4.836e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 63
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.104
+unc = 0.005
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 63
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.104
+unc = 0.005
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 63
+quantity = "log_eps"
+epoch = "present"
+value = 0.57
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 63
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.66
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 64
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.694e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 64
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.352
+unc = 0.017
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 64
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.352
+unc = 0.017
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 64
+quantity = "log_eps"
+epoch = "present"
+value = 1.10
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 64
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.19
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 65
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.096e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 65
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.0637
+unc = 0.0028
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 65
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.0637
+unc = 0.0028
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 65
+quantity = "log_eps"
+epoch = "present"
+value = 0.36
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 65
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.44
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 66
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.086e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 66
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.420
+unc = 0.018
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 66
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.420
+unc = 0.018
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 66
+quantity = "log_eps"
+epoch = "present"
+value = 1.17
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 66
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.26
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 67
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 4.570e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 67
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.0906
+unc = 0.0037
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 67
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.0906
+unc = 0.0037
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 67
+quantity = "log_eps"
+epoch = "present"
+value = 0.51
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 67
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.60
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 68
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.343e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 68
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.263
+unc = 0.011
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 68
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.263
+unc = 0.011
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 68
+quantity = "log_eps"
+epoch = "present"
+value = 0.97
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 68
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.06
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 69
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.116e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 69
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.0410
+unc = 0.0019
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 69
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.0410
+unc = 0.0019
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 69
+quantity = "log_eps"
+epoch = "present"
+value = 0.16
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 69
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.25
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 70
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.369e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 70
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.259
+unc = 0.010
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 70
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.259
+unc = 0.010
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 70
+quantity = "log_eps"
+epoch = "present"
+value = 0.96
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 70
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.05
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 71
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.054e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 71
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.0383
+unc = 0.0022
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 71
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.0384
+unc = 0.0022
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 71
+quantity = "log_eps"
+epoch = "present"
+value = 0.13
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 71
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.22
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 72
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 8.591e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 72
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.157
+unc = 0.009
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 72
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.157
+unc = 0.009
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 72
+quantity = "log_eps"
+epoch = "present"
+value = 0.75
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 72
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.84
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 73
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.202e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 73
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.0217
+unc = 0.0010
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 73
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.0217
+unc = 0.0010
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 73
+quantity = "log_eps"
+epoch = "present"
+value = -0.11
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 73
+quantity = "log_eps"
+epoch = "protosolar"
+value = -0.02
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 74
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 8.096e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 74
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.144
+unc = 0.017
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 74
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.144
+unc = 0.017
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 74
+quantity = "log_eps"
+epoch = "present"
+value = 0.71
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 74
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.80
+unc = 0.05
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 75
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.363e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 75
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.0563
+unc = 0.0023
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 75
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.0591
+unc = 0.0024
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 75
+quantity = "log_eps"
+epoch = "present"
+value = 0.30
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 75
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.41
+unc = 0.02
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 76
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.935e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 76
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.679
+unc = 0.019
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 76
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.676
+unc = 0.019
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 76
+quantity = "log_eps"
+epoch = "present"
+value = 1.38
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 76
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.47
+unc = 0.01
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 77
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.667e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 77
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.624
+unc = 0.037
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 77
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.624
+unc = 0.037
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 77
+quantity = "log_eps"
+epoch = "present"
+value = 1.35
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 77
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.44
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 78
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 7.267e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 78
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 1.218
+unc = 0.095
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 78
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 1.218
+unc = 0.095
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 78
+quantity = "log_eps"
+epoch = "present"
+value = 1.64
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 78
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.73
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 79
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.209e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 79
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.201
+unc = 0.018
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 79
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.201
+unc = 0.018
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 79
+quantity = "log_eps"
+epoch = "present"
+value = 0.85
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 79
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.94
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 80
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.359e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 80
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.384
+unc = 0.139
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 80
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.384
+unc = 0.139
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 80
+quantity = "log_eps"
+epoch = "present"
+value = 1.14
+unc = 0.13
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 80
+quantity = "log_eps"
+epoch = "protosolar"
+value = 1.22
+unc = 0.13
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 81
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.134e-09
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 81
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.181
+unc = 0.018
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 81
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.181
+unc = 0.018
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 81
+quantity = "log_eps"
+epoch = "present"
+value = 0.81
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 81
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.90
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 82
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 2.088e-08
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 82
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 3.32
+unc = 0.24
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 82
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 3.29
+unc = 0.24
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 82
+quantity = "log_eps"
+epoch = "present"
+value = 2.07
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 82
+quantity = "log_eps"
+epoch = "protosolar"
+value = 2.16
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 83
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 9.064e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 83
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.142
+unc = 0.009
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 83
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.142
+unc = 0.009
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 83
+quantity = "log_eps"
+epoch = "present"
+value = 0.70
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 83
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.79
+unc = 0.03
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 90
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 3.062e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 90
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.0344
+unc = 0.0037
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 90
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.0431
+unc = 0.0047
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 90
+quantity = "log_eps"
+epoch = "present"
+value = 0.09
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 90
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.27
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 92
+quantity = "mass_fraction"
+epoch = "protosolar"
+value = 1.729e-10
+source = "lodders2025"
+table = "Table A13 (Electronic Supplementary Material)"
+note = "Proto-solar (4.567 Ga ago) elemental mass fraction, column 'Elemental Mass Fractions' of ESM Table A13; the table gives no uncertainty (relative sigma of N(E) in Table 6 applies)."
+
+[[solar]]
+Z = 92
+quantity = "atoms_per_1e6_Si"
+epoch = "present"
+value = 0.00894
+unc = 0.00085
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 3 'Solar System Present'; basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 92
+quantity = "atoms_per_1e6_Si"
+epoch = "protosolar"
+value = 0.02382
+unc = 0.00227
+source = "lodders2025"
+table = "Table 6"
+note = "N(E) per 10^6 Si atoms, column 4 'Solar System Proto-Solar' (corrected for settling and radioactive decay); basis: meteoritic (CI-chondrite) value; unc = 1 sigma as printed."
+
+[[solar]]
+Z = 92
+quantity = "log_eps"
+epoch = "present"
+value = -0.50
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Present' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."
+
+[[solar]]
+Z = 92
+quantity = "log_eps"
+epoch = "protosolar"
+value = 0.02
+unc = 0.04
+source = "lodders2025"
+table = "Table 6"
+note = "A(E) = log10(N_E/N_H) + 12, 'Solar System Proto-Solar' log (E/H)+12; basis: meteoritic (CI-chondrite) value; unc = 1 sigma in dex as printed."

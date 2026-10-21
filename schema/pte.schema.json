@@ -10,7 +10,7 @@
       "pattern": "^[a-z][a-z0-9_]*$"
     },
     "Unit": {
-      "description": "The units table (SPEC §5.2). Stored units are fixed per field; display conversions live in src/physics/units.ts. \"\" means dimensionless. Å³ / a.u. (a₀³) for polarizabilities; s⁻¹ for Einstein coefficients; mg/kg and mg/L for abundances in rock and sea water; t/yr and USD/kg for production.",
+      "description": "The units table (SPEC §5.2). Stored units are fixed per field; display conversions live in src/physics/units.ts. \"\" means dimensionless. Å³ / a.u. (a₀³) for polarizabilities; s⁻¹ for Einstein coefficients; mg/kg and mg/L for abundances in rock and sea water; t/yr and USD/kg for production; ° and kPa for crystal-cell angles and the pressure of a measurement.",
       "type": "string",
       "enum": [
         "",
@@ -35,7 +35,10 @@
         "mg/kg",
         "mg/L",
         "t/yr",
-        "USD/kg"
+        "USD/kg",
+        "g",
+        "°",
+        "kPa"
       ]
     },
     "QuantityFlag": {
@@ -915,7 +918,7 @@
       "additionalProperties": false
     },
     "Discovery": {
-      "description": "Discovery year as PubChem gives it; elements known since antiquity have no year.",
+      "description": "Discovery year from tools/curated/history.toml (which resolves disagreements between PubChem and the IUPAC reports) or PubChem; elements known since antiquity have no year.",
       "type": "object",
       "properties": {
         "year": {
@@ -926,6 +929,9 @@
         },
         "source": {
           "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
         }
       },
       "required": [
@@ -2222,32 +2228,108 @@
               "type": "object",
               "properties": {
                 "crust": {
-                  "$ref": "#/definitions/Quantity"
+                  "$ref": "#/definitions/Q"
                 },
                 "ocean": {
-                  "$ref": "#/definitions/Quantity"
+                  "$ref": "#/definitions/Q"
                 },
                 "solar": {
-                  "$ref": "#/definitions/Q"
+                  "$ref": "#/definitions/Q",
+                  "description": "Proto-solar mass fraction (dimensionless), Lodders et al. 2025."
+                },
+                "solarLogEps": {
+                  "$ref": "#/definitions/Q",
+                  "description": "Present-day solar-system abundance on the astronomers' log scale, A = log10(N/N_H) + 12 (dex, stored with unit \"\")."
                 },
                 "body": {
                   "$ref": "#/definitions/Q"
                 }
               },
-              "additionalProperties": false
+              "additionalProperties": false,
+              "required": [
+                "crust",
+                "ocean",
+                "solar",
+                "solarLogEps",
+                "body"
+              ]
             },
             "crystal": {
-              "type": "object"
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/CrystalStructure"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
             },
             "production": {
-              "type": "object"
+              "type": "object",
+              "properties": {
+                "commodity": {
+                  "type": "string"
+                },
+                "basis": {
+                  "type": "string"
+                },
+                "edition": {
+                  "type": "string"
+                },
+                "tonnesPerYear": {
+                  "$ref": "#/definitions/Quantity"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "unitValue": {
+                  "$ref": "#/definitions/Quantity"
+                },
+                "priceYear": {
+                  "type": "integer"
+                },
+                "viaMineral": {
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
             },
             "critical": {
-              "type": "object"
+              "type": "object",
+              "properties": {
+                "eu2023": {
+                  "type": "boolean"
+                },
+                "strategic": {
+                  "type": "boolean"
+                },
+                "listedAs": {
+                  "type": "string"
+                },
+                "source": {
+                  "$ref": "#/definitions/SourceId"
+                },
+                "viaMineral": {
+                  "type": "boolean"
+                },
+                "doubtful": {
+                  "type": "boolean"
+                },
+                "note": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "eu2023"
+              ],
+              "additionalProperties": false
             }
           },
           "required": [
-            "abundance"
+            "abundance",
+            "production",
+            "critical",
+            "crystal"
           ],
           "additionalProperties": false
         },
@@ -2288,13 +2370,86 @@
           "additionalProperties": false
         },
         "nucleus": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "origin": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/CosmicOrigin"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            }
+          },
+          "required": [
+            "origin"
+          ],
+          "additionalProperties": false
         },
         "biology": {
           "$ref": "#/definitions/Biology"
         },
         "history": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "discovered": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "antiquity"
+                  ]
+                }
+              ]
+            },
+            "discoveredText": {
+              "type": "string"
+            },
+            "discoverers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "place": {
+              "type": "string"
+            },
+            "isolated": {
+              "type": "integer"
+            },
+            "isolatedBy": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nameOrigin": {
+              "type": "string"
+            },
+            "symbolNote": {
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/definitions/SourceId"
+            },
+            "doi": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "discovered",
+            "nameOrigin",
+            "source"
+          ],
+          "additionalProperties": false
         },
         "prose": {
           "type": "object",
@@ -2327,7 +2482,8 @@
         "probability",
         "physical",
         "amo",
-        "biology"
+        "biology",
+        "nucleus"
       ],
       "additionalProperties": false
     },
@@ -2388,6 +2544,223 @@
         "clocks",
         "siHistory",
         "timeline"
+      ],
+      "additionalProperties": false
+    },
+    "CosmicOrigin": {
+      "description": "Share of the element made by each process when the Solar System formed (SPEC §10.7), read off Fig. 39 of Kobayashi, Karakas & Lugaro (2020): an approximation, flagged as such. Keys with zero share are omitted; the shares sum to 1.",
+      "type": "object",
+      "properties": {
+        "fractions": {
+          "type": "object",
+          "properties": {
+            "bigBang": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "cosmicRays": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "agb": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "massiveStars": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "neutronStarMergers": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "whiteDwarfs": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "additionalProperties": false,
+          "minProperties": 1
+        },
+        "flag": {
+          "type": "string",
+          "enum": [
+            "estimated",
+            "paper_statement"
+          ]
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fractions",
+        "flag",
+        "source",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "CrystalStructure": {
+      "description": "Room-temperature crystal structure from one COD entry (SPEC §10.4); gases and liquids as low-temperature solids, flagged.",
+      "type": "object",
+      "properties": {
+        "allotrope": {
+          "type": "string"
+        },
+        "structure": {
+          "type": "string"
+        },
+        "lattice": {
+          "type": "string",
+          "enum": [
+            "cubic",
+            "tetragonal",
+            "orthorhombic",
+            "hexagonal",
+            "trigonal",
+            "monoclinic",
+            "triclinic"
+          ]
+        },
+        "spaceGroup": {
+          "type": "string"
+        },
+        "spaceGroupNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 230
+        },
+        "pearson": {
+          "type": "string"
+        },
+        "atomsPerCell": {
+          "type": "number"
+        },
+        "a": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "b": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "c": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "alpha": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "beta": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "gamma": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "cellAxes": {
+          "type": "string"
+        },
+        "temperature": {
+          "$ref": "#/definitions/Q"
+        },
+        "pressure": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "lowTemperatureSolid": {
+          "type": "boolean"
+        },
+        "doubtful": {
+          "type": "boolean"
+        },
+        "codId": {
+          "type": "integer"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "structure",
+        "lattice",
+        "spaceGroup",
+        "spaceGroupNumber",
+        "pearson",
+        "a",
+        "alpha",
+        "beta",
+        "gamma",
+        "temperature",
+        "codId",
+        "reference",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "CoverageFile": {
+      "description": "Per-field coverage over the 118 elements (SPEC §6.4, §13.1), written by tools/report.py for the About page.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "total": {
+          "type": "integer"
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "missing": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "integer"
+                }
+              },
+              "file": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "count",
+              "missing",
+              "file"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "total",
+        "fields"
       ],
       "additionalProperties": false
     }

@@ -1,0 +1,3000 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Annual world production and unit value (SPEC §6.2, §10.4), compiled from the USGS data release by a
+# script that keeps the CSV line of every number; chlorine is left out (USGS reports salt, not chlorine).
+# World production and U.S. price/unit value per element, from USGS Mineral Commodity Summaries 2026.
+# Data: U.S. Geological Survey, 2026, Mineral Commodity Summaries 2026 Data Release, https://doi.org/10.5066/P1WKQ63T
+#   (ScienceBase item 69837e43b66b01367d7ec7c7, file MCS2026_Commodities_Data.csv, CC0 1.0 / public domain; cp1252-encoded).
+# Publication: U.S. Geological Survey, 2026, Mineral commodity summaries 2026 (ver. 1.3, May 2026), https://doi.org/10.3133/mcs2026
+# csv_line / price_csv_line = physical line number in the CSV (header = line 1).
+# Units: 1 lb = 0.45359237 kg, 1 troy oz = 31.1034768 g, 1 short ton = 907.18474 kg (exact definitions);
+#   metric carat = 200 mg and metric ton unit = 10 kg (MCS Appendix A). 'estimated' mirrors the USGS 'e' / 'Estimated.' note.
+# unit_value_usd_per_kg is per kg of the MATERIAL named in price_basis (metal, oxide, ore, compound...), not necessarily per kg of the element.
+# 2025 values in MCS 2026 are USGS estimates for the full year (USGS: 'For 2025, ... estimates based on available data').
+
+[meta]
+edition = "MCS 2026"
+edition_version = "ver. 1.3, May 2026"
+data_release_doi = "https://doi.org/10.5066/P1WKQ63T"
+publication_doi = "https://doi.org/10.3133/mcs2026"
+file = "MCS2026_Commodities_Data.csv"
+file_sha256 = "582a0aa231aea53d8a97dc8d1cd3dfa5f885cf3760353e3d029d7f0ae4fbaaf5"
+licence = "CC0 1.0 (USGS data release metadata: public domain, no use constraints)"
+retrieved = "2026-10-21"
+
+[[row]]
+Z = 2
+symbol = "He"
+commodity = "Helium"
+mcs_chapter = "HELIUM AND RARE GASES"
+primary = true
+basis = "world production, helium gas (volume at 101.325 kPa, 15 degC)"
+contained_element = true
+via_mineral = false
+table = "World Production and Reserves"
+csv_line = 3287
+usgs_row = "World total | Helium Production: rounded | million cubic meters | 2025"
+original_value = "190"
+original_unit = "million cubic meters"
+year = 2025
+estimated = true
+tonnes_per_year = 32000.0
+conversion = "190 million m3 x 10^6 x (0.0047 t / 27.737 m3, USGS footnote, 101.325 kPa, 15 degC) = 32,195 t, reported to 2 significant figures as 32,000 t"
+usgs_note = "Estimated."
+prev_year_original = "183 million cubic meters"
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 3278
+unit_value_usd_per_kg = 70.0
+price_basis = "estimated base price for Grade-A helium (excl. f.o.b./transport; producers posted surcharges), chapter prose"
+price_original = "about $12 per cubic meter ($330 per thousand cubic feet)"
+price_unit = "dollars per cubic meter at 15 degC, 101.325 kPa"
+price_conversion = "330 USD per 1,000 ft3 = 27.737 m3 = 0.0047 t (USGS footnote) -> 330 / 4.7 kg = 70.2 USD/kg; from 12 USD/m3: 12 / (4.7 kg / 27.737 m3) = 70.8 USD/kg; given as ~70 USD/kg (2 s.f.)"
+price_year = 2025
+price_estimated = true
+price_source_location = "mcs2026.pdf, Helium and Rare Gases, p. 96 (prose; no CSV price row)"
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Helium mass from USGS's own footnote (MCS 2026 p. 97, note 1): at 101.325 kPa, 27.737 m3 of helium at 15 degC = 0.0047 metric tons; that factor has 2 significant figures, so the tonnage is ~32,000 t (arithmetic gives 32,195 t). USGS also states world helium-3 production was an estimated 40,000 liters in 2024 and 2025 (prose, p. 97). U.S. price is from the chapter prose on p. 96 (no CSV price row): 'estimated base price for Grade-A helium was about $12 per cubic meter ($330 per thousand cubic feet) in 2025, with producers posting surcharges'."
+
+[[row]]
+Z = 3
+symbol = "Li"
+commodity = "Lithium"
+mcs_chapter = "LITHIUM"
+primary = true
+basis = "mine production, lithium content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 4259
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "290,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 290000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- Excludes U.S. production."
+prev_year_tonnes = 222000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 4247
+unit_value_usd_per_kg = 9.0
+price_basis = "Price, annual average-real, battery-grade lithium carbonate, dollars per metric ton [Lithium]"
+price_original = "9,000"
+price_unit = "dollars per metric ton"
+price_conversion = "9,000 USD per metric ton / 1,000 kg = 9 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 4230
+price_usgs_note = "Estimated. -- Lithium carbonate price assessments for spot and long-term contracts. Source: Benchmark Mineral Intelligence Ltd."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "World total excludes U.S. production (USGS note). Price is per kg of battery-grade lithium carbonate (gross weight), not per kg of Li; USGS wording 'annual average-real'."
+
+[[row]]
+Z = 4
+symbol = "Be"
+commodity = "Beryllium"
+mcs_chapter = "BERYLLIUM"
+primary = true
+basis = "mine production, beryllium content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 928
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "430"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 430.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- In addition to the countries listed, Kazakhstan and Portugal may have produced beryl ore, but available information was inadequate to make reliable estimates of output. Other nations that produced gemstone beryl ore may also have produced some industrial beryl ore. -- Based on 4% beryllium content of bertrandite and beryl sources."
+prev_year_tonnes = 433.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 920
+unit_value_usd_per_kg = 1600.0
+price_basis = "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium [Beryllium]"
+price_original = "1,600"
+price_unit = "dollars per kilogram"
+price_conversion = "1,600 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 905
+price_usgs_note = "Estimated. -- Calculated from gross weight and customs value of imports; beryllium content estimated to be 4%. Rounded to two significant figures."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is per kg of contained Be in imported beryllium-copper master alloy (Be content estimated at 4%), rounded to 2 significant figures by USGS."
+
+[[row]]
+Z = 5
+symbol = "B"
+commodity = "Boron"
+mcs_chapter = "BORON"
+primary = true
+basis = "world production, all forms (boron minerals and compounds)"
+contained_element = false
+via_mineral = false
+table = "World Production and Reserves"
+csv_line = 1102
+usgs_row = "World total | Production—All forms | thousand metric tons | 2025"
+original_value = "XX"
+original_unit = "thousand metric tons"
+year = 2025
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "World totals cannot be calculated because production and reserves are not reported in a consistent manner by all countries."
+unit_value_usd_per_kg = 0.54
+price_basis = "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton [Boron]"
+price_original = "540"
+price_unit = "dollars per metric ton"
+price_conversion = "540 USD per metric ton / 1,000 kg = 0.54 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 1077
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "USGS gives no world total ('XX: World totals cannot be calculated because production and reserves are not reported in a consistent manner by all countries'); country rows mix crude ore, ulexite, B2O3 equivalent, compounds and refined borates and must not be summed. Price: average unit value of combined (boron) imports, CIF, per metric ton gross weight."
+
+[[row]]
+Z = 6
+symbol = "C"
+commodity = "Graphite (natural)"
+mcs_chapter = "GRAPHITE (NATURAL)"
+primary = true
+basis = "mine production, natural graphite (gross weight of graphite)"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 3002
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "1,800,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 1800000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 1550000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 2982
+unit_value_usd_per_kg = 1.0
+price_basis = "Price, average unit value of imports, dollars per metric ton at foreign ports: Flake [Graphite (Natural)]"
+price_original = "1,000"
+price_unit = "dollars per metric ton"
+price_conversion = "1,000 USD per metric ton / 1,000 kg = 1 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 2954
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Mineral commodity, not elemental carbon: natural graphite only (no synthetic graphite, no coal, no diamond). Headline price is flake graphite, average unit value of U.S. imports at foreign ports."
+other_prices = [
+  { basis = "Price, average unit value of imports, dollars per metric ton at foreign ports: Lump and chip (Sri Lanka) [Graphite (Natural)]", usd_per_kg = 2.6, conversion = "2,600 USD per metric ton / 1,000 kg = 2.6 USD/kg", year = 2025, estimated = true, csv_line = 2955, usgs_note = "Estimated." },
+  { basis = "Price, average unit value of imports, dollars per metric ton at foreign ports: Amorphous [Graphite (Natural)]", usd_per_kg = 0.47, conversion = "470 USD per metric ton / 1,000 kg = 0.47 USD/kg", year = 2025, estimated = true, csv_line = 2956, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 6
+symbol = "C"
+commodity = "Diamond (industrial)"
+mcs_chapter = "DIAMOND (INDUSTRIAL)"
+primary = false
+basis = "mine production, natural industrial diamond (carats)"
+contained_element = false
+via_mineral = true
+table = "World Natural Industrial Diamond Mine Production and Reserves"
+csv_line = 2182
+usgs_row = "World total | Mine production: rounded | million carats | 2025"
+original_value = "38"
+original_unit = "million carats"
+year = 2025
+estimated = true
+tonnes_per_year = 7.6
+conversion = "million carats x 10^6 ct x 0.2 g/ct (metric carat, MCS Appendix A) = tonnes x 0.2"
+usgs_note = "Estimated."
+prev_year_tonnes = 7.6
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 2173
+unit_value_usd_per_kg = 1050.0
+price_basis = "Price, unit value of imports, dollars per carat [Diamond (Bort, grit, and dust and powder; natural and synthetic)]"
+price_original = "0.21"
+price_unit = "dollars per carat"
+price_conversion = "0.21 USD/carat / 0.0002 kg per metric carat = 1050 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 2147
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Natural industrial diamond only (gem diamond is in the Gemstones chapter; synthetic industrial diamond not included in this world total). Headline price is U.S. import unit value of bort, grit, dust and powder, natural AND synthetic, per carat."
+other_prices = [
+  { basis = "Price, unit value of imports, dollars per carat [Diamond (Stones, natural and synthetic)]", usd_per_kg = 33500.0, conversion = "6.7 USD/carat / 0.0002 kg per metric carat = 3.35e+04 USD/kg", year = 2025, estimated = true, csv_line = 2154, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 7
+symbol = "N"
+commodity = "Nitrogen (fixed)-ammonia"
+mcs_chapter = "NITROGEN (FIXED)—AMMONIA"
+primary = true
+basis = "plant production of ammonia, nitrogen content"
+contained_element = true
+via_mineral = false
+table = "World Ammonia Production and Reserves"
+csv_line = 5255
+usgs_row = "World total | Plant production: rounded | thousand metric tons | 2025"
+original_value = "160,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 160000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 156000000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 5231
+unit_value_usd_per_kg = 0.49604
+price_basis = "Price, average, free on board Gulf Coast, dollars per short ton [Nitrogen (Fixed)—Ammonia]"
+price_original = "450"
+price_unit = "dollars per short ton"
+price_conversion = "450 USD per short ton / 907.18474 kg = 0.496 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5202
+price_usgs_note = "Estimated. -- Source: Green Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Fixed nitrogen as ammonia (N content). Price is per short ton of ammonia (product), f.o.b. Gulf Coast (Green Markets); chapter text: 'The average ammonia price for 2025 was estimated to be $450 per short ton.' Not per ton of N."
+
+[[row]]
+Z = 9
+symbol = "F"
+commodity = "Fluorspar"
+mcs_chapter = "FLUORSPAR"
+primary = true
+basis = "mine production, fluorspar (gross weight, all grades)"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 2489
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "10,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 10000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 10300000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 2474
+unit_value_usd_per_kg = 0.47
+price_basis = "Price, average unit value of imports, cost, insurance, and freight, dollars per metric ton: Acid grade [Fluorspar]"
+price_original = "470"
+price_unit = "dollars per metric ton"
+price_conversion = "470 USD per metric ton / 1,000 kg = 0.47 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 2451
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Mineral commodity (fluorite, CaF2), gross weight, not fluorine content. Headline price: acid grade, average CIF unit value of U.S. imports."
+other_prices = [
+  { basis = "Price, average unit value of imports, cost, insurance, and freight, dollars per metric ton: Metallurgical grade [Fluorspar]", usd_per_kg = 0.4, conversion = "400 USD per metric ton / 1,000 kg = 0.4 USD/kg", year = 2025, estimated = true, csv_line = 2452, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 10
+symbol = "Ne"
+commodity = "Neon"
+mcs_chapter = "HELIUM AND RARE GASES"
+primary = true
+basis = "world production, neon (million liters)"
+contained_element = true
+via_mineral = false
+table = "World Production and Reserves"
+csv_line = 3308
+usgs_row = "World total | Rare gases production, (million liters): rounded | million liters | 2025"
+original_value = "800"
+original_unit = "million liters"
+year = 2025
+estimated = true
+production_missing_reason = "unit_not_convertible"
+production_missing_note = "volume in liters without stated reference temperature/pressure; tonnage not derivable from the source alone"
+usgs_note = "Estimated .-- Source: Intelligas Consulting LLC and TECHCET CA LLC."
+prev_year_original = "800 million liters"
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 3299
+price_missing_reason = "not_reported_by_source"
+price_missing_note = "no price row in this MCS chapter"
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "USGS gives neon in million liters without stating reference temperature/pressure, so no tonnage is given here. USGS: 'Price data for rare gases were unavailable.' Source of the estimate per USGS: Intelligas Consulting LLC and TECHCET CA LLC."
+
+[[row]]
+Z = 11
+symbol = "Na"
+commodity = "Salt"
+mcs_chapter = "SALT"
+primary = true
+basis = "mine production, salt (NaCl, gross weight, all types)"
+contained_element = false
+via_mineral = true
+table = "World Production and Reserves"
+csv_line = 6393
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "270,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 270000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 275000000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 6368
+price_missing_reason = "not_reported_by_source"
+price_missing_note = "USGS gives four U.S. unit values by salt type (vacuum and open pan, solar, rock, salt in brine) and no all-salt average; all four are listed in other_prices."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Mineral commodity (sodium chloride), gross weight, not sodium content."
+other_prices = [
+  { basis = "Price, average unit value of bulk, pellets and packaged salt, free on board (f.o.b.) mine and plant, dollars per metric ton: Vacuum and open pan salt [Salt]", usd_per_kg = 0.26, conversion = "260 USD per metric ton / 1,000 kg = 0.26 USD/kg", year = 2025, estimated = true, csv_line = 6333, usgs_note = "Estimated. -- Excludes production from Puerto Rico." },
+  { basis = "Price, average unit value of bulk, pellets and packaged salt, free on board (f.o.b.) mine and plant, dollars per metric ton: Solar salt [Salt]", usd_per_kg = 0.15, conversion = "150 USD per metric ton / 1,000 kg = 0.15 USD/kg", year = 2025, estimated = true, csv_line = 6334, usgs_note = "Estimated. -- Excludes production from Puerto Rico." },
+  { basis = "Price, average unit value of bulk, pellets and packaged salt, free on board (f.o.b.) mine and plant, dollars per metric ton: Rock salt [Salt]", usd_per_kg = 0.054, conversion = "54 USD per metric ton / 1,000 kg = 0.054 USD/kg", year = 2025, estimated = true, csv_line = 6335, usgs_note = "Estimated. -- Excludes production from Puerto Rico." },
+  { basis = "Price, average unit value of bulk, pellets and packaged salt, free on board (f.o.b.) mine and plant, dollars per metric ton: Salt in brine [Salt]", usd_per_kg = 0.011, conversion = "11 USD per metric ton / 1,000 kg = 0.011 USD/kg", year = 2025, estimated = true, csv_line = 6336, usgs_note = "Estimated. -- Excludes production from Puerto Rico." },
+]
+
+[[row]]
+Z = 11
+symbol = "Na"
+commodity = "Soda ash"
+mcs_chapter = "SODA ASH"
+primary = false
+basis = "production, soda ash (sodium carbonate), natural and synthetic, gross weight"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 7000
+usgs_row = "World total | Mine production: natural and synthetic, rounded | thousand metric tons | 2025"
+original_value = "71,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 71000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 70600000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 6991
+unit_value_usd_per_kg = 0.15
+price_basis = "Price, average unit value of sales (natural source), free on board (f.o.b.) mine or plant: Dollars per metric ton [Soda Ash]"
+price_original = "150"
+price_unit = "dollars per metric ton"
+price_conversion = "150 USD per metric ton / 1,000 kg = 0.15 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6974
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "USGS row is labelled 'Mine production: natural and synthetic' (natural 19,000 kt + synthetic 52,000 kt in 2025e). Price is for U.S. natural soda ash, f.o.b. mine or plant."
+other_prices = [
+  { basis = "Price, average unit value of sales (natural source), free on board (f.o.b.) mine or plant: Dollars per short ton [Soda Ash]", usd_per_kg = 0.154324, conversion = "140 USD per short ton / 907.18474 kg = 0.1543 USD/kg", year = 2025, estimated = true, csv_line = 6975, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 12
+symbol = "Mg"
+commodity = "Magnesium metal"
+mcs_chapter = "MAGNESIUM METAL"
+primary = true
+basis = "primary (smelter) production, magnesium metal"
+contained_element = true
+via_mineral = false
+table = "World Primary Production and Reserves"
+csv_line = 4478
+usgs_row = "World total | Smelter production: rounded | thousand metric tons | 2025"
+original_value = "1,100"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 1100000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 1080000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 4468
+unit_value_usd_per_kg = 7.05479
+price_basis = "Price, annual average: U.S. spot Western, dollars per pound [Magnesium Metal]"
+price_original = "3.2"
+price_unit = "dollars per pound"
+price_conversion = "3.2 USD/lb / 0.45359237 kg/lb = 7.055 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 4429
+price_usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Primary magnesium metal only. Headline price: U.S. spot Western."
+other_prices = [
+  { basis = "Price, annual average: European free market, dollars per metric ton [Magnesium Metal]", usd_per_kg = 2.5, conversion = "2,500 USD per metric ton / 1,000 kg = 2.5 USD/kg", year = 2025, estimated = true, csv_line = 4430, usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week." },
+]
+
+[[row]]
+Z = 12
+symbol = "Mg"
+commodity = "Magnesium compounds (magnesite)"
+mcs_chapter = "MAGNESIUM COMPOUNDS"
+primary = false
+basis = "mine production, magnesite (MgCO3), gross weight"
+contained_element = false
+via_mineral = true
+table = "World Magnesite Mine Production and Reserves (gross weight)"
+csv_line = 4363
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "21,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 21000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated. -- Excludes U.S. production. -- Gross weight of magnesite (magnesium carbonate) in thousand tons."
+prev_year_tonnes = 21100000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 4348
+price_missing_reason = "not_reported_by_source"
+price_missing_note = "no price row in this MCS chapter"
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Excludes U.S. production. Gross weight of magnesite. No price row in this chapter."
+
+[[row]]
+Z = 13
+symbol = "Al"
+commodity = "Aluminum"
+mcs_chapter = "ALUMINUM"
+primary = true
+basis = "primary smelter production, aluminium metal"
+contained_element = true
+via_mineral = false
+table = "World Smelter Production and Capacity"
+csv_line = 287
+usgs_row = "World total | Smelter production: rounded | thousand metric tons | 2025"
+original_value = "74,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 74000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 72800000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 273
+unit_value_usd_per_kg = 3.96832
+price_basis = "Price, ingot, average U.S. market (spot), cents per pound [Aluminum]"
+price_original = "180"
+price_unit = "cents per pound"
+price_conversion = "180 US cents/lb / 100 / 0.45359237 kg/lb = 3.968 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 250
+price_usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Primary aluminium. Price: ingot, average U.S. market (spot), S&P Global Platts Metals Week."
+
+[[row]]
+Z = 13
+symbol = "Al"
+commodity = "Bauxite"
+mcs_chapter = "BAUXITE AND ALUMINA"
+primary = false
+basis = "mine production, bauxite (dry gross weight)"
+contained_element = false
+via_mineral = true
+table = "World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves"
+csv_line = 841
+usgs_row = "World total | Bauxite, mine production: rounded | thousand metric dry tons | 2025"
+original_value = "440,000"
+original_unit = "thousand metric dry tons"
+year = 2025
+estimated = true
+tonnes_per_year = 440000000.0
+conversion = "thousand metric dry tons x 1,000 = tonnes (dry weight)"
+usgs_note = "Estimated. -- Excludes U.S. production."
+prev_year_tonnes = 428000000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 820
+unit_value_usd_per_kg = 0.032
+price_basis = "Price, average unit value of imports, free alongside ship (f.a.s.), dollars per metric ton [Bauxite]"
+price_original = "32"
+price_unit = "dollars per metric ton"
+price_conversion = "32 USD per metric ton / 1,000 kg = 0.032 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 739
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Excludes U.S. production. USGS rule of thumb: 4 t dried bauxite -> 2 t alumina -> 1 t aluminium. Price: average f.a.s. unit value of U.S. bauxite imports."
+
+[[row]]
+Z = 13
+symbol = "Al"
+commodity = "Alumina"
+mcs_chapter = "BAUXITE AND ALUMINA"
+primary = false
+basis = "refinery production, alumina (Al2O3, calcined equivalent weight)"
+contained_element = false
+via_mineral = false
+table = "World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves"
+csv_line = 799
+usgs_row = "World total | Alumina, refinery production: rounded | thousand metric dry tons | 2025"
+original_value = "150,000"
+original_unit = "thousand metric dry tons"
+year = 2025
+estimated = true
+tonnes_per_year = 150000000.0
+conversion = "thousand metric dry tons x 1,000 = tonnes (dry weight)"
+usgs_note = "Estimated. -- Calcined equivalent weights."
+prev_year_tonnes = 142000000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 778
+unit_value_usd_per_kg = 0.59
+price_basis = "Price, average unit value of imports, f.a.s., dollars per metric ton [Alumina]"
+price_original = "590"
+price_unit = "dollars per metric ton"
+price_conversion = "590 USD per metric ton / 1,000 kg = 0.59 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 746
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Calcined equivalent weights. Price: average f.a.s. unit value of U.S. alumina imports."
+
+[[row]]
+Z = 14
+symbol = "Si"
+commodity = "Silicon metal"
+mcs_chapter = "SILICON"
+primary = true
+basis = "production, silicon metal (metallurgical grade), silicon content"
+contained_element = true
+via_mineral = false
+table = "World Production"
+csv_line = 6815
+usgs_row = "World total | Silicon metal: rounded | thousand metric tons | 2025"
+original_value = "4,600"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 4600000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated. -- Excludes U.S. production."
+prev_year_tonnes = 5500000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 6797
+unit_value_usd_per_kg = 2.86601
+price_basis = "Price, average, cents per pound of silicon: Silicon metal [Silicon]"
+price_original = "130"
+price_unit = "cents per pound"
+price_conversion = "130 US cents/lb / 100 / 0.45359237 kg/lb = 2.866 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6724
+price_usgs_note = "Estimated. -- Metallurgical-grade silicon metal. -- Source: S&P Global Platts Metals Week, mean import prices based on monthly averages. Estimated 2025 price is the mean based on monthly average of January through October 2025."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "World total excludes U.S. production (withheld). Silicon metal and ferrosilicon are separate USGS totals and are not summed here."
+other_prices = [
+  { basis = "Price, average, cents per pound of silicon: Ferrosilicon, 75% silicon [Silicon]", usd_per_kg = 3.08647, conversion = "140 US cents/lb / 100 / 0.45359237 kg/lb = 3.086 USD/kg", year = 2025, estimated = true, csv_line = 6723, usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week, mean import prices based on monthly averages. Estimated 2025 price is the mean based on monthly average of January through October 2025." },
+  { basis = "Price, average, cents per pound of silicon: Ferrosilicon, 50% silicon [Silicon]", csv_line = 6722, year = 2025, value_as_given = "NA", unit = "cents per pound", missing = "not_available_in_source" },
+]
+
+[[row]]
+Z = 14
+symbol = "Si"
+commodity = "Ferrosilicon"
+mcs_chapter = "SILICON"
+primary = false
+basis = "production, ferrosilicon, silicon content"
+contained_element = true
+via_mineral = false
+table = "World Production"
+csv_line = 6779
+usgs_row = "World total | Ferrosilicon: rounded | thousand metric tons | 2025"
+original_value = "5,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 5000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated. -- Excludes U.S. production."
+prev_year_tonnes = 4570000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 6761
+unit_value_usd_per_kg = 3.08647
+price_basis = "Price, average, cents per pound of silicon: Ferrosilicon, 75% silicon [Silicon]"
+price_original = "140"
+price_unit = "cents per pound"
+price_conversion = "140 US cents/lb / 100 / 0.45359237 kg/lb = 3.086 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6723
+price_usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week, mean import prices based on monthly averages. Estimated 2025 price is the mean based on monthly average of January through October 2025."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "World total excludes U.S. production (withheld). Price: ferrosilicon 75% Si, cents per pound of contained silicon."
+
+[[row]]
+Z = 15
+symbol = "P"
+commodity = "Phosphate rock"
+mcs_chapter = "PHOSPHATE ROCK"
+primary = true
+basis = "mine production, marketable phosphate rock (gross weight)"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 5529
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "250,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 250000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 239000000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 5503
+unit_value_usd_per_kg = 0.1
+price_basis = "Price, average value, f.o.b. mine, dollars per metric ton [Phosphate Rock]"
+price_original = "100"
+price_unit = "dollars per metric ton"
+price_conversion = "100 USD per metric ton / 1,000 kg = 0.1 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5472
+price_usgs_note = "Estimated. -- Marketable phosphate rock, weighted value, all grades."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Mineral commodity, gross weight of marketable rock (not P or P2O5 content). Price: average value f.o.b. mine, all grades."
+
+[[row]]
+Z = 16
+symbol = "S"
+commodity = "Sulfur"
+mcs_chapter = "SULFUR"
+primary = true
+basis = "production, sulfur in all forms, sulfur content"
+contained_element = true
+via_mineral = false
+table = "World Production and Reserves"
+csv_line = 7348
+usgs_row = "World total | Production, all forms: rounded | thousand metric tons | 2025"
+original_value = "84,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 84000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 83900000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 7329
+unit_value_usd_per_kg = 0.18
+price_basis = "Price, average unit value, free on board, mine and (or) plant, dollars per metric ton of elemental sulfur [Sulfur]"
+price_original = "180"
+price_unit = "dollars per metric ton"
+price_conversion = "180 USD per metric ton / 1,000 kg = 0.18 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7293
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "All forms (elemental, byproduct sulfuric acid, pyrites etc.), S content. Price: average unit value of elemental sulfur f.o.b. mine and (or) plant; note the large 2024->2025 rise (46.42 -> 180 USD/t) is as published."
+
+[[row]]
+Z = 18
+symbol = "Ar"
+commodity = "Argon"
+mcs_chapter = "HELIUM AND RARE GASES"
+primary = true
+basis = "world production, argon"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS gives no number: 'World production of argon was large.' (MCS 2026 p. 97). U.S. sales were ~1,100 million m3 in 2025e (not a world figure)."
+price_missing_reason = "not_reported_by_source"
+price_missing_note = "no price row in this MCS chapter"
+edition = "MCS 2026"
+file = "mcs2026.pdf (MCS 2026 ver. 1.3)"
+source = "usgs_mcs"
+note = "USGS: 'Price data for rare gases were unavailable.'"
+
+[[row]]
+Z = 19
+symbol = "K"
+commodity = "Potash"
+mcs_chapter = "POTASH"
+primary = true
+basis = "mine production, potash, K2O equivalent"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 5797
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "49,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 49000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 46700000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 5783
+unit_value_usd_per_kg = 1.2
+price_basis = "Price, average, f.o.b. mine, dollars per metric ton of K2O equivalent: All products [Potash]"
+price_original = "1,200"
+price_unit = "dollars per metric ton"
+price_conversion = "1,200 USD per metric ton / 1,000 kg = 1.2 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5762
+price_usgs_note = "Estimated. -- Includes MOP, SOP, and SOPM. Does not include other chemical compounds that contain potassium."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Reported as potassium oxide (K2O) equivalent, not K content (K = 0.830 x K2O by mass if a derived value is ever wanted; not applied here). Price per metric ton of K2O equivalent, f.o.b. mine, all products (MOP, SOP, SOPM)."
+other_prices = [
+  { basis = "Price, average, f.o.b. mine, dollars per metric ton of K2O equivalent: MOP [Potash]", usd_per_kg = 0.6, conversion = "600 USD per metric ton / 1,000 kg = 0.6 USD/kg", year = 2025, estimated = true, csv_line = 5763, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 21
+symbol = "Sc"
+commodity = "Scandium"
+mcs_chapter = "SCANDIUM"
+primary = true
+basis = "global production, scandium oxide equivalent"
+contained_element = false
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 6550
+usgs_row = "World total | global production | metric tons | 2025"
+original_value = "80"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 80.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+unit_value_usd_per_kg = 640.0
+price_basis = "Price, global, dollars per kilogram, range of average values: Scandium oxide, powder, 99.99% purity, 5- to 100-kilogram lot size [Scandium]"
+price_original = "640"
+price_unit = "dollars per kilogram"
+price_conversion = "640 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6543
+price_usgs_note = "Estimated. -- Ex-works China."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Chapter prose (p. 167): 'global capacity for scandium oxide was over 90 tons per year in 2025; global production totaled about 80 tons' (industry estimates); no 2024 world figure. Prices are global (ex-works China), not U.S. market prices; headline is scandium oxide 99.99%, 5-100 kg lots."
+other_prices = [
+  { basis = "Price, global, dollars per kilogram, range of average values: Scandium metal, ingot, 99.999% purity, 1- to 10-kilogram lot size [Scandium]", usd_per_kg = 5200.0, conversion = "5,200 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 6544, usgs_note = "Estimated. -- Ex-works China. -- Source: Asian Metal Ltd." },
+  { basis = "Price, global, dollars per kilogram, range of average values: Scandium-aluminum alloy, ingot,scandium 2%, 1- to 30-kilogram lot size [Scandium]", usd_per_kg = 30.0, conversion = "30 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 6545, usgs_note = "Estimated. -- Ex-works China. -- Source: Asian Metal Ltd." },
+]
+
+[[row]]
+Z = 22
+symbol = "Ti"
+commodity = "Titanium mineral concentrates (ilmenite + rutile)"
+mcs_chapter = "TITANIUM MINERAL CONCENTRATES"
+primary = true
+basis = "mine production, ilmenite and rutile, TiO2 content"
+contained_element = false
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 8111
+usgs_row = "World total | Mine production: ilmenite and rutile, rounded | thousand metric tons | 2025"
+original_value = "9,800"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 9800000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 9680000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 8087
+unit_value_usd_per_kg = 12.0
+price_basis = "Price, dollars per kilogram [Titanium sponge metal]"
+price_original = "12"
+price_unit = "dollars per kilogram"
+price_conversion = "12 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7929
+price_usgs_note = "Estimated. -- Landed duty-paid value based on U.S. imports for consumption."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "TiO2 content of ilmenite + rutile (both years marked e by USGS). Headline price is titanium SPONGE METAL (landed duty-paid value of U.S. imports, Titanium and Titanium Dioxide chapter), i.e. a metal price, not a concentrate price; concentrate prices are in other_prices."
+other_prices = [
+  { basis = "Price, dollars per metric ton: Rutile, bulk, minimum 95% TiO2, free on board (f.o.b.) Australia [Titanium Mineral Concentrates]", usd_per_kg = 1.14, conversion = "1,140 USD per metric ton / 1,000 kg = 1.14 USD/kg", year = 2025, estimated = true, csv_line = 8053, usgs_note = "Estimated. -- Source: Fast markets IM; annual average." },
+  { basis = "Price, dollars per metric ton: Ilmenite and leucoxene, bulk, f.o.b. Australia [Titanium Mineral Concentrates]", usd_per_kg = 0.4, conversion = "400 USD per metric ton / 1,000 kg = 0.4 USD/kg", year = 2025, estimated = true, csv_line = 8054, usgs_note = "Estimated. -- Source: Zen Innovations AG, Global Trade Tracker." },
+  { basis = "Price, dollars per metric ton: Ilmenite, average unit value of imports [Titanium Mineral Concentrates]", usd_per_kg = 0.3, conversion = "300 USD per metric ton / 1,000 kg = 0.3 USD/kg", year = 2025, estimated = true, csv_line = 8055, usgs_note = "Estimated. -- Landed duty-paid unit value based on U.S. imports for consumption. Source: U.S. Census Bureau." },
+  { basis = "Price, dollars per metric ton: Slag, 80%–95% TiO2, average unit value of imports [Titanium Mineral Concentrates]", usd_per_kg = 0.88, conversion = "880 USD per metric ton / 1,000 kg = 0.88 USD/kg", year = 2025, estimated = true, csv_line = 8056, usgs_note = "Estimated. -- Landed duty-paid unit value based on U.S. imports for consumption. Source: U.S. Census Bureau." },
+]
+
+[[row]]
+Z = 22
+symbol = "Ti"
+commodity = "Titanium sponge metal"
+mcs_chapter = "TITANIUM AND TITANIUM DIOXIDE"
+primary = false
+basis = "production, titanium sponge metal"
+contained_element = true
+via_mineral = false
+table = "World Sponge Metal Production and Sponge and Pigment Capacity"
+csv_line = 7978
+usgs_row = "World total | Titanium sponge metal production: rounded | metric tons | 2025"
+original_value = "370,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 370000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 380000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 7963
+unit_value_usd_per_kg = 12.0
+price_basis = "Price, dollars per kilogram [Titanium sponge metal]"
+price_original = "12"
+price_unit = "dollars per kilogram"
+price_conversion = "12 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7929
+price_usgs_note = "Estimated. -- Landed duty-paid value based on U.S. imports for consumption."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "2024 world total excludes U.S. (withheld); U.S. 2025 production shown as zero. Other price: TiO2 pigment."
+other_prices = [
+  { basis = "Price, dollars per metric ton [TiO2 pigment]", usd_per_kg = 3.2, conversion = "3,200 USD per metric ton / 1,000 kg = 3.2 USD/kg", year = 2025, estimated = true, csv_line = 7937, usgs_note = "Estimated. -- Landed duty-paid value based on U.S. imports for consumption." },
+]
+
+[[row]]
+Z = 23
+symbol = "V"
+commodity = "Vanadium"
+mcs_chapter = "VANADIUM"
+primary = true
+basis = "mine production, vanadium content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 8385
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "110,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 110000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 118000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 8378
+unit_value_usd_per_kg = 11.0672
+price_basis = "Price, average, vanadium pentoxide, dollars per pound [Vanadium]"
+price_original = "5.02"
+price_unit = "dollars per pound"
+price_conversion = "5.02 USD/lb / 0.45359237 kg/lb = 11.07 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 8355
+price_usgs_note = "Estimated. -- Chinese annual average V2O5 prices (98% V2O5 content). Source Argus Media, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is the Chinese annual average for vanadium pentoxide (98% V2O5), per lb of V2O5 (gross), not a U.S. price and not per kg V."
+
+[[row]]
+Z = 24
+symbol = "Cr"
+commodity = "Chromium (chromite)"
+mcs_chapter = "CHROMIUM"
+primary = true
+basis = "mine production, chromite ore (gross weight)"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 1535
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "51,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 51000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated. -- Mine production and ore reserves are reported in gross weight."
+prev_year_tonnes = 49600000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 1525
+unit_value_usd_per_kg = 13.0073
+price_basis = "Price: Chromium metal (gross weight), dollars per pound [Chromium]"
+price_original = "5.9"
+price_unit = "dollars per pound"
+price_conversion = "5.9 USD/lb / 0.45359237 kg/lb = 13.01 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 1482
+price_usgs_note = "Estimated. -- Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "USGS: 'Mine production and ore reserves are reported in gross weight' (chromite ore), not Cr content. Headline price: chromium metal (gross weight); chromite ore and ferrochromium (Cr content) in other_prices."
+other_prices = [
+  { basis = "Price: Chromite ore (gross weight), dollars per metric ton [Chromium]", usd_per_kg = 0.29, conversion = "290 USD per metric ton / 1,000 kg = 0.29 USD/kg", year = 2025, estimated = true, csv_line = 1480, usgs_note = "Estimated. -- Source: Argus Media group, Argus Non-Ferrous Markets." },
+  { basis = "Price: Ferrochromium (chromium content), dollars per pound [Chromium]", usd_per_kg = 3.5274, conversion = "1.6 USD/lb / 0.45359237 kg/lb = 3.527 USD/kg", year = 2025, estimated = true, csv_line = 1481, usgs_note = "Estimated. -- Source: Argus Media group, Argus Non-Ferrous Markets. -- Excludes ferrosilicon chromium." },
+]
+
+[[row]]
+Z = 25
+symbol = "Mn"
+commodity = "Manganese"
+mcs_chapter = "MANGANESE"
+primary = true
+basis = "mine production, manganese content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production (manganese content) and Reserves"
+csv_line = 4619
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "20,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 20000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 18700000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 4608
+unit_value_usd_per_kg = 0.45
+price_basis = "Price, average, manganese content, cost, insurance, and freight, China, dollars per metric ton unit [Manganese]"
+price_original = "4.5"
+price_unit = "dollars per metric ton unit"
+price_conversion = "4.5 USD per metric ton unit (mtu = 10 kg of contained content, MCS Appendix A) / 10 = 0.45 USD/kg of contained content"
+price_year = 2025
+price_estimated = true
+price_csv_line = 4574
+price_usgs_note = "Estimated. -- Manganese content typically ranges from 35% to 54% for manganese ore and from 74% to 95% for ferromanganese. -- For average metallurgical-grade ore containing 44% manganese. Source: CRU Group."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is manganese ore (average metallurgical grade, 44% Mn), CIF China, per metric ton unit of contained Mn (CSV 'Unit' column says 'dollars per metric ton' but the row and PDF say per metric ton unit), so USD/kg is per kg of contained Mn in ore; not a U.S. price. Source: CRU Group."
+
+[[row]]
+Z = 26
+symbol = "Fe"
+commodity = "Iron ore"
+mcs_chapter = "IRON ORE"
+primary = true
+basis = "mine production, iron ore, iron content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 3819
+usgs_row = "World total | Mine production: Iron content, rounded | thousand metric tons | 2025"
+original_value = "1,600,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 1600000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 1600000000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 3800
+unit_value_usd_per_kg = 0.089
+price_basis = "Price, average unit value reported by mines, dollars per metric ton [Iron Ore]"
+price_original = "89"
+price_unit = "dollars per metric ton"
+price_conversion = "89 USD per metric ton / 1,000 kg = 0.089 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 3735
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Iron ore used as steelmaking raw material (excludes DRI, HBI, nuggets). Price is per metric ton of usable ore (gross weight) reported by U.S. mines, not per kg Fe."
+
+[[row]]
+Z = 26
+symbol = "Fe"
+commodity = "Iron ore (usable ore)"
+mcs_chapter = "IRON ORE"
+primary = false
+basis = "mine production, usable iron ore (gross weight)"
+contained_element = false
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 3781
+usgs_row = "World total | Mine production: Usable ore, rounded | thousand metric tons | 2025"
+original_value = "2,600,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 2600000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 2600000000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 3762
+unit_value_usd_per_kg = 0.089
+price_basis = "Price, average unit value reported by mines, dollars per metric ton [Iron Ore]"
+price_original = "89"
+price_unit = "dollars per metric ton"
+price_conversion = "89 USD per metric ton / 1,000 kg = 0.089 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 3735
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Gross weight of usable ore."
+
+[[row]]
+Z = 26
+symbol = "Fe"
+commodity = "Pig iron"
+mcs_chapter = "IRON AND STEEL"
+primary = false
+basis = "production, pig iron (metal)"
+contained_element = false
+via_mineral = false
+table = "World Production"
+csv_line = 3565
+usgs_row = "World total | Pig iron: rounded | million metric tons | 2025"
+original_value = "1,300"
+original_unit = "million metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 1300000000.0
+conversion = "million metric tons x 1,000,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 1280000000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 3552
+price_missing_reason = "not_reported_by_source"
+price_missing_note = "Iron and Steel chapter gives only a producer price index (steel mill products, 1982=100), not a price."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Pig iron is ~93-95% Fe; gross weight of metal."
+
+[[row]]
+Z = 27
+symbol = "Co"
+commodity = "Cobalt"
+mcs_chapter = "COBALT"
+primary = true
+basis = "mine production, cobalt content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 1877
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "310,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 310000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 302000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 1863
+unit_value_usd_per_kg = 46.2971
+price_basis = "Price, average, dollars per pound: U.S. spot, cathode [Cobalt]"
+price_original = "21"
+price_unit = "dollars per pound"
+price_conversion = "21 USD/lb / 0.45359237 kg/lb = 46.3 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 1840
+price_usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week. Cobalt cathode is refined cobalt metal produced by an electrolytic process."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Headline price: U.S. spot, cathode (S&P Global Platts Metals Week)."
+other_prices = [
+  { basis = "Price, average, dollars per pound: London Metal Exchange (LME), cash [Cobalt]", usd_per_kg = 33.0693, conversion = "15 USD/lb / 0.45359237 kg/lb = 33.07 USD/kg", year = 2025, estimated = true, csv_line = 1841, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 28
+symbol = "Ni"
+commodity = "Nickel"
+mcs_chapter = "NICKEL"
+primary = true
+basis = "mine production, nickel content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 5071
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "3,900,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 3900000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 3710000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 5060
+unit_value_usd_per_kg = 15.0
+price_basis = "Price, average annual, London Metal Exchange (LME), cash: Dollars per metric ton [Nickel]"
+price_original = "15,000"
+price_unit = "dollars per metric ton"
+price_conversion = "15,000 USD per metric ton / 1,000 kg = 15 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5036
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is LME cash (the only price in the chapter), not a U.S. producer price."
+other_prices = [
+  { basis = "Price, average annual, London Metal Exchange (LME), cash: Dollars per pound [Nickel]", usd_per_kg = 15.2119, conversion = "6.9 USD/lb / 0.45359237 kg/lb = 15.21 USD/kg", year = 2025, estimated = true, csv_line = 5037, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 29
+symbol = "Cu"
+commodity = "Copper (mine)"
+mcs_chapter = "COPPER"
+primary = true
+basis = "mine production, copper content"
+contained_element = true
+via_mineral = false
+table = "World Mine and Refinery Production and Reserves"
+csv_line = 2028
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "23,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 23000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 23000000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 2009
+unit_value_usd_per_kg = 10.8027
+price_basis = "Price, annual average, cents per pound: U.S. producer, cathode (COMEX + premium) [Copper]"
+price_original = "490"
+price_unit = "cents per pound"
+price_conversion = "490 US cents/lb / 100 / 0.45359237 kg/lb = 10.8 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 1966
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Headline price: U.S. producer, cathode (COMEX + premium)."
+other_prices = [
+  { basis = "Price, annual average, cents per pound: COMEX, high-grade, first position [Copper]", usd_per_kg = 10.5822, conversion = "480 US cents/lb / 100 / 0.45359237 kg/lb = 10.58 USD/kg", year = 2025, estimated = true, csv_line = 1967, usgs_note = "Estimated." },
+  { basis = "Price, annual average, cents per pound: London Metal Exchange, grade A, cash [Copper]", usd_per_kg = 9.70034, conversion = "440 US cents/lb / 100 / 0.45359237 kg/lb = 9.7 USD/kg", year = 2025, estimated = true, csv_line = 1968, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 29
+symbol = "Cu"
+commodity = "Copper (refinery)"
+mcs_chapter = "COPPER"
+primary = false
+basis = "refinery production, refined copper"
+contained_element = true
+via_mineral = false
+table = "World Mine and Refinery Production and Reserves"
+csv_line = 2066
+usgs_row = "World total | Refinery production: rounded | thousand metric tons | 2025"
+original_value = "29,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 29000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 27600000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 2047
+unit_value_usd_per_kg = 10.8027
+price_basis = "Price, annual average, cents per pound: U.S. producer, cathode (COMEX + premium) [Copper]"
+price_original = "490"
+price_unit = "cents per pound"
+price_conversion = "490 US cents/lb / 100 / 0.45359237 kg/lb = 10.8 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 1966
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Refined copper (primary and secondary)."
+
+[[row]]
+Z = 30
+symbol = "Zn"
+commodity = "Zinc"
+mcs_chapter = "ZINC"
+primary = true
+basis = "mine production, zinc content of concentrates and direct shipping ores"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 8718
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "13,000"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 13000000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated. -- Zinc content of concentrates and direct shipping ores."
+prev_year_tonnes = 11900000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 8706
+unit_value_usd_per_kg = 3.28489
+price_basis = "Price, average, cents per pound: North American [Zinc]"
+price_original = "149"
+price_unit = "cents per pound"
+price_conversion = "149 US cents/lb / 100 / 0.45359237 kg/lb = 3.285 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 8670
+price_usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week, North American SHG zinc; based on the LME cash price plus premium."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Headline price: North American SHG zinc (LME cash plus premium)."
+other_prices = [
+  { basis = "Price, average, cents per pound: London Metal Exchange (LME), cash [Zinc]", usd_per_kg = 2.86601, conversion = "130 US cents/lb / 100 / 0.45359237 kg/lb = 2.866 USD/kg", year = 2025, estimated = true, csv_line = 8671, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 31
+symbol = "Ga"
+commodity = "Gallium"
+mcs_chapter = "GALLIUM"
+primary = true
+basis = "primary production, low-purity gallium, gallium content"
+contained_element = true
+via_mineral = false
+table = "World Low-Purity Production and Production Capacity"
+csv_line = 2561
+usgs_row = "World total | Primary production: rounded | kilograms | 2025"
+original_value = "900,000"
+original_unit = "kilograms"
+year = 2025
+estimated = true
+tonnes_per_year = 900.0
+conversion = "kilograms / 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 848.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 2555
+unit_value_usd_per_kg = 580.0
+price_basis = "Price, average unit value of imports, dollars per kilogram [Gallium]"
+price_original = "580"
+price_unit = "dollars per kilogram"
+price_conversion = "580 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 2542
+price_usgs_note = "Estimated. -- Source: U.S. Census Bureau. Average customs value of U.S. imports of gallium metal, Harmonized Tariff Schedule of the United States code8112.92.1000."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Low-purity primary gallium (USGS table 'World Low-Purity Production'). Price: average customs value of U.S. imports of gallium metal (HTS 8112.92.1000)."
+
+[[row]]
+Z = 32
+symbol = "Ge"
+commodity = "Germanium"
+mcs_chapter = "GERMANIUM"
+primary = true
+basis = "refinery production, germanium"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS gives no world production figure: 'Because most producers do not publicly report germanium production, global production data were limited.'"
+unit_value_usd_per_kg = 4100.0
+price_basis = "Price, annual average, dollars per kilogram: Germanium metal [Germanium]"
+price_original = "4,100"
+price_unit = "dollars per kilogram"
+price_conversion = "4,100 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 2789
+price_usgs_note = "Estimated. -- Average European price for minimum 99.999% purity. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is the average European price for germanium metal, min. 99.999% (Argus), not a U.S. price."
+other_prices = [
+  { basis = "Price, annual average, dollars per kilogram: Germanium dioxide [Germanium]", usd_per_kg = 2500.0, conversion = "2,500 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 2790, usgs_note = "Estimated. -- Average European price for minimum 99.999% purity. Source: Argus Media group, Argus Non-Ferrous Markets." },
+]
+
+[[row]]
+Z = 33
+symbol = "As"
+commodity = "Arsenic"
+mcs_chapter = "ARSENIC"
+primary = true
+basis = "production, arsenic trioxide (As2O3, gross weight)"
+contained_element = false
+via_mineral = false
+table = "World Production and Capacity"
+csv_line = 531
+usgs_row = "World total | Production (arsenic trioxide, gross weight): rounded | metric tons | 2025"
+original_value = "61,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 61000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- Includes calculated arsenic trioxide equivalent of output of elemental arsenic compounds other than arsenic trioxide; inclusion of such materials would not duplicate reported arsenic trioxide production. Chile and Mexico were estimated to be significant producers of commercial-grade arsenic trioxide but have reported no production in recent years."
+prev_year_tonnes = 62500.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 523
+unit_value_usd_per_kg = 4.07855
+price_basis = "Price, metal, annual average, U.S. warehouse, dollars per pound [Arsenic]"
+price_original = "1.85"
+price_unit = "dollars per pound"
+price_conversion = "1.85 USD/lb / 0.45359237 kg/lb = 4.079 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 501
+price_usgs_note = "Estimated. -- Minimum 99% arsenic. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Gross weight of As2O3 (USGS: arsenic content of arsenic trioxide is 75.71%, so ~46,000 t As if derived; not applied). Price: arsenic metal (min. 99%), U.S. warehouse."
+
+[[row]]
+Z = 34
+symbol = "Se"
+commodity = "Selenium"
+mcs_chapter = "SELENIUM"
+primary = true
+basis = "refinery production, selenium content"
+contained_element = true
+via_mineral = false
+table = "World Refinery Production and Capacity"
+csv_line = 6644
+usgs_row = "World total | Refinery production: rounded | metric tons | 2025"
+original_value = "3,800"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 3800.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- Unless otherwise noted, data are for refined selenium only to the extent possible. Countries that produced selenium contained in copper ore and concentrate, copper smelter products (such as blister and anodes), copper refinery residues (such as anode slimes), and (or) other selenium-containing materials but did not recover refined selenium are excluded. -- Excludes U.S. production."
+prev_year_tonnes = 3670.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 6625
+unit_value_usd_per_kg = 28.0
+price_basis = "Price, annual average, dollars per kilogram: United States [Selenium]"
+price_original = "28"
+price_unit = "dollars per kilogram"
+price_conversion = "28 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6593
+price_usgs_note = "Estimated. -- Minimum purity of 99.5%, free on board, U.S. warehouse. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Refined selenium to the extent possible (USGS note). Headline price: U.S., min. 99.5%, f.o.b. U.S. warehouse."
+other_prices = [
+  { basis = "Price, annual average, dollars per kilogram: Europe [Selenium]", usd_per_kg = 29.0, conversion = "29 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 6594, usgs_note = "Estimated. -- Minimum purity of 99.5%, in warehouse, Rotterdam. Source: Argus Media group, Argus Non-Ferrous Markets." },
+]
+
+[[row]]
+Z = 35
+symbol = "Br"
+commodity = "Bromine"
+mcs_chapter = "BROMINE"
+primary = true
+basis = "production, bromine content"
+contained_element = true
+via_mineral = false
+table = "World Production and Reserves"
+csv_line = 1167
+usgs_row = "World total | Production: rounded | metric tons | 2025"
+original_value = "430,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 430000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- Excludes U.S. production."
+prev_year_tonnes = 440000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 1159
+unit_value_usd_per_kg = 3.0
+price_basis = "Price, average unit value of imports (cost, insurance, and freight), dollars per kilogram, bromine content [Bromine]"
+price_original = "3"
+price_unit = "dollars per kilogram"
+price_conversion = "3 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 1145
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "World total excludes U.S. production. Price: average CIF unit value of U.S. imports, per kg bromine content."
+
+[[row]]
+Z = 36
+symbol = "Kr"
+commodity = "Krypton"
+mcs_chapter = "HELIUM AND RARE GASES"
+primary = true
+basis = "world production, krypton (million liters)"
+contained_element = true
+via_mineral = false
+table = "World Production and Reserves"
+csv_line = 3311
+usgs_row = "World total | Rare gases production, (million liters): rounded | million liters | 2025"
+original_value = "110"
+original_unit = "million liters"
+year = 2025
+estimated = true
+production_missing_reason = "unit_not_convertible"
+production_missing_note = "volume in liters without stated reference temperature/pressure; tonnage not derivable from the source alone"
+usgs_note = "Estimated .-- Source: Intelligas Consulting LLC and TECHCET CA LLC."
+prev_year_original = "112 million liters"
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 3302
+price_missing_reason = "not_reported_by_source"
+price_missing_note = "no price row in this MCS chapter"
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Million liters, reference conditions not stated by USGS, so no tonnage. No price ('Price data for rare gases were unavailable')."
+
+[[row]]
+Z = 37
+symbol = "Rb"
+commodity = "Rubidium"
+mcs_chapter = "RUBIDIUM"
+primary = true
+basis = "mine production, rubidium"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS: 'There were no official sources for rubidium production data in 2025.'"
+unit_value_usd_per_kg = 138000.0
+price_basis = "1?gram ampoules of 99.75% (metal basis) rubidium [Rubidium]"
+price_original = "138"
+price_unit = "dollars per gram"
+price_conversion = "138 USD/g x 1,000 = 1.38e+05 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6267
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Headline is a small-lot catalogue price (one company, 1-gram ampoule, 99.75% metal basis, end of September 2025), scaled to USD/kg only arithmetically. PDF prose (p. 158, not in CSV) also gives 100-gram ampoules of the same material at 2,453 USD in 2025 (= 24,530 USD/kg), which is the better bulk-ish indicator."
+other_prices = [
+  { basis = "10-gram ampoules of 99.8% (metal basis) rubidium formate hydrate [Rubidium]", usd_per_kg = 30100.0, conversion = "301 USD per 10 g x 100 = 3.01e+04 USD/kg", year = 2025, estimated = true, csv_line = 6269, usgs_note = "Estimated." },
+  { basis = "10 grams of 99.8% (metal basis) rubidium acetate [Rubidium]", usd_per_kg = 7210.0, conversion = "72.1 USD per 10 g x 100 = 7210 USD/kg", year = 2025, estimated = true, csv_line = 6271, usgs_note = "Estimated." },
+  { basis = "10 grams of 99.8% (metal basis) rubidium bromide [Rubidium]", usd_per_kg = 10440.0, conversion = "104.4 USD per 10 g x 100 = 1.044e+04 USD/kg", year = 2025, estimated = true, csv_line = 6272, usgs_note = "Estimated." },
+  { basis = "10 grams of 99.8% (metal basis) rubidium carbonate [Rubidium]", usd_per_kg = 7170.0, conversion = "71.7 USD per 10 g x 100 = 7170 USD/kg", year = 2025, estimated = true, csv_line = 6273, usgs_note = "Estimated." },
+  { basis = "10 grams of 99.8% (metal basis) rubidium chloride [Rubidium]", usd_per_kg = 9010.0, conversion = "90.1 USD per 10 g x 100 = 9010 USD/kg", year = 2025, estimated = true, csv_line = 6274, usgs_note = "Estimated." },
+  { basis = "10 grams of 99.8% (metal basis) rubidium nitrate [Rubidium]", usd_per_kg = 6710.0, conversion = "67.1 USD per 10 g x 100 = 6710 USD/kg", year = 2025, estimated = true, csv_line = 6275, usgs_note = "Estimated." },
+]
+
+[[row]]
+Z = 38
+symbol = "Sr"
+commodity = "Strontium (celestite)"
+mcs_chapter = "STRONTIUM"
+primary = true
+basis = "mine production, celestite (SrSO4), gross weight"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 7224
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "450,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 450000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- Gross weight of celestite in tons."
+prev_year_tonnes = 400000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 7217
+unit_value_usd_per_kg = 0.16
+price_basis = "Price, average unit value of celestite imports at port of exportation, dollars per ton [Strontium]"
+price_original = "160"
+price_unit = "dollars per ton"
+price_conversion = "160 USD per metric ton / 1,000 kg = 0.16 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7200
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "USGS: 'Gross weight of celestite in tons' (chapter header says Sr content, but the world table is celestite gross weight). Price: average unit value of celestite imports at port of exportation; 2024 value (807 USD/t) was inflated by a small quantity of high-value imports, 'most likely mineral specimens' (USGS)."
+
+[[row]]
+Z = 39
+symbol = "Y"
+commodity = "Yttrium"
+mcs_chapter = "YTTRIUM"
+primary = true
+basis = "mine production, Y2O3 equivalent contained in rare-earth mineral concentrates"
+contained_element = false
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 8533
+usgs_row = "World total | mine production of Y2O3 equivalent contained in rare-earth mineral concentrates | metric tons | 2025"
+original_value = "10,000 - 15,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year_min = 10000.0
+tonnes_per_year_max = 15000.0
+conversion = "metric tons = tonnes (x1); USGS gives a range, no point value"
+usgs_note = "Yes"
+unit_value_usd_per_kg = 9.0
+price_basis = "Price, average, dollars per kilogram: Y2O3, minimum 99.999% purity [Yttrium]"
+price_original = "9"
+price_unit = "dollars per kilogram"
+price_conversion = "9 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 8525
+price_usgs_note = "Estimated. -- Free on board China. Source: Argus Media group, Argus Rare Earths."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "USGS gives a range only (p. 209): 'world mine production of Y2O3 equivalent contained in rare-earth mineral concentrates was 10,000 to 15,000 tons' (2025). Yttrium is also included in the Rare Earths group total. Price: Y2O3 min. 99.999%, f.o.b. China."
+other_prices = [
+  { basis = "Price, average, dollars per kilogram: Yttrium metal, minimum 99.9% purity [Yttrium]", usd_per_kg = 40.0, conversion = "40 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 8526, usgs_note = "Estimated. -- Free on board China. Source: Argus Media group, Argus Rare Earths." },
+]
+
+[[row]]
+Z = 40
+symbol = "Zr"
+commodity = "Zirconium mineral concentrates"
+mcs_chapter = "ZIRCONIUM AND HAFNIUM"
+primary = true
+basis = "mine production, zirconium mineral concentrates (gross weight)"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 8876
+usgs_row = "World total | Zirconium mineral concentrates, mine production (thousand metric tons, gross weight): rounded | thousand metric tons | 2025"
+original_value = "1,200"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 1200000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 1300000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 8865
+unit_value_usd_per_kg = 22.0
+price_basis = "Price: Zirconium, sponge, ex-works China, dollars per kilogram [Zirconium]"
+price_original = "22"
+price_unit = "dollars per kilogram"
+price_conversion = "22 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 8822
+price_usgs_note = "Estimated. -- Source: Argus Media group, Argus Non-Ferrous Markets, annual average."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Gross weight of zircon (and other Zr mineral) concentrates, both years marked e. Headline price: zirconium sponge, ex-works China (Argus); zircon prices in other_prices."
+other_prices = [
+  { basis = "Price: Zircon, dollars per metric ton (gross weight): Premium grade, cost, insurance, and freight, China [Zirconium And Hafnium]", usd_per_kg = 1.8, conversion = "1,800 USD per metric ton / 1,000 kg = 1.8 USD/kg", year = 2025, estimated = true, csv_line = 8820, usgs_note = "Estimated. -- Source: Fast markets IM." },
+  { basis = "Price: Zircon, dollars per metric ton (gross weight): Imported [Zirconium And Hafnium]", usd_per_kg = 1.9, conversion = "1,900 USD per metric ton / 1,000 kg = 1.9 USD/kg", year = 2025, estimated = true, csv_line = 8821, usgs_note = "Estimated. -- Unit value based on landed-duty-paid United States imports for consumption from Australia, Senegal, and South Africa." },
+]
+
+[[row]]
+Z = 41
+symbol = "Nb"
+commodity = "Niobium (columbium)"
+mcs_chapter = "NIOBIUM (COLUMBIUM)"
+primary = true
+basis = "mine production, niobium content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 5155
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "112,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 112000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 112000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 5146
+unit_value_usd_per_kg = 26.0
+price_basis = "Price, average unit value, ferroniobium, dollars per kilogram [Niobium (Columbium)]"
+price_original = "26"
+price_unit = "dollars per kilogram"
+price_conversion = "26 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5121
+price_usgs_note = "Estimated. -- Unit value is weighted average unit value of gross weight of U.S. ferroniobium trade (imports plus exports)."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: weighted average unit value of gross weight of U.S. ferroniobium trade (imports plus exports), per kg ferroniobium (gross), not per kg Nb."
+
+[[row]]
+Z = 42
+symbol = "Mo"
+commodity = "Molybdenum"
+mcs_chapter = "MOLYBDENUM"
+primary = true
+basis = "mine production, molybdenum content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 4938
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "260,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 260000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 256000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 4921
+unit_value_usd_per_kg = 51.0
+price_basis = "Price, average, dollars per kilogram [Molybdenum]"
+price_original = "51"
+price_unit = "dollars per kilogram"
+price_conversion = "51 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 4889
+price_usgs_note = "Estimated. -- U.S. molybdic oxide (MoO3) price, 57% molybdenum content. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: U.S. molybdic oxide (MoO3) price, 57% Mo content (Argus), USD per kilogram as given; USGS does not state explicitly whether per kg of oxide or of contained Mo."
+
+[[row]]
+Z = 44
+symbol = "Ru"
+commodity = "Ruthenium"
+mcs_chapter = "PLATINUM-GROUP METALS"
+primary = true
+basis = "mine production, ruthenium"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "MCS gives world mine production for platinum and palladium only; no ruthenium figure."
+unit_value_usd_per_kg = 22184.0
+price_basis = "Price, dollars per troy ounce: Ruthenium [Ruthenium]"
+price_original = "690"
+price_unit = "dollars per troy ounce"
+price_conversion = "690 USD/troy oz / 0.0311034768 kg per troy oz = 22184 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5672
+price_usgs_note = "Estimated. -- Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Engelhard unfabricated metal average annual price."
+
+[[row]]
+Z = 45
+symbol = "Rh"
+commodity = "Rhodium"
+mcs_chapter = "PLATINUM-GROUP METALS"
+primary = true
+basis = "mine production, rhodium"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "MCS gives world mine production for platinum and palladium only; no rhodium figure."
+unit_value_usd_per_kg = 186474.0
+price_basis = "Price, dollars per troy ounce: Rhodium [Rhodium]"
+price_original = "5,800"
+price_unit = "dollars per troy ounce"
+price_conversion = "5,800 USD/troy oz / 0.0311034768 kg per troy oz = 1.8647e+05 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5671
+price_usgs_note = "Estimated. -- Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Engelhard unfabricated metal average annual price."
+
+[[row]]
+Z = 46
+symbol = "Pd"
+commodity = "Palladium"
+mcs_chapter = "PLATINUM-GROUP METALS"
+primary = true
+basis = "mine production, palladium content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 5699
+usgs_row = "World total | Mine production: Palladium, rounded | kilograms | 2025"
+original_value = "190,000"
+original_unit = "kilograms"
+year = 2025
+estimated = true
+tonnes_per_year = 190.0
+conversion = "kilograms / 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 217.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 5692
+unit_value_usd_per_kg = 35365.8
+price_basis = "Price, dollars per troy ounce: Palladium [Palladium]"
+price_original = "1,100"
+price_unit = "dollars per troy ounce"
+price_conversion = "1,100 USD/troy oz / 0.0311034768 kg per troy oz = 35366 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5668
+price_usgs_note = "Estimated. -- Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Engelhard unfabricated metal average annual price."
+
+[[row]]
+Z = 47
+symbol = "Ag"
+commodity = "Silver"
+mcs_chapter = "SILVER"
+primary = true
+basis = "mine production, silver content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 6912
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "26,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 26000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 25300.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 6896
+unit_value_usd_per_kg = 1221.73
+price_basis = "Price, bullion, average, dollars per troy ounce [Silver]"
+price_original = "38"
+price_unit = "dollars per troy ounce"
+price_conversion = "38 USD/troy oz / 0.0311034768 kg per troy oz = 1221.7 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6870
+price_usgs_note = "Estimated. -- Engelhard’s industrial bullion quotations. Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: Engelhard industrial bullion quotations."
+
+[[row]]
+Z = 48
+symbol = "Cd"
+commodity = "Cadmium"
+mcs_chapter = "CADMIUM"
+primary = true
+basis = "refinery production, cadmium"
+contained_element = true
+via_mineral = false
+table = "World Refinery Production and Reserves"
+csv_line = 1289
+usgs_row = "World total | Refinery production: rounded | metric tons | 2025"
+original_value = "23,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 23000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 22800.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 1272
+unit_value_usd_per_kg = 3.9
+price_basis = "Price, metal, annual average, dollars per kilogram [Cadmium]"
+price_original = "3.9"
+price_unit = "dollars per kilogram"
+price_conversion = "3.9 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 1249
+price_usgs_note = "Estimated. -- Average free market price for 99.95% purity in 10?ton lots; cost, insurance, and freight; global ports. Source: Fast markets MB."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: free-market price, 99.95% purity, 10-ton lots, CIF global ports (Fastmarkets MB), not a U.S. price."
+
+[[row]]
+Z = 49
+symbol = "In"
+commodity = "Indium"
+mcs_chapter = "INDIUM"
+primary = true
+basis = "refinery production, indium"
+contained_element = true
+via_mineral = false
+table = "World Refinery Production and Capacity"
+csv_line = 3374
+usgs_row = "World total | Refinery production: rounded | metric tons | 2025"
+original_value = "1,100"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 1100.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 1090.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 3364
+unit_value_usd_per_kg = 370.0
+price_basis = "Price, annual average, dollars per kilogram: U.S. warehouse, free on board [Indium]"
+price_original = "370"
+price_unit = "dollars per kilogram"
+price_conversion = "370 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 3347
+price_usgs_note = "Estimated. -- Prices based on 99.99%-minimum-purity, free on board U.S. warehouse. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Headline price: U.S. warehouse, f.o.b., min. 99.99%."
+other_prices = [
+  { basis = "Price, annual average, dollars per kilogram: Rotterdam, duties unpaid [Indium]", usd_per_kg = 380.0, conversion = "380 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 3348, usgs_note = "Estimated. -- Prices based on 99.99%-minimum-purity, duties unpaid (Rotterdam). Source: Argus Media group, Argus Non-Ferrous Markets." },
+]
+
+[[row]]
+Z = 50
+symbol = "Sn"
+commodity = "Tin"
+mcs_chapter = "TIN"
+primary = true
+basis = "mine production, tin content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 7842
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "290,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 290000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 294000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 7825
+unit_value_usd_per_kg = 35.274
+price_basis = "Price, average, cents per pound: New York dealer [Tin]"
+price_original = "1,600"
+price_unit = "cents per pound"
+price_conversion = "1,600 US cents/lb / 100 / 0.45359237 kg/lb = 35.27 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7797
+price_usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Headline price: New York dealer."
+other_prices = [
+  { basis = "Price, average, cents per pound: London Metal Exchange (LME), cash [Tin]", usd_per_kg = 33.0693, conversion = "1,500 US cents/lb / 100 / 0.45359237 kg/lb = 33.07 USD/kg", year = 2025, estimated = true, csv_line = 7798, usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week." },
+]
+
+[[row]]
+Z = 51
+symbol = "Sb"
+commodity = "Antimony"
+mcs_chapter = "ANTIMONY"
+primary = true
+basis = "mine production, antimony content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 449
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "110,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 110000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- In addition to the countries listed, antimony may have been produced in other countries, but available information was inadequate to make reliable estimates of output. Does not include production in the United States."
+prev_year_tonnes = 119000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 431
+unit_value_usd_per_kg = 55.1156
+price_basis = "Price, metal, average, dollars per pound [Antimony]"
+price_original = "25"
+price_unit = "dollars per pound"
+price_conversion = "25 USD/lb / 0.45359237 kg/lb = 55.12 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 394
+price_usgs_note = "Estimated. -- Antimony minimum 99.65%, cost, insurance, and freight. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "World total does not include U.S. production. Price: metal, min. 99.65%, CIF (Argus)."
+
+[[row]]
+Z = 52
+symbol = "Te"
+commodity = "Tellurium"
+mcs_chapter = "TELLURIUM"
+primary = true
+basis = "refinery production, tellurium content"
+contained_element = true
+via_mineral = false
+table = "World Refinery Production and Capacity"
+csv_line = 7611
+usgs_row = "World total | Refinery production: rounded | metric tons | 2025"
+original_value = "1,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 1000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- Unless otherwise noted, data are for refined tellurium only to the extent possible. Countries that produced tellurium contained in copper ore and concentrate, copper smelter products (such as blister and anodes), copper refinery residues (such as anode slimes), and (or) other tellurium-containing materials but did not recover refined tellurium are excluded. -- Excludes U.S. production."
+prev_year_tonnes = 981.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 7600
+unit_value_usd_per_kg = 120.0
+price_basis = "Price, annual average, dollars per kilogram: United States [Tellurium]"
+price_original = "120"
+price_unit = "dollars per kilogram"
+price_conversion = "120 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7581
+price_usgs_note = "Estimated. -- Minimum purity of 99.95%, free on board, U.S. warehouse. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Refined tellurium to the extent possible (USGS note). Headline price: U.S., min. 99.95%, f.o.b. U.S. warehouse."
+other_prices = [
+  { basis = "Price, annual average, dollars per kilogram: Europe [Tellurium]", usd_per_kg = 150.0, conversion = "150 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 7582, usgs_note = "Estimated. -- Minimum purity of 99.99%, in warehouse, Rotterdam. Source: Argus Media group, Argus Non-Ferrous Markets." },
+]
+
+[[row]]
+Z = 53
+symbol = "I"
+commodity = "Iodine"
+mcs_chapter = "IODINE"
+primary = true
+basis = "mine production, elemental iodine"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 3445
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "34,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 34000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- Excludes U.S. production."
+prev_year_tonnes = 33400.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 3436
+unit_value_usd_per_kg = 68.0
+price_basis = "Price, crude iodine, average unit value of imports (cost, insurance, and freight), dollars per kilogram [Iodine]"
+price_original = "68"
+price_unit = "dollars per kilogram"
+price_conversion = "68 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 3422
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "World total excludes U.S. production. Price: crude iodine, average CIF unit value of U.S. imports. Discrepancy: the CSV gives 2024 world total 33,400 t, the PDF (ver. 1.3) table shows 33,000 t; the 2025 value (34,000 t) agrees."
+
+[[row]]
+Z = 54
+symbol = "Xe"
+commodity = "Xenon"
+mcs_chapter = "HELIUM AND RARE GASES"
+primary = true
+basis = "world production, xenon (million liters)"
+contained_element = true
+via_mineral = false
+table = "World Production and Reserves"
+csv_line = 3314
+usgs_row = "World total | Rare gases production, (million liters): rounded | million liters | 2025"
+original_value = "12"
+original_unit = "million liters"
+year = 2025
+estimated = true
+production_missing_reason = "unit_not_convertible"
+production_missing_note = "volume in liters without stated reference temperature/pressure; tonnage not derivable from the source alone"
+usgs_note = "Estimated .-- Source: Intelligas Consulting LLC and TECHCET CA LLC."
+prev_year_original = "12 million liters"
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 3305
+price_missing_reason = "not_reported_by_source"
+price_missing_note = "no price row in this MCS chapter"
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Million liters, reference conditions not stated by USGS, so no tonnage. No price ('Price data for rare gases were unavailable')."
+
+[[row]]
+Z = 55
+symbol = "Cs"
+commodity = "Cesium"
+mcs_chapter = "CESIUM"
+primary = true
+basis = "mine production, cesium"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS: 'There were no official sources for cesium production data.'"
+unit_value_usd_per_kg = 104000.0
+price_basis = "1?gram ampoules of 99.8% (metal basis) cesium [Cesium]"
+price_original = "104"
+price_unit = "dollars per gram"
+price_conversion = "104 USD/g x 1,000 = 1.04e+05 USD/kg"
+price_year = 2025
+price_estimated = false
+price_csv_line = 1415
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "USGS: 'Because cesium metal is not traded in commercial quantities, a market price is unavailable.' The headline is a small-lot catalogue price (one company, 1-gram ampoule, 99.8% metal basis), scaled to USD/kg only arithmetically; not marked estimated in the CSV. The CSV labels the 132 USD ampoule '99.9%', the PDF prose says '99.98% (metal basis)'."
+other_prices = [
+  { basis = "1?gram ampoules of 99.9% (metal basis) cesium [Cesium]", usd_per_kg = 132000.0, conversion = "132 USD/g x 1,000 = 1.32e+05 USD/kg", year = 2025, estimated = false, csv_line = 1416 },
+  { basis = "50 grams of 99.9% (metal basis) cesium acetate [Cesium]", usd_per_kg = 3220.0, conversion = "161 USD per 50 g x 20 = 3220 USD/kg", year = 2025, estimated = false, csv_line = 1417 },
+  { basis = "50 grams of 99.9% (metal basis) cesium bromide [Cesium]", usd_per_kg = 2220.0, conversion = "111 USD per 50 g x 20 = 2220 USD/kg", year = 2025, estimated = false, csv_line = 1418 },
+  { basis = "50 grams of 99.9% (metal basis) cesium carbonate [Cesium]", usd_per_kg = 2928.0, conversion = "146.4 USD per 50 g x 20 = 2928 USD/kg", year = 2025, estimated = false, csv_line = 1419 },
+  { basis = "50 grams of 99.9% (metal basis) cesium chloride [Cesium]", usd_per_kg = 3320.0, conversion = "166 USD per 50 g x 20 = 3320 USD/kg", year = 2025, estimated = false, csv_line = 1420 },
+  { basis = "50 grams of 99.9% (metal basis) cesium iodide [Cesium]", usd_per_kg = 3716.0, conversion = "185.8 USD per 50 g x 20 = 3716 USD/kg", year = 2025, estimated = false, csv_line = 1421 },
+  { basis = "25 grams of 98% (metal basis) cesium formate [Cesium]", usd_per_kg = 2244.0, conversion = "56.1 USD per 25 g x 40 = 2244 USD/kg", year = 2025, estimated = false, csv_line = 1423 },
+]
+
+[[row]]
+Z = 56
+symbol = "Ba"
+commodity = "Barite"
+mcs_chapter = "BARITE"
+primary = true
+basis = "mine production, barite (BaSO4), gross weight"
+contained_element = false
+via_mineral = true
+table = "World Mine Production and Reserves"
+csv_line = 659
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "8,700"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 8700000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated. -- Excludes U.S. production."
+prev_year_tonnes = 8000000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 646
+unit_value_usd_per_kg = 0.21
+price_basis = "Price, average unit value, ground, ex-works, dollars per metric ton [Barite]"
+price_original = "210"
+price_unit = "dollars per metric ton"
+price_conversion = "210 USD per metric ton / 1,000 kg = 0.21 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 626
+price_usgs_note = "Estimated."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Mineral commodity, gross weight, not Ba content. World total excludes U.S. production. Price: average unit value, ground barite, ex-works."
+
+[[row]]
+Z = 57
+symbol = "La"
+commodity = "Lanthanum"
+mcs_chapter = "RARE EARTHS"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 1.0
+price_basis = "Price, average, dollars per kilogram: Lanthanum oxide, 99.5% minimum [Lanthanum]"
+price_original = "1"
+price_unit = "dollars per kilogram"
+price_conversion = "1 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6054
+price_usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus; not a U.S. domestic price."
+
+[[row]]
+Z = 58
+symbol = "Ce"
+commodity = "Cerium"
+mcs_chapter = "RARE EARTHS"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 1.71
+price_basis = "Price, average, dollars per kilogram: Cerium oxide, 99.5% minimum [Cerium]"
+price_original = "1.71"
+price_unit = "dollars per kilogram"
+price_conversion = "1.71 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6055
+price_usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus; not a U.S. domestic price."
+
+[[row]]
+Z = 59
+symbol = "Pr"
+commodity = "Praseodymium"
+mcs_chapter = "RARE EARTHS"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 74.0
+price_basis = "Price, average, dollars per kilogram: Praseodymium oxide, 99.99% minimum [Praseodymium]"
+price_original = "74"
+price_unit = "dollars per kilogram"
+price_conversion = "74 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6057
+price_usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus; not a U.S. domestic price."
+
+[[row]]
+Z = 60
+symbol = "Nd"
+commodity = "Neodymium"
+mcs_chapter = "RARE EARTHS"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 73.0
+price_basis = "Price, average, dollars per kilogram: Neodymium oxide, 99.5% minimum [Neodymium]"
+price_original = "73"
+price_unit = "dollars per kilogram"
+price_conversion = "73 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6058
+price_usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus; not a U.S. domestic price."
+
+[[row]]
+Z = 62
+symbol = "Sm"
+commodity = "Samarium"
+mcs_chapter = "RARE EARTHS"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 2.82
+price_basis = "Price, average, dollars per kilogram: Samarium oxide, 99.5% minimum [Samarium]"
+price_original = "2.82"
+price_unit = "dollars per kilogram"
+price_conversion = "2.82 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6060
+price_usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus; not a U.S. domestic price."
+
+[[row]]
+Z = 63
+symbol = "Eu"
+commodity = "Europium"
+mcs_chapter = "RARE EARTHS"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 27.0
+price_basis = "Price, average, dollars per kilogram: Europium oxide, 99.99% minimum [Europium]"
+price_original = "27"
+price_unit = "dollars per kilogram"
+price_conversion = "27 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6061
+price_usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus; not a U.S. domestic price."
+
+[[row]]
+Z = 64
+symbol = "Gd"
+commodity = "Gadolinium"
+mcs_chapter = "RARE EARTHS"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 30.0
+price_basis = "Price, average, dollars per kilogram: Gadolinium oxide, 99.99% minimum [Gadolinium]"
+price_original = "30"
+price_unit = "dollars per kilogram"
+price_conversion = "30 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6062
+price_usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus; not a U.S. domestic price."
+
+[[row]]
+Z = 65
+symbol = "Tb"
+commodity = "Terbium"
+mcs_chapter = "RARE EARTHS (Heavy)"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 1010.0
+price_basis = "Price, average, dollars per kilogram: Terbium oxide, 99.99% minimum [Terbium]"
+price_original = "1,010"
+price_unit = "dollars per kilogram"
+price_conversion = "1,010 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6158
+price_usgs_note = "Estimated. -- Free on board. Sources: Argus Media group, Argus Non-Ferrous Markets and Asian Metal Ltd."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus and Asian Metal; not a U.S. domestic price."
+
+[[row]]
+Z = 66
+symbol = "Dy"
+commodity = "Dysprosium"
+mcs_chapter = "RARE EARTHS (Heavy)"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 239.0
+price_basis = "Price, average, dollars per kilogram: Dysprosium oxide, 99.5% minimum [Dysprosium]"
+price_original = "239"
+price_unit = "dollars per kilogram"
+price_conversion = "239 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6159
+price_usgs_note = "Estimated. -- Free on board. Sources: Argus Media group, Argus Non-Ferrous Markets and Asian Metal Ltd."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus and Asian Metal; not a U.S. domestic price."
+
+[[row]]
+Z = 67
+symbol = "Ho"
+commodity = "Holmium"
+mcs_chapter = "RARE EARTHS (Heavy)"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 70.0
+price_basis = "Price, average, dollars per kilogram: Holmium oxide, 99.5% minimum [Holmium]"
+price_original = "70"
+price_unit = "dollars per kilogram"
+price_conversion = "70 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6160
+price_usgs_note = "Estimated. -- Free on board. Sources: Argus Media group, Argus Non-Ferrous Markets and Asian Metal Ltd."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus and Asian Metal; not a U.S. domestic price."
+
+[[row]]
+Z = 68
+symbol = "Er"
+commodity = "Erbium"
+mcs_chapter = "RARE EARTHS (Heavy)"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 46.0
+price_basis = "Price, average, dollars per kilogram: Erbium oxide, 99.5%, minimum [Erbium]"
+price_original = "46"
+price_unit = "dollars per kilogram"
+price_conversion = "46 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6161
+price_usgs_note = "Estimated. -- Free on board. Sources: Argus Media group, Argus Non-Ferrous Markets and Asian Metal Ltd."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus and Asian Metal; not a U.S. domestic price."
+
+[[row]]
+Z = 70
+symbol = "Yb"
+commodity = "Ytterbium"
+mcs_chapter = "RARE EARTHS (Heavy)"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 15.0
+price_basis = "Price, average, dollars per kilogram: Ytterbium oxide, 99.99% minimum [Ytterbium]"
+price_original = "15"
+price_unit = "dollars per kilogram"
+price_conversion = "15 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6162
+price_usgs_note = "Estimated. -- Free on board. Sources: Argus Media group, Argus Non-Ferrous Markets and Asian Metal Ltd."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus and Asian Metal; not a U.S. domestic price."
+
+[[row]]
+Z = 71
+symbol = "Lu"
+commodity = "Lutetium"
+mcs_chapter = "RARE EARTHS (Heavy)"
+primary = true
+basis = "mine production (only reported as rare-earths group total, REO equivalent)"
+contained_element = false
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS reports rare-earth mine production only as a group total (rare-earth-oxide equivalent); see group_row 'Rare earths'. Not assigned to single elements."
+unit_value_usd_per_kg = 888.0
+price_basis = "Price, average, dollars per kilogram: Lutetium oxide, 99.99% minimum [Lutetium]"
+price_original = "888"
+price_unit = "dollars per kilogram"
+price_conversion = "888 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6163
+price_usgs_note = "Estimated. -- Free on board. Sources: Argus Media group, Argus Non-Ferrous Markets and Asian Metal Ltd."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price is for the oxide (per kg of oxide), f.o.b., Argus and Asian Metal; not a U.S. domestic price."
+
+[[row]]
+Z = 72
+symbol = "Hf"
+commodity = "Hafnium"
+mcs_chapter = "ZIRCONIUM AND HAFNIUM"
+primary = true
+basis = "primary production, hafnium"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS: 'World primary hafnium production data and quantitative estimates of hafnium reserves were not available.'"
+unit_value_usd_per_kg = 3800.0
+price_basis = "Price: Hafnium, unwrought, dollars per kilogram [Hafnium]"
+price_original = "3,800"
+price_unit = "dollars per kilogram"
+price_conversion = "3,800 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 8823
+price_usgs_note = "Estimated. -- Source: Argus Media group, Argus Non-Ferrous Markets, annual average."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: unwrought hafnium, annual average (Argus)."
+
+[[row]]
+Z = 73
+symbol = "Ta"
+commodity = "Tantalum"
+mcs_chapter = "TANTALUM"
+primary = true
+basis = "mine production, tantalum content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 7531
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "2,500"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 2500.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 2500.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 7518
+unit_value_usd_per_kg = 180.0
+price_basis = "Price, tantalite, annual average, dollars per kilogram of tantalum oxide (Ta2O5) content [Tantalum]"
+price_original = "180"
+price_unit = "dollars per kilogram"
+price_conversion = "180 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7484
+price_usgs_note = "Estimated. -- Sources: CRU Group (2021), the Institute for Rare Earths and Metals (2022–24), and Asian Metal (2025)."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: tantalite, per kg of Ta2O5 content (Asian Metal for 2025), not per kg Ta metal."
+
+[[row]]
+Z = 74
+symbol = "W"
+commodity = "Tungsten"
+mcs_chapter = "TUNGSTEN"
+primary = true
+basis = "mine production, tungsten content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 8233
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "85,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 85000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 82000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 8219
+unit_value_usd_per_kg = 38.0
+price_basis = "Price, concentrate, average in-warehouse Rotterdam, dollars per dry metric ton unit of tungsten trioxide [Tungsten]"
+price_original = "380"
+price_unit = "dollars per dry metric ton unit of tungsten trioxide"
+price_conversion = "380 USD per dry metric ton unit of WO3 (mtu = 10 kg WO3) / 10 = 38.0 USD/kg WO3; per kg W (USGS: 1 mtu WO3 contains 7.93 kg W): 380 / 7.93 = 47.92 USD/kg W"
+price_year = 2025
+price_estimated = true
+price_csv_line = 8198
+price_usgs_note = "Estimated. -- Source: Argus Media group, Argus Tungsten Analytics. -- A metric ton unit of tungsten trioxide contains 7.93 kilograms of tungsten."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: tungsten concentrate, average in-warehouse Rotterdam, per dry metric ton unit of WO3; unit_value_usd_per_kg is per kg WO3 contained in concentrate (USD/kg W in price_conversion)."
+
+[[row]]
+Z = 75
+symbol = "Re"
+commodity = "Rhenium"
+mcs_chapter = "RHENIUM"
+primary = true
+basis = "mine production, rhenium content (recovered with Cu and Mo)"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 6255
+usgs_row = "World total | Mine production: rounded | kilograms | 2025"
+original_value = "81,000"
+original_unit = "kilograms"
+year = 2025
+estimated = true
+tonnes_per_year = 81.0
+conversion = "kilograms / 1,000 = tonnes"
+usgs_note = "Estimated. -- Estimated amount of rhenium recovered in association with copper and molybdenum production. Secondary rhenium production not included."
+prev_year_tonnes = 79.8
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 6245
+unit_value_usd_per_kg = 2600.0
+price_basis = "Price, average value, gross weight, dollars per kilogram: Metal, 99.99% pure [Rhenium]"
+price_original = "2,600"
+price_unit = "dollars per kilogram"
+price_conversion = "2,600 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 6217
+price_usgs_note = "Estimated. -- Average price per kilogram of rhenium in pellets (99.9% rhenium content) or catalytic-grade ammonium perrhenate (69.4% rhenium content). Source: Argus Media group, Argus Non-Ferrous Markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Estimated Re recovered in association with copper and molybdenum production; secondary rhenium not included. Headline price: metal pellets 99.99% (Argus), gross weight."
+other_prices = [
+  { basis = "Price, average value, gross weight, dollars per kilogram: Ammonium perrhenate [Rhenium]", usd_per_kg = 2300.0, conversion = "2,300 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 6218, usgs_note = "Estimated. -- Average price per kilogram of rhenium in pellets (99.9% rhenium content) or catalytic-grade ammonium perrhenate (69.4% rhenium content). Source: Argus Media group, Argus Non-Ferrous Markets." },
+]
+
+[[row]]
+Z = 77
+symbol = "Ir"
+commodity = "Iridium"
+mcs_chapter = "PLATINUM-GROUP METALS"
+primary = true
+basis = "mine production, iridium"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "MCS gives world mine production for platinum and palladium only; no iridium figure."
+unit_value_usd_per_kg = 141463.0
+price_basis = "Price, dollars per troy ounce: Iridium [Iridium]"
+price_original = "4,400"
+price_unit = "dollars per troy ounce"
+price_conversion = "4,400 USD/troy oz / 0.0311034768 kg per troy oz = 1.4146e+05 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5670
+price_usgs_note = "Estimated. -- Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Engelhard unfabricated metal average annual price."
+
+[[row]]
+Z = 78
+symbol = "Pt"
+commodity = "Platinum"
+mcs_chapter = "PLATINUM-GROUP METALS"
+primary = true
+basis = "mine production, platinum content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 5713
+usgs_row = "World total | Mine production: Platinum, rounded | kilograms | 2025"
+original_value = "170,000"
+original_unit = "kilograms"
+year = 2025
+estimated = true
+tonnes_per_year = 170.0
+conversion = "kilograms / 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 179.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 5706
+unit_value_usd_per_kg = 38580.9
+price_basis = "Price, dollars per troy ounce: Platinum [Platinum]"
+price_original = "1,200"
+price_unit = "dollars per troy ounce"
+price_conversion = "1,200 USD/troy oz / 0.0311034768 kg per troy oz = 38581 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 5669
+price_usgs_note = "Estimated. -- Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Engelhard unfabricated metal average annual price."
+
+[[row]]
+Z = 79
+symbol = "Au"
+commodity = "Gold"
+mcs_chapter = "GOLD"
+primary = true
+basis = "mine production, gold content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves:"
+csv_line = 2902
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "3,300"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 3300.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 3280.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 2887
+unit_value_usd_per_kg = 106097.0
+price_basis = "Price, dollars per troy ounce [Gold]"
+price_original = "3,300"
+price_unit = "dollars per troy ounce"
+price_conversion = "3,300 USD/troy oz / 0.0311034768 kg per troy oz = 1.061e+05 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 2853
+price_usgs_note = "Estimated. -- Engelhard’s average gold price quotation for the year. In 2025, the price was estimated by the U.S. Geological Survey based on data from January through November."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: Engelhard's average gold price quotation; 2025 estimated by USGS from January-November data."
+
+[[row]]
+Z = 80
+symbol = "Hg"
+commodity = "Mercury"
+mcs_chapter = "MERCURY"
+primary = true
+basis = "mine production, mercury content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 4679
+usgs_row = "World total | Mine production: rounded | metric tons | 2025"
+original_value = "210"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 210.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated. -- Excludes U.S. production."
+prev_year_tonnes = 212.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 4671
+unit_value_usd_per_kg = 50.0
+price_basis = "Price, average unit value of imports, dollars per kilogram [Mercury]"
+price_original = "50"
+price_unit = "dollars per kilogram"
+price_conversion = "50 USD/kg (no conversion)"
+price_year = 2024
+price_estimated = false
+price_csv_line = 4653
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "World total excludes U.S. production. 2025 U.S. price is 'NA' in the source (CSV line 4659); the 2024 value is given instead (price_year = 2024). Price: average unit value of U.S. imports."
+
+[[row]]
+Z = 81
+symbol = "Tl"
+commodity = "Thallium"
+mcs_chapter = "THALLIUM"
+primary = true
+basis = "world production, thallium (byproduct of Cu/Pb/Zn roasting)"
+contained_element = true
+via_mineral = false
+table = "World Refinery Production and Reserves (chapter prose, MCS 2026 p. 191)"
+original_value = "about 10,000"
+original_unit = "kilograms"
+tonnes_per_year = 10.0
+conversion = "10,000 kg / 1,000 = 10 t"
+year = 2023
+estimated = true
+production_source_location = "mcs2026.pdf, Thallium, World Refinery Production and Reserves (prose); not in the CSV"
+unit_value_usd_per_kg = 9300.0
+price_basis = "Price, metal, dollars per kilogram, [Thallium]"
+price_original = "9,300"
+price_unit = "dollars per kilogram"
+price_conversion = "9,300 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7671
+price_usgs_note = "Estimated. -- Estimated average price of thallium 99.99%-pure granules in 100-gram lots from three retailers and producers as of November 7, 2025."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Production is from chapter prose, not the CSV: 'In 2023 (the latest year for which data were available), global production of thallium was estimated to be about 10,000 kilograms.' Price: estimated average price of 99.99% thallium granules in 100-gram lots from three retailers/producers as of November 7, 2025 (small-lot price)."
+
+[[row]]
+Z = 82
+symbol = "Pb"
+commodity = "Lead"
+mcs_chapter = "LEAD"
+primary = true
+basis = "mine production, lead content"
+contained_element = true
+via_mineral = false
+table = "World Mine Production and Reserves"
+csv_line = 4097
+usgs_row = "World total | Mine production: rounded | thousand metric tons | 2025"
+original_value = "4,500"
+original_unit = "thousand metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 4500000.0
+conversion = "thousand metric tons x 1,000 = tonnes"
+usgs_note = "Estimated."
+prev_year_tonnes = 4600000.0
+prev_year = 2024
+prev_year_estimated = false
+prev_csv_line = 4083
+unit_value_usd_per_kg = 2.3369
+price_basis = "Price, average, North American, cents per pound [Lead]"
+price_original = "106"
+price_unit = "cents per pound"
+price_conversion = "106 US cents/lb / 100 / 0.45359237 kg/lb = 2.337 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 4063
+price_usgs_note = "Estimated. -- Source: S&P Global Platts Metals Week."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: North American average (S&P Global Platts Metals Week)."
+
+[[row]]
+Z = 83
+symbol = "Bi"
+commodity = "Bismuth"
+mcs_chapter = "BISMUTH"
+primary = true
+basis = "refinery production, bismuth"
+contained_element = true
+via_mineral = false
+table = "World Refinery Production and Capacity"
+csv_line = 1015
+usgs_row = "World total | Refinery production: rounded | metric tons | 2025"
+original_value = "16,000"
+original_unit = "metric tons"
+year = 2025
+estimated = true
+tonnes_per_year = 16000.0
+conversion = "metric tons = tonnes (x1)"
+usgs_note = "Estimated."
+prev_year_tonnes = 16300.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 1006
+unit_value_usd_per_kg = 44.0925
+price_basis = "Price, average, dollars per pound [Bismuth]"
+price_original = "20"
+price_unit = "dollars per pound"
+price_conversion = "20 USD/lb / 0.45359237 kg/lb = 44.09 USD/kg"
+price_year = 2025
+price_estimated = true
+price_csv_line = 991
+price_usgs_note = "Estimated. -- Prices are based on data available through October 2025 of 99.99% purity metal at warehouse (Rotterdam) in minimum lots of 1 ton. Source: Fast markets."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: 99.99% metal, warehouse Rotterdam, min. 1-ton lots, based on data through October 2025 (Fastmarkets), not a U.S. price."
+
+[[row]]
+Z = 90
+symbol = "Th"
+commodity = "Thorium"
+mcs_chapter = "THORIUM"
+primary = true
+basis = "mine production, thorium"
+contained_element = true
+via_mineral = false
+production_missing_reason = "not_reported_by_source"
+production_missing_note = "USGS gives no world production figure (production is associated with monazite recovery; no quantity stated)."
+unit_value_usd_per_kg = 26.0
+price_basis = "Price, average unit value of imports, compounds, dollars per kilogram: France [Thorium]"
+price_original = "26"
+price_unit = "dollars per kilogram"
+price_conversion = "26 USD/kg (no conversion)"
+price_year = 2025
+price_estimated = true
+price_csv_line = 7725
+price_usgs_note = "Estimated. -- Calculated from U.S. Census Bureau import data."
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Price: average unit value of U.S. imports of thorium compounds from France, per kg of compound (gross); India value NA."
+other_prices = [
+  { basis = "Price, average unit value of imports, compounds, dollars per kilogram: India [Thorium]", csv_line = 7724, year = 2025, value_as_given = "NA", unit = "dollars per kilogram", missing = "not_available_in_source" },
+]
+
+[[group_row]]
+group = "Rare earths"
+members_Z = [39, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71]
+mcs_chapter = "RARE EARTHS"
+table = "World Mine Production and Reserves"
+basis = "mine production, rare-earth-oxide (REO) equivalent"
+csv_line = 6106
+original_value = "390,000"
+original_unit = "metric tons"
+tonnes_per_year = 390000.0
+year = 2025
+estimated = true
+prev_year_tonnes = 380000.0
+prev_year = 2024
+prev_year_estimated = true
+prev_csv_line = 6088
+edition = "MCS 2026"
+file = "MCS2026_Commodities_Data.csv"
+source = "usgs_mcs"
+note = "Group total; USGS: 'Data include lanthanides and yttrium but exclude most scandium.' Do not split among elements."
+group_prices = [
+  { basis = "Price, average, dollars per kilogram: Mischmetal, 65% cerium, 35% lanthanum [Rare Earths]", usd_per_kg = 5.62, conversion = "5.62 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 6056, usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets." },
+  { basis = "Price, average, dollars per kilogram: Neodymium-praseodymium (NdPr) oxide, 99% minimum [Rare Earths]", usd_per_kg = 69.0, conversion = "69 USD/kg (no conversion)", year = 2025, estimated = true, csv_line = 6059, usgs_note = "Estimated. -- Free on board. Source: Argus Media group, Argus Non-Ferrous Markets." },
+]
+

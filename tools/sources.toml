@@ -212,18 +212,36 @@ title = "USGS Mineral Commodity Summaries"
 url = "https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries"
 licence = "Public domain (U.S. Government work)"
 licence_url = "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
-citation = "U.S. Geological Survey, Mineral Commodity Summaries (year-stamped per value)."
+citation = "U.S. Geological Survey, 2026, Mineral commodity summaries 2026 (ver. 1.3, May 2026), doi:10.3133/mcs2026; data: Mineral Commodity Summaries 2026 Data Release, doi:10.5066/P1WKQ63T (file MCS2026_Commodities_Data.csv)."
 kind = "curated"
-notes = "Annual world production and unit values, year-stamped (tools/curated/production.toml)."
+notes = "World production and U.S. price or unit value per element for 2025 (USGS estimates), year-stamped, in tools/curated/production.toml; every number keeps its CSV line. Data release licence: CC0. Prices are per kg of the material named (often an oxide, ore or alloy), as USGS gives them."
 
 [eu_crm]
-title = "EU critical raw materials list (2023)"
-url = "https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en"
+title = "EU critical and strategic raw materials (Critical Raw Materials Act, 2024)"
+url = "http://data.europa.eu/eli/reg/2024/1252/oj"
 licence = "Facts; cite"
 licence_url = "https://commission.europa.eu/legal-notice_en"
-citation = "Regulation (EU) 2024/1252 of the European Parliament and of the Council (Critical Raw Materials Act), Annex II: strategic and critical raw materials (the 2023 list)."
+citation = "Regulation (EU) 2024/1252 of the European Parliament and of the Council of 11 April 2024 (Critical Raw Materials Act), OJ L 2024/1252, 3.5.2024, CELEX 32024R1252: Annex I Section 1 (strategic) and Annex II Section 1 (critical raw materials); group memberships from the Commission's Study on the Critical Raw Materials for the EU 2023, doi:10.2873/725585."
 kind = "curated"
-notes = "Raw materials mapped to elements in tools/curated/production.toml; mappings through a mineral (fluorspar, baryte, graphite, phosphate rock) are marked."
+notes = "Raw materials mapped to elements in tools/curated/critical_raw_materials.toml; mappings through a mineral (coking coal and graphite, fluorspar, baryte) are marked, and osmium (platinum-group metal, not assessed) is flagged doubtful."
+
+[cod]
+title = "Crystallography Open Database"
+url = "https://www.crystallography.net/cod/"
+licence = "CC0 1.0"
+licence_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+citation = "S. Gražulis et al., Crystallography Open Database – an open-access collection of crystal structures, J. Appl. Cryst. 42, 726–729 (2009), doi:10.1107/S0021889809016690; each structure is cited by its COD id and original reference."
+kind = "curated"
+notes = "One CIF per element, read into tools/curated/crystal.toml (space group, Pearson symbol, cell lengths and angles, temperature where stated). Entries from before 1947 are avoided because of the old kX unit."
+
+[lodders2025]
+title = "Solar System elemental abundances from the solar photosphere and CI-chondrites"
+url = "https://doi.org/10.1007/s11214-025-01146-w"
+licence = "CC BY 4.0"
+licence_url = "https://creativecommons.org/licenses/by/4.0/"
+citation = "K. Lodders, M. Bergemann and H. Palme, Solar System elemental abundances from the solar photosphere and CI-chondrites, Space Sci. Rev. 221, 23 (2025), doi:10.1007/s11214-025-01146-w."
+kind = "curated"
+notes = "Table 6 (atoms per 10^6 Si and log ε, present and proto-solar, with 1σ) and Table A13 of the Electronic Supplementary Material (proto-solar mass fractions), copied as printed into the [[solar]] table of tools/curated/abundance.toml. Successor to Lodders (2021), which is not open access. The Sm row of Table A13 is corrupted in the source and is left out; the Co mass fraction disagrees slightly with its own atom count and is flagged."
 
 [kobayashi2020]
 title = "The origin of elements from carbon to uranium"
@@ -323,3 +341,30 @@ licence_url = "https://arxiv.org/abs/2301.02553"
 citation = "O. R. Smits, P. Indelicato, W. Nazarewicz, M. Piibeleht and P. Schwerdtfeger, Phys. Rep. 1035, 1 (2023), doi:10.1016/j.physrep.2023.09.004, arXiv:2301.02553."
 kind = "reference"
 notes = "Added in M2. Predicted ground levels of Z = 109-118 (tools/curated/superheavy.toml); rows cite it by DOI under primary_literature."
+
+[icrp23]
+title = "ICRP Publication 23: Report of the Task Group on Reference Man (1975)"
+url = "https://doi.org/10.1016/S0074-2740(75)80022-5"
+licence = "© ICRP; numerical values cited as a scientific table (facts)"
+licence_url = "https://www.icrp.org/"
+citation = "International Commission on Radiological Protection, Report of the Task Group on Reference Man, ICRP Publication 23, Pergamon (1975), Chapter 2, Table 110 'Reference Man: total body content for some elements', pp. 327-328, doi:10.1016/S0074-2740(75)80022-5."
+kind = "curated"
+notes = "Added in M2. Element masses in a 70 kg reference adult (tools/curated/abundance.toml), read from the page scan hosted by BioNumbers (Milo et al., Nucleic Acids Res. 38, D750 (2010), doi:10.1093/nar/gkp889; BNID 110328). Only the numbers are used, not the scan."
+
+[kerr1982]
+title = "Photon and neutron fluence-to-kerma conversion factors for ICRP-1975 reference man using improved elemental compositions for bone and marrow of the skeleton (ORNL/TM-8318)"
+url = "https://www.osti.gov/biblio/7058905"
+licence = "U.S. Government report; distribution unlimited"
+licence_url = "https://www.osti.gov/servlets/purl/7058905"
+citation = "G. D. Kerr, Photon and neutron fluence-to-kerma conversion factors for ICRP-1975 reference man using improved elemental compositions for bone and marrow of the skeleton, ORNL/TM-8318, Oak Ridge National Laboratory (1982), Table 1, https://www.osti.gov/biblio/7058905."
+kind = "curated"
+notes = "Added in M2. Confirms the major-element masses of ICRP Reference Man and gives the corrected phosphorus value (580 g)."
+
+[iupac_discovery]
+title = "IUPAC/IUPAP reports on the discovery of elements 101-118"
+url = "https://iupac.org/what-we-do/periodic-table-of-elements/"
+licence = "Facts; cite"
+licence_url = "https://iupac.org/"
+citation = "Transfermium Working Group (1993) and IUPAC/IUPAP Joint Working Party reports on the priority of claims to the discovery of elements 101 and beyond, Pure Appl. Chem. (each row cites its report by DOI)."
+kind = "reference"
+notes = "Added in M2. Discovery years and the laboratories credited for Z >= 101 (tools/curated/history.toml)."

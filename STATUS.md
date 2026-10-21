@@ -34,7 +34,7 @@ This file is updated at the end of every working session (SPEC §17.5).
 | Pan/zoom | Done — pinch, trackpad, Ctrl/⌘ + scroll, double-tap, zoom buttons |
 | Mobile sheet shell | Done — bottom sheet on phones, modal on desktops; eleven swipeable panels (placeholders until M3/M4) |
 | Routing, settings, keyboard navigation | Done |
-| §13.3 tests for hover, layout, group 3, trends, mobile, routing pass | Done on Chromium, desktop and Android phone: 71 end-to-end tests pass. Firefox, Safari/WebKit and iPhone run in the new nightly job (not installable in this environment; first results after the merge) |
+| §13.3 tests for hover, layout, group 3, trends, mobile, routing pass | Done on Chromium, desktop and Android phone: 75 end-to-end tests pass. Firefox, Safari/WebKit and iPhone run in the new nightly job (not installable in this environment; first results after the merge) |
 | axe clean | Done — no critical or serious findings on the table (plain, every overlay kind, during a search), the settings dialog, and the sheet for Fe, Cs, U and Og |
 | Lighthouse budgets met | Done — mobile score 95–96 (budget ≥ 90), initial JavaScript 103 kB (≤ 300 kB), `index.json` 20 kB (≤ 150 kB), first table paint 1.23 s with phone throttling applied (< 1.5 s). Checked by a new CI job |
 | 30-second screen recording of the morph in the PR | Done (`docs/media/m1-morph.mp4`, animated preview `m1-morph.webp`) |

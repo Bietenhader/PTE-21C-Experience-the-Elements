@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 // The sheet shell and routing (SPEC §9.2, §9.4, §13.3).
 import { expect, test } from "@playwright/test";
-import { axeViolations, longPress, open, pinch, swipe, tile } from "./helpers";
+import { axeViolations, longPress, open, pinch, settled, swipe, tile } from "./helpers";
 
 test.describe("routing and the sheet", () => {
   test("click opens the sheet and the URL becomes #/Fe/<panel>", async ({ page }) => {
@@ -95,6 +95,7 @@ test.describe("mobile (SPEC §13.3)", () => {
     await tile(page, 26).tap();
     const sheet = page.getByTestId("sheet");
     await expect(sheet).toBeVisible();
+    await settled(page);
     const box = await sheet.boundingBox();
     const vp = page.viewportSize();
     expect(Math.round((box?.y ?? 0) + (box?.height ?? 0))).toBeGreaterThanOrEqual((vp?.height ?? 0) - 1);
@@ -104,6 +105,9 @@ test.describe("mobile (SPEC §13.3)", () => {
   test("swipe changes the panel", async ({ page, context, browserName }) => {
     test.skip(browserName !== "chromium", "touch events through the DevTools protocol");
     await open(page, "#/Fe/orbitals");
+    // The bottom sheet slides up when it opens; measure where the strip is once it has arrived.
+    await expect(page.getByTestId("sheet")).toBeVisible();
+    await settled(page);
     const strip = page.getByTestId("panel-strip");
     const box = await strip.boundingBox();
     if (!box) throw new Error("no strip");

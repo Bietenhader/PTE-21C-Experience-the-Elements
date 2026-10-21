@@ -1217,7 +1217,8 @@
           "type": "string",
           "enum": [
             "never_visible",
-            "no_free_photo"
+            "no_free_photo",
+            "source_unavailable_at_build"
           ]
         },
         "longestLived": {

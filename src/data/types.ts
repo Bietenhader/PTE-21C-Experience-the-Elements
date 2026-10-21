@@ -246,7 +246,7 @@ export interface ImagePlaceholder {
    * The sentence the card shows, values from IAEA.
    */
   text: string;
-  reason: "never_visible" | "no_free_photo";
+  reason: "never_visible" | "no_free_photo" | "source_unavailable_at_build";
   longestLived?: {
     A: number;
     halfLife: Quantity;

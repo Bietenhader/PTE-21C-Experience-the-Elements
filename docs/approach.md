@@ -45,7 +45,8 @@ Every rule below is also logged per element in `tools/build-report.md`.
 
 - **Ground configurations** come from NIST ASD for Z ≤ 108. NIST lists nothing for Z ≥ 109; there the
   configuration is PubChem's (from Los Alamos National Laboratory), flagged `predicted` with a note, and the
-  tile marks it †. Ground terms and IE₁ for Z ≥ 109 are `Missing{predicted_only}`.
+  tile marks it †. In M0 and M1 ground terms and IE₁ for Z ≥ 109 were `Missing{predicted_only}`; since M2
+  they are published predictions, flagged (see "M2: data" below).
 - **Abbreviated cores** in NIST strings (`[Cd]`, `[Hg]`) are expanded using the definitions printed on the
   NIST help page, which the fetcher downloads and parses rather than typing them in.
 - **Ground terms** keep NIST's coupling scheme: LS (`5D4`), jj (`(1/2,1/2)0` for lead) or J only
@@ -77,9 +78,10 @@ Every rule below is also logged per element in `tools/build-report.md`.
 - **Standard state.** PubChem's "Expected to be a Solid/Gas" becomes `unknown`.
 - **Block and group** follow from the Madelung filling order, which puts Lu and Lr in group 3 and La and Ac
   at the start of the f-block: the IUPAC-2021 default of SPEC §3.
-- **Flags** whose source tables do not exist yet (laser cooling, clocks, SI history, essential elements)
-  are omitted rather than defaulted to `false`; only `madelungAnomaly` is present in M0.
-- **Images** may be an empty list until the image pipeline lands in M2 (the schema allows 0–3).
+- **Flags** whose source tables did not exist yet (laser cooling, clocks, SI history, essential elements)
+  were omitted in M0 rather than defaulted to `false`; since M2 every flag is computed from its table.
+- **Images** could be an empty list until the image pipeline landed in M2; now every element has at least
+  a photo or a placeholder.
 
 ## App
 
@@ -199,6 +201,101 @@ Every rule below is also logged per element in `tools/build-report.md`.
 - **Cross-browser.** Pushes and pull requests run the end-to-end tests on Chromium (desktop and an Android
   phone); the nightly workflow adds Firefox, WebKit and an iPhone. Swipe, pinch and long-press tests drive
   real touch events through the DevTools protocol and therefore run on Chromium only.
+
+## M2: data
+
+Every rule here is also visible per element in `tools/build-report.md`, `tools/images-report.md` and the
+notes inside the data.
+
+### Spectra, levels and orbitals
+
+- **Caps (I4).** NIST ASD lines in the visible window 380–780 nm, the strongest 400 per species; the lowest
+  60 levels of the neutral atom. NIST is asked for air wavelengths where it gives them (200–2000 nm) and the
+  file says which medium each line is in; the laser-cooling lines are fetched separately in vacuum.
+- **Linewidth Γ** for a cooling line is NIST's Einstein coefficient A_ki divided by 2π — a named
+  approximation: it assumes the upper level decays only on that line, so where there are other channels the
+  true width is slightly larger. Every record says so.
+- **Orbital energies** are NIST SRD 141 (LDA and related functionals), converted from hartree with the
+  CODATA 2022 factor; one misaligned column in the samarium page is dropped and logged.
+- **Allen electronegativity** is kept in eV, as Allen defined it, and not rescaled to look like Pauling's.
+
+### Nuclei and metrology
+
+- **Nuclear moments come from the IAEA level table, level 0**, not from the ground-state CSV: the CSV
+  attaches excited-state moments to some ground states (it gives O-16, which has spin 0, a moment of
+  1.668 μ_N). A spin-0 nucleus never gets a magnetic moment and spin 0 or ½ never gets a quadrupole
+  moment, whatever a table says (Tb-154's level-0 row lists one; the note keeps it). A test checks this.
+- **Clocks and standard frequencies** come from the BIPM list (fetched, never typed); its expanded
+  uncertainties are divided by their coverage factor so every `unc` is a standard uncertainty. Rb-87's
+  ground hyperfine frequency is taken from the same list. Caesium's defining value and the thorium-229
+  nuclear transition are the only hand rows.
+
+### The heaviest elements (Z ≥ 109) — a proposal for Fin
+
+NIST lists nothing above hassium. SPEC §13.1 asks for a ground term for all 118 elements and IE₁ for at
+least 110, so `tools/curated/superheavy.toml` holds published calculations — each row with its paper's DOI,
+flagged `predicted`, and marked † on the tile, exactly like the predicted configurations. They are never
+shown as measured. If Fin prefers "only theoretical predictions exist" instead, deleting the file turns them
+back into Missing values; nothing else changes.
+
+### Abundances, crystals and origins
+
+- **Solar system.** SPEC names Lodders 2009 or Asplund 2021. We use their successor, **Lodders, Bergemann &
+  Palme 2025** (Space Sci. Rev. 221, 23; CC BY 4.0), which is newer and openly licensed; Lodders 2021, which
+  was tried first, is not open access. Stored: the proto-solar mass fraction (`abundance.solar`, as the spec
+  asks for mass fractions) and today's log ε (`abundance.solarLogEps`, the astronomers' scale, for the log
+  heatmap). Every printed column is kept in `abundance.toml`. Two errors in the source are handled openly:
+  the samarium mass-fraction row is corrupted (left out) and cobalt's mass fraction disagrees with its own
+  atom count by 1.3 % (kept, with a note).
+- **Human body.** SPEC names Emsley's book, which we cannot quote from; we use the standard primary
+  compilation instead, ICRP Publication 23 "Reference Man" (70 kg adult, 1975). Values printed as "<" are upper limits and become Missing with the limit in the note;
+  rubidium is left out because its printed row repeats strontium's. It is one reference body from the 1970s,
+  and the notes say so.
+- **Crust and sea water** are the Jefferson Lab estimates on PubChem's element pages, flagged `estimated`.
+- **Crystal structures** come from one Crystallography Open Database entry (CC0) per element, 91 elements.
+  Gases and liquids are given as low-temperature solids and flagged; a temperature is stored only where the
+  CIF states one. Pearson symbols use the IUCr letter S for A/B/C-centred cells (older books write C).
+  Phosphorus is black phosphorus because COD has no room-temperature white phosphorus. Five rows are flagged
+  doubtful with the reason (argon's 1958 cell looks about 1 % small; rubidium, technetium, mercury and
+  europium for sample or precision reasons). Entries from before 1947 are avoided because of the old kX unit.
+- **Cosmic origin** (`nucleosynthesis.toml`) is read off Fig. 39 of Kobayashi, Karakas & Lugaro 2020 at the
+  time the Sun formed, by classifying the figure's pixels, rounded to 5 % steps — an approximate transcription
+  of a model, flagged `estimated` everywhere and named as such on screen. Where the paper states the origin
+  instead (H from the Big Bang, Be and B from cosmic rays) the row says `paper_statement`. Helium, lithium,
+  technetium, promethium and lead cannot be read from the figure and are Missing with the reason. The
+  figure itself is copyright and is not used, only the numbers.
+- **Production and prices** are USGS Mineral Commodity Summaries 2026 (public domain, data release CC0). A
+  price is stored only with its year and only if that year is within five years (SPEC §10.4).
+- **Critical raw materials** are the lists of the EU Critical Raw Materials Act (Regulation 2024/1252). The
+  field keeps the spec's name `eu2023`; the lists are the ones the 2023 proposal introduced.
+
+### Words and pictures
+
+- **Our own short texts** (`tools/curated/prose/{Z}.md`, 60–120 words) are written from the facts in our
+  data and name the sources consulted; nothing is copied. The build checks the word count.
+- **History** (`history.toml`) gives discoverers, places, years and name origins in our own words. Map
+  coordinates of discovery places were left out: they would be numbers without a source.
+- **Photographs.** images-of-elements.com (Jürgen Kummer, CC BY 3.0) first, as SPEC §12 suggests; Wikimedia
+  Commons only where a file is pinned in `images.toml`, and only under an allow-listed licence (the most
+  permissive one a file offers is used). Photos are resized, never enlarged, to 800 and 320 px WebP and shown
+  unmodified otherwise; each carries title, author, licence link and source link. Elements without a photo
+  get a placeholder card that says why — never seen in a visible amount, no free photo, or (new) the chosen
+  photo could not be downloaded when the data was built. Wikimedia's servers answered this environment with
+  "too many requests" for hours, so four pinned photos (Tc, Pm, Th, Pa) are waiting for Fin's local run.
+- **Biology** (`biology.toml`) lists only what a textbook or review supports, for Fin to check.
+- **Polarizability** is not compiled yet: the reference table (Schwerdtfeger & Nagle 2019) could not be read
+  from here. The field stays out of v0.1 rather than being guessed.
+
+### App
+
+- **About page** is a dialog at `#/about` (Back closes it), like the settings: privacy statement, the coverage
+  table from `coverage.json`, every source with its licence and retrieval date, and the photo-credit summary.
+- **Six more maps** follow from the new tables: laser-cooled, clock species, SI history, essential for
+  plants, essential for humans, cosmic origin (approximate).
+- **Source status** in `sources.json` is now computed over every data file, not just `index.json`.
+- **mendeleev** (MIT) was used only as a transcription of published tables (Clementi–Raimondi Z_eff,
+  Allen's configuration energies); its data is credited to the original papers and the package is not a
+  dependency. **Pillow** (MIT-CMU) converts photographs during data builds only.
 
 ## Tooling
 

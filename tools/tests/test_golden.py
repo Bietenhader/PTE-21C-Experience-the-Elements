@@ -1,14 +1,16 @@
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
-"""Golden values (SPEC §13.1, §20) that M0's data can already answer."""
+"""Golden values (SPEC §11.3, §11.4, §13.1, §20)."""
 
 from __future__ import annotations
 
+import math
 import tomllib
+from decimal import Decimal
 
 import pytest
 
 import curated
-from common import CURATED_DIR
+from common import CURATED_DIR, DATA_DIR, is_missing, load_json
 
 MADELUNG_ANOMALIES = {
     "Cr", "Cu", "Nb", "Mo", "Ru", "Rh", "Pd", "Ag", "La", "Ce",
@@ -101,3 +103,79 @@ def test_iupac_names(by_symbol):
     assert by_symbol["Cs"]["name"] == "Caesium"
     assert by_symbol["Al"]["name"] == "Aluminium"
     assert by_symbol["S"]["name"] == "Sulfur"
+
+
+# --- M2: per-element files ---------------------------------------------------------------------
+
+HBAR = 6.62607015e-34 / (2 * math.pi)  # exact (SI)
+K_B = 1.380649e-23  # exact (SI)
+U_KG = 1.66053906892e-27  # CODATA 2022, as in src/physics/constants.ts
+
+
+def _detail(z: int) -> dict:
+    return load_json(DATA_DIR / "elements" / f"{z}.json")
+
+
+def _isotope(z: int, a: int) -> dict:
+    return next(i for i in load_json(DATA_DIR / "isotopes" / f"{z}.json")["isotopes"] if i["A"] == a)
+
+
+def test_rubidium_87_d2_cooling_limits_from_the_data():
+    """SPEC §11.3 golden test (Steck): T_D ≈ 145.6 μK, T_r ≈ 362 nK, v_r ≈ 5.88 mm/s within 0.5 %,
+    computed from the stored wavelength, linewidth and isotope mass."""
+    row = next(r for r in _detail(37)["amo"]["laserCooling"] if r["A"] == 87 and r["charge"] == 0)
+    lam = row["wavelength"]["value"] * 1e-9
+    assert row["wavelength"]["unit"] == "nm" and row["gamma"]["unit"] == "MHz"
+    gamma = 2 * math.pi * row["gamma"]["value"] * 1e6
+    mass = _isotope(37, 87)["mass"]["value"] * U_KG
+    k = 2 * math.pi / lam
+    assert HBAR * gamma / (2 * K_B) == pytest.approx(145.6e-6, rel=5e-3)
+    assert HBAR**2 * k**2 / (mass * K_B) == pytest.approx(362e-9, rel=5e-3)
+    assert HBAR * k / mass == pytest.approx(5.88e-3, rel=5e-3)
+
+
+def test_hydrogen_ground_hyperfine(by_symbol):
+    """SPEC §11.4: H-1 1 420 405 751.768(2) Hz, test tolerance 1 Hz."""
+    h = by_symbol["H"]["hyperfineHeadline"]
+    assert h["isotope"] == 1
+    assert abs(h["splitting"]["value"] - 1_420_405_751.768) <= 1
+
+
+def test_rubidium_87_hyperfine_is_the_bipm_value():
+    """SPEC §11.4: Rb-87 agrees with the BIPM list (metrology.json) to 1 mHz."""
+    row = next(h for h in _detail(37)["amo"]["hyperfine"] if h["A"] == 87)
+    clock = next(
+        c
+        for c in load_json(DATA_DIR / "metrology.json")["clocks"]
+        if c["species"] == "87Rb" and c["label"] == "6.835 GHz"
+    )
+    assert abs(Decimal(row["splitting"]["text"]) - Decimal(clock["frequency"]["text"])) <= Decimal("0.001")
+    assert Decimal(row["splitting"]["text"]) == pytest.approx(Decimal("6834682610.9043126"), abs=Decimal("0.001"))
+
+
+def test_spinless_nuclei_have_no_moments():
+    """A nucleus with I = 0 has no magnetic dipole and no quadrupole moment; I = 1/2 has no quadrupole."""
+    for path in (DATA_DIR / "isotopes").glob("*.json"):
+        for iso in load_json(path)["isotopes"]:
+            jp = (iso.get("jp") or "").strip("()")
+            if jp[:1] == "0" and not jp.startswith("0."):
+                assert is_missing(iso["mu"]), (path.name, iso["A"])
+                assert is_missing(iso["Q"]), (path.name, iso["A"])
+            if jp.startswith("1/2"):
+                assert is_missing(iso["Q"]), (path.name, iso["A"])
+
+
+def test_oxygen_16_has_no_moment_but_oxygen_17_does():
+    """The IAEA ground-state CSV attaches an excited state's moment to O-16; the level table does not."""
+    assert is_missing(_isotope(8, 16)["mu"])
+    assert _isotope(8, 17)["mu"]["value"] == pytest.approx(-1.8935, abs=1e-3)
+
+
+def test_every_element_file_names_its_cosmic_origin_and_crystal(by_symbol):
+    for z in range(1, 119):
+        d = _detail(z)
+        assert "origin" in d["nucleus"] and "crystal" in d["physical"]
+    fe = _detail(26)
+    assert fe["physical"]["crystal"]["pearson"] == "cI2"
+    assert sum(fe["nucleus"]["origin"]["fractions"].values()) == pytest.approx(1)
+    assert fe["nucleus"]["origin"]["flag"] == "estimated"

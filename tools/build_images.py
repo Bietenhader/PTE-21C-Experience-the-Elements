@@ -74,6 +74,9 @@ PLACEHOLDER_TEXT = {
     "never_visible": "No photograph exists: {name} has never been produced in a visible quantity.",
     "no_free_photo": "No openly licensed photograph was found: {name} has been made in visible amounts, "
     "but every photograph we know of is under a restrictive licence.",
+    "source_unavailable_at_build": "Photograph not yet downloaded: an openly licensed photograph of {name} has "
+    "been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears "
+    "after the next data update.",
 }
 
 
@@ -278,6 +281,7 @@ def build_images(names: dict[int, str], iaea: dict[int, list[dict]] | None, repo
             shutil.rmtree(tmp)
         tmp.mkdir(parents=True)
         k = 0
+        uncached = 0
         for pin in row.get("pin", []):
             try:
                 rec = (
@@ -301,6 +305,7 @@ def build_images(names: dict[int, str], iaea: dict[int, list[dict]] | None, repo
                 width, height = old["width"], old["height"]
             else:
                 problems.append(f"{pin}: not cached and no earlier conversion — run tools/fetch_images.py")
+                uncached += 1
                 k -= 1
                 continue
             kind = row.get("kind", {}).get(pin, "sample")
@@ -328,6 +333,9 @@ def build_images(names: dict[int, str], iaea: dict[int, list[dict]] | None, repo
         )
         refs: list[dict] = []
         kind = row.get("placeholder")
+        if not kind and not built and uncached:
+            kind = "source_unavailable_at_build"
+            report.unavailable("commons", f"Z={z}: {uncached} chosen photograph(s) not downloaded")
         if kind or not built:
             refs.append(placeholder(z, kind or "no_free_photo", name, iaea.get(z) if iaea else None))
             if not kind:

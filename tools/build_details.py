@@ -138,18 +138,27 @@ def isotope_record(rec: dict) -> dict:
         else missing("not_measured", "No binding energy in the evaluation.")
     )
     spin = rec["I"]
-    if rec["mu"] is not None:
-        out["mu"] = quantity(rec["mu"], "μ_N", src, unc=rec["muUnc"] or None)
+    if rec.get("momentsUnavailable") and spin != 0:
+        note = "The IAEA level table for this nuclide was not in the download cache when the data was built."
+        out["mu"] = missing("source_unavailable_at_build", note)
+        out["Q"] = missing("source_unavailable_at_build", note)
     elif spin == 0:
-        out["mu"] = missing("not_applicable", "I = 0: a spinless nucleus has no magnetic dipole moment.")
+        note = "I = 0: a spinless nucleus has no magnetic dipole moment."
+        if rec["mu"] is not None:  # e.g. Tb-154: the value belongs to another state
+            note += f" (The IAEA table lists μ = {rec['mu']} μ_N for this level; it cannot belong to a spin-0 state.)"
+        out["mu"] = missing("not_applicable", note)
+    elif rec["mu"] is not None:
+        out["mu"] = quantity(rec["mu"], "μ_N", src, unc=rec["muUnc"] or None)
     else:
         out["mu"] = missing("not_measured", "No measured magnetic dipole moment.")
-    if rec["Q"] is not None:
-        out["Q"] = quantity(rec["Q"], "b", src, unc=rec["QUnc"] or None)
+    if "Q" in out:
+        pass
     elif spin is not None and spin < 1:
         out["Q"] = missing(
             "not_applicable", f"I = {'0' if spin == 0 else '1/2'}: no electric quadrupole moment (needs I ≥ 1)."
         )
+    elif rec["Q"] is not None:
+        out["Q"] = quantity(rec["Q"], "b", src, unc=rec["QUnc"] or None)
     else:
         out["Q"] = missing("not_measured", "No measured electric quadrupole moment.")
     if rec["radius"] is not None:
@@ -791,8 +800,13 @@ def build_elements(index: dict, report: Report) -> int:
     for r in curated.load("zeff.toml"):
         zeff.setdefault(r["Z"], []).append({"n": r["n"], "l": r["l"], "value": r["zeff"], "source": r["source"]})
     allen = {r["Z"]: r for r in curated.load("electronegativity_allen.toml")}
+    # hyperfine.toml rows plus the BIPM ground-state hyperfine frequencies (rubidium-87), as in index.json
+    import build
+    import fetch_bipm
+
+    bipm = safe("bipm_frequencies", fetch_bipm.parse) or []
     hfs: dict[int, list] = {}
-    for r in curated.load("hyperfine.toml"):
+    for r in build.hyperfine_rows(bipm, symbols, report).values():
         hfs.setdefault(r["Z"], []).append(r)
     cooling: dict[int, list] = {}
     for r in curated.load("lasercooling.toml"):

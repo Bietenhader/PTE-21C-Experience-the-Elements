@@ -30,4 +30,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Build, test and lint tools, used only on developer machines and in CI: Vite, Vitest, TypeScript, ESLint and
 its plugins, typescript-eslint, json-schema-to-typescript and Playwright (MIT or Apache-2.0); axe-core and
 @axe-core/playwright for accessibility tests, and lightningcss inside Vite (MPL-2.0, used unmodified).
-The data pipeline uses jsonschema, pytest and ruff (MIT). Their full licence texts ship inside each package.
+The data pipeline uses jsonschema, pytest and ruff (MIT) and Pillow (MIT-CMU, a permissive licence) to convert
+photographs. Their full licence texts ship inside each package. Two published tables (Clementi–Raimondi
+effective nuclear charges and Allen's configuration energies) were read from their transcription in the
+mendeleev package (MIT); the numbers are credited to the original papers.

@@ -5,6 +5,31 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added — milestone M2 (data complete for v0.1)
+
+- New fetchers: NIST ASD energy levels and spectral lines, NIST SRD 141 orbital energies, the BIPM list of
+  standard frequencies, images-of-elements.com and Wikimedia Commons; IAEA nuclear moments from each
+  nuclide's level table.
+- Curated tables, one source per row: hyperfine constants, laser cooling, clocks and the timeline of the
+  second, the elements in the SI, Clementi–Raimondi Z_eff, Allen electronegativities, predictions for
+  Z ≥ 109, biology, abundances (crust, sea water, solar system, human body), crystal structures (COD),
+  cosmic origin (Kobayashi 2020, approximate), production and prices (USGS 2026), EU critical raw
+  materials, discovery history, and a short text in our own words for every element.
+- Per-element data files loaded on demand (`elements/`, `isotopes/`, `spectra/`, `levels/`,
+  `metrology.json`), each with a JSON Schema.
+- Photographs for 90 elements as vendored WebP with full credits, honest placeholders for the rest, and
+  `tools/images-report.md` explaining every choice; `CREDITS.md` and `PROVENANCE.md` regenerated.
+- The About page (`#/about`): privacy statement, coverage table, every source with licence and retrieval
+  date. The element sheet shows the short text; six new categorical maps; search for "laser-cooled",
+  "clock" and "essential".
+- Golden tests for H-1 and Rb-87 hyperfine values and the Rb-87 D2 cooling limits; a check that no spin-0
+  nucleus carries a moment; M2 coverage thresholds switched on.
+
+### Changed
+
+- Ionization energies for Z ≥ 109 are published predictions, marked † (previously "predicted only").
+- `sources.json` marks a source as used when any data file cites it.
+
 ### Added — milestone M1 (table interaction)
 
 - Four layouts with a FLIP morph (600 ms, 8 ms stagger by Z, labels cross-fading; instant with reduced
@@ -23,7 +48,7 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 - A prerendered table in `index.html`, hydrated by the app; Lighthouse budgets in CI; a nightly end-to-end
   run on Chromium, Firefox and WebKit.
 
-### Changed
+### Changed (M1)
 
 - The long-form caption describes the La/Ac variant accurately.
 - Tile names end "Press Enter for details." now that Enter opens the sheet.

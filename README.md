@@ -9,10 +9,10 @@ A quantum-aware, photographic periodic table for the web. Every element gets its
 its nucleus and its place in the physics of measurement — and **every number on screen has a source**. Where
 nothing has been measured, the table says so and says why, instead of showing a plausible guess.
 
-> **Status: milestone M1 (table interaction).** All 118 elements from real, sourced data, in four layouts
-> that morph into one another, with trend arrows, heatmaps and maps, search, hover cards, pinch-zoom and the
-> frame of the element sheet. Photographs, the eleven panels' contents and the remaining data arrive in
-> milestones M2–M4. See [STATUS.md](STATUS.md).
+> **Status: milestone M2 (data complete for v0.1).** All 118 elements from real, sourced data, in four
+> layouts that morph into one another, with trend arrows, heatmaps and maps, search, hover cards, pinch-zoom,
+> credited photographs, a short text per element and an About page showing how complete the data is. The
+> eleven panels of the element sheet get their contents in milestones M3–M4. See [STATUS.md](STATUS.md).
 
 ![The four layouts morphing into one another](docs/media/m1-morph.webp)
 
@@ -64,9 +64,11 @@ and `npm run lighthouse` after a build for the performance budgets.
 
 ## Where the data comes from
 
-A Python pipeline in [`tools/`](tools/) downloads the sources (PubChem, NIST ASD and AWIC, IAEA LiveChart,
-IUPAC CIAAW, CODATA), applies documented rules, validates the result against [`schema/`](schema/) and writes
-[`public/data/`](public/data/). Run it with **`tools/pipeline.command`** (needs Python 3.11+ and internet).
+A Python pipeline in [`tools/`](tools/) downloads the sources (PubChem; NIST ASD ionization energies, levels
+and lines; NIST AWIC and SRD 141; IAEA LiveChart; IUPAC CIAAW; CODATA; the BIPM list of standard
+frequencies; images-of-elements.com and Wikimedia Commons), adds the hand-compiled tables in
+[`tools/curated/`](tools/curated/) — every row with its source — applies documented rules, validates the
+result against [`schema/`](schema/) and writes [`public/data/`](public/data/) and [`public/img/`](public/img/). Run it with **`tools/pipeline.command`** (needs Python 3.11+ and internet).
 [PROVENANCE.md](PROVENANCE.md) lists every source with its licence and retrieval date;
 [tools/build-report.md](tools/build-report.md) lists every disagreement between sources. The design
 decisions are in [docs/approach.md](docs/approach.md); [SPEC.md](SPEC.md) is the full specification.

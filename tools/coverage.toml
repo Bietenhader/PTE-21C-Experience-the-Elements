@@ -4,7 +4,7 @@
 # elements than `min`. A threshold applies once `current_milestone` reaches its `milestone`; raise
 # current_milestone when a milestone starts, so the SPEC targets switch on with the data they need.
 
-current_milestone = 0
+current_milestone = 2
 
 [[threshold]]
 field = "configuration"
@@ -27,7 +27,7 @@ milestone = 0
 field = "groundTerm"
 min = 118
 milestone = 2
-note = "SPEC §13.1 target. NIST stops at Z = 108; needs a cited source of predicted ground levels for Z ≥ 109 (see STATUS.md)"
+note = "SPEC §13.1 target. NIST stops at Z = 108; Z ≥ 109 are published predictions, flagged (tools/curated/superheavy.toml)"
 
 [[threshold]]
 field = "ie1"
@@ -38,7 +38,7 @@ milestone = 0
 field = "ie1"
 min = 110
 milestone = 2
-note = "SPEC §13.1 target. NIST stops at Z = 108 (see STATUS.md)"
+note = "SPEC §13.1 target. NIST stops at Z = 108; Z ≥ 109 are published predictions, flagged (tools/curated/superheavy.toml)"
 
 [[threshold]]
 field = "atomicWeightOrMassNumber"
@@ -72,3 +72,4 @@ milestone = 2
 field = "visibleLines"
 min = 90
 milestone = 2
+note = "elements with at least one visible (380–780 nm) line of the neutral atom in NIST ASD"

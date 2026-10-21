@@ -1,3 +1,5 @@
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
-# Runtime dependencies of the pipeline (all MIT-licensed).
+# Runtime dependencies of the pipeline: jsonschema (MIT); Pillow (MIT-CMU / HPND, a permissive
+# licence), used only to convert photographs to WebP when they are rebuilt.
 jsonschema==4.23.0
+pillow==12.3.0

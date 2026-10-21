@@ -6,8 +6,16 @@ between sources and every rule the build applied. Read it after each pipeline ru
 
 ## Rules applied
 
+- Z=9: discovery 1670 (PubChem) → 1771 (in hydrofluoric acid; the element was isolated in 1886) (tools/curated/history.toml).
+- Z=12: discovery 1808 (PubChem) → 1755 (recognized as an element; metal first obtained 1808) (tools/curated/history.toml).
 - Z=13: name 'Aluminum' → 'Aluminium' (iupac_redbook_2005).
+- Z=14: discovery 1854 (PubChem) → 1824 (tools/curated/history.toml).
+- Z=44: discovery 1827 (PubChem) → 1844 (tools/curated/history.toml).
 - Z=55: name 'Cesium' → 'Caesium' (iupac_redbook_2005).
+- Z=102: discovery 1957 (PubChem) → 1966 (Dubna papers submitted 1965) (tools/curated/history.toml).
+- Z=104: discovery 1964 (PubChem) → 1969 (Dubna first claimed it in 1964) (tools/curated/history.toml).
+- Z=105: discovery 1967 (PubChem) → 1970 (Dubna claims from 1967) (tools/curated/history.toml).
+- Z=107: discovery 1976 (PubChem) → 1981 (a Dubna claim dates from 1976) (tools/curated/history.toml).
 - Z=109: category 'Transition metal' (PubChem) → unknown (SPEC §7.3, Z ≥ 109).
 - Z=110: category 'Transition metal' (PubChem) → unknown (SPEC §7.3, Z ≥ 109).
 - Z=110: standard state 'Expected to be a Solid' (PubChem) → unknown.
@@ -36,6 +44,23 @@ between sources and every rule the build applied. Read it after each pipeline ru
 ## Coverage notes
 
 - Z=113: no oxidation states in PubChem.
+
+## Sources unavailable at build
+
+- **commons** — Z=43: 1 chosen photograph(s) not downloaded
+- **commons** — Z=61: 1 chosen photograph(s) not downloaded
+- **commons** — Z=90: 2 chosen photograph(s) not downloaded
+- **commons** — Z=91: 1 chosen photograph(s) not downloaded
+
+## Images
+
+- Z=43: File:Technetium-sample-cropped.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+- Z=61: File:Promethium Metal Buttons.png: not cached and no earlier conversion — run tools/fetch_images.py
+- Z=88: File:US radium standard 1927.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+- Z=90: File:Thorium bead 1.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+- Z=90: File:Thorium sample 0.1g.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+- Z=91: File:Protactinium-233.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+- Z=96: File:Curium hydroxide Nobel Lectures in Chemistry.png: not cached and no earlier conversion — run tools/fetch_images.py
 
 ## NIST AWIC (IUPAC 2013) vs CIAAW 2024 standard atomic weights
 
@@ -74,3 +99,17 @@ between sources and every rule the build applied. Read it after each pipeline ru
 - Sg: interpolated — NIST: semi-empirical value (interpolation or extrapolation)
 - Bh: interpolated — NIST: semi-empirical value (interpolation or extrapolation)
 - Hs: interpolated — NIST: semi-empirical value (interpolation or extrapolation)
+- Mt: predicted — Theoretical prediction 10
+- Ds: predicted — Theoretical prediction 11
+- Rg: predicted — Theoretical prediction 10
+- Cn: predicted — Theoretical prediction 12
+- Nh: predicted — Theoretical prediction 7
+- Fl: predicted — Theoretical prediction 8
+- Mc: predicted — Theoretical prediction 5
+- Lv: predicted — Theoretical prediction 6
+- Ts: predicted — Theoretical prediction 7
+- Og: predicted — Theoretical prediction 8
+## NIST SRD 141
+
+- Sm: column(s) ScRLDA out of step with the orbitals; not used
+

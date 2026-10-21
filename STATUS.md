@@ -1,82 +1,105 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M1 — Table interaction · **complete** (merged 2026-10-21; the site is live)
+**Current milestone:** M2 — Data complete for v0.1 · **ready for review** (pull request open)
 **Last updated:** 2026-10-21
-**Next:** M2 (data complete for v0.1), when Fin gives the go-ahead.
+**Next:** M3 (the panels' physics), after Fin's review of M2.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
-## After the merge (2026-10-21)
+## For Fin: what to look at (M2 review)
 
-Checked on the live site, desktop and phone: all 118 tiles, the zoom tip, a layout switch and an element
-sheet work; no request goes to any other site; no errors. The nightly all-browser run starts tonight; its
-results appear under *Actions → Nightly browsers*.
+M2 is mostly invisible on the table itself: it fills the data behind every element, which the panels draw in
+M3 and M4. What you can see now:
 
-## For Fin: what to look at (M1 review, done)
+1. **Photographs.** Hover or click any element: 90 elements have a photograph, each credited where it is shown
+   (title, author, licence, link to its page). The others show a card that says honestly why there is no
+   photo.
+2. **The About page.** The new *About* button (top right) shows the privacy statement, how complete each kind
+   of data is, and every source with its licence and the date it was downloaded.
+3. **A short text for every element**, in our own words, at the top of each element's sheet.
+4. **Six new colour maps** in the *Trend* menu: laser-cooled, clocks, the elements in the SI, essential for
+   plants, essential for humans, and cosmic origin.
 
-1. **The 30-second recording** of the layouts morphing, at the top of the pull request (also
-   `docs/media/m1-morph.mp4`), and the screenshots below it.
-2. **Merge when you are happy** (green "Merge pull request" button on the pull request page). The live site,
-   https://bietenhader.github.io/PTE-21C-Experience-the-Elements/, updates by itself about two minutes later,
-   and you can try everything there — on your computer and on your phone. Anything you do not like after
-   merging, tell me and I fix it; merging does not lock anything in.
-3. **Things worth trying on the live site:** switch the four layouts; choose a trend (try *First ionization
-   energy* as arrows, then as a heatmap); type `ionization > 1000` in the search box; hover a tile, then click
-   it; on the phone, pinch the table, press and hold a tile, tap a tile and swipe between the panels.
-4. **One question for you** (below, "Open question"). The default is in place, so nothing waits on it.
+**Two files for you to read once** (this is part of M2's acceptance):
 
-## M1 acceptance criteria (SPEC §18)
+- **`tools/curated/biology.toml`** — which elements plants and humans need, with sources. You are the plant
+  scientist: please check the plant side especially (essential vs beneficial, and the one-line roles).
+  Comments on the pull request, or "looks fine", are both welcome.
+- **`tools/images-report.md`** — which photograph was chosen for each element and why. (The spec calls it
+  `tools/raw/images-report.md`; that folder is not uploaded to GitHub, so the committed copy lives one folder
+  up. Both are the same file.)
+
+## M2 acceptance criteria (SPEC §18)
 
 | Criterion | State |
 |---|---|
-| Layout morphing across all four layouts | Done — FLIP morph, 600 ms, 8 ms stagger by Z, labels cross-fade; instant with reduced motion |
-| Group-3 toggle | Done — moves exactly La, Lu, Ac, Lr in the standard form; in the long form La↔Lu and Ac↔Lr change places between group 3 and the block (see the open question) |
-| Trends: all arrows, ≥ 10 heatmaps, ≥ 6 maps | Done — 11 arrow trends, 12 heatmaps (each also as a chart and a table), 8 maps |
-| Search | Done — names, symbols, Z, groups of elements and comparisons such as `ionization > 1000` |
-| Hover card (with placeholders) | Done — on hover, keyboard focus and long-press; an honest photo placeholder until M2 |
-| Pan/zoom | Done — pinch, trackpad, Ctrl/⌘ + scroll, double-tap, zoom buttons |
-| Mobile sheet shell | Done — bottom sheet on phones, modal on desktops; eleven swipeable panels (placeholders until M3/M4) |
-| Routing, settings, keyboard navigation | Done |
-| §13.3 tests for hover, layout, group 3, trends, mobile, routing pass | Done on Chromium, desktop and Android phone: 75 end-to-end tests pass. Firefox, Safari/WebKit and iPhone run in the new nightly job (not installable in this environment; first results after the merge) |
-| axe clean | Done — no critical or serious findings on the table (plain, every overlay kind, during a search), the settings dialog, and the sheet for Fe, Cs, U and Og |
-| Lighthouse budgets met | Done — mobile score 95–96 (budget ≥ 90), initial JavaScript 103 kB (≤ 300 kB), `index.json` 20 kB (≤ 150 kB), first table paint 1.23 s with phone throttling applied (< 1.5 s). Checked by a new CI job |
-| 30-second screen recording of the morph in the PR | Done (`docs/media/m1-morph.mp4`, animated preview `m1-morph.webp`) |
+| All fetchers | Done — new: NIST energy levels, NIST spectral lines, NIST SRD 141 orbital energies, BIPM standard frequencies, images-of-elements.com and Wikimedia Commons; IAEA now also reads each nuclide's level table (for nuclear moments) |
+| All curated tables populated to the coverage targets | Done — 18 curated tables plus 118 short texts; every SPEC §13.1 threshold passes (configuration, term and IE₁ 118; atomic weight or mass number 118; image or placeholder 118; isotopes 118; visible lines 98 of the required 90) |
+| Images fetched, curated and credited | Done for 90 elements (144 photos); 4 chosen Commons photos are waiting for a download (see "Blocked") |
+| PROVENANCE.md and CREDITS.md generated | Done (`python tools/report.py`; CI checks they are current) |
+| Coverage report in the About page | Done (`#/about`) |
+| §13.1 passes, including the licence audit | Done — 110 pipeline tests pass; licence audit clean |
+| Golden values pass | Done — Fe configuration and term, Cs IE₁, U-238, Madelung set, H-1 and Cs-133 hyperfine, Rb-87 hyperfine = BIPM to 1 mHz, Rb-87 D2 Doppler/recoil limits within 0.5 % |
+| Fin has reviewed the image report and biology.toml once | **Waiting for you** |
 
-Also: 151 unit tests and 84 pipeline tests pass; lint, type checks and the licence audit are clean.
-
-## Fin's feedback on the PR (2026-10-21)
-
-- "Infos appear when zooming in — makes it explorative; maybe a small hint." Added: a one-line tip next to the
-  zoom buttons ("Tip: zoom in to see more of every element…", worded for a phone or a computer). It goes away
-  by itself once you have zoomed, or with its ×, and stays away on later visits.
+Also: 158 unit tests and 87 end-to-end tests (Chromium, desktop and phone) pass; the Lighthouse budgets hold
+(mobile score 95, first table paint 1.18 s); lint, type checks and the
+licence check of the code dependencies are clean.
 
 ## What changed this session
 
-- **Data for the trends:** `index.json` gained electron affinity, covalent and van der Waals radii, melting
-  and boiling points, density, year of discovery (PubChem), number of stable isotopes and longest half-life
-  (IAEA) — each with its source or a reasoned *Missing*. `trends.json` holds the arrow trends (causes and
-  exceptions in our own words), the heatmaps and the maps; the pipeline checks the arrow claims the data
-  can test (e.g. the ionization-energy dips at B, O, Al, S).
-- **The interactive table:** layouts and morph, group 3, zoom, trends, search, hover card, the sheet frame
-  with eleven placeholder panels, settings, links for every view, keyboard navigation and shortcuts.
-- **Speed:** the table is now drawn into the page at build time, so phones see it before any script has run;
-  the app then takes it over without redrawing it.
-- **Checks:** new unit and end-to-end tests, the Lighthouse budget job, and a nightly run on all browsers.
-- **Docs:** `docs/approach.md` (every M1 decision), `design.md`, `layouts.md`, README, CHANGELOG.
+- **Per-element data files** (`public/data/elements/`, `isotopes/`, `spectra/`, `levels/`, `metrology.json`),
+  loaded only when an element is opened: isotopes with half-lives, decays, masses and nuclear moments; visible
+  spectral lines and energy levels; ionization energies of every stage; effective nuclear charges and orbital
+  energies; hyperfine constants; clocks and standard frequencies; laser cooling; the elements' roles in the SI;
+  abundances (crust, sea water, Sun, human body); crystal structures; world production and prices; EU critical
+  raw materials; biology; discovery history; our own short texts.
+- **The app:** photographs with credits, the About page, the short texts, six maps, search for "laser-cooled",
+  "clock" and "essential".
+- **Docs:** every M2 decision is in `docs/approach.md` (section "M2: data").
 
-## Open question for Fin
+## Questions for Fin — defaults in place, nothing waits on them
 
-**Long form with La and Ac in group 3.** The spec says the long form keeps its inline block 14 cells wide
-with the group-3 column to its right, and that the toggle swaps La↔Lu (and Ac↔Lr) "between the group-3
-column and the block" while Ce–Yb shift one column. That is what is built — but it means that with La/Ac in
-group 3, lanthanum stands to the *right* of lutetium, out of atomic-number order. Many printed 32-column
-tables instead move the whole group-3 column (Sc, Y, La, Ac) to the *left* of the block, which keeps the order
-but means the toggle moves Sc and Y rather than La and Lu. **Default:** keep the spec's version (the caption
-now describes it truthfully). Say the word if you prefer the other; it is a small change to
-`tools/build_layouts.py` and its tests.
+1. **Elements 109–118.** NIST lists nothing above element 108, but the spec wants a ground term for all 118
+   and IE₁ for at least 110. I added published calculations (each with its paper), marked † and called
+   "predicted" everywhere — never shown as measured. **Default: keep them.** If you prefer "only
+   theoretical predictions exist", one file is deleted and they disappear.
+2. **Solar abundances.** The spec names Lodders 2009 or Asplund 2021; I used the newer, openly licensed
+   successor, Lodders, Bergemann & Palme 2025. **Default: keep it.**
+3. **Phosphorus's crystal structure** is black phosphorus (the stable form), because the database has no
+   room-temperature entry for white phosphorus, the usual reference form. **Default: keep it**, with a note.
+
+## Blocked (needs your computer once)
+
+- **Four photographs from Wikimedia Commons** — technetium, promethium, thorium (two) and protactinium —
+  were chosen and checked, but Wikimedia's servers answered this cloud environment with "too many requests"
+  for hours (and two historical pictures for radium and curium likewise). As CLAUDE.md asks, I did not work
+  around it: these elements show a card "photograph not yet downloaded". **To fix:** double-click
+  `tools/pipeline.command` on your Mac (it downloads what is missing and rebuilds), then commit the changes
+  with GitHub Desktop. Nothing else depends on it.
+
+## Not yet compiled (honest gaps, not errors)
+
+- **Hyperfine splittings:** 18 elements have the headline value on the tile; 42 more have hyperfine structure
+  that is not yet in our table (the tile says *hfs n/m*, as agreed). More rows come with the AMO panel in M3.
+- **Polarizability** is left out of v0.1 for now: the reference table (Schwerdtfeger & Nagle 2019, Mol. Phys.)
+  could not be read from here. If you can download it through your university, I can transcribe it.
+- **Electron affinity** exists for 57 elements and **Pauling electronegativity** for 95; the rest are shown as
+  not measured, as the sources say.
+
+## Notes (things that differ from what you might expect)
+
+- **Cosmic origin is an approximation**, read off a figure of a model (Kobayashi et al. 2020) in 5 % steps;
+  the map and the data say so. Helium, lithium, technetium, promethium and lead are left out because the figure
+  cannot be read for them.
+- **Argon's crystal cell** in the open database looks about 1 % too small; it is flagged "doubtful" with the
+  reason rather than silently corrected.
+- **Rubidium's D2 line (780.03 nm in air)** sits just outside the 380–780 nm "visible" window of the spectrum
+  files; it is in the laser-cooling data, where it belongs.
+- **Helium's melting point** now carries a note: it needs pressure (helium does not freeze at normal pressure).
 
 ## FIN items — defaults in use (SPEC §19)
 
@@ -84,41 +107,17 @@ now describes it truthfully). Say the word if you prefer the other; it is a smal
 |---|---|---|
 | F1 Attribution name | "Bietenhader (Fin)" (README, footer, package) | Confirm or change before M5 |
 | F2 GitHub Pages | Source "GitHub Actions" | Done (2026-10-20) |
-| F3 Review `biology.toml` and the image report | — | Later: M2 (images) and M4 (biology) |
+| F3 Review `biology.toml` and the image report | — | **Now (M2)**; biology again at M4 |
 | F4 Design review | — | End of M3. Comments on the screenshots are welcome any time |
 | F5 Subtitle | "A fresh perspective on the Periodic Table of the Elements" | Confirm or change |
 
-## Decisions made — Fin, 2026-10-20: "use the defaults"
+## Earlier decisions (still in force)
 
-1. **Atomic weights stay with NIST AWIC**, as the spec says; the 22 values IUPAC has revised since keep being
-   listed in `tools/build-report.md`.
-2. **Elements 109–118 keep today's honest handling** (predicted configuration marked †, `Missing` for IE₁ and
-   the ground term). At M2 I bring a concrete proposal for the SPEC §13.1 targets that NIST alone cannot meet.
-3. **The spec's wording stays:** *hfs n/m* also covers "not yet in our curated table" until M2.
-
-## Notes (things that differ from what you might expect)
-
-4. **A slip from M0, fixed:** M0 used IAEA data (mass numbers, nuclear spins) but the sources list still marked
-   IAEA "not yet used". Now that numbers on screen cite it, it is marked as used.
-5. **Arrows point the way a property grows.** For ionization energy the down-a-group arrow therefore points
-   *up*, labelled "decreases down a group" as in the spec's table; the legend says so.
-6. **"laser-cooled" and "clock" in the search** answer "no data yet" — that data arrives with the AMO tables
-   in M2. The search says so rather than finding nothing silently.
-7. **Shortcuts can be switched off.** `/`, `L` and `T` work as the spec says; accessibility rules (WCAG 2.1.4)
-   require that single-key shortcuts can be turned off, so Settings has a switch.
-8. **Helium's melting point shows 0.95 K** — PubChem's value, which needs pressure (helium does not freeze at
-   normal pressure). PubChem gives no note; the curated physical data in M2 will add one.
-9. **Elements without a value are hatched** on every heatmap and say why (e.g. *n/m*, *pred. only*), never 0 or
-   a blank.
-10. **On a phone the standard table is a little wider than the screen** at the smallest tile size (24 px, the
-    accessibility minimum); swipe sideways or pinch.
+- Atomic weights stay with NIST AWIC; the values IUPAC has revised since are listed in `tools/build-report.md`.
+- *hfs n/m* also covers "not yet in our curated table".
+- The long form keeps the spec's La/Ac arrangement (open question from M1, default kept).
 
 ## Known issues and housekeeping
 
-- Firefox, Safari/WebKit and iPhone have not been tested yet — this environment can only run Chromium. The
-  nightly job covers them from the first night after the merge; any failure there becomes my first task.
-- Swipe, pinch and long-press are tested with real touch events on Chromium only (WebKit has no way to
-  script them); on iPhone they rely on the same code paths, plus Safari's own gesture events for pinch.
-- ESLint 9 (a developer tool) is past end of life, but the accessibility lint plugin still does not support
-  ESLint 10. Harmless for the app; revisited each milestone.
-- Lighthouse scores vary by a few points between machines; the CI job's numbers are in its log and report.
+- Firefox, Safari/WebKit and iPhone run in the nightly job only (this environment can run Chromium only).
+- ESLint 9 (a developer tool) is past end of life; the accessibility lint plugin still needs it.

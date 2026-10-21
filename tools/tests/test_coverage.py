@@ -27,7 +27,7 @@ def count(field: str, elements: list[dict]) -> int:
         return len(list((DATA_DIR / "isotopes").glob("*.json")))
     if field == "visibleLines":
         files = (DATA_DIR / "spectra").glob("*.json")
-        return sum(1 for f in files if load_json(f).get("lines"))
+        return sum(1 for f in files if any(ln["charge"] == 0 for ln in load_json(f)["lines"]))
     return sum(not is_missing(e[field]) for e in elements)
 
 

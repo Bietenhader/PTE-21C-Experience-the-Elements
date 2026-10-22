@@ -116,6 +116,11 @@
   font-size: 0.875rem;
 }
 
+/* Photographs and summary: part of the header's grid on desktop, a scroll box of their own on phones. */
+.more {
+  display: contents;
+}
+
 .photos {
   grid-row: span 2;
   min-inline-size: 0;
@@ -261,6 +266,15 @@
     grid-template-columns: minmax(0, 1fr);
     padding: var(--space-3) var(--space-4) var(--space-2);
   }
+  .more {
+    display: block;
+    max-block-size: 34dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .more > * + * {
+    margin-block-start: var(--space-3);
+  }
   .photos {
     grid-row: auto;
     padding-inline-end: 0;
@@ -270,8 +284,9 @@
     block-size: 3.5rem;
     font-size: 2rem;
   }
+  /* Room at the end of a panel to scroll its last lines above a browser's floating toolbar (iOS). */
   .panel {
-    padding: var(--space-3) var(--space-4) var(--space-8);
+    padding: var(--space-3) var(--space-4) calc(var(--space-8) + 4rem + env(safe-area-inset-bottom, 0px));
   }
   .prose {
     font-size: 0.875rem;
@@ -280,8 +295,7 @@
   .body[data-compact] .header {
     padding-block: var(--space-2);
   }
-  .body[data-compact] .photos,
-  .body[data-compact] .prose,
+  .body[data-compact] .more,
   .body[data-compact] .meta {
     display: none;
   }

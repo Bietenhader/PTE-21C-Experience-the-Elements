@@ -4,6 +4,7 @@
 // lists the same numbers, for screen readers and for anyone who wants them.
 
 import { type ReactNode, useId, useLayoutEffect, useRef, useState } from "react";
+import { SideScroll } from "../ui/SideScroll";
 import styles from "./viz.module.css";
 
 export interface TableSpec {
@@ -56,7 +57,7 @@ export function ChartFrame({ title, caption, table, children, minWidth = 260, te
       >
         {showTable ? "Hide table" : "Show as table"}
       </button>
-      <div id={tableId} className={styles.tableWrap}>
+      <SideScroll id={tableId} className={styles.tableWrap} label={title ? `Table: ${title}` : "Table"}>
         {showTable && (
           <table className={styles.table}>
             <thead>
@@ -85,7 +86,7 @@ export function ChartFrame({ title, caption, table, children, minWidth = 260, te
             </tbody>
           </table>
         )}
-      </div>
+      </SideScroll>
     </figure>
   );
 }

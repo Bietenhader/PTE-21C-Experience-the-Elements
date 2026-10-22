@@ -15,6 +15,7 @@ import type { ElementIndexEntry, Missing, SourcesFile } from "../../data/types";
 import { L_LETTER, type OrbitalKind, orbitalName, REAL_NAMES } from "../../physics/hydrogenic";
 import { Formula } from "../../ui/Formula";
 import { MissingValue } from "../../ui/Quantity";
+import { SideScroll } from "../../ui/SideScroll";
 import { SourceChip } from "../../ui/SourceChip";
 import { PHASE_NEGATIVE, PHASE_POSITIVE, type OrbitalResult } from "../../viz/orbital/field";
 import type { ViewTurn } from "../../viz/orbital/OrbitalViewer";
@@ -384,7 +385,7 @@ function NodesTable({ element, list, sources }: { element: ElementIndexEntry; li
         Radial nodes n − l − 1 and angular nodes l are exact; ⟨r⟩ is hydrogenic with the effective charge shown;
         orbital energies are the {ENERGY_METHOD} eigenvalues of NIST SRD 141.
       </p>
-      <div className={styles.tableWrap}>
+      <SideScroll className={styles.tableWrap} label={`Subshells of ${element.name}`}>
         <table className={styles.table} data-testid="nodes-table">
           <caption className={shared.muted}>Occupied subshells of {element.name}, ground configuration</caption>
           <thead>
@@ -445,7 +446,7 @@ function NodesTable({ element, list, sources }: { element: ElementIndexEntry; li
             ))}
           </tbody>
         </table>
-      </div>
+      </SideScroll>
     </>
   );
 }

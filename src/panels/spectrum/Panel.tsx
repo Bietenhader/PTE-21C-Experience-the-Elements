@@ -6,7 +6,7 @@
 // ionization limit.
 
 import { scaleLinear } from "d3-scale";
-import { type PointerEvent, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { type PointerEvent, useMemo, useState } from "react";
 import { useColourTable, useElementDetail, useLevels, useMetrology, useSpectra } from "../../data/load";
 import { concise } from "../../data/format";
 import type {
@@ -23,6 +23,7 @@ import type {
 } from "../../data/types";
 import { mixtureColour, toHex, wavelengthColour } from "../../physics/color/cie";
 import { MissingValue } from "../../ui/Quantity";
+import { SideScroll } from "../../ui/SideScroll";
 import { ChartFrame } from "../../viz/ChartFrame";
 import viz from "../../viz/viz.module.css";
 import { Badge, Section, SourcesFooter, WhenLoaded } from "../shared/Panel";
@@ -277,35 +278,10 @@ function Glow({ row, cie }: { row: Row; cie: ColourMatchingFile }) {
   );
 }
 
-/** True while the element's content is wider than its box: a scroll region must then take keyboard focus. */
-function useOverflows<T extends HTMLElement>() {
-  const ref = useRef<T>(null);
-  const [overflows, setOverflows] = useState(false);
-  useLayoutEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const measure = () => setOverflows(el.scrollWidth > el.clientWidth + 1);
-    measure();
-    const ro = new ResizeObserver(measure);
-    ro.observe(el);
-    if (el.firstElementChild) ro.observe(el.firstElementChild);
-    return () => ro.disconnect();
-  }, []);
-  return [ref, overflows] as const;
-}
-
 function StrongestLines({ row, cie }: { row: Row; cie: ColourMatchingFile | null }) {
   const top = strongest(row.lines, 12);
-  const [wrap, overflows] = useOverflows<HTMLDivElement>();
   return (
-    <div
-      ref={wrap}
-      className={styles.tableWrap}
-      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- a table wider than a phone scrolls sideways, and a scroll region must be reachable by keyboard (WCAG 2.1.1)
-      tabIndex={overflows ? 0 : undefined}
-      role={overflows ? "region" : undefined}
-      aria-label={overflows ? `Strongest lines of ${row.label}, scrolls sideways` : undefined}
-    >
+    <SideScroll className={styles.tableWrap} label={`Strongest lines of ${row.label}`}>
       <table className={styles.table} data-testid="strongest-lines">
         <caption className={styles.tableCaption}>
           The {top.length} strongest visible lines of {row.label} by NIST relative intensity (lines without an intensity follow, by A_ki).
@@ -335,7 +311,7 @@ function StrongestLines({ row, cie }: { row: Row; cie: ColourMatchingFile | null
           ))}
         </tbody>
       </table>
-    </div>
+    </SideScroll>
   );
 }
 

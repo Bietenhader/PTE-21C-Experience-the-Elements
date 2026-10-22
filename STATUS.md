@@ -10,6 +10,18 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
+## Your review on the iPhone (video, 2026-10-22)
+
+1. **The sheet on iPhone (Safari and Brave): fixed, in a pull request.** The photographs and summary were
+   taller than an iPhone screen, so the tabs sat under the browser's toolbar and the panels never appeared.
+   They now take at most a third of the screen and scroll on their own; the tabs and the panel are always
+   visible, and scrolling into a panel folds the top away as before. Tested at iPhone SE and iPhone 15 sizes.
+   *Please try it on your iPhone after merging.*
+2. **Biology & ecology for more groups of life: in progress.** Next to humans and plants: animals, fungi,
+   bacteria and archaea, each with its role and source. It comes as a separate pull request with the new
+   `biology.toml` rows for your review.
+3. **The release (tag `v0.1.0`) waits** until you are happy with both.
+
 ## For Fin: what to look at (M5)
 
 1. **Your name.** The footer, the About page, the README and the package now say "Serafin Bietenhader".

@@ -574,6 +574,21 @@ Probability, physical, mathematical, AMO, chemistry, biology and history (SPEC Â
 - **Historical photos:** only the four already vendored (Pm, Ra, Cm, Fm); nothing new was taken from Commons.
   The K-40 isotope-use row was dropped because its UNSCEAR page could not be reached to check it.
 
+## M5: release v0.1.0
+
+- **Attribution name:** "Serafin Bietenhader" (Fin's answer to F1), in the footer, the About page, the README
+  and `package.json`.
+- **Version on screen:** the version comes from `package.json` through Vite (`__APP_VERSION__`), so the page,
+  the About dialog and the release can never disagree. It replaces the "preview" note above the table.
+- **The release is made by GitHub, not from this sandbox:** `.github/workflows/release.yml` is started by hand
+  on `main` with the version. It refuses unless `package.json` has that version, `CHANGELOG.md` has a section
+  for it and the tag is new, then creates the tag `v<version>` and the GitHub Release with that changelog
+  section as its notes, using the workflow's own token and the `gh` tool on the runner (no third-party
+  action). No build is attached: the site is on GitHub Pages, and GitHub adds the source archives itself.
+- **Coverage on the About page** now counts the M4 fields too, each with a note on why the rest have none.
+- **README "Honest limitations":** approximations, predictions for Z â‰¥ 109, what is not compiled yet,
+  transcribed tables, hazard labels, photographs, browsers.
+
 ## Tooling
 
 - Versions are pinned exactly. TypeScript 6.0 is used because typescript-eslint does not yet support

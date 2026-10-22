@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M5 — Release v0.1.0 · **ready for Fin's review**
+**Current milestone:** M5 — Release v0.1.0 · **merged (pull request #6); the release itself is on hold**
 **Last updated:** 2026-10-22
-**Next:** after Fin merges the M5 pull request, the release itself (tag `v0.1.0` and the GitHub Release). After
-that, v0.2 is not scheduled (SPEC §18).
+**Next:** Fin is taking a good look at the live site first. The tag `v0.1.0` and the GitHub Release are made only
+when he says so (and the CHANGELOG date is set to that day). After that, v0.2 is not scheduled (SPEC §18).
 
 This file is updated at the end of every working session (SPEC §17.5).
 
@@ -37,7 +37,7 @@ and the tag fit, then creates the tag `v0.1.0` and the release page with the cha
 | README with screenshots and the honest limitations | Done — screenshots from M1, M3 and M4; new section "Honest limitations" |
 | About page with coverage and privacy statement | Done — coverage now includes the M4 fields; privacy statement unchanged |
 | CHANGELOG | Done — section [0.1.0], dated 2026-10-22 |
-| GitHub Release; tag `v0.1.0` | After the merge: the Release workflow creates both |
+| GitHub Release; tag `v0.1.0` | On hold until Fin's go; the Release workflow is merged and ready |
 
 Also: 294 unit tests and 162 pipeline tests pass; the About, table, probability and AMO browser tests pass on
 desktop and phone (the full browser suite runs in CI on the pull request); lint, type checks, the licence audit

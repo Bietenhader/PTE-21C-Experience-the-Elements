@@ -978,7 +978,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Radioactive. Cooled on the 1S0-3P1 intercombination line; the same paper trapped 225Ra and 226Ra. NIST Ra I value; isotope shift not applied. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Radioactive. Cooled on the 1S0-3P1 intercombination line; the same paper trapped 225Ra and 226Ra. NIST Ra I value; isotope shift not applied. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    },
    {
     "A": 225,

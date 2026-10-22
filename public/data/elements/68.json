@@ -928,7 +928,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Broad 401 nm line; a MOT without repumping. NIST observed value (Ritz 400.90971 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Broad 401 nm line; a MOT without repumping. NIST observed value (Ritz 400.90971 nm). The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    },
    {
     "A": 168,

@@ -269,7 +269,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Cooled in the metastable 2 3S1 state. Ritz value; NIST lists no observed wavelength for this component. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The MOT paper's title does not name the isotope."
+    "note": "Cooled in the metastable 2 3S1 state. Ritz value; NIST lists no observed wavelength for this component. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. The MOT paper's title does not name the isotope."
    },
    {
     "A": 4,

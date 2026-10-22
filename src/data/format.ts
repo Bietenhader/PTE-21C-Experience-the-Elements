@@ -16,16 +16,24 @@ export function isInterval(x: unknown): x is Interval {
 }
 
 export function isQuantity(x: unknown): x is Quantity {
-  return typeof x === "object" && x !== null && typeof (x as Quantity).value === "number";
+  return (
+    typeof x === "object" &&
+    x !== null &&
+    typeof (x as Quantity).value === "number"
+  );
 }
 
 /** Group digits in threes, SI style: integer part when ≥ 5 digits, fraction when ≥ 5 decimals. */
 export function groupDigits(text: string): string {
   const sign = text.startsWith("-") ? MINUS : "";
   const [intPart = "", frac] = text.replace(/^-/, "").split(".");
-  const int = intPart.length >= 5 ? intPart.replace(/\B(?=(\d{3})+(?!\d))/g, NNBSP) : intPart;
+  const int =
+    intPart.length >= 5
+      ? intPart.replace(/\B(?=(\d{3})+(?!\d))/g, NNBSP)
+      : intPart;
   if (frac === undefined) return sign + int;
-  const f = frac.length >= 5 ? (frac.match(/\d{1,3}/g) ?? []).join(NNBSP) : frac;
+  const f =
+    frac.length >= 5 ? (frac.match(/\d{1,3}/g) ?? []).join(NNBSP) : frac;
   return `${sign}${int}.${f}`;
 }
 
@@ -38,6 +46,11 @@ export function concise(value: number, unc?: number): string {
   const [mantissa = "", expText = "0"] = unc.toExponential().split("e");
   const digits = mantissa.replace(".", "");
   const lastDigitExp = Number(expText) - (digits.length - 1);
+  if (lastDigitExp >= 3 && Math.abs(value) >= 1e12) {
+    // 2 020 407 384 335 000(2000) reads better as 2.020 407 384 335(2) × 10¹⁵
+    const exp = Math.floor(Math.log10(Math.abs(value)));
+    return `${groupDigits((value / 10 ** exp).toFixed(exp - lastDigitExp))}(${digits})${NNBSP}×${NNBSP}10${superscriptDigits(exp)}`;
+  }
   if (lastDigitExp >= 0) {
     return `${groupDigits(value.toFixed(0))}(${unc.toFixed(0)})`;
   }
@@ -48,7 +61,9 @@ export function concise(value: number, unc?: number): string {
 export function shortest(value: number): string {
   const s = String(value);
   if (!s.includes("e")) return s;
-  return value.toFixed(Math.max(0, -Math.floor(Math.log10(Math.abs(value))) + 15)).replace(/\.?0+$/, "");
+  return value
+    .toFixed(Math.max(0, -Math.floor(Math.log10(Math.abs(value))) + 15))
+    .replace(/\.?0+$/, "");
 }
 
 export function formatQuantity(q: Quantity): string {
@@ -74,12 +89,21 @@ export function fraction(x: number): string {
   return Number.isInteger(x) ? String(x) : `${Math.round(2 * x)}/2`;
 }
 
-export const MISSING_TEXT: Record<MissingReason, { short: string; long: string }> = {
+export const MISSING_TEXT: Record<
+  MissingReason,
+  { short: string; long: string }
+> = {
   not_measured: { short: "n/m", long: "not measured" },
   not_applicable: { short: "n/a", long: "not applicable" },
   no_stable_isotope: { short: "no stable isotope", long: "no stable isotope" },
-  predicted_only: { short: "pred. only", long: "only theoretical predictions exist" },
-  source_unavailable_at_build: { short: "src n/a", long: "source unavailable when the data was built" },
+  predicted_only: {
+    short: "pred. only",
+    long: "only theoretical predictions exist",
+  },
+  source_unavailable_at_build: {
+    short: "src n/a",
+    long: "source unavailable when the data was built",
+  },
 };
 
 export function describeMissing(m: Missing): string {

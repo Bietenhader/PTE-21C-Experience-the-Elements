@@ -9,12 +9,28 @@ import { line } from "d3-shape";
 import { useId, useMemo, useState } from "react";
 import { useElementDetail, useIsotopes, type Loaded } from "../../data/load";
 import { concise, isInterval, isMissing } from "../../data/format";
-import type { ElementDetailFile, ElementIndexEntry, Isotope, IsotopesFile, SourcesFile } from "../../data/types";
-import { enclosedProbability, radialDistribution } from "../../physics/hydrogenic";
+import type {
+  ElementDetailFile,
+  ElementIndexEntry,
+  Isotope,
+  IsotopesFile,
+  SourcesFile,
+} from "../../data/types";
+import {
+  enclosedProbability,
+  radialDistribution,
+} from "../../physics/hydrogenic";
 import { statistics } from "../../physics/nuclear";
-import { condensationDensity, maxwellBoltzmann, meanSpeed, mostProbableSpeed, rmsSpeed, thermalWavelength } from "../../physics/thermal";
+import {
+  condensationDensity,
+  maxwellBoltzmann,
+  meanSpeed,
+  mostProbableSpeed,
+  rmsSpeed,
+  thermalWavelength,
+} from "../../physics/thermal";
 import { Formula } from "../../ui/Formula";
-import { MissingValue, Quantity } from "../../ui/Quantity";
+import { MissingValue, Quantity, Unit } from "../../ui/Quantity";
 import { SourceChip } from "../../ui/SourceChip";
 import { ChartFrame } from "../../viz/ChartFrame";
 import viz from "../../viz/viz.module.css";
@@ -41,13 +57,15 @@ type Sources = SourcesFile["sources"];
 const SAMPLES = 240;
 
 /** Temperatures: plain kelvin from 1 K up ("300 K", "1000 K"), with a prefix below ("146 μK"). */
-const kelvin = (t: number): string => (t >= 1 ? `${Number(t.toPrecision(3))} K` : withPrefix(t, "K", 3));
+const kelvin = (t: number): string =>
+  t >= 1 ? `${Number(t.toPrecision(3))} K` : withPrefix(t, "K", 3);
 
 // --- Where is the electron? ------------------------------------------------------------------------
 
 function Radial({ e, d }: { e: ElementIndexEntry; d: ElementDetailFile }) {
   const list = useMemo(() => subshells(e, d), [e, d]);
-  const initial = [...list].reverse().find((s) => s.valence) ?? list[list.length - 1];
+  const initial =
+    [...list].reverse().find((s) => s.valence) ?? list[list.length - 1];
   const [key, setKey] = useState(initial ? `${initial.n},${initial.l}` : "");
   const s = list.find((x) => `${x.n},${x.l}` === key) ?? initial;
   const [within, setWithin] = useState<number | null>(null);
@@ -61,8 +79,9 @@ function Radial({ e, d }: { e: ElementIndexEntry; d: ElementDetailFile }) {
     <Section title="Where is the electron?" id="radial">
       <Badge>
         Hydrogenic approximation with Clementi–Raimondi Z<sub>eff</sub>
-        {slater ? " (Slater's rules where their table has no value)" : ""}. Angular shapes are exact for one electron;
-        radial scale is approximate for many-electron atoms. Tier B (Hartree–Fock radial functions) planned.
+        {slater ? " (Slater's rules where their table has no value)" : ""}.
+        Angular shapes are exact for one electron; radial scale is approximate
+        for many-electron atoms. Tier B (Hartree–Fock radial functions) planned.
       </Badge>
       <div className={styles.choices} role="group" aria-label="Subshell">
         {list.map((x) => (
@@ -94,15 +113,28 @@ function Radial({ e, d }: { e: ElementIndexEntry; d: ElementDetailFile }) {
           onChange={(ev) => setWithin(Number(ev.target.value))}
           aria-valuetext={`${r} pm`}
         />
-        <output htmlFor={sliderId} aria-live="polite" data-testid="within-readout">
-          {r} pm: the {s.label} electron is inside with probability {(pWithin * 100).toFixed(1)} %
+        <output
+          htmlFor={sliderId}
+          aria-live="polite"
+          data-testid="within-readout"
+        >
+          {r} pm: the {s.label} electron is inside with probability{" "}
+          {(pWithin * 100).toFixed(1)} %
         </output>
       </div>
     </Section>
   );
 }
 
-function RadialChart({ s, rMax, mark }: { s: SubshellInfo; rMax: number; mark: number }) {
+function RadialChart({
+  s,
+  rMax,
+  mark,
+}: {
+  s: SubshellInfo;
+  rMax: number;
+  mark: number;
+}) {
   const points = useMemo(() => {
     const out: Array<{ r: number; p: number; c: number }> = [];
     let c = 0;
@@ -119,9 +151,11 @@ function RadialChart({ s, rMax, mark }: { s: SubshellInfo; rMax: number; mark: n
   const pMax = Math.max(...points.map((x) => x.p));
   const caption = (
     <>
-      Plotted for the {s.label} subshell (hydrogenic, effective charge {s.zeff.value.toFixed(2)}): the radial
-      probability density P(r) = r²R²(r) per picometre (solid) and the probability that the electron is within r (dashed,
-      right axis). Marked: the most probable radius r* = {s.mostProbablePm.toFixed(1)} pm and the mean radius ⟨r⟩ ={" "}
+      Plotted for the {s.label} subshell (hydrogenic, effective charge{" "}
+      {s.zeff.value.toFixed(2)}): the radial probability density P(r) = r²R²(r)
+      per picometre (solid) and the probability that the electron is within r
+      (dashed, right axis). Marked: the most probable radius r* ={" "}
+      {s.mostProbablePm.toFixed(1)} pm and the mean radius ⟨r⟩ ={" "}
       {s.meanPm.toFixed(1)} pm.
     </>
   );
@@ -129,7 +163,14 @@ function RadialChart({ s, rMax, mark }: { s: SubshellInfo; rMax: number; mark: n
     columns: ["r (pm)", "P(r) (1/pm)", "Probability within r"],
     rows: points
       .filter((_, i) => i % 24 === 0)
-      .map((x) => ({ key: String(x.r), cells: [x.r.toFixed(1), x.p.toPrecision(3), `${(x.c * 100).toFixed(1)} %`] })),
+      .map((x) => ({
+        key: String(x.r),
+        cells: [
+          x.r.toFixed(1),
+          x.p.toPrecision(3),
+          `${(x.c * 100).toFixed(1)} %`,
+        ],
+      })),
   };
   return (
     <ChartFrame caption={caption} table={table} testId="radial-chart">
@@ -137,9 +178,15 @@ function RadialChart({ s, rMax, mark }: { s: SubshellInfo; rMax: number; mark: n
         const H = 250;
         // The markers' labels sit in two rows above the plot, clear of the curves.
         const M = { top: 34, right: 48, bottom: 38, left: 56 };
-        const x = scaleLinear().domain([0, rMax]).range([M.left, width - M.right]);
-        const y = scaleLinear().domain([0, pMax * 1.1]).range([H - M.bottom, M.top]);
-        const yc = scaleLinear().domain([0, 1]).range([H - M.bottom, M.top]);
+        const x = scaleLinear()
+          .domain([0, rMax])
+          .range([M.left, width - M.right]);
+        const y = scaleLinear()
+          .domain([0, pMax * 1.1])
+          .range([H - M.bottom, M.top]);
+        const yc = scaleLinear()
+          .domain([0, 1])
+          .range([H - M.bottom, M.top]);
         const pd = line<{ r: number; p: number }>()
           .x((q) => x(q.r))
           .y((q) => y(q.p))(points);
@@ -171,17 +218,31 @@ function RadialChart({ s, rMax, mark }: { s: SubshellInfo; rMax: number; mark: n
                 </text>
               ))}
             </g>
-            <text className={viz.axisTitle} x={(M.left + width - M.right) / 2} y={H - 4} textAnchor="middle">
+            <text
+              className={viz.axisTitle}
+              x={(M.left + width - M.right) / 2}
+              y={H - 4}
+              textAnchor="middle"
+            >
               r (pm)
             </text>
-            <text className={viz.axisTitle} transform={`translate(14 ${(M.top + H - M.bottom) / 2}) rotate(-90)`} textAnchor="middle">
+            <text
+              className={viz.axisTitle}
+              transform={`translate(14 ${(M.top + H - M.bottom) / 2}) rotate(-90)`}
+              textAnchor="middle"
+            >
               P(r)
             </text>
             {pd && <path d={pd} className={styles.density} />}
             {cd && <path d={cd} className={styles.cumulative} />}
             {vmark(s.mostProbablePm, "r*", 0)}
             {vmark(s.meanPm, "⟨r⟩", 1)}
-            <circle cx={x(Math.min(mark, rMax))} cy={yc(enclosedProbability(s.n, s.l, s.zeff.value, mark / A0_PM))} r={4} className={styles.dot} />
+            <circle
+              cx={x(Math.min(mark, rMax))}
+              cy={yc(enclosedProbability(s.n, s.l, s.zeff.value, mark / A0_PM))}
+              r={4}
+              className={styles.dot}
+            />
           </svg>
         );
       }}
@@ -191,34 +252,54 @@ function RadialChart({ s, rMax, mark }: { s: SubshellInfo; rMax: number; mark: n
 
 // --- Bosons and fermions --------------------------------------------------------------------------
 
-function Statistics({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: ElementDetailFile; isotopes: readonly Isotope[]; sources: Sources }) {
+function Statistics({
+  e,
+  d,
+  isotopes,
+  sources,
+}: {
+  e: ElementIndexEntry;
+  d: ElementDetailFile;
+  isotopes: readonly Isotope[];
+  sources: Sources;
+}) {
   const rows = statisticsRows(e, isotopes, d.amo.laserCooling);
   return (
     <Section title="Bosons and fermions" id="statistics">
       <p className={shared.muted}>
-        A neutral atom is made of A nucleons and Z = {e.Z} electrons, all fermions. An even total makes the atom a boson
-        (integer spin: many can share one state, as in a Bose–Einstein condensate); an odd total makes it a fermion (no
-        two in the same state, as in a degenerate Fermi gas).
+        A neutral atom is made of A nucleons and Z = {e.Z} electrons, all
+        fermions. An even total makes the atom a boson (integer spin: many can
+        share one state, as in a Bose–Einstein condensate); an odd total makes
+        it a fermion (no two in the same state, as in a degenerate Fermi gas).
       </p>
       {rows.length === 0 ? (
         <p>
-          <MissingValue m={{ missing: true, reason: "no_stable_isotope", note: "No natural isotope, and none has been brought to quantum degeneracy." }} />
+          <MissingValue
+            m={{
+              missing: true,
+              reason: "no_stable_isotope",
+              note: "No natural isotope, and none has been brought to quantum degeneracy.",
+            }}
+          />
         </p>
       ) : (
         <ul className={styles.statList} data-testid="statistics">
           {rows.map((r) => (
             <li key={r.A}>
-              <strong>{r.label}</strong>: {r.A} + {e.Z} = {r.A + e.Z} fermions → <span className={styles.kind}>{r.kind}</span>
+              <strong>{r.label}</strong>: {r.A} + {e.Z} = {r.A + e.Z} fermions →{" "}
+              <span className={styles.kind}>{r.kind}</span>
               {r.natural ? "" : " (not natural)"}
               {r.bec && (
                 <span className={styles.badge}>
-                  Bose–Einstein condensate {r.bec.year} <a href={`https://doi.org/${r.bec.doi}`}>doi:{r.bec.doi}</a>{" "}
+                  Bose–Einstein condensate {r.bec.year}{" "}
+                  <a href={`https://doi.org/${r.bec.doi}`}>doi:{r.bec.doi}</a>{" "}
                   <SourceChip id={r.bec.source} sources={sources} />
                 </span>
               )}
               {r.dfg && (
                 <span className={styles.badge}>
-                  degenerate Fermi gas {r.dfg.year} <a href={`https://doi.org/${r.dfg.doi}`}>doi:{r.dfg.doi}</a>{" "}
+                  degenerate Fermi gas {r.dfg.year}{" "}
+                  <a href={`https://doi.org/${r.dfg.doi}`}>doi:{r.dfg.doi}</a>{" "}
                   <SourceChip id={r.dfg.source} sources={sources} />
                 </span>
               )}
@@ -232,7 +313,17 @@ function Statistics({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: Elem
 
 // --- Thermal motion -------------------------------------------------------------------------------
 
-function Thermal({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: ElementDetailFile; isotopes: readonly Isotope[]; sources: Sources }) {
+function Thermal({
+  e,
+  d,
+  isotopes,
+  sources,
+}: {
+  e: ElementIndexEntry;
+  d: ElementDetailFile;
+  isotopes: readonly Isotope[];
+  sources: Sources;
+}) {
   const iso = referenceIsotope(d, isotopes);
   const mass = iso ? isotopeMassKg(iso) : null;
   const limits = iso ? coolingLimitsFor(d.amo.laserCooling, iso.A, mass) : null;
@@ -244,7 +335,13 @@ function Thermal({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: Element
     return (
       <Section title="Thermal motion" id="thermal">
         <p>
-          <MissingValue m={{ missing: true, reason: "not_measured", note: "No isotope with a known mass to compute the speeds for." }} />
+          <MissingValue
+            m={{
+              missing: true,
+              reason: "not_measured",
+              note: "No isotope with a known mass to compute the speeds for.",
+            }}
+          />
         </p>
       </Section>
     );
@@ -255,21 +352,36 @@ function Thermal({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: Element
   const nBec = condensationDensity(mass, T);
   const jump = (t: number | null, text: string) =>
     t === null ? null : (
-      <button type="button" className={styles.choice} onClick={() => setLogT(Math.min(hi, Math.max(lo, Math.log10(t))))}>
+      <button
+        type="button"
+        className={styles.choice}
+        onClick={() => setLogT(Math.min(hi, Math.max(lo, Math.log10(t))))}
+      >
         {text}
       </button>
     );
   return (
     <Section title="Thermal motion" id="thermal">
       <p className={shared.muted}>
-        A gas of {name} atoms at temperature T: their speeds follow the Maxwell–Boltzmann distribution f(v), and each atom
-        is a wave packet about as long as the thermal de Broglie wavelength λ<sub>dB</sub>. When the packets overlap, a gas
-        of bosons condenses. Mass of {name}: <Quantity q={iso.mass} sources={sources} />.
+        A gas of {name} atoms at temperature T: their speeds follow the
+        Maxwell–Boltzmann distribution f(v), and each atom is a wave packet
+        about as long as the thermal de Broglie wavelength λ<sub>dB</sub>. When
+        the packets overlap, a gas of bosons condenses. Mass of {name}:{" "}
+        <Quantity q={iso.mass} sources={sources} />.
       </p>
       <div className={styles.formulas}>
-        <Formula display tex={String.raw`f(v) = 4\pi\left(\frac{m}{2\pi k_\mathrm{B}T}\right)^{3/2} v^2\, e^{-mv^2/2k_\mathrm{B}T}`} />
-        <Formula display tex={String.raw`\lambda_\mathrm{dB} = \frac{h}{\sqrt{2\pi m k_\mathrm{B}T}}`} />
-        <Formula display tex={String.raw`n\,\lambda_\mathrm{dB}^3 \geq \zeta(3/2) \approx 2.612`} />
+        <Formula
+          display
+          tex={String.raw`f(v) = 4\pi\left(\frac{m}{2\pi k_\mathrm{B}T}\right)^{3/2} v^2\, e^{-mv^2/2k_\mathrm{B}T}`}
+        />
+        <Formula
+          display
+          tex={String.raw`\lambda_\mathrm{dB} = \frac{h}{\sqrt{2\pi m k_\mathrm{B}T}}`}
+        />
+        <Formula
+          display
+          tex={String.raw`n\,\lambda_\mathrm{dB}^3 \geq \zeta(3/2) \approx 2.612`}
+        />
       </div>
       <div className={styles.slider}>
         <label htmlFor={sliderId}>Temperature</label>
@@ -284,16 +396,28 @@ function Thermal({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: Element
           aria-valuetext={kelvin(T)}
           data-testid="temperature"
         />
-        <output htmlFor={sliderId} aria-live="polite" data-testid="temperature-readout">
+        <output
+          htmlFor={sliderId}
+          aria-live="polite"
+          data-testid="temperature-readout"
+        >
           {kelvin(T)}
         </output>
       </div>
-      <div className={styles.choices} role="group" aria-label="Go to a temperature">
+      <div
+        className={styles.choices}
+        role="group"
+        aria-label="Go to a temperature"
+      >
         {jump(300, "Room temperature (300 K)")}
-        {limits && jump(limits.doppler, `Doppler limit of the ${limits.line} line`)}
+        {limits &&
+          jump(limits.doppler, `Doppler limit of the ${limits.line} line`)}
         {limits && jump(limits.recoil, "Recoil limit")}
       </div>
-      <dl className={`${shared.facts} ${styles.readouts}`} data-testid="thermal-readouts">
+      <dl
+        className={`${shared.facts} ${styles.readouts}`}
+        data-testid="thermal-readouts"
+      >
         <dt>Most probable speed</dt>
         <dd>{withPrefix(mostProbableSpeed(mass, T), "m/s", 3)}</dd>
         <dt>Mean speed</dt>
@@ -304,16 +428,25 @@ function Thermal({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: Element
         <dd>{withPrefix(lambda, "m", 3)}</dd>
         <dt>Density for a condensate</dt>
         <dd>
-          at this temperature you would need {sci(nBec, undefined, 3)} atoms per m³ ({sci(nBec / 1e6, undefined, 3)} per cm³) for a
-          Bose–Einstein condensate{statistics(iso.A, e.Z) === "fermion" ? ` — but ${name} is a fermion, which does not condense on its own` : ""}.
+          at this temperature you would need {sci(nBec, undefined, 3)} atoms per
+          m³ ({sci(nBec / 1e6, undefined, 3)} per cm³) for a Bose–Einstein
+          condensate
+          {statistics(iso.A, e.Z) === "fermion"
+            ? ` — but ${name} is a fermion, which does not condense on its own`
+            : ""}
+          .
         </dd>
         {limits && (
           <>
             <dt>Laser-cooling limits</dt>
             <dd>
-              {limits.doppler !== null ? `Doppler ${kelvin(limits.doppler)}` : "Doppler limit not computable"}
-              {limits.recoil !== null ? `, recoil ${kelvin(limits.recoil)}` : ""} (the {limits.line} line, computed; see the AMO
-              panel)
+              {limits.doppler !== null
+                ? `Doppler ${kelvin(limits.doppler)}`
+                : "Doppler limit not computable"}
+              {limits.recoil !== null
+                ? `, recoil ${kelvin(limits.recoil)}`
+                : ""}{" "}
+              (the {limits.line} line, computed; see the AMO panel)
             </dd>
           </>
         )}
@@ -323,7 +456,15 @@ function Thermal({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: Element
   );
 }
 
-function SpeedChart({ mass, T, name }: { mass: number; T: number; name: string }) {
+function SpeedChart({
+  mass,
+  T,
+  name,
+}: {
+  mass: number;
+  T: number;
+  name: string;
+}) {
   const vp = mostProbableSpeed(mass, T);
   const vMax = 3.5 * vp;
   const pts = Array.from({ length: SAMPLES + 1 }, (_, i) => {
@@ -334,13 +475,19 @@ function SpeedChart({ mass, T, name }: { mass: number; T: number; name: string }
   const fMax = Math.max(...pts.map((p) => p.f));
   const caption = (
     <>
-      Plotted: the share of {name} atoms per unit speed at {kelvin(T)}, from the Maxwell–Boltzmann distribution (computed
-      with CODATA constants). The dashed lines mark the most probable, mean and root-mean-square speeds.
+      Plotted: the share of {name} atoms per unit speed at {kelvin(T)}, from the
+      Maxwell–Boltzmann distribution (computed with CODATA constants). The
+      dashed lines mark the most probable, mean and root-mean-square speeds.
     </>
   );
   const table = {
     columns: [`Speed (${unit.u})`, "Share per unit speed (relative)"],
-    rows: pts.filter((_, i) => i % 24 === 0).map((p) => ({ key: String(p.v), cells: [(p.v * unit.k).toPrecision(3), (p.f / fMax).toFixed(3)] })),
+    rows: pts
+      .filter((_, i) => i % 24 === 0)
+      .map((p) => ({
+        key: String(p.v),
+        cells: [(p.v * unit.k).toPrecision(3), (p.f / fMax).toFixed(3)],
+      })),
   };
   return (
     <ChartFrame caption={caption} table={table} testId="speed-chart">
@@ -348,14 +495,23 @@ function SpeedChart({ mass, T, name }: { mass: number; T: number; name: string }
         const H = 230;
         // Three label rows above the plot for the three speeds.
         const M = { top: 46, right: 16, bottom: 38, left: 40 };
-        const x = scaleLinear().domain([0, vMax * unit.k]).range([M.left, width - M.right]);
-        const y = scaleLinear().domain([0, fMax * 1.1]).range([H - M.bottom, M.top]);
+        const x = scaleLinear()
+          .domain([0, vMax * unit.k])
+          .range([M.left, width - M.right]);
+        const y = scaleLinear()
+          .domain([0, fMax * 1.1])
+          .range([H - M.bottom, M.top]);
         const path = line<{ v: number; f: number }>()
           .x((p) => x(p.v * unit.k))
           .y((p) => y(p.f))(pts);
         const mark = (v: number, text: string, row: number) => (
           <g className={styles.mark}>
-            <line x1={x(v * unit.k)} x2={x(v * unit.k)} y1={14 + row * 12} y2={H - M.bottom} />
+            <line
+              x1={x(v * unit.k)}
+              x2={x(v * unit.k)}
+              y1={14 + row * 12}
+              y2={H - M.bottom}
+            />
             <text className={viz.label} x={x(v * unit.k) + 3} y={12 + row * 12}>
               {text}
             </text>
@@ -373,10 +529,19 @@ function SpeedChart({ mass, T, name }: { mass: number; T: number; name: string }
                 </g>
               ))}
             </g>
-            <text className={viz.axisTitle} x={(M.left + width - M.right) / 2} y={H - 4} textAnchor="middle">
+            <text
+              className={viz.axisTitle}
+              x={(M.left + width - M.right) / 2}
+              y={H - 4}
+              textAnchor="middle"
+            >
               Speed ({unit.u})
             </text>
-            <text className={viz.axisTitle} transform={`translate(14 ${(M.top + H - M.bottom) / 2}) rotate(-90)`} textAnchor="middle">
+            <text
+              className={viz.axisTitle}
+              transform={`translate(14 ${(M.top + H - M.bottom) / 2}) rotate(-90)`}
+              textAnchor="middle"
+            >
               f(v)
             </text>
             {path && <path d={path} className={styles.density} />}
@@ -392,25 +557,48 @@ function SpeedChart({ mass, T, name }: { mass: number; T: number; name: string }
 
 // --- Isotope mixture ------------------------------------------------------------------------------
 
-function Mixture({ e, isotopes, sources }: { e: ElementIndexEntry; isotopes: readonly Isotope[]; sources: Sources }) {
+function Mixture({
+  e,
+  isotopes,
+  sources,
+}: {
+  e: ElementIndexEntry;
+  isotopes: readonly Isotope[];
+  sources: Sources;
+}) {
   const natural = isotopes.filter((i) => !isMissing(i.abundance));
   const w = e.atomicWeight;
   return (
     <Section title="A mixture of isotopes" id="mixture">
       {natural.length === 0 ? (
         <p>
-          <MissingValue m={{ missing: true, reason: "no_stable_isotope", note: "No isotope of this element occurs in nature in measurable amounts." }} />
+          <MissingValue
+            m={{
+              missing: true,
+              reason: "no_stable_isotope",
+              note: "No isotope of this element occurs in nature in measurable amounts.",
+            }}
+          />
         </p>
       ) : (
-        <ul className={styles.bars} data-testid="abundance-bars" aria-label={`Natural isotopic composition of ${e.name}`}>
+        <ul
+          className={styles.bars}
+          data-testid="abundance-bars"
+          aria-label={`Natural isotopic composition of ${e.name}`}
+        >
           {natural.map((i) => {
             const a = i.abundance;
             const share = isMissing(a) ? 0 : a.value;
             return (
               <li key={i.A}>
-                <span className={styles.barLabel}>{isotopeLabel(i.A, e.symbol)}</span>
+                <span className={styles.barLabel}>
+                  {isotopeLabel(i.A, e.symbol)}
+                </span>
                 <span className={styles.barTrack} aria-hidden="true">
-                  <span className={styles.barFill} style={{ inlineSize: `${Math.max(0.5, share)}%` }} />
+                  <span
+                    className={styles.barFill}
+                    style={{ inlineSize: `${Math.max(0.5, share)}%` }}
+                  />
                 </span>
                 <span className={styles.barValue}>
                   <Quantity q={a} sources={sources} />
@@ -426,11 +614,13 @@ function Mixture({ e, isotopes, sources }: { e: ElementIndexEntry; isotopes: rea
           <MissingValue m={w} />
         ) : isInterval(w) ? (
           <>
-            an <strong>interval</strong>, [{w.low}, {w.high}] u <SourceChip id={w.source} sources={sources} />
+            an <strong>interval</strong>, [{w.low}, {w.high}] u{" "}
+            <SourceChip id={w.source} sources={sources} />
             {w.conventional && (
               <>
                 {" "}
-                (for everyday use: <Quantity q={w.conventional} sources={sources} />)
+                (for everyday use:{" "}
+                <Quantity q={w.conventional} sources={sources} />)
               </>
             )}
           </>
@@ -442,8 +632,9 @@ function Mixture({ e, isotopes, sources }: { e: ElementIndexEntry; isotopes: rea
         <p className={shared.muted}>
           {isInterval(w) &&
             `The isotope mix of ${e.name.toLowerCase()} varies between terrestrial samples (minerals, waters, living things), so IUPAC gives the range rather than one number. `}
-          The atomic weight is a statistic: the abundance-weighted mean of the isotope masses over normal terrestrial samples,
-          not the mass of any one atom.
+          The atomic weight is a statistic: the abundance-weighted mean of the
+          isotope masses over normal terrestrial samples, not the mass of any
+          one atom.
         </p>
       )}
     </Section>
@@ -453,36 +644,66 @@ function Mixture({ e, isotopes, sources }: { e: ElementIndexEntry; isotopes: rea
 // --- Uncertainty ----------------------------------------------------------------------------------
 
 /** A value with its uncertainty and source; very large or very small ones in powers of ten. */
-function Precise({ q, sources }: { q: ReturnType<typeof precisionList>["items"][number]["q"]; sources: Sources }) {
+function Precise({
+  q,
+  sources,
+}: {
+  q: ReturnType<typeof precisionList>["items"][number]["q"];
+  sources: Sources;
+}) {
   const exp = Math.floor(Math.log10(Math.abs(q.value)));
   if (exp >= -3 && exp < 6) return <Quantity q={q} sources={sources} />;
   return (
     <span>
       {sci(q.value, q.unc)}
-      {q.unit ? ` ${q.unit}` : ""} <SourceChip id={q.source} sources={sources} />
+      {q.unit && (
+        <>
+          {" "}
+          <Unit unit={q.unit} />
+        </>
+      )}{" "}
+      <SourceChip id={q.source} sources={sources} />
     </span>
   );
 }
 
-function Uncertainty({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: ElementDetailFile; isotopes: readonly Isotope[]; sources: Sources }) {
+function Uncertainty({
+  e,
+  d,
+  isotopes,
+  sources,
+}: {
+  e: ElementIndexEntry;
+  d: ElementDetailFile;
+  isotopes: readonly Isotope[];
+  sources: Sources;
+}) {
   const { items, exact } = precisionList(e, d, isotopes);
   const { most, least } = precisionExtremes(items);
   const describe = (p: typeof most) =>
     p && (
       <>
-        the {p.label}, <Precise q={p.q} sources={sources} /> — a relative uncertainty of {sci(p.relative, undefined, 2)}
+        the {p.label}, <Precise q={p.q} sources={sources} /> — a relative
+        uncertainty of {sci(p.relative, undefined, 2)}
       </>
     );
   return (
     <Section title="Uncertainty, written the NIST way" id="uncertainty">
       <p>
-        Every number here carries its standard uncertainty in brackets, in units of its last digits:{" "}
-        <strong>{concise(1.00784, 0.00002)}</strong> means 1.007 84 ± 0.000 02, and <strong>{concise(9192631770, 0)}</strong>{" "}
-        with "(exact)" is fixed by definition.
+        Every number here carries its standard uncertainty in brackets, in units
+        of its last digits: <strong>{concise(1.00784, 0.00002)}</strong> means
+        1.007 84 ± 0.000 02, and <strong>{concise(9192631770, 0)}</strong> with
+        "(exact)" is fixed by definition.
       </p>
       {items.length === 0 ? (
         <p>
-          <MissingValue m={{ missing: true, reason: "not_measured", note: "No stored value of this element comes with an uncertainty." }} />
+          <MissingValue
+            m={{
+              missing: true,
+              reason: "not_measured",
+              note: "No stored value of this element comes with an uncertainty.",
+            }}
+          />
         </p>
       ) : (
         <dl className={shared.facts} data-testid="precision">
@@ -493,13 +714,20 @@ function Uncertainty({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: Ele
               <dt>Least precisely known</dt>
               <dd>
                 {describe(least)}{" "}
-                <span className={shared.muted}>(among values larger than their uncertainty)</span>.
+                <span className={shared.muted}>
+                  (among values larger than their uncertainty)
+                </span>
+                .
               </dd>
             </>
           )}
           <dt>Values compared</dt>
           <dd>
-            {items.length} with an uncertainty{exact.length ? `; ${exact.length} more are exact by definition (${exact.map((x) => x.label).join(", ")})` : ""}.
+            {items.length} with an uncertainty
+            {exact.length
+              ? `; ${exact.length} more are exact by definition (${exact.map((x) => x.label).join(", ")})`
+              : ""}
+            .
           </dd>
         </dl>
       )}
@@ -511,7 +739,15 @@ function Uncertainty({ e, d, isotopes, sources }: { e: ElementIndexEntry; d: Ele
 
 const NONE: Loaded<IsotopesFile | null> = { state: "ready", value: null };
 
-function WithData({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFile; sources: Sources }) {
+function WithData({
+  e,
+  d,
+  sources,
+}: {
+  e: ElementIndexEntry;
+  d: ElementDetailFile;
+  sources: Sources;
+}) {
   const iso = useIsotopes(e.Z, d.files.isotopes);
   return (
     <WhenLoaded files={[d.files.isotopes ? iso : NONE]}>
@@ -545,5 +781,9 @@ function WithData({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFil
 
 export default function Panel({ element: e, sources }: PanelProps) {
   const detail = useElementDetail(e.Z);
-  return <WhenLoaded files={[detail]}>{(d) => <WithData e={e} d={d} sources={sources} />}</WhenLoaded>;
+  return (
+    <WhenLoaded files={[detail]}>
+      {(d) => <WithData e={e} d={d} sources={sources} />}
+    </WhenLoaded>
+  );
 }

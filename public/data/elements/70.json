@@ -1039,7 +1039,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Broad 1S0-1P1 line used for the first MOT; narrow-line MOTs use 1S0-3P1 (NIST 555.801 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Broad 1S0-1P1 line used for the first MOT; narrow-line MOTs use 1S0-3P1 (NIST 555.801 nm). The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    },
    {
     "A": 174,

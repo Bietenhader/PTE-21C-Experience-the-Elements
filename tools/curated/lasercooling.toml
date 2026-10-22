@@ -49,7 +49,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1992
 first_mot_doi = "10.1209/0295-5075/20/8/003"
 source = "olmschenk_catalog"
-note = "Cooled in the metastable 2 3S1 state. Ritz value; NIST lists no observed wavelength for this component. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The MOT paper's title does not name the isotope."
+note = "Cooled in the metastable 2 3S1 state. Ritz value; NIST lists no observed wavelength for this component. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. The MOT paper's title does not name the isotope."
 
 [[row]]
 Z = 2
@@ -123,7 +123,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1989
 first_mot_doi = "10.1103/PhysRevA.39.2758"
 source = "olmschenk_catalog"
-note = "Cooled in the metastable 3s [3/2]2 (Paschen 1s5) state. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
+note = "Cooled in the metastable 3s [3/2]2 (Paschen 1s5) state. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
 
 [[row]]
 Z = 11
@@ -153,7 +153,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1993
 first_mot_doi = "10.1016/0030-4018(93)90645-l"
 source = "olmschenk_catalog"
-note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The paper reports Ramsey spectroscopy on laser cooled and trapped Mg; the isotope is not named in the title. NIST observed value."
+note = "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. The paper reports Ramsey spectroscopy on laser cooled and trapped Mg; the isotope is not named in the title. NIST observed value."
 
 [[row]]
 Z = 18
@@ -167,7 +167,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1990
 first_mot_doi = "10.1143/JJAP.29.L2124"
 source = "olmschenk_catalog"
-note = "Cooled in the metastable 4s [3/2]2 (1s5) state; same paper as Kr. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Cooled in the metastable 4s [3/2]2 (1s5) state; same paper as Kr. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 19
@@ -181,7 +181,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1995
 first_mot_doi = "10.1364/JOSAB.12.001393"
 source = "olmschenk_catalog"
-note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The title does not name the isotope. Repumping uses the other ground hyperfine level on the same D2 line."
+note = "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. The title does not name the isotope. Repumping uses the other ground hyperfine level on the same D2 line."
 
 [[row]]
 Z = 19
@@ -253,7 +253,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1999
 first_mot_doi = "10.1209/epl/i1999-00140-7"
 source = "olmschenk_catalog"
-note = "MOT reported independently by Konstanz (EPL 1999, cited) and NIST (PRA 61, 053407 (2000), doi 10.1103/PhysRevA.61.053407). Wavelength: NIST observed value; NIST Ritz value is 425.553363 nm. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "MOT reported independently by Konstanz (EPL 1999, cited) and NIST (PRA 61, 053407 (2000), doi 10.1103/PhysRevA.61.053407). Wavelength: NIST observed value; NIST Ritz value is 425.553363 nm. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 24
@@ -295,7 +295,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1990
 first_mot_doi = "10.1143/JJAP.29.L2124"
 source = "olmschenk_catalog"
-note = "Cooled in the metastable 5s [3/2]2 (1s5) state; the paper traps the even isotopes separately and quotes atom numbers for 84Kr. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+note = "Cooled in the metastable 5s [3/2]2 (1s5) state; the paper traps the even isotopes separately and quotes atom numbers for 84Kr. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
 
 [[row]]
 Z = 37
@@ -385,7 +385,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 2000
 first_mot_doi = "10.1103/PhysRevA.62.063404"
 source = "olmschenk_catalog"
-note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title. NIST observed value (Ritz 328.1629601 nm)."
+note = "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title. NIST observed value (Ritz 328.1629601 nm)."
 
 [[row]]
 Z = 48
@@ -399,7 +399,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 2007
 first_mot_doi = "10.1103/PhysRevA.76.043411"
 source = "olmschenk_catalog"
-note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
+note = "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
 
 [[row]]
 Z = 54
@@ -413,7 +413,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1993
 first_mot_doi = "10.1103/PhysRevA.48.R879"
 source = "olmschenk_catalog"
-note = "Cooled in the metastable 6s [3/2]2 (1s5) state; the MOT paper measures isotope shifts, so several isotopes were trapped. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Cooled in the metastable 6s [3/2]2 (1s5) state; the MOT paper measures isotope shifts, so several isotopes were trapped. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 55
@@ -443,7 +443,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 2009
 first_mot_doi = "10.1103/PhysRevA.79.041402"
 source = "olmschenk_catalog"
-note = "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Several repump lasers are needed, so no single repump is given."
+note = "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Several repump lasers are needed, so no single repump is given."
 
 [[row]]
 Z = 80
@@ -457,7 +457,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 2008
 first_mot_doi = "10.1103/PhysRevLett.100.053001"
 source = "olmschenk_catalog"
-note = "Cooled on the 1S0-3P1 intercombination line. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Cooled on the 1S0-3P1 intercombination line. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 87
@@ -471,7 +471,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1996
 first_mot_doi = "10.1103/PhysRevLett.76.3522"
 source = "olmschenk_catalog"
-note = "Radioactive. NIST Fr I value; isotope shift not applied. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Radioactive. NIST Fr I value; isotope shift not applied. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 88
@@ -485,7 +485,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 2007
 first_mot_doi = "10.1103/PhysRevLett.98.093001"
 source = "olmschenk_catalog"
-note = "Radioactive. Cooled on the 1S0-3P1 intercombination line; the same paper trapped 225Ra and 226Ra. NIST Ra I value; isotope shift not applied. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Radioactive. Cooled on the 1S0-3P1 intercombination line; the same paper trapped 225Ra and 226Ra. NIST Ra I value; isotope shift not applied. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 88
@@ -513,7 +513,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 2010
 first_mot_doi = "10.1103/PhysRevLett.104.063001"
 source = "olmschenk_catalog"
-note = "Broad 421 nm line; NIST observed value (Ritz 421.29015 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Broad 421 nm line; NIST observed value (Ritz 421.29015 nm). The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 66
@@ -569,7 +569,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 2006
 first_mot_doi = "10.1103/PhysRevLett.96.143005"
 source = "olmschenk_catalog"
-note = "Broad 401 nm line; a MOT without repumping. NIST observed value (Ritz 400.90971 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Broad 401 nm line; a MOT without repumping. NIST observed value (Ritz 400.90971 nm). The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 68
@@ -613,7 +613,7 @@ first_mot_doi = "10.1103/PhysRevA.82.011405"
 bec_year = 2020
 bec_doi = "10.1103/PhysRevA.102.011302"
 source = "olmschenk_catalog"
-note = "Only stable isotope. First thulium BEC (2020). NIST observed value. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Only stable isotope. First thulium BEC (2020). NIST observed value. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 70
@@ -627,7 +627,7 @@ wavelength_source = "nist_lines"
 first_mot_year = 1999
 first_mot_doi = "10.1103/PhysRevA.59.R934"
 source = "olmschenk_catalog"
-note = "Broad 1S0-1P1 line used for the first MOT; narrow-line MOTs use 1S0-3P1 (NIST 555.801 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+note = "Broad 1S0-1P1 line used for the first MOT; narrow-line MOTs use 1S0-3P1 (NIST 555.801 nm). The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
 
 [[row]]
 Z = 70

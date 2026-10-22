@@ -685,7 +685,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Cooled in the metastable 5s [3/2]2 (1s5) state; the paper traps the even isotopes separately and quotes atom numbers for 84Kr. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+    "note": "Cooled in the metastable 5s [3/2]2 (1s5) state; the paper traps the even isotopes separately and quotes atom numbers for 84Kr. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
    }
   ],
   "siHistory": [

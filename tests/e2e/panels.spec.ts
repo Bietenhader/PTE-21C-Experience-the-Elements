@@ -2,7 +2,8 @@
 // The M3 property test (SPEC §17.5): every element on each of the batch-1 panels — orbitals,
 // electromagnetic & ionization, spectrum, nucleus — renders without a console error, every Missing
 // value names one of the five reasons (SPEC §5.3), and no "NaN", "undefined" or "[object Object]"
-// reaches the screen. Desktop only (the phone profile runs the same panels in their own specs).
+// reaches the screen; the ionization ladder draws every stage the data lists. Desktop only (the phone
+// profile runs the same panels in their own specs).
 import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 import { open } from "./helpers";
@@ -11,6 +12,12 @@ const index = JSON.parse(readFileSync(new URL("../../public/data/index.json", im
   elements: Array<{ Z: number; symbol: string; name: string }>;
 };
 const PANELS = ["orbitals", "em", "spectrum", "nucleus"] as const;
+const stages = (z: number) =>
+  (
+    JSON.parse(readFileSync(new URL(`../../public/data/elements/${z}.json`, import.meta.url), "utf8")) as {
+      em: { ionizationEnergies: { stages: unknown[] } };
+    }
+  ).em.ionizationEnergies.stages.length;
 const REASONS = ["not_measured", "not_applicable", "no_stable_isotope", "predicted_only", "source_unavailable_at_build"];
 
 test.describe("M3 panels × 118 elements", () => {
@@ -33,6 +40,13 @@ test.describe("M3 panels × 118 elements", () => {
         await expect(current.getByTestId("panel-sources"), `${e.symbol} ${panel}`).toBeVisible({ timeout: 20_000 });
         if (panel === "orbitals") {
           await expect(current.getByTestId("orbital-gallery")).toHaveAttribute("data-complete", "true", { timeout: 30_000 });
+        }
+        if (panel === "em") {
+          // The ladder draws every stage NIST lists (all Z of them up to Z = 103), or says why there are none.
+          const n = stages(e.Z);
+          const ladder = current.locator('[data-section="ladder"]');
+          if (n > 0) await expect(ladder.getByTestId("ionization-ladder").locator("svg circle"), `${e.symbol} ladder`).toHaveCount(n);
+          else await expect(ladder.locator("[data-missing]")).toHaveCount(1);
         }
         const text = await current.innerText();
         expect(text, `${e.symbol} ${panel}`).not.toMatch(/\bNaN\b|\bundefined\b|\[object Object\]|\bInfinity\b/);

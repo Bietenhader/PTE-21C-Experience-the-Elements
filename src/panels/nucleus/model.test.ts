@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import type { IsotopesFile } from "../../data/types";
+import type { IsotopesFile, Quantity } from "../../data/types";
 import {
   defaultIsotope,
   dominantDecay,
@@ -79,7 +79,7 @@ describe("words and numbers", () => {
   });
 
   it("removes floating-point noise but keeps the source's digits", () => {
-    const mass = { value: 55.934935537, unc: 2.8699999999999996e-7, unit: "u", source: "iaea_livechart" };
+    const mass: Quantity = { value: 55.934935537, unc: 2.8699999999999996e-7, unit: "u", source: "iaea_livechart" };
     expect(tidy(mass).unc).toBe(2.87e-7);
     expect(tidy(mass).value).toBe(55.934935537);
     expect(tidy({ value: 1, unit: "u", source: "x" })).not.toHaveProperty("unc");

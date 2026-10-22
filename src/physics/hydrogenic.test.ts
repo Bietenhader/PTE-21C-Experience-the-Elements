@@ -2,6 +2,7 @@
 import { describe, expect, it } from "vitest";
 import {
   complexHarmonic,
+  complexMagnitudeFunction,
   enclosedProbability,
   laguerre,
   legendre,
@@ -9,9 +10,11 @@ import {
   mostProbableRadius,
   orbitalName,
   radial,
+  radialFunction,
   radialNodeRadii,
   radialNodes,
   realHarmonic,
+  realHarmonicFunction,
   realOrbital,
 } from "./hydrogenic";
 
@@ -141,5 +144,26 @@ describe("angular functions", () => {
   it("ψ of a real orbital vanishes on its nodal plane", () => {
     expect(realOrbital(2, 1, 0, 1, 1, 0.5, 0)).toBeCloseTo(0, 14); // 2p_z on the xy-plane
     expect(realOrbital(1, 0, 0, 1, 0, 0, 0)).toBeCloseTo(1 / Math.sqrt(Math.PI), 12); // 1s at the nucleus
+  });
+});
+
+describe("fast evaluators", () => {
+  it("agree with the reference functions everywhere they are used", () => {
+    let seed = 3;
+    const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647) * 2 - 1;
+    for (let l = 0; l <= 3; l++) {
+      for (let m = -l; m <= l; m++) {
+        const fr = realHarmonicFunction(l, m);
+        const fc = complexMagnitudeFunction(l, m);
+        for (let i = 0; i < 50; i++) {
+          const [x, y, z] = [rand() * 5, rand() * 5, rand() * 5];
+          const r = Math.hypot(x, y, z);
+          expect(fr(x, y, z, r)).toBeCloseTo(realHarmonic(l, m, x, y, z, r), 12);
+          expect(fc(x, y, z, r)).toBeCloseTo(complexHarmonic(l, m, x, y, z, r).magnitude, 12);
+        }
+      }
+    }
+    const R = radialFunction(4, 2, 3.3);
+    for (const r of [0, 0.1, 1, 3.7, 9]) expect(R(r)).toBeCloseTo(radial(4, 2, 3.3, r), 12);
   });
 });

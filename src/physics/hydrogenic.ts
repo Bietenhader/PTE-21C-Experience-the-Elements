@@ -249,3 +249,38 @@ export function realOrbital(n: number, l: number, m: number, z: number, x: numbe
   if (r === 0) return l === 0 ? radial(n, 0, z, 0) * harmonicNorm(0, 0) : 0;
   return radial(n, l, z, r) * realHarmonic(l, m, x, y, zz, r);
 }
+
+// --- Fast evaluators for grid loops (constants computed once per orbital) ----------------------
+
+/**
+ * The angular factor of the real orbital (l, m) as a function of (x, y, z, r). Same values as
+ * realHarmonic, with the normalisation and Legendre coefficients computed once.
+ */
+export function realHarmonicFunction(l: number, m: number): (x: number, y: number, z: number, r: number) => number {
+  const a = Math.abs(m);
+  const n = (m === 0 ? 1 : Math.SQRT2) * harmonicNorm(l, m);
+  return (x, y, z, r) => {
+    let re = 1;
+    let im = 0;
+    for (let i = 0; i < a; i++) {
+      const nr = re * x - im * y;
+      im = re * y + im * x;
+      re = nr;
+    }
+    const inv = 1 / r;
+    let scale = 1;
+    for (let i = 0; i < a; i++) scale *= inv;
+    const p = legendre(l, a, z * inv, 1);
+    return n * p * (m === 0 ? 1 : (m > 0 ? re : im) * scale);
+  };
+}
+
+/** |Y_l^m| as a function of (x, y, z, r): the complex orbitals' angular magnitude (independent of φ). */
+export function complexMagnitudeFunction(l: number, m: number): (x: number, y: number, z: number, r: number) => number {
+  const a = Math.abs(m);
+  const n = harmonicNorm(l, m);
+  return (x, y, z, r) => {
+    const inv = 1 / r;
+    return Math.abs(n * legendre(l, a, z * inv, Math.sqrt(x * x + y * y) * inv));
+  };
+}

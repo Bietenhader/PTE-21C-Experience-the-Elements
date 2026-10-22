@@ -20,12 +20,19 @@ export function enclosedLevel(values: ArrayLike<number>, fraction: number): numb
   }
   if (total === 0) return 0;
   const lo = Math.log(minPositive);
-  const span = Math.log(max) - lo || 1;
-  const bin = (v: number) => Math.min(BINS - 1, Math.floor(((Math.log(v) - lo) / span) * BINS));
+  const scale = BINS / (Math.log(max) - lo || 1);
+  // One logarithm per voxel: the bin of every positive value is kept for the final pass.
+  const bins = new Uint16Array(values.length);
   const sums = new Float64Array(BINS);
   for (let i = 0; i < values.length; i++) {
     const v = values[i] ?? 0;
-    if (v > 0) sums[bin(v)] = (sums[bin(v)] ?? 0) + v;
+    if (v <= 0) {
+      bins[i] = 0xffff;
+      continue;
+    }
+    const b = Math.min(BINS - 1, Math.floor((Math.log(v) - lo) * scale));
+    bins[i] = b;
+    sums[b] = (sums[b] ?? 0) + v;
   }
   const target = fraction * total;
   let acc = 0;
@@ -36,10 +43,7 @@ export function enclosedLevel(values: ArrayLike<number>, fraction: number): numb
     acc += s;
   }
   const inBin: number[] = [];
-  for (let i = 0; i < values.length; i++) {
-    const v = values[i] ?? 0;
-    if (v > 0 && bin(v) === b) inBin.push(v);
-  }
+  for (let i = 0; i < values.length; i++) if (bins[i] === b) inBin.push(values[i] ?? 0);
   inBin.sort((x, y) => y - x);
   for (const v of inBin) {
     acc += v;

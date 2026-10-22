@@ -850,6 +850,8 @@ def build_elements(index: dict, report: Report) -> int:
     for e in elements:
         z = e["Z"]
         doc: dict = {"schemaVersion": 1, "Z": z, "symbol": e["symbol"]}
+        # Which companion files exist, so the panels never request one that is not there.
+        doc["files"] = {name: (DATA_DIR / name / f"{z}.json").exists() for name in ("isotopes", "spectra", "levels")}
         orbitals: dict = {
             "zeff": sorted(zeff.get(z, []), key=lambda r: (r["n"], r["l"])),
             "eigenvalues": eigenvalues(srd[z], hartree_ev) if z in srd and hartree_ev else [],

@@ -2131,6 +2131,27 @@
         "symbol": {
           "type": "string"
         },
+        "files": {
+          "description": "Which per-element companion files exist (public/data/isotopes|spectra|levels/{Z}.json).",
+          "type": "object",
+          "properties": {
+            "isotopes": {
+              "type": "boolean"
+            },
+            "spectra": {
+              "type": "boolean"
+            },
+            "levels": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "isotopes",
+            "spectra",
+            "levels"
+          ],
+          "additionalProperties": false
+        },
         "orbitals": {
           "type": "object",
           "properties": {
@@ -2484,7 +2505,8 @@
         "physical",
         "amo",
         "biology",
-        "nucleus"
+        "nucleus",
+        "files"
       ],
       "additionalProperties": false
     },

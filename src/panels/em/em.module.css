@@ -1,0 +1,43 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 60rem;
+}
+
+.line {
+  fill: none;
+  stroke: var(--link);
+  stroke-width: 1.5;
+}
+
+.dot {
+  fill: var(--link);
+}
+
+.hollow {
+  fill: var(--surface);
+  stroke: var(--link);
+  stroke-width: 1.5;
+}
+
+.closure {
+  stroke: var(--text-muted);
+  stroke-dasharray: 4 3;
+  stroke-width: 1;
+}
+
+.spark {
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 1.25;
+}
+
+.mine {
+  fill: var(--focus);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+}
+
+.row {
+  display: contents;
+}

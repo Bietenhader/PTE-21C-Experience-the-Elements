@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 94,
  "symbol": "Pu",
+ "files": {
+  "isotopes": true,
+  "spectra": true,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [],
   "eigenvalues": [],

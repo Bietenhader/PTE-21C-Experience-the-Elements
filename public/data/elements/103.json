@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 103,
  "symbol": "Lr",
+ "files": {
+  "isotopes": true,
+  "spectra": false,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [],
   "eigenvalues": [],

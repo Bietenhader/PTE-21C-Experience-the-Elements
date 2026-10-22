@@ -666,6 +666,14 @@ export interface ElementDetailFile {
   schemaVersion: 1;
   Z: number;
   symbol: string;
+  /**
+   * Which per-element companion files exist (public/data/isotopes|spectra|levels/{Z}.json).
+   */
+  files: {
+    isotopes: boolean;
+    spectra: boolean;
+    levels: boolean;
+  };
   orbitals: {
     zeff: Zeff[];
     eigenvalues: Eigenvalue[];

@@ -1,0 +1,60 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.section {
+  margin: 0 0 var(--space-6);
+}
+
+.heading {
+  margin: 0 0 var(--space-2);
+  font-size: 1.0625rem;
+}
+
+.badge {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.footer {
+  margin-block-start: var(--space-6);
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.9;
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: var(--space-1) var(--space-4);
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.facts dt {
+  color: var(--text-muted);
+}
+
+.facts dd {
+  margin: 0;
+  min-inline-size: 0;
+}
+
+@media (max-width: 40rem) {
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .facts dd {
+    margin-block-end: var(--space-2);
+  }
+}

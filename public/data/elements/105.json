@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 105,
  "symbol": "Db",
+ "files": {
+  "isotopes": true,
+  "spectra": false,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [],
   "eigenvalues": [],

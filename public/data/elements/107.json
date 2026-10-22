@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 107,
  "symbol": "Bh",
+ "files": {
+  "isotopes": true,
+  "spectra": false,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [],
   "eigenvalues": [],

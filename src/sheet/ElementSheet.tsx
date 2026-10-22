@@ -67,7 +67,14 @@ export function ElementSheet({ elements, sources }: Props) {
       data-testid="sheet"
       {...{ closedby: "any" }}
     >
-      {shown && <SheetBody key={shown.Z} element={shown} panel={panel} sources={sources} onDismiss={() => dialog.current?.close()} />}
+      {shown && <SheetBody
+          key={shown.Z}
+          element={shown}
+          elements={elements}
+          panel={panel}
+          sources={sources}
+          onDismiss={() => dialog.current?.close()}
+        />}
     </dialog>
   );
 }
@@ -100,12 +107,13 @@ function Description({ z, sources }: { z: number; sources: SourcesFile["sources"
 
 interface BodyProps {
   element: ElementIndexEntry;
+  elements: ElementIndexEntry[];
   panel: PanelSlug;
   sources: SourcesFile["sources"];
   onDismiss: () => void;
 }
 
-function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
+function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProps) {
   const ids = useId();
   const strip = useRef<HTMLDivElement>(null);
   const tablist = useRef<HTMLDivElement>(null);
@@ -285,7 +293,7 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
               <p className={styles.summary}>{p.summary}</p>
               {mounted.has(i) && (
                 <Suspense fallback={<p className={styles.muted}>Loading…</p>}>
-                  <Component element={e} sources={sources} />
+                  <Component element={e} elements={elements} sources={sources} />
                 </Suspense>
               )}
             </section>

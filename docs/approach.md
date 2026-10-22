@@ -469,6 +469,51 @@ Probability, physical, mathematical, AMO, chemistry, biology and history (SPEC �
 - **Symmetry note:** two paragraphs on SO(4) (Fock 1935) and SO(4,2) (Barut & Kleinert 1967) and the 2n²
   degeneracy; registered as references and cited with source chips.
 
+### Chemistry & bonding
+
+- **One curated row per element** in `tools/curated/chemistry.toml`, in our own words: typical bonding,
+  reactions with air, water and acids (each note with its source), one to four well-known compounds and an
+  example compound for each common oxidation state. `tools/build_chemistry.py` writes the `chemistry` section
+  of each element file.
+- **Every compound formula is checked against PubChem** (`tools/fetch_pubchem_hsdb.py` caches the compound
+  records; 343 compounds cite `pubchem_compounds`). A compound whose PubChem formula disagrees is left out and
+  reported. Where PubChem's record is wrong (Li₃N, HfC, TaC, RaCl₂, PuO₂, the Pa and Po oxides) the row cites
+  Greenwood & Earnshaw instead; Bh and Hs compounds cite their papers by DOI. A row key `lookup` names
+  compounds PubChem files under another name.
+- **Reactivity sources** are HSDB and CAMEO Chemicals (the records PubChem holds for the element), or Greenwood
+  & Earnshaw where there is none. Each source is registered separately and cached under its own folder in
+  `tools/raw/`, so each gets its own retrieval date. CAMEO's facts are restated in our own words only, because
+  some CAMEO data belongs to its providers. The panel says these notes describe chemistry, not safe handling.
+- **Where nothing is known** the row gives the Missing reason: At, Fr and Es–Lr `not_measured`; Rf–Og
+  `not_measured` or `predicted_only` (Türler & Pershina 2013; oganesson Smits et al. 2020); He, Ne and Ar
+  compounds `not_applicable`. Rows with only Missing notes name their source in `note_source`, written to
+  the element file as `chemistry.sources`.
+- **Ions in solution:** where a common oxidation state is found mainly as an ion (NpO₂⁺, PuO₂⁺, AmO₂⁺, AmO₂²⁺)
+  the example is the ion, citing Greenwood.
+- **Sizes:** Shannon's effective ionic radii (1976; 276 rows over 91 elements, transcribed via mendeleev 1.3.0)
+  at coordination 4, 6 and 8 plus the rows Shannon marks most reliable; the ladder shows the six-coordinate
+  radius, else Shannon's most reliable, else the first. Covalent (Cordero 2008) and van der Waals radii come
+  via PubChem. Metallic radii are not shown: no documented source is registered yet, and the caption says so.
+- **Oxidation states** are PubChem's list, common ones in bold as on the tile. Where PubChem's "common" list
+  is odd (Pd +3) a note says so; the tile's data is not changed.
+
+### Biology & ecology, history & naming
+
+- **Builders** for both panels live in `tools/build_lifeandhistory.py`, called from `build_details.py`.
+- **New `biology.toml` rows** (isotope uses, soil and food-web notes, toxicity notes, IARC groups) each carry
+  their own source; primary-literature rows a Crossref-checked DOI. Fin reviews them (STATUS.md).
+- **IARC groups are never typed:** IARC's published list is read at build time and the build fails if an
+  agent named in `biology.toml` is not on it. The panel uses IARC's own group names.
+- **No toxicity note is not "safe":** where there is none the panel says "We have no curated note… That does
+  not mean it is safe." GHS labels appear only where the physical panel's data has them.
+- **Discovery places on a map:** coordinates from Natural Earth (22 places) and GeoNames (8; CC BY 4.0);
+  Wikidata refused requests (HTTP 429) and was not used. The map is Natural Earth 1:110m land, simplified
+  to 0.25° and cut below 60° S (32 KB). Eight discoveries have no single place in `history.toml` (Ti, Ga, As,
+  Te, Sm, Dy, Ho, Pt); the panel says so rather than guessing one.
+- **Timeline:** all 118 discoveries in decade columns, this element outlined and labelled, with a table view.
+- **Historical photos:** only the four already vendored (Pm, Ra, Cm, Fm); nothing new was taken from Commons.
+  The K-40 isotope-use row was dropped because its UNSCEAR page could not be reached to check it.
+
 ## Tooling
 
 - Versions are pinned exactly. TypeScript 6.0 is used because typescript-eslint does not yet support

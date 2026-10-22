@@ -5,6 +5,25 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-10-22
+
+The first release: all 118 elements in four layouts, each with a sheet of eleven panels, built from cited
+sources only. Live at https://bietenhader.github.io/PTE-21C-Experience-the-Elements/ — the honest limitations
+are listed in the README.
+
+### Added — milestone M5 (release)
+
+- The About page's table of how complete the data is now also counts the fields added in M4 (polarizability,
+  ionic radii, heat capacity, compounds, reactions, uses, GHS, IARC, isotope uses, discovery places).
+- The version number on the page and in the About dialog; README section "Honest limitations".
+- A release workflow (`.github/workflows/release.yml`, started by hand) that creates the tag and the GitHub
+  Release from this changelog.
+
+### Changed — M5
+
+- The licence and credit name is "Serafin Bietenhader".
+- The "preview" note above the table is replaced by the version.
+
 ### Added — milestone M4 (panels, batch 2)
 
 - **Probability & statistics:** the radial probability P(r) and its cumulative curve for any subshell with a
@@ -137,3 +156,6 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 - Tests: pipeline (schema, provenance, coverage, golden values, layouts), unit (formatting, Madelung, units,
   palette contrast, tile text) and end-to-end (fields, zero third-party requests, axe, keyboard order).
 - CI, GitHub Pages deployment, the `PTE-21C.command` launcher and `tools/pipeline.command`.
+
+[Unreleased]: https://github.com/Bietenhader/PTE-21C-Experience-the-Elements/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/Bietenhader/PTE-21C-Experience-the-Elements/releases/tag/v0.1.0

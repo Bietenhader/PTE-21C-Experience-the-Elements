@@ -592,9 +592,7 @@ Credits on the page (they override the site's CC BY 3.0): 43 Tc Technetium Trans
 | `s/technetium.jpg` | Technetium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Technetium-sample-cropped.jpg` | Technetium-sample-cropped.jpg | selected | pinned in images.toml |
 
-Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Technetium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: technetium-97, half-life 4.21 × 10⁶ years.
-
-**Problem:** File:Technetium-sample-cropped.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+Shown: Technetium in a sealed ampoule under argon — CC BY-SA 4.0
 
 ## 44 Ruthenium
 
@@ -830,9 +828,7 @@ Credits on the page (they override the site's CC BY 3.0): This is only an illust
 | `promethium.jpg` | Promethium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Promethium Metal Buttons.png` | Promethium Metal Buttons.png | selected | pinned in images.toml |
 
-Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Promethium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: promethium-145, half-life 17.7 years.
-
-**Problem:** File:Promethium Metal Buttons.png: not cached and no earlier conversion — run tools/fetch_images.py
+Shown: The first two buttons of promethium-147 metal, with a coin for scale — Public domain
 
 ## 62 Samarium
 
@@ -1189,9 +1185,7 @@ Element page: https://images-of-elements.com/radium.php
 | `radium-glow.jpg` | Glowing radium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:US radium standard 1927.jpg` | US radium standard 1927.jpg | selected | pinned in images.toml |
 
-Shown: placeholder: No openly licensed photograph was found: Radium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: radium-226, half-life 1600 years.
-
-**Problem:** File:US radium standard 1927.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+Shown: placeholder: No openly licensed photograph was found: Radium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: radium-226, half-life 1600 years.; The US radium standard of 1927: a sealed tube of radium chloride — Public domain
 
 ## 89 Actinium
 
@@ -1218,11 +1212,7 @@ Credits on the page (they override the site's CC BY 3.0): 90 Th Thorium Actinoid
 | `File:Thorium bead 1.jpg` | Thorium bead 1.jpg | selected | pinned in images.toml |
 | `File:Thorium sample 0.1g.jpg` | Thorium sample 0.1g.jpg | selected | pinned in images.toml |
 
-Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Thorium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: thorium-232, half-life 1.40 × 10¹⁰ years.
-
-**Problem:** File:Thorium bead 1.jpg: not cached and no earlier conversion — run tools/fetch_images.py
-
-**Problem:** File:Thorium sample 0.1g.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+Shown: A thorium bead — CC BY 4.0; Thin thorium sheet under argon, about 0.1 g — FAL 1.3
 
 ## 91 Protactinium
 
@@ -1235,9 +1225,7 @@ Credits on the page (they override the site's CC BY 3.0): Photo: © European Uni
 | `s/protactinium-231.jpg` | Protactinium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Protactinium-233.jpg` | Protactinium-233.jpg | selected | pinned in images.toml |
 
-Shown: placeholder: Photograph not yet downloaded: an openly licensed photograph of Protactinium has been chosen (Wikimedia Commons), but the server refused the download when this data was built; it appears after the next data update. Longest-lived isotope: protactinium-231, half-life 32570 years.
-
-**Problem:** File:Protactinium-233.jpg: not cached and no earlier conversion — run tools/fetch_images.py
+Shown: A sample of protactinium-233 (the dark circle) — Public domain
 
 ## 92 Uranium
 
@@ -1301,9 +1289,7 @@ Credits on the page (they override the site's CC BY 3.0): Photo: © European Uni
 | `s/curium-glow.jpg` | Curium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Curium hydroxide Nobel Lectures in Chemistry.png` | Curium hydroxide Nobel Lectures in Chemistry.png | selected | pinned in images.toml |
 
-Shown: placeholder: No openly licensed photograph was found: Curium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: curium-247, half-life 1.56 × 10⁷ years.
-
-**Problem:** File:Curium hydroxide Nobel Lectures in Chemistry.png: not cached and no earlier conversion — run tools/fetch_images.py
+Shown: placeholder: No openly licensed photograph was found: Curium has been made in visible amounts, but every photograph we know of is under a restrictive licence. Longest-lived isotope: curium-247, half-life 1.56 × 10⁷ years.; The first visible curium compound, curium hydroxide (1947), about twice enlarged — Public domain
 
 ## 97 Berkelium
 

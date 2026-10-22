@@ -1,4 +1,21 @@
 {
  "Z": 43,
- "images": []
+ "images": [
+  {
+   "file": "img/elements/43/1-800.webp",
+   "thumb": "img/elements/43/1-320.webp",
+   "width": 800,
+   "height": 433,
+   "title": "Technetium in a sealed ampoule under argon",
+   "author": "Marco Cardin",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Technetium-sample-cropped.jpg",
+   "attribution": "Marco Cardin, CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/; https://commons.wikimedia.org/wiki/File:Technetium-sample-cropped.jpg",
+   "source": "commons",
+   "kind": "sample",
+   "pin": "File:Technetium-sample-cropped.jpg",
+   "k": 1
+  }
+ ]
 }

@@ -10,7 +10,7 @@
    "citation": "PubChem, National Center for Biotechnology Information, U.S. National Library of Medicine. Periodic Table of Elements. https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-20",
+   "retrieved": "2026-10-22",
    "notes": "REST: rest/pug/periodictable/JSON (one request) and rest/pug_view/data/element/{Z}/JSON (one per element). PubChem aggregates data from Jefferson Lab and Los Alamos National Laboratory (both U.S. DOE); the oxidation-state lists used here come from those two contributors via PubChem."
   },
   "nist_gsie": {
@@ -22,7 +22,7 @@
    "citation": "Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. National Institute of Standards and Technology, Gaithersburg, MD. DOI: https://doi.org/10.18434/T4W30F",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-20",
+   "retrieved": "2026-10-22",
    "notes": "All spectra H–Og requested in one CSV. The database covers neutral atoms up to Z = 108 (Hs); for Z ≥ 109 it lists nothing. Square brackets mark semi-empirical (interpolated/extrapolated) values, parentheses mark ab-initio theoretical values (ASD help text)."
   },
   "nist_levels": {
@@ -34,7 +34,7 @@
    "citation": "Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. DOI: https://doi.org/10.18434/T4W30F",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-21",
+   "retrieved": "2026-10-22",
    "notes": "One tab-delimited request per neutral atom (108 answer). public/data/levels/{Z}.json keeps the lowest 60 levels with absolute energies and the ionization limit."
   },
   "nist_lines": {
@@ -46,7 +46,7 @@
    "citation": "Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. DOI: https://doi.org/10.18434/T4W30F",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-21",
+   "retrieved": "2026-10-22",
    "notes": "380-780 nm for the neutral atom and the singly charged ion (air wavelengths, as ASD gives them between 200 and 2000 nm), strongest 400 lines per species kept; plus vacuum windows around each laser-cooling line, whose A_ki gives the linewidth."
   },
   "nist_awic": {
@@ -58,7 +58,7 @@
    "citation": "Coursey, J. S., Schwab, D. J., Tsai, J. J. and Dragoset, R. A., Atomic Weights and Isotopic Compositions (version 4.1). National Institute of Standards and Technology, Gaithersburg, MD. https://physics.nist.gov/Comp",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-20",
+   "retrieved": "2026-10-22",
    "notes": "Linearized ASCII output, all elements, all isotopes. The standard atomic weights in this database are the IUPAC 2013 values (Meija et al., Pure Appl. Chem. 88, 265 (2016)); later IUPAC revisions are in `ciaaw`."
   },
   "nist_srd141": {
@@ -70,7 +70,7 @@
    "citation": "Kotochigova, S., Levine, Z. H., Shirley, E. L., Stiles, M. D. and Clark, C. W., Atomic Reference Data for Electronic Structure Calculations, NIST Standard Reference Database 141. https://math.nist.gov/DFTdata/atomdata/",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-21",
+   "retrieved": "2026-10-22",
    "notes": "Per-element tables at math.nist.gov/DFTdata/atomdata/tables/, Z = 1-92. Orbital eigenvalues of the neutral atom in LDA and ScRLDA, converted from hartree to eV with CODATA. The Sm page prints its ScRLDA column one row out of step; that column is not used for Sm."
   },
   "nist_codata": {
@@ -82,7 +82,7 @@
    "citation": "E. Tiesinga, P. J. Mohr, D. B. Newell and B. N. Taylor (2024), \"The 2022 CODATA Recommended Values of the Fundamental Physical Constants\" (Web Version 9.0). National Institute of Standards and Technology, Gaithersburg, MD. https://physics.nist.gov/constants",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-20",
+   "retrieved": "2026-10-22",
    "notes": "ASCII table https://physics.nist.gov/cuu/Constants/Table/allascii.txt. Generates src/physics/constants.ts and the eV ↔ kJ/mol factor used by the pipeline."
   },
   "iaea_livechart": {
@@ -94,7 +94,7 @@
    "citation": "IAEA Nuclear Data Section, LiveChart of Nuclides, data API https://nds.iaea.org/relnsd/v1/data (ground states of all nuclides), based on ENSDF.",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-20",
+   "retrieved": "2026-10-22",
    "notes": "One CSV request: ?fields=ground_states&nuclides=all. Used in M0 for natural abundances, nuclear spins and half-lives (most-stable mass number, radioactivity, hyperfine applicability)."
   },
   "ciaaw": {
@@ -106,7 +106,7 @@
    "citation": "IUPAC Commission on Isotopic Abundances and Atomic Weights, Standard Atomic Weights (2024) https://www.ciaaw.org/atomic-weights.htm and Abridged Standard Atomic Weights https://www.ciaaw.org/abridged-atomic-weights.htm",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-20",
+   "retrieved": "2026-10-22",
    "notes": "Added in M0 (not in the SPEC §6.1 list). Supplies the single display value for elements whose standard atomic weight is an interval, and a cross-check of NIST AWIC against the current IUPAC table."
   },
   "si_brochure": {
@@ -140,7 +140,7 @@
    "citation": "BIPM, Recommended values of standard frequencies for applications including the practical realization of the metre and secondary representations of the second (CCL-CCTF list, 2025 update), https://www.bipm.org/en/publications/mises-en-pratique/standard-frequencies — machine-readable via the BIPM Time Department CCL-CCTF API, https://webtai.bipm.org/api/ccl-cctf/",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-21",
+   "retrieved": "2026-10-22",
    "notes": "Every atomic and atomic-ion entry valid on the retrieval date, plus iodine (127I2) and the He-Ne laser. The rubidium-87 ground-state hyperfine splitting shown on its tile is this list's value."
   },
   "bunge_rhf": {
@@ -240,7 +240,7 @@
    "citation": "Jürgen Kummer, images-of-elements.com — photographs of the chemical elements, CC BY 3.0; each photo is credited with a link to its element page.",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-21",
+   "retrieved": "2026-10-22",
    "notes": "Element pages and photographs fetched by tools/fetch_images.py; the choice per element is tools/curated/images.toml. The site's licence is CC BY 3.0 'unless otherwise noted': photos the page credits to someone else carry that credit and licence instead."
   },
   "commons": {
@@ -252,7 +252,7 @@
    "citation": "Wikimedia Commons; each file credited individually in CREDITS.md.",
    "kind": "fetched",
    "status": "ok",
-   "retrieved": "2026-10-21",
+   "retrieved": "2026-10-22",
    "notes": "Only files pinned in tools/curated/images.toml, for elements images-of-elements.com cannot show freely. Commons rate-limits shared addresses heavily; the fetcher honours Retry-After."
   },
   "usgs_mcs": {

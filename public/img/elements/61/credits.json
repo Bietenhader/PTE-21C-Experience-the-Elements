@@ -1,4 +1,21 @@
 {
  "Z": 61,
- "images": []
+ "images": [
+  {
+   "file": "img/elements/61/1-800.webp",
+   "thumb": "img/elements/61/1-320.webp",
+   "width": 800,
+   "height": 495,
+   "title": "The first two buttons of promethium-147 metal, with a coin for scale",
+   "author": "E. J. Wheelwright",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Promethium_Metal_Buttons.png",
+   "attribution": "E. J. Wheelwright, Public domain; https://commons.wikimedia.org/wiki/File:Promethium_Metal_Buttons.png",
+   "source": "commons",
+   "kind": "historical",
+   "pin": "File:Promethium Metal Buttons.png",
+   "k": 1
+  }
+ ]
 }

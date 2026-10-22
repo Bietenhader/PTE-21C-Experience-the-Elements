@@ -67,5 +67,5 @@
   {"eV":4.2120922,"unc":4e-07,"configuration":"3p6.12p","term":"2P*","J":"3/2","parity":"odd"},
   {"eV":4.22253048,"unc":9e-08,"configuration":"3p6.11d","term":"2D","J":"5/2","parity":"even"}
 ],
-"ionizationLimit":{"value":29.380213,"unc":2.5e-05,"unit":"eV","source":"nist_levels","note":"Limit: K II (3p5.3d 1P*<1>)."}
+"ionizationLimit":{"value":4.34066373,"unc":9e-08,"unit":"eV","source":"nist_levels","note":"Limit: K II (3p6 1S<0>)."}
 }

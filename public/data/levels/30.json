@@ -67,5 +67,5 @@
   {"eV":9.01293,"unc":2.5e-05,"configuration":"3d10.4s.6f","term":"3F*","J":"2","parity":"odd"},
   {"eV":9.01293,"unc":3e-05,"configuration":"3d10.4s.6f","term":"3F*","J":"3","parity":"odd"}
 ],
-"ionizationLimit":{"value":20.359006,"unit":"eV","source":"nist_levels","note":"Limit: Zn II (5s 2S<1/2>)."}
+"ionizationLimit":{"value":9.394197,"unc":6e-06,"unit":"eV","source":"nist_levels","note":"Limit: Zn II (4s 2S<1/2>)."}
 }

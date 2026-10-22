@@ -67,5 +67,5 @@
   {"eV":7.1205271,"configuration":"4s2.4p.5d","term":"3P*","J":"2","parity":"odd"},
   {"eV":7.1360601,"configuration":"4s2.4p.5d","term":"3F*","J":"4","parity":"odd"}
 ],
-"ionizationLimit":{"value":8.11856,"unit":"eV","source":"nist_levels","note":"Limit: Ge II (4p 2P*<3/2>)."}
+"ionizationLimit":{"value":7.899435,"unc":1.2e-05,"unit":"eV","source":"nist_levels","note":"Limit: Ge II (4p 2P*<1/2>)."}
 }

@@ -67,5 +67,5 @@
   {"eV":11.8544214,"configuration":"3s2.3p4.(3P).5p","term":"4S*","J":"3/2","parity":"odd","gJ":1.531},
   {"eV":11.8653962,"configuration":"3s2.3p4.(3P<2>).4d","term":"2[3]","J":"7/2","parity":"even","gJ":1.416}
 ],
-"ionizationLimit":{"value":16.42406,"unit":"eV","source":"nist_levels","note":"Limit: Cl II (3p4 1S<0>)."}
+"ionizationLimit":{"value":12.967633,"unc":1.6e-05,"unit":"eV","source":"nist_levels","note":"Limit: Cl II (3p4 3P<2>)."}
 }

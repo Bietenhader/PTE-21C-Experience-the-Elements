@@ -67,5 +67,5 @@
   {"eV":10.051518,"unc":6e-06,"configuration":"5d10.6s.9d","term":"3D","J":"1","parity":"even"},
   {"eV":10.052323,"unc":1.7e-05,"configuration":"5d10.6s.9d","term":"3D","J":"2","parity":"even"}
 ],
-"ionizationLimit":{"value":16.70637,"unc":0.00012,"unit":"eV","source":"nist_levels","note":"Limit: Hg II (5d9.6s2 2D<3/2>)."}
+"ionizationLimit":{"value":10.437504,"unc":6e-06,"unit":"eV","source":"nist_levels","note":"Limit: Hg II (6s 2S<1/2>)."}
 }

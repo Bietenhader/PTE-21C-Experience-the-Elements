@@ -198,3 +198,22 @@ def test_no_element_beyond_bismuth_is_credited_to_agb_stars():
         if is_missing(origin) or not origin["fractions"].get("agb"):
             continue
         assert "agb" in origin.get("recycled", []), f"Z={z}: AGB share not marked as returned, not made"
+
+
+def test_levels_ionization_limit_is_the_first_ionization_energy():
+    """ASD's levels tables also list series limits to excited ion states; the limit kept is the lowest,
+    which is the first ionization energy NIST gives in its ionization-energy table."""
+    checked = 0
+    for path in sorted((DATA_DIR / "levels").glob("*.json")):
+        doc = load_json(path)
+        limit = doc["ionizationLimit"]
+        if is_missing(limit):
+            continue
+        stages = load_json(DATA_DIR / "elements" / path.name)["em"]["ionizationEnergies"].get("stages", [])
+        ie1 = next((s["eV"] for s in stages if s["stage"] == 1), None)
+        if ie1 is None:
+            continue
+        close = math.isclose(limit["value"], ie1, rel_tol=2e-3, abs_tol=0.01)
+        assert close, f"Z={doc['Z']}: {limit['value']} vs IE1 {ie1}"
+        checked += 1
+    assert checked > 90

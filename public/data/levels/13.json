@@ -67,5 +67,5 @@
   {"eV":5.89187,"configuration":"3s2.12d","term":"2D","J":"5/2","parity":"even"},
   {"eV":5.90569,"configuration":"3s2.13d","term":"2D","J":"3/2","parity":"even"}
 ],
-"ionizationLimit":{"value":13.40646,"unit":"eV","source":"nist_levels","note":"Limit: Al II (3s.3p 1P*<1>)."}
+"ionizationLimit":{"value":5.985769,"unc":3e-06,"unit":"eV","source":"nist_levels","note":"Limit: Al II (3s2 1S<0>)."}
 }

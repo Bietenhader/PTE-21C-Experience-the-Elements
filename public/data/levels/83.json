@@ -61,5 +61,5 @@
   {"eV":8.4416,"configuration":"6p2.(1D<2>).7s","term":"2[2]","J":"5/2?","parity":"even"},
   {"eV":8.5256,"configuration":"6p2.(3P<1>).9d","term":"6876","J":"1/2","parity":"even"}
 ],
-"ionizationLimit":{"value":11.4958,"unit":"eV","source":"nist_levels","note":"Limit: Bi II (6p2 1D<2>)."}
+"ionizationLimit":{"value":7.285516,"unc":6e-06,"unit":"eV","source":"nist_levels","note":"Limit: Bi II (6p2 3P<0>)."}
 }

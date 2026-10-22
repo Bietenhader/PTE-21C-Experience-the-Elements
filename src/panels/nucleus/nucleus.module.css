@@ -1,0 +1,190 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 60rem;
+}
+
+.magicNote {
+  margin-block: 0 var(--space-3);
+}
+
+/* --- isotope strip --- */
+
+.strip {
+  cursor: pointer;
+}
+
+.texture {
+  fill: var(--tile-ink);
+  stroke: var(--tile-ink);
+  opacity: 0.55;
+}
+
+.bar {
+  stroke: var(--text);
+  stroke-width: 0.5;
+  stroke-opacity: 0.35;
+}
+
+.selectedBar {
+  fill: none;
+  stroke: var(--focus);
+  stroke-width: 2.5;
+  pointer-events: none;
+}
+
+.selectedMark {
+  fill: var(--focus);
+}
+
+.unknownBar {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+
+.stableMark {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  fill: var(--tile-ink);
+  pointer-events: none;
+}
+
+.abundance {
+  fill: var(--text);
+}
+
+.magic {
+  stroke: var(--text-muted);
+  stroke-dasharray: 3 3;
+  stroke-width: 1;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  margin: var(--space-2) 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.swatch {
+  flex: none;
+  border-radius: 2px;
+  outline: 1px solid var(--border);
+}
+
+.pickRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.select,
+.number {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-2);
+  max-inline-size: 100%;
+}
+
+.number {
+  inline-size: 9rem;
+  font-family: var(--font-num);
+}
+
+/* --- decay and survival --- */
+
+.decays {
+  margin-block: 0 var(--space-3);
+  padding-inline-start: 1.25rem;
+}
+
+.readout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block: var(--space-2);
+}
+
+.result {
+  font-family: var(--font-num);
+  font-weight: 700;
+}
+
+.curve {
+  fill: none;
+  stroke: var(--link);
+  stroke-width: 2;
+}
+
+.marker {
+  fill: var(--focus);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+}
+
+/* --- binding energy --- */
+
+.dot {
+  fill: var(--link);
+}
+
+.hollow {
+  fill: var(--surface);
+  stroke: var(--link);
+  stroke-width: 1.5;
+}
+
+.reference {
+  stroke: var(--text-muted);
+  stroke-dasharray: 5 3;
+  stroke-width: 1.25;
+}
+
+.fe {
+  fill: var(--focus);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+}
+
+/* --- spin and parity, origin, thorium --- */
+
+.details summary {
+  cursor: pointer;
+}
+
+.details table {
+  margin-block-start: var(--space-2);
+}
+
+.onTone {
+  font-size: 0.75rem;
+  font-weight: 700;
+  fill: var(--tile-ink);
+}
+
+.row {
+  display: contents;
+}
+
+.timeline {
+  padding-inline-start: 1.25rem;
+}
+
+.timeline li + li {
+  margin-block-start: var(--space-1);
+}

@@ -661,6 +661,28 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
+  "groups": {
+   "fungi": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "The fungus Curvularia inaequalis makes a chloroperoxidase with vanadium at its active site.",
+      "source": "primary_literature",
+      "doi": "10.1073/pnas.93.1.392"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Azotobacter chroococcum can fix nitrogen with an alternative nitrogenase that contains vanadium instead of molybdenum.",
+      "source": "primary_literature",
+      "doi": "10.1038/322388a0"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Vanadium pentoxide",

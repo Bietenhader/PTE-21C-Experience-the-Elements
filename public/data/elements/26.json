@@ -732,6 +732,63 @@
    "text": "Binds oxygen in haemoglobin and myoglobin and carries electrons in respiration.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Carries oxygen in haemoglobin and myoglobin; piglets reared indoors are born with small reserves and become anaemic without extra iron.",
+      "source": "suttle2010",
+      "doi": "10.1079/9781845934729.0334"
+     },
+     {
+      "text": "Some invertebrates, such as sipunculid worms, bind oxygen with haemerythrin, which holds it between two iron atoms.",
+      "source": "primary_literature",
+      "doi": "10.1007/s00018-016-2326-7"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Iron proteins, with haem, iron–sulfur clusters or other iron centres, make up about 2 % of yeast proteins, many of them in respiration.",
+      "source": "cyert_philpott2013",
+      "doi": "10.1534/genetics.112.147207"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Built into iron–sulfur clusters, ancient cofactors found throughout life that carry electrons, bind substrates and help control genes.",
+      "source": "primary_literature",
+      "doi": "10.1146/annurev.biochem.74.082803.133518"
+     },
+     {
+      "text": "A rare exception: the Lyme disease bacterium Borrelia burgdorferi appears to do without iron, using manganese in its place.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Built into iron–sulfur clusters, ancient cofactors found throughout life that carry electrons, bind substrates and help control genes.",
+      "source": "primary_literature",
+      "doi": "10.1146/annurev.biochem.74.082803.133518"
+     },
+     {
+      "text": "An extreme case: about 86 % of the proteins of the acid-loving Ferroplasma acidiphilum bind iron.",
+      "source": "zhang_gladyshev2011",
+      "doi": "10.1074/jbc.R110.172833"
+     }
+    ]
+   }
   }
  },
  "history": {

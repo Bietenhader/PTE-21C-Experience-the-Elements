@@ -550,6 +550,38 @@
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
   },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Holds water in the body fluids and carries nerve signals; plant feeds are often low in it, which is why farm animals are given salt.",
+      "source": "suttle2010",
+      "doi": "10.1079/9781845934729.0182"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Halophilic ('salt-loving') bacteria, found in at least six phyla, need concentrated salt solutions to grow.",
+      "source": "primary_literature",
+      "doi": "10.1186/1746-1448-4-2"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Halobacterium and most of its relatives need more than 100–150 g of salt per litre to grow and to keep their cells intact.",
+      "source": "primary_literature",
+      "doi": "10.1186/1746-1448-4-2"
+     }
+    ]
+   }
+  },
   "environment": [
    {
     "text": "Salt, mostly sodium chloride, in irrigated and naturally saline soils limits crop yields worldwide; most crops suffer when sodium builds up in their leaves.",

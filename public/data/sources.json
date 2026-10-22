@@ -702,6 +702,61 @@
    "kind": "reference",
    "status": "ok",
    "notes": "Added in M4. The iodine-131 note on the biology panel (milk, children's thyroids, thyroid cancers by 2005)."
+  },
+  "maret2016": {
+   "id": "maret2016",
+   "title": "The Metals in the Biological Periodic System of the Elements: Concepts and Conjectures",
+   "url": "https://doi.org/10.3390/ijms17010066",
+   "licence": "CC BY 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+   "citation": "W. Maret, The Metals in the Biological Periodic System of the Elements: Concepts and Conjectures, Int. J. Mol. Sci. 17, 66 (2016), doi:10.3390/ijms17010066.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after M5. Its Figure 2 marks the elements essential for most forms of life; used for the building-block elements (H, C, N, O, P, S) of animals and fungi (biology.toml [[life]])."
+  },
+  "wackett2004": {
+   "id": "wackett2004",
+   "title": "Microbial Genomics and the Periodic Table",
+   "url": "https://doi.org/10.1128/AEM.70.2.647-655.2004",
+   "licence": "© American Society for Microbiology; facts, cited",
+   "licenceUrl": "https://journals.asm.org/non-commercial-tdm-license",
+   "citation": "L. P. Wackett, A. G. Dodge and L. B. M. Ellis, Microbial Genomics and the Periodic Table, Appl. Environ. Microbiol. 70, 647–655 (2004), doi:10.1128/AEM.70.2.647-655.2004.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after M5. Which elements bacteria and archaea need or use: the six building-block elements, the major cations, chloride, boron, iron and manganese (biology.toml [[life]])."
+  },
+  "suttle2010": {
+   "id": "suttle2010",
+   "title": "Mineral Nutrition of Livestock, 4th edition",
+   "url": "https://doi.org/10.1079/9781845934729.0000",
+   "licence": "Textbook; facts cited",
+   "licenceUrl": "https://doi.org/10.1079/9781845934729.0000",
+   "citation": "N. F. Suttle, Mineral Nutrition of Livestock, 4th ed., CABI, Wallingford (2010), doi:10.1079/9781845934729.0000; one chapter per element, cited by DOI.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after M5. The minerals farm animals need and what goes wrong without them (biology.toml [[life]], animals)."
+  },
+  "zhang_gladyshev2011": {
+   "id": "zhang_gladyshev2011",
+   "title": "Comparative Genomics of Trace Element Dependence in Biology",
+   "url": "https://doi.org/10.1074/jbc.R110.172833",
+   "licence": "Open access; facts, cited",
+   "licenceUrl": "https://doi.org/10.1074/jbc.R110.172833",
+   "citation": "Y. Zhang and V. N. Gladyshev, Comparative Genomics of Trace Element Dependence in Biology, J. Biol. Chem. 286, 23623–23629 (2011), doi:10.1074/jbc.R110.172833.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after M5. Zinc, iron and selenium use across bacteria and archaea, from genome comparisons (biology.toml [[life]])."
+  },
+  "cyert_philpott2013": {
+   "id": "cyert_philpott2013",
+   "title": "Regulation of Cation Balance in Saccharomyces cerevisiae",
+   "url": "https://doi.org/10.1534/genetics.112.147207",
+   "licence": "© Genetics Society of America; facts, cited",
+   "licenceUrl": "https://doi.org/10.1534/genetics.112.147207",
+   "citation": "M. S. Cyert and C. C. Philpott, Regulation of Cation Balance in Saccharomyces cerevisiae, Genetics 193, 677–713 (2013), doi:10.1534/genetics.112.147207.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after M5. What baker's yeast, the best-studied fungus, needs potassium, magnesium, calcium, iron, zinc, copper and manganese for (biology.toml [[life]], fungi)."
   }
  }
 }

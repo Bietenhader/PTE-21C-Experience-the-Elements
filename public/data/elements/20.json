@@ -710,6 +710,38 @@
    "text": "Builds bones and teeth, and signals muscle contraction, nerve transmission and blood clotting.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "The main mineral of bone and eggshell and a signal in nerves and muscles; dairy cows can get milk fever when their blood calcium drops at calving.",
+      "source": "suttle2010",
+      "doi": "10.1079/9781845934729.0054"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Baker's yeast needs it to grow and uses it as a signal, for example under stress or in response to mating pheromone.",
+      "source": "cyert_philpott2013",
+      "doi": "10.1534/genetics.112.147207"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Kept at low levels; some bacteria use it to hold secreted enzymes together, to form spores or in calcium-binding proteins.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
   }
  },
  "history": {

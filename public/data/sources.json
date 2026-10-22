@@ -165,6 +165,17 @@
    "status": "not_yet_used",
    "notes": "v0.2 (Tier B orbitals). DOI to be confirmed when the data is transcribed."
   },
+  "slater1930": {
+   "id": "slater1930",
+   "title": "Slater's rules for atomic screening constants",
+   "url": "https://doi.org/10.1103/PhysRev.36.57",
+   "licence": "Published method; cite",
+   "licenceUrl": "https://doi.org/10.1103/PhysRev.36.57",
+   "citation": "J. C. Slater, Atomic shielding constants, Phys. Rev. 36, 57–64 (1930), doi:10.1103/PhysRev.36.57.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Computed in the app (src/physics/zeff.ts) for subshells the Clementi–Raimondi table does not cover: hydrogen (where the rules give the exact Z = 1), elements beyond radon, and subshells outside the configuration Clementi and Raimondi used (e.g. gadolinium's 5d)."
+  },
   "clementi_zeff": {
    "id": "clementi_zeff",
    "title": "Clementi–Raimondi effective nuclear charges",

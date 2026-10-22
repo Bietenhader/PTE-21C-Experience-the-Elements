@@ -1,0 +1,201 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 60rem;
+}
+
+.toggle {
+  margin: 0 0 var(--space-2);
+  min-block-size: 2.25rem;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.toggle[aria-pressed="true"] {
+  border-color: var(--link);
+}
+
+.tick {
+  display: inline-block;
+  inline-size: 1.1em;
+  block-size: 1.1em;
+  margin-inline-end: 0.35em;
+  vertical-align: -0.15em;
+  border: 1px solid var(--text-muted);
+  border-radius: 3px;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.stripBox {
+  position: relative;
+}
+
+/* The discharge-tube look: black in both themes. */
+.night {
+  fill: #000;
+}
+
+.tip {
+  position: absolute;
+  z-index: 5;
+  max-inline-size: 260px;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.35);
+  color: var(--text);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.glow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-2);
+  max-inline-size: 75ch;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.glow strong {
+  color: var(--text);
+}
+
+.swatch {
+  flex: none;
+  inline-size: 3rem;
+  block-size: 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.tableWrap:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th,
+.table td {
+  padding: 0.25rem 0.6rem;
+  border-block-end: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table thead th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.table tbody th {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Keep "6.16 × 10⁷ s⁻¹" on one line: a number broken across lines reads as two. */
+.nowrap {
+  white-space: nowrap;
+}
+
+.tableCaption {
+  margin-block-end: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-align: start;
+  caption-side: top;
+}
+
+.dot {
+  display: inline-block;
+  inline-size: 0.7em;
+  block-size: 0.7em;
+  margin-inline-end: 0.4em;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  vertical-align: -0.05em;
+}
+
+.limit {
+  stroke: var(--text-muted);
+  stroke-dasharray: 5 4;
+  stroke-width: 1;
+}
+
+.transition {
+  stroke: var(--text-muted);
+  stroke-opacity: 0.7;
+  stroke-width: 1;
+}
+
+.level {
+  stroke: var(--text);
+  stroke-width: 1.6;
+}
+
+.cooling {
+  stroke: var(--link);
+  stroke-width: 3.2;
+}
+
+.clock {
+  stroke: var(--focus);
+  stroke-dasharray: 6 3;
+  stroke-width: 3.2;
+}
+
+.markLabel {
+  fill: var(--text);
+  font-family: var(--font-num);
+  font-size: 11px;
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-linejoin: round;
+  stroke-width: 4px;
+}
+
+.marks {
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.marks li {
+  margin-block-end: var(--space-1);
+}
+
+.keyCooling,
+.keyClock {
+  display: inline-block;
+  inline-size: 1.6em;
+  margin-inline-end: 0.5em;
+  vertical-align: 0.3em;
+}
+
+.keyCooling {
+  border-block-start: 3px solid var(--link);
+}
+
+.keyClock {
+  border-block-start: 3px dashed var(--focus);
+}

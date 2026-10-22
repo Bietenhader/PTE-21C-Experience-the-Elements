@@ -40,6 +40,8 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 - NIST levels files kept a series limit instead of the first ionization limit (32 files).
 - Isotope mass uncertainties carried floating-point noise; width limits were worded as half-life limits.
 - Safari: a scroll event as the sheet closed reset the remembered panel.
+- Two quick panel changes (→ → or a tab click during a scroll) could bounce back a panel: the end of the
+  earlier scroll was read as a swipe.
 
 ### Added — milestone M2 (data complete for v0.1)
 

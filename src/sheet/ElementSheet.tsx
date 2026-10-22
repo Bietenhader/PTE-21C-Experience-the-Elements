@@ -137,13 +137,18 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
 
   // Bring the strip to the current panel (instantly on open or with reduced motion).
   const indexRef = useRef(index);
+  // The panel the app is scrolling the strip to, or null while the reader moves it.
+  const scrollingTo = useRef<number | null>(null);
   useLayoutEffect(() => {
     indexRef.current = index;
     const s = strip.current;
     if (!s || s.clientWidth === 0) return;
     const left = index * s.clientWidth;
     const behavior = first.current || reduced ? "instant" : "smooth";
-    if (Math.abs(s.scrollLeft - left) > 2) s.scrollTo({ left, behavior });
+    if (Math.abs(s.scrollLeft - left) > 2) {
+      scrollingTo.current = index;
+      s.scrollTo({ left, behavior });
+    }
     first.current = false;
     revealTab(tablist.current, index, behavior);
   }, [index, reduced]);
@@ -175,6 +180,7 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
     const ro = new ResizeObserver(() => {
       if (s.clientWidth === width) return;
       width = s.clientWidth;
+      scrollingTo.current = indexRef.current;
       s.scrollTo({ left: indexRef.current * width, behavior: "instant" });
       revealTab(tablist.current, indexRef.current, "instant");
       first.current = false;
@@ -185,7 +191,10 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
 
   // A swipe (or trackpad scroll) that settles on another panel selects it. Only a strip at rest on a
   // panel counts, and only while the sheet is open: WebKit also fires scroll events mid-animation and
-  // when the closing dialog resets the strip to 0, which must not select the first panel.
+  // when the closing dialog resets the strip to 0, which must not select the first panel. While the
+  // app itself scrolls the strip (a tab, a key), only arriving at its target counts: the end of an
+  // earlier scroll can land after the next panel was chosen, and must not undo it (two quick → presses
+  // bounced back a panel). Touch, a pointer press or the wheel hands the strip back to the reader.
   useEffect(() => {
     const s = strip.current;
     if (!s) return;
@@ -195,9 +204,18 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
       if (!useView.getState().element || width === 0) return;
       const i = Math.round(s.scrollLeft / width);
       if (Math.abs(s.scrollLeft - i * width) > 2) return;
+      if (scrollingTo.current !== null) {
+        if (i === scrollingTo.current) scrollingTo.current = null;
+        return;
+      }
       const slug = PANELS[i]?.slug;
       if (slug && slug !== useView.getState().panel) setPanel(slug);
     };
+    const reader = () => {
+      scrollingTo.current = null;
+    };
+    const handBack = ["pointerdown", "touchstart", "wheel"] as const;
+    for (const type of handBack) s.addEventListener(type, reader, { passive: true });
     const onScroll = () => {
       window.clearTimeout(timer);
       timer = window.setTimeout(settle, 140);
@@ -207,6 +225,7 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
     return () => {
       window.clearTimeout(timer);
       s.removeEventListener(native ? "scrollend" : "scroll", native ? settle : onScroll);
+      for (const type of handBack) s.removeEventListener(type, reader);
     };
   }, []);
 

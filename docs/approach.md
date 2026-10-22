@@ -413,6 +413,10 @@ Orbitals, electromagnetic & ionization, spectrum, and nucleus (SPEC §10.1, §10
 - The element sheet's header (photographs, summary) folds to a name bar once the reader scrolls into a long
   panel, and opens again at the panel's top or with "Show photographs and summary"; the tab row scrolls so
   the current tab is always in sight.
+- **Who moves the strip:** while the app scrolls the panel strip to a panel (a tab, a key), only arriving at
+  that panel counts; a touch, a pointer press or the wheel hands the strip back to the reader, whose swipe
+  then selects the panel it settles on. Before, the end of an earlier scroll could land after the next panel
+  had been chosen and undo it.
 
 ## Tooling
 

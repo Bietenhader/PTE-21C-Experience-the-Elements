@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M4 — Panels, batch 2 · **ready for Fin's review (and his review of `biology.toml`)**
+**Current milestone:** M4 — Panels, batch 2 · **accepted and merged** (pull request #5, 2026-10-22)
 **Last updated:** 2026-10-22
-**Next:** M5 — release v0.1.0 (README with screenshots, About page, CHANGELOG, GitHub Release), after Fin's
-review of M4.
+**Next:** M5 — release v0.1.0 (README with screenshots, About page, CHANGELOG, GitHub Release). Before it
+starts: F1 (attribution name) and F5 (subtitle) to confirm.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
@@ -57,7 +57,7 @@ Every row has its source; papers have a DOI that was checked; all text is in our
 - **30 IARC entries** (`[[iarc]]`): only the agent's name is typed; the group (1, 2A, 2B, 3) is read from
   IARC's own list when the data is built.
 
-Please say "biology OK", or tell me which rows to change or remove.
+**Reviewed by Fin on 2026-10-22: "biology OK".**
 
 ## M4 acceptance criteria (SPEC §18)
 
@@ -66,7 +66,7 @@ Please say "biology OK", or tell me which rows to change or remove.
 | 118 × 11 property test | Done — every element on each of the eleven panels: no console errors, nothing like "NaN" on screen, every missing value names its reason (`tests/e2e/panels.spec.ts`) |
 | Every Missing carries a reason | Done — checked by the property test on every panel of every element, and by the pipeline |
 | AMO panel: hyperfine, clock and laser-cooling data for Cs, Rb, Sr, Yb, Al, Hg, Th; `not_applicable` reasons for e.g. He | Done — for each of the seven elements every hyperfine row, clock and laser-cooling line in the data is on screen; helium says *not applicable* because I = 0 and J = 0 (`tests/e2e/amo.spec.ts`, desktop and phone) |
-| Fin has reviewed `biology.toml` | **Waiting for you** (see above) |
+| Fin has reviewed `biology.toml` | Done — "biology OK" (2026-10-22) |
 
 Also: 294 unit tests, 162 pipeline tests and 268 end-to-end tests (Chromium, desktop and phone; 24 more are for
 the other profiles only) pass; the Lighthouse budgets hold (mobile score 94, initial JavaScript 109.1 kB of
@@ -143,7 +143,7 @@ the code dependencies are clean.
 |---|---|---|
 | F1 Attribution name | "Bietenhader (Fin)" (README, footer, package) | Confirm or change before M5 |
 | F2 GitHub Pages | Source "GitHub Actions" | Done (2026-10-20) |
-| F3 Review `biology.toml` and the image report | Reviewed in M2 ("LGTM") | **Now (M4):** the new rows (see above) |
+| F3 Review `biology.toml` and the image report | Reviewed in M2 ("LGTM") | M4 rows reviewed: "biology OK" (2026-10-22) |
 | F4 Design review | M3: "the screenshots look good" | Comments on the M4 screenshots welcome |
 | F5 Subtitle | "A fresh perspective on the Periodic Table of the Elements" | Confirm or change before M5 |
 

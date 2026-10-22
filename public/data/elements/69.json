@@ -879,7 +879,12 @@
   "place": "Uppsala, Sweden",
   "nameOrigin": "From Thule, the ancient name of a far-northern land, here standing for Scandinavia.",
   "source": "pubchem",
-  "note": "Cleve separated its oxide from erbia along with holmia. CIAAW credits the American chemist Charles James with its first isolation in 1911."
+  "note": "Cleve separated its oxide from erbia along with holmia. CIAAW credits the American chemist Charles James with its first isolation in 1911.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Thulium is a soft, silver-grey lanthanide named after Thule, a classical name for the far north, and it is the scarcest of the lanthanides that have stable isotopes. That rarity long kept it a curiosity, but thulium made radioactive in a reactor serves as a compact source for portable X-ray units, and thulium-doped fibre lasers are used in surgery. All natural thulium is thulium-169, with nuclear spin 1/2. Its electron shell, [Xe] 4f¹³ 6s², lacks just one electron to fill the 4f subshell, so it behaves like a single ‘hole’ with orbital angular momentum L = 3, giving the ground level ²F°₇/₂.",

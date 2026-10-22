@@ -1150,7 +1150,12 @@
   "place": "Paris, France",
   "nameOrigin": "From the Greek aktis (genitive aktinos), 'ray' or 'beam'.",
   "source": "pubchem",
-  "note": "Debierne reported it in 1899 and Giesel found it independently in 1902; the map dot marks Debierne's Paris. Jefferson Lab gives Giesel's middle name as Otto."
+  "note": "Debierne reported it in 1899 and Giesel found it independently in 1902; the map dot marks Debierne's Paris. Jefferson Lab gives Giesel's middle name as Otto.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Actinium is a soft, silvery, radioactive metal that gives the actinide series its name, taken from the Greek for a ray; André-Louis Debierne identified it in 1899, and its chemistry closely resembles that of lanthanum. Its longest-lived isotope, actinium-227, has a half-life of about 22 years. Another has found a new purpose: actinium-225 is being developed as a cancer treatment, because its chain of decays releases several alpha particles that can destroy tumour cells at very close range. Although it heads the actinide row, the atom holds no 5f electron at all: its ground configuration is [Rn] 6d¹ 7s², not the Aufbau prediction 5f¹ 7s², giving a ²D₃/₂ ground term.",

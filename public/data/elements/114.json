@@ -118,7 +118,12 @@
   "symbolNote": "Temporary name: ununquadium (Uuq); named flerovium in 2012.",
   "source": "iupac_discovery",
   "doi": "10.1351/PAC-REP-10-05-01",
-  "note": "Made from calcium-48 and plutonium; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration on the strength of its 2004 experiments. Los Alamos gives 1999, the year the first report was published."
+  "note": "Made from calcium-48 and plutonium; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration on the strength of its 2004 experiments. Los Alamos gives 1999, the year the first report was published.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Flerovium is a synthetic element in group 14, below lead, named after the Flerov Laboratory of Nuclear Reactions at Dubna and its founder, Georgy Flyorov. Teams there first reported it in 1998, made by firing calcium-48 ions at plutonium, and only small numbers of atoms have been produced since. Its isotopes are long-lived by superheavy standards, flerovium-289 having a half-life of about 2.4 seconds, a hint of the predicted island of stability around element 114. Single-atom experiments show that it is unusually volatile. Relativity is predicted to split its 7p subshell so strongly that the two outer electrons, in [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p², fill a closed 7p₁/₂ level, making it relatively inert.",

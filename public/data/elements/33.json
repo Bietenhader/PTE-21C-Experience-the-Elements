@@ -534,7 +534,31 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "environment": [
+   {
+    "text": "Arsenic dissolved naturally from rocks into groundwater is the greatest threat from it: wells in Bangladesh and many other countries exceed safe levels, and crops irrigated with such water carry it into food.",
+    "source": "who_arsenic"
+   }
+  ],
+  "toxicity": [
+   {
+    "text": "Years of drinking water or eating food with inorganic arsenic lead to chronic poisoning, seen first in the skin as lesions and cancers.",
+    "source": "who_arsenic"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Arsenic and inorganic arsenic compounds",
+    "group": "1",
+    "volumes": [
+     "23",
+     "Sup 7",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1250,

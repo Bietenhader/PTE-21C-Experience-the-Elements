@@ -490,7 +490,12 @@
   ],
   "nameOrigin": "From Scandia, the Latin name for Scandinavia, where its minerals were found.",
   "source": "pubchem",
-  "note": "Cleve showed the same year that it was Mendeleev's predicted eka-boron. Los Alamos gives 1878. The 1937 metal preparation: Z. anorg. allg. Chem. 231, 54 (doi:10.1002/zaac.19372310107)."
+  "note": "Cleve showed the same year that it was Mendeleev's predicted eka-boron. Los Alamos gives 1878. The 1937 metal preparation: Z. anorg. allg. Chem. 231, 54 (doi:10.1002/zaac.19372310107).",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Scandium is a light, silvery transition metal, named after Scandinavia, where its minerals were found; small additions of it strengthen the aluminium alloys used in some aircraft parts and sports equipment. Its existence was foreseen: Mendeleev left a gap in his table for an element he called eka-boron and predicted its properties, and scandium, discovered in 1879, filled that gap closely. Scandium is the first element to place an electron in a 3d orbital, giving [Ar] 3d¹ 4s² and the ground term ²D₃/₂, yet in compounds it almost always gives away all three outer electrons; with no d electrons left, its compounds are usually colourless.",

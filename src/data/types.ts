@@ -658,6 +658,34 @@ export interface Biology {
   plantRole?: SourcedText;
   humanRole?: SourcedText;
   note?: string;
+  /**
+   * Isotopes in biology and medicine (SPEC §10.10), our own words with a source per row. A is omitted when the use is not isotope-specific (gadolinium contrast agents).
+   */
+  isotopeUses?: {
+    A?: number;
+    isomer?: "m";
+    field: "medicine" | "tracer" | "dating" | "environment";
+    text: string;
+    source: SourceId;
+    doi?: string;
+  }[];
+  /**
+   * Environmental notes: soils, bioaccumulation, radioecology.
+   */
+  environment?: SourcedText[];
+  /**
+   * Curated toxicity notes, where a cited source supports one. Absent means no curated note, not 'safe'.
+   */
+  toxicity?: SourcedText[];
+  /**
+   * IARC carcinogen classifications of element-related agents; the group comes from the fetched IARC list.
+   */
+  iarc?: {
+    agent: string;
+    group: ("1" | "2A" | "2B" | "3") | Missing;
+    volumes?: string[];
+    source: SourceId;
+  }[];
 }
 /**
  * public/data/elements/{Z}.json: per-panel detail, loaded when the sheet opens (SPEC §5, §10). Sections are keyed by panel slug.
@@ -753,6 +781,16 @@ export interface ElementDetailFile {
     source: SourceId;
     doi?: string;
     note?: string;
+    /**
+     * Where the discovery place is, from the gazetteer named in tools/curated/places.toml (SPEC §10.11).
+     */
+    placeLocation?:
+      | {
+          lat: number;
+          lon: number;
+          source: SourceId;
+        }
+      | Missing;
   };
   /**
    * Our own 60–120-word text (tools/curated/prose/{Z}.md): what it is, one surprising fact, one quantum fact.
@@ -1122,4 +1160,19 @@ export interface ColourMatchingFile {
     number,
     number
   ];
+}
+/**
+ * public/data/worldmap.json: the land outline behind the discovery map (SPEC §10.11), simplified from Natural Earth 1:110m land (public domain). Rings of [lon, lat] in degrees, equirectangular.
+ */
+export interface WorldMapFile {
+  schemaVersion: 1;
+  source: SourceId;
+  projection: "equirectangular";
+  bounds: {
+    lonMin: number;
+    lonMax: number;
+    latMin: number;
+    latMax: number;
+  };
+  rings: [[number, number], [number, number], [number, number], [number, number], ...[number, number][]][];
 }

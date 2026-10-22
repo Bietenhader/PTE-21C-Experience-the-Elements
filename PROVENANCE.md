@@ -50,6 +50,14 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `icrp23` | [ICRP Publication 23: Report of the Task Group on Reference Man (1975)](https://doi.org/10.1016/S0074-2740(75)80022-5) | [© ICRP; numerical values cited as a scientific table (facts)](https://www.icrp.org/) | — | used |
 | `kerr1982` | [Photon and neutron fluence-to-kerma conversion factors for ICRP-1975 reference man using improved elemental compositions for bone and marrow of the skeleton (ORNL/TM-8318)](https://www.osti.gov/biblio/7058905) | [U.S. Government report; distribution unlimited](https://www.osti.gov/servlets/purl/7058905) | — | used |
 | `iupac_discovery` | [IUPAC/IUPAP reports on the discovery of elements 101-118](https://iupac.org/what-we-do/periodic-table-of-elements/) | [Facts; cite](https://iupac.org/) | — | used |
+| `natural_earth` | [Natural Earth: 1:110m land and 1:10m populated places](https://www.naturalearthdata.com/) | [Public domain (Natural Earth terms of use)](https://www.naturalearthdata.com/about/terms-of-use/) | 2026-10-22 | used |
+| `geonames` | [GeoNames geographical database (cities with at least 5000 inhabitants)](https://www.geonames.org/) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 2026-10-22 | used |
+| `iarc_classifications` | [IARC Monographs: List of Classifications (agents classified by the IARC Monographs)](https://monographs.iarc.who.int/list-of-classifications) | [© IARC/WHO; the classifications are facts, cited](https://monographs.iarc.who.int/) | 2026-10-22 | used |
+| `who_lead` | [WHO fact sheet: Lead poisoning](https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
+| `who_mercury` | [WHO fact sheet: Mercury and health](https://www.who.int/news-room/fact-sheets/detail/mercury-and-health) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
+| `who_arsenic` | [WHO fact sheet: Arsenic](https://www.who.int/news-room/fact-sheets/detail/arsenic) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
+| `who_radon` | [WHO fact sheet: Radon](https://www.who.int/news-room/fact-sheets/detail/radon-and-health) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
+| `unscear_chernobyl` | [UNSCEAR: The Chernobyl accident (assessments of 2000, 2008 and later)](https://www.unscear.org/unscear/en/areas-of-work/chernobyl.html) | [© United Nations; facts, cited](https://www.un.org/en/about-us/terms-of-use) | — | used |
 
 ### Citations
 
@@ -87,6 +95,14 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `icrp23` — International Commission on Radiological Protection, Report of the Task Group on Reference Man, ICRP Publication 23, Pergamon (1975), Chapter 2, Table 110 'Reference Man: total body content for some elements', pp. 327-328, doi:10.1016/S0074-2740(75)80022-5.
 - `kerr1982` — G. D. Kerr, Photon and neutron fluence-to-kerma conversion factors for ICRP-1975 reference man using improved elemental compositions for bone and marrow of the skeleton, ORNL/TM-8318, Oak Ridge National Laboratory (1982), Table 1, https://www.osti.gov/biblio/7058905.
 - `iupac_discovery` — Transfermium Working Group (1993) and IUPAC/IUPAP Joint Working Party reports on the priority of claims to the discovery of elements 101 and beyond, Pure Appl. Chem. (each row cites its report by DOI).
+- `natural_earth` — Natural Earth, free vector and raster map data, naturalearthdata.com: ne_110m_land and ne_10m_populated_places_simple (GeoJSON from the natural-earth-vector repository, github.com/nvkelso/natural-earth-vector).
+- `geonames` — GeoNames, geographical database, www.geonames.org; bulk file cities5000.zip from download.geonames.org/export/dump/.
+- `iarc_classifications` — International Agency for Research on Cancer, IARC Monographs on the Identification of Carcinogenic Hazards to Humans, List of Classifications, monographs.iarc.who.int/list-of-classifications (group and volumes per agent).
+- `who_lead` — World Health Organization, Lead poisoning, fact sheet, 10 June 2026, www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health.
+- `who_mercury` — World Health Organization, Mercury and health, fact sheet, 24 October 2024, www.who.int/news-room/fact-sheets/detail/mercury-and-health.
+- `who_arsenic` — World Health Organization, Arsenic, fact sheet, 7 December 2022, www.who.int/news-room/fact-sheets/detail/arsenic.
+- `who_radon` — World Health Organization, Radon, fact sheet, 25 January 2023, www.who.int/news-room/fact-sheets/detail/radon-and-health.
+- `unscear_chernobyl` — United Nations Scientific Committee on the Effects of Atomic Radiation, The Chernobyl accident, www.unscear.org/unscear/en/areas-of-work/chernobyl.html, summarizing UNSCEAR 2008 Report Vol. II, Annex D, Health effects due to radiation from the Chernobyl accident (United Nations, 2011).
 
 ## Field coverage (of 118 elements)
 

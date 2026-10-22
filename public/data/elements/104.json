@@ -533,7 +533,12 @@
   "symbolNote": "Dubna proposed kurchatovium (Ku) and Berkeley rutherfordium (Rf); a 1994 IUPAC proposal would have called it dubnium, but rutherfordium was adopted in 1997. Its temporary systematic name was unnilquadium (Unq).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "The 1993 IUPAC/IUPAP report judged the Dubna chemistry experiments and the Berkeley experiments of 1969 practically simultaneous, and both demonstrated element 104; PubChem gives the 1964 Dubna claim."
+  "note": "The 1993 IUPAC/IUPAP report judged the Dubna chemistry experiments and the Berkeley experiments of 1969 practically simultaneous, and both demonstrated element 104; PubChem gives the 1964 Dubna claim.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Rutherfordium, named after Ernest Rutherford, is the first transactinide element and sits below hafnium in group 4. Teams at Dubna in 1964 and at Berkeley in 1969 both claimed it, using different reactions, and credit was eventually shared after a long dispute. Only small numbers of atoms have ever been made, and most of its isotopes live for seconds or less, though some, such as rutherfordium-261, last about a minute, long enough for single-atom chemistry, which shows that it forms a volatile chloride as hafnium does. Calculations give it hafnium's outer pattern, [Rn] 5f¹⁴ 6d² 7s² with a ³F₂ ground level, but no spectrum has been measured.",

@@ -638,7 +638,12 @@
   "place": "Turku, Finland",
   "nameOrigin": "From Ytterby, the Swedish village whose quarry supplied the mineral (later named gadolinite).",
   "source": "pubchem",
-  "note": "Gadolin found a new 'earth', yttria; Jefferson Lab gives 1789. Mosander showed in 1843 that yttria also held the oxides of erbium and terbium."
+  "note": "Gadolin found a new 'earth', yttria; Jefferson Lab gives 1789. Mosander showed in 1843 that yttria also held the oxides of erbium and terbium.",
+  "placeLocation": {
+   "lat": 60.454,
+   "lon": 22.255,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Yttrium is a silvery transition metal that behaves chemically much like the rare-earth elements and is mined together with them. It is named after Ytterby, a village near Stockholm whose quarry has given its name to more elements than any other place on Earth. Yttrium compounds, doped with europium, made the red glow of old colour television screens; others form the crystals of many industrial lasers and a copper oxide that was the first material to superconduct above the boiling point of liquid nitrogen. The atom has a single 4d electron, [Kr] 4d¹ 5s² (ground term ²D₃/₂), and its only stable isotope, yttrium-89, has a closed shell of 50 neutrons.",

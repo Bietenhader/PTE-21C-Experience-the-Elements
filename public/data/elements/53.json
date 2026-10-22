@@ -733,7 +733,33 @@
    "text": "Built into the thyroid hormones thyroxine and triiodothyronine; shortage causes goitre.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 131,
+    "field": "medicine",
+    "text": "The thyroid gathers iodine from the blood, so radioactive iodine-131 can treat an overactive thyroid from the inside; it was first used for this in the 1940s.",
+    "source": "primary_literature",
+    "doi": "10.1001/jama.1946.02870190005002"
+   },
+   {
+    "A": 131,
+    "field": "environment",
+    "text": "After the Chernobyl accident iodine-131 (half-life eight days) reached children through milk and collected in their thyroids; by 2005 more than 6000 thyroid cancers had been diagnosed among those exposed as children or adolescents in Belarus, Russia and Ukraine, a large fraction of them attributed to it.",
+    "source": "unscear_chernobyl"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Radioiodines, including iodine-131",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1811,
@@ -743,7 +769,12 @@
   "place": "Paris, France",
   "nameOrigin": "From the Greek iodes, 'violet', the colour of its vapour.",
   "source": "pubchem",
-  "note": "Courtois found it in seaweed ash; Gay-Lussac showed it is an element and named it (CIAAW dates this to 1814)."
+  "note": "Courtois found it in seaweed ash; Gay-Lussac showed it is an element and named it (CIAAW dates this to 1814).",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Iodine is a halogen that forms shiny blue-black crystals which give off a violet vapour when warmed; its name comes from the Greek for violet. Humans need it to make thyroid hormones, which is why table salt is often iodised. Bernard Courtois discovered it in 1811 in seaweed ash, and brown seaweeds such as kelp still concentrate iodine from seawater many thousandfold. The atom has seven outer electrons, [Kr] 4d¹⁰ 5s² 5p⁵, one short of a closed shell, so it behaves like a single vacancy in the 5p shell, with ground term ²P°₃/₂. Only one isotope, iodine-127, is stable.",

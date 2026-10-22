@@ -729,7 +729,12 @@
   "place": "Chicago, United States",
   "nameOrigin": "After the Americas, by analogy with europium, its counterpart among the lanthanides.",
   "source": "pubchem",
-  "note": "Made by successive neutron captures in plutonium at the wartime Metallurgical Laboratory of the University of Chicago; announced in November 1945."
+  "note": "Made by successive neutron captures in plutonium at the wartime Metallurgical Laboratory of the University of Chicago; announced in November 1945.",
+  "placeLocation": {
+   "lat": 41.848,
+   "lon": -87.635,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Americium is a silvery, radioactive actinide that many people keep at home without knowing it: a tiny amount of americium-241, half-life about 430 years, ionises the air inside common smoke detectors. Glenn Seaborg's team made it in 1944 at the wartime Metallurgical Laboratory in Chicago and named it after America, echoing europium, the lanthanide above it, which is named after Europe. The news first reached the public on a children's radio quiz in November 1945, when a young listener asked Seaborg whether any new elements had been made. The atom has an exactly half-filled 5f shell, [Rn] 5f⁷ 7s², with seven parallel spins and no net orbital momentum: an ⁸S°₇/₂ ground term.",

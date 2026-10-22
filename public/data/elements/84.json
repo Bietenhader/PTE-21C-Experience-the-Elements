@@ -953,7 +953,14 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "toxicity": [
+   {
+    "text": "Polonium-210's alpha particles cannot pass through skin, but swallowed or inhaled it is extraordinarily toxic: a tiny amount killed Alexander Litvinenko in London in 2006.",
+    "source": "primary_literature",
+    "doi": "10.1088/0952-4746/27/1/001"
+   }
+  ]
  },
  "history": {
   "discovered": 1898,
@@ -964,7 +971,12 @@
   "place": "Paris, France",
   "nameOrigin": "After Poland, Marie Curie's native country.",
   "source": "pubchem",
-  "note": "Found in pitchblende from Joachimsthal (Jáchymov) by tracking its radioactivity; the first element the Curies found. The PubChem texts name Marie Curie alone; the July 1898 announcement was signed by both."
+  "note": "Found in pitchblende from Joachimsthal (Jáchymov) by tracking its radioactivity; the first element the Curies found. The PubChem texts name Marie Curie alone; the July 1898 announcement was signed by both.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Polonium is a rare and intensely radioactive element of group 16, which Marie and Pierre Curie traced in uranium ore in 1898 and named after Marie's native Poland; a tonne of ore contains only about 100 micrograms of it. Polonium-210, with a half-life of about 138 days, releases energy so fiercely that half a gram sealed in a capsule heats itself above 500 °C, which is why it was considered as a lightweight heat source for spacecraft. Its nucleus has the magic number of 126 neutrons. In the atom, four electrons share the 6p subshell, two of them unpaired, producing a ³P₂ ground term.",

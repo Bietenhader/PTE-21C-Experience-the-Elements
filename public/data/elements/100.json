@@ -716,7 +716,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After Enrico Fermi.",
   "source": "pubchem",
-  "note": "Identified in coral from the 'Ivy Mike' test site about two months after the November 1952 explosion, so possibly in early 1953; published in 1955. A Stockholm group independently reported element 100 in 1954."
+  "note": "Identified in coral from the 'Ivy Mike' test site about two months after the November 1952 explosion, so possibly in early 1953; published in 1955. A Stockholm group independently reported element 100 in 1954.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Fermium is a synthetic actinide named after Enrico Fermi, found, like einsteinium, in the fallout of the 1952 'Ivy Mike' hydrogen-bomb test, in coral shipped from the Pacific test site to Berkeley; the result stayed secret until 1955. It is the heaviest element that can be built up by neutron capture in reactors or explosions, and no fermium metal has ever been prepared; everything heavier has to be assembled in accelerators. The reason is nuclear: fermium-258 splits by spontaneous fission with a half-life of only 370 microseconds, so adding neutrons leads to a dead end. Its longest-lived isotope, fermium-257, lasts about 100 days, and the atom's ground level is ³H₆.",

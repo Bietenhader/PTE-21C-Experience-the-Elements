@@ -966,7 +966,12 @@
   ],
   "nameOrigin": "From the Greek protos, 'first', joined to actinium, because it decays into actinium.",
   "source": "pubchem",
-  "note": "Fajans and Göhring named their short-lived isotope brevium. Hahn and Meitner in Berlin and Soddy and Cranston in Britain independently found protactinium-231 in 1917–18; IUPAC shortened protoactinium to protactinium in 1949."
+  "note": "Fajans and Göhring named their short-lived isotope brevium. Hahn and Meitner in Berlin and Soddy and Cranston in Britain independently found protactinium-231 in 1917–18; IUPAC shortened protoactinium to protactinium in 1949.",
+  "placeLocation": {
+   "lat": 49.0,
+   "lon": 8.4,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Protactinium is a rare, toxic and strongly radioactive actinide between thorium and uranium; its name means 'before actinium', because its main isotope, protactinium-231, with a half-life of about 33,000 years, decays into actinium. The first isotope found, in 1913, vanished so quickly that its discoverers called the element brevium. Collecting a real sample was heroic work: in 1961 British chemists processed about 55 tonnes of ore to obtain some 125 grams of the pure element. In the atom one electron sits in 6d, [Rn] 5f² 6d¹ 7s², instead of the Aufbau prediction 5f³ 7s², and the large combined orbital momentum, L = 7, gives the ground term the rare letter K: ⁴K₁₁/₂.",

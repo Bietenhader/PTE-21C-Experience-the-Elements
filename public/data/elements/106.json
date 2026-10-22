@@ -544,7 +544,12 @@
   "symbolNote": "A 1994 IUPAC proposal would have given this element the name rutherfordium; seaborgium was adopted in 1997. Temporary name: unnilhexium (Unh).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "A Dubna claim from the same year was judged less convincing by the 1993 IUPAC/IUPAP report. Los Alamos wrongly places Seaborg in the Dubna group."
+  "note": "A Dubna claim from the same year was judged less convincing by the 1993 IUPAC/IUPAP report. Los Alamos wrongly places Seaborg in the Dubna group.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Seaborgium is a synthetic element in group 6, below tungsten, first made at Berkeley in 1974 by firing oxygen-18 ions at californium-249; its atoms of seaborgium-263 lasted about a second. It honours Glenn Seaborg, co-discoverer of plutonium and several other heavy elements, and the name was given while he was still alive, a distinction it shares only with oganesson. Only a few atoms have ever been made, and its longest-lived isotopes survive for roughly a minute or two. Theory assigns it tungsten's outer arrangement, [Rn] 5f¹⁴ 6d⁴ 7s², with a ground level of total angular momentum J = 0, but nothing about its electrons has been measured directly.",

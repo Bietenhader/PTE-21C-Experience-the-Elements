@@ -293,7 +293,23 @@
    "text": "Part of water and most biomolecules; the final electron acceptor of respiration.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 18,
+    "field": "tracer",
+    "text": "Water labelled with oxygen-18 showed in 1941 that the oxygen released in photosynthesis comes from water, not from carbon dioxide.",
+    "source": "primary_literature",
+    "doi": "10.1021/ja01848a512"
+   },
+   {
+    "A": 18,
+    "field": "environment",
+    "text": "The oxygen-18 share in the shells of fossil foraminifera records the temperature and ice volume of past oceans; Emiliani's 1955 study of deep-sea cores mapped the glacial cycles of the Pleistocene.",
+    "source": "primary_literature",
+    "doi": "10.1086/626295"
+   }
+  ]
  },
  "history": {
   "discovered": 1774,
@@ -304,7 +320,12 @@
   "place": "Calne, United Kingdom",
   "nameOrigin": "Named by Lavoisier from the Greek oxys, 'sharp' or 'acid', and -genes, 'producing', because he wrongly thought every acid contains it.",
   "source": "pubchem",
-  "note": "Scheele made it first (1771 according to CIAAW) but his book appeared only in 1777, so Priestley, who published in 1774, is usually credited. The map dot marks Priestley's laboratory at Bowood, near Calne."
+  "note": "Scheele made it first (1771 according to CIAAW) but his book appeared only in 1777, so Priestley, who published in 1774, is usually credited. The map dot marks Priestley's laboratory at Bowood, near Calne.",
+  "placeLocation": {
+   "lat": 51.439,
+   "lon": -2.006,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Oxygen is a reactive nonmetal and, by mass, the most common element in Earth's crust, bound up in water and in silicate rocks. Almost all the free oxygen in the air was released by photosynthesis, as algae and plants split water molecules using the energy of sunlight. Cooled below its boiling point of 90.2 K, oxygen becomes a pale-blue liquid that clings to the poles of a strong magnet. That magnetism has a quantum origin: the O₂ molecule keeps two unpaired electrons, a triplet state that simple bonding diagrams miss, and the free atom, [He] 2s² 2p⁴, also has two unpaired electrons and the ground term ³P₂.",

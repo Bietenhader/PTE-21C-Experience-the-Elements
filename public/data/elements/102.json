@@ -729,7 +729,12 @@
   "nameOrigin": "After Alfred Nobel; the name was proposed for a 1957 claim from the Nobel Institute in Stockholm and was kept.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "PubChem gives 1957, the year of the Stockholm claim, which could not be reproduced. Berkeley reported work in 1958 and Jefferson Lab says Berkeley was eventually credited, but the 1993 IUPAC/IUPAP report gives the credit to two 1966 Dubna papers."
+  "note": "PubChem gives 1957, the year of the Stockholm claim, which could not be reproduced. Berkeley reported work in 1958 and Jefferson Lab says Berkeley was eventually credited, but the 1993 IUPAC/IUPAP report gives the credit to two 1966 Dubna papers.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Nobelium is a synthetic actinide named after Alfred Nobel, and its name outlived its discovery claim: a team working in Stockholm announced element 102 in 1957, but nobody could reproduce the result. Groups at Berkeley and Dubna established the element over the following years, yet the original name was kept. Unlike most actinides, it favours the +2 oxidation state in solution. Its longest-lived isotope, nobelium-259, lasts just under an hour. With every 5f orbital filled, [Rn] 5f¹⁴ 7s², the atom has a closed-shell ¹S₀ ground state, and its first ionisation energy, about 639 kJ/mol, has been measured by laser spectroscopy on atoms produced a few at a time.",

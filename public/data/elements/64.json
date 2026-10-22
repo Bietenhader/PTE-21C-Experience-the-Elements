@@ -833,7 +833,15 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "field": "medicine",
+    "text": "Gadolinium ions, locked in tight chemical cages (chelates) because the free ion is toxic, are the standard contrast agents for MRI: their seven unpaired electrons make the water protons around them relax faster, which brightens the image.",
+    "source": "primary_literature",
+    "doi": "10.1021/cr980440x"
+   }
+  ]
  },
  "history": {
   "discovered": 1880,
@@ -843,7 +851,12 @@
   "place": "Geneva, Switzerland",
   "nameOrigin": "From the mineral gadolinite, named after the Finnish chemist Johan Gadolin.",
   "source": "pubchem",
-  "note": "Marignac separated its oxide in 1880; Lecoq de Boisbaudran obtained it independently and named it in 1886. CIAAW dates Marignac's discovery to 1886."
+  "note": "Marignac separated its oxide in 1880; Lecoq de Boisbaudran obtained it independently and named it in 1886. CIAAW dates Marignac's discovery to 1886.",
+  "placeLocation": {
+   "lat": 46.21,
+   "lon": 6.14,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Gadolinium is a silvery lanthanide named after the Finnish chemist Johan Gadolin, through the mineral gadolinite. It captures slow neutrons better than any other element, which suits it to reactor control, and its compounds are injected as contrast agents to brighten MRI scans. It is ferromagnetic only below about room temperature, so a piece can lose its magnetism on a warm day. The atom is [Xe] 4f⁷ 5d¹ 6s², not the predicted 4f⁸ 6s²: the half-filled 4f shell holds and the extra electron goes into 5d, leaving eight unpaired electrons (⁹D°₂), a total matched only by curium.",

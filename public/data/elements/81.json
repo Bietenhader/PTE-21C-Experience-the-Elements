@@ -1019,7 +1019,12 @@
   ],
   "nameOrigin": "From the Greek thallos, 'green shoot' or 'twig', for its bright green spectral line.",
   "source": "pubchem",
-  "note": "Found by its spectrum in residue from sulfuric acid production; Crookes and Lamy each isolated the metal independently in 1862."
+  "note": "Found by its spectrum in residue from sulfuric acid production; Crookes and Lamy each isolated the metal independently in 1862.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Thallium is a heavy metal of group 13, soft enough to cut with a knife, that soon dulls to a bluish grey in air; it is usually recovered as a by-product of zinc and lead refining. Its compounds are dangerously toxic, and thallium sulfate was once used as a rat poison precisely because it has neither taste nor smell. William Crookes found the element in 1861 as an unknown bright green line, at 535 nm, in his spectroscope. That line is emitted when the outer electron falls from 7s into the upper level of the ²P° ground term, which lies about 0.97 eV above the true ground level ²P°₁/₂, a striking spin–orbit splitting.",

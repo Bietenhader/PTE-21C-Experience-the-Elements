@@ -434,7 +434,12 @@
   ],
   "nameOrigin": "From Magnesia, a district of Thessaly in Greece, which gave its name to several minerals.",
   "source": "pubchem",
-  "note": "PubChem's YearDiscovered (1808) is the year Davy first obtained the metal, in impure form; CIAAW credits Bussy with the pure metal in 1831, which Los Alamos calls the first coherent metal."
+  "note": "PubChem's YearDiscovered (1808) is the year Davy first obtained the metal, in impure form; CIAAW credits Bussy with the pure metal in 1831, which Los Alamos calls the first coherent metal.",
+  "placeLocation": {
+   "lat": 55.948,
+   "lon": -3.219,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Magnesium is a light, silvery alkaline-earth metal that burns with a dazzling white flame, once used in photographers' flashes; alloyed, it lightens car and aircraft parts. Its most important place in biology is the centre of every chlorophyll molecule, where a single magnesium ion is gripped by four nitrogen atoms of the surrounding ring; leaves short of magnesium turn yellow between their veins. The atom has the closed configuration [Ne] 3s² (ground term ¹S₀). Of its three stable isotopes, only magnesium-25, about 10 % of the total, has a nuclear spin (5/2); the other two have none.",

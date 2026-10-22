@@ -419,7 +419,14 @@
    "text": "No known role in the body.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "environment": [
+   {
+    "text": "In acid soils aluminium dissolves as Al³⁺, which stops root growth; it is the main factor limiting crop growth on acid soils.",
+    "source": "primary_literature",
+    "doi": "10.1146/annurev.pp.46.060195.001321"
+   }
+  ]
  },
  "history": {
   "discovered": 1825,
@@ -434,7 +441,12 @@
   ],
   "nameOrigin": "From alumina and alum (Latin alumen), the compounds in which the metal was first suspected.",
   "source": "pubchem",
-  "note": "PubChem lists the year as 'Ancient' because alum was used in antiquity; the metal itself was unknown before 1825. Lavoisier had suspected alumina to be the oxide of an unknown metal (1787)."
+  "note": "PubChem lists the year as 'Ancient' because alum was used in antiquity; the metal itself was unknown before 1825. Lavoisier had suspected alumina to be the oxide of an unknown metal (1787).",
+  "placeLocation": {
+   "lat": 55.681,
+   "lon": 12.562,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Aluminium is a light, silvery metal and the most abundant metal in Earth's crust; we meet it as drink cans, kitchen foil, window frames and aircraft skins. It looks reactive on paper, yet it barely corrodes, because a thin, transparent oxide film seals its surface within moments of exposure to air. Its radioactive isotope aluminium-26, with a half-life of about 717,000 years, was a major heat source that melted some of the first small planetary bodies of the young Solar System. The atom's single 3p electron ([Ne] 3s² 3p¹, ground term ²P°₁/₂) is easier to remove than magnesium's outer 3s electron: 578 kJ/mol against 738 kJ/mol.",

@@ -949,7 +949,12 @@
   "place": "Paris, France",
   "nameOrigin": "After France, Perey's home country.",
   "source": "pubchem",
-  "note": "Found at the Curie Institute among the decay products of actinium-227; no weighable amount has ever been isolated."
+  "note": "Found at the Curie Institute among the decay products of actinium-227; no weighable amount has ever been isolated.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Francium is the heaviest alkali metal, a chemical cousin of caesium that never lasts long: its longest-lived isotope, francium-223, has a half-life of 22 minutes, and Earth's crust is estimated to hold no more than about 30 grams at any time. Marguerite Perey discovered it in 1939 among the decay products of actinium, and no weighable amount has ever been isolated. Physicists instead study small clouds of its atoms held in laser traps, tuned to its red D2 line at 718 nm. Surprisingly, its first ionisation energy, about 393 kJ/mol, is higher than caesium's 376 kJ/mol: relativistic effects contract the 7s orbital and bind its single electron more tightly.",

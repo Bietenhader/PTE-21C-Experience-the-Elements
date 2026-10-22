@@ -550,7 +550,12 @@
   "symbolNote": "Proposed as nielsbohrium (Ns); shortened to bohrium (Bh) in 1997. Temporary name: unnilseptium (Uns).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "PubChem gives 1976, the year of a Dubna claim; the 1993 IUPAC/IUPAP report found the 1981 Darmstadt work convincing."
+  "note": "PubChem gives 1976, the year of a Dubna claim; the 1993 IUPAC/IUPAP report found the 1981 Darmstadt work convincing.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Bohrium is a synthetic element in group 7, below rhenium, named after the Danish physicist Niels Bohr. A Dubna team reported it in 1976, and in 1981 a group at the GSI laboratory in Darmstadt made it convincingly by fusing bismuth-209 with chromium-54, identifying six atoms of bohrium-262, whose half-life is about a tenth of a second. Chemists have since turned single atoms of a longer-lived isotope into a volatile oxychloride that behaves like rhenium's. Only small numbers of atoms exist, its heavier isotopes lasting from seconds to about a minute. Theory predicts [Rn] 5f¹⁴ 6d⁵ 7s² with a ground level of J = 5/2, matching rhenium's half-filled d shell, though none of this has been measured.",

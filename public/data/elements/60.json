@@ -805,7 +805,12 @@
   "isolated": 1925,
   "nameOrigin": "From the Greek neos, 'new', and didymos, 'twin': the new twin separated from 'didymium'.",
   "source": "pubchem",
-  "note": "CIAAW gives 1841 and Mosander, meaning the discovery of 'didymium', the mixture from which Auer separated it. Los Alamos dates the first fairly pure metal to 1925 without naming who made it."
+  "note": "CIAAW gives 1841 and Mosander, meaning the discovery of 'didymium', the mixture from which Auer separated it. Los Alamos dates the first fairly pure metal to 1925 without naming who made it.",
+  "placeLocation": {
+   "lat": 48.202,
+   "lon": 16.365,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Neodymium is a silvery lanthanide that tarnishes quickly in air and is the key ingredient of neodymium–iron–boron magnets, the strongest permanent magnets in everyday use, found in headphones, hard drives, electric-car motors and wind turbines. Its name means ‘new twin’: it hid inside ‘didymium’ for decades until Carl Auer von Welsbach separated it from praseodymium in 1885. The free atom has four unpaired 4f electrons ([Xe] 4f⁴ 6s², ground term ⁵I₄). Because the 4f shell lies deep inside the atom, shielded by outer electrons, it keeps much of its orbital magnetism even in a crystal, and that helps lock the magnetisation of the magnets in place.",

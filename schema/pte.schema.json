@@ -2106,6 +2106,106 @@
         },
         "note": {
           "type": "string"
+        },
+        "isotopeUses": {
+          "description": "Isotopes in biology and medicine (SPEC §10.10), our own words with a source per row. A is omitted when the use is not isotope-specific (gadolinium contrast agents).",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "A": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "isomer": {
+                "type": "string",
+                "enum": [
+                  "m"
+                ]
+              },
+              "field": {
+                "type": "string",
+                "enum": [
+                  "medicine",
+                  "tracer",
+                  "dating",
+                  "environment"
+                ]
+              },
+              "text": {
+                "type": "string"
+              },
+              "source": {
+                "$ref": "#/definitions/SourceId"
+              },
+              "doi": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "field",
+              "text",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "environment": {
+          "description": "Environmental notes: soils, bioaccumulation, radioecology.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourcedText"
+          }
+        },
+        "toxicity": {
+          "description": "Curated toxicity notes, where a cited source supports one. Absent means no curated note, not 'safe'.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourcedText"
+          }
+        },
+        "iarc": {
+          "description": "IARC carcinogen classifications of element-related agents; the group comes from the fetched IARC list.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "agent": {
+                "type": "string"
+              },
+              "group": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "1",
+                      "2A",
+                      "2B",
+                      "3"
+                    ]
+                  },
+                  {
+                    "$ref": "#/definitions/Missing"
+                  }
+                ]
+              },
+              "volumes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "source": {
+                "$ref": "#/definitions/SourceId"
+              }
+            },
+            "required": [
+              "agent",
+              "group",
+              "source"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [
@@ -2464,6 +2564,38 @@
             },
             "note": {
               "type": "string"
+            },
+            "placeLocation": {
+              "description": "Where the discovery place is, from the gazetteer named in tools/curated/places.toml (SPEC §10.11).",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "lat": {
+                      "type": "number",
+                      "minimum": -90,
+                      "maximum": 90
+                    },
+                    "lon": {
+                      "type": "number",
+                      "minimum": -180,
+                      "maximum": 180
+                    },
+                    "source": {
+                      "$ref": "#/definitions/SourceId"
+                    }
+                  },
+                  "required": [
+                    "lat",
+                    "lon",
+                    "source"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
             }
           },
           "required": [
@@ -2873,6 +3005,68 @@
         "x",
         "y",
         "z"
+      ],
+      "additionalProperties": false
+    },
+    "WorldMapFile": {
+      "description": "public/data/worldmap.json: the land outline behind the discovery map (SPEC §10.11), simplified from Natural Earth 1:110m land (public domain). Rings of [lon, lat] in degrees, equirectangular.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "projection": {
+          "const": "equirectangular"
+        },
+        "bounds": {
+          "type": "object",
+          "properties": {
+            "lonMin": {
+              "type": "number"
+            },
+            "lonMax": {
+              "type": "number"
+            },
+            "latMin": {
+              "type": "number"
+            },
+            "latMax": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "lonMin",
+            "lonMax",
+            "latMin",
+            "latMax"
+          ],
+          "additionalProperties": false
+        },
+        "rings": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 4,
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "source",
+        "projection",
+        "bounds",
+        "rings"
       ],
       "additionalProperties": false
     }

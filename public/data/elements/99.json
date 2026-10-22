@@ -710,7 +710,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After Albert Einstein.",
   "source": "pubchem",
-  "note": "Identified in December 1952 in fallout from the 'Ivy Mike' thermonuclear test (Enewetak Atoll, November 1952); the results were kept secret until 1955."
+  "note": "Identified in December 1952 in fallout from the 'Ivy Mike' thermonuclear test (Enewetak Atoll, November 1952); the results were kept secret until 1955.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Einsteinium is a synthetic actinide named after Albert Einstein, and it was found in an extraordinary place: debris from the first large hydrogen-bomb test, in the Pacific in November 1952, where uranium-238 nuclei had captured as many as 15 neutrons in an instant before climbing the table through a series of beta decays. The discovery was kept secret for several years. Einsteinium is still made only in tiny amounts, and its intense radiation damages any sample from within; einsteinium-253 has a half-life of about 20 days and the longest-lived isotope, einsteinium-252, about 470 days. The atom, [Rn] 5f¹¹ 7s², has three unpaired spins and a ⁴I°₁₅/₂ ground term.",

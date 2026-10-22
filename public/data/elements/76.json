@@ -907,7 +907,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Greek osme, 'smell', for the sharp odour of its volatile oxide.",
   "source": "pubchem",
-  "note": "Found together with iridium in the black, insoluble remains of crude platinum treated with aqua regia."
+  "note": "Found together with iridium in the black, insoluble remains of crude platinum treated with aqua regia.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Osmium is a bluish-white, extremely hard and brittle platinum-group metal, and the densest element, at 22.57 g/cm³, just ahead of iridium. Its name comes from the Greek for smell, because finely divided osmium slowly gives off osmium tetroxide, a volatile, pungent and highly toxic compound. That same tetroxide is a classic stain for electron microscopy: it reacts with the fatty membranes of cells, fixing them and making them stand out dark in the image. Osmium’s ground state follows the filling rule, [Xe] 4f¹⁴ 5d⁶ 6s², with four unpaired 5d electrons (ground term ⁵D₄).",

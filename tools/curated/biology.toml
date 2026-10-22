@@ -22,8 +22,18 @@
 #                    essential metals by Zoroddu et al. (2019).
 #   note             anything Fin should know.
 #
-# Not here yet (planned for M4): body mass fractions (a source we can read and cite is being
-# located), toxicity, GHS hazard pictograms (from PubChem), environmental notes.
+# Added in M4 (FIN, please review these too; they are at the end of the file):
+#   [[isotope_use]]  isotopes in biology and medicine: Z, A (mass number; omitted when the use is not
+#                    isotope-specific, e.g. gadolinium contrast agents), isomer ("m" for Tc-99m),
+#                    field ("medicine" | "tracer" | "dating" | "environment"), text (our own words),
+#                    source / doi.
+#   [[environment]]  environmental notes (bioaccumulation, soils, radioecology): Z, text, source / doi.
+#   [[toxicity]]     a short toxicity note where a cited source supports it: Z, text, source / doi.
+#   [[iarc]]         IARC carcinogen classifications: Z and the agent's name exactly as IARC lists it;
+#                    the group itself is read from the fetched IARC list (tools/fetch_iarc.py).
+# Body mass fractions are in abundance.toml (ICRP Reference Man); GHS hazard pictograms come from
+# PubChem with the physical panel. An element without a toxicity row has no curated note: the
+# panel says so, which does not mean the element is safe.
 
 # --- the 17 essential plant nutrients ---------------------------------------------------------
 
@@ -329,3 +339,428 @@ essential_human = "probable"
 human_role = "Essential for some other organisms; a role in humans is suspected but not shown."
 human_source = "zoroddu2019"
 human_doi = "10.1016/j.jinorgbio.2019.03.013"
+
+# =============================================================================================
+# M4 additions
+# =============================================================================================
+
+# --- isotopes in biology and medicine ----------------------------------------------------------
+
+[[isotope_use]]
+Z = 1
+A = 3
+field = "tracer"
+text = "Broad-bean root tips fed tritium-labelled thymidine, a DNA building block, were followed through two cell divisions in 1957: each chromosome kept one labelled and one new half, a first view of how chromosomes are copied."
+source = "primary_literature"
+doi = "10.1073/pnas.43.1.122"
+
+[[isotope_use]]
+Z = 1
+A = 2
+field = "tracer"
+text = "Water labelled with deuterium and oxygen-18 measures the energy a free-living animal or person spends: hydrogen leaves the body only in water, oxygen in water and in exhaled CO2, so the difference between their loss rates gives the CO2 produced."
+source = "primary_literature"
+doi = "10.1016/0022-5193(66)90185-8"
+
+[[isotope_use]]
+Z = 6
+A = 14
+field = "dating"
+text = "Carbon-14, made by cosmic rays in the air, enters every living thing and decays once it dies; in 1949 Arnold and Libby showed that the fraction left dates organic remains, checking it on wood and objects of known age."
+source = "primary_literature"
+doi = "10.1126/science.110.2869.678"
+
+[[isotope_use]]
+Z = 6
+A = 14
+field = "tracer"
+text = "Giving algae carbon dioxide labelled with carbon-14 for seconds at a time let Bassham, Benson and Calvin trace the path of carbon in photosynthesis, the cycle now named after them."
+source = "primary_literature"
+doi = "10.1016/S0021-9258(18)56368-7"
+
+[[isotope_use]]
+Z = 6
+A = 13
+field = "environment"
+text = "Land plants fall into two groups by their ratio of carbon-13 to carbon-12; the groups match the two main photosynthetic pathways, C3 and C4, so the ratio tells them apart."
+source = "primary_literature"
+doi = "10.1104/pp.47.3.380"
+
+[[isotope_use]]
+Z = 7
+A = 15
+field = "tracer"
+text = "Bacteria grown on heavy nitrogen-15 and then moved to ordinary nitrogen-14 made DNA of intermediate density, separable in a centrifuge: Meselson and Stahl's 1958 proof that DNA is copied semi-conservatively."
+source = "primary_literature"
+doi = "10.1073/pnas.44.7.671"
+
+[[isotope_use]]
+Z = 7
+A = 15
+field = "environment"
+text = "The share of nitrogen-15 differs between nitrogen sources and changes as nitrogen passes through soils, plants and food webs, so it traces where the nitrogen in an ecosystem comes from and where it goes."
+source = "primary_literature"
+doi = "10.1016/S0169-5347(00)02098-X"
+
+[[isotope_use]]
+Z = 8
+A = 18
+field = "tracer"
+text = "Water labelled with oxygen-18 showed in 1941 that the oxygen released in photosynthesis comes from water, not from carbon dioxide."
+source = "primary_literature"
+doi = "10.1021/ja01848a512"
+
+[[isotope_use]]
+Z = 8
+A = 18
+field = "environment"
+text = "The oxygen-18 share in the shells of fossil foraminifera records the temperature and ice volume of past oceans; Emiliani's 1955 study of deep-sea cores mapped the glacial cycles of the Pleistocene."
+source = "primary_literature"
+doi = "10.1086/626295"
+
+[[isotope_use]]
+Z = 9
+A = 18
+field = "medicine"
+text = "Fluorine-18 in a glucose analogue (FDG), first made in 1978 to measure how much sugar the brain uses: cells take it up like glucose but cannot use it further, so it collects where they are most active, which a PET scanner then sees."
+source = "primary_literature"
+doi = "10.1002/jlcr.2580140204"
+
+[[isotope_use]]
+Z = 15
+A = 32
+field = "tracer"
+text = "Phosphorus-32 fed to rats in 1935, one of the first radioactive tracers in physiology, showed that the phosphorus in bone is constantly exchanged rather than laid down for good."
+source = "primary_literature"
+doi = "10.1038/136754a0"
+
+[[isotope_use]]
+Z = 15
+A = 32
+field = "tracer"
+text = "With phage DNA labelled by phosphorus-32 and phage protein by sulfur-35, Hershey and Chase showed in 1952 that mainly the DNA enters the infected bacterium: evidence that genes are made of DNA."
+source = "primary_literature"
+doi = "10.1085/jgp.36.1.39"
+
+[[isotope_use]]
+Z = 16
+A = 35
+field = "tracer"
+text = "Sulfur-35 marked the protein coat in Hershey and Chase's 1952 phage experiment; it stayed outside the infected bacteria while the DNA, labelled with phosphorus-32, went in."
+source = "primary_literature"
+doi = "10.1085/jgp.36.1.39"
+
+[[isotope_use]]
+Z = 38
+A = 87
+field = "environment"
+text = "The ratio of strontium-87 to strontium-86 varies with the local rocks and passes almost unchanged from soil and water to plants, bones and teeth, so it can show where a person or animal grew up."
+source = "primary_literature"
+doi = "10.1007/s10816-006-9009-x"
+
+[[isotope_use]]
+Z = 43
+A = 99
+isomer = "m"
+field = "medicine"
+text = "Technetium-99m, milked on site from a generator of its parent molybdenum-99, is the workhorse of nuclear-medicine imaging: its six-hour half-life and single gamma line suit scans of bone, heart, kidneys and much else."
+source = "primary_literature"
+doi = "10.1016/j.jcmg.2008.12.013"
+
+[[isotope_use]]
+Z = 53
+A = 131
+field = "medicine"
+text = "The thyroid gathers iodine from the blood, so radioactive iodine-131 can treat an overactive thyroid from the inside; it was first used for this in the 1940s."
+source = "primary_literature"
+doi = "10.1001/jama.1946.02870190005002"
+
+[[isotope_use]]
+Z = 53
+A = 131
+field = "environment"
+text = "After the Chernobyl accident iodine-131 (half-life eight days) reached children through milk and collected in their thyroids; by 2005 more than 6000 thyroid cancers had been diagnosed among those exposed as children or adolescents in Belarus, Russia and Ukraine, a large fraction of them attributed to it."
+source = "unscear_chernobyl"
+
+[[isotope_use]]
+Z = 55
+A = 137
+field = "environment"
+text = "Caesium-137 from fallout behaves much like potassium: plant roots take it up through their potassium transporters, and clay minerals hold it in the soil, which is why potassium fertiliser and clay-rich soils keep it out of crops."
+source = "primary_literature"
+doi = "10.1093/jexbot/51.351.1635"
+
+[[isotope_use]]
+Z = 64
+field = "medicine"
+text = "Gadolinium ions, locked in tight chemical cages (chelates) because the free ion is toxic, are the standard contrast agents for MRI: their seven unpaired electrons make the water protons around them relax faster, which brightens the image."
+source = "primary_literature"
+doi = "10.1021/cr980440x"
+
+[[isotope_use]]
+Z = 71
+A = 177
+field = "medicine"
+text = "Lutetium-177 bound to a molecule that docks onto prostate-cancer cells (PSMA-617) prolonged survival in advanced prostate cancer in a 2021 trial; its beta radiation is delivered from inside, at the tumour."
+source = "primary_literature"
+doi = "10.1056/NEJMoa2107322"
+
+[[isotope_use]]
+Z = 88
+A = 223
+field = "medicine"
+text = "Radium-223, an alpha emitter that the body treats like calcium, settles where bone is rebuilt around tumours; a 2013 trial showed that it prolongs life in prostate cancer that has spread to bone."
+source = "primary_literature"
+doi = "10.1056/NEJMoa1213755"
+
+# --- environment ---------------------------------------------------------------------------------
+
+[[environment]]
+Z = 5
+text = "Plants need boron, but the margin between too little and too much is narrow: soils or irrigation water rich in boron scorch leaf tips and margins."
+source = "marschner2012"
+doi = "10.1016/B978-0-12-384905-2.00007-8"
+
+[[environment]]
+Z = 7
+text = "Nitrogen from fertilisers and sewage that washes into rivers, lakes and coastal seas feeds blooms of algae (eutrophication), which use up the oxygen in the water as they decay."
+source = "primary_literature"
+doi = "10.1016/S0269-7491(99)00091-3"
+
+[[environment]]
+Z = 11
+text = "Salt, mostly sodium chloride, in irrigated and naturally saline soils limits crop yields worldwide; most crops suffer when sodium builds up in their leaves."
+source = "primary_literature"
+doi = "10.1146/annurev.arplant.59.032607.092911"
+
+[[environment]]
+Z = 13
+text = "In acid soils aluminium dissolves as Al³⁺, which stops root growth; it is the main factor limiting crop growth on acid soils."
+source = "primary_literature"
+doi = "10.1146/annurev.pp.46.060195.001321"
+
+[[environment]]
+Z = 15
+text = "Phosphorus is the nutrient that most often limits algae in lakes, so phosphate in runoff and sewage is a main driver of their eutrophication."
+source = "primary_literature"
+doi = "10.1016/S0269-7491(99)00091-3"
+
+[[environment]]
+Z = 33
+text = "Arsenic dissolved naturally from rocks into groundwater is the greatest threat from it: wells in Bangladesh and many other countries exceed safe levels, and crops irrigated with such water carry it into food."
+source = "who_arsenic"
+
+[[environment]]
+Z = 34
+text = "Selenium leached from soils by irrigation drainage collected in the Kesterson ponds in California in the early 1980s and caused deformed and dead embryos in water birds."
+source = "primary_literature"
+doi = "10.1016/0048-9697(86)90104-X"
+
+[[environment]]
+Z = 38
+text = "Strontium follows calcium from soil and water into plants, bones and teeth; strontium-90 from fallout takes the same path."
+source = "primary_literature"
+doi = "10.1007/s10816-006-9009-x"
+
+[[environment]]
+Z = 48
+text = "Cadmium from phosphate fertilisers, sewage sludge, mining and industry builds up in soils; crops take it up, and food, rice and other staples above all, is most people's main source of it."
+source = "primary_literature"
+doi = "10.1016/j.tplants.2012.08.003"
+
+[[environment]]
+Z = 80
+text = "Bacteria turn mercury released into water into methylmercury, which builds up in fish and shellfish, most in large predatory fish."
+source = "who_mercury"
+
+[[environment]]
+Z = 86
+text = "Radon seeps out of the ground, where uranium in rocks and soil decays, and collects indoors; outdoors it is quickly diluted."
+source = "who_radon"
+
+# --- toxicity ------------------------------------------------------------------------------------
+
+[[toxicity]]
+Z = 33
+text = "Years of drinking water or eating food with inorganic arsenic lead to chronic poisoning, seen first in the skin as lesions and cancers."
+source = "who_arsenic"
+
+[[toxicity]]
+Z = 48
+text = "Cadmium accumulates in the kidneys over decades; in Japan's Jinzū river basin it caused itai-itai disease, with kidney damage and brittle, painful bones."
+source = "primary_literature"
+doi = "10.1016/j.taap.2009.03.015"
+
+[[toxicity]]
+Z = 80
+text = "Mercury harms the nervous system above all, and the unborn and young children most; at Minamata, Japan, methylmercury in factory waste poisoned people who ate the local fish (Minamata disease)."
+source = "primary_literature"
+doi = "10.3109/10408449509089885"
+
+[[toxicity]]
+Z = 82
+text = "Lead harms the brain, kidneys and blood and is most dangerous to young children and to the unborn; no level of exposure is known to be without harm."
+source = "who_lead"
+
+[[toxicity]]
+Z = 84
+text = "Polonium-210's alpha particles cannot pass through skin, but swallowed or inhaled it is extraordinarily toxic: a tiny amount killed Alexander Litvinenko in London in 2006."
+source = "primary_literature"
+doi = "10.1088/0952-4746/27/1/001"
+
+[[toxicity]]
+Z = 86
+text = "Radon's radioactive decay products lodge in the lungs; WHO estimates that radon causes 3 to 14 % of all lung cancers in a country, depending on its radon levels and on how many people smoke."
+source = "who_radon"
+
+# --- IARC classifications (the group is read from the fetched IARC list) ----------------------
+
+[[iarc]]
+Z = 4
+agent = "Beryllium and beryllium compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 9
+agent = "Fluorides (inorganic, used in drinking-water)"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 14
+agent = "Silica dust, crystalline, in the form of quartz or cristobalite"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 15
+agent = "Phosphorus-32, as phosphate"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 22
+agent = "Titanium dioxide"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 23
+agent = "Vanadium pentoxide"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 24
+agent = "Chromium (VI) compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 24
+agent = "Chromium (III) compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 24
+agent = "Chromium, metallic"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 27
+agent = "Cobalt metal (without tungsten carbide or other metal alloys)"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 28
+agent = "Nickel compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 28
+agent = "Nickel, metallic"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 33
+agent = "Arsenic and inorganic arsenic compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 34
+agent = "Selenium and selenium compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 38
+agent = "Fission products, including strontium-90"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 48
+agent = "Cadmium and cadmium compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 49
+agent = "Indium phosphide"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 51
+agent = "Trivalent antimony"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 53
+agent = "Radioiodines, including iodine-131"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 80
+agent = "Methylmercury compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 80
+agent = "Mercury and inorganic mercury compounds"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 82
+agent = "Lead compounds, inorganic"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 82
+agent = "Lead"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 86
+agent = "Radon-222 and its decay products"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 88
+agent = "Radium-224 and its decay products"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 88
+agent = "Radium-226 and its decay products"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 88
+agent = "Radium-228 and its decay products"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 90
+agent = "Thorium-232 and its decay products"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 92
+agent = "Uranium, mixture of isotopes (see Radionuclides, alpha-particle-emitting, internally deposited)"
+source = "iarc_classifications"
+
+[[iarc]]
+Z = 94
+agent = "Plutonium"
+source = "iarc_classifications"

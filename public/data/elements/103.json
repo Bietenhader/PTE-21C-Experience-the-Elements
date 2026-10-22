@@ -737,7 +737,12 @@
   "symbolNote": "Proposed with the symbol Lw; later changed to Lr.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "The 1993 IUPAC/IUPAP report found no single conclusive paper: confidence grew over roughly ten years of Berkeley and Dubna work, so credit is shared. The isotope first reported in 1961 was later reassigned."
+  "note": "The 1993 IUPAC/IUPAP report found no single conclusive paper: confidence grew over roughly ten years of Berkeley and Dubna work, so credit is shared. The isotope first reported in 1961 was later reassigned.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Lawrencium is a synthetic element that ends the actinide series and, in many modern tables, sits in group 3 beneath lutetium. A Berkeley team first reported it in 1961 after bombarding about three micrograms of californium with boron ions; it honours Ernest Lawrence, inventor of the cyclotron, and its first proposed symbol, Lw, was changed to Lr. Its outermost electron does something unexpected. Calculations, supported by experiment, place it in a 7p orbital, [Rn] 5f¹⁴ 7s² 7p¹, rather than in the 6d orbital that the Aufbau rule predicts, a relativistic effect. Accordingly, its first ionisation energy, measured on only a few atoms at a time at about 479 kJ/mol, is lower than sodium's.",

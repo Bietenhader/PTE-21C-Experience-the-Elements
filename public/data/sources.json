@@ -475,6 +475,97 @@
    "kind": "reference",
    "status": "ok",
    "notes": "Added in M2. Discovery years and the laboratories credited for Z >= 101 (tools/curated/history.toml)."
+  },
+  "natural_earth": {
+   "id": "natural_earth",
+   "title": "Natural Earth: 1:110m land and 1:10m populated places",
+   "url": "https://www.naturalearthdata.com/",
+   "licence": "Public domain (Natural Earth terms of use)",
+   "licenceUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+   "citation": "Natural Earth, free vector and raster map data, naturalearthdata.com: ne_110m_land and ne_10m_populated_places_simple (GeoJSON from the natural-earth-vector repository, github.com/nvkelso/natural-earth-vector).",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "Added in M4. The world outline of the history panel (simplified by tools/build_lifeandhistory.py into public/data/worldmap.json) and the coordinates of most discovery places (tools/curated/places.toml)."
+  },
+  "geonames": {
+   "id": "geonames",
+   "title": "GeoNames geographical database (cities with at least 5000 inhabitants)",
+   "url": "https://www.geonames.org/",
+   "licence": "CC BY 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+   "citation": "GeoNames, geographical database, www.geonames.org; bulk file cities5000.zip from download.geonames.org/export/dump/.",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "Added in M4. Coordinates of the discovery towns too small for Natural Earth (Calne, Freiberg, Köping, Bergara, Halle, Dubna, Darmstadt, Wako), each picked by its GeoNames id in tools/curated/places.toml."
+  },
+  "iarc_classifications": {
+   "id": "iarc_classifications",
+   "title": "IARC Monographs: List of Classifications (agents classified by the IARC Monographs)",
+   "url": "https://monographs.iarc.who.int/list-of-classifications",
+   "licence": "© IARC/WHO; the classifications are facts, cited",
+   "licenceUrl": "https://monographs.iarc.who.int/",
+   "citation": "International Agency for Research on Cancer, IARC Monographs on the Identification of Carcinogenic Hazards to Humans, List of Classifications, monographs.iarc.who.int/list-of-classifications (group and volumes per agent).",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "Added in M4. The carcinogen group of element-related agents on the biology panel; biology.toml names the agent, and the group comes from the fetched list (the script webapi.iarc.who.int/loc/loc.app.js that draws the IARC page)."
+  },
+  "who_lead": {
+   "id": "who_lead",
+   "title": "WHO fact sheet: Lead poisoning",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health",
+   "licence": "© WHO; facts, cited",
+   "licenceUrl": "https://www.who.int/about/policies/publishing/copyright",
+   "citation": "World Health Organization, Lead poisoning, fact sheet, 10 June 2026, www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Toxicity note for lead (biology.toml)."
+  },
+  "who_mercury": {
+   "id": "who_mercury",
+   "title": "WHO fact sheet: Mercury and health",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/mercury-and-health",
+   "licence": "© WHO; facts, cited",
+   "licenceUrl": "https://www.who.int/about/policies/publishing/copyright",
+   "citation": "World Health Organization, Mercury and health, fact sheet, 24 October 2024, www.who.int/news-room/fact-sheets/detail/mercury-and-health.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Toxicity and environmental notes for mercury (biology.toml)."
+  },
+  "who_arsenic": {
+   "id": "who_arsenic",
+   "title": "WHO fact sheet: Arsenic",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/arsenic",
+   "licence": "© WHO; facts, cited",
+   "licenceUrl": "https://www.who.int/about/policies/publishing/copyright",
+   "citation": "World Health Organization, Arsenic, fact sheet, 7 December 2022, www.who.int/news-room/fact-sheets/detail/arsenic.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Toxicity and environmental notes for arsenic (biology.toml)."
+  },
+  "who_radon": {
+   "id": "who_radon",
+   "title": "WHO fact sheet: Radon",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/radon-and-health",
+   "licence": "© WHO; facts, cited",
+   "licenceUrl": "https://www.who.int/about/policies/publishing/copyright",
+   "citation": "World Health Organization, Radon, fact sheet, 25 January 2023, www.who.int/news-room/fact-sheets/detail/radon-and-health.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Toxicity and environmental notes for radon (biology.toml)."
+  },
+  "unscear_chernobyl": {
+   "id": "unscear_chernobyl",
+   "title": "UNSCEAR: The Chernobyl accident (assessments of 2000, 2008 and later)",
+   "url": "https://www.unscear.org/unscear/en/areas-of-work/chernobyl.html",
+   "licence": "© United Nations; facts, cited",
+   "licenceUrl": "https://www.un.org/en/about-us/terms-of-use",
+   "citation": "United Nations Scientific Committee on the Effects of Atomic Radiation, The Chernobyl accident, www.unscear.org/unscear/en/areas-of-work/chernobyl.html, summarizing UNSCEAR 2008 Report Vol. II, Annex D, Health effects due to radiation from the Chernobyl accident (United Nations, 2011).",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. The iodine-131 note on the biology panel (milk, children's thyroids, thyroid cancers by 2005)."
   }
  }
 }

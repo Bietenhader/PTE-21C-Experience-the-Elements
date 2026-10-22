@@ -646,7 +646,12 @@
   ],
   "nameOrigin": "From the Greek molybdos, 'lead', because its ore molybdenite was long confused with lead ore and graphite.",
   "source": "pubchem",
-  "note": "Los Alamos dates Hjelm's (impure) metal to 1782."
+  "note": "Los Alamos dates Hjelm's (impure) metal to 1782.",
+  "placeLocation": {
+   "lat": 59.514,
+   "lon": 15.993,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Molybdenum is a hard, silvery transition metal that melts at 2896 K and is mostly used to make steels stronger and tougher at high temperature. Surprisingly, life depends on it: the usual form of nitrogenase, the enzyme with which root-nodule bacteria turn nitrogen from the air into ammonia, carries molybdenum at its heart, and plants need it for nitrate reductase, so molybdenum-poor soils can leave crops short of nitrogen. Like chromium above it, molybdenum breaks the filling rule: its ground state is [Kr] 4d⁵ 5s¹ rather than 4d⁴ 5s², with six unpaired electrons and the ground term ⁷S₃.",

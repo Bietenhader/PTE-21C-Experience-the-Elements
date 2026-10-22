@@ -405,7 +405,12 @@
   "nameOrigin": "From the Greek argos, 'idle' or 'inactive', because it would not combine with anything.",
   "symbolNote": "Its symbol was A until IUPAC changed it to Ar in 1957.",
   "source": "pubchem",
-  "note": "Cavendish had noticed an unreactive residue of air in 1785. CIAAW names the discoverer as Robert John Strutt, but the Lord Rayleigh who found argon was his father, John William Strutt."
+  "note": "Cavendish had noticed an unreactive residue of air in 1785. CIAAW names the discoverer as Robert John Strutt, but the Lord Rayleigh who found argon was his father, John William Strutt.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Argon is a colourless noble gas and the third most plentiful gas in dry air; it fills incandescent light bulbs and shields hot metal from oxygen during welding. Its name comes from the Greek for 'lazy', because it reacts with almost nothing. Nearly all of Earth's argon, 99.6 %, is argon-40, built up over billions of years in rocks as radioactive potassium-40 decays; this is why our planet's argon differs from the Sun's, and why argon can be used to date volcanic rocks. The atom's eighteen electrons close the 3p subshell ([Ne] 3s² 3p⁶, ground term ¹S₀).",

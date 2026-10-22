@@ -834,7 +834,12 @@
   "place": "Stockholm, Sweden",
   "nameOrigin": "From Ytterby, the Swedish village whose quarry gave the mineral it came from.",
   "source": "pubchem",
-  "note": "Mosander split yttria into three oxides; the names terbia and erbia were later swapped, so today's terbium is not the oxide he first called terbia."
+  "note": "Mosander split yttria into three oxides; the names terbia and erbia were later swapped, so today's terbium is not the oxide he first called terbia.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Terbium is a soft, silver-grey lanthanide and one of four elements named after the Swedish village of Ytterby, whose quarry yielded a string of rare earths. Its ions glow a vivid green, so terbium compounds supply the green in many fluorescent lamps. Terfenol-D, an alloy of terbium, dysprosium and iron, changes shape in a magnetic field more than almost any other material and drives sonar transmitters and precision actuators. The atom has nine 4f electrons ([Xe] 4f⁹ 6s²), five of them unpaired, and a ground level ⁶H°₁₅/₂ with the large total angular momentum J = 15/2.",

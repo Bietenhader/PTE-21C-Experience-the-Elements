@@ -517,7 +517,12 @@
   "place": "Uppsala, Sweden",
   "nameOrigin": "From manganesia, a medieval variant of magnesia, the old name shared by its black oxide ore (pyrolusite).",
   "source": "pubchem",
-  "note": "Scheele recognized a new metal in pyrolusite and Gahn reduced the oxide to the metal the same year; the map dot marks Scheele's Uppsala. CIAAW instead links the name to the Latin magnes, 'magnet'."
+  "note": "Scheele recognized a new metal in pyrolusite and Gahn reduced the oxide to the metal the same year; the map dot marks Scheele's Uppsala. CIAAW instead links the name to the Latin magnes, 'magnet'.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Manganese is a hard, brittle, grey transition metal; most of it goes into steel, which it toughens, and it also forms the dark manganese dioxide inside ordinary alkaline batteries. Life uses it in a remarkable place: in photosystem II of plants and algae, a cluster of four manganese atoms and one calcium atom pulls electrons from water, and almost all the oxygen in the air was released there. The atom has a half-filled 3d subshell, [Ar] 3d⁵ 4s², with five unpaired electrons whose spins all point the same way; their orbital motions cancel, giving an S-type ground term, ⁶S₅/₂.",

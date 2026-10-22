@@ -746,7 +746,12 @@
   "place": "Oak Ridge, United States",
   "nameOrigin": "After Prometheus, the Titan of Greek myth who stole fire from the gods.",
   "source": "pubchem",
-  "note": "Identified chemically by ion-exchange chromatography among uranium fission products at Clinton Laboratories (now Oak Ridge National Laboratory). Jefferson Lab dates the proof to 1944 and its announcement to after the war. Earlier claims, such as illinium and florentium in the 1920s, were not confirmed, and 1941–42 Ohio State work probably made it without chemical proof."
+  "note": "Identified chemically by ion-exchange chromatography among uranium fission products at Clinton Laboratories (now Oak Ridge National Laboratory). Jefferson Lab dates the proof to 1944 and its announcement to after the war. Earlier claims, such as illinium and florentium in the 1920s, were not confirmed, and 1941–42 Ohio State work probably made it without chemical proof.",
+  "placeLocation": {
+   "lat": 36.011,
+   "lon": -84.27,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Promethium is the only lanthanide with no stable isotopes: the longest-lived, promethium-145, has a half-life of just 17.7 years, so any present when the Earth formed vanished long ago, and only fleeting traces arise from the fission of uranium in rocks. It was identified in the 1940s among fission products from a nuclear reactor and named after Prometheus, who stole fire from the gods. Promethium-147, a gentle beta emitter, has lit luminous dials and powered tiny nuclear batteries. The atom follows the filling rule, [Xe] 4f⁵ 6s², with five unpaired 4f electrons and the ground term ⁶H°₅/₂.",

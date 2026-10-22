@@ -546,7 +546,12 @@
   "place": "Berlin, Germany",
   "nameOrigin": "From the German Zink, a word of uncertain origin.",
   "source": "pubchem",
-  "note": "Zinc ores were used for brass since antiquity and the metal was smelted in India long before Marggraf: Los Alamos says the 13th century, Jefferson Lab the 1400s, and CIAAW says it was recognized as a metal by 1374."
+  "note": "Zinc ores were used for brass since antiquity and the metal was smelted in India long before Marggraf: Los Alamos says the 13th century, Jefferson Lab the 1400s, and CIAAW says it was recognized as a metal by 1374.",
+  "placeLocation": {
+   "lat": 52.524,
+   "lon": 13.4,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Zinc is a bluish-white metal used mostly to coat steel against rust: on galvanised steel the zinc corrodes first, protecting the iron even where the coating is scratched. It is also an essential trace element that helps thousands of proteins keep their shape or do their work, and zinc-deficient crops grow small, crowded leaves. All its electrons are paired, [Ar] 3d¹⁰ 4s² (ground term ¹S₀), and zinc never opens its filled 3d subshell in ordinary chemistry. Its ion Zn²⁺ keeps all ten d electrons, which is why zinc salts are colourless and why, by the strict IUPAC definition, zinc is not a true transition element.",

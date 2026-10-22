@@ -117,7 +117,12 @@
   "symbolNote": "Temporary name: ununhexium (Uuh); named livermorium in 2012.",
   "source": "iupac_discovery",
   "doi": "10.1351/PAC-REP-10-05-01",
-  "note": "First reported in 2000 from calcium-48 on curium-248; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration."
+  "note": "First reported in 2000 from calcium-48 on curium-248; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Livermorium is a synthetic element in group 16, below polonium, named after Lawrence Livermore National Laboratory in California, whose scientists worked with the Dubna team that announced it in December 2000. It was made by fusing calcium-48 with curium-248, and every known isotope is fleeting: livermorium-293, the longest-lived measured so far, has a half-life of only about a tenth of a second. Only small numbers of atoms have ever been made, and its chemistry is unexplored. Calculations predict [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁴, with a closed 7p₁/₂ pair and two electrons in the higher 7p₃/₂ level, which should make +2 its most important oxidation state.",

@@ -1072,7 +1072,12 @@
   "place": "Geneva, Switzerland",
   "nameOrigin": "From Ytterby, the Swedish village whose quarry gave the mineral it came from.",
   "source": "pubchem",
-  "note": "Urbain showed in 1907, as Auer von Welsbach did independently, that Marignac's ytterbia also contained a second element, lutetium."
+  "note": "Urbain showed in 1907, as Auer von Welsbach did independently, that Marignac's ytterbia also contained a second element, lutetium.",
+  "placeLocation": {
+   "lat": 46.21,
+   "lon": 6.14,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Ytterbium is a soft, silvery lanthanide, the fourth element named after Ytterby in Sweden. It is oddly light for its place: its density, 6.9 g/cm³, is far below that of its neighbours thulium (9.32) and lutetium (9.84), because each atom in the metal lends only two electrons to bonding instead of three. With its 4f shell full ([Xe] 4f¹⁴ 6s², ground term ¹S₀) it behaves like a simple two-electron atom: it absorbs strongly at 398.8 nm, and a much weaker green line at 555.6 nm, linking singlet and triplet levels, is used to laser-cool ytterbium for some of the world’s most precise atomic clocks.",

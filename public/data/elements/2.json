@@ -317,7 +317,12 @@
   ],
   "nameOrigin": "From the Greek helios, 'Sun', because it was first seen as an unexplained yellow line in the solar spectrum.",
   "source": "pubchem",
-  "note": "Janssen recorded the line during the solar eclipse of August 1868 (the map dot is his observing site) and Lockyer argued it came from an unknown element. Ramsay found the gas on Earth in the uranium mineral cleveite in 1895; Cleve and Langlet found it there independently."
+  "note": "Janssen recorded the line during the solar eclipse of August 1868 (the map dot is his observing site) and Lockyer argued it came from an unknown element. Ramsay found the gas on Earth in the uranium mineral cleveite in 1895; Cleve and Langlet found it there independently.",
+  "placeLocation": {
+   "lat": 16.33,
+   "lon": 80.45,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Helium is a noble gas, the second lightest element and the second most common in the universe; on Earth it is collected from natural gas, where it has gathered after being released as alpha particles by uranium and thorium decaying in rocks. It was first spotted in 1868 as a yellow line near 587.6 nm in the light of the Sun, long before anyone found it on Earth. Its two electrons fill the 1s shell (ground term ¹S₀), giving helium the highest first ionisation energy of any element, about 2372 kJ/mol, so it forms no stable compounds under ordinary conditions.",

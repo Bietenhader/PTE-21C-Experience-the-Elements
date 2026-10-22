@@ -707,7 +707,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After California, the state and the university where it was made.",
   "source": "pubchem",
-  "note": "Made by helium-ion bombardment of microgram amounts of curium-242 in the Berkeley 60-inch cyclotron."
+  "note": "Made by helium-ion bombardment of microgram amounts of curium-242 in the Berkeley 60-inch cyclotron.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Californium is a synthetic actinide metal, made at Berkeley in 1950 by striking curium-242 with helium ions, and named after the state. Its isotope californium-252, with a half-life of about 2.6 years, is an astonishingly strong neutron emitter: a single microgram releases around 170 million neutrons every minute, which makes it a compact source for locating water and oil layers in boreholes and for detecting gold and silver in ores. The atom's ten 5f electrons, [Rn] 5f¹⁰ 7s², form a ⁵I₈ ground level; its J = 8 equals that of dysprosium, the lanthanide above it, and no element has a larger total angular momentum in its ground state.",

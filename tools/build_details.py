@@ -406,6 +406,9 @@ def build_details(report: Report | None = None) -> dict[str, int]:
         counts[name] = builder(data, symbols, report)
     counts["elements"] = build_elements(load_json(DATA_DIR / "index.json"), report)
     counts["colour"] = build_colour(report)
+    import build_lifeandhistory
+
+    counts["worldmap"] = build_lifeandhistory.build_worldmap(report)
     if own_report and report.sections:
         # Append this step's findings to the report build.py wrote (python tools/pipeline.py runs both).
         path = TOOLS_DIR / "build-report.md"
@@ -735,26 +738,7 @@ def origin_record(row: dict | None, omitted: dict | None) -> dict:
     )
 
 
-def biology_record(row: dict | None) -> dict:
-    if not row:
-        return {
-            "essentialPlant": "no",
-            "essentialHuman": "no",
-            "note": "Not known to be essential for plants or for humans.",
-        }
-    out: dict = {"essentialPlant": row.get("essential_plant", "no"), "essentialHuman": row.get("essential_human", "no")}
-    if row.get("plant_class"):
-        out["plantClass"] = row["plant_class"]
-    for side in ("plant", "human"):
-        if row.get(f"{side}_role"):
-            out[f"{side}Role"] = {
-                "text": row[f"{side}_role"],
-                "source": row[f"{side}_source"],
-                **({"doi": row[f"{side}_doi"]} if row.get(f"{side}_doi") else {}),
-            }
-    if row.get("note"):
-        out["note"] = row["note"]
-    return out
+# biology and history records: tools/build_lifeandhistory.py (M4).
 
 
 def load_prose(z: int, symbol: str) -> dict | None:
@@ -778,28 +762,6 @@ def load_prose(z: int, symbol: str) -> dict | None:
     if not 60 <= words <= 120:
         raise ValueError(f"prose/{z}.md: {words} words (SPEC §6.2: 60–120)")
     return {"text": body, "sources": sources}
-
-
-def history_record(row: dict | None) -> dict:
-    if not row:
-        return {}
-    out: dict = {"discovered": row["discovered"]}
-    keys = {
-        "discovered_text": "discoveredText",
-        "discoverers": "discoverers",
-        "place": "place",
-        "isolated": "isolated",
-        "isolated_by": "isolatedBy",
-        "name_origin": "nameOrigin",
-        "symbol_note": "symbolNote",
-        "source": "source",
-        "doi": "doi",
-        "note": "note",
-    }
-    for k, v in keys.items():
-        if row.get(k) not in (None, "", []):
-            out[v] = row[k]
-    return out
 
 
 def build_elements(index: dict, report: Report) -> int:
@@ -846,7 +808,10 @@ def build_elements(index: dict, report: Report) -> int:
     cooling: dict[int, list] = {}
     for r in curated.load("lasercooling.toml"):
         cooling.setdefault(r["Z"], []).append(r)
-    biology = {r["Z"]: r for r in curated.load("biology.toml")}
+    import build_lifeandhistory as life
+
+    biology, biology_extra = life.load_biology(report)
+    places = life.load_places(report)
     prod_rows: dict[int, list] = {}
     for r in curated.load("production.toml"):
         prod_rows.setdefault(r["Z"], []).append(r)
@@ -920,8 +885,8 @@ def build_elements(index: dict, report: Report) -> int:
             "laserCooling": [lasercooling_record(r, lines["windows"]) for r in cooling.get(z, [])],
             "siHistory": amo["siHistory"],
         }
-        doc["biology"] = biology_record(biology.get(z))
-        hist = history_record(history.get(z))
+        doc["biology"] = life.biology_record(biology.get(z), biology_extra.get(z))
+        hist = life.history_record(history.get(z), places)
         if hist:
             doc["history"] = hist
         prose = load_prose(z, e["symbol"])

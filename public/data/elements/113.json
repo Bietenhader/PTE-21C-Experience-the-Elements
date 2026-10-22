@@ -116,7 +116,12 @@
   "symbolNote": "Temporary name: ununtrium (Uut); named nihonium in 2016.",
   "source": "iupac_discovery",
   "doi": "10.1515/pac-2015-0502",
-  "note": "First atom made on 23 July 2004 from zinc-70 on bismuth-209; the 2016 IUPAC/IUPAP report credited the RIKEN collaboration. The first element discovered in Asia."
+  "note": "First atom made on 23 July 2004 from zinc-70 on bismuth-209; the 2016 IUPAC/IUPAP report credited the RIKEN collaboration. The first element discovered in Asia.",
+  "placeLocation": {
+   "lat": 35.789,
+   "lon": 139.623,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Nihonium is a synthetic element in group 13, below thallium, and the first element discovered in an Asian country; its name comes from Nihon, one way of saying 'Japan' in Japanese. At the RIKEN laboratory in Wako, researchers fired zinc-70 ions at bismuth-209 and caught their first atom on 23 July 2004; collecting only a handful of convincing atoms of nihonium-278, half-life about 1.4 milliseconds, took years. A heavier isotope, nihonium-286, lasts about 10 seconds. Its predicted configuration is [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p¹, with the lone outer electron in the strongly stabilised 7p₁/₂ level; no measurement exists, and its chemistry is barely explored.",

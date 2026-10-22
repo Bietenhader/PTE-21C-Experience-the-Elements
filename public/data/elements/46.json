@@ -641,7 +641,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "After the asteroid Pallas, discovered in 1802 and named after the goddess Pallas Athena.",
   "source": "pubchem",
-  "note": "Wollaston first announced it anonymously, without describing how he had made it."
+  "note": "Wollaston first announced it anonymously, without describing how he had made it.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Palladium is a silvery-white platinum-group metal, the least dense and lowest-melting of its family, used in catalytic converters, dental alloys and, mixed with gold, white gold. At room temperature it acts as a metal sponge for hydrogen, soaking up as much as 900 times its own volume of the gas, and heated palladium lets hydrogen slip through while blocking other gases, a neat way to purify it. Its atom is unique: the ground configuration is [Kr] 4d¹⁰, with no electron at all in the fifth shell, even though palladium sits in period 5. The filling rule predicts 4d⁸ 5s², but the completely filled d shell (¹S₀) wins.",

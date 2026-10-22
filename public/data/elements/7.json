@@ -286,7 +286,30 @@
    "text": "Part of every amino acid, protein and nucleic acid; obtained from dietary protein.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 15,
+    "field": "tracer",
+    "text": "Bacteria grown on heavy nitrogen-15 and then moved to ordinary nitrogen-14 made DNA of intermediate density, separable in a centrifuge: Meselson and Stahl's 1958 proof that DNA is copied semi-conservatively.",
+    "source": "primary_literature",
+    "doi": "10.1073/pnas.44.7.671"
+   },
+   {
+    "A": 15,
+    "field": "environment",
+    "text": "The share of nitrogen-15 differs between nitrogen sources and changes as nitrogen passes through soils, plants and food webs, so it traces where the nitrogen in an ecosystem comes from and where it goes.",
+    "source": "primary_literature",
+    "doi": "10.1016/S0169-5347(00)02098-X"
+   }
+  ],
+  "environment": [
+   {
+    "text": "Nitrogen from fertilisers and sewage that washes into rivers, lakes and coastal seas feeds blooms of algae (eutrophication), which use up the oxygen in the water as they decay.",
+    "source": "primary_literature",
+    "doi": "10.1016/S0269-7491(99)00091-3"
+   }
+  ]
  },
  "history": {
   "discovered": 1772,
@@ -296,7 +319,12 @@
   "place": "Edinburgh, United Kingdom",
   "nameOrigin": "From the French nitrogène, built from the Greek nitron ('native soda', i.e. nitre) and -genes ('producing'), because it is a constituent of nitre.",
   "source": "pubchem",
-  "note": "Scheele, Cavendish and Priestley were studying the same unbreathable residue of air at about the same time."
+  "note": "Scheele, Cavendish and Priestley were studying the same unbreathable residue of air at about the same time.",
+  "placeLocation": {
+   "lat": 55.948,
+   "lon": -3.219,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Nitrogen is a colourless, unreactive gas that makes up most of the air we breathe, yet it is also a building block of every protein and every strand of DNA. Plants cannot use the gas directly, because the triple bond holding the two atoms of N₂ together is extraordinarily strong; legumes such as peas and clover solve this by housing bacteria in root nodules that turn it into ammonia. A nitrogen atom, [He] 2s² 2p³, has three 2p electrons, one in each p orbital with parallel spins (ground term ⁴S°₃/₂). This half-filled subshell is so stable that nitrogen's first ionisation energy, 1402 kJ/mol, exceeds oxygen's 1314 kJ/mol.",

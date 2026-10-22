@@ -896,7 +896,12 @@
   "place": "Copenhagen, Denmark",
   "nameOrigin": "From Hafnia, the Latin name of Copenhagen, where it was found.",
   "source": "pubchem",
-  "note": "Found by X-ray spectroscopy in zirconium minerals, as Bohr's theory of electron shells predicted; Urbain's earlier 'celtium', sought among the rare earths, was a mistaken claim. Van Arkel and de Boer later made the metal."
+  "note": "Found by X-ray spectroscopy in zirconium minerals, as Bohr's theory of electron shells predicted; Urbain's earlier 'celtium', sought among the rare earths, was a mistaken claim. Van Arkel and de Boer later made the metal.",
+  "placeLocation": {
+   "lat": 55.681,
+   "lon": 12.562,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Hafnium is a silvery, corrosion-resistant transition metal named after Hafnia, the Latin name for Copenhagen, where Dirk Coster and George de Hevesy found it in 1923 by X-ray spectroscopy of zirconium ore, guided by Niels Bohr’s theory of electron shells. Its oxide insulates the tiniest transistors in modern computer chips, and because it soaks up neutrons it serves in reactor control rods. Hafnium is almost a chemical clone of zirconium: the fourteen 4f electrons added before it shield the nucleus poorly and shrink the atom (the lanthanide contraction), so both have a covalent radius of 175 pm, though hafnium is twice as dense.",

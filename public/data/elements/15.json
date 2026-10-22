@@ -390,7 +390,41 @@
    "text": "Bone mineral (calcium phosphate), ATP, DNA and RNA, and cell membranes.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 32,
+    "field": "tracer",
+    "text": "Phosphorus-32 fed to rats in 1935, one of the first radioactive tracers in physiology, showed that the phosphorus in bone is constantly exchanged rather than laid down for good.",
+    "source": "primary_literature",
+    "doi": "10.1038/136754a0"
+   },
+   {
+    "A": 32,
+    "field": "tracer",
+    "text": "With phage DNA labelled by phosphorus-32 and phage protein by sulfur-35, Hershey and Chase showed in 1952 that mainly the DNA enters the infected bacterium: evidence that genes are made of DNA.",
+    "source": "primary_literature",
+    "doi": "10.1085/jgp.36.1.39"
+   }
+  ],
+  "environment": [
+   {
+    "text": "Phosphorus is the nutrient that most often limits algae in lakes, so phosphate in runoff and sewage is a main driver of their eutrophication.",
+    "source": "primary_literature",
+    "doi": "10.1016/S0269-7491(99)00091-3"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Phosphorus-32, as phosphate",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1669,
@@ -400,7 +434,12 @@
   "place": "Hamburg, Germany",
   "nameOrigin": "From the Greek phosphoros, 'light-bearer', because white phosphorus glows in the dark.",
   "source": "pubchem",
-  "note": "Brand, an alchemist, prepared it by boiling down large amounts of urine."
+  "note": "Brand, an alchemist, prepared it by boiling down large amounts of urine.",
+  "placeLocation": {
+   "lat": 53.552,
+   "lon": 9.998,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Phosphorus is a reactive nonmetal found in several forms: waxy white phosphorus, which must be kept under water, the red phosphorus of matchbox strikers, and violet and black varieties. Life cannot do without it, in DNA, in the energy carrier ATP, in bones, and as one of the three main nutrients in crop fertilisers. In 1669 the alchemist Hennig Brand isolated it by boiling down large amounts of urine; the green glow of white phosphorus in air comes from slow oxidation, a kind of chemiluminescence, not from phosphorescence. The atom has a half-filled 3p subshell, [Ne] 3s² 3p³ (ground term ⁴S°₃/₂), and phosphorus-31, its only stable isotope, has nuclear spin 1/2, ideal for NMR.",

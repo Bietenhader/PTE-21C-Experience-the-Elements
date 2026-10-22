@@ -548,7 +548,25 @@
    "text": "Built into selenoproteins such as glutathione peroxidases, which protect cells from oxidation, and into enzymes that activate thyroid hormone.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "environment": [
+   {
+    "text": "Selenium leached from soils by irrigation drainage collected in the Kesterson ponds in California in the early 1980s and caused deformed and dead embryos in water birds.",
+    "source": "primary_literature",
+    "doi": "10.1016/0048-9697(86)90104-X"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Selenium and selenium compounds",
+    "group": "3",
+    "volumes": [
+     "9",
+     "Sup 7"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1817,
@@ -558,7 +576,12 @@
   "place": "Stockholm, Sweden",
   "nameOrigin": "From the Greek selene, 'Moon', as a companion to tellurium, which is named after the Earth.",
   "source": "pubchem",
-  "note": "Found in residue from a Swedish sulfuric acid works; Berzelius first took it for tellurium."
+  "note": "Found in residue from a Swedish sulfuric acid works; Berzelius first took it for tellurium.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Selenium is a nonmetal that comes as a red powder or as grey, metallic-looking crystals; it was named after the Moon, as a partner to tellurium, named after the Earth. Selenium conducts electricity far better in light than in the dark, a property put to work in early light sensors and in photocopier drums. Animals need traces of it, yet some milkvetch plants hoard enough in their leaves to poison grazing livestock. The atom is [Ar] 3d¹⁰ 4s² 4p⁴ (ground term ³P₂). Selenium-82, 8.82 % of the natural element, is radioactive, but it decays by double beta decay so slowly, with a half-life of about 9.6 × 10¹⁹ years, that it far outlasts the age of the universe.",

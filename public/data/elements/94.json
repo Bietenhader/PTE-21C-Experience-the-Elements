@@ -715,7 +715,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Plutonium",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1940,
@@ -730,7 +741,12 @@
   "isolated": 1943,
   "nameOrigin": "After Pluto, then counted as the planet beyond Neptune.",
   "source": "pubchem",
-  "note": "Made by bombarding uranium-238 with deuterons from the 60-inch cyclotron at Berkeley; the paper was submitted in January 1941 but withheld until 1946 for wartime secrecy. The first metal was made in November 1943 (Los Alamos). Jefferson Lab gives 1941 and spells Wahl as 'Wohl'."
+  "note": "Made by bombarding uranium-238 with deuterons from the 60-inch cyclotron at Berkeley; the paper was submitted in January 1941 but withheld until 1946 for wartime secrecy. The first metal was made in November 1943 (Los Alamos). Jefferson Lab gives 1941 and spells Wahl as 'Wohl'.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Plutonium is a radioactive actinide metal first made at Berkeley in 1940–41, whose discovery stayed secret until after the Second World War; plutonium-239, with a half-life of about 24,000 years, drives nuclear weapons and some reactors, while plutonium-238 powers spacecraft far from the Sun. As a metal it is notoriously awkward: at ordinary pressure it passes through six crystal forms between room temperature and its melting point, with densities from about 16 to nearly 20 grams per cubic centimetre. Its ground configuration, [Rn] 5f⁶ 7s², holds six unpaired 5f electrons with parallel spins, yet spin and orbital momentum cancel exactly in the ⁷F₀ ground level, with J = 0.",

@@ -702,7 +702,12 @@
   ],
   "nameOrigin": "After Marie and Pierre Curie, by analogy with gadolinium, which is named after Gadolin.",
   "source": "pubchem",
-  "note": "Made by helium-ion bombardment of plutonium-239 in the Berkeley cyclotron and identified at the Metallurgical Laboratory in Chicago (Jefferson Lab places the work at Berkeley). Werner and Perlman isolated the first visible amount of a compound in 1947."
+  "note": "Made by helium-ion bombardment of plutonium-239 in the Berkeley cyclotron and identified at the Metallurgical Laboratory in Chicago (Jefferson Lab places the work at Berkeley). Werner and Perlman isolated the first visible amount of a compound in 1947.",
+  "placeLocation": {
+   "lat": 41.848,
+   "lon": -87.635,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Curium is a silvery, intensely radioactive actinide, made in 1944 by bombarding plutonium-239 with alpha particles and named after Marie and Pierre Curie. It runs hot: each gram of curium-242 gives off about three watts of heat, six times as much as plutonium-238, and both curium-242 and curium-244 have been tried as power sources. Its longest-lived isotope, curium-247, has a half-life of about 16 million years, far too short for any curium from Earth's formation to survive. In the atom, the electron added after americium goes into 6d rather than 5f, keeping the 5f shell half full: [Rn] 5f⁷ 6d¹ 7s², with eight unpaired electrons and a ⁹D°₂ ground term.",

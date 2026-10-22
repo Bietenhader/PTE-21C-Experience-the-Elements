@@ -97,6 +97,7 @@ CONSTANTS_FOR_TS = {
     "hyperfine transition frequency of Cs-133": "deltaNuCs",
     "Hartree energy in eV": "hartreeEV",
     "Rydberg constant": "RInf",
+    "electron g factor": "ge",
 }
 
 _SUP = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")

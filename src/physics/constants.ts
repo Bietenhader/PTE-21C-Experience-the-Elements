@@ -26,6 +26,7 @@ export const CODATA = {
   deltaNuCs: { value: 9192631770.0, unc: 0, unit: "Hz", exact: true, name: "hyperfine transition frequency of Cs-133", text: "9 192 631 770" },
   hartreeEV: { value: 27.211386245981, unc: 3e-11, unit: "eV", exact: false, name: "Hartree energy in eV", text: "27.211 386 245 981" },
   RInf: { value: 10973731.568157, unc: 1.2e-05, unit: "m^-1", exact: false, name: "Rydberg constant", text: "10 973 731.568 157" },
+  ge: { value: -2.00231930436092, unc: 3.6e-13, unit: "", exact: false, name: "electron g factor", text: "-2.002 319 304 360 92" },
 } as const satisfies Record<string, Constant>;
 
 /** 1 eV expressed in kJ/mol: e · N_A / 1000, exact (both factors are SI defining constants).

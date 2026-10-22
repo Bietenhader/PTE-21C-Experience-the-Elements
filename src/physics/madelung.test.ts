@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import type { IndexFile } from "../data/types";
-import { aufbauConfiguration, isAnomalous, madelungOrder, parseConfiguration, notation } from "./madelung";
+import { anomalyKind, aufbauConfiguration, isAnomalous, madelungOrder, parseConfiguration, notation } from "./madelung";
 
 const index = JSON.parse(readFileSync(new URL("../../public/data/index.json", import.meta.url), "utf8")) as IndexFile;
 
@@ -33,5 +33,19 @@ describe("Madelung generator", () => {
       .filter((e) => e.configuration.source === "nist_gsie" && isAnomalous(e.Z, e.configuration.measured))
       .map((e) => e.symbol);
     expect(flagged).toEqual(EXPECTED);
+  });
+
+  it("classifies every anomaly by what moved where (SPEC §10.5)", () => {
+    const kinds: Record<string, string[]> = {};
+    for (const e of index.elements) {
+      const k = anomalyKind(e.Z, e.configuration.measured);
+      if (k) (kinds[k] ??= []).push(e.symbol);
+    }
+    expect(kinds).toEqual({
+      "half-or-filled": ["Cr", "Cu", "Mo", "Pd", "Ag", "Au"],
+      "d-s": ["Nb", "Ru", "Rh", "Pt"],
+      "f-to-d": ["La", "Ce", "Gd", "Ac", "Th", "Pa", "U", "Np", "Cm"],
+      relativistic: ["Lr"],
+    });
   });
 });

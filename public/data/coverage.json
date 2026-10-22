@@ -290,6 +290,81 @@
    "count": 118,
    "missing": {},
    "file": "prose/{Z}.md"
+  },
+  {
+   "label": "Static dipole polarizability",
+   "count": 118,
+   "missing": {},
+   "file": "schwerdtfeger2019"
+  },
+  {
+   "label": "Ionic radii (Shannon)",
+   "count": 91,
+   "missing": {},
+   "file": "shannon1976",
+   "note": "Shannon's table lists no ion of the other elements in a common oxidation state."
+  },
+  {
+   "label": "Well-known compounds",
+   "count": 94,
+   "missing": {},
+   "file": "chemistry.toml, pubchem_compounds",
+   "note": "None made, or none confirmed, for the others; each says why."
+  },
+  {
+   "label": "Reactions with air, water and acids",
+   "count": 95,
+   "missing": {},
+   "file": "chemistry.toml (hsdb, cameo_chemicals, greenwood1997)",
+   "note": "Not studied for the rest (too few atoms, too radioactive); each says why."
+  },
+  {
+   "label": "Molar heat capacity",
+   "count": 85,
+   "missing": {},
+   "file": "crc_handbook",
+   "note": "The CRC table lists these elements only."
+  },
+  {
+   "label": "Allotropes",
+   "count": 14,
+   "missing": {},
+   "file": "allotropes.toml",
+   "note": "Only elements with more than one well-known solid form are listed."
+  },
+  {
+   "label": "Uses",
+   "count": 118,
+   "missing": {},
+   "file": "uses.toml"
+  },
+  {
+   "label": "GHS hazard classification",
+   "count": 84,
+   "missing": {},
+   "file": "pubchem_ghs",
+   "note": "PubChem has none for the rest; from Z = 100 on there is no substance to classify."
+  },
+  {
+   "label": "IARC classification",
+   "count": 23,
+   "missing": {},
+   "file": "iarc_classifications",
+   "note": "IARC has evaluated these elements (or their compounds) only."
+  },
+  {
+   "label": "Isotopes in biology and medicine",
+   "count": 14,
+   "missing": {},
+   "file": "biology.toml",
+   "note": "Curated examples, not a complete list."
+  },
+  {
+   "label": "Place of discovery on the map",
+   "count": 100,
+   "missing": {},
+   "file": "natural_earth, geonames",
+   "note": "Our history table names no single place for the rest."
   }
  ]
 }

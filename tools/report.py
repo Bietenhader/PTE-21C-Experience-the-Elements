@@ -78,6 +78,15 @@ COVERAGE_NOTES = {
     "Clementi–Raimondi effective nuclear charges": "The tables cover helium to radon; hydrogen needs none.",
     "Orbital eigenvalues (NIST SRD 141)": "NIST SRD 141 covers Z = 1–92.",
     "Allen electronegativity": "Allen's configuration energies (Mann et al. 2000) cover these elements only.",
+    "Ionic radii (Shannon)": "Shannon's table lists no ion of the other elements in a common oxidation state.",
+    "Well-known compounds": "None made, or none confirmed, for the others; each says why.",
+    "Reactions with air, water and acids": "Not studied for the rest (too few atoms, too radioactive); each says why.",
+    "Molar heat capacity": "The CRC table lists these elements only.",
+    "Allotropes": "Only elements with more than one well-known solid form are listed.",
+    "GHS hazard classification": "PubChem has none for the rest; from Z = 100 on there is no substance to classify.",
+    "IARC classification": "IARC has evaluated these elements (or their compounds) only.",
+    "Isotopes in biology and medicine": "Curated examples, not a complete list.",
+    "Place of discovery on the map": "Our history table names no single place for the rest.",
     "Hyperfine structure, any isotope or ion": "Not yet compiled for the rest, or there is none (I = 0 or J = 0).",
     "Clock or standard frequency": "Only these elements have a clock or a recommended frequency.",
     "Laser cooling": "Only these elements have been laser-cooled.",
@@ -121,6 +130,9 @@ def detail_counts(details: dict[int, dict]) -> list[tuple[str, int, str]]:
 
     def present(section: dict, key: str) -> bool:
         return key in section and not is_missing(section[key])
+
+    def listed(x) -> bool:
+        return isinstance(x, list) and len(x) > 0
 
     rows = [
         ("Isotope records (IAEA)", len(list((DATA_DIR / "isotopes").glob("*.json"))), "iaea_livechart"),
@@ -168,6 +180,25 @@ def detail_counts(details: dict[int, dict]) -> list[tuple[str, int, str]]:
         ),
         ("History: discovery", n(lambda d: bool(d.get("history"))), "history.toml"),
         ("Our own short text", n(lambda d: bool(d.get("prose"))), "prose/{Z}.md"),
+        ("Static dipole polarizability", n(lambda d: present(d["em"], "polarizability")), "schwerdtfeger2019"),
+        ("Ionic radii (Shannon)", n(lambda d: listed(d["chemistry"]["ionicRadii"])), "shannon1976"),
+        ("Well-known compounds", n(lambda d: listed(d["chemistry"]["compounds"])), "chemistry.toml, pubchem_compounds"),
+        (
+            "Reactions with air, water and acids",
+            n(lambda d: any(not is_missing(v) for v in d["chemistry"]["reactivity"].values())),
+            "chemistry.toml (hsdb, cameo_chemicals, greenwood1997)",
+        ),
+        ("Molar heat capacity", n(lambda d: present(d["physical"]["thermal"], "molarHeatCapacity")), "crc_handbook"),
+        ("Allotropes", n(lambda d: listed(d["physical"]["allotropes"])), "allotropes.toml"),
+        ("Uses", n(lambda d: listed(d["physical"]["uses"])), "uses.toml"),
+        ("GHS hazard classification", n(lambda d: not is_missing(d["physical"]["hazards"])), "pubchem_ghs"),
+        ("IARC classification", n(lambda d: bool(d["biology"].get("iarc"))), "iarc_classifications"),
+        ("Isotopes in biology and medicine", n(lambda d: bool(d["biology"].get("isotopeUses"))), "biology.toml"),
+        (
+            "Place of discovery on the map",
+            n(lambda d: present(d["history"], "placeLocation")),
+            "natural_earth, geonames",
+        ),
     ]
     return rows
 

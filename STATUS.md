@@ -1,99 +1,54 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M4 — Panels, batch 2 · **ready for Fin's review (and his review of `biology.toml`)**
+**Current milestone:** M5 — Release v0.1.0 · **ready for Fin's review**
 **Last updated:** 2026-10-22
-**Next:** M5 — release v0.1.0 (README with screenshots, About page, CHANGELOG, GitHub Release), after Fin's
-review of M4.
+**Next:** after Fin merges the M5 pull request, the release itself (tag `v0.1.0` and the GitHub Release). After
+that, v0.2 is not scheduled (SPEC §18).
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
-## For Fin: what to look at (M4)
+## For Fin: what to look at (M5)
 
-All eleven tabs of an element's sheet are now filled in. The seven new ones, with a good element to try:
+1. **Your name.** The footer, the About page, the README and the package now say "Serafin Bietenhader".
+2. **The note above the table** used to say "Preview (milestone M2) …". It now says "Version 0.1.0. Open any
+   element for its sheet: eleven panels, and every number with its source." The About page says the version too.
+3. **About → "How complete the data is"** now also counts everything added in M4 (polarizability, ionic
+   radii, compounds, reactions, heat capacity, allotropes, uses, GHS labels, IARC, isotope uses, places of
+   discovery), each with a short reason why the other elements have none.
+4. **README → "Honest limitations"**: the approximations, what is predicted rather than measured, what is not
+   compiled yet, which tables were transcribed, why the hazard labels are not lab advice, and which browsers
+   are tested.
+5. **CHANGELOG → [0.1.0]**: everything from M0 to M5; these become the notes of the GitHub Release.
 
-1. **Probability & statistics** — where the electron probably is (a curve and a slider: "within this radius
-   the 5s electron is inside with probability 40 %"), whether each isotope is a boson or a fermion, how fast
-   the atoms of a gas move at any temperature (slide down to the laser-cooling limits), the isotope mix, and
-   what the "(2)" after a number means. *Try:* `#/Rb/probability`.
-2. **Physical & engineering** — density, melting and boiling points, heat capacity, the crystal's unit cell in
-   3D (drag it to turn it), allotropes, how common the element is in rock, sea water, the Solar System and
-   your body, world production and price, uses, and the GHS hazard label. *Try:* `#/Fe/physical`,
-   `#/C/physical`.
-3. **Mathematical & theoretical** — each outer electron's four quantum numbers, Hund's rules worked step by
-   step next to the term NIST measured (they agree for every element except cerium, and the panel says so),
-   Slater's screening arithmetic, why some configurations break the filling rule, and how fast gold's inner
-   electron moves (58 % of light speed — why gold is yellow). *Try:* `#/Fe/math`, `#/Au/math`.
-4. **AMO & metrology** — the hyperfine levels (caesium's define the second), nuclear moments, atomic clocks,
-   laser cooling with its temperature limits, and the history of the second. *Try:* `#/Cs/amo`, `#/Th/amo`,
-   `#/He/amo` (helium has no hyperfine structure, and it says why).
-5. **Chemistry & bonding** — oxidation states with an example compound for each, a size ladder of the ion and
-   atom, electronegativity, bonding, well-known compounds and how the element reacts with air, water and
-   acids. *Try:* `#/Fe/chemistry`, `#/Og/chemistry`.
-6. **Biology & ecology** — whether plants and people need the element, how much is in a body, toxicity,
-   cancer classifications (IARC), soils and food webs, and isotopes used in biology and medicine.
-   *Try:* `#/P/biology`, `#/Cs/biology`.
-7. **History & naming** — the discovery, its place on a world map, a timeline of all 118 discoveries and where
-   the name comes from. *Try:* `#/Ra/history`.
+### How the release happens
 
-### Your review of `tools/curated/biology.toml` (F3)
+Merging the pull request publishes the site as usual. The release is one more step: a small workflow on
+GitHub (Actions → **Release** → **Run workflow**, version `0.1.0`) checks that the version, the changelog
+and the tag fit, then creates the tag `v0.1.0` and the release page with the changelog as its text. Tell me
+"release" after merging and I will start it and check the result; or click it yourself.
 
-Your rows from M2 are unchanged. Everything new is at the end of the file, after the line
-`# M4 additions` (line 344). On GitHub: open the pull request → "Files changed" → `tools/curated/biology.toml`.
-Every row has its source; papers have a DOI that was checked; all text is in our own words.
-
-- **21 isotope uses** (`[[isotope_use]]`): tritium (chromosome copying, 1957), deuterium + oxygen-18 (doubly
-  labelled water), carbon-14 (dating; Calvin's photosynthesis tracer), carbon-13 (C3/C4 plants), nitrogen-15
-  (Meselson–Stahl; food webs), oxygen-18 (oxygen from water in photosynthesis; past ocean temperatures),
-  fluorine-18 (FDG scans), phosphorus-32 (Hevesy), phosphorus-32 and sulfur-35 (Hershey–Chase),
-  strontium-87 (archaeology), technetium-99m, iodine-131 (thyroid treatment; after Chernobyl), caesium-137
-  (uptake by plants), gadolinium (MRI contrast), lutetium-177, radium-223.
-- **11 soil and environment notes** (`[[environment]]`): boron, nitrogen, phosphorus, sodium (salinity),
-  aluminium (acid soils), arsenic, selenium (Kesterson), strontium, cadmium, mercury, radon.
-- **6 toxicity notes** (`[[toxicity]]`): arsenic, cadmium (itai-itai), mercury (Minamata), lead, polonium,
-  radon.
-- **30 IARC entries** (`[[iarc]]`): only the agent's name is typed; the group (1, 2A, 2B, 3) is read from
-  IARC's own list when the data is built.
-
-Please say "biology OK", or tell me which rows to change or remove.
-
-## M4 acceptance criteria (SPEC §18)
+## M5 acceptance criteria (SPEC §18)
 
 | Criterion | State |
 |---|---|
-| 118 × 11 property test | Done — every element on each of the eleven panels: no console errors, nothing like "NaN" on screen, every missing value names its reason (`tests/e2e/panels.spec.ts`) |
-| Every Missing carries a reason | Done — checked by the property test on every panel of every element, and by the pipeline |
-| AMO panel: hyperfine, clock and laser-cooling data for Cs, Rb, Sr, Yb, Al, Hg, Th; `not_applicable` reasons for e.g. He | Done — for each of the seven elements every hyperfine row, clock and laser-cooling line in the data is on screen; helium says *not applicable* because I = 0 and J = 0 (`tests/e2e/amo.spec.ts`, desktop and phone) |
-| Fin has reviewed `biology.toml` | **Waiting for you** (see above) |
+| README with screenshots and the honest limitations | Done — screenshots from M1, M3 and M4; new section "Honest limitations" |
+| About page with coverage and privacy statement | Done — coverage now includes the M4 fields; privacy statement unchanged |
+| CHANGELOG | Done — section [0.1.0], dated 2026-10-22 |
+| GitHub Release; tag `v0.1.0` | After the merge: the Release workflow creates both |
 
-Also: 294 unit tests, 162 pipeline tests and 268 end-to-end tests (Chromium, desktop and phone; 24 more are for
-the other profiles only) pass; the Lighthouse budgets hold (mobile score 94, initial JavaScript 109.1 kB of
-300 kB, first table paint 1.27 s); lint, type checks, the licence audit of the data and the licence check of
-the code dependencies are clean.
+Also: 294 unit tests and 162 pipeline tests pass; the About, table, probability and AMO browser tests pass on
+desktop and phone (the full browser suite runs in CI on the pull request); lint, type checks, the licence audit
+of the data and the licence check of the code dependencies are clean.
 
 ## What changed this session
 
-- **The seven panels** above, built in parallel and merged one by one; each has its own browser tests on
-  desktop and phone, including an accessibility check (axe).
-- **The electromagnetic panel** now shows the polarizability of all 118 atoms (how easily the electron cloud
-  is pushed by an electric field). Properties not compiled yet are named under "Not yet compiled in
-  PTE-21C" instead of being marked "not measured", which was untrue.
-- **New data, all from `tools/`, each value with its source:**
-  - chemistry for every element (`chemistry.toml`): every compound formula was checked against PubChem;
-    where PubChem's record was wrong (for example Li₃N, PuO₂) the row cites Greenwood & Earnshaw instead;
-  - ionic radii (Shannon 1976), heat capacities (CRC Handbook), allotropes, uses for every element, GHS
-    hazards from PubChem;
-  - the places of discovery on a world map (Natural Earth and GeoNames), IARC groups from IARC's list;
-  - notes where relativity changes chemistry (gold, mercury, the car battery, francium), one paper each.
-- **Fixes:**
-  - oganesson's chemistry notes now cite the 2020 paper that actually predicts it is a solid;
-  - a few laser-cooling notes showed a raw data key on screen; they now read in plain words;
-  - "μ_N" (nuclear magneton) is written with a real subscript, and a 16-digit frequency with powers of ten;
-  - two entries for the same textbook were merged into one source.
-- **Docs:** every M4 decision is in `docs/approach.md` (section "M4: panels, batch 2"); README and CHANGELOG
-  updated.
+- **M4 merged** (pull request #5) after your review; `biology.toml` approved ("biology OK").
+- **M5:** your name as the licence and credit name; version 0.1.0 on the page and in the About dialog; the
+  coverage table extended; README "Honest limitations"; CHANGELOG 0.1.0; the release workflow; the decisions
+  in `docs/approach.md` ("M5: release v0.1.0").
 
 ## Questions for Fin — defaults in place, nothing waits on them
 
@@ -141,11 +96,11 @@ the code dependencies are clean.
 
 | Item | Default in use | What you need to do |
 |---|---|---|
-| F1 Attribution name | "Bietenhader (Fin)" (README, footer, package) | Confirm or change before M5 |
+| F1 Attribution name | "Serafin Bietenhader" (README, footer, About, package) | Answered 2026-10-22 |
 | F2 GitHub Pages | Source "GitHub Actions" | Done (2026-10-20) |
-| F3 Review `biology.toml` and the image report | Reviewed in M2 ("LGTM") | **Now (M4):** the new rows (see above) |
+| F3 Review `biology.toml` and the image report | Reviewed in M2 ("LGTM") | M4 rows reviewed: "biology OK" (2026-10-22) |
 | F4 Design review | M3: "the screenshots look good" | Comments on the M4 screenshots welcome |
-| F5 Subtitle | "A fresh perspective on the Periodic Table of the Elements" | Confirm or change before M5 |
+| F5 Subtitle | "A fresh perspective on the Periodic Table of the Elements" | Kept (no change asked, 2026-10-22) |
 
 ## Earlier decisions (still in force)
 

@@ -9,10 +9,10 @@ A quantum-aware, photographic periodic table for the web. Every element gets its
 its nucleus and its place in the physics of measurement — and **every number on screen has a source**. Where
 nothing has been measured, the table says so and says why, instead of showing a plausible guess.
 
-> **Status: milestone M4 (panels, batch 2).** All 118 elements from real, sourced data, in four layouts that
-> morph into one another, with trend arrows, heatmaps and maps, search, hover cards, pinch-zoom, credited
-> photographs and an About page. All eleven panels of the element sheet are filled in. Next is M5, the
-> v0.1.0 release. See [STATUS.md](STATUS.md).
+> **Version 0.1.0** — all 118 elements from real, sourced data, in four layouts that morph into one another,
+> with trend arrows, heatmaps and maps, search, hover cards, pinch-zoom, credited photographs and an About page;
+> every element has a sheet of eleven panels. Read the [honest limitations](#honest-limitations) first. See
+> [CHANGELOG.md](CHANGELOG.md) and [STATUS.md](STATUS.md).
 
 ![The four layouts morphing into one another](docs/media/m1-morph.webp)
 
@@ -84,6 +84,32 @@ or the physical reason an element has none.
 - Not a replacement for NIST, IAEA or PubChem: every value links back to where it came from.
 - No invented values, and no prose copied from Wikipedia or other share-alike sources.
 
+## Honest limitations
+
+- **Approximations, named on screen.** The orbital pictures and the probability curves are hydrogen-like
+  shapes with an effective nuclear charge: exact in shape for one electron, approximate in size for heavy
+  atoms. Laser-cooling limits are computed from a line's wavelength and width, cosmic origins are read off a
+  model's figure in 5 % steps, and the relativity figures use the Bohr model. Each panel says which.
+- **Elements 109–118** have no measured configuration, ground level or ionization energy; the values shown are
+  published relativistic predictions, marked †. Little or no chemistry is known beyond element 100, and the
+  panels say so rather than extrapolating.
+- **Gaps, not zeros.** Some properties are missing for many elements because nobody has measured them, or
+  because PTE-21C has not compiled them yet. Both are shown, with the difference stated. Not yet compiled:
+  thermal conductivity and expansion, elastic moduli, hardness, speed of sound, magnetic ordering,
+  resistivity, superconductivity, work function, band gap, metallic radii and flame-test colours. Hyperfine
+  structure is curated for 27 elements so far. The About page counts how many elements have each value.
+- **Transcribed tables.** Heat capacities (CRC Handbook), ionic radii (Shannon 1976) and polarizabilities
+  (Schwerdtfeger & Nagle) were transcribed via the mendeleev package and spot-checked, not compared line by
+  line with the printed tables.
+- **Hazard labels are for reading, not for the lab.** The GHS labels come from PubChem's records, often the
+  summary of what companies reported, not an official classification; the reaction notes describe chemistry,
+  not safe handling. A missing toxicity note does not mean an element is safe.
+- **Photographs:** 96 elements have one; the rest show a placeholder saying why (never made in a visible
+  amount, or no openly licensed photograph found).
+- **Browsers:** tested in Chromium on desktop and phone for every change; Firefox, Safari and the iPhone in
+  a nightly run. No offline mode yet.
+- **English only.**
+
 ## Run it on a Mac
 
 1. Install [Node.js](https://nodejs.org/) 22 or newer once, e.g. with Homebrew: `brew install node@22`.
@@ -114,6 +140,6 @@ Contributions are welcome under the project licence; see [CONTRIBUTING.md](CONTR
 PTE-21C is free for non-commercial use and redistribution, including modified versions, under the same
 licence. It is copyleft but not OSI-approved open source; commercial licences are available on request.
 
-© Bietenhader (Fin). Code, layouts, curated data compilations, prose and design: [CC BY-NC-SA 4.0](LICENSE).
+© Serafin Bietenhader. Code, layouts, curated data compilations, prose and design: [CC BY-NC-SA 4.0](LICENSE).
 Data remain under their sources' terms ([PROVENANCE.md](PROVENANCE.md)); images are credited in
 [CREDITS.md](CREDITS.md); third-party software and fonts keep their own licences ([NOTICE.md](NOTICE.md)).

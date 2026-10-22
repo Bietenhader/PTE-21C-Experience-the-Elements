@@ -92,8 +92,7 @@ export function App({ boot }: { boot: Boot }) {
 
       <main className={styles.main}>
         <p className={styles.preview} role="note">
-          Preview (milestone M2): layouts, trends, search, photographs and all the data for version 0.1 are in. The
-          eleven panels of the element sheet get their contents in milestones M3–M4.
+          Version {__APP_VERSION__}. Open any element for its sheet: eleven panels, and every number with its source.
         </p>
         {problem && (
           <p className={styles.status} role="alert">
@@ -143,7 +142,7 @@ export function App({ boot }: { boot: Boot }) {
           served with it. Your settings stay in this browser.
         </p>
         <p>
-          PTE-21C by Bietenhader (Fin) is licensed under{" "}
+          PTE-21C by Serafin Bietenhader is licensed under{" "}
           <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>: free for non-commercial use
           and redistribution, including modified versions, under the same licence. <a href={REPO}>Source code</a>.
         </p>

@@ -1,4 +1,21 @@
 {
  "Z": 88,
- "images": []
+ "images": [
+  {
+   "file": "img/elements/88/1-800.webp",
+   "thumb": "img/elements/88/1-320.webp",
+   "width": 800,
+   "height": 415,
+   "title": "The US radium standard of 1927: a sealed tube of radium chloride",
+   "author": "George K. Burgess, Director, US National Bureau of Standards",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:US_radium_standard_1927.jpg",
+   "attribution": "George K. Burgess, Director, US National Bureau of Standards, Public domain; https://commons.wikimedia.org/wiki/File:US_radium_standard_1927.jpg",
+   "source": "commons",
+   "kind": "historical",
+   "pin": "File:US radium standard 1927.jpg",
+   "k": 1
+  }
+ ]
 }

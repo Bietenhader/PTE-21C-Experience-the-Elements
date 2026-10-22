@@ -45,23 +45,6 @@ between sources and every rule the build applied. Read it after each pipeline ru
 
 - Z=113: no oxidation states in PubChem.
 
-## Sources unavailable at build
-
-- **commons** — Z=43: 1 chosen photograph(s) not downloaded
-- **commons** — Z=61: 1 chosen photograph(s) not downloaded
-- **commons** — Z=90: 2 chosen photograph(s) not downloaded
-- **commons** — Z=91: 1 chosen photograph(s) not downloaded
-
-## Images
-
-- Z=43: File:Technetium-sample-cropped.jpg: not cached and no earlier conversion — run tools/fetch_images.py
-- Z=61: File:Promethium Metal Buttons.png: not cached and no earlier conversion — run tools/fetch_images.py
-- Z=88: File:US radium standard 1927.jpg: not cached and no earlier conversion — run tools/fetch_images.py
-- Z=90: File:Thorium bead 1.jpg: not cached and no earlier conversion — run tools/fetch_images.py
-- Z=90: File:Thorium sample 0.1g.jpg: not cached and no earlier conversion — run tools/fetch_images.py
-- Z=91: File:Protactinium-233.jpg: not cached and no earlier conversion — run tools/fetch_images.py
-- Z=96: File:Curium hydroxide Nobel Lectures in Chemistry.png: not cached and no earlier conversion — run tools/fetch_images.py
-
 ## NIST AWIC (IUPAC 2013) vs CIAAW 2024 standard atomic weights
 
 - F: AWIC 18.998403163(6) · CIAAW 18.998403162(5)

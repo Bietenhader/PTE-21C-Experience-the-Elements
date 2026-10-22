@@ -1,4 +1,21 @@
 {
  "Z": 96,
- "images": []
+ "images": [
+  {
+   "file": "img/elements/96/1-800.webp",
+   "thumb": "img/elements/96/1-320.webp",
+   "width": 720,
+   "height": 588,
+   "title": "The first visible curium compound, curium hydroxide (1947), about twice enlarged",
+   "author": "Unknown author Unknown author",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Curium_hydroxide_Nobel_Lectures_in_Chemistry.png",
+   "attribution": "Unknown author Unknown author, Public domain; https://commons.wikimedia.org/wiki/File:Curium_hydroxide_Nobel_Lectures_in_Chemistry.png",
+   "source": "commons",
+   "kind": "historical",
+   "pin": "File:Curium hydroxide Nobel Lectures in Chemistry.png",
+   "k": 1
+  }
+ ]
 }

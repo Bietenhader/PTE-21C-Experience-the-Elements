@@ -76,6 +76,7 @@ Every photograph shown by PTE-21C, with its author, licence and source (SPEC §1
 | Niobium | A niobium bead | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/niobium.php) |
 | Molybdenum | A molybdenum crystal | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/molybdenum.php) |
 | Molybdenum | Molybdenum with a rough surface | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/molybdenum.php) |
+| Technetium | Technetium in a sealed ampoule under argon | Marco Cardin | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Technetium-sample-cropped.jpg) |
 | Ruthenium | Ruthenium | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/ruthenium.php) |
 | Ruthenium | Ruthenium crystals | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/ruthenium.php) |
 | Rhodium | A rhodium bead, 1 g | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/rhodium.php) |
@@ -105,6 +106,7 @@ Every photograph shown by PTE-21C, with its author, licence and source (SPEC §1
 | Praseodymium | Praseodymium under argon | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/praseodymium.php) |
 | Neodymium | Neodymium under argon | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/neodymium.php) |
 | Neodymium | Neodymium with an oxidized surface | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/neodymium.php) |
+| Promethium | The first two buttons of promethium-147 metal, with a coin for scale | E. J. Wheelwright | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Promethium_Metal_Buttons.png) |
 | Samarium | Samarium under argon | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/samarium.php) |
 | Samarium | Sublimed samarium | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/samarium.php) |
 | Europium | Weakly oxidized europium | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/europium.php) |
@@ -141,11 +143,16 @@ Every photograph shown by PTE-21C, with its author, licence and source (SPEC §1
 | Lead | Freshly cut lead | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/lead.php) |
 | Bismuth | A bismuth crystal with its oxide film | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/bismuth.php) |
 | Bismuth | A bismuth ingot | Jürgen Kummer (images-of-elements.com) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/bismuth.php) |
+| Radium | The US radium standard of 1927: a sealed tube of radium chloride | George K. Burgess, Director, US National Bureau of Standards | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:US_radium_standard_1927.jpg) |
 | Actinium | Actinium-225 in a vial; the blue glow is air ionized by its radiation | Oak Ridge National Laboratory | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Actinium_sample_(31481701837).png) |
+| Thorium | A thorium bead | 范皓程 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Thorium_bead_1.jpg) |
+| Thorium | Thin thorium sheet under argon, about 0.1 g | Alchemist-hp ( talk ) ( www.pse-mendelejew.de ) | [FAL 1.3](https://artlibre.org/licence/lal/en/) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Thorium_sample_0.1g.jpg) |
+| Protactinium | A sample of protactinium-233 (the dark circle) | ENERGY.GOV | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Protactinium-233.jpg) |
 | Uranium | Depleted uranium (uranium-238) | Unknown photographer | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [images-of-elements.com](https://images-of-elements.com/uranium.php) |
 | Neptunium | A 6 kg sphere of neptunium-237 (2002) | Los Alamos National Laboratory | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [images-of-elements.com](https://images-of-elements.com/neptunium.php) |
 | Plutonium | Plutonium metal (1945) | U.S. Department of Energy | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [images-of-elements.com](https://images-of-elements.com/plutonium.php) |
 | Americium | A small disc of americium-241 under a microscope | Bionerd | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | [images-of-elements.com](https://images-of-elements.com/americium.php) |
+| Curium | The first visible curium compound, curium hydroxide (1947), about twice enlarged | Unknown author Unknown author | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Curium_hydroxide_Nobel_Lectures_in_Chemistry.png) |
 | Berkelium | 13 mg of berkelium-249, later used to make tennessine | Oak Ridge National Laboratory | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [images-of-elements.com](https://images-of-elements.com/berkelium.php) |
 | Californium | A californium disc, about 1 mm across | U.S. Department of Energy | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [images-of-elements.com](https://images-of-elements.com/californium.php) |
 | Einsteinium | About 300 µg of einsteinium-253, glowing from its own radiation | U.S. Department of Energy | [Public domain](https://creativecommons.org/publicdomain/mark/1.0/) | [images-of-elements.com](https://images-of-elements.com/einsteinium.php) |
@@ -153,7 +160,7 @@ Every photograph shown by PTE-21C, with its author, licence and source (SPEC §1
 
 ## Honest placeholders
 
-These elements show a drawn card instead of a photograph (SPEC §12.5): Technetium, Promethium, Polonium, Astatine, Radon, Francium, Radium, Thorium, Protactinium, Curium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson.
+These elements show a drawn card instead of a photograph (SPEC §12.5): Polonium, Astatine, Radon, Francium, Radium, Curium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson.
 
 ## Fonts and software
 

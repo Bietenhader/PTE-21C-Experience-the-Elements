@@ -63,12 +63,15 @@ Please say "biology OK", or tell me which rows to change or remove.
 
 | Criterion | State |
 |---|---|
-| 118 × 11 property test | Test run in progress (`tests/e2e/panels.spec.ts`) |
+| 118 × 11 property test | Done — every element on each of the eleven panels: no console errors, nothing like "NaN" on screen, every missing value names its reason (`tests/e2e/panels.spec.ts`) |
 | Every Missing carries a reason | Done — checked by the property test on every panel of every element, and by the pipeline |
-| AMO panel: hyperfine, clock and laser-cooling data for Cs, Rb, Sr, Yb, Al, Hg, Th; `not_applicable` reasons for e.g. He | Test run in progress (`tests/e2e/amo.spec.ts`) |
+| AMO panel: hyperfine, clock and laser-cooling data for Cs, Rb, Sr, Yb, Al, Hg, Th; `not_applicable` reasons for e.g. He | Done — for each of the seven elements every hyperfine row, clock and laser-cooling line in the data is on screen; helium says *not applicable* because I = 0 and J = 0 (`tests/e2e/amo.spec.ts`, desktop and phone) |
 | Fin has reviewed `biology.toml` | **Waiting for you** (see above) |
 
-Full test totals follow when the run finishes.
+Also: 294 unit tests, 162 pipeline tests and 268 end-to-end tests (Chromium, desktop and phone; 24 more are for
+the other profiles only) pass; the Lighthouse budgets hold (mobile score 94, initial JavaScript 109.1 kB of
+300 kB, first table paint 1.27 s); lint, type checks, the licence audit of the data and the licence check of
+the code dependencies are clean.
 
 ## What changed this session
 

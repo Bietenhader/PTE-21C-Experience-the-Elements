@@ -24,6 +24,10 @@ nothing has been measured, the table says so and says why, instead of showing a 
 |---|---|---|
 | ![The orbital gallery of gadolinium](docs/screenshots/m3-desktop-orbitals.png) | ![All radial distributions of gadolinium on one axis](docs/screenshots/m3-desktop-shell-stack.png) | ![The orbital gallery on a phone](docs/screenshots/m3-phone-orbitals.png) |
 
+| Hund's rules for iron, step by step | Caesium's hyperfine levels | Phone: why gold is yellow |
+|---|---|---|
+| ![The mathematical panel of iron](docs/screenshots/m4-desktop-math.png) | ![The AMO panel of caesium](docs/screenshots/m4-desktop-amo.png) | ![The relativity notes on a phone](docs/screenshots/m4-phone-math.png) |
+
 ## Using it
 
 - **Layouts:** *Standard* (18 columns), *Long form* (32 columns), *Janet* (left-step, rows by n + l) and

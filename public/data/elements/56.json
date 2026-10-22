@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 56,
  "symbol": "Ba",
+ "files": {
+  "isotopes": true,
+  "spectra": true,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [
    {

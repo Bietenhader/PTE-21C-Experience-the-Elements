@@ -67,5 +67,5 @@
   {"eV":33.0525,"unc":0.0005,"configuration":"2p5.(2P*).3s.3p.(3P*)","term":"4D","J":"7/2","parity":"even"},
   {"eV":33.0956,"unc":0.0005,"configuration":"2p5.(2P*).3s.3p.(3P*)","term":"4D","J":"5/2","parity":"even"}
 ],
-"ionizationLimit":{"value":71.384,"unc":0.025,"unit":"eV","source":"nist_levels","note":"Limit: Na II (2s.2p6.3s 1S<0>)."}
+"ionizationLimit":{"value":5.13907696,"unc":2.5e-07,"unit":"eV","source":"nist_levels","note":"Limit: Na II (2p6 1S<0>)."}
 }

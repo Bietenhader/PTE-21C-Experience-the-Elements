@@ -1,105 +1,118 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M2 — Data complete for v0.1 · **ready for review** (pull request open)
-**Last updated:** 2026-10-21
-**Next:** M3 (the panels' physics), after Fin's review of M2.
+**Current milestone:** M3 — Sheet and panels, batch 1 · **ready for Fin's review and design review**
+**Last updated:** 2026-10-22
+**Next:** M4 (panels batch 2: probability, physical, mathematical, AMO, materials, biology, history), after
+Fin's review of M3.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
-## For Fin: what to look at (M2 review)
+## For Fin: what to look at (M3)
 
-M2 is mostly invisible on the table itself: it fills the data behind every element, which the panels draw in
-M3 and M4. What you can see now:
+Open any element and use the tabs at the top of its sheet. Four panels are now filled in:
 
-1. **Photographs.** Hover or click any element: 90 elements have a photograph, each credited where it is shown
-   (title, author, licence, link to its page). The others show a card that says honestly why there is no
-   photo.
-2. **The About page.** The new *About* button (top right) shows the privacy statement, how complete each kind
-   of data is, and every source with its licence and the date it was downloaded.
-3. **A short text for every element**, in our own words, at the top of each element's sheet.
-4. **Six new colour maps** in the *Trend* menu: laser-cooled, clocks, the elements in the SI, essential for
-   plants, essential for humans, and cosmic origin.
+1. **Orbitals** — a small 3D picture of every electron shell the atom has (iron has 7, oganesson 19), the
+   outer ones outlined in yellow. Click a picture to see it large below: drag it to turn it, choose the other
+   orientations (p_x, p_y, p_z …), switch to the "complex" view, show where the wave is zero (nodal
+   surfaces) or a cross-section. Further down: the **shell stack** (every shell's size on one axis — this is
+   where you see that in gadolinium the 4f shell sits deep inside the 6s shell) and a table of the numbers.
+   A grey note at the top says honestly which approximation this is.
+   *Try:* `#/Gd/orbitals`, `#/Og/orbitals`.
+2. **Electromagnetic & ionization** — the energy to pull off each electron in turn (the big jumps are
+   closed shells), electron affinity, three electronegativity scales, and where the element sits on the
+   sawtooth of all elements. *Try:* `#/Na/em`.
+3. **Spectrum & energy levels** — the coloured lines the atom gives off, its strongest lines, and a diagram of
+   its energy levels with the laser-cooling and clock transitions marked. *Try:* `#/Sr/spectrum`, `#/Hg/spectrum`.
+4. **Nucleus & isotopes** — every known isotope with its half-life, how the radioactive ones decay (with a
+   little calculator: "what is the chance one nucleus survives 1000 years?"), how tightly the nucleus is
+   bound, and where in the universe the element was made. *Try:* `#/U/nucleus`, `#/Th/nucleus`.
 
-**Two files for you to read once** (this is part of M2's acceptance):
+Every chart has a "Show as table" button, and every grey source label opens a small card saying where the
+number comes from.
 
-- **`tools/curated/biology.toml`** — which elements plants and humans need, with sources. You are the plant
-  scientist: please check the plant side especially (essential vs beneficial, and the one-line roles).
-  Comments on the pull request, or "looks fine", are both welcome.
-- **`tools/images-report.md`** — which photograph was chosen for each element and why. (The spec calls it
-  `tools/raw/images-report.md`; that folder is not uploaded to GitHub, so the committed copy lives one folder
-  up. Both are the same file.)
+**The design review (F4) is part of M3's acceptance.** Please look at the screenshots in the pull request (or
+the live preview after merging) and tell me what you would change: colours, sizes, order, wording, anything.
 
-## M2 acceptance criteria (SPEC §18)
+**One thing to try on your Mac:** open `#/Og/orbitals`. Under the gallery it says how long the 19 pictures took
+*on your computer*. The goal is under 2 seconds on an M1 Mac. I measured 2.2 s in my cloud machine, which has no
+graphics card (it draws 3D in software), so yours should be faster — please tell me the number you see.
+
+## M3 acceptance criteria (SPEC §18)
 
 | Criterion | State |
 |---|---|
-| All fetchers | Done — new: NIST energy levels, NIST spectral lines, NIST SRD 141 orbital energies, BIPM standard frequencies, images-of-elements.com and Wikimedia Commons; IAEA now also reads each nuclide's level table (for nuclear moments) |
-| All curated tables populated to the coverage targets | Done — 18 curated tables plus 118 short texts; every SPEC §13.1 threshold passes (configuration, term and IE₁ 118; atomic weight or mass number 118; image or placeholder 118; isotopes 118; visible lines 98 of the required 90) |
-| Images fetched, curated and credited | Done for 90 elements (144 photos); 4 chosen Commons photos are waiting for a download (see "Blocked") |
-| PROVENANCE.md and CREDITS.md generated | Done (`python tools/report.py`; CI checks they are current) |
-| Coverage report in the About page | Done (`#/about`) |
-| §13.1 passes, including the licence audit | Done — 111 pipeline tests pass; licence audit clean |
-| Golden values pass | Done — Fe configuration and term, Cs IE₁, U-238, Madelung set, H-1 and Cs-133 hyperfine, Rb-87 hyperfine = BIPM to 1 mHz, Rb-87 D2 Doppler/recoil limits within 0.5 % |
-| Fin has reviewed the image report and biology.toml once | **Waiting for you** |
+| §13.3 sheet tests pass | Done — all sheet tests pass on desktop and phone (Chromium) |
+| 118 × 4 property test | Done — every element on each of the four panels: no console errors, every missing value names its reason, nothing like "NaN" on screen (`tests/e2e/panels.spec.ts`, 3.6 min) |
+| Orbital gallery for Fe, Cs, Gd, Og within 2 s (M1 Mac) / 6 s (mobile profile) | Mobile profile met: 0.7 / 0.9 / 1.0 / 1.4 s. Desktop measured on the cloud VM without a GPU: 1.1 / 1.6 / 1.5 / 2.2 s — **please confirm on your Mac** (see above) |
+| Ionization ladder shows all stages for every element | Done — every stage NIST lists is drawn (all Z stages for Z ≤ 103; 68–73 stages for Z = 104–110); Z ≥ 111 says NIST lists none, with only a predicted IE₁ |
+| Spectrum strip renders for ≥ 90 elements | Done — 98 elements |
+| Design review with Fin | **Waiting for you** |
 
-Also: 158 unit tests and 87 end-to-end tests (Chromium, desktop and phone) pass; the Lighthouse budgets hold
-(mobile score 95, first table paint 1.18 s); lint, type checks and the
-licence check of the code dependencies are clean.
+Also: 228 unit tests, 121 pipeline tests and 149 end-to-end tests (Chromium, desktop and phone; 17 more are
+for the other profile only) pass; the Lighthouse budgets hold (mobile score 94, initial JavaScript 108.5 kB of
+300 kB — the 3D library loads only with the orbitals panel — first table paint 1.33 s); lint, type checks and
+the licence check of the code dependencies are clean.
 
 ## What changed this session
 
-- **Per-element data files** (`public/data/elements/`, `isotopes/`, `spectra/`, `levels/`, `metrology.json`),
-  loaded only when an element is opened: isotopes with half-lives, decays, masses and nuclear moments; visible
-  spectral lines and energy levels; ionization energies of every stage; effective nuclear charges and orbital
-  energies; hyperfine constants; clocks and standard frequencies; laser cooling; the elements' roles in the SI;
-  abundances (crust, sea water, Sun, human body); crystal structures; world production and prices; EU critical
-  raw materials; biology; discovery history; our own short texts.
-- **The app:** photographs with credits, the About page, the short texts, six maps, search for "laser-cooled",
-  "clock" and "essential".
-- **Docs:** every M2 decision is in `docs/approach.md` (section "M2: data").
+- **The four panels** above, plus the pieces they share: chart frames with captions and tables, source cards,
+  formulas (KaTeX), and 3D drawing (three.js).
+- **Phones:** the element sheet's top part (photographs and summary) folds away while you read a long panel,
+  so the panel gets the whole screen; scrolling back to the top (or the button "Show photographs and
+  summary") brings it back. The tab row now always shows the current tab.
+- **Your data refresh** (the seven Commons photographs) is merged; all photo credits checked.
+- **Data fixes found while building the panels** (all from the pipeline, nothing typed by hand):
+  - **Thorium and uranium "made in dying low-mass stars (AGB), 10 %"** was wrong as worded: those stars
+    cannot make anything heavier than lead and bismuth. The share in the paper's figure is material they
+    *returned* to space. It now says "returned, not made", and a test stops this from happening again.
+  - The energy-level files had the wrong ionization limit for 32 elements (sodium said 71.4 eV instead of
+    5.14 eV); fixed and tested.
+  - Half-lives in years now use the same year as the IAEA's data (before, thorium-232 read 1.39997 × 10¹⁰
+    years instead of 1.40 × 10¹⁰).
+  - Tidier numbers for isotope masses, and clearer wording where only a limit is known.
+- **Speed:** each orbital picture is now computed about five times faster than in the first version.
+- **Docs:** every M3 decision is in `docs/approach.md` (section "M3: panels, batch 1"); NOTICE.md lists the new
+  libraries and the KaTeX fonts' licence.
 
 ## Questions for Fin — defaults in place, nothing waits on them
 
-1. **Elements 109–118.** NIST lists nothing above element 108, but the spec wants a ground term for all 118
-   and IE₁ for at least 110. I added published calculations (each with its paper), marked † and called
-   "predicted" everywhere — never shown as measured. **Default: keep them.** If you prefer "only
-   theoretical predictions exist", one file is deleted and they disappear.
-2. **Solar abundances.** The spec names Lodders 2009 or Asplund 2021; I used the newer, openly licensed
-   successor, Lodders, Bergemann & Palme 2025. **Default: keep it.**
-3. **Phosphorus's crystal structure** is black phosphorus (the stable form), because the database has no
-   room-temperature entry for white phosphorus, the usual reference form. **Default: keep it**, with a note.
+1. **Colour table for the spectra.** The colours of spectral lines are computed from the international
+   standard for human colour vision (CIE 1931). Its numbers are a cited standard table, but the file the CIE
+   publishes is under CC BY-SA 4.0. **Default: keep it**, credited as a standard table. The alternative is a
+   published formula that imitates the table (Wyman et al. 2013); on screen you could not tell them apart.
+2. **Cosmic origin of thorium and uranium** (see above): **default:** keep the paper's 10 % but label it
+   "returned, not made". The alternative is to leave that share out and show 100 % from exploding stars.
+3. From M2, still with their defaults: elements 109–118 predictions kept; Lodders 2025 solar abundances;
+   black phosphorus as phosphorus's crystal.
 
-## Blocked (needs your computer once)
+## Blocked
 
-- **Four photographs from Wikimedia Commons** — technetium, promethium, thorium (two) and protactinium —
-  were chosen and checked, but Wikimedia's servers answered this cloud environment with "too many requests"
-  for hours (and two historical pictures for radium and curium likewise). As CLAUDE.md asks, I did not work
-  around it: these elements show a card "photograph not yet downloaded". **To fix:** double-click
-  `tools/pipeline.command` on your Mac (it downloads what is missing and rebuilds), then commit the changes
-  with GitHub Desktop. Nothing else depends on it.
+- Nothing. (The four Commons photographs from M2 came with your data refresh.)
 
 ## Not yet compiled (honest gaps, not errors)
 
 - **Hyperfine splittings:** 18 elements have the headline value on the tile; 42 more have hyperfine structure
-  that is not yet in our table (the tile says *hfs n/m*, as agreed). More rows come with the AMO panel in M3.
-- **Polarizability** is left out of v0.1 for now: the reference table (Schwerdtfeger & Nagle 2019, Mol. Phys.)
-  could not be read from here. If you can download it through your university, I can transcribe it.
-- **Electron affinity** exists for 57 elements and **Pauling electronegativity** for 95; the rest are shown as
-  not measured, as the sources say.
+  that is not yet in our table (the tile says *hfs n/m*, as agreed). More rows come with the AMO panel in M4.
+- **Polarizability, magnetic ordering, resistivity, superconductivity, work function, band gap** are listed
+  on the electromagnetic panel as "not measured — not yet compiled", rather than hidden. If you can download
+  the polarizability table (Schwerdtfeger & Nagle 2019) through your university, I can transcribe it.
+- **Flame-test colours** are shown as not yet compiled (no sourced table yet).
+- **Orbital energies beyond uranium:** NIST's table (SRD 141) stops at Z = 92; the orbitals panel says so.
+- **Uranium's energy levels:** NIST lists just one level for the neutral atom, so its diagram is nearly empty.
 
 ## Notes (things that differ from what you might expect)
 
-- **Cosmic origin is an approximation**, read off a figure of a model (Kobayashi et al. 2020) in 5 % steps;
-  the map and the data say so. Helium, lithium, technetium, promethium and lead are left out because the figure
-  cannot be read for them.
-- **Argon's crystal cell** in the open database looks about 1 % too small; it is flagged "doubtful" with the
-  reason rather than silently corrected.
+- **The orbital pictures are an approximation** (hydrogen-like shapes with an effective nuclear charge). The
+  shapes are exact for one electron; the sizes are approximate for heavy atoms (the outer shells in the
+  shell stack can come out noticeably larger than they really are). The panel says so in its grey note; the more accurate
+  version (Tier B) is planned for v0.2.
+- **Each gallery picture is scaled to fit its tile**; true sizes are in the shell stack.
+- **Cosmic origin is an approximation**, read off a figure of a model (Kobayashi et al. 2020) in 5 % steps.
 - **Rubidium's D2 line (780.03 nm in air)** sits just outside the 380–780 nm "visible" window of the spectrum
-  files; it is in the laser-cooling data, where it belongs.
-- **Helium's melting point** now carries a note: it needs pressure (helium does not freeze at normal pressure).
+  strip; it is in the laser-cooling data, where it belongs.
 
 ## FIN items — defaults in use (SPEC §19)
 
@@ -107,8 +120,8 @@ licence check of the code dependencies are clean.
 |---|---|---|
 | F1 Attribution name | "Bietenhader (Fin)" (README, footer, package) | Confirm or change before M5 |
 | F2 GitHub Pages | Source "GitHub Actions" | Done (2026-10-20) |
-| F3 Review `biology.toml` and the image report | — | **Now (M2)**; biology again at M4 |
-| F4 Design review | — | End of M3. Comments on the screenshots are welcome any time |
+| F3 Review `biology.toml` and the image report | Reviewed in M2 ("LGTM") | Biology again at M4 |
+| F4 Design review | — | **Now (M3)**: comments on the screenshots or the live site |
 | F5 Subtitle | "A fresh perspective on the Periodic Table of the Elements" | Confirm or change |
 
 ## Earlier decisions (still in force)
@@ -116,8 +129,11 @@ licence check of the code dependencies are clean.
 - Atomic weights stay with NIST AWIC; the values IUPAC has revised since are listed in `tools/build-report.md`.
 - *hfs n/m* also covers "not yet in our curated table".
 - The long form keeps the spec's La/Ac arrangement (open question from M1, default kept).
+- Elements 109–118: published predictions kept, marked † (M2 question 1, your default).
 
 ## Known issues and housekeeping
 
 - Firefox, Safari/WebKit and iPhone run in the nightly job only (this environment can run Chromium only).
 - ESLint 9 (a developer tool) is past end of life; the accessibility lint plugin still needs it.
+- The built site carries KaTeX's fonts in three formats (woff2, woff, ttf); browsers download only the one
+  they need, and only when a formula is shown.

@@ -67,5 +67,5 @@
   {"eV":7.2624336,"configuration":"3s.6f","term":"1F*","J":"3","parity":"odd"},
   {"eV":7.2624398,"configuration":"3s.6f","term":"3F*","J":"2","parity":"odd"}
 ],
-"ionizationLimit":{"value":68.87,"unit":"eV","source":"nist_levels","note":"Limit: Mg II (2p5.(2P*).3s.3d.(3D) 2P*<1/2>)."}
+"ionizationLimit":{"value":7.646236,"unc":4e-06,"unit":"eV","source":"nist_levels","note":"Limit: Mg II (3s 2S<1/2>)."}
 }

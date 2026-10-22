@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 20,
  "symbol": "Ca",
+ "files": {
+  "isotopes": true,
+  "spectra": true,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [
    {

@@ -7,7 +7,19 @@
 
 import { useEffect, useState } from "react";
 import { LAYOUT_IDS, type LayoutId } from "../app/route";
-import type { CoverageFile, ElementDetailFile, IndexFile, LayoutFile, SourcesFile, TrendsFile } from "./types";
+import type {
+  ColourMatchingFile,
+  CoverageFile,
+  ElementDetailFile,
+  IndexFile,
+  IsotopesFile,
+  LayoutFile,
+  LevelsFile,
+  MetrologyFile,
+  SourcesFile,
+  SpectraFile,
+  TrendsFile,
+} from "./types";
 
 export function dataUrl(path: string): string {
   return `${import.meta.env.BASE_URL}data/${path}`;
@@ -98,4 +110,12 @@ export function useJson<T>(path: string | null): Loaded<T> {
 
 export const useElementDetail = (z: number | null) => useJson<ElementDetailFile>(z === null ? null : `elements/${z}.json`);
 export const useCoverage = (open: boolean) => useJson<CoverageFile>(open ? "coverage.json" : null);
+
+/** A per-element companion file, requested only when the element's detail file says it exists. */
+export const useIsotopes = (z: number, exists: boolean) => useJson<IsotopesFile>(exists ? `isotopes/${z}.json` : null);
+export const useSpectra = (z: number, exists: boolean) => useJson<SpectraFile>(exists ? `spectra/${z}.json` : null);
+export const useLevels = (z: number, exists: boolean) => useJson<LevelsFile>(exists ? `levels/${z}.json` : null);
+export const useMetrology = () => useJson<MetrologyFile>("metrology.json");
+export const useColourTable = () => useJson<ColourMatchingFile>("cie1931.json");
+export const useTrends = () => useJson<TrendsFile>("trends.json");
 

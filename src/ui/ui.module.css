@@ -20,14 +20,65 @@
 .chip {
   display: inline-block;
   max-inline-size: 100%;
+  margin: 0;
   padding: 0 0.45em;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--surface-raised);
   color: var(--text-muted);
+  font: inherit;
   font-size: 0.75em;
   line-height: 1.6;
+  text-align: start;
   vertical-align: 0.1em;
+}
+
+button.chip {
+  cursor: pointer;
+}
+
+button.chip:hover,
+button.chip[aria-expanded="true"] {
+  border-color: var(--link);
+  color: var(--text);
+}
+
+.chipWrap {
+  display: inline;
+}
+
+.popover {
+  z-index: 20;
+  inline-size: max-content;
+  max-inline-size: min(26rem, calc(100vw - 2rem));
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.35);
+  color: var(--text);
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: start;
+}
+
+.popover p {
+  margin: 0 0 var(--space-1);
+}
+
+.popover a {
+  color: var(--link);
+}
+
+.popTitle {
+  font-weight: 600;
+}
+
+.popCitation {
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
 }
 
 .missing {

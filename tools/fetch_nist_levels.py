@@ -48,6 +48,14 @@ def _value(text: str) -> str:
     return text.strip().removeprefix("=").strip('"').strip()
 
 
+def _ev(text: str) -> float:
+    """A level energy as a number for comparison ("[71.38]" and "71.38?" included); +inf if unreadable."""
+    try:
+        return float(text.strip("[]()?+ "))
+    except ValueError:
+        return float("inf")
+
+
 def parse_table(text: str) -> dict | None:
     """{levels: [{configuration, term, J, eV, unc, prefix, suffix, lande, ref}], limit: {...}} or
     None when ASD returned no table (an HTML page)."""
@@ -68,12 +76,16 @@ def parse_table(text: str) -> dict | None:
 
         level = get("Level (eV)")
         if get("Term") == "Limit":
-            limit = {
+            # ASD lists the first ionization limit and, for some spectra, series limits to excited
+            # states of the ion above it; the ionization limit is the lowest.
+            candidate = {
                 "eV": level,
                 "unc": get("Uncertainty (eV)"),
                 "ion": get("Configuration"),
                 "ref": get("Reference"),
             }
+            if limit is None or _ev(level) < _ev(limit["eV"]):
+                limit = candidate
             continue
         if not level:
             continue

@@ -67,5 +67,5 @@
   {"eV":5.5550969,"configuration":"3p6.4s.5f","term":"1F*","J":"3","parity":"odd"},
   {"eV":5.563774,"configuration":"3p6.4s.5g","term":"3G","J":"5","parity":"even"}
 ],
-"ionizationLimit":{"value":34.657,"unit":"eV","source":"nist_levels","note":"Limit: Ca II (3p5.4s2 2P*<1/2>)."}
+"ionizationLimit":{"value":6.113154921,"unc":5e-10,"unit":"eV","source":"nist_levels","note":"Limit: Ca II (4s 2S<1/2>)."}
 }

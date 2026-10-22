@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 69,
  "symbol": "Tm",
+ "files": {
+  "isotopes": true,
+  "spectra": true,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [
    {

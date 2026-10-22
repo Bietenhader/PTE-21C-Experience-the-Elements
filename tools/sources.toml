@@ -135,6 +135,16 @@ citation = "A. D. McLean and R. S. McLean, At. Data Nucl. Data Tables 26, 197 (1
 kind = "curated"
 notes = "v0.2 (Tier B orbitals). DOI to be confirmed when the data is transcribed."
 
+[slater1930]
+title = "Slater's rules for atomic screening constants"
+url = "https://doi.org/10.1103/PhysRev.36.57"
+licence = "Published method; cite"
+licence_url = "https://doi.org/10.1103/PhysRev.36.57"
+citation = "J. C. Slater, Atomic shielding constants, Phys. Rev. 36, 57–64 (1930), doi:10.1103/PhysRev.36.57."
+kind = "reference"
+used_in_app = true
+notes = "Computed in the app (src/physics/zeff.ts) for subshells the Clementi–Raimondi table does not cover: hydrogen (where the rules give the exact Z = 1), elements beyond radon, and subshells outside the configuration Clementi and Raimondi used (e.g. gadolinium's 5d)."
+
 [clementi_zeff]
 title = "Clementi–Raimondi effective nuclear charges"
 url = "https://doi.org/10.1063/1.1733573"
@@ -224,6 +234,15 @@ licence_url = "https://commission.europa.eu/legal-notice_en"
 citation = "Regulation (EU) 2024/1252 of the European Parliament and of the Council of 11 April 2024 (Critical Raw Materials Act), OJ L 2024/1252, 3.5.2024, CELEX 32024R1252: Annex I Section 1 (strategic) and Annex II Section 1 (critical raw materials); group memberships from the Commission's Study on the Critical Raw Materials for the EU 2023, doi:10.2873/725585."
 kind = "curated"
 notes = "Raw materials mapped to elements in tools/curated/critical_raw_materials.toml; mappings through a mineral (coking coal and graphite, fluorspar, baryte) are marked, and osmium (platinum-group metal, not assessed) is flagged doubtful."
+
+[cie_cmf]
+title = "CIE 1931 colour-matching functions, 2° standard colorimetric observer"
+url = "https://doi.org/10.25039/CIE.DS.xvudnb9b"
+licence = "Cited standard table (CIE 018:2019, Table 6; ISO/CIE 11664-1:2019); the CIE's data file is CC BY-SA 4.0"
+licence_url = "https://creativecommons.org/licenses/by-sa/4.0/"
+citation = "CIE (2019), Colour-matching functions of CIE 1931 standard colorimetric observer (data table), International Commission on Illumination, Vienna, doi:10.25039/CIE.DS.xvudnb9b; values from CIE 018:2019, The Basis of Physical Photometry, 3rd ed., Table 6, doi:10.25039/TR.018.2019."
+kind = "fetched"
+notes = "The standard observer x̄, ȳ, z̄ on the 5 nm grid 380–780 nm (SPEC §11.6), used as the numerical values of the international standard, with citation. The file's SHA-256 is checked against the CIE's own metadata record. Written to public/data/cie1931.json for the spectrum colours."
 
 [cod]
 title = "Crystallography Open Database"

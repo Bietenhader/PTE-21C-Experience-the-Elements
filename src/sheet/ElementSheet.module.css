@@ -276,4 +276,39 @@
   .prose {
     font-size: 0.875rem;
   }
+  /* Folded header (the reader has scrolled into a long panel): the name bar only. */
+  .body[data-compact] .header {
+    padding-block: var(--space-2);
+  }
+  .body[data-compact] .photos,
+  .body[data-compact] .prose,
+  .body[data-compact] .meta {
+    display: none;
+  }
+  .body[data-compact] .symbol {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    font-size: 1.4rem;
+  }
+  .body[data-compact] .name {
+    font-size: 1.25rem;
+  }
+  .body[data-compact] .expand {
+    display: inline-block;
+  }
+}
+
+/* The header folds on phones only; elsewhere the button that opens it again never shows. */
+.expand {
+  display: none;
+  margin-block-start: var(--space-1);
+  min-block-size: 2rem;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
 }

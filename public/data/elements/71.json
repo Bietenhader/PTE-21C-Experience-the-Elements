@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 71,
  "symbol": "Lu",
+ "files": {
+  "isotopes": true,
+  "spectra": true,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [
    {

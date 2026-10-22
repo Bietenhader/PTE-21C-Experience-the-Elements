@@ -67,5 +67,5 @@
   {"eV":3.1863584,"configuration":"4f12.(3H<6>).6s2.6p<3/2>","term":"(6,3/2)*","J":"9/2","parity":"odd","gJ":1.12},
   {"eV":3.1885261,"configuration":"4f12.(3H<5>).5d<5/2>.6s2","term":"(5,5/2)","J":"7/2","parity":"even","gJ":1.02}
 ],
-"ionizationLimit":{"value":7.72882,"unit":"eV","source":"nist_levels","note":"Limit: Tm II (4f12.6s2 3H<6>)."}
+"ionizationLimit":{"value":6.184402,"unc":9e-06,"unit":"eV","source":"nist_levels","note":"Limit: Tm II (4f13.6s (7/2,1/2)*<4>)."}
 }

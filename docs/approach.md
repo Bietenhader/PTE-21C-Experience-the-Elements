@@ -10,7 +10,7 @@ the spec wins and the conflict is listed in STATUS.md for Fin.
 | # | Question | Decision | Status |
 |---|---|---|---|
 | I1 | Pan/zoom library or hand-rolled | **Hand-rolled** (`src/table/TableView.tsx`, `zoom.ts`): panning is the browser's own scrolling; zooming changes the *tile width* rather than scaling a picture, so tiles disclose more fields as they grow (SPEC §7.1), text stays sharp and the FLIP morph never fights a zoom transform. No dependency. | Built in M1 |
-| I2 | Marching cubes or raymarching | **Marching cubes in a Web Worker.** The 90 % enclosed-probability threshold is computed on the CPU from the same voxel grid that produces the mesh, so the criterion is honoured exactly; a mesh also gets standard three.js lighting and cheap rotation on phones. | Decided; built in M3 |
+| I2 | Marching cubes or raymarching | **Marching cubes in a Web Worker.** The 90 % enclosed-probability threshold is computed on the CPU from the same voxel grid that produces the mesh, so the criterion is honoured exactly; a mesh also gets standard three.js lighting and cheap rotation on phones. | Built in M3 (see "M3: panels") |
 | I3 | Typefaces (OFL) | **Alegreya Sans** (titles, symbols, names) — humanist and calligraphic; **IBM Plex Sans Variable** (numbers and UI) — tabular figures plus a width axis (75–100 %) that lets dense tile fields use a slightly condensed cut; **IBM Plex Mono** (configurations). | Done in M0 |
 | I4 | Line and level caps | The defaults: strongest **400 lines** per species, lowest **60 levels**, for lanthanides and actinides too. | Decided; applied in M2 |
 | I5 | Mapping NIST's IE markers to `flag` | NIST's own definitions (ASD help): **`[ ]` → `interpolated`** (semi-empirical: interpolated or extrapolated) and **`( )` → `calculated`** (ab-initio theory). The spec suggested `estimated` for parentheses; NIST calls them theoretical, so `calculated` is the honest word. Unmarked values → `measured`. The tile shows the markers exactly as NIST prints them. | Done in M0 |
@@ -304,6 +304,120 @@ back into Missing values; nothing else changes.
   Allen's configuration energies); its data is credited to the original papers and the package is not a
   dependency. **Pillow** (MIT-CMU) converts photographs during data builds only.
 
+## M3: panels, batch 1
+
+Orbitals, electromagnetic & ionization, spectrum, and nucleus (SPEC §10.1, §10.2, §10.7, §10.8).
+
+### Shared kit
+
+- **Every chart** sits in `ChartFrame` (`src/viz/`): a caption saying what is plotted and from where, the
+  chart measured to the available width, and "Show as table". Tables wider than a phone are wrapped in
+  `SideScroll`, a labelled region that takes keyboard focus only while it overflows (WCAG 2.1.1).
+- **Source chips** open a small popover (title and link, licence, retrieval date, citation); Esc closes it.
+  Each panel ends with the list of every source it used.
+- **Formulas** are KaTeX, rendered to HTML plus MathML so screen readers read them.
+- **Element files say which companion files exist** (`files: {isotopes, spectra, levels}`), so a panel never
+  asks for a file that is not there; a 404 would be a console error and would fail the 118 × 4 test.
+- **`data-missing=<reason>`** on every rendered Missing value lets the property test check that each one
+  names one of the five reasons.
+
+### Orbitals (Tier A)
+
+- **Effective charges:** Clementi–Raimondi from `zeff.toml` where the table has the subshell; otherwise
+  Slater's rules (`src/physics/zeff.ts`, tested on N, Zn 4s and Zn 3d), with their own source key
+  (`slater1930`). That covers hydrogen (the rules give the exact Z = 1), every element beyond radon, and
+  subshells outside the configuration Clementi and Raimondi used (gadolinium's 5d). The badge names the
+  fallback when it is used and the table shows its source per row.
+- **Order:** by the NIST SRD 141 LDA eigenvalue when every subshell has one (Z ≤ 92); otherwise the
+  Madelung order. Beyond uranium the energy column shows Missing with the reason.
+- **Grid (I2):** |ψ|² on 96³ points (64³ on phones and touch screens), half-width ⟨r⟩ + 3σ. The 90 % level
+  is found by a 4096-bin log histogram of the voxel densities, sorting only the boundary bin — the same
+  result as sorting all voxels. |ψ|² is mirror-symmetric in x, y and z for every orbital, so one octant is
+  evaluated and mirrored (the signs of ψ under each reflection are derived in `field.ts` and tested against
+  direct evaluation). Marching cubes uses three.js's MIT tables in Bourke's numbering, shares each vertex
+  between the cells around its edge (indexed geometry), and visits only the surface's bounding box; normals
+  come from the field's gradient. About 35 ms per orbital at 96³ on the development VM.
+- **Workers:** a pool of min(4, cores − 1) workers with a cache, so the gallery and the viewer never compute
+  the same orbital twice; the viewer's first picture waits behind the gallery unless someone asks for it.
+  The sheet mounts the panels beside the current one in advance; the gallery starts only when its panel is
+  the one shown (the sheet passes `active` to every panel — an IntersectionObserver proved unreliable while
+  the phone sheet slides in).
+- **Thumbnails** come from one shared WebGL renderer (browsers allow only a few contexts per page; oganesson
+  has nineteen subshells), each picture copied into the tile's 2D canvas. Where WebGL runs in software (no
+  GPU — detected with `failIfMajorPerformanceCaveat` on a probe canvas), antialiasing is left off: in
+  software it costs about four times as much. Without WebGL at all, each tile shows the |ψ|² slice.
+- **The viewer** is @react-three/fiber with frames drawn on demand. OrbitControls handle dragging; the arrow
+  keys already move between panels, so turning by keyboard is done with buttons (turn, tilt, reset).
+  Real orbitals are coloured by the sign of ψ (orange +, blue −); complex ones by the phase of ψ on a colour
+  wheel; the legend names both. Nodal surfaces are the ψ = 0 isosurface of real orbitals.
+- **Shell stack:** P(r) = r²R² on a linear axis, or r·P(r) on a logarithmic one (probability per unit ln r,
+  so areas still compare); the log axis is the default above calcium, where the inner shells would otherwise
+  be needles at r ≈ 0. Each curve holds one electron. On the linear axis the y scale follows the valence and
+  chosen curves and the inner shells run off the top (the caption says so; the table has their peaks).
+  Line style and colour both encode l, and every curve is labelled.
+- **Timing (M3 acceptance):** the gallery marks its start and its last picture (`pte:orbitals-ready`) and
+  says on screen how long it took on this device, so Fin can check the 2 s criterion on his Mac without
+  tools. `tests/e2e/orbitals.spec.ts` asserts 2 s (desktop) and 6 s (phone profile) times
+  `PTE_PERF_FACTOR`, 4 by default for CI runners, which are slower and draw WebGL in software; set it to 1
+  on an M1 Mac to check the criterion itself.
+
+### Electromagnetic & ionization
+
+- **The ladder** shows every stage NIST lists, on a log axis in the unit chosen in Settings, with dashed lines
+  at the noble-gas cores; interpolated and calculated values (NIST's [ ] and ( )) are hollow points.
+- **Mulliken electronegativity** is computed in the app, (IE₁ + EA)/2, with its formula shown; it is not a
+  stored value. Properties that are not compiled yet (polarizability, magnetic ordering, resistivity,
+  superconductivity, work function, band gap) are listed as Missing with the reason, not hidden.
+
+### Spectrum
+
+- **Colours (SPEC §11.6):** CIE 1931 2° colour-matching functions → XYZ → linear sRGB (matrix derived from
+  the sRGB primaries and D65) → sRGB encoding; out-of-gamut colours are desaturated toward white. The
+  observer table is fetched from the CIE (SHA-256 checked against the CIE's metadata). **Licence note for
+  Fin:** the table is the numerical content of an international standard (CIE 018:2019, ISO/CIE 11664-1),
+  used as a cited standard table; the CIE's own data file is CC BY-SA 4.0. If Fin prefers not to rely on
+  that, the alternative is the analytic fit of Wyman, Sloan & Shirley (2013), a published formula with no
+  table (differences well below what a screen shows).
+- **The strip** shows the neutral atom's visible lines, brightness √(I/I_max) with a floor of 0.12 so faint
+  lines stay visible; lines without a NIST intensity are dashed. "Approximate overall glow" mixes the lines'
+  colours by intensity and says it is an approximation. The short legend of NIST's line codes (r, h, w, bl,
+  *) is explanatory text taken from NIST's own legend, not data.
+- **Grotrian diagram:** columns by term (multiplicity, L, parity); transitions are matched to levels within
+  2 × 10⁻⁴ eV; laser-cooling transitions are matched by E = hc/λ (vacuum) and clocks by E = hν. Levels above
+  the ionization limit (autoionizing) stay in the table but are not drawn. The limit line is NIST's first
+  ionization energy.
+
+### Nucleus
+
+- **The isotope strip** puts half-life on a log axis with named times; the decay mode is a texture as well as
+  a colour; abundance is a dot whose size follows it; magic neutron numbers are dashed lines.
+- **One year for half-lives:** the IAEA gives half-lives in seconds with the mean tropical year,
+  365.242 198 78 d; the app converts back with the same year (`src/physics/decay.ts`, checked against the
+  data), so a half-life in years reads exactly as IAEA gives it.
+- **Cosmic origin beyond bismuth:** AGB stars cannot make thorium or uranium (their slow neutron captures end
+  at lead and bismuth). The green share Kobayashi et al.'s Fig. 39 shows for them is material those stars
+  returned in their winds; the curated rows mark it `recycled = ["agb"]` and the panel says "returned, not
+  made". A pipeline test keeps any AGB share beyond bismuth from being presented as production.
+- **Thorium-229:** the nuclear clock frequency with its paper, and E = hν from the exact SI values of h and e.
+
+### Data fixes found while building the panels
+
+- NIST levels tables list series limits above the ionization limit; the lowest "Limit" row is now kept
+  (32 files had a higher one). A test compares every limit with the first ionization energy.
+- Isotope mass uncertainties are converted from µu in decimal (no more 2.8699999999999996e-07 u).
+- A limit on a level width is worded as the opposite limit on the half-life.
+- `refresh_source_status` adds new registry entries and keeps every existing retrieval date.
+
+### Phones
+
+- The element sheet's header (photographs, summary) folds to a name bar once the reader scrolls into a long
+  panel, and opens again at the panel's top or with "Show photographs and summary"; the tab row scrolls so
+  the current tab is always in sight.
+- **Who moves the strip:** while the app scrolls the panel strip to a panel (a tab, a key), only arriving at
+  that panel counts; a touch, a pointer press or the wheel hands the strip back to the reader, whose swipe
+  then selects the panel it settles on. Before, the end of an earlier scroll could land after the next panel
+  had been chosen and undo it.
+
 ## Tooling
 
 - Versions are pinned exactly. TypeScript 6.0 is used because typescript-eslint does not yet support
@@ -311,6 +425,7 @@ back into Missing values; nothing else changes.
   ESLint 10 yet — ESLint 9 is past end of life, which matters only for a developer tool; revisited each
   milestone. Playwright is pinned to 1.56.1 to match the browsers in the cloud
   environment, with a single `playwright-core` enforced through npm `overrides`.
+- `PW_PORT` lets two checkouts run their Playwright tests side by side, each with its own preview server.
 - Lighthouse is run through its own CLI (Apache-2.0) rather than Lighthouse CI: `@lhci/cli` 0.15 pulls in
   seventeen known vulnerabilities and a package without a licence field, and is not needed for four budgets.
 - Two development-only tools are MPL-2.0 (weak copyleft): axe-core (accessibility tests) and lightningcss

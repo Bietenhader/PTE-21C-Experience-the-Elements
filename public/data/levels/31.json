@@ -67,5 +67,5 @@
   {"eV":5.93624,"configuration":"4s2.16d","term":"2D","J":"5/2","parity":"even"},
   {"eV":5.94045,"configuration":"4s2.18s","term":"2S","J":"1/2","parity":"even"}
 ],
-"ionizationLimit":{"value":14.765142,"unit":"eV","source":"nist_levels","note":"Limit: Ga II (4s.4p 1P*<1>)."}
+"ionizationLimit":{"value":5.999302,"unc":1.2e-06,"unit":"eV","source":"nist_levels","note":"Limit: Ga II (4s2 1S<0>)."}
 }

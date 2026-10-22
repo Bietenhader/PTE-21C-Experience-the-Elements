@@ -70,6 +70,15 @@ def clear(folder: Path) -> None:
 # --- isotopes -------------------------------------------------------------------------------
 
 LIMIT_WORDS = {"GT": "more than", "GE": "at least", "LT": "less than"}
+INVERSE_LIMIT_WORDS = {"GT": "less than", "GE": "at most", "LT": "more than"}
+
+
+def scientific(x: float) -> str:
+    """2 significant figures with a written power of ten: 5.7 × 10⁻²¹."""
+    mantissa, exponent = f"{x:.1e}".split("e")
+    return f"{mantissa} × 10{str(int(exponent)).replace('-', '⁻').translate(_SUP)}"
+
+
 OPERATOR_TEXT = {"GT": ">", "GE": "≥", "LT": "<", "AP": "≈"}
 
 
@@ -82,12 +91,15 @@ def half_life(rec: dict) -> tuple[dict | None, str | None]:
     if hl["s"] is None:
         return missing("not_measured", "IAEA lists no half-life for this nuclide."), text or None
     if op in LIMIT_WORDS:
-        return (
-            missing(
-                "not_measured", f"Only a limit is known: the half-life is {LIMIT_WORDS[op]} {hl['text']} {hl['unit']}."
-            ),
-            text,
-        )
+        if hl["unit"] in ("eV", "keV", "MeV"):
+            # A limit on the level width is the opposite limit on the half-life (t½ = ħ ln 2 / Γ).
+            note = (
+                f"Only a limit is known: IAEA gives the level width as {LIMIT_WORDS[op]} {hl['text']} {hl['unit']},"
+                f" so the half-life is {INVERSE_LIMIT_WORDS[op]} {scientific(hl['s'])} s."
+            )
+        else:
+            note = f"Only a limit is known: the half-life is {LIMIT_WORDS[op]} {hl['text']} {hl['unit']}."
+        return missing("not_measured", note), text
     note = None
     if op == "AP":
         note = "Approximate value."
@@ -123,7 +135,8 @@ def isotope_record(rec: dict) -> dict:
     est = {"flag": "estimated", "note": "Atomic Mass Evaluation estimate from systematic trends."}
     extra = est if rec["massSystematics"] else {}
     if mass is not None:
-        unc = rec["massUncMicroU"] / 1e6 if rec["massUncMicroU"] else None
+        # In decimal, so that 0.287 µu becomes 2.87e-07 u and not 2.8699999999999996e-07.
+        unc = float(Decimal(str(rec["massUncMicroU"])) / Decimal(10**6)) if rec["massUncMicroU"] else None
         out["mass"] = quantity(float(mass), "u", src, unc=unc, **extra)
     else:
         out["mass"] = missing("not_measured", "No atomic mass in the evaluation.")
@@ -359,6 +372,21 @@ def build_levels(levels: dict, symbols: dict[int, str], report: Report) -> int:
 # --- main -----------------------------------------------------------------------------------
 
 
+def build_colour(report: Report) -> int:
+    """public/data/cie1931.json: the colour-matching functions for the spectrum colours (SPEC §11.6)."""
+    import fetch_cie
+
+    try:
+        table = fetch_cie.parse()
+    except (SourceUnavailable, OSError) as exc:
+        report.unavailable(fetch_cie.SOURCE, str(exc))
+        return 0
+    doc = {"schemaVersion": 1, "source": fetch_cie.SOURCE, "observer": "CIE 1931 2°", **table}
+    validator("ColourMatchingFile").validate(doc)
+    dump_json(DATA_DIR / "cie1931.json", doc)
+    return 1
+
+
 def build_details(report: Report | None = None) -> dict[str, int]:
     own_report = report is None
     report = report or Report()
@@ -377,6 +405,7 @@ def build_details(report: Report | None = None) -> dict[str, int]:
             continue
         counts[name] = builder(data, symbols, report)
     counts["elements"] = build_elements(load_json(DATA_DIR / "index.json"), report)
+    counts["colour"] = build_colour(report)
     if own_report and report.sections:
         # Append this step's findings to the report build.py wrote (python tools/pipeline.py runs both).
         path = TOOLS_DIR / "build-report.md"
@@ -690,7 +719,13 @@ def origin_record(row: dict | None, omitted: dict | None) -> dict:
         total = sum(fractions.values())
         if abs(total - 1) > 1e-9:
             raise ValueError(f"nucleosynthesis.toml Z={row['Z']}: fractions sum to {total}")
-        return {"fractions": fractions, "flag": row["flag"], "source": row["source"], "note": row["note"]}
+        out = {"fractions": fractions, "flag": row["flag"], "source": row["source"], "note": row["note"]}
+        if row.get("recycled"):
+            unknown = [k for k in row["recycled"] if k not in ORIGIN_KEYS or not row.get(k)]
+            if unknown:
+                raise ValueError(f"nucleosynthesis.toml Z={row['Z']}: recycled names {unknown}, which have no share")
+            out["recycled"] = [ORIGIN_KEYS[k] for k in row["recycled"]]
+        return out
     if omitted:
         return missing("not_measured", omitted["note"])
     return missing(
@@ -834,6 +869,8 @@ def build_elements(index: dict, report: Report) -> int:
     for e in elements:
         z = e["Z"]
         doc: dict = {"schemaVersion": 1, "Z": z, "symbol": e["symbol"]}
+        # Which companion files exist, so the panels never request one that is not there.
+        doc["files"] = {name: (DATA_DIR / name / f"{z}.json").exists() for name in ("isotopes", "spectra", "levels")}
         orbitals: dict = {
             "zeff": sorted(zeff.get(z, []), key=lambda r: (r["n"], r["l"])),
             "eigenvalues": eigenvalues(srd[z], hartree_ev) if z in srd and hartree_ev else [],

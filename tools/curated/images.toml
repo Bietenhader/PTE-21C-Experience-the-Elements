@@ -281,7 +281,7 @@ exclude = ["molybdenite.jpg"]
 [[element]]
 Z = 43
 pin = ["File:Technetium-sample-cropped.jpg"]
-title = { "File:Technetium-sample-cropped.jpg" = "Technetium in a sealed ampoule under argon" }
+title = { "File:Technetium-sample-cropped.jpg" = "A strip of technetium metal" }
 exclude = ["s/technetium.jpg"]  # the page says public domain but names no author; the Commons photo has a clear licence
 
 [[element]]

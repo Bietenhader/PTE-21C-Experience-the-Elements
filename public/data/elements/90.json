@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 90,
  "symbol": "Th",
+ "files": {
+  "isotopes": true,
+  "spectra": true,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [],
   "eigenvalues": [
@@ -925,7 +930,10 @@
    },
    "flag": "estimated",
    "source": "kobayashi2020",
-   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.107, massive_stars 0.855, neutron_star_mergers 0.038); quantised to 0.05. Stack height 85 px."
+   "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.107, massive_stars 0.855, neutron_star_mergers 0.038); quantised to 0.05. Stack height 85 px. AGB stars cannot make thorium: their slow neutron captures end at lead and bismuth. The green share is thorium that these stars, born from gas that already held it, returned to space in their winds; the paper says the same of hydrogen's green and blue areas (Sect. 3.5: they 'include the amounts returned to the ISM via stellar mass loss').",
+   "recycled": [
+    "agb"
+   ]
   }
  },
  "amo": {

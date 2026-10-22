@@ -67,7 +67,14 @@ export function ElementSheet({ elements, sources }: Props) {
       data-testid="sheet"
       {...{ closedby: "any" }}
     >
-      {shown && <SheetBody key={shown.Z} element={shown} panel={panel} sources={sources} onDismiss={() => dialog.current?.close()} />}
+      {shown && <SheetBody
+          key={shown.Z}
+          element={shown}
+          elements={elements}
+          panel={panel}
+          sources={sources}
+          onDismiss={() => dialog.current?.close()}
+        />}
     </dialog>
   );
 }
@@ -100,12 +107,22 @@ function Description({ z, sources }: { z: number; sources: SourcesFile["sources"
 
 interface BodyProps {
   element: ElementIndexEntry;
+  elements: ElementIndexEntry[];
   panel: PanelSlug;
   sources: SourcesFile["sources"];
   onDismiss: () => void;
 }
 
-function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
+/** Scrolls the tab row so that the current tab is in sight (on a phone most tabs are off to the side). */
+function revealTab(list: HTMLElement | null, index: number, behavior: ScrollBehavior) {
+  const tab = list?.querySelector<HTMLElement>(`[data-slug="${PANELS[index]?.slug ?? ""}"]`);
+  if (!list || !tab || list.clientWidth === 0) return;
+  const lr = list.getBoundingClientRect();
+  const tr = tab.getBoundingClientRect();
+  if (tr.left < lr.left || tr.right > lr.right) list.scrollBy({ left: tr.left - lr.left - (lr.width - tr.width) / 2, behavior });
+}
+
+function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProps) {
   const ids = useId();
   const strip = useRef<HTMLDivElement>(null);
   const tablist = useRef<HTMLDivElement>(null);
@@ -120,14 +137,39 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
 
   // Bring the strip to the current panel (instantly on open or with reduced motion).
   const indexRef = useRef(index);
+  // The panel the app is scrolling the strip to, or null while the reader moves it.
+  const scrollingTo = useRef<number | null>(null);
   useLayoutEffect(() => {
     indexRef.current = index;
     const s = strip.current;
     if (!s || s.clientWidth === 0) return;
     const left = index * s.clientWidth;
-    if (Math.abs(s.scrollLeft - left) > 2) s.scrollTo({ left, behavior: first.current || reduced ? "instant" : "smooth" });
+    const behavior = first.current || reduced ? "instant" : "smooth";
+    if (Math.abs(s.scrollLeft - left) > 2) {
+      scrollingTo.current = index;
+      s.scrollTo({ left, behavior });
+    }
     first.current = false;
+    revealTab(tablist.current, index, behavior);
   }, [index, reduced]);
+
+  // On a phone the header (photographs, summary) would leave little room for the panel: it folds to
+  // a name bar once the reader scrolls into a panel that is long enough, and opens again at its top.
+  const header = useRef<HTMLElement>(null);
+  const [compact, setCompact] = useState(false);
+  useEffect(() => {
+    const s = strip.current;
+    if (!s) return;
+    const onScroll = (ev: Event) => {
+      const panel = ev.target as HTMLElement;
+      if (!(panel instanceof HTMLElement) || panel.parentElement !== s || !panel.hasAttribute("data-current")) return;
+      const room = (header.current?.offsetHeight ?? 0) + 24;
+      if (panel.scrollTop <= 0) setCompact(false);
+      else if (panel.scrollTop > 24 && panel.scrollHeight - panel.clientHeight > room) setCompact(true);
+    };
+    s.addEventListener("scroll", onScroll, { capture: true, passive: true });
+    return () => s.removeEventListener("scroll", onScroll, { capture: true });
+  }, []);
 
   // When the strip first gets a size (the dialog has just opened) or changes size (a phone turned
   // sideways), snap straight to the current panel.
@@ -138,23 +180,42 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
     const ro = new ResizeObserver(() => {
       if (s.clientWidth === width) return;
       width = s.clientWidth;
+      scrollingTo.current = indexRef.current;
       s.scrollTo({ left: indexRef.current * width, behavior: "instant" });
+      revealTab(tablist.current, indexRef.current, "instant");
       first.current = false;
     });
     ro.observe(s);
     return () => ro.disconnect();
   }, []);
 
-  // A swipe (or trackpad scroll) that settles on another panel selects it.
+  // A swipe (or trackpad scroll) that settles on another panel selects it. Only a strip at rest on a
+  // panel counts, and only while the sheet is open: WebKit also fires scroll events mid-animation and
+  // when the closing dialog resets the strip to 0, which must not select the first panel. While the
+  // app itself scrolls the strip (a tab, a key), only arriving at its target counts: the end of an
+  // earlier scroll can land after the next panel was chosen, and must not undo it (two quick → presses
+  // bounced back a panel). Touch, a pointer press or the wheel hands the strip back to the reader.
   useEffect(() => {
     const s = strip.current;
     if (!s) return;
     let timer: number | undefined;
     const settle = () => {
-      const i = Math.round(s.scrollLeft / Math.max(1, s.clientWidth));
+      const width = s.clientWidth;
+      if (!useView.getState().element || width === 0) return;
+      const i = Math.round(s.scrollLeft / width);
+      if (Math.abs(s.scrollLeft - i * width) > 2) return;
+      if (scrollingTo.current !== null) {
+        if (i === scrollingTo.current) scrollingTo.current = null;
+        return;
+      }
       const slug = PANELS[i]?.slug;
       if (slug && slug !== useView.getState().panel) setPanel(slug);
     };
+    const reader = () => {
+      scrollingTo.current = null;
+    };
+    const handBack = ["pointerdown", "touchstart", "wheel"] as const;
+    for (const type of handBack) s.addEventListener(type, reader, { passive: true });
     const onScroll = () => {
       window.clearTimeout(timer);
       timer = window.setTimeout(settle, 140);
@@ -164,6 +225,7 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
     return () => {
       window.clearTimeout(timer);
       s.removeEventListener(native ? "scrollend" : "scroll", native ? settle : onScroll);
+      for (const type of handBack) s.removeEventListener(type, reader);
     };
   }, []);
 
@@ -194,8 +256,8 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
     // The handler adds ←/→ panel switching for everything inside the sheet; the tabs and the
     // arrow buttons are the focusable controls it mirrors.
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-    <div className={styles.body} onKeyDown={onKeyDown} data-category={e.category}>
-      <header className={styles.header}>
+    <div className={styles.body} onKeyDown={onKeyDown} data-category={e.category} data-compact={compact || undefined}>
+      <header className={styles.header} ref={header}>
         <button type="button" className={styles.close} onClick={onDismiss} aria-label={`Close ${e.name}`}>
           <span aria-hidden="true">×</span>
         </button>
@@ -207,6 +269,11 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
             <h2 id="sheet-title" className={styles.name}>
               {e.name} <span className={styles.z}>Z = {e.Z}</span>
             </h2>
+            {compact && (
+              <button type="button" className={styles.expand} onClick={() => setCompact(false)} aria-expanded={false}>
+                Show photographs and summary
+              </button>
+            )}
             <p className={styles.meta}>
               {CATEGORY_NAME[e.category]} · {e.block}-block · period {e.period}
               {e.group === null ? "" : ` · group ${e.group}`} ·{" "}
@@ -280,7 +347,7 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
               <p className={styles.summary}>{p.summary}</p>
               {mounted.has(i) && (
                 <Suspense fallback={<p className={styles.muted}>Loading…</p>}>
-                  <Component element={e} sources={sources} />
+                  <Component element={e} elements={elements} sources={sources} active={i === index} />
                 </Suspense>
               )}
             </section>

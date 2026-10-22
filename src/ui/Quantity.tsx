@@ -4,22 +4,16 @@
 
 import { MISSING_TEXT, formatQuantity, isMissing } from "../data/format";
 import type { Missing, Q, SourcesFile } from "../data/types";
+import { SourceChip } from "./SourceChip";
 import styles from "./ui.module.css";
+
+export { SourceChip };
 
 type Sources = SourcesFile["sources"];
 
-export function SourceChip({ id, sources }: { id: string; sources: Sources }) {
-  const s = sources[id];
-  return (
-    <span className={styles.chip} title={s ? `${s.citation} — ${s.licence}` : id}>
-      {s?.title ?? id}
-    </span>
-  );
-}
-
 export function MissingValue({ m }: { m: Missing }) {
   return (
-    <span className={styles.missing}>
+    <span className={styles.missing} data-missing={m.reason}>
       <span className={styles.reason}>{MISSING_TEXT[m.reason].long}</span>
       {m.note && <span className={styles.note}> — {m.note}</span>}
     </span>

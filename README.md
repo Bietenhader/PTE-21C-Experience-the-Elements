@@ -9,16 +9,21 @@ A quantum-aware, photographic periodic table for the web. Every element gets its
 its nucleus and its place in the physics of measurement — and **every number on screen has a source**. Where
 nothing has been measured, the table says so and says why, instead of showing a plausible guess.
 
-> **Status: milestone M2 (data complete for v0.1).** All 118 elements from real, sourced data, in four
+> **Status: milestone M3 (sheet and panels, batch 1).** All 118 elements from real, sourced data, in four
 > layouts that morph into one another, with trend arrows, heatmaps and maps, search, hover cards, pinch-zoom,
-> credited photographs, a short text per element and an About page showing how complete the data is. The
-> eleven panels of the element sheet get their contents in milestones M3–M4. See [STATUS.md](STATUS.md).
+> credited photographs and an About page. Four of the eleven panels of the element sheet are filled in —
+> orbitals in 3D, ionization and electronegativity, spectrum and energy levels, nucleus and isotopes; the
+> other seven follow in M4. See [STATUS.md](STATUS.md).
 
 ![The four layouts morphing into one another](docs/media/m1-morph.webp)
 
 | Heatmap (melting point, long form) | Phone |
 |---|---|
 | ![Melting-point heatmap in the 32-column long form](docs/screenshots/m1-desktop-heatmap.png) | ![The table on a phone](docs/screenshots/m1-phone-table.png) |
+
+| Orbitals of gadolinium | The shell stack: 4f inside 6s | Phone |
+|---|---|---|
+| ![The orbital gallery of gadolinium](docs/screenshots/m3-desktop-orbitals.png) | ![All radial distributions of gadolinium on one axis](docs/screenshots/m3-desktop-shell-stack.png) | ![The orbital gallery on a phone](docs/screenshots/m3-phone-orbitals.png) |
 
 ## Using it
 
@@ -33,6 +38,15 @@ nothing has been measured, the table says so and says why, instead of showing a 
 - **Hover** a tile (or focus it with Tab, or press and hold on a phone) for a quick card; **click** it for the
   element's sheet, which has a tab for each of the eleven panels. Every view has its own link
   (e.g. `#/Cs/amo`).
+- **Panels** (in the sheet; ←/→, the tabs or a swipe move between them):
+  - *Orbitals* — a 3D picture of every occupied subshell, a viewer to turn it, the shell stack of all radial
+    distributions, and the node counts. Hydrogen-like shapes with effective charges; the panel says so.
+  - *Electromagnetic & ionization* — every ionization stage NIST lists, electron affinity, electronegativity.
+  - *Spectrum & energy levels* — the visible lines in true colour, the strongest lines, a Grotrian diagram.
+  - *Nucleus & isotopes* — every isotope by half-life and decay, a survival calculator, binding energy,
+    cosmic origin.
+
+  Every chart has "Show as table"; every source label opens its citation.
 - **Keyboard:** Tab follows Z, arrow keys move across the table, Enter opens, Esc closes, `/` search, `L`
   next layout, `T` trend menu (the single-key shortcuts can be turned off in Settings).
 - **Settings:** dark or light, two colour palettes (one colour-blind safe), kJ/mol or eV, K or °C, motion.

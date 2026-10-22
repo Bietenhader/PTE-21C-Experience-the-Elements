@@ -745,7 +745,7 @@ def build_sources(index, data):
         if sid in data and data[sid] is None:
             entry["status"] = "unavailable"
         else:
-            entry["status"] = "ok" if sid in used else "not_yet_used"
+            entry["status"] = "ok" if sid in used or s.get("used_in_app") else "not_yet_used"
         if s["kind"] == "fetched" and (date := retrieved_date(sid)) and entry["status"] != "not_yet_used":
             entry["retrieved"] = date
         if s.get("notes"):
@@ -769,17 +769,36 @@ def refresh_source_status() -> set:
     for f in DATA_DIR.rglob("*.json"):
         if f != path:
             _sources_used(load_json(f), used)
-    unknown = used - set(doc["sources"])
+    registry = load_sources_toml()
+    unknown = used - set(registry)
     if unknown:
         raise ValueError(f"sources used but not in tools/sources.toml: {sorted(unknown)}")
-    registry = load_sources_toml()
+    # Registry entries added since build() wrote sources.json (in registry order).
+    entries = {}
+    for sid, s in registry.items():
+        entries[sid] = doc["sources"].get(sid) or {
+            "id": sid,
+            "title": s["title"],
+            "url": s["url"],
+            "licence": s["licence"],
+            "licenceUrl": s["licence_url"],
+            "citation": s["citation"],
+            "kind": s["kind"],
+            "status": "not_yet_used",
+            **({"notes": s["notes"]} if s.get("notes") else {}),
+        }
+    doc["sources"] = entries
     for sid, entry in doc["sources"].items():
         if entry["status"] == "unavailable":
             continue
-        entry["status"] = "ok" if sid in used else "not_yet_used"
-        entry.pop("retrieved", None)
-        if registry[sid]["kind"] == "fetched" and entry["status"] == "ok" and (date := retrieved_date(sid)):
-            entry["retrieved"] = date
+        # Sources the app itself computes with (e.g. Slater's rules) count as used.
+        entry["status"] = "ok" if sid in used or registry[sid].get("used_in_app") else "not_yet_used"
+        # build() set the retrieval date from the cache it built from; keep it, fill it only if absent.
+        if registry[sid]["kind"] == "fetched" and entry["status"] == "ok" and "retrieved" not in entry:
+            if date := retrieved_date(sid):
+                entry["retrieved"] = date
+        if entry["status"] != "ok":
+            entry.pop("retrieved", None)
         # keep the key order of build_sources (retrieved before notes)
         if "notes" in entry:
             entry["notes"] = entry.pop("notes")

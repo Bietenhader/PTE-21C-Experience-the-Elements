@@ -7,6 +7,7 @@ import { MINUS, MISSING_TEXT, describeMissing, isInterval, isMissing, superscrip
 import type { ElementIndexEntry, Heatmap, Missing, Quantity, Unit } from "../data/types";
 import { zAlpha } from "../physics/relativity";
 import { convertEnergy, convertTemperature, type EnergyUnit, type TemperatureUnit } from "../physics/units";
+import { SECONDS_PER_YEAR } from "../physics/decay";
 
 export interface Units {
   energy: EnergyUnit;
@@ -117,8 +118,6 @@ export function domain(points: SeriesPoint[], positiveOnly = false): [number, nu
 
 // --- Number formatting for tiles -----------------------------------------------------------
 
-const JULIAN_YEAR_S = 365.25 * 86400;
-
 /** A duration in seconds in the most readable unit: 0.58 ms, 3.8 d, 4.47 Ga. */
 export function formatDuration(seconds: number): string {
   const steps: Array<[number, string]> = [
@@ -128,13 +127,13 @@ export function formatDuration(seconds: number): string {
     [60, "min"],
     [3600, "h"],
     [86400, "d"],
-    [JULIAN_YEAR_S, "a"],
-    [1e3 * JULIAN_YEAR_S, "ka"],
-    [1e6 * JULIAN_YEAR_S, "Ma"],
-    [1e9 * JULIAN_YEAR_S, "Ga"],
+    [SECONDS_PER_YEAR, "a"],
+    [1e3 * SECONDS_PER_YEAR, "ka"],
+    [1e6 * SECONDS_PER_YEAR, "Ma"],
+    [1e9 * SECONDS_PER_YEAR, "Ga"],
   ];
   const abs = Math.abs(seconds);
-  if (abs >= 1e12 * JULIAN_YEAR_S) return `${scientific(seconds / JULIAN_YEAR_S, 2)} a`;
+  if (abs >= 1e12 * SECONDS_PER_YEAR) return `${scientific(seconds / SECONDS_PER_YEAR, 2)} a`;
   if (abs < 1e-6) return `${scientific(seconds, 2)} s`;
   let chosen: [number, string] = steps[0] ?? [1, "s"];
   for (const step of steps) if (abs >= step[0]) chosen = step;

@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 51,
  "symbol": "Sb",
+ "files": {
+  "isotopes": true,
+  "spectra": true,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [
    {

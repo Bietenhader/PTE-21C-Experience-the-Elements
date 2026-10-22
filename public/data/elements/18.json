@@ -2,6 +2,11 @@
  "schemaVersion": 1,
  "Z": 18,
  "symbol": "Ar",
+ "files": {
+  "isotopes": true,
+  "spectra": true,
+  "levels": true
+ },
  "orbitals": {
   "zeff": [
    {

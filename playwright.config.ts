@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 import { defineConfig, devices } from "@playwright/test";
 
-const PORT = 4173;
+// PW_PORT lets two checkouts run their tests side by side without sharing a preview server.
+const PORT = Number(process.env.PW_PORT ?? 4173);
 export const BASE_URL = `http://localhost:${PORT}/PTE-21C-Experience-the-Elements/`;
 
 // Every push runs Chromium on desktop and an Android phone profile; the nightly job

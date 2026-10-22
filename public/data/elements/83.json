@@ -978,6 +978,89 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.458, massive_stars 0.484, neutron_star_mergers 0.058); quantised to 0.05. Stack height 61 px. Bi box: the model stack at t = 9.2 Gyr lies well below the X/Xsun = 1 line."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "Puckered layers like antimony; a brittle metal that conducts electricity poorly.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidised only on the surface in air, often turning iridescent; heated in air it burns to bismuth trioxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water at room temperature.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in nitric acid and hot concentrated sulfuric acid; hardly attacked by hydrochloric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Bi2O3",
+    "name": "bismuth trioxide",
+    "source": "pubchem_compounds",
+    "cid": 160977
+   },
+   {
+    "formula": "BiOCl",
+    "name": "bismuth oxychloride",
+    "note": "a pearly pigment in cosmetics",
+    "source": "pubchem_compounds",
+    "cid": 173065887
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "NaBiO3",
+    "name": "sodium bismuthate",
+    "source": "pubchem_compounds",
+    "cid": 4063671
+   },
+   {
+    "state": 3,
+    "formula": "Bi2O3",
+    "name": "bismuth trioxide",
+    "source": "pubchem_compounds",
+    "cid": 160977
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 103.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 117.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5359367
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

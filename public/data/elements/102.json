@@ -715,6 +715,51 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Nobelium metal has never been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Nobelium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Nobelium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Nobelium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No compound has been isolated; unusually for an actinide, +2 is its stable state in water."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 110.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 24822,
+  "sources": [
+   "greenwood1997"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

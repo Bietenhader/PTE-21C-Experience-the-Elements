@@ -629,6 +629,71 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.234, massive_stars 0.717, neutron_star_mergers 0.049); quantised to 0.05. Stack height 76 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air, even when warm, and does not tarnish in hydrogen sulfide; turns to the oxide at red heat. It soaks up large volumes of hydrogen.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Not attacked by water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "The most reactive of the platinum metals: dissolves slowly in nitric acid and readily in aqua regia.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "PdCl2",
+    "name": "palladium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24290
+   },
+   {
+    "formula": "PdO",
+    "name": "palladium(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 73974
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "PdCl2",
+    "name": "palladium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24290
+   }
+  ],
+  "oxidationNote": "True palladium(III) compounds are rare; palladium's everyday states are +2 and +4.",
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23938
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

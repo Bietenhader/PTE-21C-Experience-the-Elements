@@ -102,6 +102,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Nihonium's chemistry is known almost entirely from predictions."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Nihonium's chemistry is known almost entirely from predictions."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Nihonium's chemistry is known almost entirely from predictions."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; what is known of its chemistry comes mostly from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 175670870,
+  "sources": [
+   "turler2013"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

@@ -692,6 +692,54 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises slowly in air at room temperature, faster in moist air or when warmed.",
+    "source": "hsdb"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only milligram amounts of californium metal exist; its reaction with water is not described."
+   },
+   "acids": {
+    "text": "Dissolves in mineral acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Cf2O3",
+    "name": "californium oxide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Cf2O3",
+    "name": "californium oxide",
+    "source": "greenwood1997"
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 95.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23997
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

@@ -835,6 +835,65 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.213, massive_stars 0.729, neutron_star_mergers 0.057); quantised to 0.05. Stack height 80 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Fairly stable in dry air at room temperature; oxidises in moist air or when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Ho2O3",
+    "name": "holmium oxide",
+    "note": "a wavelength standard for spectrometers",
+    "source": "pubchem_compounds",
+    "cid": 159423
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Ho2O3",
+    "name": "holmium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159423
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 90.1,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 101.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23988
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

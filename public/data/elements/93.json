@@ -707,6 +707,112 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes slowly in air at room temperature and oxidises quickly when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The reaction of neptunium metal with water is not described in the sources used here."
+   },
+   "acids": {
+    "text": "Dissolves in hydrochloric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NpO2",
+    "name": "neptunium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 44148103
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "NpF6",
+    "name": "neptunium hexafluoride",
+    "source": "pubchem_compounds",
+    "cid": 19695135
+   },
+   {
+    "state": 5,
+    "formula": "NpO2⁺",
+    "name": "neptunyl(V) ion",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "NpO2",
+    "name": "neptunium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 44148103
+   },
+   {
+    "state": 3,
+    "formula": "NpCl3",
+    "name": "neptunium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 71402371
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 101.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 87.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 98.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 75.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23933
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

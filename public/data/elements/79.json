@@ -926,6 +926,77 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.472, massive_stars 0.346, neutron_star_mergers 0.182); quantised to 0.05. Stack height 18 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.06 of the total. Paper: 'Au is under-produced by a factor of 5'; fractions are of the model's (too low) Au."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Never corrodes in air or oxygen; only sulfur tarnishes it a little.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Not attacked by single acids; dissolves in aqua regia and in cyanide solutions with air.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HAuCl4",
+    "name": "chloroauric acid",
+    "source": "pubchem_compounds",
+    "cid": 122706823
+   },
+   {
+    "formula": "AuCl",
+    "name": "gold(I) chloride",
+    "source": "pubchem_compounds",
+    "cid": 27366
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "HAuCl4",
+    "name": "chloroauric acid",
+    "source": "pubchem_compounds",
+    "cid": 122706823
+   },
+   {
+    "state": 1,
+    "formula": "AuCl",
+    "name": "gold(I) chloride",
+    "source": "pubchem_compounds",
+    "cid": 27366
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 137.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 85.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23985
+ },
  "amo": {
   "hyperfine": [
    {

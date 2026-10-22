@@ -951,6 +951,71 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "The only element with a simple cubic crystal (α-polonium).",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises in air; its own intense radioactivity heats it and makes it glow blue.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Not described for the bulk metal: only milligram amounts of polonium have ever been handled."
+   },
+   "acids": {
+    "text": "Dissolves in dilute acids, forming pink polonium(II) solutions that its radiation quickly turns into yellow polonium(IV).",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "PoO2",
+    "name": "polonium dioxide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "PoO2",
+    "name": "polonium dioxide",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 2,
+    "formula": "PoCl2",
+    "name": "polonium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 57417319
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 94.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 108.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 6328143
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

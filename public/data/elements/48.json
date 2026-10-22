@@ -665,6 +665,87 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.391, massive_stars 0.544, neutron_star_mergers 0.065); quantised to 0.05. Stack height 77 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises slowly in moist air to cadmium oxide; finely divided cadmium can ignite.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves slowly in dilute acids, giving hydrogen, and readily in nitric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CdS",
+    "name": "cadmium sulfide",
+    "note": "the pigment cadmium yellow",
+    "source": "pubchem_compounds",
+    "cid": 14783
+   },
+   {
+    "formula": "CdTe",
+    "name": "cadmium telluride",
+    "note": "thin-film solar cells",
+    "source": "pubchem_compounds",
+    "cid": 91501
+   },
+   {
+    "formula": "CdO",
+    "name": "cadmium oxide",
+    "source": "pubchem_compounds",
+    "cid": 10197697
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "CdS",
+    "name": "cadmium sulfide",
+    "source": "pubchem_compounds",
+    "cid": 14783
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 78.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 95.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 110.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23973
+ },
  "amo": {
   "hyperfine": [
    {

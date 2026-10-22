@@ -829,6 +829,64 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.293, massive_stars 0.661, neutron_star_mergers 0.046); quantised to 0.05. Stack height 85 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Fairly stable in air at room temperature; burns readily when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Dy2O3",
+    "name": "dysprosium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159370
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Dy2O3",
+    "name": "dysprosium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159370
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 91.2,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 102.7,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23912
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

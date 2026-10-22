@@ -355,6 +355,79 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.109, massive_stars 0.891); quantised to 0.05. Stack height 71 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "A thin, tight oxide film forms at once and protects the metal; fine aluminium dust can ignite and explode.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "The oxide film stops any reaction with water; unprotected metal or powder releases hydrogen.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in dilute hydrochloric and sulfuric acid, and in caustic alkalis, giving off hydrogen.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Al2O3",
+    "name": "aluminum oxide",
+    "note": "corundum; ruby and sapphire are coloured forms",
+    "source": "pubchem_compounds",
+    "cid": 9989226
+   },
+   {
+    "formula": "AlCl3",
+    "name": "aluminum chloride",
+    "source": "pubchem_compounds",
+    "cid": 24012
+   },
+   {
+    "formula": "Al2(SO4)3",
+    "name": "aluminum sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24850
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Al2O3",
+    "name": "aluminum oxide",
+    "source": "pubchem_compounds",
+    "cid": 9989226
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "radius": {
+     "value": 39.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 53.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5359268
+ },
  "amo": {
   "hyperfine": [
    {

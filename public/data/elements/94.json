@@ -713,6 +713,117 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "A metal with six solid forms between room temperature and its melting point.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes quickly in moist air, forming a powdery oxide; the fine powder can ignite.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with water, faster when warm.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in hydrochloric acid; concentrated nitric acid makes it passive.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "PuO2",
+    "name": "plutonium dioxide",
+    "note": "fuel of space probes' radioisotope generators",
+    "source": "greenwood1997"
+   },
+   {
+    "formula": "PuF4",
+    "name": "plutonium tetrafluoride",
+    "source": "pubchem_compounds",
+    "cid": 139558
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "PuF6",
+    "name": "plutonium hexafluoride",
+    "source": "pubchem_compounds",
+    "cid": 518809
+   },
+   {
+    "state": 5,
+    "formula": "PuO2⁺",
+    "name": "plutonyl(V) ion",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "PuO2",
+    "name": "plutonium dioxide",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 3,
+    "formula": "PuCl3",
+    "name": "plutonium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 15763885
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 100.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 96.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 74.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 71.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23940
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

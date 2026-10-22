@@ -694,6 +694,89 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.805, massive_stars 0.111, neutron_star_mergers 0.084); quantised to 0.05. Stack height 75 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "White tin is a metal; below 13 °C it can slowly change to grey tin, which has the diamond structure.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air in bulk; tin powder oxidises, especially when damp, and heated tin forms the oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Resists distilled, soft and sea water; oxygen dissolved in the water speeds up attack.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Dissolves slowly in dilute acids and readily in hot concentrated ones.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "SnO2",
+    "name": "tin(IV) oxide",
+    "note": "the ore cassiterite",
+    "source": "pubchem_compounds",
+    "cid": 16747781
+   },
+   {
+    "formula": "SnCl2",
+    "name": "tin(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24479
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "SnO2",
+    "name": "tin(IV) oxide",
+    "source": "pubchem_compounds",
+    "cid": 16747781
+   },
+   {
+    "state": 2,
+    "formula": "SnCl2",
+    "name": "tin(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24479
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 55.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 69.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 81.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5352426
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

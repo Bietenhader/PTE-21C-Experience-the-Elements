@@ -717,6 +717,128 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.123, massive_stars 0.845, neutron_star_mergers 0.033); quantised to 0.05. Stack height 83 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "I₂ molecules in a dark, shiny solid that sublimes to violet vapour.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air; it slowly sublimes at room temperature into violet, corrosive vapour.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Only slightly soluble in water, but dissolves well in iodide solutions as triiodide.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Not dissolved by acids; strong oxidising acids such as nitric acid oxidise it to iodic acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "KI",
+    "name": "potassium iodide",
+    "note": "added to iodised salt",
+    "source": "pubchem_compounds",
+    "cid": 4875
+   },
+   {
+    "formula": "HI",
+    "name": "hydrogen iodide",
+    "source": "pubchem_compounds",
+    "cid": 24841
+   },
+   {
+    "formula": "AgI",
+    "name": "silver iodide",
+    "note": "used to seed clouds",
+    "source": "pubchem_compounds",
+    "cid": 24563
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 7,
+    "formula": "KIO4",
+    "name": "potassium periodate",
+    "source": "pubchem_compounds",
+    "cid": 516896
+   },
+   {
+    "state": 5,
+    "formula": "KIO3",
+    "name": "potassium iodate",
+    "source": "pubchem_compounds",
+    "cid": 23665710
+   },
+   {
+    "state": 1,
+    "formula": "ICl",
+    "name": "iodine monochloride",
+    "source": "pubchem_compounds",
+    "cid": 24640
+   },
+   {
+    "state": -1,
+    "formula": "KI",
+    "name": "potassium iodide",
+    "source": "pubchem_compounds",
+    "cid": 4875
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -1,
+    "coordination": "VI",
+    "radius": {
+     "value": 220.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "IIIPY",
+    "radius": {
+     "value": 44.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 95.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "IV",
+    "radius": {
+     "value": 42.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "VI",
+    "radius": {
+     "value": 53.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 807
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

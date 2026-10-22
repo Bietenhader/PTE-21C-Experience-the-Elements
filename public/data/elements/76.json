@@ -895,6 +895,63 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.137, massive_stars 0.846, neutron_star_mergers 0.017); quantised to 0.05. Stack height 80 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Solid osmium is unaffected by cold air, but the powder slowly gives off toxic osmium tetroxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Barely affected by hydrochloric or sulfuric acid; aqua regia and oxidising acids attack it slowly.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "OsO4",
+    "name": "osmium tetroxide",
+    "note": "volatile and very toxic; used to stain biological samples",
+    "source": "pubchem_compounds",
+    "cid": 30318
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "OsO2",
+    "name": "osmium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 187574
+   },
+   {
+    "state": 3,
+    "formula": "OsCl3",
+    "name": "osmium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 83468
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 63.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23937
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

@@ -212,6 +212,35 @@
    "note": "Fig. 39 cannot be read for helium: its box is full to the top, and the paper says the coloured areas include helium that stars merely returned to space. Most helium was made in the Big Bang, but the figure gives no split we can quote."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "note": "Single atoms; helium stays liquid down to absolute zero unless it is put under pressure.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water; very slightly soluble in it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Inert: forms no stable compounds under ordinary conditions.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "No stable neutral compound is known; the HeH⁺ ion and Na₂He (made only at very high pressure) are the exceptions."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 23987
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

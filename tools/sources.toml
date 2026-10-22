@@ -18,6 +18,62 @@ citation = "PubChem, National Center for Biotechnology Information, U.S. Nationa
 kind = "fetched"
 notes = "REST: rest/pug/periodictable/JSON (one request) and rest/pug_view/data/element/{Z}/JSON (one per element). PubChem aggregates data from Jefferson Lab and Los Alamos National Laboratory (both U.S. DOE); the oxidation-state lists used here come from those two contributors via PubChem."
 
+# --- Chemistry & bonding (SPEC §10.9) ------------------------------------------------------------
+
+[hsdb]
+title = "Hazardous Substances Data Bank (HSDB), records of the elemental substances in PubChem"
+url = "https://pubchem.ncbi.nlm.nih.gov/source/hsdb"
+licence = "Public domain (U.S. Government work, National Library of Medicine)"
+licence_url = "https://www.nlm.nih.gov/web_policies.html"
+citation = "Hazardous Substances Data Bank (HSDB), U.S. National Library of Medicine, via PubChem (National Center for Biotechnology Information): compound records of the elemental substances, sections Stability/Shelf Life, Other Experimental Properties and Reactivities and Incompatibilities. https://pubchem.ncbi.nlm.nih.gov/source/hsdb"
+kind = "fetched"
+notes = "tools/fetch_pubchem_hsdb.py caches the 'Experimental Properties' part of the PubChem record of each elemental substance (found by name). The reactivity notes in tools/curated/chemistry.toml restate what these records say in our own words; no HSDB sentence is copied. The build checks that each note citing hsdb has an HSDB record behind it."
+
+[cameo_chemicals]
+title = "CAMEO Chemicals (NOAA), records of the elemental substances in PubChem"
+url = "https://cameochemicals.noaa.gov/"
+licence = "Free for use (U.S. NOAA); facts restated in our own words, no text copied — some CAMEO data is under its providers' copyright"
+licence_url = "https://cameochemicals.noaa.gov/help/reference/terms_and_conditions.htm"
+citation = "CAMEO Chemicals, Office of Response and Restoration, U.S. National Oceanic and Atmospheric Administration, with the U.S. EPA, via PubChem: sections Air and Water Reactions and Reactive Group of the elemental substances. https://cameochemicals.noaa.gov/"
+kind = "fetched"
+notes = "tools/fetch_pubchem_hsdb.py caches the 'Stability and Reactivity' part of each elemental substance's PubChem record, where CAMEO Chemicals describes reactions with air and water. Used only as the grounding of our own-words notes in tools/curated/chemistry.toml."
+
+[pubchem_compounds]
+title = "PubChem Compound records (formulas of named compounds)"
+url = "https://pubchem.ncbi.nlm.nih.gov/"
+licence = "Public domain (U.S. Government work)"
+licence_url = "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+citation = "PubChem, National Center for Biotechnology Information, U.S. National Library of Medicine: compound records found by name (PUG REST compound/name/{name}/property/MolecularFormula). https://pubchem.ncbi.nlm.nih.gov/"
+kind = "fetched"
+notes = "Every compound in tools/curated/chemistry.toml that cites this source is looked up by its name (or by the row's `lookup` name); a compound whose PubChem molecular formula has different element counts from ours is left out and reported, and the record's CID is stored with each one that matches."
+
+[shannon1976]
+title = "Shannon's effective ionic radii"
+url = "https://doi.org/10.1107/S0567739476001551"
+licence = "Published scientific table; cite"
+licence_url = "https://doi.org/10.1107/S0567739476001551"
+citation = "R. D. Shannon, Revised effective ionic radii and systematic studies of interatomic distances in halides and chalcogenides, Acta Crystallographica A32, 751–767 (1976), doi:10.1107/S0567739476001551."
+kind = "curated"
+notes = "Effective ionic radii (not crystal radii) of the ions in the elements' common oxidation states, in tools/curated/ionic_radii.toml, transcribed via the mendeleev package 1.3.0 (MIT), whose metadata cites Shannon (1976) for this table (and Lundberg 2016 for some additions, not marked per row). Not re-checked against the printed table."
+
+[greenwood1997]
+title = "Greenwood & Earnshaw, Chemistry of the Elements"
+url = "https://doi.org/10.1016/C2009-0-30414-6"
+licence = "Textbook; facts cited"
+licence_url = "https://doi.org/10.1016/C2009-0-30414-6"
+citation = "N. N. Greenwood and A. Earnshaw, Chemistry of the Elements, 2nd edition, Butterworth-Heinemann, Oxford (1997), ISBN 978-0-7506-3365-9, doi:10.1016/C2009-0-30414-6."
+kind = "reference"
+notes = "Cited for mainstream, textbook-level facts in tools/curated/chemistry.toml (bonding type of the element, well-known compounds, reactivity where no HSDB or CAMEO record exists). Statements are our own words."
+
+[turler2013]
+title = "Advances in the production and chemistry of the heaviest elements"
+url = "https://doi.org/10.1021/cr3002438"
+licence = "Scientific facts; cite"
+licence_url = "https://doi.org/10.1021/cr3002438"
+citation = "A. Türler and V. Pershina, Advances in the production and chemistry of the heaviest elements, Chem. Rev. 113, 1237–1312 (2013), doi:10.1021/cr3002438."
+kind = "reference"
+notes = "Cited in tools/curated/chemistry.toml for what is (and is not) known of the chemistry of Z = 104-117: single-atom experiments and predictions. Statements are our own words."
+
 [nist_gsie]
 title = "NIST Atomic Spectra Database — Ionization Energies"
 url = "https://physics.nist.gov/PhysRefData/ASD/ionEnergy.html"
@@ -380,6 +436,15 @@ licence_url = "https://doi.org/10.1016/j.jinorgbio.2019.03.013"
 citation = "M. A. Zoroddu, J. Aaseth, G. Crisponi, S. Medici, M. Peana and V. M. Nurchi, J. Inorg. Biochem. 195, 120 (2019), doi:10.1016/j.jinorgbio.2019.03.013."
 kind = "curated"
 notes = "Added in M2. Human roles of elements without an EFSA reference value (tools/curated/biology.toml)."
+
+[smits2020]
+title = "Oganesson: a noble gas element that is neither noble nor a gas"
+url = "https://doi.org/10.1002/anie.202011976"
+licence = "Scientific facts; cite"
+licence_url = "https://doi.org/10.1002/anie.202011976"
+citation = "O. R. Smits, J.-M. Mewes, P. Jerabek and P. Schwerdtfeger, Oganesson: a noble gas element that is neither noble nor a gas, Angew. Chem. Int. Ed. 59, 23636–23640 (2020), doi:10.1002/anie.202011976."
+kind = "reference"
+notes = "Added in M4. Cited in tools/curated/chemistry.toml for oganesson: calculations that make it a solid at room temperature and more reactive than the other noble gases. Statements are our own words; DOI checked against Crossref."
 
 [smits2023]
 title = "Pushing the limits of the periodic table — a review on atomic relativistic electronic structure theory and calculations for the superheavy elements"

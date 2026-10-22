@@ -1,0 +1,58 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 60rem;
+}
+
+.states {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+}
+
+.list {
+  margin: 0 0 var(--space-2);
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.list li {
+  margin-block-end: var(--space-1);
+  overflow-wrap: anywhere;
+}
+
+.state {
+  display: inline-block;
+  min-inline-size: 2.25rem;
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+}
+
+.formula {
+  font-family: var(--font-num);
+  font-weight: 600;
+}
+
+.rungLabel {
+  fill: var(--text);
+  font-family: var(--font-num);
+  font-size: 12px;
+}
+
+/* The three kinds of radius are told apart by their labels; the fills only echo them. */
+.ionic {
+  fill: var(--link);
+}
+
+.covalent {
+  fill: var(--text-muted);
+}
+
+.vdw {
+  fill: var(--surface);
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+}
+
+.row {
+  display: contents;
+}

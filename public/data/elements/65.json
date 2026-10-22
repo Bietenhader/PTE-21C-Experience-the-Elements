@@ -822,6 +822,64 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.154, massive_stars 0.801, neutron_star_mergers 0.045); quantised to 0.05. Stack height 83 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Fairly stable in air; tarnishes slowly.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Tb4O7",
+    "name": "terbium(III,IV) oxide",
+    "source": "pubchem_compounds",
+    "cid": 16211492
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "TbCl3",
+    "name": "terbium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 61458
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 92.3,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 104.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23958
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

@@ -244,6 +244,71 @@
    "note": "Paper Sect. 3.5: 'Be and B are supposed to be produced by cosmic rays [Prantzos et al. 1993], which is not included in our model either.' Empty box in Fig. 39. Value is the paper's qualitative statement, not a modelled fraction."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Resists oxidation at ordinary temperatures because a thin oxide film protects it.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Does not react with water under ordinary conditions.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "The oxide film slows attack by acids; it dissolves in aqueous alkali.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "BeO",
+    "name": "beryllium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14775
+   },
+   {
+    "formula": "BeCl2",
+    "name": "beryllium chloride",
+    "source": "pubchem_compounds",
+    "cid": 24588
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "BeO",
+    "name": "beryllium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14775
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 27.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 45.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5460467
+ },
  "amo": {
   "hyperfine": [
    {

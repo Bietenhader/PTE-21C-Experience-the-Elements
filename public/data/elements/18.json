@@ -364,6 +364,34 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.103, massive_stars 0.556, white_dwarfs 0.342); quantised to 0.05. Stack height 80 px. Cross-check with the paper's text: '34% of Ar ... come from SNe Ia' (figure reading 0.342). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air, of which it makes up almost 1 %.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not known to combine chemically with any element.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "No stable neutral compound is known; argon can be trapped in cages of other molecules (clathrates)."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 23968
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

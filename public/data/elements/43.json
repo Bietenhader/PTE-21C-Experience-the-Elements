@@ -604,6 +604,93 @@
    "note": "Technetium has no long-lived isotope, so none of it survives from before the Solar System; its box in Fig. 39 is empty."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Silvery metal that tarnishes slowly in moist air; burns in fluorine or oxygen when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Not attacked by water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in nitric acid and aqua regia, and in hydrogen peroxide solutions, as the pertechnetate ion; not in hydrochloric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NaTcO4",
+    "name": "sodium pertechnetate",
+    "note": "carrier of technetium-99m in hospitals",
+    "source": "pubchem_compounds",
+    "cid": 74086836
+   },
+   {
+    "formula": "TcO2",
+    "name": "technetium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 6857437
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 7,
+    "formula": "NaTcO4",
+    "name": "sodium pertechnetate",
+    "source": "pubchem_compounds",
+    "cid": 74086836
+   },
+   {
+    "state": 6,
+    "formula": "TcF6",
+    "name": "technetium hexafluoride",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "TcO2",
+    "name": "technetium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 6857437
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 64.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "IV",
+    "radius": {
+     "value": 37.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "VI",
+    "radius": {
+     "value": 56.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23957
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

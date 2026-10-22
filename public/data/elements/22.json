@@ -447,6 +447,114 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.079, massive_stars 0.537, white_dwarfs 0.384); quantised to 0.05. Stack height 43 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Protected by its oxide film at ordinary temperatures; combines with oxygen at red heat, and titanium dust is flammable.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water at room temperature; it decomposes steam only at 700–800 °C.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Attacked by acids only on heating; nitric acid oxidises it.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "TiO2",
+    "name": "titanium dioxide",
+    "note": "the white pigment in paints and sunscreens",
+    "source": "pubchem_compounds",
+    "cid": 26042
+   },
+   {
+    "formula": "TiCl4",
+    "name": "titanium tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 24193
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "TiO2",
+    "name": "titanium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 26042
+   },
+   {
+    "state": 3,
+    "formula": "TiCl3",
+    "name": "titanium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 62646
+   },
+   {
+    "state": 2,
+    "formula": "TiO",
+    "name": "titanium monoxide",
+    "source": "pubchem_compounds",
+    "cid": 61685
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 67.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 42.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 60.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 74.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23963
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

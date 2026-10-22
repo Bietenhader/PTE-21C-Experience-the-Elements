@@ -180,6 +180,66 @@
    "note": "Paper Sect. 3.5: 'H and most of He are produced in Big Bang nucleosynthesis. The small green and blue areas also includes the amounts returned to the ISM via stellar mass loss'. Stars only destroy or return H, so the figure's green/blue (raw reading at the 9.2-Gyr line: AGB 0.14, massive 0.05; box saturated) are recycled Big-Bang H, not production. Value set from the statement, not read off the figure."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "H₂ molecules, held together in the liquid and solid only by weak van der Waals forces.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Highly flammable: it burns in air to water, and mixtures of hydrogen and air can explode.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Does not react with water and barely dissolves in it.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Does not react with acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "H2O",
+    "name": "water",
+    "source": "pubchem_compounds",
+    "cid": 962
+   },
+   {
+    "formula": "HCl",
+    "name": "hydrogen chloride",
+    "source": "pubchem_compounds",
+    "cid": 313
+   },
+   {
+    "formula": "NaH",
+    "name": "sodium hydride",
+    "note": "a salt-like hydride containing H⁻",
+    "source": "pubchem_compounds",
+    "cid": 24758
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "HCl",
+    "name": "hydrogen chloride",
+    "source": "pubchem_compounds",
+    "cid": 313
+   },
+   {
+    "state": -1,
+    "formula": "LiH",
+    "name": "lithium hydride",
+    "source": "pubchem_compounds",
+    "cid": 62714
+   }
+  ],
+  "ionicRadii": [],
+  "pubchemCid": 783
+ },
  "amo": {
   "hyperfine": [
    {

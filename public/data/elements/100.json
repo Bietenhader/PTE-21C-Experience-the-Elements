@@ -704,6 +704,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Fermium metal has never been made; it is expected to be a metal like the other actinides."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Fermium has been studied only as tracer amounts in solution; the element itself has never been prepared."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Fermium has been studied only as tracer amounts in solution; the element itself has never been prepared."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Fermium has been studied only as tracer amounts in solution; the element itself has never been prepared."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only studied as tracer amounts in solution, where it is +3 (with some +2)."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 23998,
+  "sources": [
+   "greenwood1997"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

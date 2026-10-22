@@ -514,6 +514,90 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.090, massive_stars 0.909, neutron_star_mergers 0.001); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent network",
+   "note": "The diamond structure, like silicon.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Unaffected by air at room temperature; oxidises above about 600 °C.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and not attacked by it.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Resists hydrochloric and dilute sulfuric acid; dissolved by hot concentrated sulfuric acid, aqua regia and molten alkali.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "GeO2",
+    "name": "germanium dioxide",
+    "note": "used in optical-fibre glass",
+    "source": "pubchem_compounds",
+    "cid": 90478414
+   },
+   {
+    "formula": "GeCl4",
+    "name": "germanium tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 66226
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "GeO2",
+    "name": "germanium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 90478414
+   },
+   {
+    "state": 2,
+    "formula": "GeO",
+    "name": "germanium monoxide",
+    "source": "pubchem_compounds",
+    "cid": 6327639
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 73.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 39.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 53.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 6326954
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

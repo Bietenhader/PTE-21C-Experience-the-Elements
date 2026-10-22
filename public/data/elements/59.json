@@ -785,6 +785,65 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.825, massive_stars 0.158, neutron_star_mergers 0.017); quantised to 0.05. Stack height 95 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Slowly tarnishes in air, forming a green oxide coat that flakes off.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Pr6O11",
+    "name": "praseodymium(III,IV) oxide",
+    "note": "yellow-green glass and ceramic colour",
+    "source": "pubchem_compounds",
+    "cid": 16211481
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "PrCl3",
+    "name": "praseodymium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 66317
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 99.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 112.6,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23942
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

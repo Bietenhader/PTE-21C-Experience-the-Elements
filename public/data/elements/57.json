@@ -771,6 +771,72 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.956, massive_stars 0.033, neutron_star_mergers 0.011); quantised to 0.05. Stack height 91 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes quickly in air, forming an oxide coat that flakes off; burns readily when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids, giving hydrogen.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "La2O3",
+    "name": "lanthanum oxide",
+    "note": "in high-refractive-index camera-lens glass",
+    "source": "pubchem_compounds",
+    "cid": 150906
+   },
+   {
+    "formula": "LaNi5",
+    "name": "lanthanum nickel",
+    "note": "stores hydrogen in nickel-metal-hydride batteries",
+    "source": "pubchem_compounds",
+    "cid": 166660
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "La2O3",
+    "name": "lanthanum oxide",
+    "source": "pubchem_compounds",
+    "cid": 150906
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 103.2,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 116.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23926
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

@@ -2214,6 +2214,235 @@
       ],
       "additionalProperties": false
     },
+    "Chemistry": {
+      "description": "Chemistry & bonding (SPEC §10.9): how the element bonds, how it reacts with air, water and acids (our own words, each with its source), well-known compounds, one compound per common oxidation state, and Shannon's ionic radii of its common ions.",
+      "type": "object",
+      "properties": {
+        "bonding": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ChemistryBonding"
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ]
+        },
+        "reactivity": {
+          "type": "object",
+          "properties": {
+            "air": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/SourcedText"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            },
+            "water": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/SourcedText"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            },
+            "acids": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/SourcedText"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            }
+          },
+          "required": [
+            "air",
+            "water",
+            "acids"
+          ],
+          "additionalProperties": false
+        },
+        "compounds": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ChemistryCompound"
+              },
+              "minItems": 1
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ]
+        },
+        "oxidationExamples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChemistryOxidationExample"
+          }
+        },
+        "oxidationNote": {
+          "type": "string",
+          "description": "What to know about the oxidation states where examples are few or none."
+        },
+        "ionicRadii": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChemistryIonicRadius"
+          }
+        },
+        "pubchemCid": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "PubChem compound record of the elemental substance (where the HSDB and CAMEO notes are)."
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceId"
+          },
+          "description": "Where the record holds nothing but Missing notes: the sources those notes rest on."
+        }
+      },
+      "required": [
+        "bonding",
+        "reactivity",
+        "compounds",
+        "oxidationExamples",
+        "ionicRadii"
+      ],
+      "additionalProperties": false
+    },
+    "ChemistryBonding": {
+      "description": "How the atoms of the element itself hold together.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "metallic",
+            "covalent network",
+            "covalent layers",
+            "covalent chains",
+            "molecular",
+            "monatomic"
+          ]
+        },
+        "note": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
+      },
+      "required": [
+        "type",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ChemistryCompound": {
+      "type": "object",
+      "properties": {
+        "formula": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "cid": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "PubChem CID whose molecular formula the build checked."
+        }
+      },
+      "required": [
+        "formula",
+        "name",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ChemistryOxidationExample": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "integer"
+        },
+        "formula": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "cid": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "state",
+        "formula",
+        "name",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ChemistryIonicRadius": {
+      "description": "Shannon's effective ionic radius of one ion in one coordination (SPEC §10.9).",
+      "type": "object",
+      "properties": {
+        "charge": {
+          "type": "integer"
+        },
+        "coordination": {
+          "type": "string",
+          "description": "Coordination number as Shannon writes it: Roman numeral, SQ square planar, PY pyramidal."
+        },
+        "spin": {
+          "type": "string",
+          "enum": [
+            "HS",
+            "LS"
+          ]
+        },
+        "radius": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "mostReliable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "charge",
+        "coordination",
+        "radius"
+      ],
+      "additionalProperties": false
+    },
     "ElementDetailFile": {
       "description": "public/data/elements/{Z}.json: per-panel detail, loaded when the sheet opens (SPEC §5, §10). Sections are keyed by panel slug.",
       "type": "object",
@@ -2509,6 +2738,9 @@
             "origin"
           ],
           "additionalProperties": false
+        },
+        "chemistry": {
+          "$ref": "#/definitions/Chemistry"
         },
         "biology": {
           "$ref": "#/definitions/Biology"

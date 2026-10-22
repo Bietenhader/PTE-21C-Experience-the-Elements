@@ -536,6 +536,110 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.170, massive_stars 0.817, neutron_star_mergers 0.012); quantised to 0.05. Stack height 81 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent chains",
+   "note": "Grey selenium: endless spiral chains of atoms; red selenium is made of Se₈ rings.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air at room temperature; burns with a blue flame when heated, giving selenium dioxide.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Insoluble in water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Oxidised by nitric acid to selenious acid and by sulfuric acid to selenic acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "SeO2",
+    "name": "selenium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 24007
+   },
+   {
+    "formula": "H2Se",
+    "name": "hydrogen selenide",
+    "source": "pubchem_compounds",
+    "cid": 533
+   },
+   {
+    "formula": "ZnSe",
+    "name": "zinc selenide",
+    "source": "pubchem_compounds",
+    "cid": 4298215
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "H2SeO4",
+    "name": "selenic acid",
+    "source": "pubchem_compounds",
+    "cid": 1089
+   },
+   {
+    "state": 4,
+    "formula": "SeO2",
+    "name": "selenium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 24007
+   },
+   {
+    "state": -2,
+    "formula": "H2Se",
+    "name": "hydrogen selenide",
+    "source": "pubchem_compounds",
+    "cid": 533
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -2,
+    "coordination": "VI",
+    "radius": {
+     "value": 198.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 50.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 28.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 42.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 6326970
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

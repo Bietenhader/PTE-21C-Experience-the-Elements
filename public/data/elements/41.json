@@ -615,6 +615,96 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.613, massive_stars 0.330, neutron_star_mergers 0.057); quantised to 0.05. Stack height 67 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Protected by an oxide film at room temperature; oxidises when heated in air.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Not attacked by water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Resists most acids, including aqua regia; attacked by hydrofluoric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Nb2O5",
+    "name": "niobium pentoxide",
+    "source": "pubchem_compounds",
+    "cid": 9903420
+   },
+   {
+    "formula": "LiNbO3",
+    "name": "lithium niobate",
+    "note": "a crystal for optical modulators",
+    "source": "pubchem_compounds",
+    "cid": 159404
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "Nb2O5",
+    "name": "niobium pentoxide",
+    "source": "pubchem_compounds",
+    "cid": 9903420
+   },
+   {
+    "state": 3,
+    "formula": "NbCl3",
+    "name": "niobium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 83580
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "IV",
+    "radius": {
+     "value": 48.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 64.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VIII",
+    "radius": {
+     "value": 74.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23936
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

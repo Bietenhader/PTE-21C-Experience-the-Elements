@@ -721,6 +721,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Lawrencium metal has never been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lawrencium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lawrencium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lawrencium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No compound has been isolated; in solution it is +3."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 31192,
+  "sources": [
+   "greenwood1997"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

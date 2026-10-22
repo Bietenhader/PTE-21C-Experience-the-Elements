@@ -468,6 +468,151 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.079, massive_stars 0.313, white_dwarfs 0.608); quantised to 0.05. Stack height 75 px. Cross-check with the paper's text: 'the fraction [of Fe from SNe Ia] is only 60% in our model, and the rest is mainly produced by HNe' (figure reading 0.608). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Keeps its shine in dry air, but rusts in moist air to hydrated iron oxides; fine iron powder can catch fire by itself.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Bulk iron does not react with pure water; in water containing air it rusts, and iron powder can release hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute mineral acids, giving hydrogen; cold concentrated nitric or sulfuric acid leave it untouched, hot ones attack it.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Fe2O3",
+    "name": "iron(III) oxide",
+    "note": "haematite, the main iron ore; rust is its hydrated form",
+    "source": "pubchem_compounds",
+    "cid": 518696
+   },
+   {
+    "formula": "Fe3O4",
+    "name": "iron(II,III) oxide",
+    "note": "magnetite, the magnetic iron ore",
+    "source": "pubchem_compounds",
+    "cid": 16211978
+   },
+   {
+    "formula": "FeS2",
+    "name": "iron disulfide",
+    "note": "pyrite, fool's gold",
+    "source": "pubchem_compounds",
+    "cid": 14788
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "FeCl3",
+    "name": "iron(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24380
+   },
+   {
+    "state": 2,
+    "formula": "FeSO4",
+    "name": "iron(II) sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24393
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "spin": "HS",
+    "radius": {
+     "value": 63.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 78.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 61.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "spin": "HS",
+    "radius": {
+     "value": 92.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "spin": "HS",
+    "radius": {
+     "value": 49.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 64.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 55.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "spin": "HS",
+    "radius": {
+     "value": 78.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23925
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

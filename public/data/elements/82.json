@@ -959,6 +959,112 @@
    "note": "For lead, the AGB-star band in Fig. 39 runs off the top of its box at the Sun's formation, so the shares cannot be read; the paper says only that AGB stars are the main source of lead."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "A freshly cut surface dulls quickly in air under a thin protective film of oxide and carbonate.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Insoluble in water; soft water containing air or carbon dioxide slowly dissolves traces of it — why lead pipes were abandoned.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Hydrochloric and sulfuric acid barely attack it because the lead salts formed do not dissolve; nitric acid dissolves it.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "PbS",
+    "name": "lead sulfide",
+    "note": "the ore galena",
+    "source": "pubchem_compounds",
+    "cid": 14819
+   },
+   {
+    "formula": "PbO2",
+    "name": "lead dioxide",
+    "note": "the positive plate of car batteries",
+    "source": "pubchem_compounds",
+    "cid": 14793
+   },
+   {
+    "formula": "PbSO4",
+    "name": "lead sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24008
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "PbO2",
+    "name": "lead dioxide",
+    "source": "pubchem_compounds",
+    "cid": 14793
+   },
+   {
+    "state": 2,
+    "formula": "PbO",
+    "name": "lead(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 14827
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 119.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 129.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 65.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 77.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 94.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5352425
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

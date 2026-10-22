@@ -541,6 +541,45 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Hassium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Hassium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Hassium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HsO4",
+    "name": "hassium tetroxide",
+    "note": "volatile like osmium tetroxide; seven molecules, studied in 2001",
+    "source": "primary_literature",
+    "doi": "10.1038/nature00980"
+   }
+  ],
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951714,
+  "sources": [
+   "turler2013"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

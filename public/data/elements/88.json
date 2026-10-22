@@ -898,6 +898,58 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Turns black at once in air, forming a nitride; its radioactivity makes its salts glow faintly.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts vigorously with water, like barium, giving radium hydroxide and hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "RaCl2",
+    "name": "radium chloride",
+    "source": "greenwood1997"
+   },
+   {
+    "formula": "RaSO4",
+    "name": "radium sulfate",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "RaCl2",
+    "name": "radium chloride",
+    "source": "greenwood1997"
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 148.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 6328144
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

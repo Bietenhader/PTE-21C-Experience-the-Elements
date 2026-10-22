@@ -614,6 +614,93 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.562, massive_stars 0.395, neutron_star_mergers 0.043); quantised to 0.05. Stack height 73 px. Text: '44% of [this element] can be produced from ECSNe ... which is included in the blue areas'; the figure's whole blue band reads lower (0.395), probably because the text percentage is relative to the solar value while the model overproduces s-process elements. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Bulk zirconium is unreactive at ordinary temperatures and oxidises readily only around 700 °C; powder, borings and shavings can ignite in air.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water; bulk metal is not attacked, but small amounts of water can speed the burning of zirconium dust.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Highly resistant to acids and alkalis except hydrofluoric acid, aqua regia and hot phosphoric acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "ZrO2",
+    "name": "zirconium dioxide",
+    "note": "zirconia ceramics",
+    "source": "pubchem_compounds",
+    "cid": 62395
+   },
+   {
+    "formula": "ZrSiO4",
+    "name": "zirconium silicate",
+    "note": "the gemstone and ore zircon",
+    "source": "pubchem_compounds",
+    "cid": 61775
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "ZrCl4",
+    "name": "zirconium tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 24817
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 59.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VII",
+    "radius": {
+     "value": 78.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 84.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23995
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

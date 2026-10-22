@@ -705,6 +705,88 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.250, massive_stars 0.303, neutron_star_mergers 0.447); quantised to 0.05. Stack height 72 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent layers",
+   "note": "Puckered layers like grey arsenic; a brittle semimetal.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not tarnish in dry air and only slowly in moist air.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not affected by cold dilute acids; attacked by hot concentrated sulfuric acid and readily by aqua regia.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Sb2S3",
+    "name": "antimony trisulfide",
+    "note": "the ore stibnite, the 'kohl' of antiquity",
+    "source": "pubchem_compounds",
+    "cid": 16685273
+   },
+   {
+    "formula": "Sb2O3",
+    "name": "antimony trioxide",
+    "note": "a flame retardant",
+    "source": "pubchem_compounds",
+    "cid": 14794
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "SbCl5",
+    "name": "antimony pentachloride",
+    "source": "pubchem_compounds",
+    "cid": 24294
+   },
+   {
+    "state": 3,
+    "formula": "Sb2O3",
+    "name": "antimony trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14794
+   },
+   {
+    "state": -3,
+    "formula": "SbH3",
+    "name": "stibine",
+    "source": "pubchem_compounds",
+    "cid": 9359
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 60.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5354495
+ },
  "amo": {
   "hyperfine": [
    {

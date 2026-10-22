@@ -1137,6 +1137,55 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises quickly in moist air; its radioactivity makes it glow faintly blue in the dark.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts with water, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Ac2O3",
+    "name": "actinium oxide",
+    "source": "pubchem_compounds",
+    "cid": 21946271
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Ac2O3",
+    "name": "actinium oxide",
+    "source": "pubchem_compounds",
+    "cid": 21946271
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 112.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23965
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

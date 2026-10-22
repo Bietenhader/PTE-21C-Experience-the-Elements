@@ -634,6 +634,61 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.171, massive_stars 0.737, neutron_star_mergers 0.093); quantised to 0.05. Stack height 74 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air at room temperature; at red heat it slowly oxidises to rhodium(III) oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Compact rhodium resists every acid, even aqua regia; only the finely divided metal dissolves in aqua regia.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "RhCl3",
+    "name": "rhodium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 24872
+   },
+   {
+    "formula": "Rh2O3",
+    "name": "rhodium(III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 159409
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "RhCl3",
+    "name": "rhodium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 24872
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 66.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23948
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

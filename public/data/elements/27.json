@@ -481,6 +481,121 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.148, massive_stars 0.570, white_dwarfs 0.283); quantised to 0.05. Stack height 42 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Bulk cobalt is fairly stable in air at room temperature and oxidises when heated; the fine powder can burn.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Insoluble in water and not attacked by it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves slowly in dilute mineral acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CoCl2",
+    "name": "cobalt(II) chloride",
+    "note": "blue when dry, pink when damp",
+    "source": "pubchem_compounds",
+    "cid": 24288
+   },
+   {
+    "formula": "Co3O4",
+    "name": "cobalt(II,III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 6432046
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "CoF3",
+    "name": "cobalt(III) fluoride",
+    "source": "pubchem_compounds",
+    "cid": 66208
+   },
+   {
+    "state": 2,
+    "formula": "CoCl2",
+    "name": "cobalt(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24288
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "spin": "HS",
+    "radius": {
+     "value": 58.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 74.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 65.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 90.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 61.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 54.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 104730
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

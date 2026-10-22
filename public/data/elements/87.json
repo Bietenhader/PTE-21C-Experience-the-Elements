@@ -852,6 +852,52 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No weighable amount of francium has ever been gathered; it is expected to be an alkali metal like caesium."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Its longest-lived isotope lasts 22 minutes, so only clouds of atoms and trace amounts in solution have been studied; it is expected to react with air and water even more violently than caesium."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Its longest-lived isotope lasts 22 minutes, so only clouds of atoms and trace amounts in solution have been studied; it is expected to react with air and water even more violently than caesium."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Its longest-lived isotope lasts 22 minutes, so only clouds of atoms and trace amounts in solution have been studied; it is expected to react with air and water even more violently than caesium."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only trace amounts in solution have been studied; francium behaves like the other alkali metals."
+  },
+  "oxidationExamples": [],
+  "oxidationNote": "In solution francium is +1, like the other alkali metals.",
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 180.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 6328145,
+  "sources": [
+   "greenwood1997"
+  ]
+ },
  "amo": {
   "hyperfine": [
    {

@@ -263,6 +263,89 @@
    "note": "Paper Sect. 3.5: 'Be and B are supposed to be produced by cosmic rays [Prantzos et al. 1993], which is not included in our model either.' Empty box in Fig. 39. Value is the paper's qualitative statement, not a modelled fraction."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent network",
+   "note": "B₁₂ icosahedra linked into a hard three-dimensional network.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Crystalline boron is very inert at room temperature; impure or amorphous boron is more reactive.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Does not react with water at room temperature.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Crystalline boron resists most acids; hot concentrated nitric acid oxidises it to boric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "H3BO3",
+    "name": "boric acid",
+    "source": "pubchem_compounds",
+    "cid": 7628
+   },
+   {
+    "formula": "Na2B4O7",
+    "name": "sodium tetraborate",
+    "note": "borax is its hydrate",
+    "source": "pubchem_compounds",
+    "cid": 10219853
+   },
+   {
+    "formula": "BF3",
+    "name": "boron trifluoride",
+    "source": "pubchem_compounds",
+    "cid": 6356
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "BCl3",
+    "name": "boron trichloride",
+    "source": "pubchem_compounds",
+    "cid": 25135
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "III",
+    "radius": {
+     "value": 1.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "radius": {
+     "value": 11.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 27.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462311
+ },
  "amo": {
   "hyperfine": [
    {

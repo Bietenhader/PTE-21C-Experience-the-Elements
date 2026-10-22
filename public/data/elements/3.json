@@ -231,6 +231,88 @@
    "note": "The paper calls its lithium model 'very uncertain' and leaves out cosmic rays and novae, which make some lithium; its box in Fig. 39 is full to the top, so no split is quoted."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stays bright in dry air; in moist air its surface slowly gathers a film of hydroxide, carbonate and nitride.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts with water, giving lithium hydroxide and hydrogen — the least vigorously of the alkali metals.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with mineral acids.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Li2CO3",
+    "name": "lithium carbonate",
+    "note": "used in batteries, glass and as a mood-stabilising drug",
+    "source": "pubchem_compounds",
+    "cid": 11125
+   },
+   {
+    "formula": "LiOH",
+    "name": "lithium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 3939
+   },
+   {
+    "formula": "Li3N",
+    "name": "lithium nitride",
+    "note": "lithium is the only alkali metal that reacts with nitrogen at room temperature",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "LiCl",
+    "name": "lithium chloride",
+    "source": "pubchem_compounds",
+    "cid": 433294
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 59.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 92.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 3028194
+ },
  "amo": {
   "hyperfine": [
    {

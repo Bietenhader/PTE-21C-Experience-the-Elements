@@ -491,6 +491,123 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.139, massive_stars 0.854, neutron_star_mergers 0.001, white_dwarfs 0.006); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Dulls slowly in air and, in moist air, gathers the green coat of basic carbonate seen on copper roofs; heating gives a black oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and not attacked by it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Hardly attacked by cold hydrochloric or dilute sulfuric acid, but readily by dilute nitric acid and hot concentrated sulfuric acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CuSO4",
+    "name": "copper(II) sulfate",
+    "note": "blue vitriol is its hydrate",
+    "source": "pubchem_compounds",
+    "cid": 24462
+   },
+   {
+    "formula": "CuO",
+    "name": "copper(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 164827
+   },
+   {
+    "formula": "Cu2O",
+    "name": "copper(I) oxide",
+    "note": "the red mineral cuprite",
+    "source": "pubchem_compounds",
+    "cid": 18346908
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "CuSO4",
+    "name": "copper(II) sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24462
+   },
+   {
+    "state": 1,
+    "formula": "Cu2O",
+    "name": "copper(I) oxide",
+    "source": "pubchem_compounds",
+    "cid": 18346908
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 60.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 77.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 57.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "IVSQ",
+    "radius": {
+     "value": 57.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "V",
+    "radius": {
+     "value": 65.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 73.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23978
+ },
  "amo": {
   "hyperfine": [
    {

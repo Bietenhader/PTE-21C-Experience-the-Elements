@@ -102,6 +102,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only a handful of atoms have been observed. Although it sits under radon, calculations suggest that relativity would make it a solid at room temperature rather than a monatomic gas."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Oganesson's chemistry has never been studied in experiments; calculations suggest it would be far more reactive than the other noble gases."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Oganesson's chemistry has never been studied in experiments; calculations suggest it would be far more reactive than the other noble gases."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Oganesson's chemistry has never been studied in experiments; calculations suggest it would be far more reactive than the other noble gases."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; its chemistry is known only from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 168007547,
+  "sources": [
+   "smits2020"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

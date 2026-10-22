@@ -378,6 +378,102 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.096, massive_stars 0.901, white_dwarfs 0.003); quantised to 0.05. Stack height 67 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "White phosphorus is made of P₄ tetrahedra; red and black phosphorus are covalent networks.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "White phosphorus glows in the dark and catches fire on its own in air at about 30 °C; red and black phosphorus are stable in air.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water; white phosphorus is stored under water to keep air away.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Hot concentrated nitric acid oxidises it to phosphoric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "H3PO4",
+    "name": "phosphoric acid",
+    "source": "pubchem_compounds",
+    "cid": 1004
+   },
+   {
+    "formula": "P2O5",
+    "name": "phosphorus pentoxide",
+    "note": "the molecule is P₄O₁₀; a powerful drying agent",
+    "source": "pubchem_compounds",
+    "cid": 6326975
+   },
+   {
+    "formula": "PCl3",
+    "name": "phosphorus trichloride",
+    "source": "pubchem_compounds",
+    "cid": 24387
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "H3PO4",
+    "name": "phosphoric acid",
+    "source": "pubchem_compounds",
+    "cid": 1004
+   },
+   {
+    "state": 3,
+    "formula": "PCl3",
+    "name": "phosphorus trichloride",
+    "source": "pubchem_compounds",
+    "cid": 24387
+   },
+   {
+    "state": -3,
+    "formula": "PH3",
+    "name": "phosphine",
+    "source": "pubchem_compounds",
+    "cid": 24404
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 44.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "IV",
+    "radius": {
+     "value": 17.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 38.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462309
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

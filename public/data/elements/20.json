@@ -392,6 +392,90 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.092, massive_stars 0.512, white_dwarfs 0.397); quantised to 0.05. Stack height 80 px. Cross-check with the paper's text: '39% of Ca ... come from SNe Ia' (figure reading 0.397). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises in air to a film that sticks and protects it; calcium burns with a red flame.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts readily with water, giving calcium hydroxide and hydrogen.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts with dilute acids, giving off hydrogen.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CaCO3",
+    "name": "calcium carbonate",
+    "note": "limestone, chalk, marble, shells",
+    "source": "pubchem_compounds",
+    "cid": 10112
+   },
+   {
+    "formula": "CaO",
+    "name": "calcium oxide",
+    "note": "quicklime",
+    "source": "pubchem_compounds",
+    "cid": 14778
+   },
+   {
+    "formula": "CaSO4",
+    "name": "calcium sulfate",
+    "note": "gypsum is its hydrate",
+    "source": "pubchem_compounds",
+    "cid": 24497
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "CaO",
+    "name": "calcium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14778
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 100.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VII",
+    "radius": {
+     "value": 106.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 112.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5460341
+ },
  "amo": {
   "hyperfine": [
    {

@@ -32,6 +32,8 @@ const OrbitalViewer = lazy(() => import("../../viz/orbital/OrbitalViewer"));
 
 type Sources = SourcesFile["sources"];
 const THUMB = 220;
+/** The orbital's name as read aloud and in labels: "3d xy", not "3d_xy". */
+const spokenName = (n: number, l: number, m: number, kind: OrbitalKind) => orbitalName(n, l, m, kind).replace("_", " ");
 const css = (c: readonly number[]) => `rgb(${c.map((v) => Math.round(v * 255)).join(" ")})`;
 
 function GalleryTile({
@@ -76,7 +78,7 @@ function GalleryTile({
     // onDrawn is stable for the gallery's lifetime
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [s.n, s.l, s.zeff.value]);
-  const shape = orbitalName(s.n, s.l, 0, "real");
+  const shape = spokenName(s.n, s.l, 0, "real");
   return (
     <li className={styles.tile} data-valence={s.valence || undefined} data-state={state}>
       <button
@@ -217,7 +219,7 @@ function Viewer({ element, s }: { element: ElementIndexEntry; s: SubshellInfo })
     };
   }, [s.n, s.l, s.zeff.value, m, kind, want]);
 
-  const name = orbitalName(s.n, s.l, m, kind);
+  const name = spokenName(s.n, s.l, m, kind);
   const mValues = Array.from({ length: 2 * s.l + 1 }, (_, i) => i - s.l);
   const turnBy = (dAzimuth: number, dElevation: number) => setTurn((t) => ({ seq: t.seq + 1, dAzimuth, dElevation }));
   const label = `${name} orbital of ${element.name} in 3D: hydrogenic, effective charge ${s.zeff.value.toFixed(2)}, surface enclosing 90 % of the probability, ${Math.round((orbital?.half ?? 0) * A0_PM)} pm half-width box.`;
@@ -245,7 +247,7 @@ function Viewer({ element, s }: { element: ElementIndexEntry; s: SubshellInfo })
                   key={mm}
                   type="button"
                   aria-pressed={m === mm}
-                  aria-label={orbitalName(s.n, s.l, mm, kind)}
+                  aria-label={spokenName(s.n, s.l, mm, kind)}
                   onClick={() => setM(mm)}
                   className={styles.mButton}
                 >

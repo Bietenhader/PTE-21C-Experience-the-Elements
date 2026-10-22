@@ -70,6 +70,15 @@ def clear(folder: Path) -> None:
 # --- isotopes -------------------------------------------------------------------------------
 
 LIMIT_WORDS = {"GT": "more than", "GE": "at least", "LT": "less than"}
+INVERSE_LIMIT_WORDS = {"GT": "less than", "GE": "at most", "LT": "more than"}
+
+
+def scientific(x: float) -> str:
+    """2 significant figures with a written power of ten: 5.7 × 10⁻²¹."""
+    mantissa, exponent = f"{x:.1e}".split("e")
+    return f"{mantissa} × 10{str(int(exponent)).replace('-', '⁻').translate(_SUP)}"
+
+
 OPERATOR_TEXT = {"GT": ">", "GE": "≥", "LT": "<", "AP": "≈"}
 
 
@@ -82,12 +91,15 @@ def half_life(rec: dict) -> tuple[dict | None, str | None]:
     if hl["s"] is None:
         return missing("not_measured", "IAEA lists no half-life for this nuclide."), text or None
     if op in LIMIT_WORDS:
-        return (
-            missing(
-                "not_measured", f"Only a limit is known: the half-life is {LIMIT_WORDS[op]} {hl['text']} {hl['unit']}."
-            ),
-            text,
-        )
+        if hl["unit"] in ("eV", "keV", "MeV"):
+            # A limit on the level width is the opposite limit on the half-life (t½ = ħ ln 2 / Γ).
+            note = (
+                f"Only a limit is known: IAEA gives the level width as {LIMIT_WORDS[op]} {hl['text']} {hl['unit']},"
+                f" so the half-life is {INVERSE_LIMIT_WORDS[op]} {scientific(hl['s'])} s."
+            )
+        else:
+            note = f"Only a limit is known: the half-life is {LIMIT_WORDS[op]} {hl['text']} {hl['unit']}."
+        return missing("not_measured", note), text
     note = None
     if op == "AP":
         note = "Approximate value."
@@ -123,7 +135,8 @@ def isotope_record(rec: dict) -> dict:
     est = {"flag": "estimated", "note": "Atomic Mass Evaluation estimate from systematic trends."}
     extra = est if rec["massSystematics"] else {}
     if mass is not None:
-        unc = rec["massUncMicroU"] / 1e6 if rec["massUncMicroU"] else None
+        # In decimal, so that 0.287 µu becomes 2.87e-07 u and not 2.8699999999999996e-07.
+        unc = float(Decimal(str(rec["massUncMicroU"])) / Decimal(10**6)) if rec["massUncMicroU"] else None
         out["mass"] = quantity(float(mass), "u", src, unc=unc, **extra)
     else:
         out["mass"] = missing("not_measured", "No atomic mass in the evaluation.")

@@ -1,0 +1,316 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 64rem;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(8.5rem, 30%), 1fr));
+  gap: var(--space-2);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tile {
+  min-inline-size: 0;
+}
+
+.tileButton {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  inline-size: 100%;
+  padding: var(--space-1) var(--space-1) var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  color: var(--text);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.tile[data-valence] .tileButton {
+  border-color: var(--focus);
+  border-width: 2px;
+}
+
+.tileButton[aria-pressed="true"] {
+  outline: 3px solid var(--link);
+  outline-offset: 1px;
+}
+
+.thumb {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 1;
+  border-radius: calc(var(--radius) - 2px);
+  background: var(--surface);
+}
+
+.tile[data-state="computing"] .thumb {
+  background:
+    repeating-linear-gradient(45deg, var(--hatch-a) 0 6px, var(--hatch-b) 6px 12px);
+}
+
+.tileLabel {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  margin-block-start: var(--space-1);
+  padding-inline: var(--space-1);
+  font-family: var(--font-num);
+  font-size: 1rem;
+}
+
+.valence {
+  margin-inline-start: auto;
+  padding: 0 0.35rem;
+  border: 1px solid var(--focus);
+  border-radius: 999px;
+  color: var(--focus);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tileMeta {
+  padding-inline: var(--space-1);
+  color: var(--text-muted);
+  font-family: var(--font-num);
+  font-size: 0.75rem;
+}
+
+/* Viewer */
+.viewer {
+  display: grid;
+  grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.fieldset {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+}
+
+.fieldset legend {
+  padding: 0 var(--space-1);
+  color: var(--text-muted);
+}
+
+.fieldset label {
+  display: block;
+  min-block-size: 1.75rem;
+  line-height: 1.75rem;
+}
+
+.mButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.mButton,
+.turns button,
+.axisToggle button {
+  min-block-size: 2.25rem;
+  min-inline-size: 2.25rem;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  color: var(--text);
+  font: inherit;
+  font-family: var(--font-num);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.mButton[aria-pressed="true"],
+.axisToggle button[aria-pressed="true"] {
+  border-color: var(--link);
+  background: color-mix(in srgb, var(--link) 22%, var(--surface-raised));
+  font-weight: 600;
+}
+
+.stage {
+  min-inline-size: 0;
+}
+
+.canvasBox {
+  position: relative;
+  aspect-ratio: 1;
+  max-block-size: 26rem;
+  max-inline-size: 26rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  cursor: grab;
+  touch-action: none;
+}
+
+.canvasBox > p {
+  margin: 0;
+  padding: var(--space-3);
+}
+
+.canvasBox > .busy {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.turns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-block: var(--space-2);
+}
+
+.swatch {
+  display: inline-block;
+  inline-size: 0.8em;
+  block-size: 0.8em;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  vertical-align: -0.05em;
+}
+
+.slice {
+  margin: var(--space-2) 0 0;
+}
+
+.slice canvas {
+  display: block;
+  inline-size: 15rem;
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  image-rendering: auto;
+}
+
+@media (max-width: 40rem) {
+  .viewer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .canvasBox {
+    max-inline-size: none;
+  }
+}
+
+/* Shell stack */
+.axisToggle {
+  display: flex;
+  gap: var(--space-1);
+  margin-block-end: var(--space-2);
+}
+
+.baseline {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+}
+
+.curve {
+  fill: none;
+  stroke-width: 1.4;
+  opacity: 0.8;
+}
+
+.curve[data-valence] {
+  stroke-width: 2;
+  opacity: 1;
+}
+
+.curve[data-selected] {
+  stroke-width: 3;
+  opacity: 1;
+}
+
+.curveLabel {
+  fill: var(--text);
+  font-family: var(--font-num);
+  font-size: 11px;
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-width: 3px;
+}
+
+.curveLabel[data-selected] {
+  font-weight: 700;
+}
+
+.radiusMark line {
+  stroke: var(--text-muted);
+  stroke-dasharray: 1 3;
+  stroke-width: 1.25;
+}
+
+.selectedMarks line {
+  stroke: var(--text);
+  stroke-dasharray: 5 4;
+  stroke-width: 1;
+  opacity: 0.7;
+}
+
+.ownLabel {
+  fill: var(--text);
+}
+
+/* Nodes table and checks */
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.table caption {
+  margin-block-end: var(--space-2);
+  text-align: start;
+}
+
+.table th,
+.table td {
+  padding: 0.25rem 0.6rem;
+  border-block-end: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.table thead th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.table tbody th {
+  font-weight: 500;
+}
+
+.table tr[data-valence] th {
+  font-weight: 700;
+}
+
+.checks p {
+  margin: 0 0 var(--space-2);
+  font-size: 0.9375rem;
+}

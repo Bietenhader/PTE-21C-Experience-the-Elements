@@ -960,7 +960,45 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "A": 223,
+    "field": "medicine",
+    "text": "Radium-223, an alpha emitter that the body treats like calcium, settles where bone is rebuilt around tumours; a 2013 trial showed that it prolongs life in prostate cancer that has spread to bone.",
+    "source": "primary_literature",
+    "doi": "10.1056/NEJMoa1213755"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Radium-224 and its decay products",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Radium-226 and its decay products",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Radium-228 and its decay products",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1898,
@@ -976,7 +1014,12 @@
   ],
   "nameOrigin": "From the Latin radius, 'ray', for its intense radioactivity.",
   "source": "pubchem",
-  "note": "Gustave Bémont co-signed the 1898 announcement. Los Alamos dates the isolation of the metal (electrolysis of radium chloride on a mercury cathode, then distillation of the amalgam) to 1911; the Curie–Debierne paper appeared in 1910 (Comptes rendus 151)."
+  "note": "Gustave Bémont co-signed the 1898 announcement. Los Alamos dates the isolation of the metal (electrolysis of radium chloride on a mercury cathode, then distillation of the amalgam) to 1911; the Curie–Debierne paper appeared in 1910 (Comptes rendus 151).",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Radium is a radioactive alkaline-earth metal that Marie and Pierre Curie extracted from pitchblende in 1898; a tonne of uranium ore yields only about 0.14 grams of it. Its salts glow faintly in the dark, which once led to its use in luminous paint for watch dials. Radium-226, with a half-life of 1600 years, defined the old unit of activity, the curie, and the Curies' own laboratory notebooks are still too contaminated to handle safely. Its nucleus has a rare trick: radium-223, radium-226 and some other radium isotopes occasionally fling out a whole carbon-14 nucleus instead of an alpha particle, a process called cluster decay.",

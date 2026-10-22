@@ -944,7 +944,12 @@
   ],
   "nameOrigin": "From Ytterby, the Swedish village whose quarry gave the mineral it came from.",
   "source": "pubchem",
-  "note": "Los Alamos dates Mosander's separation to 1842. The later 'erbia' turned out to be a mixture of the oxides of five elements: erbium, scandium, holmium, thulium and ytterbium. Klemm and Bommer made fairly pure metal by reducing the chloride with potassium vapour."
+  "note": "Los Alamos dates Mosander's separation to 1842. The later 'erbia' turned out to be a mixture of the oxides of five elements: erbium, scandium, holmium, thulium and ytterbium. Klemm and Bommer made fairly pure metal by reducing the chloride with potassium vapour.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Erbium is a soft, silvery lanthanide, another of the four elements named after Ytterby in Sweden; its oxide is pink and tints glass and porcelain glazes. Its great modern job is in the internet: glass fibres doped with erbium ions amplify the infrared light signals in long-distance and undersea cables directly, without turning them into electricity, because erbium ions emit just at the wavelengths where glass fibre is most transparent. The neutral atom, [Xe] 4f¹² 6s², is two electrons short of a full 4f shell, giving two unpaired electrons and the ground level ³H₆; natural erbium consists of six stable isotopes.",

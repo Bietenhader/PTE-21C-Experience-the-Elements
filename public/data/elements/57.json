@@ -791,7 +791,12 @@
   "isolated": 1923,
   "nameOrigin": "From the Greek lanthanein, 'to lie hidden', because it was concealed in cerium minerals.",
   "source": "pubchem",
-  "note": "Mosander extracted its oxide from impure cerium nitrate and soon afterwards split off 'didymium', itself later found to be two elements. Los Alamos dates the first fairly pure metal to 1923 without naming who made it."
+  "note": "Mosander extracted its oxide from impure cerium nitrate and soon afterwards split off 'didymium', itself later found to be two elements. Los Alamos dates the first fairly pure metal to 1923 without naming who made it.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Lanthanum is a soft, silvery metal that gives the lanthanide series its name; it lay hidden in cerium minerals until Carl Gustaf Mosander extracted it in 1839, hence a name from the Greek for ‘to escape notice’. Its oxide goes into high-quality camera-lens glass, and lanthanum–nickel alloys soak up hydrogen reversibly, which is how nickel–metal hydride batteries store their charge. Strangely, the element at the start of the f-block has no f electron at all: its ground configuration is [Xe] 5d¹ 6s², while the filling rule predicts 4f¹ 6s² (ground term ²D₃/₂). A rare natural isotope, lanthanum-138, is radioactive, with a half-life of about 10¹¹ years.",

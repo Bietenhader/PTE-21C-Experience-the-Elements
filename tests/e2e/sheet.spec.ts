@@ -95,6 +95,8 @@ test.describe("routing and the sheet", () => {
   });
 
   test("axe: the sheet for Fe, Cs, U and Og", async ({ page }) => {
+    // Four full-page axe scans of a sheet with its panels mounted: about 7 s each on a loaded runner.
+    test.setTimeout(60_000);
     for (const s of ["Fe", "Cs", "U", "Og"]) {
       await open(page, `#/${s}/orbitals`);
       await expect(page.getByTestId("sheet")).toBeVisible();

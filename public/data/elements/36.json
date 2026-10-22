@@ -694,7 +694,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Greek kryptos, 'hidden'.",
   "source": "pubchem",
-  "note": "Found on 30 May 1898 in what remained when nearly all of a liquid-air sample had evaporated."
+  "note": "Found on 30 May 1898 in what remained when nearly all of a liquid-air sample had evaporated.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Krypton is a dense, colourless noble gas, rare in air and named from the Greek for 'hidden'; it fills some high-performance light bulbs and photographic flash tubes. It is also one of the few noble gases that can be coaxed into compounds, the best known being krypton difluoride. For part of the twentieth century the metre itself was defined by the wavelength of an orange-red line, 605.6 nm in air, emitted by krypton-86, a nucleus with a closed shell of 50 neutrons. The atom's 36 electrons fill every subshell up to 4p ([Ar] 3d¹⁰ 4s² 4p⁶, ground term ¹S₀), giving a first ionisation energy of 1351 kJ/mol.",

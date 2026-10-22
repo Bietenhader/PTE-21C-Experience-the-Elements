@@ -460,7 +460,17 @@
    "text": "Essential for some other organisms; a role in humans is suspected but not shown.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "iarc": [
+   {
+    "agent": "Vanadium pentoxide",
+    "group": "2B",
+    "volumes": [
+     "86"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1801,
@@ -476,7 +486,12 @@
   ],
   "nameOrigin": "From Vanadís, an Old Norse name of the goddess Freyja, chosen by Sefström for the element's many colourful compounds.",
   "source": "pubchem",
-  "note": "Del Río called it erythronium but withdrew after French chemists judged it impure chromium; Sefström rediscovered it in Sweden in 1830, and CIAAW credits him. The map dot marks del Río's Mexico City. CIAAW gives 1869 for Roscoe's isolation; Jefferson Lab and Los Alamos give 1867."
+  "note": "Del Río called it erythronium but withdrew after French chemists judged it impure chromium; Sefström rediscovered it in Sweden in 1830, and CIAAW credits him. The map dot marks del Río's Mexico City. CIAAW gives 1869 for Roscoe's isolation; Jefferson Lab and Los Alamos give 1867.",
+  "placeLocation": {
+   "lat": 19.444,
+   "lon": -99.133,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Vanadium is a hard, silvery transition metal whose main job is to make steel tougher, in tools, springs and axles; it is also the heart of large 'flow' batteries that store electricity from wind and sun. It was named after Vanadís, a Norse goddess of beauty, because of its colourful compounds: in solution it steps from yellow through blue and green to violet as its oxidation state falls from +5 to +2. The atom, [Ar] 3d³ 4s² (ground term ⁴F₃/₂), has three unpaired d electrons, and the rare isotope vanadium-50 is barely radioactive, with a half-life of about 2.65 × 10¹⁷ years and an unusually high nuclear spin of 6.",

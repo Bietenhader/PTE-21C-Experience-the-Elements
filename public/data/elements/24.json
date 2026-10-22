@@ -546,7 +546,36 @@
    "text": "Long thought to help insulin work; EFSA found no convincing evidence that it is essential.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "iarc": [
+   {
+    "agent": "Chromium (VI) compounds",
+    "group": "1",
+    "volumes": [
+     "Sup 7",
+     "49",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Chromium (III) compounds",
+    "group": "3",
+    "volumes": [
+     "49"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Chromium, metallic",
+    "group": "3",
+    "volumes": [
+     "Sup 7",
+     "49"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1797,
@@ -560,7 +589,12 @@
   ],
   "nameOrigin": "From the Greek chroma, 'colour', for its brightly coloured compounds.",
   "source": "pubchem",
-  "note": "Found in crocoite, the 'Siberian red lead' mineral; Vauquelin obtained the metal the following year by heating the oxide with charcoal."
+  "note": "Found in crocoite, the 'Siberian red lead' mineral; Vauquelin obtained the metal the following year by heating the oxide with charcoal.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Chromium is a hard, shiny transition metal; a thin layer of it gives taps and bumpers their mirror finish, and mixed into steel it forms a self-healing oxide skin that makes the steel 'stainless'. Its name comes from the Greek for colour, and fittingly the red of ruby and much of the green of emerald come from small traces of chromium in the crystal. Chromium also breaks the simple filling rule: the Aufbau order predicts [Ar] 3d⁴ 4s², but measurement shows [Ar] 3d⁵ 4s¹, a half-filled d subshell plus one s electron. That leaves six unpaired electrons, the most of any element in its row, and the ground term ⁷S₃.",

@@ -639,7 +639,12 @@
   "nameOrigin": "From Niobe, daughter of Tantalus in Greek myth, because the element is so hard to tell apart from tantalum.",
   "symbolNote": "Hatchett called it columbium (symbol Cb), a name that stayed in American use; IUPAC chose niobium in 1949 (Los Alamos says 1950).",
   "source": "pubchem",
-  "note": "Wollaston wrongly declared it identical to tantalum in 1809; Heinrich Rose re-established it (1844 per Jefferson Lab, 1846 per CIAAW) and named it niobium, and Marignac confirmed the distinction in 1866. CIAAW's 1846 date for Blomstrand's isolation conflicts with the 1864 of the other two sources."
+  "note": "Wollaston wrongly declared it identical to tantalum in 1809; Heinrich Rose re-established it (1844 per Jefferson Lab, 1846 per CIAAW) and named it niobium, and Marignac confirmed the distinction in 1866. CIAAW's 1846 date for Blomstrand's isolation conflicts with the 1864 of the other two sources.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Niobium is a soft, grey, ductile transition metal, named after Niobe, daughter of Tantalus in Greek myth, because it is so hard to tell apart from its chemical twin, tantalum. Its most surprising job is in hospitals: the coils of most MRI scanners are wound from niobium–titanium wire, which carries current with zero resistance when chilled by liquid helium, and pure niobium itself becomes a superconductor below about 9 K. Its electrons break the simple filling rule: the measured ground configuration is [Kr] 4d⁴ 5s¹, not the predicted 4d³ 5s², leaving five unpaired electrons and the ground term ⁶D₁/₂.",

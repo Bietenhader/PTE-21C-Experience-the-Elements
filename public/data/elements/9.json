@@ -315,7 +315,27 @@
    "text": "Strengthens tooth enamel against decay; EFSA sets an adequate intake for this reason but does not consider it essential.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 18,
+    "field": "medicine",
+    "text": "Fluorine-18 in a glucose analogue (FDG), first made in 1978 to measure how much sugar the brain uses: cells take it up like glucose but cannot use it further, so it collects where they are most active, which a PET scanner then sees.",
+    "source": "primary_literature",
+    "doi": "10.1002/jlcr.2580140204"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Fluorides (inorganic, used in drinking-water)",
+    "group": "3",
+    "volumes": [
+     "27",
+     "Sup 7"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1771,
@@ -330,7 +350,12 @@
   ],
   "nameOrigin": "From fluorspar (fluorite), whose name comes from the Latin fluere, 'to flow', because miners added the mineral to ores to help them melt.",
   "source": "pubchem",
-  "note": "PubChem's YearDiscovered (1670) is the date of the earliest known use of a fluorine compound to etch glass, not of the element. Los Alamos prints the isolation year as 1866, a slip for 1886. Moissan isolated the gas by electrolysis in a platinum apparatus."
+  "note": "PubChem's YearDiscovered (1670) is the date of the earliest known use of a fluorine compound to etch glass, not of the element. Los Alamos prints the isolation year as 1866, a slip for 1886. Moissan isolated the gas by electrolysis in a platinum apparatus.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Fluorine is a pale-yellow, poisonous gas and the most reactive of all elements; we meet it tamed, as fluoride in toothpaste, in non-stick pan coatings and in the mineral fluorite. Fluorite often glows under ultraviolet light, and it lent its name both to the element and to the word 'fluorescence'. A fluorine atom, [He] 2s² 2p⁵, is one electron short of a closed shell (ground term ²P°₃/₂), and it pulls on shared electrons harder than any other atom, with the highest Pauling electronegativity, 3.98. Its only stable isotope, fluorine-19, has nuclear spin 1/2, which makes fluorine-containing drugs easy to follow by NMR.",

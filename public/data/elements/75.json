@@ -928,7 +928,12 @@
   "isolated": 1928,
   "nameOrigin": "From Rhenus, the Latin name of the Rhine.",
   "source": "pubchem",
-  "note": "Detected by X-ray spectroscopy in platinum ores and columbite; in 1928 about 1 g was won from some 660 kg of molybdenite (Jefferson Lab names Noddack and Berg for this step)."
+  "note": "Detected by X-ray spectroscopy in platinum ores and columbite; in 1928 about 1 g was won from some 660 kg of molybdenite (Jefferson Lab names Noddack and Berg for this step).",
+  "placeLocation": {
+   "lat": 52.524,
+   "lon": 13.4,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Rhenium is one of the rarest elements in Earth’s crust, a dense, silvery transition metal recovered mainly from the flue dust of molybdenum roasting. Discovered in 1925 and named after the river Rhine, it was the last element with a stable isotope to be found. Most of it now goes into nickel superalloys for jet-engine turbine blades, which must endure intense heat for years. Curiously, most natural rhenium is radioactive: rhenium-187, about 63 per cent of the total, decays to osmium-187 with a half-life of 4.33 × 10¹⁰ years, a clock used to date meteorites and ore deposits. Only rhenium-185 is stable.",

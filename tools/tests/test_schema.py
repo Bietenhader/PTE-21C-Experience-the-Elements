@@ -136,6 +136,7 @@ def test_per_element_files_match_schema(folder, definition):
         ("metrology.json", "MetrologyFile"),
         ("cie1931.json", "ColourMatchingFile"),
         ("relativity.json", "RelativityFile"),
+        ("worldmap.json", "WorldMapFile"),
     ],
 )
 def test_shared_files_match_schema(name, definition):

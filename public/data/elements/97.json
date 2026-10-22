@@ -707,7 +707,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After Berkeley, California, where it was made, in the way terbium was named after Ytterby.",
   "source": "pubchem",
-  "note": "Made in December 1949 by alpha bombardment of americium-241 and published in 1950 (Phys. Rev. 77, 838). Jefferson Lab also lists Kenneth Street Jr., who is not an author of the discovery paper."
+  "note": "Made in December 1949 by alpha bombardment of americium-241 and published in 1950 (Phys. Rev. 77, 838). Jefferson Lab also lists Kenneth Street Jr., who is not an author of the discovery paper.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Berkelium is a synthetic actinide metal, first made in December 1949 at Berkeley, California, by firing alpha particles at americium-241, and named after the city. It is so scarce that the first compound anyone could actually see, prepared in 1962, weighed about three billionths of a gram. Its chief use today is as raw material for heavier elements: berkelium-249, which has a half-life of 330 days, was the target from which tennessine was made. The atom's nine 5f electrons, in [Rn] 5f⁹ 7s², leave five spins unpaired and give a ⁶H°₁₅/₂ ground term, whose total angular momentum, J = 15/2, is among the largest of any element.",

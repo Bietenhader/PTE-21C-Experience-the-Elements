@@ -921,7 +921,12 @@
   "nameOrigin": "From the Swedish tung sten, 'heavy stone', the old name of the mineral now called scheelite.",
   "symbolNote": "W comes from wolfram, the element's name in German and several other languages, after the ore wolframite.",
   "source": "pubchem",
-  "note": "CIAAW credits Scheele (1781) with the discovery and the Elhuyar brothers (1783) with the first isolation, while PubChem's year and Jefferson Lab credit the brothers, who reduced the acid from wolframite with charcoal. Woulfe had suspected a new substance in wolframite in 1779."
+  "note": "CIAAW credits Scheele (1781) with the discovery and the Elhuyar brothers (1783) with the first isolation, while PubChem's year and Jefferson Lab credit the brothers, who reduced the acid from wolframite with charcoal. Woulfe had suspected a new substance in wolframite in 1779.",
+  "placeLocation": {
+   "lat": 43.115,
+   "lon": -2.417,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Tungsten is a dense, steel-grey transition metal with the highest melting point of any metal, 3695 K, which is why it made the glowing filaments of incandescent bulbs and still forms welding electrodes and X-ray targets. Its name is Swedish for ‘heavy stone’, while its symbol, W, comes from wolfram, after the ore wolframite; tungsten carbide, extremely hard, tips drills and cutting tools. In the atom, relativity shows: chromium and molybdenum above it take a d⁵ s¹ arrangement, but tungsten keeps two 6s electrons, [Xe] 4f¹⁴ 5d⁴ 6s² (ground term ⁵D₀), because relativistic effects draw the 6s orbital inward and lower its energy.",

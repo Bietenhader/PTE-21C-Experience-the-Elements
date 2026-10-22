@@ -546,7 +546,12 @@
   "symbolNote": "Berkeley proposed hahnium (Ha) and Dubna nielsbohrium (Ns); IUPAC proposed joliotium (Jl) in 1994 before adopting dubnium (Db) in 1997. Temporary name: unnilpentium (Unp).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "The 1993 IUPAC/IUPAP report found Berkeley's and Dubna's 1970 reports practically simultaneous and of equal weight, so credit is shared; PubChem gives 1967, the year of Dubna's first report."
+  "note": "The 1993 IUPAC/IUPAP report found Berkeley's and Dubna's 1970 reports practically simultaneous and of equal weight, so credit is shared; PubChem gives 1967, the year of Dubna's first report.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Dubnium is a synthetic element in group 5, below tantalum, named after the Russian town of Dubna, whose laboratory reported it in 1967; a Berkeley team claimed it independently in 1970. The rivalry fed years of argument over names, and the Berkeley proposal, hahnium, was eventually abandoned. Only a few atoms are made in any experiment, yet dubnium-268 is remarkably durable for so heavy a nucleus: its half-life of about 28 hours is the longest of any known isotope beyond lawrencium. Theory predicts the outer configuration [Rn] 5f¹⁴ 6d³ 7s² and a ⁴F₃/₂ ground level, the same pattern as tantalum, but neither has been measured.",

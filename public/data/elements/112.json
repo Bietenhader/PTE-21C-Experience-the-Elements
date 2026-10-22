@@ -123,7 +123,12 @@
   "symbolNote": "Temporary name: ununbium (Uub). The discoverers first proposed the symbol Cp, changed to Cn because Cp had once stood for cassiopeium (lutetium).",
   "source": "iupac_discovery",
   "doi": "10.1351/PAC-REP-08-03-05",
-  "note": "First atom made on 9 February 1996 from zinc-70 on lead-208; the 2009 IUPAC/IUPAP report credited the 1996 and 2002 GSI work, and the name followed in 2010."
+  "note": "First atom made on 9 February 1996 from zinc-70 on lead-208; the 2009 IUPAC/IUPAP report credited the 1996 and 2002 GSI work, and the name followed in 2010.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Copernicium is a synthetic element in group 12, below zinc, cadmium and mercury, named after the astronomer Nicolaus Copernicus. It was first made at GSI in Darmstadt on 9 February 1996 by fusing lead-208 with zinc-70; its first atoms, of copernicium-277, lasted less than a millisecond. Heavier isotopes live longer, copernicium-285 for about half a minute, and experiments on single atoms show it to be an extremely volatile metal, even more so than mercury. Only small numbers of atoms have ever been made. Calculations predict a closed-shell [Rn] 5f¹⁴ 6d¹⁰ 7s² configuration, with relativity binding the 7s pair so tightly that some studies expect copernicium to be a liquid at room temperature.",

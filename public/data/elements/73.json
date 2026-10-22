@@ -916,7 +916,12 @@
   ],
   "nameOrigin": "From Tantalus of Greek myth, who stood in water he could never drink, because the oxide takes up no acid even when soaked in it.",
   "source": "pubchem",
-  "note": "Long confused with niobium until Marignac separated them in 1866. Los Alamos credits von Bolton with the first fairly pure, ductile metal in 1903; Jefferson Lab gives 1907 for the first fairly pure samples."
+  "note": "Long confused with niobium until Marignac separated them in 1866. Los Alamos credits von Bolton with the first fairly pure, ductile metal in 1903; Jefferson Lab gives 1907 for the first fairly pure samples.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Tantalum is a hard, grey, heavy transition metal that shrugs off almost every acid, so it is used in chemical plant, surgical implants and, above all, the tiny capacitors inside phones and laptops. It is named after Tantalus of Greek myth, condemned to stand in water he could never drink, because the metal sits in acid without taking any up. Its nuclei hold a rarity: a minute fraction of natural tantalum is tantalum-180 in a long-lived excited nuclear state, the only such isomer to survive in nature since before the Earth formed, and its decay has never been observed. The atom’s ground state is [Xe] 4f¹⁴ 5d³ 6s², ⁴F₃/₂.",

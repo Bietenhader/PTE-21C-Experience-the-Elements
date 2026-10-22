@@ -388,7 +388,19 @@
    "text": "May help bone and connective tissue form; essentiality in humans is not proven.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "iarc": [
+   {
+    "agent": "Silica dust, crystalline, in the form of quartz or cristobalite",
+    "group": "1",
+    "volumes": [
+     "Sup 7",
+     "68",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1824,
@@ -398,7 +410,12 @@
   "place": "Stockholm, Sweden",
   "nameOrigin": "From the Latin silex (genitive silicis), 'flint', with the ending of carbon and boron.",
   "source": "pubchem",
-  "note": "PubChem's YearDiscovered (1854) is the year Deville first made crystalline silicon. Gay-Lussac and Thénard had probably made impure silicon in 1811."
+  "note": "PubChem's YearDiscovered (1854) is the year Deville first made crystalline silicon. Gay-Lussac and Thénard had probably made impure silicon in 1811.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Silicon is a hard, grey, shiny metalloid and, after oxygen, the most abundant element in Earth's crust, where it is locked in sand, quartz and nearly all rocks. Purified, it is the material of computer chips and solar cells; in nature, grasses and horsetails lay down tiny glassy silica bodies that stiffen their leaves and stems. Near-perfect spheres of silicon enriched in silicon-28, which makes up about 92 % of natural silicon, were used to count atoms precisely enough to help fix the constants behind the new definition of the kilogram. Like carbon above it, the atom has two unpaired p electrons: [Ne] 3s² 3p², ground term ³P₀.",

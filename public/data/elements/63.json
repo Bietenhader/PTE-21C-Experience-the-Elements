@@ -826,7 +826,12 @@
   "place": "Paris, France",
   "nameOrigin": "After the continent of Europe.",
   "source": "pubchem",
-  "note": "Demarçay suspected it in samarium in 1896, the year CIAAW and Jefferson Lab give, and separated it in fairly pure form in 1901; Lecoq de Boisbaudran had seen some of its spectral lines in 1890."
+  "note": "Demarçay suspected it in samarium in 1896, the year CIAAW and Jefferson Lab give, and separated it in fairly pure form in 1901; Lecoq de Boisbaudran had seen some of its spectral lines in 1890.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Europium, named after the continent, is the most reactive of the lanthanides: it oxidises quickly in air and reacts with water much as calcium does. Its ions glow strongly under ultraviolet light, so europium compounds gave colour television screens their red and still supply the red and blue of many fluorescent lamps and white LEDs. Behind its quirks is a half-filled 4f shell, [Xe] 4f⁷ 6s², with seven unpaired electrons all spinning the same way (ground term ⁸S°₇/₂). Half-filled shells are especially stable, so europium readily forms the Eu²⁺ ion, while most lanthanides prefer to lose three electrons.",

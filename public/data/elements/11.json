@@ -385,7 +385,14 @@
    "text": "The main positive ion outside cells; controls water balance and, with potassium, nerve signals.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "environment": [
+   {
+    "text": "Salt, mostly sodium chloride, in irrigated and naturally saline soils limits crop yields worldwide; most crops suffer when sodium builds up in their leaves.",
+    "source": "primary_literature",
+    "doi": "10.1146/annurev.arplant.59.032607.092911"
+   }
+  ]
  },
  "history": {
   "discovered": 1807,
@@ -396,7 +403,12 @@
   "nameOrigin": "Named by Davy after soda (caustic soda), the compound he split by electrolysis to obtain it.",
   "symbolNote": "Na comes from the Latin natrium, after natron, a naturally occurring soda salt.",
   "source": "pubchem",
-  "note": "Obtained by electrolysis of molten caustic soda at the Royal Institution, soon after potassium."
+  "note": "Obtained by electrolysis of molten caustic soda at the Royal Institution, soon after potassium.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Sodium is a soft, silvery alkali metal that can be cut with a knife and must be kept under oil, because it reacts vigorously with water; we meet it every day in table salt and as the ions that help carry signals along our nerves. It melts at about 371 K (98 °C), below the boiling point of water. The yellow glow of salt in a flame, and of old street lamps, is a pair of lines at 589.0 and 589.6 nm. Both come from the lone 3s electron ([Ne] 3s¹) falling back from 3p, a level split in two by spin–orbit coupling into ²P°₃/₂ and ²P°₁/₂.",

@@ -937,7 +937,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "From the Greek astatos, 'unstable', since all its isotopes are short-lived.",
   "source": "pubchem",
-  "note": "Made by bombarding bismuth-209 with alpha particles from the Berkeley cyclotron. Jefferson Lab misspells Corson as 'Carson'."
+  "note": "Made by bombarding bismuth-209 with alpha particles from the Berkeley cyclotron. Jefferson Lab misspells Corson as 'Carson'.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Astatine sits below iodine among the halogens and is one of the rarest elements in nature: traces form in the decay of uranium and thorium, but Earth's entire crust is thought to hold less than about 30 grams at any moment. It was first made in 1940 at the University of California by bombarding bismuth with alpha particles, and its name comes from the Greek for 'unstable'; even astatine-210, its longest-lived isotope, has a half-life of only about 8 hours. Like iodine, the atom is one electron short of a filled p subshell, with a ²P°₃/₂ ground term, and its first ionisation energy, about 899 kJ/mol, has been measured despite the tiny amounts available.",

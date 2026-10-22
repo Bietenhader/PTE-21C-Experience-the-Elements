@@ -533,7 +533,12 @@
   "symbolNote": "Temporary name: ununnilium (Uun); named darmstadtium in 2003.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac200173060959",
-  "note": "First atom detected on 9 November 1994 from nickel ions fired at lead; the 2001 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI."
+  "note": "First atom detected on 9 November 1994 from nickel ions fired at lead; the 2001 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Darmstadtium is a synthetic element in group 10, below platinum, named after the German city of Darmstadt, where the GSI laboratory detected its first atom on 9 November 1994. Producing that atom meant firing at least a billion billion nickel-62 ions at a lead-208 target over about a week; the product, darmstadtium-269, has a half-life of about 0.2 milliseconds. Heavier isotopes made since last longer, darmstadtium-281 about 12 seconds, but only small numbers of atoms have ever existed. Calculations predict the configuration [Rn] 5f¹⁴ 6d⁸ 7s², unlike platinum's 5d⁹ 6s¹: relativity draws the 7s orbital inwards and lowers its energy, so it keeps both electrons. None of this has been measured.",

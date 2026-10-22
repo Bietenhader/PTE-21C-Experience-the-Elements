@@ -395,7 +395,16 @@
    "text": "Part of the amino acids methionine and cysteine; obtained from dietary protein.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 35,
+    "field": "tracer",
+    "text": "Sulfur-35 marked the protein coat in Hershey and Chase's 1952 phage experiment; it stayed outside the infected bacteria while the DNA, labelled with phosphorus-32, went in.",
+    "source": "primary_literature",
+    "doi": "10.1085/jgp.36.1.39"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

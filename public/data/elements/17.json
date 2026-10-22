@@ -392,7 +392,12 @@
   "place": "Uppsala, Sweden",
   "nameOrigin": "From the Greek chloros, 'pale green' or 'yellow-green', the colour of the gas.",
   "source": "pubchem",
-  "note": "Scheele made the gas from pyrolusite and hydrochloric acid but thought it contained oxygen; Davy showed in 1810 that it is an element and named it."
+  "note": "Scheele made the gas from pyrolusite and hydrochloric acid but thought it contained oxygen; Davy showed in 1810 that it is an element and named it.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Chlorine is a greenish-yellow, choking gas from the halogen group; we meet it bound and harmless in table salt, while small doses of chlorine or its compounds keep drinking water and swimming pools free of microbes. Natural chlorine is a mixture of two stable isotopes, about 75.8 % chlorine-35 and 24.2 % chlorine-37, which is why its atomic weight, about 35.45, is so far from a whole number. The atom, [Ne] 3s² 3p⁵ (ground term ²P°₃/₂), lacks one electron to close its shell, and it releases more energy on capturing an extra electron than any other element, even fluorine.",

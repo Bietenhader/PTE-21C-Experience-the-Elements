@@ -217,3 +217,38 @@ def test_levels_ionization_limit_is_the_first_ionization_energy():
         assert close, f"Z={doc['Z']}: {limit['value']} vs IE1 {ie1}"
         checked += 1
     assert checked > 90
+
+
+def test_every_discovery_place_is_on_the_map():
+    """Each place in history.toml has coordinates from a gazetteer (places.toml), inside a box around it."""
+    boxes = {
+        "London, United Kingdom": (51.3, 51.7, -0.4, 0.2),
+        "Dubna, Russia": (56.6, 56.9, 37.0, 37.4),
+        "Copenhagen, Denmark": (55.5, 55.8, 12.3, 12.8),
+        "Berkeley, United States": (37.8, 38.0, -122.4, -122.1),
+        "Wako, Japan": (35.7, 35.9, 139.5, 139.7),
+    }
+    for path in sorted((DATA_DIR / "elements").glob("*.json")):
+        hist = load_json(path).get("history", {})
+        if not hist.get("place"):
+            assert "placeLocation" not in hist
+            continue
+        loc = hist["placeLocation"]
+        assert not is_missing(loc), f"{path.name}: {hist['place']} has no coordinates"
+        box = boxes.get(hist["place"])
+        if box:
+            assert box[0] < loc["lat"] < box[1] and box[2] < loc["lon"] < box[3], f"{hist['place']}: {loc}"
+
+
+def test_iarc_groups_come_from_the_iarc_list(by_symbol):
+    """The carcinogen groups on the biology panel are IARC's (fetched), checked on well-known cases."""
+
+    def groups(symbol):
+        doc = load_json(DATA_DIR / "elements" / f"{by_symbol[symbol]['Z']}.json")
+        return {r["agent"]: r["group"] for r in doc["biology"].get("iarc", [])}
+
+    assert groups("Cd")["Cadmium and cadmium compounds"] == "1"
+    assert groups("Cr")["Chromium (VI) compounds"] == "1"
+    assert groups("Cr")["Chromium (III) compounds"] == "3"
+    assert groups("Pb")["Lead compounds, inorganic"] == "2A"
+    assert groups("Rn")["Radon-222 and its decay products"] == "1"

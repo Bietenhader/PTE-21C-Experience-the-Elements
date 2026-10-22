@@ -968,7 +968,33 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "toxicity": [
+   {
+    "text": "Lead harms the brain, kidneys and blood and is most dangerous to young children and to the unborn; no level of exposure is known to be without harm.",
+    "source": "who_lead"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Lead compounds, inorganic",
+    "group": "2A",
+    "volumes": [
+     "Sup 7",
+     "87"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Lead",
+    "group": "2B",
+    "volumes": [
+     "23",
+     "Sup 7"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

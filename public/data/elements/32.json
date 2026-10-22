@@ -533,7 +533,12 @@
   "place": "Freiberg, Germany",
   "nameOrigin": "From Germania, the Latin name of Germany, Winkler's country.",
   "source": "pubchem",
-  "note": "Mendeleev's predicted eka-silicon, found in the silver mineral argyrodite; Winkler isolated it the same year."
+  "note": "Mendeleev's predicted eka-silicon, found in the silver mineral argyrodite; Winkler isolated it the same year.",
+  "placeLocation": {
+   "lat": 50.911,
+   "lon": 13.339,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Germanium is a grey-white, brittle metalloid and a semiconductor; the very first transistor was made from it, and today it forms the lenses of thermal cameras, because it lets infrared light through while blocking visible light. Its atom, [Ar] 3d¹⁰ 4s² 4p² (ground term ³P₀), mirrors the two unpaired p electrons of silicon and carbon above it. Germanium-76, 7.75 % of the natural element, sits at the heart of large underground detectors that search for an extremely rare nuclear decay, one that would show whether neutrinos are their own antiparticles. The crystals do double duty there: the germanium is both the material that might decay and the detector that would see it.",

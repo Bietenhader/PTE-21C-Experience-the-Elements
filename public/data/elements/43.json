@@ -613,7 +613,17 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "A": 99,
+    "isomer": "m",
+    "field": "medicine",
+    "text": "Technetium-99m, milked on site from a generator of its parent molybdenum-99, is the workhorse of nuclear-medicine imaging: its six-hour half-life and single gamma line suit scans of bone, heart, kidneys and much else.",
+    "source": "primary_literature",
+    "doi": "10.1016/j.jcmg.2008.12.013"
+   }
+  ]
  },
  "history": {
   "discovered": 1937,
@@ -625,7 +635,12 @@
   "nameOrigin": "From the Greek technetos, 'artificial', as the first element to be made artificially.",
   "symbolNote": "Some older tables showed element 43 as masurium (Ma), from a 1925 claim that was never confirmed.",
   "source": "pubchem",
-  "note": "Found in a molybdenum sample bombarded with deuterons in Lawrence's Berkeley cyclotron. Kenna and Kuroda found traces in nature in 1962."
+  "note": "Found in a molybdenum sample bombarded with deuterons in Lawrence's Berkeley cyclotron. Kenna and Kuroda found traces in nature in 1962.",
+  "placeLocation": {
+   "lat": 38.127,
+   "lon": 13.348,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Technetium is a silvery transition metal with no stable isotopes; in 1937 it became the first element made artificially, from molybdenum bombarded in a cyclotron, and its name comes from the Greek for ‘artificial’. A short-lived excited form of technetium-99 is now the most widely used tracer in nuclear-medicine scans. Even its longest-lived isotopes survive only about four million years, so when astronomers found technetium lines in the light of certain red giant stars, it proved that stars forge new elements. Its ground configuration, [Kr] 4d⁵ 5s², follows the filling rule and leaves a half-filled 4d shell (⁶S₅/₂).",

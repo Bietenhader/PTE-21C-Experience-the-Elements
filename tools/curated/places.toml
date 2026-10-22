@@ -1,0 +1,220 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Where each discovery place is on the map (SPEC §10.11): one row per `place` used in history.toml,
+# spelled exactly as there. No coordinate is typed here: each row names the gazetteer entry, and the
+# build reads the latitude and longitude from the cached gazetteer file.
+#
+#   gazetteer = "natural_earth"  Natural Earth 1:10m populated places (public domain); `name` and
+#                                `country` are Natural Earth's own spelling (name, adm0name).
+#   gazetteer = "geonames"       GeoNames cities5000 (CC BY 4.0), for towns too small for Natural
+#                                Earth; `geonames_id` picks the entry (Dubna has a namesake).
+#
+# The map dot marks the town; where history.toml says the place was an observing site or a
+# laboratory, its note says so.
+
+[[place]]
+place = "London, United Kingdom"
+gazetteer = "natural_earth"
+name = "London"
+country = "United Kingdom"
+source = "natural_earth"
+
+[[place]]
+place = "Paris, France"
+gazetteer = "natural_earth"
+name = "Paris"
+country = "France"
+source = "natural_earth"
+
+[[place]]
+place = "Berkeley, United States"
+gazetteer = "natural_earth"
+name = "Berkeley"
+country = "United States of America"
+source = "natural_earth"
+
+[[place]]
+place = "Stockholm, Sweden"
+gazetteer = "natural_earth"
+name = "Stockholm"
+country = "Sweden"
+source = "natural_earth"
+
+[[place]]
+place = "Uppsala, Sweden"
+gazetteer = "natural_earth"
+name = "Uppsala"
+country = "Sweden"
+source = "natural_earth"
+
+[[place]]
+place = "Berlin, Germany"
+gazetteer = "natural_earth"
+name = "Berlin"
+country = "Germany"
+source = "natural_earth"
+
+[[place]]
+place = "Edinburgh, United Kingdom"
+gazetteer = "natural_earth"
+name = "Edinburgh"
+country = "United Kingdom"
+source = "natural_earth"
+
+[[place]]
+place = "Copenhagen, Denmark"
+gazetteer = "natural_earth"
+name = "København"
+country = "Denmark"
+source = "natural_earth"
+
+[[place]]
+place = "Heidelberg, Germany"
+gazetteer = "natural_earth"
+name = "Heidelberg"
+country = "Germany"
+source = "natural_earth"
+
+[[place]]
+place = "Vienna, Austria"
+gazetteer = "natural_earth"
+name = "Vienna"
+country = "Austria"
+source = "natural_earth"
+
+[[place]]
+place = "Geneva, Switzerland"
+gazetteer = "natural_earth"
+name = "Geneva"
+country = "Switzerland"
+source = "natural_earth"
+
+[[place]]
+place = "Chicago, United States"
+gazetteer = "natural_earth"
+name = "Chicago"
+country = "United States of America"
+source = "natural_earth"
+
+[[place]]
+place = "Guntur, India"
+gazetteer = "natural_earth"
+name = "Guntur"
+country = "India"
+source = "natural_earth"
+
+[[place]]
+place = "Hamburg, Germany"
+gazetteer = "natural_earth"
+name = "Hamburg"
+country = "Germany"
+source = "natural_earth"
+
+[[place]]
+place = "Mexico City, Mexico"
+gazetteer = "natural_earth"
+name = "Mexico City"
+country = "Mexico"
+source = "natural_earth"
+
+[[place]]
+place = "Montpellier, France"
+gazetteer = "natural_earth"
+name = "Montpellier"
+country = "France"
+source = "natural_earth"
+
+[[place]]
+place = "Turku, Finland"
+gazetteer = "natural_earth"
+name = "Turku"
+country = "Finland"
+source = "natural_earth"
+
+[[place]]
+place = "Palermo, Italy"
+gazetteer = "natural_earth"
+name = "Palermo"
+country = "Italy"
+source = "natural_earth"
+
+[[place]]
+place = "Kazan, Russia"
+gazetteer = "natural_earth"
+name = "Kazan"
+country = "Russia"
+source = "natural_earth"
+
+[[place]]
+place = "Göttingen, Germany"
+gazetteer = "natural_earth"
+name = "Göttingen"
+country = "Germany"
+source = "natural_earth"
+
+[[place]]
+place = "Oak Ridge, United States"
+gazetteer = "natural_earth"
+name = "Oak Ridge"
+country = "United States of America"
+source = "natural_earth"
+
+[[place]]
+place = "Karlsruhe, Germany"
+gazetteer = "natural_earth"
+name = "Karlsruhe"
+country = "Germany"
+source = "natural_earth"
+
+# --- towns not in Natural Earth's populated places: GeoNames ids -------------------------------
+
+[[place]]
+place = "Calne, United Kingdom"
+gazetteer = "geonames"
+geonames_id = 2653974
+source = "geonames"
+
+[[place]]
+place = "Freiberg, Germany"
+gazetteer = "geonames"
+geonames_id = 2925192
+source = "geonames"
+note = "Freiberg in Saxony, seat of the mining academy (not Freiberg am Neckar)."
+
+[[place]]
+place = "Köping, Sweden"
+gazetteer = "geonames"
+geonames_id = 2699791
+source = "geonames"
+
+[[place]]
+place = "Bergara, Spain"
+gazetteer = "geonames"
+geonames_id = 3106090
+source = "geonames"
+
+[[place]]
+place = "Halle, Germany"
+gazetteer = "geonames"
+geonames_id = 2911522
+source = "geonames"
+note = "Halle (Saale), whose university Dorn worked at (not Halle in Westphalia)."
+
+[[place]]
+place = "Dubna, Russia"
+gazetteer = "geonames"
+geonames_id = 564719
+source = "geonames"
+note = "Dubna in Moscow Oblast, home of the Joint Institute for Nuclear Research (not Dubna in Tula Oblast)."
+
+[[place]]
+place = "Darmstadt, Germany"
+gazetteer = "geonames"
+geonames_id = 2938913
+source = "geonames"
+
+[[place]]
+place = "Wako, Japan"
+gazetteer = "geonames"
+geonames_id = 1907300
+source = "geonames"

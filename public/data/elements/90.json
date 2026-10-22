@@ -976,7 +976,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Thorium-232 and its decay products",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1828,
@@ -991,7 +1002,12 @@
   ],
   "nameOrigin": "After Thor, the thunder god of Norse mythology.",
   "source": "pubchem",
-  "note": "The mineral (now thorite) came from Løvøya, Norway, by way of Morten and Jens Esmark. Los Alamos dates Berzelius's identification to 1829. Lely and Hamburger's metal: Z. anorg. Chem. 87, 209 (1914; doi:10.1002/zaac.19140870114)."
+  "note": "The mineral (now thorite) came from Løvøya, Norway, by way of Morten and Jens Esmark. Los Alamos dates Berzelius's identification to 1829. Lely and Hamburger's metal: Z. anorg. Chem. 87, 209 (1914; doi:10.1002/zaac.19140870114).",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Thorium is a weakly radioactive, silvery actinide metal named after Thor, the Norse god of thunder, by Jöns Jacob Berzelius, who identified it in 1828 in a mineral from Norway. It is more than three times as abundant in Earth's crust as uranium. Its oxide has the highest melting point of any oxide, about 3300 °C, and gas-lamp mantles made with it glowed a dazzling white; modern mantles mostly use non-radioactive substitutes. Its main isotope, thorium-232, has a half-life of 14 billion years. In the atom, the two electrons outside the 7s² pair sit in 6d, giving [Rn] 6d² 7s² rather than the Aufbau prediction 5f² 7s², and a ³F₂ ground term.",

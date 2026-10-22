@@ -638,7 +638,12 @@
   ],
   "nameOrigin": "From the mineral zircon, a name that goes back through Arabic to the Persian zargun, 'gold-coloured'.",
   "source": "pubchem",
-  "note": "Berzelius made impure metal in 1824; Lely and Hamburger made the pure metal (Z. anorg. Chem. 87, 209, 1914; doi:10.1002/zaac.19140870114)."
+  "note": "Berzelius made impure metal in 1824; Lely and Hamburger made the pure metal (Z. anorg. Chem. 87, 209, 1914; doi:10.1002/zaac.19140870114).",
+  "placeLocation": {
+   "lat": 52.524,
+   "lon": 13.4,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Zirconium is a strong, grey-white transition metal that resists corrosion and lets neutrons pass almost unhindered, so its alloys clad the fuel rods of nuclear reactors. Its oxide makes tough ceramic knives, dental crowns and the sparkling diamond imitation cubic zirconia. Tiny crystals of the mineral zircon from Western Australia are the oldest known fragments of Earth's crust, surviving from the planet's youth. The atom is [Kr] 4d² 5s² (ground term ³F₂), and zirconium's chemistry is almost identical to that of hafnium below it, because filling the 4f subshell before hafnium, the lanthanide contraction, shrinks hafnium to nearly zirconium's size.",

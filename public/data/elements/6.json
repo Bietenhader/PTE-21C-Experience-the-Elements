@@ -310,7 +310,30 @@
    "text": "The backbone of proteins, fats, carbohydrates and nucleic acids.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 14,
+    "field": "dating",
+    "text": "Carbon-14, made by cosmic rays in the air, enters every living thing and decays once it dies; in 1949 Arnold and Libby showed that the fraction left dates organic remains, checking it on wood and objects of known age.",
+    "source": "primary_literature",
+    "doi": "10.1126/science.110.2869.678"
+   },
+   {
+    "A": 14,
+    "field": "tracer",
+    "text": "Giving algae carbon dioxide labelled with carbon-14 for seconds at a time let Bassham, Benson and Calvin trace the path of carbon in photosynthesis, the cycle now named after them.",
+    "source": "primary_literature",
+    "doi": "10.1016/S0021-9258(18)56368-7"
+   },
+   {
+    "A": 13,
+    "field": "environment",
+    "text": "Land plants fall into two groups by their ratio of carbon-13 to carbon-12; the groups match the two main photosynthetic pathways, C3 and C4, so the ratio tells them apart.",
+    "source": "primary_literature",
+    "doi": "10.1104/pp.47.3.380"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

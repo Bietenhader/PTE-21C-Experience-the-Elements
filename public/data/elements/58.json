@@ -815,7 +815,12 @@
   ],
   "nameOrigin": "After the asteroid (now dwarf planet) Ceres, discovered in 1801 and named after the Roman goddess of agriculture.",
   "source": "pubchem",
-  "note": "Found independently by Berzelius and Hisinger in Sweden and by Klaproth in Germany; the map dot marks Stockholm."
+  "note": "Found independently by Berzelius and Hisinger in Sweden and by Klaproth in Germany; the map dot marks Stockholm.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Cerium is the most abundant of the rare-earth metals, more plentiful in Earth’s crust than copper, and an iron-grey metal so reactive that scratching the pure metal can make it ignite. That is why lighter flints, made of a cerium-rich alloy called mischmetal mixed with iron, throw sparks when struck; cerium oxide is also used to polish glass. Cerium’s 4f and 5d electrons have almost the same energy, so its ground state is [Xe] 4f¹ 5d¹ 6s² instead of the predicted 4f² 6s² (ground term ¹G°₄), and it can give up a fourth electron with ease, making the Ce⁴⁺ ion a strong oxidising agent.",

@@ -302,7 +302,19 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Beryllium and beryllium compounds",
+    "group": "1",
+    "volumes": [
+     "Sup 7",
+     "58",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1798,
@@ -319,7 +331,12 @@
   "nameOrigin": "From beryl (Greek beryllos), the gemstone that contains it.",
   "symbolNote": "Long called glucinium (symbol Gl), after the sweet taste of its salts; IUPAC chose the name beryllium in 1949.",
   "source": "pubchem",
-  "note": "CIAAW dates Vauquelin's discovery to 1797. Wöhler and Bussy obtained the metal independently, both by reducing the chloride with potassium."
+  "note": "CIAAW dates Vauquelin's discovery to 1797. Wöhler and Bussy obtained the metal independently, both by reducing the chloride with potassium.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Beryllium is a light, stiff, steel-grey metal of the alkaline-earth group, found in the mineral beryl, of which emerald and aquamarine are coloured varieties. Because X-rays pass through it easily, thin beryllium sheets serve as windows in X-ray tubes, and gold-coated beryllium forms the mirror segments of the James Webb Space Telescope. Beryllium has only one stable isotope, beryllium-9, whose nucleus has spin 3/2; the lighter beryllium-8 falls apart into two helium nuclei almost instantly, a bottleneck stars must overcome to make carbon. Its four electrons fill the 1s and 2s orbitals, giving [He] 2s² and the ground term ¹S₀.",

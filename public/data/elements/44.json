@@ -654,7 +654,12 @@
   "place": "Kazan, Russia",
   "nameOrigin": "From Ruthenia, a Medieval Latin name for Russia, where the platinum ore came from.",
   "source": "pubchem",
-  "note": "PubChem's YearDiscovered (1827) refers to Osann's claim (1828 in CIAAW); Klaus showed that Osann's material was impure and obtained the metal itself. Śniadecki's 1807 claim had been withdrawn."
+  "note": "PubChem's YearDiscovered (1827) refers to Osann's claim (1828 in CIAAW); Klaus showed that Osann's material was impure and obtained the metal itself. Śniadecki's 1807 claim had been withdrawn.",
+  "placeLocation": {
+   "lat": 55.752,
+   "lon": 49.124,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Ruthenium is a hard, silvery platinum-group metal, recovered as a by-product of platinum and nickel refining and named after Ruthenia, a Latin name for Russia, because it was first isolated from platinum ore from the Ural Mountains. A pinch goes a long way: about a tenth of a per cent of ruthenium makes titanium far more resistant to corrosion, and small additions harden platinum and palladium for hard-wearing electrical contacts. Its atom breaks the filling rule: the measured ground configuration is [Kr] 4d⁷ 5s¹, not the predicted 4d⁶ 5s², giving four unpaired electrons and the ground term ⁵F₅.",

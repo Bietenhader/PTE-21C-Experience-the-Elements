@@ -745,7 +745,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Greek xenos, 'stranger' or 'foreigner'.",
   "source": "pubchem",
-  "note": "Found on 12 July 1898 in the least volatile fraction of liquefied air, weeks after krypton and neon."
+  "note": "Found on 12 July 1898 in the least volatile fraction of liquefied air, weeks after krypton and neon.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Xenon is a heavy, colourless noble gas, roughly one part in twenty million of air, extracted from liquefied air and used in brilliant flash lamps, car headlamps and the ion engines of spacecraft. Breathed with oxygen, it even works as a general anaesthetic. Its closed-shell atom ([Kr] 4d¹⁰ 5s² 5p⁶, ground term ¹S₀) was long thought unable to bond, until in 1962 Neil Bartlett noticed that xenon’s first ionisation energy, 1170 kJ/mol, is almost the same as that of the oxygen molecule, which he had just ionised with platinum hexafluoride. He tried xenon instead and made the first noble-gas compound.",

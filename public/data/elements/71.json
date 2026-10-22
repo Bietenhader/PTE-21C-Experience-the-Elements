@@ -918,7 +918,16 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "A": 177,
+    "field": "medicine",
+    "text": "Lutetium-177 bound to a molecule that docks onto prostate-cancer cells (PSMA-617) prolonged survival in advanced prostate cancer in a 2021 trial; its beta radiation is delivered from inside, at the tumour.",
+    "source": "primary_literature",
+    "doi": "10.1056/NEJMoa2107322"
+   }
+  ]
  },
  "history": {
   "discovered": 1907,
@@ -930,7 +939,12 @@
   "nameOrigin": "From Lutetia, the Latin name of Paris.",
   "symbolNote": "Spelled lutecium until 1949; German-speaking chemists long called it cassiopeium (symbol Cp), Auer's name.",
   "source": "pubchem",
-  "note": "Urbain published first and won the naming; Auer von Welsbach separated it independently at about the same time."
+  "note": "Urbain published first and won the naming; Auer von Welsbach separated it independently at about the same time.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Lutetium is the last and densest of the lanthanides, a hard, silvery metal named after Lutetia, the Roman name for Paris. Two of its isotopes have unusual careers: natural lutetium-176, with a half-life of 3.76 × 10¹⁰ years, lets geologists date ancient rocks by its slow decay into hafnium, while reactor-made lutetium-177 is attached to molecules that seek out tumours in targeted cancer therapy. With a full 4f shell plus one 5d electron, [Xe] 4f¹⁴ 5d¹ 6s² (ground term ²D₃/₂), lutetium resembles yttrium, which is why many chemists place it, rather than lanthanum, in group 3.",

@@ -732,7 +732,12 @@
   "symbolNote": "Proposed with the symbol Mv; IUPAC changed it to Md in 1957.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "First made one atom at a time by Ghiorso, Harvey, Choppin, Thompson and Seaborg, by bombarding einsteinium-253 with helium ions. The 1993 IUPAC/IUPAP report credits the Berkeley group."
+  "note": "First made one atom at a time by Ghiorso, Harvey, Choppin, Thompson and Seaborg, by bombarding einsteinium-253 with helium ions. The 1993 IUPAC/IUPAP report credits the Berkeley group.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Mendelevium is a synthetic actinide named after Dmitri Mendeleev, the chemist who arranged the elements into the periodic table. It was made at Berkeley in 1955 by striking a minute target of einsteinium-253 with helium ions, and it was the first element identified one atom at a time; the isotope produced, mendelevium-256, has a half-life of about 78 minutes. Even its longest-lived isotope, mendelevium-258, lasts only about 52 days, so its chemistry is known only from trace experiments, which reveal a +2 state alongside the usual +3. The atom, [Rn] 5f¹³ 7s², is a single electron short of a full 5f shell, giving a ²F°₇/₂ ground term.",

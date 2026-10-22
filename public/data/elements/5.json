@@ -305,7 +305,14 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
-  "note": "Human: no EFSA dietary reference value."
+  "note": "Human: no EFSA dietary reference value.",
+  "environment": [
+   {
+    "text": "Plants need boron, but the margin between too little and too much is narrow: soils or irrigation water rich in boron scorch leaf tips and margins.",
+    "source": "marschner2012",
+    "doi": "10.1016/B978-0-12-384905-2.00007-8"
+   }
+  ]
  },
  "history": {
   "discovered": 1808,
@@ -317,7 +324,12 @@
   "place": "Paris, France",
   "nameOrigin": "From borax, its best-known compound (a word traced to the Arabic buraq and Persian burah), given the ending of carbon.",
   "source": "pubchem",
-  "note": "Gay-Lussac and Thénard in Paris and Davy in London obtained it independently in 1808, all by heating boric acid with potassium."
+  "note": "Gay-Lussac and Thénard in Paris and Davy in London obtained it independently in 1808, all by heating boric acid with potassium.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Boron is a hard metalloid that appears as black, glittering crystals or a brown powder; we meet it in borax, in heat-resistant borosilicate glassware and, invisibly, in crops and other flowering plants, which need traces of it to hold their cell walls together. About 19.65 % of natural boron is boron-10, a nucleus that captures slow neutrons so readily that it is used in reactor control rods and radiation shielding. The atom's ground configuration, [He] 2s² 2p¹, leaves a single unpaired p electron (ground term ²P°₁/₂), and boron-10 has an unusually large nuclear spin, 3, for so light a nucleus.",

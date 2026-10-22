@@ -771,7 +771,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Trivalent antimony",
+    "group": "2A",
+    "volumes": [
+     "47",
+     "131"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

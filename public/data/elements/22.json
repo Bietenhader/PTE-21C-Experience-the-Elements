@@ -456,7 +456,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Titanium dioxide",
+    "group": "2B",
+    "volumes": [
+     "47",
+     "93"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1791,

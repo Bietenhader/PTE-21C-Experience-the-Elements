@@ -125,7 +125,12 @@
   "symbolNote": "Temporary name: ununoctium (Uuo); named oganesson in 2016.",
   "source": "iupac_discovery",
   "doi": "10.1515/pac-2015-0501",
-  "note": "Made from calcium-48 on californium-249; the 2016 IUPAC/IUPAP report credited the Dubna–Livermore collaboration. A 1999 Berkeley claim was retracted."
+  "note": "Made from calcium-48 on californium-249; the 2016 IUPAC/IUPAP report credited the Dubna–Livermore collaboration. A 1999 Berkeley claim was retracted.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Oganesson is the heaviest element known, a synthetic member of group 18 below radon, named after the nuclear physicist Yuri Oganessian, who was alive when it was named; only seaborgium shares that distinction. Its discovery was announced in October 2006 by the Dubna laboratory and Lawrence Livermore: a long bombardment of californium-249 with calcium-48 ions had yielded just three atoms of oganesson-294, an isotope with a half-life of about half a millisecond. No chemistry has been possible. Its predicted configuration fills the 7p shell, [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶, yet calculations suggest relativity blurs its shell structure and that it might even be a solid, not a gas, at room temperature.",

@@ -935,7 +935,31 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "environment": [
+   {
+    "text": "Radon seeps out of the ground, where uranium in rocks and soil decays, and collects indoors; outdoors it is quickly diluted.",
+    "source": "who_radon"
+   }
+  ],
+  "toxicity": [
+   {
+    "text": "Radon's radioactive decay products lodge in the lungs; WHO estimates that radon causes 3 to 14 % of all lung cancers in a country, depending on its radon levels and on how many people smoke.",
+    "source": "who_radon"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Radon-222 and its decay products",
+    "group": "1",
+    "volumes": [
+     "43",
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1900,
@@ -951,7 +975,12 @@
   "nameOrigin": "From radium, whose decay produces it, with the -on ending of the other noble gases.",
   "symbolNote": "First called radium emanation, then niton (symbol Nt); the name radon (Rn) has been used since 1923.",
   "source": "pubchem",
-  "note": "Dorn found the gas given off by radium; Ramsay and Gray isolated it and found it denser than any other gas."
+  "note": "Dorn found the gas given off by radium; Ramsay and Gray isolated it and found it denser than any other gas.",
+  "placeLocation": {
+   "lat": 51.482,
+   "lon": 11.979,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Radon is a colourless, odourless, radioactive noble gas that seeps from rocks and soils containing uranium and thorium; it can collect in poorly ventilated cellars and homes, where breathing it raises the risk of lung cancer. Its longest-lived isotope, radon-222, has a half-life of about 3.8 days. Freeze it and it shines: solid radon glows a brilliant yellow, turning orange-red as it is cooled further towards the temperature of liquid air. Its filled 6p subshell gives the closed-shell ¹S₀ ground term shared by all noble gases, yet its first ionisation energy, about 1037 kJ/mol, is the lowest of any noble gas measured, low enough that radon reacts with fluorine.",

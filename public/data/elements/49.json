@@ -778,7 +778,17 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Indium phosphide",
+    "group": "2A",
+    "volumes": [
+     "86"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1863,
@@ -789,7 +799,12 @@
   "place": "Freiberg, Germany",
   "nameOrigin": "From indigo, for the bright indigo-blue line in its spectrum.",
   "source": "pubchem",
-  "note": "Found while searching zinc ores for thallium; the discoverers later isolated the metal (CIAAW gives 1867)."
+  "note": "Found while searching zinc ores for thallium; the discoverers later isolated the metal (CIAAW gives 1867).",
+  "placeLocation": {
+   "lat": 50.911,
+   "lon": 13.339,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Indium is a very soft, silvery post-transition metal that a fingernail can dent; most of it now goes into indium tin oxide, the transparent conducting film on touchscreens and flat-panel displays. Oddly, most natural indium is radioactive: indium-115, about 96 per cent of the total, decays so slowly (half-life 4.41 × 10¹⁴ years) that its radioactivity is negligible, while the rare indium-113 is stable. Ferdinand Reich and Theodor Richter discovered the element in 1863 through a brilliant indigo spectral line at 451.1 nm, which gave it its name; the line is emitted when the outer electron drops from the 6s level to the upper fine-structure level of the ground term ²P°.",

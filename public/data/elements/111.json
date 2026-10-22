@@ -124,7 +124,12 @@
   "symbolNote": "Temporary name: unununium (Uuu); named roentgenium in 2004.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac200375101601",
-  "note": "Three atoms made in late 1994 from nickel-64 on bismuth-209; the 2003 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI."
+  "note": "Three atoms made in late 1994 from nickel-64 on bismuth-209; the 2003 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Roentgenium is a synthetic element in group 11, the heavy sibling of copper, silver and gold, named after Wilhelm Röntgen, who discovered X-rays. A team at GSI in Darmstadt made it in late 1994 by fusing bismuth-209 with nickel-64 and identified three atoms of roentgenium-272, an isotope with a half-life of about 4 milliseconds. Only small numbers of atoms have been produced since; roentgenium-282 lasts around 100 seconds, and its chemistry is unexplored. Gold has the famous 5d¹⁰ 6s¹ arrangement, but for roentgenium calculations predict [Rn] 5f¹⁴ 6d⁹ 7s², because relativity stabilises the 7s orbital so strongly that it holds two electrons while 6d keeps a vacancy.",

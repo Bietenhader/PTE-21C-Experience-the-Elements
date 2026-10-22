@@ -613,7 +613,12 @@
   "nameOrigin": "Named by Davy after potash ('pot ashes'), the alkali he electrolysed to obtain it.",
   "symbolNote": "K comes from the New Latin kalium, from the Arabic al-qali, 'plant ashes'.",
   "source": "pubchem",
-  "note": "The first metal ever obtained by electrolysis, from molten caustic potash."
+  "note": "The first metal ever obtained by electrolysis, from molten caustic potash.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Potassium is a soft alkali metal that reacts so violently with water that the hydrogen released catches fire, its flame tinted lilac by the potassium. Living things depend on it: plants use potassium to open and close the pores in their leaves, which is why potash is a major fertiliser, and our nerves rely on it too. A small fraction, 0.0117 %, of natural potassium is radioactive potassium-40, with a half-life of about 1.25 billion years, so every human body is faintly radioactive. The nineteenth electron enters 4s rather than 3d, giving [Ar] 4s¹ (ground term ²S₁/₂): the first place in the table where a new shell starts before the one beneath is full.",

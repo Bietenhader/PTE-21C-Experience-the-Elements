@@ -563,7 +563,12 @@
   "symbolNote": "A 1994 IUPAC proposal would have called it hahnium (Hn); hassium was adopted in 1997. Temporary name: unniloctium (Uno).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "The 1993 IUPAC/IUPAP report judged that simultaneous, independent 1984 work in Darmstadt and Dubna established element 108; the Darmstadt group named it. The PubChem texts credit GSI alone."
+  "note": "The 1993 IUPAC/IUPAP report judged that simultaneous, independent 1984 work in Darmstadt and Dubna established element 108; the Darmstadt group named it. The PubChem texts credit GSI alone.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Hassium is a synthetic element in group 8, below osmium, named after Hesse, the German state in which Darmstadt lies. It was first made there at GSI in 1984 by fusing lead-208 with iron-58, giving atoms of hassium-265 with a half-life of about 2 milliseconds. Only a few atoms have been made since, yet chemists have turned a handful of them into a volatile tetroxide, just as osmium forms OsO₄. Its nucleus is notable too: hassium-270, with 108 protons and 162 neutrons, is regarded as a doubly magic deformed nucleus, and it survives for several seconds. Theory predicts the atom's configuration as [Rn] 5f¹⁴ 6d⁶ 7s², but it has not been measured.",

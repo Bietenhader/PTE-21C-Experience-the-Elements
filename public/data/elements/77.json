@@ -949,7 +949,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From Iris, the Greek goddess of the rainbow, for the many colours of its salts.",
   "source": "pubchem",
-  "note": "Collet-Descotils reported it independently in France and published slightly earlier; Tennant is usually credited, perhaps because he also found osmium (CIAAW)."
+  "note": "Collet-Descotils reported it independently in France and published slightly earlier; Tennant is usually credited, perhaps because he also found osmium (CIAAW).",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Iridium is a hard, brittle, silvery platinum-group metal and the most corrosion-resistant metal known, which is why the old standard metre bar was made of platinum with 10 per cent iridium. Its name comes from Iris, the Greek goddess of the rainbow, for the many colours of its salts. Iridium is scarce in Earth’s crust but richer in meteorites, so a thin iridium-rich clay layer found worldwide at the end of the Cretaceous helped convince scientists that an asteroid impact ended the age of the dinosaurs. Its nucleus made physics history: Rudolf Mössbauer discovered recoil-free emission and absorption of gamma rays using iridium-191, one of its two stable isotopes.",

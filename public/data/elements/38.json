@@ -824,7 +824,33 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "A": 87,
+    "field": "environment",
+    "text": "The ratio of strontium-87 to strontium-86 varies with the local rocks and passes almost unchanged from soil and water to plants, bones and teeth, so it can show where a person or animal grew up.",
+    "source": "primary_literature",
+    "doi": "10.1007/s10816-006-9009-x"
+   }
+  ],
+  "environment": [
+   {
+    "text": "Strontium follows calcium from soil and water into plants, bones and teeth; strontium-90 from fallout takes the same path.",
+    "source": "primary_literature",
+    "doi": "10.1007/s10816-006-9009-x"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Fission products, including strontium-90",
+    "group": "1",
+    "volumes": [
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1790,
@@ -838,7 +864,12 @@
   ],
   "nameOrigin": "From Strontian, a village in the Scottish Highlands whose lead mines yielded the mineral strontianite.",
   "source": "pubchem",
-  "note": "Crawford recognized that strontianite contained a new 'earth'; CIAAW instead credits Thomas Charles Hope, who studied it in 1792 and noted its red flame colour."
+  "note": "Crawford recognized that strontianite contained a new 'earth'; CIAAW instead credits Thomas Charles Hope, who studied it in 1792 and noted its red flame colour.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Strontium is a soft, silvery alkaline-earth metal named after Strontian, a village in the Scottish Highlands where its ore was found; its salts give fireworks and distress flares their crimson red. Because the body mistakes it for calcium, radioactive strontium-90 from nuclear fallout, with a half-life of about 29 years, lodges in bones. The atom has two paired outer electrons, [Kr] 5s² (ground term ¹S₀), and its strongest visible line, at 460.7 nm, is blue. A far fainter transition, from the ground state to a long-lived triplet level, is so sharp that strontium optical clocks are among the most precise timekeepers ever built.",

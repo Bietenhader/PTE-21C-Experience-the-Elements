@@ -330,7 +330,23 @@
    "text": "Part of water and of every organic molecule in the body.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 3,
+    "field": "tracer",
+    "text": "Broad-bean root tips fed tritium-labelled thymidine, a DNA building block, were followed through two cell divisions in 1957: each chromosome kept one labelled and one new half, a first view of how chromosomes are copied.",
+    "source": "primary_literature",
+    "doi": "10.1073/pnas.43.1.122"
+   },
+   {
+    "A": 2,
+    "field": "tracer",
+    "text": "Water labelled with deuterium and oxygen-18 measures the energy a free-living animal or person spends: hydrogen leaves the body only in water, oxygen in water and in exhaled CO2, so the difference between their loss rates gives the CO2 produced.",
+    "source": "primary_literature",
+    "doi": "10.1016/0022-5193(66)90185-8"
+   }
+  ]
  },
  "history": {
   "discovered": 1766,
@@ -340,7 +356,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "Coined by Lavoisier from the Greek hydor, 'water', and -genes, 'producing', because burning it yields water.",
   "source": "pubchem",
-  "note": "Boyle had made the gas around 1671 without recognizing it as new; Cavendish showed it was a distinct substance. Los Alamos prints 1776, apparently a slip for 1766."
+  "note": "Boyle had made the gas around 1671 without recognizing it as new; Cavendish showed it was a distinct substance. Los Alamos prints 1776, apparently a slip for 1766.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Hydrogen is the lightest element, a colourless gas of two-atom molecules and the main fuel of the stars; on Earth we meet it mostly bound into water and the molecules of living things. Its ordinary nucleus is a single proton, but about 0.0145 % of natural hydrogen is deuterium, whose nucleus also holds a neutron and which makes 'heavy water'. With one electron in the 1s orbital (ground term ²S₁/₂), hydrogen is the only neutral atom whose Schrödinger equation can be solved exactly. The deep red line in a hydrogen lamp's glow is the Balmer line at 656.3 nm, emitted as the electron falls from the third shell to the second.",

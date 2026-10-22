@@ -727,7 +727,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After Neptune, the planet beyond Uranus.",
   "source": "pubchem",
-  "note": "The first transuranium element, made as neptunium-239 by neutron capture in uranium-238. Fermi's 1934 claim to have made element 93 turned out to be nuclear fission."
+  "note": "The first transuranium element, made as neptunium-239 by neutron capture in uranium-238. Fermi's 1934 claim to have made element 93 turned out to be nuclear fission.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Neptunium is a silvery, radioactive actinide metal and the first element beyond uranium ever made: Edwin McMillan and Philip Abelson produced neptunium-239 at Berkeley in 1940 by striking uranium with slow neutrons. Following Uranus, it was named after the next planet out, Neptune. Six years earlier Enrico Fermi had believed he had made element 93 in much the same way, but he had in fact split uranium nuclei, observing fission without recognising it. Its longest-lived isotope, neptunium-237, has a half-life of about 2.1 million years. The atom's ground configuration, [Rn] 5f⁴ 6d¹ 7s², departs from the Aufbau prediction 5f⁵ 7s², and its ground term is ⁶L₁₁/₂.",

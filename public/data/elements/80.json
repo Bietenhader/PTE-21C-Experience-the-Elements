@@ -1155,7 +1155,38 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "environment": [
+   {
+    "text": "Bacteria turn mercury released into water into methylmercury, which builds up in fish and shellfish, most in large predatory fish.",
+    "source": "who_mercury"
+   }
+  ],
+  "toxicity": [
+   {
+    "text": "Mercury harms the nervous system above all, and the unborn and young children most; at Minamata, Japan, methylmercury in factory waste poisoned people who ate the local fish (Minamata disease).",
+    "source": "primary_literature",
+    "doi": "10.3109/10408449509089885"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Methylmercury compounds",
+    "group": "2B",
+    "volumes": [
+     "58"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Mercury and inorganic mercury compounds",
+    "group": "3",
+    "volumes": [
+     "58"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

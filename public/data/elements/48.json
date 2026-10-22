@@ -858,7 +858,32 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "environment": [
+   {
+    "text": "Cadmium from phosphate fertilisers, sewage sludge, mining and industry builds up in soils; crops take it up, and food, rice and other staples above all, is most people's main source of it.",
+    "source": "primary_literature",
+    "doi": "10.1016/j.tplants.2012.08.003"
+   }
+  ],
+  "toxicity": [
+   {
+    "text": "Cadmium accumulates in the kidneys over decades; in Japan's Jinzū river basin it caused itai-itai disease, with kidney damage and brittle, painful bones.",
+    "source": "primary_literature",
+    "doi": "10.1016/j.taap.2009.03.015"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Cadmium and cadmium compounds",
+    "group": "1",
+    "volumes": [
+     "58",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1817,
@@ -868,7 +893,12 @@
   "place": "Göttingen, Germany",
   "nameOrigin": "From the Latin cadmia (Greek kadmeia), the old name for calamine, the zinc ore in which it was found.",
   "source": "pubchem",
-  "note": "Noticed because some zinc carbonate samples turned yellow on heating."
+  "note": "Noticed because some zinc carbonate samples turned yellow on heating.",
+  "placeLocation": {
+   "lat": 51.52,
+   "lon": 9.92,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Cadmium is a soft, bluish-white metal obtained as a by-product of zinc refining; it is highly toxic, yet it has served in nickel–cadmium batteries, in reactor control rods because it swallows neutrons, and in the vivid cadmium yellows and reds of artists’ paints. Friedrich Stromeyer found it in 1817 after noticing that a zinc carbonate sample turned yellow when heated, a sign of an unknown impurity. Its closed-shell atom ([Kr] 4d¹⁰ 5s², ground term ¹S₀) emits a sharp red spectral line at 643.8 nm, between two excited singlet levels, so reproducible that it served for decades as an international reference for measuring length.",

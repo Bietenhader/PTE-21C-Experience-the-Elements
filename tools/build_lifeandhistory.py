@@ -1,0 +1,232 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+"""The `biology` and `history` records of public/data/elements/{Z}.json (SPEC §10.10, §10.11) and the
+world outline behind the discovery map, public/data/worldmap.json.
+
+biology: tools/curated/biology.toml (FIN reviews it) — the essential-element rows from M2 plus, from
+M4, isotope uses, environmental and toxicity notes and IARC classifications (the group read from the
+fetched IARC list, never typed).
+history: tools/curated/history.toml, with each discovery place given coordinates from the cached
+gazetteers named in tools/curated/places.toml (Natural Earth, or GeoNames for small towns).
+"""
+
+from __future__ import annotations
+
+import math
+
+import curated
+import fetch_geonames
+import fetch_iarc
+import fetch_natural_earth
+from common import DATA_DIR, Report, SourceUnavailable, missing
+
+# --- biology ------------------------------------------------------------------------------------
+
+BIOLOGY_TABLES = ("isotope_use", "environment", "toxicity", "iarc")
+
+
+def _sourced(row: dict) -> dict:
+    out = {"text": row["text"], "source": row["source"]}
+    if row.get("doi"):
+        out["doi"] = row["doi"]
+    return out
+
+
+def load_biology(report: Report) -> tuple[dict[int, dict], dict[int, dict[str, list]]]:
+    """(the M2 rows by Z, {Z: {table: [rows]}} for the M4 tables)."""
+    rows = {r["Z"]: r for r in curated.load("biology.toml")}
+    extras: dict[int, dict[str, list]] = {}
+    for table in BIOLOGY_TABLES:
+        for r in curated.load("biology.toml", table):
+            extras.setdefault(r["Z"], {}).setdefault(table, []).append(r)
+    try:
+        iarc = fetch_iarc.parse()
+    except (SourceUnavailable, OSError) as exc:
+        report.unavailable(fetch_iarc.SOURCE, str(exc))
+        iarc = None
+    for z, tables in extras.items():
+        for r in tables.get("iarc", []):
+            if iarc is None:
+                r["_group"] = None
+            elif r["agent"] not in iarc:
+                raise ValueError(f"biology.toml: IARC lists no agent {r['agent']!r} (Z={z})")
+            else:
+                r["_group"] = iarc[r["agent"]]
+    return rows, extras
+
+
+def biology_record(row: dict | None, extra: dict[str, list] | None) -> dict:
+    if not row:
+        out: dict = {
+            "essentialPlant": "no",
+            "essentialHuman": "no",
+            "note": "Not known to be essential for plants or for humans.",
+        }
+    else:
+        out = {"essentialPlant": row.get("essential_plant", "no"), "essentialHuman": row.get("essential_human", "no")}
+        if row.get("plant_class"):
+            out["plantClass"] = row["plant_class"]
+        for side in ("plant", "human"):
+            if row.get(f"{side}_role"):
+                out[f"{side}Role"] = {
+                    "text": row[f"{side}_role"],
+                    "source": row[f"{side}_source"],
+                    **({"doi": row[f"{side}_doi"]} if row.get(f"{side}_doi") else {}),
+                }
+        if row.get("note"):
+            out["note"] = row["note"]
+    extra = extra or {}
+    uses = []
+    for r in extra.get("isotope_use", []):
+        use = {"field": r["field"], **_sourced(r)}
+        if "A" in r:
+            use = {"A": r["A"], **({"isomer": r["isomer"]} if r.get("isomer") else {}), **use}
+        uses.append(use)
+    if uses:
+        out["isotopeUses"] = uses
+    if extra.get("environment"):
+        out["environment"] = [_sourced(r) for r in extra["environment"]]
+    if extra.get("toxicity"):
+        out["toxicity"] = [_sourced(r) for r in extra["toxicity"]]
+    if extra.get("iarc"):
+        out["iarc"] = [
+            {
+                "agent": r["agent"],
+                "group": r["_group"]["group"],
+                "volumes": r["_group"]["volumes"],
+                "source": r["source"],
+            }
+            if r["_group"]
+            else {
+                "agent": r["agent"],
+                "group": missing(
+                    "source_unavailable_at_build", "The IARC list could not be read when the data was built."
+                ),
+                "source": r["source"],
+            }
+            for r in extra["iarc"]
+        ]
+    return out
+
+
+# --- history ------------------------------------------------------------------------------------
+
+
+def load_places(report: Report) -> dict[str, dict]:
+    """{place as written in history.toml: {lat, lon, source} or a Missing}."""
+    rows = curated.load("places.toml", "place")
+    out: dict[str, dict] = {}
+    gazetteers: dict[str, object] = {}
+    for name, loader in (("natural_earth", fetch_natural_earth.places), ("geonames", fetch_geonames.places)):
+        try:
+            gazetteers[name] = loader()
+        except (SourceUnavailable, OSError) as exc:
+            report.unavailable(name, str(exc))
+    for r in rows:
+        g = gazetteers.get(r["gazetteer"])
+        if g is None:
+            out[r["place"]] = missing(
+                "source_unavailable_at_build",
+                f"The {r['gazetteer']} gazetteer could not be read when the data was built.",
+            )
+            continue
+        if r["gazetteer"] == "natural_earth":
+            hit = g.get((fetch_natural_earth.fold(r["name"]), fetch_natural_earth.fold(r["country"])))  # type: ignore[union-attr]
+        else:
+            hit = g.get(r["geonames_id"])  # type: ignore[union-attr]
+        if hit is None:
+            raise ValueError(f"places.toml: {r['place']!r} not found in {r['gazetteer']}")
+        out[r["place"]] = {"lat": round(hit["lat"], 3), "lon": round(hit["lon"], 3), "source": r["source"]}
+    return out
+
+
+def history_record(row: dict | None, places: dict[str, dict]) -> dict:
+    if not row:
+        return {}
+    out: dict = {"discovered": row["discovered"]}
+    keys = {
+        "discovered_text": "discoveredText",
+        "discoverers": "discoverers",
+        "place": "place",
+        "isolated": "isolated",
+        "isolated_by": "isolatedBy",
+        "name_origin": "nameOrigin",
+        "symbol_note": "symbolNote",
+        "source": "source",
+        "doi": "doi",
+        "note": "note",
+    }
+    for k, v in keys.items():
+        if row.get(k) not in (None, "", []):
+            out[v] = row[k]
+    if row.get("place"):
+        if row["place"] not in places:
+            raise ValueError(f"history.toml Z={row['Z']}: place {row['place']!r} has no row in places.toml")
+        out["placeLocation"] = places[row["place"]]
+    return out
+
+
+# --- the world outline ----------------------------------------------------------------------------
+
+# The map shows latitudes 60° S to 84° N (no discovery was made in Antarctica) in an equirectangular
+# projection; rings are simplified to about a quarter of a degree and rounded to a tenth.
+LAT_MIN, LAT_MAX = -60.0, 84.0
+TOLERANCE_DEG = 0.25
+
+
+def _simplify(points: list[tuple[float, float]], tol: float) -> list[tuple[float, float]]:
+    """Douglas–Peucker on a ring (kept closed)."""
+    if len(points) < 4:
+        return points
+
+    def dist(p, a, b):
+        (x, y), (x1, y1), (x2, y2) = p, a, b
+        dx, dy = x2 - x1, y2 - y1
+        if dx == dy == 0:
+            return math.hypot(x - x1, y - y1)
+        t = max(0.0, min(1.0, ((x - x1) * dx + (y - y1) * dy) / (dx * dx + dy * dy)))
+        return math.hypot(x - (x1 + t * dx), y - (y1 + t * dy))
+
+    keep = [False] * len(points)
+    keep[0] = keep[-1] = True
+    stack = [(0, len(points) - 1)]
+    while stack:
+        i, j = stack.pop()
+        best, idx = 0.0, -1
+        for k in range(i + 1, j):
+            d = dist(points[k], points[i], points[j])
+            if d > best:
+                best, idx = d, k
+        if best > tol and idx > 0:
+            keep[idx] = True
+            stack += [(i, idx), (idx, j)]
+    return [p for p, k in zip(points, keep, strict=True) if k]
+
+
+def build_worldmap(report: Report) -> int:
+    try:
+        rings = fetch_natural_earth.land()
+    except (SourceUnavailable, OSError) as exc:
+        report.unavailable(fetch_natural_earth.SOURCE, str(exc))
+        return 0
+    paths = []
+    for ring in rings:
+        pts = [(lon, lat) for lon, lat in ring]
+        if max(lat for _, lat in pts) < LAT_MIN:
+            continue  # Antarctica
+        simple = _simplify(pts, TOLERANCE_DEG)
+        if len(simple) < 4:
+            continue
+        coords = [[round(lon, 1), round(max(LAT_MIN, min(LAT_MAX, lat)), 1)] for lon, lat in simple]
+        paths.append(coords)
+    doc = {
+        "schemaVersion": 1,
+        "source": fetch_natural_earth.SOURCE,
+        "projection": "equirectangular",
+        "bounds": {"lonMin": -180, "lonMax": 180, "latMin": LAT_MIN, "latMax": LAT_MAX},
+        "rings": paths,
+    }
+    from build_details import dump_rows, validator
+
+    validator("WorldMapFile").validate(doc)
+    dump_rows(DATA_DIR / "worldmap.json", doc)
+    return 1

@@ -25,8 +25,11 @@ import fetch_bipm
 import fetch_ciaaw
 import fetch_cie
 import fetch_codata
+import fetch_geonames
 import fetch_iaea
+import fetch_iarc
 import fetch_images
+import fetch_natural_earth
 import fetch_nist_awic
 import fetch_nist_gsie
 import fetch_nist_levels
@@ -48,6 +51,9 @@ FETCHERS = [
     fetch_bipm,
     fetch_cie,
     fetch_images,
+    fetch_natural_earth,
+    fetch_geonames,
+    fetch_iarc,
 ]
 
 

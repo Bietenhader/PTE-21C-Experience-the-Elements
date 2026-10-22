@@ -1,13 +1,6 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 import { describe, expect, it } from "vitest";
-import {
-  NNBSP,
-  concise,
-  formatQuantity,
-  groupDigits,
-  signed,
-  tileNumber,
-} from "./format";
+import { NNBSP, concise, formatQuantity, groupDigits, signed, tileNumber } from "./format";
 
 const g = (s: string) => s.replaceAll(" ", NNBSP);
 
@@ -23,14 +16,9 @@ describe("NIST concise notation", () => {
   });
   it("groups an exact value without parentheses", () => {
     expect(concise(9192631770, 0)).toBe(g("9 192 631 770"));
-    expect(
-      formatQuantity({
-        value: 9192631770,
-        unc: 0,
-        unit: "Hz",
-        source: "si_brochure",
-      }),
-    ).toBe(`${g("9 192 631 770")} Hz (exact)`);
+    expect(formatQuantity({ value: 9192631770, unc: 0, unit: "Hz", source: "si_brochure" })).toBe(
+      `${g("9 192 631 770")} Hz (exact)`,
+    );
   });
   it("leaves a value without uncertainty as given", () => {
     expect(concise(12.011)).toBe("12.011");
@@ -38,17 +26,13 @@ describe("NIST concise notation", () => {
   it("handles integer-scale uncertainties", () => {
     expect(concise(1234, 16)).toBe("1234(16)");
     // the thorium-229 nuclear clock frequency: powers of ten once the uncertainty is in the thousands
-    expect(concise(2020407384335000, 2000)).toBe(
-      g("2.020 407 384 335(2) × 10¹⁵"),
-    );
+    expect(concise(2020407384335000, 2000)).toBe(g("2.020 407 384 335(2) × 10¹⁵"));
   });
 });
 
 describe("digit grouping", () => {
   it("groups both sides in threes from five digits on", () => {
-    expect(groupDigits("6834682610.9043126")).toBe(
-      g("6 834 682 610.904 312 6"),
-    );
+    expect(groupDigits("6834682610.9043126")).toBe(g("6 834 682 610.904 312 6"));
     expect(groupDigits("1312.0")).toBe("1312.0");
     expect(groupDigits("96485.3")).toBe(g("96 485.3"));
   });

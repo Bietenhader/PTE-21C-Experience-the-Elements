@@ -46,9 +46,7 @@ export function Quantity({ q, sources }: { q: Q; sources: Sources }) {
         )}
         {q.unc === 0 && " (exact)"}
       </span>
-      {q.flag && q.flag !== "measured" && (
-        <span className={styles.flag}>{q.flag}</span>
-      )}{" "}
+      {q.flag && q.flag !== "measured" && <span className={styles.flag}>{q.flag}</span>}{" "}
       <SourceChip id={q.source} sources={sources} />
     </span>
   );

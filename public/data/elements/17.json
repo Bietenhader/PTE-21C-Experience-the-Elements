@@ -250,6 +250,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 14.6,
+   "unc": 0.1,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},

@@ -1,0 +1,717 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# Static electric dipole polarizabilities of the neutral atoms in their ground states, in atomic units
+# (a.u. = e²a₀²/E_h, the volume unit a₀³ in Gaussian units), with the standard uncertainty the table gives.
+# Source: P. Schwerdtfeger & J. K. Nagle, "2018 Table of static dipole polarizabilities of the neutral
+# elements in the periodic table", Mol. Phys. 117, 1200-1225 (2019), doi:10.1080/00268976.2018.1535143
+# (recommended values: experiment where it is precise enough, otherwise high-level theory; the paper says
+# which, element by element). Transcribed via the mendeleev package 1.3.0 (MIT), whose metadata cites the
+# table ("Schwerdtfeger2023", the table as updated by its authors); mendeleev is not a pipeline dependency.
+# An uncertainty of 0 in the transcription means "not given" and is left out.
+
+[[row]]
+Z = 1  # H
+value_au = 4.50711
+unc_au = 3e-05
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 2  # He
+value_au = 1.38375
+unc_au = 2e-05
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 3  # Li
+value_au = 164.1125
+unc_au = 0.0005
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 4  # Be
+value_au = 37.74
+unc_au = 0.03
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 5  # B
+value_au = 20.5
+unc_au = 0.1
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 6  # C
+value_au = 11.3
+unc_au = 0.4
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 7  # N
+value_au = 7.4
+unc_au = 0.2
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 8  # O
+value_au = 5.3
+unc_au = 0.2
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 9  # F
+value_au = 3.74
+unc_au = 0.08
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 10  # Ne
+value_au = 2.6611
+unc_au = 3e-05
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 11  # Na
+value_au = 162.7
+unc_au = 0.5
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 12  # Mg
+value_au = 71.2
+unc_au = 0.4
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 13  # Al
+value_au = 57.8
+unc_au = 1.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 14  # Si
+value_au = 37.3
+unc_au = 0.7
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 15  # P
+value_au = 25.0
+unc_au = 1.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 16  # S
+value_au = 19.4
+unc_au = 0.1
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 17  # Cl
+value_au = 14.6
+unc_au = 0.1
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 18  # Ar
+value_au = 11.083
+unc_au = 0.007
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 19  # K
+value_au = 289.7
+unc_au = 0.3
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 20  # Ca
+value_au = 160.8
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 21  # Sc
+value_au = 97.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 22  # Ti
+value_au = 87.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 23  # V
+value_au = 87.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 24  # Cr
+value_au = 83.0
+unc_au = 12.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 25  # Mn
+value_au = 68.0
+unc_au = 9.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 26  # Fe
+value_au = 62.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 27  # Co
+value_au = 55.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 28  # Ni
+value_au = 49.0
+unc_au = 3.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 29  # Cu
+value_au = 46.5
+unc_au = 0.5
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 30  # Zn
+value_au = 38.67
+unc_au = 0.3
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 31  # Ga
+value_au = 50.0
+unc_au = 3.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 32  # Ge
+value_au = 40.0
+unc_au = 1.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 33  # As
+value_au = 30.0
+unc_au = 1.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 34  # Se
+value_au = 28.9
+unc_au = 1.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 35  # Br
+value_au = 21.0
+unc_au = 1.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 36  # Kr
+value_au = 16.78
+unc_au = 0.02
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 37  # Rb
+value_au = 319.8
+unc_au = 0.3
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 38  # Sr
+value_au = 197.2
+unc_au = 0.2
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 39  # Y
+value_au = 162.0
+unc_au = 12.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 40  # Zr
+value_au = 112.0
+unc_au = 13.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 41  # Nb
+value_au = 98.0
+unc_au = 8.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 42  # Mo
+value_au = 87.0
+unc_au = 6.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 43  # Tc
+value_au = 79.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 44  # Ru
+value_au = 72.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 45  # Rh
+value_au = 66.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 46  # Pd
+value_au = 26.14
+unc_au = 0.1
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 47  # Ag
+value_au = 55.0
+unc_au = 8.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 48  # Cd
+value_au = 46.0
+unc_au = 2.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 49  # In
+value_au = 65.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 50  # Sn
+value_au = 53.0
+unc_au = 6.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 51  # Sb
+value_au = 43.0
+unc_au = 2.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 52  # Te
+value_au = 38.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 53  # I
+value_au = 32.9
+unc_au = 1.3
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 54  # Xe
+value_au = 27.32
+unc_au = 0.2
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 55  # Cs
+value_au = 400.9
+unc_au = 0.7
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 56  # Ba
+value_au = 272.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 57  # La
+value_au = 215.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 58  # Ce
+value_au = 205.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 59  # Pr
+value_au = 216.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 60  # Nd
+value_au = 208.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 61  # Pm
+value_au = 200.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 62  # Sm
+value_au = 192.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 63  # Eu
+value_au = 184.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 64  # Gd
+value_au = 158.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 65  # Tb
+value_au = 170.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 66  # Dy
+value_au = 163.0
+unc_au = 15.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 67  # Ho
+value_au = 165.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 68  # Er
+value_au = 150.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 69  # Tm
+value_au = 144.0
+unc_au = 15.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 70  # Yb
+value_au = 139.0
+unc_au = 6.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 71  # Lu
+value_au = 137.0
+unc_au = 7.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 72  # Hf
+value_au = 103.0
+unc_au = 6.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 73  # Ta
+value_au = 74.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 74  # W
+value_au = 68.0
+unc_au = 15.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 75  # Re
+value_au = 62.0
+unc_au = 3.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 76  # Os
+value_au = 57.0
+unc_au = 3.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 77  # Ir
+value_au = 54.0
+unc_au = 7.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 78  # Pt
+value_au = 48.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 79  # Au
+value_au = 36.0
+unc_au = 3.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 80  # Hg
+value_au = 33.91
+unc_au = 0.34
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 81  # Tl
+value_au = 50.0
+unc_au = 2.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 82  # Pb
+value_au = 47.0
+unc_au = 3.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 83  # Bi
+value_au = 48.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 84  # Po
+value_au = 44.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 85  # At
+value_au = 42.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 86  # Rn
+value_au = 35.0
+unc_au = 2.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 87  # Fr
+value_au = 317.8
+unc_au = 2.4
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 88  # Ra
+value_au = 246.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 89  # Ac
+value_au = 203.0
+unc_au = 12.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 90  # Th
+value_au = 217.0
+unc_au = 54.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 91  # Pa
+value_au = 154.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 92  # U
+value_au = 129.0
+unc_au = 17.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 93  # Np
+value_au = 151.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 94  # Pu
+value_au = 132.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 95  # Am
+value_au = 131.0
+unc_au = 25.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 96  # Cm
+value_au = 144.0
+unc_au = 25.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 97  # Bk
+value_au = 125.0
+unc_au = 25.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 98  # Cf
+value_au = 122.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 99  # Es
+value_au = 118.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 100  # Fm
+value_au = 113.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 101  # Md
+value_au = 109.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 102  # No
+value_au = 110.0
+unc_au = 6.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 103  # Lr
+value_au = 320.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 104  # Rf
+value_au = 112.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 105  # Db
+value_au = 42.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 106  # Sg
+value_au = 40.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 107  # Bh
+value_au = 38.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 108  # Hs
+value_au = 36.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 109  # Mt
+value_au = 34.0
+unc_au = 3.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 110  # Ds
+value_au = 32.0
+unc_au = 3.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 111  # Rg
+value_au = 32.0
+unc_au = 6.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 112  # Cn
+value_au = 28.0
+unc_au = 2.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 113  # Nh
+value_au = 29.0
+unc_au = 2.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 114  # Fl
+value_au = 31.0
+unc_au = 4.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 115  # Mc
+value_au = 71.0
+unc_au = 20.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 116  # Lv
+value_au = 67.0
+unc_au = 10.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 117  # Ts
+value_au = 76.0
+unc_au = 15.0
+source = "schwerdtfeger2019"
+
+[[row]]
+Z = 118  # Og
+value_au = 58.0
+unc_au = 6.0
+source = "schwerdtfeger2019"

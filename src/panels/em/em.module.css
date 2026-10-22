@@ -41,3 +41,8 @@
 .row {
   display: contents;
 }
+
+.subheading {
+  margin: var(--space-4) 0 var(--space-1);
+  font-size: 0.9375rem;
+}

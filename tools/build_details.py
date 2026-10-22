@@ -735,6 +735,20 @@ def origin_record(row: dict | None, omitted: dict | None) -> dict:
     )
 
 
+def polarizability_record(row: dict | None) -> dict:
+    """Static dipole polarizability of the neutral atom (Schwerdtfeger & Nagle 2019), in atomic units."""
+    if not row:
+        return missing("not_measured", "The Schwerdtfeger & Nagle table has no value for this element.")
+    return quantity(
+        row["value_au"],
+        "a.u.",
+        row["source"],
+        unc=row.get("unc_au"),
+        note="Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from "
+        "high-level calculation.",
+    )
+
+
 def biology_record(row: dict | None) -> dict:
     if not row:
         return {
@@ -861,6 +875,7 @@ def build_elements(index: dict, report: Report) -> int:
     crystal = {r["Z"]: r for r in curated.load("crystal.toml")}
     crystal_omitted = {r["Z"]: r for r in curated.load("crystal.toml", "omitted")}
     origin = {r["Z"]: r for r in curated.load("nucleosynthesis.toml")}
+    polar = {r["Z"]: r for r in curated.load("polarizability.toml")}
     origin_omitted = {r["Z"]: r for r in curated.load("nucleosynthesis.toml", "omitted")}
 
     folder = DATA_DIR / "elements"
@@ -895,6 +910,7 @@ def build_elements(index: dict, report: Report) -> int:
             "ionizationEnergies": ladder(gsie[z]) if z in gsie else {"source": "nist_gsie", "unit": "eV", "stages": []},
             "electronAffinity": e["electronAffinity"],
             "en": en,
+            "polarizability": polarizability_record(polar.get(z)),
         }
         ref_iso = e["hyperfineHeadline"].get("isotope") if "isotope" in e["hyperfineHeadline"] else None
         doc["probability"] = (

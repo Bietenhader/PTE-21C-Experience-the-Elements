@@ -24,6 +24,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `mclean_rhf` | [Roothaan–Hartree–Fock atomic wavefunctions, Z = 55–92](https://www.sciencedirect.com/journal/atomic-data-and-nuclear-data-tables) | [Published scientific tables; cite](https://www.sciencedirect.com/journal/atomic-data-and-nuclear-data-tables) | — | not yet used |
 | `slater1930` | [Slater's rules for atomic screening constants](https://doi.org/10.1103/PhysRev.36.57) | [Published method; cite](https://doi.org/10.1103/PhysRev.36.57) | — | used |
 | `clementi_zeff` | [Clementi–Raimondi effective nuclear charges](https://doi.org/10.1063/1.1733573) | [Published numerical values; cite](https://doi.org/10.1063/1.1733573) | — | used |
+| `schwerdtfeger2019` | [Table of static dipole polarizabilities of the neutral elements (Schwerdtfeger & Nagle)](https://doi.org/10.1080/00268976.2018.1535143) | [Published numerical values; cite](https://doi.org/10.1080/00268976.2018.1535143) | — | used |
 | `steck_alkali` | [Alkali D Line Data (Daniel A. Steck)](https://steck.us/alkalidata/) | [Compiled reference data; cite the sheet and revision](https://steck.us/alkalidata/) | — | not yet used |
 | `allegrini2022` | [Survey of hyperfine measurements in alkali atoms](https://arxiv.org/abs/2209.11423) | [Scientific facts; cite](https://arxiv.org/abs/2209.11423) | — | used |
 | `arimondo1977` | [Experimental determinations of the hyperfine structure in the alkali atoms](https://doi.org/10.1103/RevModPhys.49.31) | [Scientific facts; cite](https://doi.org/10.1103/RevModPhys.49.31) | — | not yet used |
@@ -66,6 +67,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `bipm_frequencies` — BIPM, Recommended values of standard frequencies for applications including the practical realization of the metre and secondary representations of the second (CCL-CCTF list, 2025 update), https://www.bipm.org/en/publications/mises-en-pratique/standard-frequencies — machine-readable via the BIPM Time Department CCL-CCTF API, https://webtai.bipm.org/api/ccl-cctf/
 - `slater1930` — J. C. Slater, Atomic shielding constants, Phys. Rev. 36, 57–64 (1930), doi:10.1103/PhysRev.36.57.
 - `clementi_zeff` — E. Clementi and D. L. Raimondi, J. Chem. Phys. 38, 2686 (1963), doi:10.1063/1.1733573; E. Clementi, D. L. Raimondi and W. P. Reinhardt, J. Chem. Phys. 47, 1300 (1967), doi:10.1063/1.1712084.
+- `schwerdtfeger2019` — P. Schwerdtfeger and J. K. Nagle, 2018 Table of static dipole polarizabilities of the neutral elements in the periodic table, Mol. Phys. 117, 1200-1225 (2019), doi:10.1080/00268976.2018.1535143.
 - `allegrini2022` — M. Allegrini, E. Arimondo and L. A. Orozco, Survey of hyperfine structure measurements in alkali atoms, J. Phys. Chem. Ref. Data 51, 043102 (2022), arXiv:2209.11423.
 - `olmschenk_catalog` — S. Olmschenk, Laser-cooled atoms and ions catalog, https://personal.denison.edu/~olmschenks/atom_catalog.html and ion_catalog.html.
 - `images_of_elements` — Jürgen Kummer, images-of-elements.com — photographs of the chemical elements, CC BY 3.0; each photo is credited with a link to its element page.

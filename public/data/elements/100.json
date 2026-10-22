@@ -647,6 +647,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 113.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {

@@ -187,6 +187,17 @@
    "status": "ok",
    "notes": "tools/curated/zeff.toml (He-Rn): Z_eff = n x zeta, taken from the transcription of both tables in the MIT-licensed mendeleev package (v1.3.0, table screeningconstants); closed-shell atoms were recomputed independently as a check (agreement 1e-4 for He-Ar, 0.013 for Zn and Kr). Slater's rules are used for Z > 86."
   },
+  "schwerdtfeger2019": {
+   "id": "schwerdtfeger2019",
+   "title": "Table of static dipole polarizabilities of the neutral elements (Schwerdtfeger & Nagle)",
+   "url": "https://doi.org/10.1080/00268976.2018.1535143",
+   "licence": "Published numerical values; cite",
+   "licenceUrl": "https://doi.org/10.1080/00268976.2018.1535143",
+   "citation": "P. Schwerdtfeger and J. K. Nagle, 2018 Table of static dipole polarizabilities of the neutral elements in the periodic table, Mol. Phys. 117, 1200-1225 (2019), doi:10.1080/00268976.2018.1535143.",
+   "kind": "curated",
+   "status": "ok",
+   "notes": "tools/curated/polarizability.toml: the recommended value and its uncertainty for all 118 elements, in atomic units, transcribed via the MIT-licensed mendeleev package (v1.3.0), whose metadata cites the table as updated by its authors in 2023."
+  },
   "steck_alkali": {
    "id": "steck_alkali",
    "title": "Alkali D Line Data (Daniel A. Steck)",

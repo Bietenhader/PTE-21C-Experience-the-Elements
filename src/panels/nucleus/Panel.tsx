@@ -687,7 +687,20 @@ function Origin({ e, origin, trends, sources }: { e: ElementIndexEntry; origin: 
     .map((k) => {
       const share = origin.fractions[k];
       const cls = classes.find((c) => c.id === ORIGIN_IDS[k]);
-      return share ? { key: k, share, label: cls?.label ?? k, description: cls?.description ?? "", tone: cls?.tone ?? 8, short: cls?.short ?? "" } : null;
+      // A recycled share is material those stars returned in their winds, not material they made.
+      const recycled = origin.recycled?.includes(k) ?? false;
+      return share
+        ? {
+            key: k,
+            share,
+            label: `${cls?.label ?? k}${recycled ? ", returned, not made" : ""}`,
+            description: recycled
+              ? `Returned to space in these stars' winds; they did not make it (see the note below).`
+              : (cls?.description ?? ""),
+            tone: cls?.tone ?? 8,
+            short: `${cls?.short ?? ""}${recycled ? " (returned)" : ""}`,
+          }
+        : null;
     })
     .filter((p): p is NonNullable<typeof p> => p !== null);
   const caption = (

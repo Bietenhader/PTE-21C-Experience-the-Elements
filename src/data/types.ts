@@ -808,6 +808,15 @@ export interface CosmicOrigin {
   flag: "estimated" | "paper_statement";
   source: SourceId;
   note: string;
+  /**
+   * Processes whose share in the figure is material those stars returned to space in their winds, not material they made (e.g. AGB stars for thorium and uranium, which their slow neutron captures cannot reach).
+   *
+   * @minItems 1
+   */
+  recycled?: [
+    "bigBang" | "cosmicRays" | "agb" | "massiveStars" | "neutronStarMergers" | "whiteDwarfs",
+    ...("bigBang" | "cosmicRays" | "agb" | "massiveStars" | "neutronStarMergers" | "whiteDwarfs")[]
+  ];
 }
 /**
  * public/data/metrology.json: every clock and standard frequency, every SI role, and the timeline of the second (SPEC §10.6).

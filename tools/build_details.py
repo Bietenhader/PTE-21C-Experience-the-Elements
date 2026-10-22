@@ -706,7 +706,13 @@ def origin_record(row: dict | None, omitted: dict | None) -> dict:
         total = sum(fractions.values())
         if abs(total - 1) > 1e-9:
             raise ValueError(f"nucleosynthesis.toml Z={row['Z']}: fractions sum to {total}")
-        return {"fractions": fractions, "flag": row["flag"], "source": row["source"], "note": row["note"]}
+        out = {"fractions": fractions, "flag": row["flag"], "source": row["source"], "note": row["note"]}
+        if row.get("recycled"):
+            unknown = [k for k in row["recycled"] if k not in ORIGIN_KEYS or not row.get(k)]
+            if unknown:
+                raise ValueError(f"nucleosynthesis.toml Z={row['Z']}: recycled names {unknown}, which have no share")
+            out["recycled"] = [ORIGIN_KEYS[k] for k in row["recycled"]]
+        return out
     if omitted:
         return missing("not_measured", omitted["note"])
     return missing(

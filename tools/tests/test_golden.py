@@ -188,3 +188,13 @@ def test_cie_standard_observer():
     assert cie["y"][(555 - 380) // 5] == 1.0
     assert cie["x"][(600 - 380) // 5] == pytest.approx(1.0622, abs=1e-6)
     assert max(cie["y"]) == 1.0
+
+
+def test_no_element_beyond_bismuth_is_credited_to_agb_stars():
+    """AGB stars' slow neutron captures end at lead and bismuth (Z = 82, 83): any AGB share of a heavier
+    element in Kobayashi et al.'s Fig. 39 is material returned in their winds, and must be marked so."""
+    for z in range(84, 119):
+        origin = load_json(DATA_DIR / "elements" / f"{z}.json")["nucleus"]["origin"]
+        if is_missing(origin) or not origin["fractions"].get("agb"):
+            continue
+        assert "agb" in origin.get("recycled", []), f"Z={z}: AGB share not marked as returned, not made"

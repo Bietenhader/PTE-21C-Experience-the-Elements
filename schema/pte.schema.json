@@ -2623,6 +2623,23 @@
         },
         "note": {
           "type": "string"
+        },
+        "recycled": {
+          "description": "Processes whose share in the figure is material those stars returned to space in their winds, not material they made (e.g. AGB stars for thorium and uranium, which their slow neutron captures cannot reach).",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "bigBang",
+              "cosmicRays",
+              "agb",
+              "massiveStars",
+              "neutronStarMergers",
+              "whiteDwarfs"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "required": [

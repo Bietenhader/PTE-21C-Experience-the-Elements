@@ -335,6 +335,81 @@
    "listedAs": "bauxite/alumina/aluminium",
    "source": "eu_crm",
    "note": "Ore (bauxite), intermediate (alumina) and metal (aluminium) listed as one entry; aluminium is named, so the mapping is direct."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.2,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Transport is the largest use (36 % of U.S. consumption).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Packaging (24 %), building (13 %), electrical uses (9 %), consumer durables and machinery (8 % each).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Overhead power lines are made of aluminium because it is light, though it conducts less well than copper.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5359268,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 82300.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.002,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 66.92,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.871429,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

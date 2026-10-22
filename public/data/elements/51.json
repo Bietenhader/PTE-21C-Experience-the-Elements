@@ -684,6 +684,119 @@
    "strategic": false,
    "listedAs": "antimony",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.23,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Metal products including flame retardants take 49 % of U.S. use.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Antimony-hardened lead for lead-acid batteries and ammunition (40 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ceramics, glass and rubber (11 %).",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed",
+     "share": 18.2
+    },
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 23.4
+    },
+    {
+     "code": "H332",
+     "text": "Harmful if inhaled",
+     "share": 26.9
+    },
+    {
+     "code": "H351",
+     "text": "Suspected of causing cancer",
+     "share": 31.8
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure",
+     "share": 20.5
+    },
+    {
+     "code": "H411",
+     "text": "Toxic to aquatic life with long lasting effects",
+     "share": 38.6
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5354495,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 748,
+   "notMeetingCriteria": {
+    "share": 18.7,
+    "reports": 140,
+    "of": 748
+   },
+   "note": "Aggregated by PubChem from 748 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 18.7 % of the reports (140 of 748) say antimony does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.2,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.00024,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.001263,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

@@ -677,6 +677,83 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 20.786,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Lamps (37 %) and semiconductor manufacture (36 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Lasers (13 %) and medicine (6 %).",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated",
+     "share": 66.2
+    },
+    {
+     "code": "H281",
+     "text": "Contains refrigerated gas; may cause cryogenic burns or injury",
+     "share": 27.9
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23991,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 373,
+   "notMeetingCriteria": {
+    "share": 5.9,
+    "reports": 22,
+    "of": 373
+   },
+   "note": "Aggregated by PubChem from 373 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 5.9 % of the reports (22 of 373) say xenon does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 3e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 5e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.02247,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

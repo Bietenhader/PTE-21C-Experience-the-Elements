@@ -808,6 +808,117 @@
    "listedAs": "heavy rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 28.16,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Permanent magnets.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Data storage devices and lasers.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 60.0
+    },
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air",
+     "share": 16.2
+    },
+    {
+     "code": "H251",
+     "text": "Self-heating; may catch fire",
+     "share": 21.0
+    },
+    {
+     "code": "H252",
+     "text": "Self-heating in large quantities; may catch fire",
+     "share": 16.2
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously",
+     "share": 16.2
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 21.0
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 21.0
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 21.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23912,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 105,
+   "notMeetingCriteria": {
+    "share": 23.8,
+    "reports": 25,
+    "of": 105
+   },
+   "note": "Aggregated by PubChem from 105 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 23.8 % of the reports (25 of 105) say dysprosium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 5.2,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 9.1e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.002086,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

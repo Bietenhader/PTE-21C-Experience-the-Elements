@@ -1,0 +1,434 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# What each element is used for (SPEC §10.4): two to five bullets per element, written for PTE-21C in our own
+# words. Nothing here is copied from PubChem, Los Alamos, Jefferson Lab, IUPAC or Wikipedia; each bullet states
+# only facts that its source supports.
+# - usgs_mcs: U.S. Geological Survey, Mineral Commodity Summaries 2026 — the chapter's "Domestic Production and
+#   Use" paragraph, or Table 6 (the U.S. Final 2025 Critical Minerals List and its "Applications" column). Shares
+#   in per cent are USGS estimates for 2025, of U.S. use unless the bullet says "world".
+# - pubchem: the "Uses" and isotope sections of the PubChem element page (contributed there by Jefferson Lab,
+#   Los Alamos National Laboratory and the IUPAC Periodic Table of the Elements and Isotopes).
+# - iupac_discovery: the IUPAC/IUPAP discovery reports (DOI per row): atom-at-a-time synthesis.
+# - si_brochure, bipm_frequencies, primary_literature: the SI second, atomic clocks, atomic physics.
+# One line per bullet, in the order shown: Z, symbol, text, source (and doi where there is one).
+
+row = [
+  { Z = 1, symbol = "H", text = "Large amounts are combined with nitrogen from the air to make ammonia, the basis of nitrogen fertilisers.", source = "pubchem" },
+  { Z = 1, symbol = "H", text = "Oil refineries use it to strip sulfur out of fuels and to break heavy oil into lighter products; it is also a raw material for methanol.", source = "pubchem" },
+  { Z = 1, symbol = "H", text = "Turns liquid vegetable oils into solid fats (hydrogenation).", source = "pubchem" },
+  { Z = 1, symbol = "H", text = "Liquid hydrogen burned with liquid oxygen drives rockets; fuel cells turn hydrogen into electricity.", source = "pubchem" },
+  { Z = 1, symbol = "H", text = "Its isotopes: heavy water (deuterium) slows neutrons in some reactors; tritium makes exit signs glow without power.", source = "pubchem" },
+
+  { Z = 2, symbol = "He", text = "Laboratory, analytical and specialty gases are the largest use (22 %), then inert atmospheres for making chips and optical fibre (17 %).", source = "usgs_mcs" },
+  { Z = 2, symbol = "He", text = "Liquid helium cools the superconducting magnets of MRI scanners (15 %).", source = "usgs_mcs" },
+  { Z = 2, symbol = "He", text = "Lifts balloons and airships (17 %); also used in welding (8 %) and in breathing gas for diving (5 %).", source = "usgs_mcs" },
+  { Z = 2, symbol = "He", text = "Finds leaks in vacuum and pressure equipment (5 %); helium-3 is used in neutron detectors and quantum-computing research.", source = "usgs_mcs" },
+
+  { Z = 3, symbol = "Li", text = "Rechargeable batteries take almost all of it: 88 % of world use, for electric vehicles, grid storage, electronics and power tools.", source = "usgs_mcs" },
+  { Z = 3, symbol = "Li", text = "Lithium minerals go into ceramics and glass (4 % of world use).", source = "usgs_mcs" },
+  { Z = 3, symbol = "Li", text = "Lubricating greases (2 %); smaller uses are air treatment, fluxes for casting steel, and medicine.", source = "usgs_mcs" },
+
+  { Z = 4, symbol = "Be", text = "Consumer electronics take the largest share of beryllium products by sales (29 %), mostly as copper–beryllium alloy parts.", source = "usgs_mcs" },
+  { Z = 4, symbol = "Be", text = "Aerospace and defence (24 %); pure beryllium metal serves mainly in defence and scientific equipment.", source = "usgs_mcs" },
+  { Z = 4, symbol = "Be", text = "Also industrial components (17 %), car electronics (9 %) and energy systems (8 %).", source = "usgs_mcs" },
+
+  { Z = 5, symbol = "B", text = "The glass and ceramics industries are the main users of borates, including specialty glasses.", source = "usgs_mcs" },
+  { Z = 5, symbol = "B", text = "Borates also go into insulation, abrasives, cleaning products and insecticides, and into making semiconductors.", source = "usgs_mcs" },
+  { Z = 5, symbol = "B", text = "Used in nuclear energy, and to harden steel and glass.", source = "usgs_mcs" },
+
+  { Z = 6, symbol = "C", text = "Natural graphite goes into batteries, brake linings, lubricants, furnace linings and steelmaking.", source = "usgs_mcs" },
+  { Z = 6, symbol = "C", text = "Industrial diamond, about 97 % of it synthetic, cuts and polishes stone, roads and metals, drills for oil and minerals, and is used in making computer chips.", source = "usgs_mcs" },
+  { Z = 6, symbol = "C", text = "Metallurgical coal is used to make steel.", source = "usgs_mcs" },
+
+  { Z = 7, symbol = "N", text = "About 88 % of U.S. ammonia (fixed nitrogen) becomes fertiliser, such as urea and ammonium nitrate.", source = "usgs_mcs" },
+  { Z = 7, symbol = "N", text = "Ammonia is also the starting point for explosives, plastics and synthetic fibres.", source = "usgs_mcs" },
+  { Z = 7, symbol = "N", text = "Nitrogen gas shields chips and welds from air and pushes crude oil out of wells; liquid nitrogen freezes and preserves biological samples.", source = "pubchem" },
+
+  { Z = 8, symbol = "O", text = "Steelworks blow oxygen through molten pig iron to burn out impurities.", source = "pubchem" },
+  { Z = 8, symbol = "O", text = "Burned with acetylene, it gives the very hot flame used for welding.", source = "pubchem" },
+  { Z = 8, symbol = "O", text = "Given to patients with breathing problems; liquid oxygen is a rocket propellant.", source = "pubchem" },
+  { Z = 8, symbol = "O", text = "Water enriched in oxygen-18 and deuterium is used to measure how much energy people and animals use.", source = "pubchem" },
+
+  { Z = 9, symbol = "F", text = "Fluorspar is turned into hydrogen fluoride, the raw material for virtually all fluorine chemicals, above all refrigerants and fluoropolymers.", source = "usgs_mcs" },
+  { Z = 9, symbol = "F", text = "Fluorine chemicals are needed to make aluminium and to process uranium; hydrogen fluoride cleans and etches silicon chips.", source = "usgs_mcs" },
+  { Z = 9, symbol = "F", text = "Fluoride in toothpaste and drinking water helps prevent tooth decay.", source = "pubchem" },
+  { Z = 9, symbol = "F", text = "Fluorine-18, attached to glucose, is a tracer for PET scans of organs, bones and the brain.", source = "pubchem" },
+
+  { Z = 10, symbol = "Ne", text = "Lamps and signs take about half of neon use (53 %).", source = "usgs_mcs" },
+  { Z = 10, symbol = "Ne", text = "Semiconductor manufacture takes most of the rest (32 %); plasma displays take 12 %.", source = "usgs_mcs" },
+
+  { Z = 11, symbol = "Na", text = "Soda ash (sodium carbonate) is used mostly for glass (45 %) and chemicals (28 %), and in soaps and detergents (5 %).", source = "usgs_mcs" },
+  { Z = 11, symbol = "Na", text = "Salt (sodium chloride) is the feedstock for chlorine and caustic soda, and is spread on winter roads (about 37 % of U.S. salt).", source = "usgs_mcs" },
+  { Z = 11, symbol = "Na", text = "Sodium-vapour street lamps give their yellow light; liquid sodium has been used to cool nuclear reactors.", source = "pubchem" },
+  { Z = 11, symbol = "Na", text = "The metal is used to produce titanium and chemicals such as sodium cyanide and sodium hydride.", source = "pubchem" },
+
+  { Z = 12, symbol = "Mg", text = "Most primary magnesium (69 %) is used in castings, chiefly for cars.", source = "usgs_mcs" },
+  { Z = 12, symbol = "Mg", text = "Alloyed into aluminium for packaging and transport (15 %), and used to remove sulfur from iron and steel (9 %).", source = "usgs_mcs" },
+  { Z = 12, symbol = "Mg", text = "Magnesium compounds are used for environmental treatment, road de-icing, chemicals, agriculture and furnace linings.", source = "usgs_mcs" },
+
+  { Z = 13, symbol = "Al", text = "Transport is the largest use (36 % of U.S. consumption).", source = "usgs_mcs" },
+  { Z = 13, symbol = "Al", text = "Packaging (24 %), building (13 %), electrical uses (9 %), consumer durables and machinery (8 % each).", source = "usgs_mcs" },
+  { Z = 13, symbol = "Al", text = "Overhead power lines are made of aluminium because it is light, though it conducts less well than copper.", source = "pubchem" },
+
+  { Z = 14, symbol = "Si", text = "Ferrosilicon is used in iron foundries and steelmaking; silicon metal goes into aluminium alloys.", source = "usgs_mcs" },
+  { Z = 14, symbol = "Si", text = "The chemical industry makes silicones from silicon metal.", source = "usgs_mcs" },
+  { Z = 14, symbol = "Si", text = "Very pure silicon wafers are the basis of computer chips and solar cells.", source = "usgs_mcs" },
+  { Z = 14, symbol = "Si", text = "Grown quartz crystals (silicon dioxide) keep time in electronic circuits.", source = "usgs_mcs" },
+
+  { Z = 15, symbol = "P", text = "More than 95 % of U.S. phosphate rock is made into phosphoric acid for fertilisers and animal-feed supplements.", source = "usgs_mcs" },
+  { Z = 15, symbol = "P", text = "The rest becomes elemental phosphorus for industrial compounds, mainly the herbicide glyphosate.", source = "usgs_mcs" },
+
+  { Z = 16, symbol = "S", text = "About 90 % of the sulfur used in the U.S. is used as sulfuric acid.", source = "usgs_mcs" },
+  { Z = 16, symbol = "S", text = "Sulfuric acid turns phosphate rock into fertiliser and fills lead-acid batteries.", source = "pubchem" },
+  { Z = 16, symbol = "S", text = "Sulfur vulcanises rubber and is used as a fungicide.", source = "pubchem" },
+
+  { Z = 17, symbol = "Cl", text = "Chlorine is made from brine (salt water); chlorine and caustic soda makers are the main chemical users of salt.", source = "usgs_mcs" },
+  { Z = 17, symbol = "Cl", text = "Disinfects drinking water and swimming pools.", source = "pubchem" },
+  { Z = 17, symbol = "Cl", text = "Needed to make plastics, solvents, medicines, dyes and paper products.", source = "pubchem" },
+
+  { Z = 18, symbol = "Ar", text = "Welding takes two-thirds of argon use (66 %).", source = "usgs_mcs" },
+  { Z = 18, symbol = "Ar", text = "Steelmaking (20 %) and electronics manufacture (10 %).", source = "usgs_mcs" },
+
+  { Z = 19, symbol = "K", text = "About 85 % of potash (potassium salts) is sold as fertiliser.", source = "usgs_mcs" },
+  { Z = 19, symbol = "K", text = "The rest goes into chemical and industrial uses.", source = "usgs_mcs" },
+  { Z = 19, symbol = "K", text = "Potassium hydroxide makes soaps and detergents; potassium chloride is a salt substitute; a sodium–potassium alloy carries heat in some reactors.", source = "pubchem" },
+
+  { Z = 20, symbol = "Ca", text = "Lime (calcium oxide) is used above all in steelmaking, then in chemicals, flue-gas cleaning, construction and water treatment.", source = "usgs_mcs" },
+  { Z = 20, symbol = "Ca", text = "Gypsum (calcium sulfate) makes wallboard and plaster and is used in cement and agriculture.", source = "usgs_mcs" },
+  { Z = 20, symbol = "Ca", text = "Calcium metal extracts thorium, uranium and zirconium from their compounds and removes oxygen, sulfur and carbon from alloys.", source = "pubchem" },
+
+  { Z = 21, symbol = "Sc", text = "Aluminium alloys for aerospace.", source = "usgs_mcs" },
+  { Z = 21, symbol = "Sc", text = "Solid oxide fuel cells for power generation and backup power.", source = "usgs_mcs" },
+  { Z = 21, symbol = "Sc", text = "Smaller uses: electronics, and alloys for military equipment and sporting goods.", source = "usgs_mcs" },
+
+  { Z = 22, symbol = "Ti", text = "Most titanium ore becomes titanium dioxide, the white pigment of paints, plastics and paper.", source = "usgs_mcs" },
+  { Z = 22, symbol = "Ti", text = "Titanium metal is used mainly in aerospace.", source = "usgs_mcs" },
+  { Z = 22, symbol = "Ti", text = "Also in armour, chemical plants, ships' hardware, medical implants and power generation.", source = "usgs_mcs" },
+
+  { Z = 23, symbol = "V", text = "More than 90 % is used as an alloying agent for iron and steel.", source = "usgs_mcs" },
+  { Z = 23, symbol = "V", text = "Vanadium catalysts make sulfuric acid and maleic anhydride.", source = "usgs_mcs" },
+  { Z = 23, symbol = "V", text = "Also used in batteries.", source = "usgs_mcs" },
+
+  { Z = 24, symbol = "Cr", text = "Stainless and heat-resisting steels are the main use.", source = "usgs_mcs" },
+  { Z = 24, symbol = "Cr", text = "Also needed for superalloys, and made into chromium chemicals.", source = "usgs_mcs" },
+  { Z = 24, symbol = "Cr", text = "Chrome plating gives a hard, shiny, corrosion-resistant surface; chromium colours glass green.", source = "pubchem" },
+
+  { Z = 25, symbol = "Mn", text = "Mainly used in making iron and steel, as ferromanganese and silicomanganese.", source = "usgs_mcs" },
+  { Z = 25, symbol = "Mn", text = "Batteries, including ordinary dry cells.", source = "usgs_mcs" },
+  { Z = 25, symbol = "Mn", text = "Smaller uses: animal feed, fertilisers and brick colourant.", source = "usgs_mcs" },
+
+  { Z = 26, symbol = "Fe", text = "Almost all iron ore (98 % in the U.S.) is made into steel.", source = "usgs_mcs" },
+  { Z = 26, symbol = "Fe", text = "Steel's largest market is construction (31 % of U.S. shipments), then service centres (26 %) and cars (15 %).", source = "usgs_mcs" },
+  { Z = 26, symbol = "Fe", text = "Foundries make cast iron, much of it from scrap; iron oxides colour concrete, paint, plastics and rubber.", source = "usgs_mcs" },
+
+  { Z = 27, symbol = "Co", text = "Half of U.S. cobalt (51 %) goes into superalloys, mainly for jet-engine turbines.", source = "usgs_mcs" },
+  { Z = 27, symbol = "Co", text = "Chemical uses (25 %), which include batteries.", source = "usgs_mcs" },
+  { Z = 27, symbol = "Co", text = "Cemented carbides for cutting and wear-resistant tools (9 %), and other alloys (15 %).", source = "usgs_mcs" },
+
+  { Z = 28, symbol = "Ni", text = "Stainless steel, alloy steels and nickel alloys take more than 85 % of U.S. nickel.", source = "usgs_mcs" },
+  { Z = 28, symbol = "Ni", text = "Electroplating, catalysts and chemicals take most of the rest.", source = "usgs_mcs" },
+  { Z = 28, symbol = "Ni", text = "Also used in batteries.", source = "usgs_mcs" },
+
+  { Z = 29, symbol = "Cu", text = "Building construction is the largest use (42 %).", source = "usgs_mcs" },
+  { Z = 29, symbol = "Cu", text = "Electrical and electronic products (23 %); cables and wiring are its key application.", source = "usgs_mcs" },
+  { Z = 29, symbol = "Cu", text = "Transport equipment (18 %), consumer goods (10 %) and industrial machinery (7 %).", source = "usgs_mcs" },
+
+  { Z = 30, symbol = "Zn", text = "Most zinc protects steel from rust as a coating (galvanising).", source = "usgs_mcs" },
+  { Z = 30, symbol = "Zn", text = "Next come brass and bronze, and zinc-based alloys.", source = "usgs_mcs" },
+  { Z = 30, symbol = "Zn", text = "Zinc die castings serve cars, electrical goods and hardware; zinc blocks protect steel by corroding in its place.", source = "pubchem" },
+
+  { Z = 31, symbol = "Ga", text = "Integrated circuits take 73 % of U.S. gallium, as gallium arsenide and gallium nitride, for defence, computing and telecommunications.", source = "usgs_mcs" },
+  { Z = 31, symbol = "Ga", text = "Optoelectronics (26 %): LEDs, laser diodes, light detectors and solar cells.", source = "usgs_mcs" },
+
+  { Z = 32, symbol = "Ge", text = "Germanium chemicals are used to make optical fibre.", source = "usgs_mcs" },
+  { Z = 32, symbol = "Ge", text = "Germanium wafers are the base of solar cells for satellites.", source = "usgs_mcs" },
+  { Z = 32, symbol = "Ge", text = "Night-vision devices and semiconductors.", source = "usgs_mcs" },
+  { Z = 32, symbol = "Ge", text = "Germanium and its oxide let infrared light through and are used in infrared optics.", source = "pubchem" },
+
+  { Z = 33, symbol = "As", text = "Mostly used, as compounds, in herbicides, insecticides and wood preservatives (more than 80 % of U.S. use).", source = "usgs_mcs" },
+  { Z = 33, symbol = "As", text = "Very pure arsenic makes gallium arsenide semiconductors for solar cells, space and telecommunications.", source = "usgs_mcs" },
+  { Z = 33, symbol = "As", text = "Arsenic hardens lead: shot, wheel weights and battery grids.", source = "usgs_mcs" },
+
+  { Z = 34, symbol = "Se", text = "Metallurgy takes 40 % of world use, much of it in producing manganese metal by electrolysis.", source = "usgs_mcs" },
+  { Z = 34, symbol = "Se", text = "Agriculture and animal health (20 %): a fertiliser additive and a dietary supplement for people and livestock.", source = "usgs_mcs" },
+  { Z = 34, symbol = "Se", text = "Glassmaking (20 %), and electronics and solar cells (10 %); also the active ingredient of some anti-dandruff shampoos.", source = "usgs_mcs" },
+
+  { Z = 35, symbol = "Br", text = "Mainly used to make brominated flame retardants.", source = "usgs_mcs" },
+  { Z = 35, symbol = "Br", text = "Clear bromide brines are used as drilling fluids for oil and gas wells.", source = "usgs_mcs" },
+  { Z = 35, symbol = "Br", text = "Also used in water treatment and as a chemical intermediate.", source = "usgs_mcs" },
+
+  { Z = 36, symbol = "Kr", text = "Semiconductor manufacture takes two-thirds of krypton (67 %).", source = "usgs_mcs" },
+  { Z = 36, symbol = "Kr", text = "Lamps (20 %), and the gap between the panes of insulated windows (10 %).", source = "usgs_mcs" },
+
+  { Z = 37, symbol = "Rb", text = "Specialty glass is the leading market, including glass for fibre-optic networks.", source = "usgs_mcs" },
+  { Z = 37, symbol = "Rb", text = "Rubidium atomic clocks keep telecommunication networks and satellite navigation in step.", source = "usgs_mcs" },
+  { Z = 37, symbol = "Rb", text = "Ultracold rubidium atoms are used in research, including work towards quantum computers.", source = "usgs_mcs" },
+  { Z = 37, symbol = "Rb", text = "Rubidium-82 can trace blood flow in PET scans.", source = "usgs_mcs" },
+
+  { Z = 38, symbol = "Sr", text = "Most U.S. strontium (65 %), as the mineral celestite, is added to drilling fluids for oil and gas wells.", source = "usgs_mcs" },
+  { Z = 38, symbol = "Sr", text = "Ceramic ferrite magnets (14 %), and the red of fireworks and signal flares (14 %).", source = "usgs_mcs" },
+  { Z = 38, symbol = "Sr", text = "Strontium-87 optical lattice clocks: the BIPM recommends their frequency as a secondary representation of the second.", source = "bipm_frequencies" },
+
+  { Z = 39, symbol = "Y", text = "Ceramics and phosphors are the leading uses.", source = "usgs_mcs" },
+  { Z = 39, symbol = "Y", text = "Yttrium–aluminium garnet crystals are used in lasers for industry, medicine and communication.", source = "usgs_mcs" },
+  { Z = 39, symbol = "Y", text = "Smaller amounts go into optical glass, optical fibre, pigments, catalysts and alloys.", source = "usgs_mcs" },
+
+  { Z = 40, symbol = "Zr", text = "Zircon (zirconium silicate) is used mostly in ceramics, and in foundry sand and furnace linings.", source = "usgs_mcs" },
+  { Z = 40, symbol = "Zr", text = "Zirconium ceramics shield hot parts of aerospace engines.", source = "usgs_mcs" },
+  { Z = 40, symbol = "Zr", text = "Zirconium metal hardly absorbs neutrons, so it is widely used inside nuclear reactors.", source = "pubchem" },
+
+  { Z = 41, symbol = "Nb", text = "About three-quarters of U.S. niobium (77 %) strengthens steel, as ferroniobium.", source = "usgs_mcs" },
+  { Z = 41, symbol = "Nb", text = "The rest (23 %) goes into superalloys, mainly for aerospace.", source = "usgs_mcs" },
+  { Z = 41, symbol = "Nb", text = "Niobium–titanium wire makes superconducting magnets; pure niobium cavities accelerate particles.", source = "pubchem" },
+
+  { Z = 42, symbol = "Mo", text = "Mainly an alloying agent in steel, cast iron and superalloys.", source = "usgs_mcs" },
+  { Z = 42, symbol = "Mo", text = "Also in catalysts, lubricants and pigments.", source = "usgs_mcs" },
+
+  { Z = 43, symbol = "Tc", text = "Technetium-99m, which lasts about six hours, is used to image bones, heart, kidneys and tumours in nuclear medicine.", source = "pubchem" },
+  { Z = 43, symbol = "Tc", text = "Used to calibrate particle detectors; it protects steel from corrosion, but only in sealed systems because it is radioactive.", source = "pubchem" },
+
+  { Z = 44, symbol = "Ru", text = "Catalysts, electronic components and computer chips.", source = "usgs_mcs" },
+  { Z = 44, symbol = "Ru", text = "Small additions harden platinum and palladium for wear-resistant electrical contacts, and make titanium far more corrosion-resistant.", source = "pubchem" },
+
+  { Z = 45, symbol = "Rh", text = "Catalysts, above all in car catalytic converters.", source = "usgs_mcs" },
+  { Z = 45, symbol = "Rh", text = "Electrical components.", source = "usgs_mcs" },
+  { Z = 45, symbol = "Rh", text = "Hardens platinum for thermocouples, laboratory crucibles and the nozzles through which glass fibre is drawn.", source = "pubchem" },
+
+  { Z = 46, symbol = "Pd", text = "Car catalytic converters.", source = "usgs_mcs" },
+  { Z = 46, symbol = "Pd", text = "Electronics and chemical catalysts.", source = "usgs_mcs" },
+
+  { Z = 47, symbol = "Ag", text = "Electrical and electronic uses take a quarter (25 %).", source = "usgs_mcs" },
+  { Z = 47, symbol = "Ag", text = "Investment bars (18 %), coins and medals (14 %), and jewellery and silverware (6 %).", source = "usgs_mcs" },
+  { Z = 47, symbol = "Ag", text = "Solar cells (15 %), and brazing and solder (3 %).", source = "usgs_mcs" },
+  { Z = 47, symbol = "Ag", text = "Kills bacteria: wound dressings, medical instruments, water purification.", source = "usgs_mcs" },
+
+  { Z = 48, symbol = "Cd", text = "Mainly in rechargeable nickel–cadmium batteries.", source = "usgs_mcs" },
+  { Z = 48, symbol = "Cd", text = "Cadmium telluride thin-film solar panels, and cadmium–zinc telluride radiation detectors.", source = "usgs_mcs" },
+  { Z = 48, symbol = "Cd", text = "Also used in alloys, coatings and pigments.", source = "usgs_mcs" },
+
+  { Z = 49, symbol = "In", text = "Most indium becomes indium tin oxide, the transparent conductor in flat screens and touchscreens.", source = "usgs_mcs" },
+  { Z = 49, symbol = "In", text = "Also in solders and alloys, semiconductors and research.", source = "usgs_mcs" },
+
+  { Z = 50, symbol = "Sn", text = "Tin chemicals are the largest U.S. use (25 %).", source = "usgs_mcs" },
+  { Z = 50, symbol = "Sn", text = "Tinplate (16 %), which keeps the steel of cans from rusting.", source = "usgs_mcs" },
+  { Z = 50, symbol = "Sn", text = "Alloys (12 %) and solder (11 %), plus bronze and bearing metals.", source = "usgs_mcs" },
+  { Z = 50, symbol = "Sn", text = "Window glass is made by floating molten glass on a bath of molten tin.", source = "pubchem" },
+
+  { Z = 51, symbol = "Sb", text = "Metal products including flame retardants take 49 % of U.S. use.", source = "usgs_mcs" },
+  { Z = 51, symbol = "Sb", text = "Antimony-hardened lead for lead-acid batteries and ammunition (40 %).", source = "usgs_mcs" },
+  { Z = 51, symbol = "Sb", text = "Ceramics, glass and rubber (11 %).", source = "usgs_mcs" },
+
+  { Z = 52, symbol = "Te", text = "Cadmium telluride thin-film solar cells take most tellurium (70 % of world use).", source = "usgs_mcs" },
+  { Z = 52, symbol = "Te", text = "Bismuth telluride thermoelectric devices, which cool or generate electricity (15 %).", source = "usgs_mcs" },
+  { Z = 52, symbol = "Te", text = "Metallurgy (10 %): it makes steel and copper easier to machine.", source = "usgs_mcs" },
+
+  { Z = 53, symbol = "I", text = "X-ray contrast media are the leading use worldwide.", source = "usgs_mcs" },
+  { Z = 53, symbol = "I", text = "Liquid-crystal displays, medicines, and iodine-based disinfectants.", source = "usgs_mcs" },
+  { Z = 53, symbol = "I", text = "Animal feed, food supplements and fluorochemicals.", source = "usgs_mcs" },
+
+  { Z = 54, symbol = "Xe", text = "Lamps (37 %) and semiconductor manufacture (36 %).", source = "usgs_mcs" },
+  { Z = 54, symbol = "Xe", text = "Lasers (13 %) and medicine (6 %).", source = "usgs_mcs" },
+
+  { Z = 55, symbol = "Cs", text = "Defines the second: one second is 9 192 631 770 periods of the caesium-133 clock transition.", source = "si_brochure" },
+  { Z = 55, symbol = "Cs", text = "Caesium atomic clocks are used in satellite navigation, aircraft guidance and telephone networks.", source = "usgs_mcs" },
+  { Z = 55, symbol = "Cs", text = "Very dense caesium formate brines are used to drill deep, hot, high-pressure oil and gas wells.", source = "usgs_mcs" },
+  { Z = 55, symbol = "Cs", text = "Caesium catalysts, and caesium iodide in X-ray panels; caesium-137 in industrial gauges and sterilisation.", source = "usgs_mcs" },
+
+  { Z = 56, symbol = "Ba", text = "More than 90 % of barite (barium sulfate) sold in the U.S. weighs down the drilling fluid of oil and gas wells.", source = "usgs_mcs" },
+  { Z = 56, symbol = "Ba", text = "A filler in paints, plastics, rubber and brake pads.", source = "usgs_mcs" },
+  { Z = 56, symbol = "Ba", text = "Barite blocks X-rays: high-density concrete shields X-ray rooms and reactors, and very pure barium sulfate is swallowed for X-ray images of the gut.", source = "usgs_mcs" },
+
+  { Z = 57, symbol = "La", text = "Catalysts and batteries.", source = "usgs_mcs" },
+  { Z = 57, symbol = "La", text = "Ceramics, glass and metallurgy.", source = "usgs_mcs" },
+
+  { Z = 58, symbol = "Ce", text = "Car catalytic converters.", source = "usgs_mcs" },
+  { Z = 58, symbol = "Ce", text = "Polishing powders, glass and ceramics.", source = "usgs_mcs" },
+  { Z = 58, symbol = "Ce", text = "Metallurgy.", source = "usgs_mcs" },
+
+  { Z = 59, symbol = "Pr", text = "Permanent magnets.", source = "usgs_mcs" },
+  { Z = 59, symbol = "Pr", text = "Aerospace alloys and batteries.", source = "usgs_mcs" },
+  { Z = 59, symbol = "Pr", text = "Ceramics and colourants.", source = "usgs_mcs" },
+
+  { Z = 60, symbol = "Nd", text = "Permanent magnets.", source = "usgs_mcs" },
+  { Z = 60, symbol = "Nd", text = "Lasers and catalysts.", source = "usgs_mcs" },
+
+  { Z = 61, symbol = "Pm", text = "Promethium-147, a beta emitter, measures the thickness of materials, for example coatings inside nuclear fuel cladding.", source = "pubchem" },
+  { Z = 61, symbol = "Pm", text = "It can make phosphors glow, the basis of small nuclear batteries; there is no large-scale use.", source = "pubchem" },
+
+  { Z = 62, symbol = "Sm", text = "Permanent magnets.", source = "usgs_mcs" },
+  { Z = 62, symbol = "Sm", text = "Cancer treatments.", source = "usgs_mcs" },
+  { Z = 62, symbol = "Sm", text = "Components of nuclear reactors.", source = "usgs_mcs" },
+
+  { Z = 63, symbol = "Eu", text = "Phosphors and nuclear control rods.", source = "usgs_mcs" },
+  { Z = 63, symbol = "Eu", text = "Europium oxide is the red phosphor of television screens; europium absorbs neutrons well.", source = "pubchem" },
+
+  { Z = 64, symbol = "Gd", text = "Medical imaging.", source = "usgs_mcs" },
+  { Z = 64, symbol = "Gd", text = "Metallurgy and permanent magnets.", source = "usgs_mcs" },
+  { Z = 64, symbol = "Gd", text = "It captures slow neutrons better than any other element, which suits it to reactor control rods.", source = "pubchem" },
+
+  { Z = 65, symbol = "Tb", text = "Permanent magnets.", source = "usgs_mcs" },
+  { Z = 65, symbol = "Tb", text = "Lasers, optical fibre and solid-state devices.", source = "usgs_mcs" },
+
+  { Z = 66, symbol = "Dy", text = "Permanent magnets.", source = "usgs_mcs" },
+  { Z = 66, symbol = "Dy", text = "Data storage devices and lasers.", source = "usgs_mcs" },
+
+  { Z = 67, symbol = "Ho", text = "Lasers.", source = "usgs_mcs" },
+  { Z = 67, symbol = "Ho", text = "Nuclear control rods and permanent magnets.", source = "usgs_mcs" },
+
+  { Z = 68, symbol = "Er", text = "Optical fibre and optical amplifiers.", source = "usgs_mcs" },
+  { Z = 68, symbol = "Er", text = "Lasers, and a colourant for glass.", source = "usgs_mcs" },
+
+  { Z = 69, symbol = "Tm", text = "Lasers.", source = "usgs_mcs" },
+  { Z = 69, symbol = "Tm", text = "X-ray devices, and metallurgy.", source = "usgs_mcs" },
+
+  { Z = 70, symbol = "Yb", text = "Catalysts, lasers, metallurgy and scintillators (crystals that flash when radiation passes).", source = "usgs_mcs" },
+  { Z = 70, symbol = "Yb", text = "Ytterbium ions and atoms run optical clocks; the BIPM recommends their frequencies as secondary representations of the second.", source = "bipm_frequencies" },
+
+  { Z = 71, symbol = "Lu", text = "Cancer therapies.", source = "usgs_mcs" },
+  { Z = 71, symbol = "Lu", text = "Medical imaging and electronics.", source = "usgs_mcs" },
+
+  { Z = 72, symbol = "Hf", text = "The leading use of hafnium metal is in superalloys for aerospace.", source = "usgs_mcs" },
+  { Z = 72, symbol = "Hf", text = "Control rods of nuclear reactors.", source = "usgs_mcs" },
+  { Z = 72, symbol = "Hf", text = "Semiconductors and ceramics.", source = "usgs_mcs" },
+
+  { Z = 73, symbol = "Ta", text = "Capacitors for electronics.", source = "usgs_mcs" },
+  { Z = 73, symbol = "Ta", text = "Metallurgy, including tantalum alloys and carbides.", source = "usgs_mcs" },
+  { Z = 73, symbol = "Ta", text = "It resists almost all chemical attack, so it is used for chemical-plant equipment.", source = "pubchem" },
+
+  { Z = 74, symbol = "W", text = "About 60 % becomes cemented carbide for cutting and wear-resistant tools in construction, metalworking, mining and drilling.", source = "usgs_mcs" },
+  { Z = 74, symbol = "W", text = "Alloys and specialty steels.", source = "usgs_mcs" },
+  { Z = 74, symbol = "W", text = "Electrodes, filaments, wires and heating elements, and welding.", source = "usgs_mcs" },
+
+  { Z = 75, symbol = "Re", text = "Superalloys for the hot turbine parts of jet engines and gas turbines (about 80 % of use).", source = "usgs_mcs" },
+  { Z = 75, symbol = "Re", text = "Platinum–rhenium catalysts that turn petroleum into high-octane petrol (15 %).", source = "usgs_mcs" },
+  { Z = 75, symbol = "Re", text = "Thermocouples, electrical contacts and filaments.", source = "usgs_mcs" },
+
+  { Z = 76, symbol = "Os", text = "Almost all osmium goes into very hard alloys with other platinum metals, for pen nibs, instrument pivots and electrical contacts.", source = "pubchem" },
+  { Z = 76, symbol = "Os", text = "Osmium tetroxide stains fatty tissue for microscopy and reveals fingerprints; it is very poisonous.", source = "pubchem" },
+
+  { Z = 77, symbol = "Ir", text = "Coatings on the anodes of electrochemical plants, and chemical catalysts.", source = "usgs_mcs" },
+  { Z = 77, symbol = "Ir", text = "Hardens platinum; iridium crucibles withstand very high temperatures.", source = "pubchem" },
+  { Z = 77, symbol = "Ir", text = "Iridium-192 gamma rays inspect welds and castings for flaws, and treat cancer from inside the body.", source = "pubchem" },
+
+  { Z = 78, symbol = "Pt", text = "Car catalytic converters are the leading use of the platinum-group metals.", source = "usgs_mcs" },
+  { Z = 78, symbol = "Pt", text = "Catalysts in chemical plants and oil refineries.", source = "usgs_mcs" },
+  { Z = 78, symbol = "Pt", text = "Jewellery, investment, aerospace alloys, glassmaking equipment, and medical and dental devices.", source = "usgs_mcs" },
+
+  { Z = 79, symbol = "Au", text = "Jewellery, and gold leaf for gilding.", source = "pubchem" },
+  { Z = 79, symbol = "Au", text = "Coins, and a standard of value in monetary systems.", source = "pubchem" },
+  { Z = 79, symbol = "Au", text = "It conducts well and does not tarnish, so it is used for electrical connectors; also in dentistry.", source = "pubchem" },
+  { Z = 79, symbol = "Au", text = "Thin gold films reflect infrared radiation on satellites.", source = "pubchem" },
+
+  { Z = 80, symbol = "Hg", text = "Relays, sensors, switches and valves took 65 % of the mercury in U.S. products; dental amalgam 27 %.", source = "usgs_mcs" },
+  { Z = 80, symbol = "Hg", text = "Some chlorine plants still use a mercury cathode; mercury is also a catalyst.", source = "usgs_mcs" },
+  { Z = 80, symbol = "Hg", text = "Lamps (1 %).", source = "usgs_mcs" },
+
+  { Z = 81, symbol = "Tl", text = "Thallium-201 images blood flow to the heart.", source = "usgs_mcs" },
+  { Z = 81, symbol = "Tl", text = "Thallium-doped sodium iodide crystals detect gamma rays; thallium compounds make infrared lenses and windows.", source = "usgs_mcs" },
+  { Z = 81, symbol = "Tl", text = "Raises the refractive index of glass; very dense thallium solutions separate minerals by density.", source = "usgs_mcs" },
+
+  { Z = 82, symbol = "Pb", text = "Lead-acid batteries take about two-thirds (67 %): car starter batteries, standby power and motive power.", source = "usgs_mcs" },
+  { Z = 82, symbol = "Pb", text = "Ammunition, ceramics and glass.", source = "usgs_mcs" },
+  { Z = 82, symbol = "Pb", text = "Its density makes it a shield against X-rays and gamma rays.", source = "pubchem" },
+
+  { Z = 83, symbol = "Bi", text = "Mostly as chemicals: stomach remedies (bismuth subsalicylate), cosmetics and pigments.", source = "usgs_mcs" },
+  { Z = 83, symbol = "Bi", text = "A non-toxic replacement for lead in brass plumbing fittings, solders and free-machining steels.", source = "usgs_mcs" },
+  { Z = 83, symbol = "Bi", text = "Low-melting bismuth alloys trigger fire sprinklers.", source = "usgs_mcs" },
+
+  { Z = 84, symbol = "Po", text = "Polonium-210 removes static electricity in machinery that rolls paper, sheet metal or wire.", source = "pubchem" },
+  { Z = 84, symbol = "Po", text = "Sealed in brushes that clean dust from photographic film.", source = "pubchem" },
+  { Z = 84, symbol = "Po", text = "With beryllium it makes a neutron source.", source = "pubchem" },
+
+  { Z = 85, symbol = "At", text = "Astatine-211 has been studied for radiotherapy of thyroid disease and cancer.", source = "pubchem" },
+  { Z = 85, symbol = "At", text = "Otherwise no use outside basic research: only tiny amounts are made, and they are short-lived.", source = "pubchem" },
+
+  { Z = 86, symbol = "Rn", text = "Small amounts have been used in hospitals to treat some cancers, sealed in tiny tubes placed in or near a tumour.", source = "pubchem" },
+  { Z = 86, symbol = "Rn", text = "For this it is collected from radium, which gives off radon continuously.", source = "pubchem" },
+
+  { Z = 87, symbol = "Fr", text = "No use outside basic research: only tiny amounts have ever been made.", source = "pubchem" },
+  { Z = 87, symbol = "Fr", text = "Francium atoms have been laser-cooled and trapped (first in 1996) for precision measurements in atomic physics.", source = "primary_literature", doi = "10.1103/PhysRevLett.76.3522" },
+
+  { Z = 88, symbol = "Ra", text = "Radium-226 was used to treat cancer from close range (brachytherapy), sealed in needles or seeds.", source = "pubchem" },
+  { Z = 88, symbol = "Ra", text = "Formerly in self-luminous paint for watch and instrument dials, now replaced by safer sources.", source = "pubchem" },
+  { Z = 88, symbol = "Ra", text = "With beryllium it makes a neutron source; the old unit of radioactivity, the curie, was based on radium-226.", source = "pubchem" },
+
+  { Z = 89, symbol = "Ac", text = "Actinium-225 is used against cancer: bound to a carrier molecule, its alpha particles and those of its decay products kill tumour cells.", source = "pubchem" },
+  { Z = 89, symbol = "Ac", text = "It is also used to produce neutrons; it has no significant commercial use.", source = "pubchem" },
+
+  { Z = 90, symbol = "Th", text = "Its uses are few because it is radioactive.", source = "usgs_mcs" },
+  { Z = 90, symbol = "Th", text = "Strengthens magnesium alloys at high temperature, and coats tungsten filaments in electronic devices.", source = "pubchem" },
+  { Z = 90, symbol = "Th", text = "Thorium-232 can be turned into fissile uranium-233 in a reactor, a possible nuclear fuel.", source = "pubchem" },
+  { Z = 90, symbol = "Th", text = "The thorium-229 nucleus has a transition low enough to be driven by a laser, the basis of experimental nuclear clocks.", source = "primary_literature", doi = "10.1038/s41586-024-07839-6" },
+
+  { Z = 91, symbol = "Pa", text = "No use outside basic research: it is scarce, very radioactive and toxic.", source = "pubchem" },
+  { Z = 91, symbol = "Pa", text = "What is studied is usually extracted from spent nuclear fuel.", source = "pubchem" },
+
+  { Z = 92, symbol = "U", text = "Fuel for nuclear power stations, usually as uranium dioxide; uranium-235 is the natural isotope that splits.", source = "pubchem" },
+  { Z = 92, symbol = "U", text = "The 2025 U.S. critical-minerals list names nuclear fuel and medical applications.", source = "usgs_mcs" },
+  { Z = 92, symbol = "U", text = "Once coloured glass and ceramic glazes yellow to orange-red, a use abandoned for health reasons.", source = "pubchem" },
+
+  { Z = 93, symbol = "Np", text = "Neptunium-237, a by-product of making plutonium in reactors, is used in neutron detectors.", source = "pubchem" },
+  { Z = 93, symbol = "Np", text = "It splits with fast neutrons, and so is of interest for fast reactors.", source = "pubchem" },
+
+  { Z = 94, symbol = "Pu", text = "Plutonium-238 heats radioisotope generators that power space probes too far from the Sun for solar panels (Galileo, Cassini).", source = "pubchem" },
+  { Z = 94, symbol = "Pu", text = "Plutonium-239 sustains a chain reaction: nuclear weapons, and fuel in some reactors.", source = "pubchem" },
+
+  { Z = 95, symbol = "Am", text = "Americium-241 ionises the air inside household smoke detectors.", source = "pubchem" },
+  { Z = 95, symbol = "Am", text = "A portable source of gamma rays for gauging thickness (for example of flat glass) and for X-ray fluorescence analysis.", source = "pubchem" },
+
+  { Z = 96, symbol = "Cm", text = "Curium-244 is the alpha source of the alpha-particle X-ray spectrometers on Mars rovers and on the Philae comet lander.", source = "pubchem" },
+  { Z = 96, symbol = "Cm", text = "Otherwise used for basic research; only small amounts have been made.", source = "pubchem" },
+
+  { Z = 97, symbol = "Bk", text = "Berkelium-249 was the target from which tennessine (element 117) was first made, by bombarding it with calcium-48.", source = "iupac_discovery", doi = "10.1515/pac-2015-0502" },
+  { Z = 97, symbol = "Bk", text = "It has no use outside research.", source = "iupac_discovery", doi = "10.1515/pac-2015-0502" },
+
+  { Z = 98, symbol = "Cf", text = "Californium-252 is a strong, compact neutron source.", source = "pubchem" },
+  { Z = 98, symbol = "Cf", text = "Its neutrons reveal the composition of ores, coal and cement (neutron activation), and find water and oil layers in wells.", source = "pubchem" },
+  { Z = 98, symbol = "Cf", text = "Occasionally used to treat cancer with neutrons.", source = "pubchem" },
+
+  { Z = 99, symbol = "Es", text = "No use outside basic research: only small amounts have ever been made.", source = "pubchem" },
+  { Z = 99, symbol = "Es", text = "Einsteinium-253 was the target from which the first atoms of mendelevium were made (1955).", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+
+  { Z = 100, symbol = "Fm", text = "No use outside basic research: only tiny amounts have been made, and its isotopes are short-lived.", source = "pubchem" },
+  { Z = 100, symbol = "Fm", text = "Studied to learn about the heaviest nuclei and the rest of the periodic table.", source = "pubchem" },
+
+  { Z = 101, symbol = "Md", text = "No use outside basic research: only small amounts have ever been made.", source = "pubchem" },
+  { Z = 101, symbol = "Md", text = "Mendelevium-256 has been used to study its chemistry in solution.", source = "pubchem" },
+
+  { Z = 102, symbol = "No", text = "No use outside basic research: only tiny amounts have ever been made.", source = "pubchem" },
+  { Z = 102, symbol = "No", text = "Its atoms are made a few at a time, by fusing lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+
+  { Z = 103, symbol = "Lr", text = "No use outside basic research: only tiny amounts have ever been made.", source = "pubchem" },
+  { Z = 103, symbol = "Lr", text = "Its atoms are made a few at a time, by fusing lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+
+  { Z = 104, symbol = "Rf", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 104, symbol = "Rf", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 105, symbol = "Db", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 105, symbol = "Db", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 106, symbol = "Sg", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 106, symbol = "Sg", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 107, symbol = "Bh", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 107, symbol = "Bh", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 108, symbol = "Hs", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 108, symbol = "Hs", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 109, symbol = "Mt", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 109, symbol = "Mt", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/pac199365081757" },
+  { Z = 110, symbol = "Ds", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac200173060959" },
+  { Z = 110, symbol = "Ds", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/pac200173060959" },
+  { Z = 111, symbol = "Rg", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/pac200375101601" },
+  { Z = 111, symbol = "Rg", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/pac200375101601" },
+  { Z = 112, symbol = "Cn", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/PAC-REP-08-03-05" },
+  { Z = 112, symbol = "Cn", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/PAC-REP-08-03-05" },
+  { Z = 113, symbol = "Nh", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1515/pac-2015-0502" },
+  { Z = 113, symbol = "Nh", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1515/pac-2015-0502" },
+  { Z = 114, symbol = "Fl", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/PAC-REP-10-05-01" },
+  { Z = 114, symbol = "Fl", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/PAC-REP-10-05-01" },
+  { Z = 115, symbol = "Mc", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1515/pac-2015-0502" },
+  { Z = 115, symbol = "Mc", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1515/pac-2015-0502" },
+  { Z = 116, symbol = "Lv", text = "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.", source = "iupac_discovery", doi = "10.1351/PAC-REP-10-05-01" },
+  { Z = 116, symbol = "Lv", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1351/PAC-REP-10-05-01" },
+  { Z = 117, symbol = "Ts", text = "Its atoms are made a few at a time, by fusing calcium-48 with a berkelium-249 target in an accelerator.", source = "iupac_discovery", doi = "10.1515/pac-2015-0502" },
+  { Z = 117, symbol = "Ts", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1515/pac-2015-0502" },
+  { Z = 118, symbol = "Og", text = "Only a handful of atoms have ever been detected, made by fusing calcium-48 with californium-249 in an accelerator.", source = "iupac_discovery", doi = "10.1515/pac-2015-0501" },
+  { Z = 118, symbol = "Og", text = "No use outside research into the heaviest nuclei and the end of the periodic table.", source = "iupac_discovery", doi = "10.1515/pac-2015-0501" },
+]

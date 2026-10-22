@@ -512,6 +512,101 @@
    "strategic": false,
    "listedAs": "arsenic",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.64,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Mostly used, as compounds, in herbicides, insecticides and wood preservatives (more than 80 % of U.S. use).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Very pure arsenic makes gallium arsenide semiconductors for solar cells, space and telecommunications.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Arsenic hardens lead: shot, wheel weights and battery grids.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "Grey (metallic) arsenic",
+    "note": "Puckered layers of atoms: the stable, brittle, steel-grey form.",
+    "source": "greenwood_earnshaw",
+    "standard": true
+   },
+   {
+    "name": "Yellow arsenic",
+    "note": "Separate As₄ tetrahedra like white phosphorus; made by cooling the vapour quickly, and turns grey in light.",
+    "source": "greenwood_earnshaw"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed"
+    },
+    {
+     "code": "H331",
+     "text": "Toxic if inhaled"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5359596,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 1.8,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "value": 0.0141,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

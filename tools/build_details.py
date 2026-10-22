@@ -19,6 +19,7 @@ from pathlib import Path
 
 import jsonschema
 
+import build_physical
 import fetch_iaea
 import fetch_nist_levels
 import fetch_nist_lines
@@ -910,6 +911,7 @@ def build_elements(index: dict, report: Report) -> int:
             "production": production_record(prod_rows.get(z, [])),
             "critical": critical_record(crit.get(z)),
         }
+        doc["physical"] |= build_physical.record(e, doc["physical"])
         doc["nucleus"] = {"origin": origin_record(origin.get(z), origin_omitted.get(z))}
         amo = metrology.get(z, {"clocks": [], "siHistory": []})
         doc["amo"] = {

@@ -38,7 +38,8 @@
         "USD/kg",
         "g",
         "°",
-        "kPa"
+        "kPa",
+        "J/(mol·K)"
       ]
     },
     "QuantityFlag": {
@@ -2345,13 +2346,69 @@
                 "eu2023"
               ],
               "additionalProperties": false
+            },
+            "thermal": {
+              "$ref": "#/definitions/ThermalProperties"
+            },
+            "uses": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/UseNote"
+              }
+            },
+            "allotropes": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Allotrope"
+              }
+            },
+            "hazards": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/GhsHazards"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            },
+            "abundanceByMass": {
+              "type": "object",
+              "description": "The four abundances on one scale for the log-scale bars: mg/kg, i.e. parts per million by mass. Derived in tools/build_physical.py from `abundance` (sea water taken as 1 kg per litre; the body amount divided by the 70 kg reference adult); each note says how.",
+              "properties": {
+                "crust": {
+                  "$ref": "#/definitions/Q"
+                },
+                "ocean": {
+                  "$ref": "#/definitions/Q"
+                },
+                "solar": {
+                  "$ref": "#/definitions/Q"
+                },
+                "body": {
+                  "$ref": "#/definitions/Q"
+                }
+              },
+              "required": [
+                "crust",
+                "ocean",
+                "solar",
+                "body"
+              ],
+              "additionalProperties": false
             }
           },
           "required": [
             "abundance",
             "production",
             "critical",
-            "crystal"
+            "crystal",
+            "thermal",
+            "uses",
+            "allotropes",
+            "hazards",
+            "abundanceByMass"
           ],
           "additionalProperties": false
         },
@@ -2749,6 +2806,204 @@
         "codId",
         "reference",
         "source"
+      ],
+      "additionalProperties": false
+    },
+    "ThermalProperties": {
+      "description": "Thermal properties of the element (SPEC §10.4). Molar heat capacity C_p at 25 °C and 1 bar, from the CRC Handbook, in J/(mol·K): per mole of atoms, or per mole of molecules where `formulaAtoms` is given (the diatomic gases and halogens).",
+      "type": "object",
+      "properties": {
+        "molarHeatCapacity": {
+          "$ref": "#/definitions/Q"
+        },
+        "formulaAtoms": {
+          "type": "integer",
+          "minimum": 2,
+          "description": "Atoms in the formula unit the value refers to (2 for H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂); absent = per mole of atoms."
+        }
+      },
+      "required": [
+        "molarHeatCapacity"
+      ],
+      "additionalProperties": false
+    },
+    "UseNote": {
+      "description": "One bullet of what the element is used for, in PTE-21C's own words, with its source (tools/curated/uses.toml).",
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "Allotrope": {
+      "description": "A form of the pure element (tools/curated/allotropes.toml); `standard` marks the reference form at 25 °C and 1 bar.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "standard": {
+          "type": "boolean"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "note",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "HazardStatement": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^H\\d{3}[A-Za-z]*(\\+H\\d{3}[A-Za-z]*)*$"
+        },
+        "text": {
+          "type": "string"
+        },
+        "share": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Per cent of the ECHA notifications that give this statement, as PubChem aggregates them."
+        }
+      },
+      "required": [
+        "code",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "GhsHazards": {
+      "description": "GHS classification of the elemental substance (SPEC §10.4), from its PubChem compound record: the EU harmonised classification where one exists, otherwise PubChem's aggregation of the ECHA C&L notifications with the most reports. Pictograms are drawn by PTE-21C from their codes.",
+      "type": "object",
+      "properties": {
+        "pictograms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "GHS01",
+                  "GHS02",
+                  "GHS03",
+                  "GHS04",
+                  "GHS05",
+                  "GHS06",
+                  "GHS07",
+                  "GHS08",
+                  "GHS09"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "description": "Short name of what it warns of (tools/fetch_pubchem_ghs.py)."
+              }
+            },
+            "required": [
+              "code",
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "signalWord": {
+          "type": "string",
+          "enum": [
+            "Danger",
+            "Warning"
+          ]
+        },
+        "hazardStatements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/HazardStatement"
+          }
+        },
+        "basis": {
+          "type": "string",
+          "enum": [
+            "eu_harmonised",
+            "echa_notifications",
+            "other"
+          ]
+        },
+        "reports": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "notMeetingCriteria": {
+          "type": "object",
+          "properties": {
+            "share": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "reports": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "of": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "share",
+            "reports",
+            "of"
+          ],
+          "additionalProperties": false
+        },
+        "notClassified": {
+          "type": "boolean",
+          "description": "The classification says the substance does not meet the GHS hazard criteria."
+        },
+        "cid": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "PubChem compound ID of the elemental substance."
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pictograms",
+        "hazardStatements",
+        "basis",
+        "cid",
+        "source",
+        "note"
       ],
       "additionalProperties": false
     },

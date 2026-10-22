@@ -426,6 +426,71 @@
    "strategic": false,
    "listedAs": "vanadium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.89,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "More than 90 % is used as an alloying agent for iron and steel.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Vanadium catalysts make sulfuric acid and maleic anhydride.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also used in batteries.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 23990,
+   "source": "pubchem_ghs",
+   "reports": 452,
+   "notMeetingCriteria": {
+    "share": 95.4,
+    "reports": 431,
+    "of": 452
+   },
+   "notClassified": true,
+   "note": "Aggregated by PubChem from 452 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 95.4 % of the reports (431 of 452) say vanadium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 120.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.0025,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.42735,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

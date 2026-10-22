@@ -751,6 +751,83 @@
    "listedAs": "light rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.11,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Catalysts and batteries.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ceramics, glass and metallurgy.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 23.4
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously",
+     "share": 19.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23926,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 248,
+   "notMeetingCriteria": {
+    "share": 58.9,
+    "reports": 146,
+    "of": 248
+   },
+   "note": "Aggregated by PubChem from 248 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 58.9 % of the reports (146 of 248) say lanthanum does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 39.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 3.4e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.001992,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

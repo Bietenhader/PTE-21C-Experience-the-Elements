@@ -244,6 +244,99 @@
    "listedAs": "boron",
    "source": "eu_crm",
    "note": "The 2023 study assessed 'boron/borate' (borate minerals); the Regulation lists 'boron'."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 11.087,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "The glass and ceramics industries are the main users of borates, including specialty glasses.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Borates also go into insulation, abrasives, cleaning products and insecticides, and into making semiconductors.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Used in nuclear energy, and to harden steel and glass.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "β-rhombohedral boron",
+    "note": "The stable form: a complicated framework of linked B₁₂ icosahedra, more than 100 atoms per cell.",
+    "source": "greenwood_earnshaw",
+    "standard": true
+   },
+   {
+    "name": "α-rhombohedral boron",
+    "note": "The simplest form: B₁₂ icosahedra packed in layers, 12 atoms per cell; red, transparent crystals.",
+    "source": "greenwood_earnshaw"
+   },
+   {
+    "name": "Amorphous boron",
+    "note": "A brown powder without long-range order.",
+    "source": "greenwood_earnshaw"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 46.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5462311,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 485,
+   "notMeetingCriteria": {
+    "share": 52.2,
+    "reports": 253,
+    "of": 485
+   },
+   "note": "Aggregated by PubChem from 485 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 52.2 % of the reports (253 of 485) say boron does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 10.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 4.44,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.005984,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.048 g."
+   }
   }
  },
  "nucleus": {

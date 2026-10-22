@@ -463,6 +463,85 @@
    "listedAs": "nickel — battery grade",
    "source": "eu_crm",
    "note": "Only battery-grade nickel is listed. The 2023 study: nickel does not meet the CRM thresholds but is included because it is a strategic raw material."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.07,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Stainless steel, alloy steels and nickel alloys take more than 85 % of U.S. nickel.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Electroplating, catalysts and chemicals take most of the rest.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also used in batteries.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H317",
+     "text": "May cause an allergic skin reaction"
+    },
+    {
+     "code": "H351",
+     "text": "Suspected of causing cancer"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 935,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 84.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.00056,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 89.85,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.142857,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

@@ -292,6 +292,89 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 28.23,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Soda ash (sodium carbonate) is used mostly for glass (45 %) and chemicals (28 %), and in soaps and detergents (5 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Salt (sodium chloride) is the feedstock for chlorine and caustic soda, and is spread on winter roads (about 37 % of U.S. salt).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Sodium-vapour street lamps give their yellow light; liquid sodium has been used to cool nuclear reactors.",
+    "source": "pubchem"
+   },
+   {
+    "text": "The metal is used to produce titanium and chemicals such as sodium cyanide and sodium hydride.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5360545,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 23600.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 10800.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 39.3,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 1428.57,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

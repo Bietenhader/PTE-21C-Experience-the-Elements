@@ -875,6 +875,99 @@
    "source": "eu_crm",
    "doubtful": true,
    "note": "DOUBTFUL: osmium is a platinum-group metal by the usual chemical definition and the Regulation does not define the group, but the Commission's 2023 study did not assess osmium ('excluded from the 2017, 2020 and 2023 exercises' for lack of data, footnote 18, p. 17) and lists the PGM group as Ir, Pd, Pt, Rh, Ru. Show as 'possibly covered' or omit."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.7,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Almost all osmium goes into very hard alloys with other platinum metals, for pen nibs, instrument pivots and electrical contacts.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Osmium tetroxide stains fatty tissue for microscopy and reveals fingerprints; it is very poisonous.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 97.4
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 96.7
+    },
+    {
+     "code": "H318",
+     "text": "Causes serious eye damage",
+     "share": 96.1
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 96.7
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 69.1
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23937,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 152,
+   "note": "Aggregated by PubChem from 152 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.0015,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "value": 0.003935,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

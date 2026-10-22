@@ -716,6 +716,55 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Promethium-147, a beta emitter, measures the thickness of materials, for example coatings inside nuclear fuel cladding.",
+    "source": "pubchem"
+   },
+   {
+    "text": "It can make phosphors glow, the basis of small nuclear batteries; there is no large-scale use.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 23944,
+   "source": "pubchem_ghs",
+   "notClassified": true,
+   "note": "Aggregated by PubChem from the reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. The reports say promethium does not meet the GHS hazard criteria. GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

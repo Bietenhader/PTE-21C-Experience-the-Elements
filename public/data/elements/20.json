@@ -371,6 +371,77 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.929,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Lime (calcium oxide) is used above all in steelmaking, then in chemicals, flue-gas cleaning, construction and water treatment.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Gypsum (calcium sulfate) makes wallboard and plaster and is used in cement and agriculture.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Calcium metal extracts thorium, uranium and zirconium from their compounds and removes oxygen, sulfur and carbon from alloys.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5460341,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 41500.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 412.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 73.97,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 14285.7,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

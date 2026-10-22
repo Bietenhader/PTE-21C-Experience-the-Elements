@@ -509,6 +509,97 @@
    "strategic": true,
    "listedAs": "gallium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.03,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Integrated circuits take 73 % of U.S. gallium, as gallium arsenide and gallium nitride, for defence, computing and telecommunications.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Optoelectronics (26 %): LEDs, laser diodes, light detectors and solar cells.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H290",
+     "text": "May be corrosive to metals",
+     "share": 32.5
+    },
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 25.3
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage",
+     "share": 57.2
+    },
+    {
+     "code": "H412",
+     "text": "Harmful to aquatic life with long lasting effects",
+     "share": 25.3
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5360835,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 388,
+   "notMeetingCriteria": {
+    "share": 2.3,
+    "reports": 9,
+    "of": 388
+   },
+   "note": "Aggregated by PubChem from 388 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 2.3 % of the reports (9 of 388) say gallium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 19.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 3e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.07673,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

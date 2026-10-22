@@ -13,6 +13,18 @@
    "retrieved": "2026-10-22",
    "notes": "REST: rest/pug/periodictable/JSON (one request) and rest/pug_view/data/element/{Z}/JSON (one per element). PubChem aggregates data from Jefferson Lab and Los Alamos National Laboratory (both U.S. DOE); the oxidation-state lists used here come from those two contributors via PubChem."
   },
+  "pubchem_ghs": {
+   "id": "pubchem_ghs",
+   "title": "PubChem compound records — GHS Classification of the elemental substances",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/ghs/",
+   "licence": "PubChem: public domain (U.S. Government work); the classifications are facts reported by their contributors (EU CLP Annex VI; ECHA C&L Inventory notifications, reuse with acknowledgement)",
+   "licenceUrl": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+   "citation": "PubChem, National Center for Biotechnology Information, U.S. National Library of Medicine, compound records of the elemental substances, section 'GHS Classification' (rest/pug_view/data/compound/{CID}/JSON?heading=GHS+Classification); classifications from Regulation (EC) No 1272/2008 (CLP), Annex VI, and from the notifications to the ECHA C&L Inventory as aggregated by PubChem.",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "One name lookup (rest/pug/compound/name/{name}/cids/JSON) and one GHS request per element, 2 per second. Shown: the EU harmonised classification where one exists, otherwise PubChem's aggregation of the ECHA C&L notifications with the most reports (with the share of reports behind each hazard statement, and the share that says the substance does not meet the GHS criteria), otherwise the first other contributor. GHS has no hazard class for radioactivity."
+  },
   "nist_gsie": {
    "id": "nist_gsie",
    "title": "NIST Atomic Spectra Database — Ionization Energies",
@@ -310,6 +322,28 @@
    "kind": "curated",
    "status": "ok",
    "notes": "One CIF per element, read into tools/curated/crystal.toml (space group, Pearson symbol, cell lengths and angles, temperature where stated). Entries from before 1947 are avoided because of the old kX unit."
+  },
+  "crc_handbook": {
+   "id": "crc_handbook",
+   "title": "CRC Handbook of Chemistry and Physics, 95th edition — Heat capacity of the elements at 25 °C",
+   "url": "https://doi.org/10.1201/b17118",
+   "licence": "Cited scientific table (numerical values are facts; cite)",
+   "licenceUrl": "https://doi.org/10.1201/b17118",
+   "citation": "W. M. Haynes (ed.), CRC Handbook of Chemistry and Physics, 95th edition, CRC Press, Boca Raton (2014), doi:10.1201/b17118, section 4, 'Heat capacity of the elements at 25 °C'; values as transcribed in the mendeleev package 1.3.0 (MIT), whose property metadata cites this edition.",
+   "kind": "curated",
+   "status": "ok",
+   "notes": "Molar heat capacity C_p at 25 °C and 1 bar in tools/curated/thermal.toml, per mole of atoms, or of molecules for H2, N2, O2, F2, Cl2, Br2 and I2 as the table gives them. Transcribed once from mendeleev; not checked line by line against the printed handbook."
+  },
+  "greenwood_earnshaw": {
+   "id": "greenwood_earnshaw",
+   "title": "Chemistry of the Elements (Greenwood & Earnshaw), 2nd edition",
+   "url": "https://doi.org/10.1016/C2009-0-30414-6",
+   "licence": "Cited textbook (facts; cite)",
+   "licenceUrl": "https://doi.org/10.1016/C2009-0-30414-6",
+   "citation": "N. N. Greenwood and A. Earnshaw, Chemistry of the Elements, 2nd edition, Butterworth-Heinemann, Oxford (1997), doi:10.1016/C2009-0-30414-6.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "The allotropes listed in tools/curated/allotropes.toml (names and one-line descriptions in our own words)."
   },
   "lodders2025": {
    "id": "lodders2025",

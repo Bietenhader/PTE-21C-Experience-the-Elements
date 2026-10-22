@@ -254,6 +254,90 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 29.124,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of N₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "About 88 % of U.S. ammonia (fixed nitrogen) becomes fertiliser, such as urea and ammonium nitrate.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ammonia is also the starting point for explosives, plastics and synthetic fibres.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Nitrogen gas shields chips and welds from air and pushes crude oil out of wells; liquid nitrogen freezes and preserves biological samples.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated",
+     "share": 70.2
+    },
+    {
+     "code": "H281",
+     "text": "Contains refrigerated gas; may cause cryogenic burns or injury",
+     "share": 26.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 947,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 1001,
+   "notMeetingCriteria": {
+    "share": 4.7,
+    "reports": 47,
+    "of": 1001
+   },
+   "note": "Aggregated by PubChem from 1001 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 4.7 % of the reports (47 of 1001) say nitrogen does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 19.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.5,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 1047.0,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 25714.3,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

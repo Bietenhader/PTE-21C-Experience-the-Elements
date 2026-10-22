@@ -252,7 +252,7 @@ function GroundTerm({ e, levels, sources }: { e: ElementIndexEntry; levels: Leve
         </dt>
         <dd>
           {lsG === null ? (
-            <MissingValue m={{ missing: true, reason: "not_applicable", note: "J = 0: the formula is undefined and the level has no electronic magnetic moment." }} />
+            <MissingValue m={{ missing: true, reason: "not_applicable", note: "J = 0: the formula would divide by zero, and the level has no electronic magnetic moment." }} />
           ) : (
             <>
               g<sub>J</sub> = {lsG.toFixed(5)}{" "}

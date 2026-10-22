@@ -174,5 +174,16 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | Biology: a known role | 26 | — | biology.toml |
 | History: discovery | 118 | — | history.toml |
 | Our own short text | 118 | — | prose/{Z}.md |
+| Static dipole polarizability | 118 | — | schwerdtfeger2019 |
+| Ionic radii (Shannon) | 91 | — | shannon1976 |
+| Well-known compounds | 94 | — | chemistry.toml, pubchem_compounds |
+| Reactions with air, water and acids | 95 | — | chemistry.toml (hsdb, cameo_chemicals, greenwood1997) |
+| Molar heat capacity | 85 | — | crc_handbook |
+| Allotropes | 14 | — | allotropes.toml |
+| Uses | 118 | — | uses.toml |
+| GHS hazard classification | 84 | — | pubchem_ghs |
+| IARC classification | 23 | — | iarc_classifications |
+| Isotopes in biology and medicine | 14 | — | biology.toml |
+| Place of discovery on the map | 100 | — | natural_earth, geonames |
 
 Predictions for Z ≥ 109 (configurations, ground levels, ionization energies) come from published relativistic calculations, are flagged *predicted* and are marked † in the app.

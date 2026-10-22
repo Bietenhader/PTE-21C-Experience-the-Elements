@@ -407,6 +407,87 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.963, white_dwarfs 0.037); quantised to 0.05. Stack height 13 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.08 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes at once; oxidises so fast that the metal can melt and ignite.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Reacts violently with water, giving potassium hydroxide and hydrogen, which ignites with a lilac flame.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "KCl",
+    "name": "potassium chloride",
+    "note": "potash fertiliser",
+    "source": "pubchem_compounds",
+    "cid": 4873
+   },
+   {
+    "formula": "KOH",
+    "name": "potassium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 14797
+   },
+   {
+    "formula": "KNO3",
+    "name": "potassium nitrate",
+    "note": "saltpetre",
+    "source": "pubchem_compounds",
+    "cid": 24434
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "KCl",
+    "name": "potassium chloride",
+    "source": "pubchem_compounds",
+    "cid": 4873
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 137.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 138.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 151.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462222
+ },
  "amo": {
   "hyperfine": [
    {

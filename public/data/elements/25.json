@@ -458,6 +458,178 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.080, massive_stars 0.151, white_dwarfs 0.768); quantised to 0.05. Stack height 63 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises superficially in air; burns with a bright light when heated.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Decomposes water slowly in the cold and quickly when heated, giving hydrogen.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Dissolves in dilute mineral acids with hydrogen given off, forming manganese(II) salts.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "MnO2",
+    "name": "manganese dioxide",
+    "note": "in ordinary alkaline batteries",
+    "source": "pubchem_compounds",
+    "cid": 14801
+   },
+   {
+    "formula": "KMnO4",
+    "name": "potassium permanganate",
+    "source": "pubchem_compounds",
+    "cid": 516875
+   },
+   {
+    "formula": "MnSO4",
+    "name": "manganese(II) sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24580
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 7,
+    "formula": "KMnO4",
+    "name": "potassium permanganate",
+    "source": "pubchem_compounds",
+    "cid": 516875
+   },
+   {
+    "state": 4,
+    "formula": "MnO2",
+    "name": "manganese dioxide",
+    "source": "pubchem_compounds",
+    "cid": 14801
+   },
+   {
+    "state": 3,
+    "formula": "Mn2O3",
+    "name": "manganese(III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 14824
+   },
+   {
+    "state": 2,
+    "formula": "MnSO4",
+    "name": "manganese(II) sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24580
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "spin": "HS",
+    "radius": {
+     "value": 66.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 83.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 67.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 96.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 64.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 58.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 39.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 53.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 7,
+    "coordination": "IV",
+    "radius": {
+     "value": 25.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "VI",
+    "radius": {
+     "value": 46.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23930
+ },
  "amo": {
   "hyperfine": [
    {

@@ -952,6 +952,99 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.818, massive_stars 0.182); quantised to 0.05. Stack height 96 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises superficially in air to thallium(I) oxide; kept under oil.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water; slowly attacked by moist air.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in nitric and sulfuric acid; only slowly in hydrochloric acid, which coats it with insoluble chloride.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Tl2SO4",
+    "name": "thallium(I) sulfate",
+    "note": "a former rat poison",
+    "source": "pubchem_compounds",
+    "cid": 24833
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "TlCl3",
+    "name": "thallium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 83482
+   },
+   {
+    "state": 1,
+    "formula": "Tl2SO4",
+    "name": "thallium(I) sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24833
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 150.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 159.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "radius": {
+     "value": 75.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 88.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 98.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5359464
+ },
  "amo": {
   "hyperfine": [
    {

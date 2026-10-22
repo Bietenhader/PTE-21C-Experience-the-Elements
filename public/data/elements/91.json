@@ -941,6 +941,88 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes slowly in air.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only small amounts of protactinium metal have been made; its reaction with water is not described."
+   },
+   "acids": {
+    "text": "Dissolves in hydrochloric acid; in solution it readily forms insoluble hydrolysis products.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Pa2O5",
+    "name": "protactinium pentoxide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "Pa2O5",
+    "name": "protactinium pentoxide",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "PaCl4",
+    "name": "protactinium(IV) chloride",
+    "source": "pubchem_compounds",
+    "cid": 101946431
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 90.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 101.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 78.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VIII",
+    "radius": {
+     "value": 91.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23945
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

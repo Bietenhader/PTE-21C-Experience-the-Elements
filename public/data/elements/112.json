@@ -95,6 +95,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Single atoms only; whether the bulk element would be a liquid metal, a semiconductor or even gas-like is still debated."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Single-atom experiments showed copernicium sticking to gold less strongly than mercury does, so it behaves as a very volatile metal; its reactions with air, water and acids are not known."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Single-atom experiments showed copernicium sticking to gold less strongly than mercury does, so it behaves as a very volatile metal; its reactions with air, water and acids are not known."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Single-atom experiments showed copernicium sticking to gold less strongly than mercury does, so it behaves as a very volatile metal; its reactions with air, water and acids are not known."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; single-atom experiments have tested how it sticks to surfaces, and the rest comes from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 135476785,
+  "sources": [
+   "turler2013"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

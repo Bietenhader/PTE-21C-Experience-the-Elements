@@ -899,6 +899,102 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.169, massive_stars 0.711, neutron_star_mergers 0.120); quantised to 0.05. Stack height 78 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air at room temperature; oxidises to the volatile heptoxide when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Resists hydrochloric acid; dissolves in nitric acid and hot concentrated sulfuric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Re2O7",
+    "name": "rhenium heptoxide",
+    "source": "pubchem_compounds",
+    "cid": 123106
+   },
+   {
+    "formula": "KReO4",
+    "name": "potassium perrhenate",
+    "source": "pubchem_compounds",
+    "cid": 3661560
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 7,
+    "formula": "Re2O7",
+    "name": "rhenium heptoxide",
+    "source": "pubchem_compounds",
+    "cid": 123106
+   },
+   {
+    "state": 6,
+    "formula": "ReO3",
+    "name": "rhenium trioxide",
+    "source": "pubchem_compounds",
+    "cid": 102110
+   },
+   {
+    "state": 4,
+    "formula": "ReO2",
+    "name": "rhenium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 82847
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 63.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 55.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "IV",
+    "radius": {
+     "value": 38.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "VI",
+    "radius": {
+     "value": 53.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23947
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

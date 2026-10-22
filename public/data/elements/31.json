@@ -522,6 +522,81 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.109, massive_stars 0.889, neutron_star_mergers 0.002); quantised to 0.05. Stack height 61 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "An unusual metal: Ga₂ pairs inside the solid, which is why it melts just above room temperature.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in dry air; tarnishes in moist air or oxygen.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Not attacked by water at room temperature.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Attacked by cold concentrated hydrochloric acid; hot nitric acid makes it passive; dissolves in alkalis, giving hydrogen.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "GaAs",
+    "name": "gallium arsenide",
+    "note": "semiconductor for LEDs and solar cells",
+    "source": "pubchem_compounds",
+    "cid": 14770
+   },
+   {
+    "formula": "GaN",
+    "name": "gallium nitride",
+    "note": "the semiconductor of blue LEDs",
+    "source": "pubchem_compounds",
+    "cid": 117559
+   },
+   {
+    "formula": "Ga2O3",
+    "name": "gallium oxide",
+    "source": "pubchem_compounds",
+    "cid": 158605
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "GaCl3",
+    "name": "gallium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 26010
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "radius": {
+     "value": 47.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 62.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5360835
+ },
  "amo": {
   "hyperfine": [
    {

@@ -886,6 +886,70 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.474, massive_stars 0.477, neutron_star_mergers 0.049); quantised to 0.05. Stack height 91 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Very resistant: reacts with oxygen only on heating; the powder, though, can ignite in air.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not attacked by any aqueous acid except hydrofluoric, nor by aqueous alkalis; molten alkali attacks it slowly.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Ta2O5",
+    "name": "tantalum pentoxide",
+    "note": "the dielectric of tantalum capacitors",
+    "source": "pubchem_compounds",
+    "cid": 62157
+   },
+   {
+    "formula": "TaC",
+    "name": "tantalum carbide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "Ta2O5",
+    "name": "tantalum pentoxide",
+    "source": "pubchem_compounds",
+    "cid": 62157
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 64.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VIII",
+    "radius": {
+     "value": 74.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23956
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

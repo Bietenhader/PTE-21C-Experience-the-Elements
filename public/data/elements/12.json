@@ -325,6 +325,87 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.128, massive_stars 0.867, white_dwarfs 0.005); quantised to 0.05. Stack height 78 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'Mg is slightly under-produced in the model.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in ordinary air under a thin oxide film; oxidises slowly in moist air and is strongly attacked by salt spray.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts only slowly with cold water, giving hydrogen; powder reacts faster.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in most acids with hydrogen given off; hydrofluoric acid leaves it almost untouched.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "MgO",
+    "name": "magnesium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14792
+   },
+   {
+    "formula": "MgSO4",
+    "name": "magnesium sulfate",
+    "note": "Epsom salt is its hydrate",
+    "source": "pubchem_compounds",
+    "cid": 24083
+   },
+   {
+    "formula": "MgCl2",
+    "name": "magnesium chloride",
+    "source": "pubchem_compounds",
+    "cid": 5360315
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "MgO",
+    "name": "magnesium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14792
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 57.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 89.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462224
+ },
  "amo": {
   "hyperfine": [
    {

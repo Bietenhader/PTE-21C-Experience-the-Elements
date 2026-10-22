@@ -782,6 +782,90 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.956, massive_stars 0.030, neutron_star_mergers 0.015); quantised to 0.05. Stack height 98 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises in air; the powdered metal ignites by itself, and an alloy rich in cerium gives the sparks of lighter flints.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts with water, slowly in the cold and quickly when hot, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CeO2",
+    "name": "cerium dioxide",
+    "note": "glass-polishing powder and catalytic converters",
+    "source": "pubchem_compounds",
+    "cid": 73963
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "CeO2",
+    "name": "cerium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 73963
+   },
+   {
+    "state": 3,
+    "formula": "CeCl3",
+    "name": "cerium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24636
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 101.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 114.3,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 87.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 97.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23974
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

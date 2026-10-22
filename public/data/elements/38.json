@@ -574,6 +574,71 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.692, massive_stars 0.291, neutron_star_mergers 0.017); quantised to 0.05. Stack height 67 px. Text: '32% of [this element] can be produced from ECSNe ... which is included in the blue areas'; the figure's whole blue band reads lower (0.291), probably because the text percentage is relative to the solar value while the model overproduces s-process elements. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Quickly turns yellowish in air as an oxide film forms; heated, it combines with nitrogen and hydrogen too.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts with water, giving strontium hydroxide and hydrogen.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Dissolves in acids, giving off hydrogen.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "SrCO3",
+    "name": "strontium carbonate",
+    "source": "pubchem_compounds",
+    "cid": 15407
+   },
+   {
+    "formula": "Sr(NO3)2",
+    "name": "strontium nitrate",
+    "note": "gives fireworks their red",
+    "source": "pubchem_compounds",
+    "cid": 24848
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "SrO",
+    "name": "strontium oxide",
+    "source": "pubchem_compounds",
+    "cid": 73975
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 118.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 126.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5359327
+ },
  "amo": {
   "hyperfine": [
    {

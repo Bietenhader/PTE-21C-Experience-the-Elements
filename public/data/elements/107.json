@@ -528,6 +528,45 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Bohrium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Bohrium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Bohrium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   }
+  },
+  "compounds": [
+   {
+    "formula": "BhO3Cl",
+    "name": "bohrium oxychloride",
+    "note": "six molecules, identified in a gas-phase experiment in 2000",
+    "source": "primary_literature",
+    "doi": "10.1038/35024044"
+   }
+  ],
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951713,
+  "sources": [
+   "turler2013"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

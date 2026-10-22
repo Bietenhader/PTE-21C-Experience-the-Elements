@@ -440,6 +440,141 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.058, massive_stars 0.566, white_dwarfs 0.376); quantised to 0.05. Stack height 36 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Not oxidised by air at ordinary temperatures; oxidises readily above about 660 °C.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Barely affected by water or moisture at ordinary temperatures.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Resists hydrochloric and dilute sulfuric acid, but nitric, hydrofluoric and concentrated sulfuric acid attack it.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "V2O5",
+    "name": "vanadium pentoxide",
+    "note": "catalyst for making sulfuric acid",
+    "source": "pubchem_compounds",
+    "cid": 14814
+   },
+   {
+    "formula": "VCl4",
+    "name": "vanadium tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 24273
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "V2O5",
+    "name": "vanadium pentoxide",
+    "source": "pubchem_compounds",
+    "cid": 14814
+   },
+   {
+    "state": 4,
+    "formula": "VO2",
+    "name": "vanadium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 82849
+   },
+   {
+    "state": 3,
+    "formula": "V2O3",
+    "name": "vanadium trioxide",
+    "source": "pubchem_compounds",
+    "cid": 518710
+   },
+   {
+    "state": 2,
+    "formula": "VCl2",
+    "name": "vanadium dichloride",
+    "source": "pubchem_compounds",
+    "cid": 66355
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 79.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 64.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 58.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "IV",
+    "radius": {
+     "value": 35.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 5,
+    "coordination": "V",
+    "radius": {
+     "value": 46.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 54.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23990
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

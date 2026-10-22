@@ -262,6 +262,87 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.104, massive_stars 0.888, white_dwarfs 0.008); quantised to 0.05. Stack height 85 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "O₂ molecules (and O₃, ozone); O₂ has two unpaired electrons, so liquid oxygen is drawn into a magnet.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "A fifth of the air; a strong oxidising agent that makes most other substances burn.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water; slightly soluble, which is what fish breathe.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Does not react with acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "H2O",
+    "name": "water",
+    "source": "pubchem_compounds",
+    "cid": 962
+   },
+   {
+    "formula": "SiO2",
+    "name": "silicon dioxide",
+    "note": "quartz and sand",
+    "source": "pubchem_compounds",
+    "cid": 24261
+   },
+   {
+    "formula": "H2O2",
+    "name": "hydrogen peroxide",
+    "source": "pubchem_compounds",
+    "cid": 784
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": -2,
+    "formula": "H2O",
+    "name": "water",
+    "source": "pubchem_compounds",
+    "cid": 962
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -2,
+    "coordination": "IV",
+    "radius": {
+     "value": 138.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": -2,
+    "coordination": "VI",
+    "radius": {
+     "value": 140.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": -2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 142.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 977
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

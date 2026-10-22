@@ -919,6 +919,34 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Dissolves slightly in water and does not react with it.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Inert towards acids; only fluorine has been made to combine with it.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Radon difluoride has been made in tiny amounts; radon's radioactivity makes its chemistry hard to study."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 24857
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

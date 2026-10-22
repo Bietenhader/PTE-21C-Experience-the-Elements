@@ -785,6 +785,65 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.824, massive_stars 0.135, neutron_star_mergers 0.041); quantised to 0.05. Stack height 89 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes quickly in air; it is kept under oil or sealed in plastic.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Nd2O3",
+    "name": "neodymium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159373
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Nd2O3",
+    "name": "neodymium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159373
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 98.3,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 110.9,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23934
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

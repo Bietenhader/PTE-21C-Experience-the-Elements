@@ -834,6 +834,65 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.319, massive_stars 0.629, neutron_star_mergers 0.052); quantised to 0.05. Stack height 87 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Fairly stable in air at room temperature; oxidises when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Er2O3",
+    "name": "erbium oxide",
+    "note": "pink colour in glass",
+    "source": "pubchem_compounds",
+    "cid": 159426
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Er2O3",
+    "name": "erbium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159426
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 89.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 100.4,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23980
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

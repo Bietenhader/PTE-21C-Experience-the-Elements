@@ -352,6 +352,94 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.102, massive_stars 0.681, white_dwarfs 0.217); quantised to 0.05. Stack height 82 px. Cross-check with the paper's text: '22% of Si ... come from SNe Ia' (figure reading 0.217). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent network",
+   "note": "The diamond structure: each atom bonded to four others.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air at room temperature under a thin oxide layer; fine silicon dust is flammable and can explode.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Insoluble in water and does not react with it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Resists acids except a mixture of hydrofluoric and nitric acid; dissolves in hot alkali, giving hydrogen.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "SiO2",
+    "name": "silicon dioxide",
+    "note": "quartz and sand",
+    "source": "pubchem_compounds",
+    "cid": 24261
+   },
+   {
+    "formula": "SiC",
+    "name": "silicon carbide",
+    "source": "pubchem_compounds",
+    "cid": 9863
+   },
+   {
+    "formula": "SiCl4",
+    "name": "silicon tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 24816
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "SiO2",
+    "name": "silicon dioxide",
+    "source": "pubchem_compounds",
+    "cid": 24261
+   },
+   {
+    "state": 2,
+    "formula": "SiO",
+    "name": "silicon monoxide",
+    "source": "pubchem_compounds",
+    "cid": 66241
+   },
+   {
+    "state": -4,
+    "formula": "Mg2Si",
+    "name": "magnesium silicide",
+    "source": "pubchem_compounds",
+    "cid": 89858
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 26.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 40.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5461123
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

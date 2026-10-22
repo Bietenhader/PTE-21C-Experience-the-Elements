@@ -683,6 +683,81 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.562, massive_stars 0.243, neutron_star_mergers 0.196); quantised to 0.05. Stack height 64 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Quite stable in air at room temperature; burns when strongly heated, giving the oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in mineral acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "In2O3",
+    "name": "indium oxide",
+    "note": "with tin, the transparent conductor ITO of touch screens",
+    "source": "pubchem_compounds",
+    "cid": 150905
+   },
+   {
+    "formula": "InP",
+    "name": "indium phosphide",
+    "source": "pubchem_compounds",
+    "cid": 31170
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "In2O3",
+    "name": "indium oxide",
+    "source": "pubchem_compounds",
+    "cid": 150905
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "radius": {
+     "value": 62.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 80.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 92.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5359967
+ },
  "amo": {
   "hyperfine": [
    {

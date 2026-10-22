@@ -628,6 +628,68 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.265, massive_stars 0.612, neutron_star_mergers 0.123); quantised to 0.05. Stack height 70 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not tarnish in air at room temperature; oxidises above about 800 °C.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Not attacked by water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Not attacked by acids, not even aqua regia; dissolved by molten alkali with an oxidiser.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "RuO2",
+    "name": "ruthenium dioxide",
+    "note": "in thick-film resistors",
+    "source": "pubchem_compounds",
+    "cid": 82848
+   },
+   {
+    "formula": "RuO4",
+    "name": "ruthenium tetroxide",
+    "source": "pubchem_compounds",
+    "cid": 119079
+   },
+   {
+    "formula": "RuCl3",
+    "name": "ruthenium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 61850
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "RuCl3",
+    "name": "ruthenium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 61850
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 68.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23950
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

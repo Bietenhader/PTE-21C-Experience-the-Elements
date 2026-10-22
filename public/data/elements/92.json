@@ -960,6 +960,147 @@
    ]
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "A coat of oxide forms in air; the powder can ignite. A strong reducing agent that reacts with nearly all non-metals.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water or steam.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in hydrochloric and nitric acid; hardly attacked by alkalis.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "UO2",
+    "name": "uranium dioxide",
+    "note": "the fuel in most nuclear reactors",
+    "source": "pubchem_compounds",
+    "cid": 51003830
+   },
+   {
+    "formula": "UF6",
+    "name": "uranium hexafluoride",
+    "note": "the gas used to enrich uranium",
+    "source": "pubchem_compounds",
+    "cid": 24560
+   },
+   {
+    "formula": "U3O8",
+    "name": "triuranium octoxide",
+    "note": "yellowcake's main constituent",
+    "source": "pubchem_compounds",
+    "cid": 92028829
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "UF6",
+    "name": "uranium hexafluoride",
+    "source": "pubchem_compounds",
+    "cid": 24560
+   },
+   {
+    "state": 5,
+    "formula": "UF5",
+    "name": "uranium pentafluoride",
+    "source": "pubchem_compounds",
+    "cid": 83723
+   },
+   {
+    "state": 4,
+    "formula": "UO2",
+    "name": "uranium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 51003830
+   },
+   {
+    "state": 3,
+    "formula": "UCl3",
+    "name": "uranium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 167444
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 102.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 89.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 100.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 52.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 73.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 6,
+    "coordination": "VIII",
+    "radius": {
+     "value": 86.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23989
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

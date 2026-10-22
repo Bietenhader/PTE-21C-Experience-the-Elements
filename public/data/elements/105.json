@@ -516,6 +516,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Dubnium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Dubnium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Dubnium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only single molecules have been studied, in fast gas-phase and solution experiments."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951718,
+  "sources": [
+   "turler2013"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

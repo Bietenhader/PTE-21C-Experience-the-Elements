@@ -679,6 +679,81 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises in air; only milligram amounts have been handled.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only milligram amounts of berkelium metal have ever been made; its reaction with water is not described."
+   },
+   "acids": {
+    "text": "Dissolves in mineral acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "BkO2",
+    "name": "berkelium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 165360219
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "BkO2",
+    "name": "berkelium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 165360219
+   },
+   {
+    "state": 3,
+    "formula": "BkCl3",
+    "name": "berkelium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 21149391
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 96.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 83.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 93.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23971
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

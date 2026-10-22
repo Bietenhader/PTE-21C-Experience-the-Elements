@@ -267,6 +267,135 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.741, massive_stars 0.259); quantised to 0.05. Stack height 72 px. Cross-check with the paper's text: '74% of N are produced by AGB stars' (figure reading 0.741)."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "N₂ molecules with a triple bond, one of the strongest bonds known — which is why nitrogen is so unreactive.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Unreactive; it makes up 78 % of the air. Electric sparks make it combine with oxygen to nitric oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water; slightly soluble.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Does not react with acids.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NH3",
+    "name": "ammonia",
+    "source": "pubchem_compounds",
+    "cid": 222
+   },
+   {
+    "formula": "HNO3",
+    "name": "nitric acid",
+    "source": "pubchem_compounds",
+    "cid": 944
+   },
+   {
+    "formula": "NO2",
+    "name": "nitrogen dioxide",
+    "source": "pubchem_compounds",
+    "cid": 3032552
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "HNO3",
+    "name": "nitric acid",
+    "source": "pubchem_compounds",
+    "cid": 944
+   },
+   {
+    "state": 4,
+    "formula": "NO2",
+    "name": "nitrogen dioxide",
+    "source": "pubchem_compounds",
+    "cid": 3032552
+   },
+   {
+    "state": 3,
+    "formula": "HNO2",
+    "name": "nitrous acid",
+    "source": "pubchem_compounds",
+    "cid": 24529
+   },
+   {
+    "state": 2,
+    "formula": "NO",
+    "name": "nitric oxide",
+    "source": "pubchem_compounds",
+    "cid": 145068
+   },
+   {
+    "state": 1,
+    "formula": "N2O",
+    "name": "nitrous oxide",
+    "source": "pubchem_compounds",
+    "cid": 948
+   },
+   {
+    "state": -1,
+    "formula": "NH2OH",
+    "name": "hydroxylamine",
+    "source": "pubchem_compounds",
+    "cid": 787
+   },
+   {
+    "state": -2,
+    "formula": "N2H4",
+    "name": "hydrazine",
+    "source": "pubchem_compounds",
+    "cid": 9321
+   },
+   {
+    "state": -3,
+    "formula": "NH3",
+    "name": "ammonia",
+    "source": "pubchem_compounds",
+    "cid": 222
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -3,
+    "coordination": "IV",
+    "radius": {
+     "value": 146.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 16.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 13.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 947
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

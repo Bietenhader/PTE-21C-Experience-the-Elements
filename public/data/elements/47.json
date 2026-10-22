@@ -649,6 +649,86 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.154, massive_stars 0.800, neutron_star_mergers 0.045); quantised to 0.05. Stack height 81 px. Paper: 'Ag is over-produced by a factor of 6'; fractions are of the model's (too high) Ag."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in clean air and water, but tarnishes black in air containing sulfur compounds or ozone.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and not attacked by it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in nitric acid and hot concentrated sulfuric acid; not in hydrochloric or dilute sulfuric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "AgNO3",
+    "name": "silver nitrate",
+    "source": "pubchem_compounds",
+    "cid": 24470
+   },
+   {
+    "formula": "AgCl",
+    "name": "silver chloride",
+    "source": "pubchem_compounds",
+    "cid": 24561
+   },
+   {
+    "formula": "Ag2S",
+    "name": "silver sulfide",
+    "note": "the black tarnish on silver",
+    "source": "pubchem_compounds",
+    "cid": 166738
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "AgNO3",
+    "name": "silver nitrate",
+    "source": "pubchem_compounds",
+    "cid": 24470
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 100.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 115.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 128.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23954
+ },
  "amo": {
   "hyperfine": [
    {

@@ -19,6 +19,7 @@ from pathlib import Path
 
 import jsonschema
 
+import build_chemistry
 import fetch_iaea
 import fetch_nist_levels
 import fetch_nist_lines
@@ -911,6 +912,7 @@ def build_elements(index: dict, report: Report) -> int:
             "critical": critical_record(crit.get(z)),
         }
         doc["nucleus"] = {"origin": origin_record(origin.get(z), origin_omitted.get(z))}
+        doc["chemistry"] = build_chemistry.record(z, report)
         amo = metrology.get(z, {"clocks": [], "siHistory": []})
         doc["amo"] = {
             "hyperfine": [

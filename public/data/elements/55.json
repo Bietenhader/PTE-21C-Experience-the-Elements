@@ -729,6 +729,71 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.374, massive_stars 0.499, neutron_star_mergers 0.127); quantised to 0.05. Stack height 68 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Catches fire by itself in air at room temperature if its surface is clean.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Reacts explosively with water: the heat ignites the hydrogen released, leaving caesium hydroxide.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with acids, halogens and other oxidisers.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CsCl",
+    "name": "cesium chloride",
+    "note": "gives its name to a common crystal structure",
+    "source": "pubchem_compounds",
+    "cid": 24293
+   },
+   {
+    "formula": "CsOH",
+    "name": "cesium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 62750
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "CsCl",
+    "name": "cesium chloride",
+    "source": "pubchem_compounds",
+    "cid": 24293
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 167.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 174.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5354618
+ },
  "amo": {
   "hyperfine": [
    {

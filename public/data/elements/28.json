@@ -477,6 +477,100 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.082, massive_stars 0.244, white_dwarfs 0.674); quantised to 0.05. Stack height 73 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air at ordinary temperatures; burns in oxygen to nickel oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Not affected by water.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Attacked only slowly by dilute hydrochloric or sulfuric acid, but readily by nitric acid; resists molten alkali.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NiO",
+    "name": "nickel(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 179931
+   },
+   {
+    "formula": "NiSO4",
+    "name": "nickel(II) sulfate",
+    "note": "used for nickel plating",
+    "source": "pubchem_compounds",
+    "cid": 24586
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Ni2O3",
+    "name": "nickel(III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 10313272
+   },
+   {
+    "state": 2,
+    "formula": "NiCl2",
+    "name": "nickel(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24385
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 55.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 69.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 60.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 56.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 935
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

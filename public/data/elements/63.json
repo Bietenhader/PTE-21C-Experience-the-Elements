@@ -799,6 +799,90 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.197, massive_stars 0.720, neutron_star_mergers 0.084); quantised to 0.05. Stack height 80 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "The most reactive lanthanide: it oxidises rapidly in air and can ignite.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts with cold water, like calcium, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Eu2O3",
+    "name": "europium oxide",
+    "note": "the red phosphor of old colour TV screens",
+    "source": "pubchem_compounds",
+    "cid": 159371
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Eu2O3",
+    "name": "europium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159371
+   },
+   {
+    "state": 2,
+    "formula": "EuO",
+    "name": "europium(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 18439542
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 117.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 125.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 94.7,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 106.6,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23981
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

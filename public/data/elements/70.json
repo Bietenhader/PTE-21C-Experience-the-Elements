@@ -839,6 +839,90 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.508, massive_stars 0.448, neutron_star_mergers 0.044); quantised to 0.05. Stack height 92 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Slowly oxidises in air; kept sealed to stay bright.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Yb2O3",
+    "name": "ytterbium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159375
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Yb2O3",
+    "name": "ytterbium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159375
+   },
+   {
+    "state": 2,
+    "formula": "YbCl2",
+    "name": "ytterbium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 83785
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 102.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 114.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.8,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 98.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23992
+ },
  "amo": {
   "hyperfine": [
    {

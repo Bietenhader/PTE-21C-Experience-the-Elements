@@ -707,6 +707,104 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes slowly in dry air.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The reaction of americium metal with water is not described in the sources used here."
+   },
+   "acids": {
+    "text": "Dissolves readily in acids; in solution the +3 ion is the stable form and is hard to oxidise.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "AmO2",
+    "name": "americium dioxide",
+    "note": "the source in ionisation smoke detectors",
+    "source": "pubchem_compounds",
+    "cid": 57461988
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "AmO2²⁺",
+    "name": "americyl(VI) ion",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 5,
+    "formula": "AmO2⁺",
+    "name": "americyl(V) ion",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "AmO2",
+    "name": "americium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 57461988
+   },
+   {
+    "state": 3,
+    "formula": "AmCl3",
+    "name": "americium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 13710531
+   }
+  ],
+  "oxidationNote": "In water americium is usually +3.",
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 97.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 109.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 85.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 95.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23966
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

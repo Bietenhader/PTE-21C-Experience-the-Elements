@@ -436,6 +436,72 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.959, white_dwarfs 0.041); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes slowly in air, forming a thin oxide layer.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with hot water, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Sc2O3",
+    "name": "scandium oxide",
+    "source": "pubchem_compounds",
+    "cid": 134661
+   },
+   {
+    "formula": "ScCl3",
+    "name": "scandium chloride",
+    "source": "pubchem_compounds",
+    "cid": 82586
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Sc2O3",
+    "name": "scandium oxide",
+    "source": "pubchem_compounds",
+    "cid": 134661
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 74.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 87.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23952
+ },
  "amo": {
   "hyperfine": [
    {

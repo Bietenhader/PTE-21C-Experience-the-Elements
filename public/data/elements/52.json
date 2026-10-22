@@ -695,6 +695,113 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.159, massive_stars 0.817, neutron_star_mergers 0.024); quantised to 0.05. Stack height 82 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent chains",
+   "note": "Spiral chains of atoms, like grey selenium.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes slightly in air; burns with a blue-green flame to tellurium dioxide when heated.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and does not react with it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts with nitric acid and with concentrated sulfuric acid, but not with hydrochloric acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CdTe",
+    "name": "cadmium telluride",
+    "source": "pubchem_compounds",
+    "cid": 91501
+   },
+   {
+    "formula": "TeO2",
+    "name": "tellurium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 62638
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "H6TeO6",
+    "name": "telluric acid",
+    "source": "pubchem_compounds",
+    "cid": 62686
+   },
+   {
+    "state": 4,
+    "formula": "TeO2",
+    "name": "tellurium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 62638
+   },
+   {
+    "state": -2,
+    "formula": "H2Te",
+    "name": "hydrogen telluride",
+    "source": "pubchem_compounds",
+    "cid": 21765
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -2,
+    "coordination": "VI",
+    "radius": {
+     "value": 221.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 66.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 97.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 43.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 56.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 6327182
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

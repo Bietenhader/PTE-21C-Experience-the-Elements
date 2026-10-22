@@ -262,6 +262,34 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.142, massive_stars 0.858); quantised to 0.05. Stack height 77 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Inert: no neutral compound is known.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "No stable neutral compound is known."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 23935
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

@@ -675,6 +675,56 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes in air; its strong radioactivity heats the metal.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The reaction of curium metal with water is not described in the sources used here."
+   },
+   "acids": {
+    "text": "Dissolves in acids, giving curium(III) solutions.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Cm2O3",
+    "name": "curium(III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 18415183
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Cm2O3",
+    "name": "curium(III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 18415183
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 97.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23979
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

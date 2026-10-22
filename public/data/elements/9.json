@@ -295,6 +295,78 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.501, massive_stars 0.499); quantised to 0.05. Stack height 48 px. Cross-check with the paper's text: '51% of F ... produced by AGB stars' (figure reading 0.501)."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "F₂ molecules with an unusually weak F–F bond, one reason fluorine is so reactive.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "The most reactive element: it attacks almost everything, and most substances burn in it.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts with water, even ice, to give hydrofluoric acid, oxygen and ozone, sometimes explosively.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Oxidises what it meets; it is not dissolved by acids but reacts with them.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HF",
+    "name": "hydrogen fluoride",
+    "source": "pubchem_compounds",
+    "cid": 14917
+   },
+   {
+    "formula": "CaF2",
+    "name": "calcium fluoride",
+    "note": "the mineral fluorite",
+    "source": "pubchem_compounds",
+    "cid": 84512
+   },
+   {
+    "formula": "SF6",
+    "name": "sulfur hexafluoride",
+    "source": "pubchem_compounds",
+    "cid": 17358
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": -1,
+    "formula": "NaF",
+    "name": "sodium fluoride",
+    "source": "pubchem_compounds",
+    "cid": 5235
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -1,
+    "coordination": "IV",
+    "radius": {
+     "value": 131.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": -1,
+    "coordination": "VI",
+    "radius": {
+     "value": 133.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 24524
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

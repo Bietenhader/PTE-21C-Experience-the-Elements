@@ -925,6 +925,104 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.691, massive_stars 0.304, neutron_star_mergers 0.005); quantised to 0.05. Stack height 98 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "A metal, but with such weak bonds between atoms that it is liquid at room temperature.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not tarnish in air at room temperature when pure, but slowly evaporates; near its boiling point it oxidises to mercury(II) oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and does not react with it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not attacked by hydrochloric or dilute sulfuric acid; dissolves in nitric acid and hot concentrated sulfuric acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HgS",
+    "name": "mercury(II) sulfide",
+    "note": "cinnabar, the red pigment vermilion",
+    "source": "pubchem_compounds",
+    "cid": 62402
+   },
+   {
+    "formula": "Hg2Cl2",
+    "name": "mercury(I) chloride",
+    "note": "calomel",
+    "source": "pubchem_compounds",
+    "cid": 24956
+   },
+   {
+    "formula": "HgO",
+    "name": "mercury(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 30856
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "HgCl2",
+    "name": "mercury(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24085
+   },
+   {
+    "state": 1,
+    "formula": "Hg2Cl2",
+    "name": "mercury(I) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24956
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 119.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 96.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 102.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 114.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23931
+ },
  "amo": {
   "hyperfine": [
    {

@@ -660,6 +660,72 @@ export interface Biology {
   note?: string;
 }
 /**
+ * Chemistry & bonding (SPEC §10.9): how the element bonds, how it reacts with air, water and acids (our own words, each with its source), well-known compounds, one compound per common oxidation state, and Shannon's ionic radii of its common ions.
+ */
+export interface Chemistry {
+  bonding: ChemistryBonding | Missing;
+  reactivity: {
+    air: SourcedText | Missing;
+    water: SourcedText | Missing;
+    acids: SourcedText | Missing;
+  };
+  compounds: [ChemistryCompound, ...ChemistryCompound[]] | Missing;
+  oxidationExamples: ChemistryOxidationExample[];
+  /**
+   * What to know about the oxidation states where examples are few or none.
+   */
+  oxidationNote?: string;
+  ionicRadii: ChemistryIonicRadius[];
+  /**
+   * PubChem compound record of the elemental substance (where the HSDB and CAMEO notes are).
+   */
+  pubchemCid?: number;
+  /**
+   * Where the record holds nothing but Missing notes: the sources those notes rest on.
+   */
+  sources?: SourceId[];
+}
+/**
+ * How the atoms of the element itself hold together.
+ */
+export interface ChemistryBonding {
+  type: "metallic" | "covalent network" | "covalent layers" | "covalent chains" | "molecular" | "monatomic";
+  note?: string;
+  source: SourceId;
+}
+export interface ChemistryCompound {
+  formula: string;
+  name: string;
+  note?: string;
+  source: SourceId;
+  doi?: string;
+  /**
+   * PubChem CID whose molecular formula the build checked.
+   */
+  cid?: number;
+}
+export interface ChemistryOxidationExample {
+  state: number;
+  formula: string;
+  name: string;
+  source: SourceId;
+  doi?: string;
+  cid?: number;
+}
+/**
+ * Shannon's effective ionic radius of one ion in one coordination (SPEC §10.9).
+ */
+export interface ChemistryIonicRadius {
+  charge: number;
+  /**
+   * Coordination number as Shannon writes it: Roman numeral, SQ square planar, PY pyramidal.
+   */
+  coordination: string;
+  spin?: "HS" | "LS";
+  radius: Quantity;
+  mostReliable?: boolean;
+}
+/**
  * public/data/elements/{Z}.json: per-panel detail, loaded when the sheet opens (SPEC §5, §10). Sections are keyed by panel slug.
  */
 export interface ElementDetailFile {
@@ -740,6 +806,7 @@ export interface ElementDetailFile {
   nucleus: {
     origin: CosmicOrigin | Missing;
   };
+  chemistry?: Chemistry;
   biology: Biology;
   history?: {
     discovered: number | "antiquity";

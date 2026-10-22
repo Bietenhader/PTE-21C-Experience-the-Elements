@@ -876,6 +876,79 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.642, massive_stars 0.338, neutron_star_mergers 0.019); quantised to 0.05. Stack height 95 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Protected by its oxide film at room temperature; the dry powder is pyrophoric and burns fiercely.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Bulk hafnium hardly reacts with water; the powder gives off hydrogen with moisture.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Resists most acids and alkalis; hydrofluoric acid dissolves it.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HfO2",
+    "name": "hafnium dioxide",
+    "note": "the gate insulator in modern microchips",
+    "source": "pubchem_compounds",
+    "cid": 292779
+   },
+   {
+    "formula": "HfC",
+    "name": "hafnium carbide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "HfO2",
+    "name": "hafnium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 292779
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 58.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 71.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 83.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23986
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

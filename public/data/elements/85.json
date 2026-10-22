@@ -909,6 +909,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No visible amount of astatine has ever been made; calculations suggest the solid would be a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Astatine has only been studied as trace amounts in solution, where it behaves partly like iodine and partly like a metal; the reactions of the element with air, water and acids have never been observed."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Astatine has only been studied as trace amounts in solution, where it behaves partly like iodine and partly like a metal; the reactions of the element with air, water and acids have never been observed."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Astatine has only been studied as trace amounts in solution, where it behaves partly like iodine and partly like a metal; the reactions of the element with air, water and acids have never been observed."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only traces of astatine compounds (such as hydrogen astatide and astatine iodide) have been detected."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 5460480,
+  "sources": [
+   "greenwood1997"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

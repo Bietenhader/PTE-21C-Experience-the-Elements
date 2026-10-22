@@ -355,6 +355,108 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.989, white_dwarfs 0.011); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not burn; a strong oxidising gas that attacks many metals and organic materials.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Dissolves in water, forming a mixture of hydrochloric and hypochlorous acids.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not dissolved by acids; it oxidises what it reacts with.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NaCl",
+    "name": "sodium chloride",
+    "source": "pubchem_compounds",
+    "cid": 5234
+   },
+   {
+    "formula": "HCl",
+    "name": "hydrogen chloride",
+    "source": "pubchem_compounds",
+    "cid": 313
+   },
+   {
+    "formula": "NaClO",
+    "name": "sodium hypochlorite",
+    "note": "household bleach",
+    "source": "pubchem_compounds",
+    "cid": 23665760
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 7,
+    "formula": "HClO4",
+    "name": "perchloric acid",
+    "source": "pubchem_compounds",
+    "cid": 24247
+   },
+   {
+    "state": 5,
+    "formula": "KClO3",
+    "name": "potassium chlorate",
+    "source": "pubchem_compounds",
+    "cid": 6426889
+   },
+   {
+    "state": 1,
+    "formula": "NaClO",
+    "name": "sodium hypochlorite",
+    "source": "pubchem_compounds",
+    "cid": 23665760
+   },
+   {
+    "state": -1,
+    "formula": "NaCl",
+    "name": "sodium chloride",
+    "source": "pubchem_compounds",
+    "cid": 5234
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -1,
+    "coordination": "VI",
+    "radius": {
+     "value": 181.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "IV",
+    "radius": {
+     "value": 8.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 7,
+    "coordination": "VI",
+    "radius": {
+     "value": 27.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 24526
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

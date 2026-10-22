@@ -613,6 +613,73 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.328, massive_stars 0.623, neutron_star_mergers 0.049); quantised to 0.05. Stack height 74 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air at ordinary temperatures; oxidises on strong heating.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Resists hydrofluoric and hydrochloric acid; oxidising acids such as nitric acid attack it.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "MoS2",
+    "name": "molybdenum disulfide",
+    "note": "the ore molybdenite, and a dry lubricant",
+    "source": "pubchem_compounds",
+    "cid": 14823
+   },
+   {
+    "formula": "MoO3",
+    "name": "molybdenum trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14802
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "MoO3",
+    "name": "molybdenum trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14802
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 41.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 59.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23932
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

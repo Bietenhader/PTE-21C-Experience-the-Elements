@@ -597,6 +597,66 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.784, massive_stars 0.187, neutron_star_mergers 0.029); quantised to 0.05. Stack height 66 px. Text: '22% of [this element] can be produced from ECSNe ... which is included in the blue areas'; the figure's whole blue band reads lower (0.187), probably because the text percentage is relative to the solar value while the model overproduces s-process elements. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises when heated in air or oxygen.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Decomposes cold water slowly and boiling water quickly.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Y2O3",
+    "name": "yttrium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159374
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Y2O3",
+    "name": "yttrium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159374
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 90.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 101.9,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23993
+ },
  "amo": {
   "hyperfine": [
    {

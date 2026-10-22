@@ -95,6 +95,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Roentgenium's chemistry has never been studied in experiments. Calculations suggest it would be a noble metal, like gold."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Roentgenium's chemistry has never been studied in experiments. Calculations suggest it would be a noble metal, like gold."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Roentgenium's chemistry has never been studied in experiments. Calculations suggest it would be a noble metal, like gold."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; its chemistry is known only from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 135476786,
+  "sources": [
+   "turler2013"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

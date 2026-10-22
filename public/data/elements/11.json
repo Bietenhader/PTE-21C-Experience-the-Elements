@@ -305,6 +305,87 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.137, massive_stars 0.863); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes quickly to a dull grey and burns in air when heated, forming sodium oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts violently with water, giving sodium hydroxide and hydrogen, which often catches fire.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with acids, forming the sodium salts (with hydrochloric acid, common salt).",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NaCl",
+    "name": "sodium chloride",
+    "note": "table salt",
+    "source": "pubchem_compounds",
+    "cid": 5234
+   },
+   {
+    "formula": "NaOH",
+    "name": "sodium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 14798
+   },
+   {
+    "formula": "NaHCO3",
+    "name": "sodium bicarbonate",
+    "note": "baking soda",
+    "source": "pubchem_compounds",
+    "cid": 516892
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "NaCl",
+    "name": "sodium chloride",
+    "source": "pubchem_compounds",
+    "cid": 5234
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 99.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 102.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 118.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5360545
+ },
  "amo": {
   "hyperfine": [
    {

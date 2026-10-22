@@ -522,6 +522,38 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.389, massive_stars 0.562, neutron_star_mergers 0.049); quantised to 0.05. Stack height 46 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Inert towards acids; only fluorine forces it into a compound, KrF₂.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "KrF2",
+    "name": "krypton difluoride",
+    "note": "unstable; one of very few krypton compounds",
+    "source": "pubchem_compounds",
+    "cid": 83721
+   }
+  ],
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 5416
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [

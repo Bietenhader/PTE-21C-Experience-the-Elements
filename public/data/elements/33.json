@@ -525,6 +525,103 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.302, massive_stars 0.687, neutron_star_mergers 0.011); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent layers",
+   "note": "Grey arsenic: puckered sheets of atoms, each bonded to three neighbours.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Loses its lustre in air, turning black and forming arsenic trioxide on the surface.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not attacked by cold sulfuric or hydrochloric acid; nitric acid or hot sulfuric acid turn it into arsenous or arsenic acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "As2O3",
+    "name": "arsenic trioxide",
+    "note": "the classic poison 'white arsenic'; also a leukaemia drug",
+    "source": "pubchem_compounds",
+    "cid": 14888
+   },
+   {
+    "formula": "GaAs",
+    "name": "gallium arsenide",
+    "source": "pubchem_compounds",
+    "cid": 14770
+   },
+   {
+    "formula": "AsH3",
+    "name": "arsine",
+    "source": "pubchem_compounds",
+    "cid": 23969
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "H3AsO4",
+    "name": "arsenic acid",
+    "source": "pubchem_compounds",
+    "cid": 234
+   },
+   {
+    "state": 3,
+    "formula": "As2O3",
+    "name": "arsenic trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14888
+   },
+   {
+    "state": -3,
+    "formula": "AsH3",
+    "name": "arsine",
+    "source": "pubchem_compounds",
+    "cid": 23969
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 58.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "IV",
+    "radius": {
+     "value": 33.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 46.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5359596
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

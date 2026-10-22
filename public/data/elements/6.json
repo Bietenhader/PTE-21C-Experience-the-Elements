@@ -271,6 +271,98 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.489, massive_stars 0.511); quantised to 0.05. Stack height 48 px. Cross-check with the paper's text: '49% of C ... produced by AGB stars (at t=9.2 Gyr)' (figure reading 0.489)."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent layers",
+   "note": "Graphite: sheets of carbon hexagons stacked by weak forces. Diamond is a covalent network.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Bulk graphite or diamond is stable in air at room temperature; fine carbon dust is flammable and freshly made powders can self-heat.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Insoluble in water and does not react with it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Insoluble in acids and alkalis; only hot oxidising acids attack graphite.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CO2",
+    "name": "carbon dioxide",
+    "source": "pubchem_compounds",
+    "cid": 280
+   },
+   {
+    "formula": "CH4",
+    "name": "methane",
+    "source": "pubchem_compounds",
+    "cid": 297
+   },
+   {
+    "formula": "CaCO3",
+    "name": "calcium carbonate",
+    "note": "limestone, chalk and marble",
+    "source": "pubchem_compounds",
+    "cid": 10112
+   },
+   {
+    "formula": "SiC",
+    "name": "silicon carbide",
+    "source": "pubchem_compounds",
+    "cid": 9863
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "CO2",
+    "name": "carbon dioxide",
+    "source": "pubchem_compounds",
+    "cid": 280
+   },
+   {
+    "state": 2,
+    "formula": "CO",
+    "name": "carbon monoxide",
+    "source": "pubchem_compounds",
+    "cid": 281
+   },
+   {
+    "state": -4,
+    "formula": "CH4",
+    "name": "methane",
+    "source": "pubchem_compounds",
+    "cid": 297
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 15.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 16.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462310
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

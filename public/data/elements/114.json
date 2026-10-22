@@ -95,6 +95,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; adsorption experiments show that it is very volatile."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Flerovium's chemistry is known only from predictions and single-atom adsorption experiments."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Flerovium's chemistry is known only from predictions and single-atom adsorption experiments."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Flerovium's chemistry is known only from predictions and single-atom adsorption experiments."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; single-atom experiments have tested how it sticks to surfaces, and the rest comes from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 168007562,
+  "sources": [
+   "turler2013"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

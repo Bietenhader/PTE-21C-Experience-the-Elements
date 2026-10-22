@@ -510,6 +510,41 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Rutherfordium is made a few atoms at a time and lives seconds to hours; its reactions with air, water and acids are known only from predictions based on its place in group 4."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Rutherfordium is made a few atoms at a time and lives seconds to hours; its reactions with air, water and acids are known only from predictions based on its place in group 4."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Rutherfordium is made a few atoms at a time and lives seconds to hours; its reactions with air, water and acids are known only from predictions based on its place in group 4."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only single molecules have been studied, in fast gas-phase and solution experiments (for example RfCl₄)."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951715,
+  "sources": [
+   "turler2013"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

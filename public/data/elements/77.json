@@ -900,6 +900,78 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.104, massive_stars 0.890, neutron_star_mergers 0.006); quantised to 0.05. Stack height 82 px."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not tarnish in air; very fine iridium powder can ignite.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "The most corrosion-resistant metal known: not attacked by acids, not even aqua regia.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "IrO2",
+    "name": "iridium dioxide",
+    "note": "a catalyst for splitting water",
+    "source": "pubchem_compounds",
+    "cid": 82821
+   },
+   {
+    "formula": "IrCl3",
+    "name": "iridium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 25563
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "IrO2",
+    "name": "iridium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 82821
+   },
+   {
+    "state": 3,
+    "formula": "IrCl3",
+    "name": "iridium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 25563
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 68.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 62.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23924
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

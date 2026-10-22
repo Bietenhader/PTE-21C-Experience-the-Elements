@@ -447,6 +447,121 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.087, massive_stars 0.359, white_dwarfs 0.554); quantised to 0.05. Stack height 78 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Resists attack by air at ordinary temperatures, which is why it is used for plating.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and not attacked by it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in dilute hydrochloric and sulfuric acid; nitric acid makes it passive.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Cr2O3",
+    "name": "chromium(III) oxide",
+    "note": "the green pigment chrome green",
+    "source": "pubchem_compounds",
+    "cid": 517277
+   },
+   {
+    "formula": "K2Cr2O7",
+    "name": "potassium dichromate",
+    "source": "pubchem_compounds",
+    "cid": 24502
+   },
+   {
+    "formula": "CrO3",
+    "name": "chromium trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14915
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "K2CrO4",
+    "name": "potassium chromate",
+    "source": "pubchem_compounds",
+    "cid": 24597
+   },
+   {
+    "state": 3,
+    "formula": "Cr2O3",
+    "name": "chromium(III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 517277
+   },
+   {
+    "state": 2,
+    "formula": "CrCl2",
+    "name": "chromium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24871
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 80.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 73.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 61.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 26.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 44.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23976
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

@@ -691,6 +691,42 @@
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "Einsteinium metal has been made only in microgram amounts.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only micrograms of einsteinium have ever been available, and its radioactivity destroys samples within weeks; its reactions with air, water and acids have not been described."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only micrograms of einsteinium have ever been available, and its radioactivity destroys samples within weeks; its reactions with air, water and acids have not been described."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only micrograms of einsteinium have ever been available, and its radioactivity destroys samples within weeks; its reactions with air, water and acids have not been described."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only microgram amounts of a few compounds (oxide, halides) have been prepared."
+  },
+  "oxidationExamples": [],
+  "oxidationNote": "Einsteinium is +3 in solution.",
+  "ionicRadii": [],
+  "pubchemCid": 23913,
+  "sources": [
+   "greenwood1997"
+  ]
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

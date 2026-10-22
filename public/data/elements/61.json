@@ -725,6 +725,67 @@
    "note": "Promethium has no long-lived isotope, so none of it survives from before the Solar System; its box in Fig. 39 is empty."
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Promethium has no stable isotope and only small amounts of the metal have ever been made; its reactions with air, water and acids are expected to be like those of neodymium and samarium, but they have not been described from experiments."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Promethium has no stable isotope and only small amounts of the metal have ever been made; its reactions with air, water and acids are expected to be like those of neodymium and samarium, but they have not been described from experiments."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Promethium has no stable isotope and only small amounts of the metal have ever been made; its reactions with air, water and acids are expected to be like those of neodymium and samarium, but they have not been described from experiments."
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Pm2O3",
+    "name": "promethium oxide",
+    "source": "pubchem_compounds",
+    "cid": 11602575
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Pm2O3",
+    "name": "promethium oxide",
+    "source": "pubchem_compounds",
+    "cid": 11602575
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 97.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 109.3,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23944
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],

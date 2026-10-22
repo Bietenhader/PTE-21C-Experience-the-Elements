@@ -936,6 +936,81 @@
    ]
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Pure thorium keeps in air, slowly darkening; the finely divided metal can ignite by itself.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Attacked only slowly by water.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Hydrochloric acid attacks it vigorously; nitric acid makes it passive; most other common acids attack it only slowly.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "ThO2",
+    "name": "thorium dioxide",
+    "note": "the glowing material of old gas mantles; the highest-melting oxide",
+    "source": "pubchem_compounds",
+    "cid": 14808
+   },
+   {
+    "formula": "ThF4",
+    "name": "thorium tetrafluoride",
+    "source": "pubchem_compounds",
+    "cid": 83680
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "ThO2",
+    "name": "thorium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 14808
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 94.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 105.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "IX",
+    "radius": {
+     "value": 109.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23960
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [

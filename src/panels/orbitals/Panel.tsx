@@ -8,7 +8,7 @@
 // - Nodes table, and the analytic checks.
 // The approximation badge is always visible.
 
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, type RefObject, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useElementDetail } from "../../data/load";
 import { groupDigits, isMissing } from "../../data/format";
 import type { ElementIndexEntry, Missing, SourcesFile } from "../../data/types";
@@ -487,7 +487,30 @@ export default function Panel({ element: e, sources }: PanelProps) {
   );
 }
 
+/**
+ * True once the element has been on screen. The sheet mounts the panels next to the current one in
+ * advance; the orbitals are computed only when this panel is actually shown.
+ */
+function useSeen(ref: RefObject<HTMLElement | null>): boolean {
+  const [seen, setSeen] = useState(typeof IntersectionObserver === "undefined");
+  useEffect(() => {
+    const el = ref.current;
+    if (seen || !el) return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((x) => x.isIntersecting)) {
+        setSeen(true);
+        io.disconnect();
+      }
+    });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [ref, seen]);
+  return seen;
+}
+
 function Body({ e, d, sources }: { e: ElementIndexEntry; d: Parameters<typeof subshells>[1]; sources: Sources }) {
+  const root = useRef<HTMLDivElement>(null);
+  const seen = useSeen(root);
   const list = useMemo(() => subshells(e, d), [e, d]);
   const initial = [...list].reverse().find((s) => s.valence) ?? list[list.length - 1];
   const [selected, setSelected] = useState(initial ? `${initial.n},${initial.l}` : "");
@@ -496,7 +519,7 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: Parameters<typeof su
   const slater = list.some((s) => s.zeff.method === "slater");
   const radii = d.orbitals.radii;
   return (
-    <div className={styles.panel}>
+    <div className={styles.panel} ref={root}>
       <Badge>
         Hydrogenic approximation with Clementi–Raimondi Z<sub>eff</sub>
         {slater ? " (Slater's rules where their table has no value)" : ""}. Angular shapes are exact for one electron;
@@ -508,17 +531,21 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: Parameters<typeof su
         </p>
       )}
       <Section title="Orbital gallery" id="gallery">
-        <Gallery
-          element={e}
-          list={list}
-          selected={selected}
-          onSelect={(key) => {
-            setChosen(true);
-            setSelected(key);
-          }}
-        />
+        {seen ? (
+          <Gallery
+            element={e}
+            list={list}
+            selected={selected}
+            onSelect={(key) => {
+              setChosen(true);
+              setSelected(key);
+            }}
+          />
+        ) : (
+          <p className={shared.muted}>The pictures are computed when this panel is shown.</p>
+        )}
       </Section>
-      {sel && (
+      {sel && seen && (
         <Section title={`${sel.label} in 3D`} id="viewer">
           <Viewer element={e} s={sel} chosen={chosen} />
         </Section>

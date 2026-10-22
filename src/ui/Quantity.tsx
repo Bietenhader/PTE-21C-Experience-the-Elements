@@ -13,7 +13,7 @@ type Sources = SourcesFile["sources"];
 
 export function MissingValue({ m }: { m: Missing }) {
   return (
-    <span className={styles.missing}>
+    <span className={styles.missing} data-missing={m.reason}>
       <span className={styles.reason}>{MISSING_TEXT[m.reason].long}</span>
       {m.note && <span className={styles.note}> — {m.note}</span>}
     </span>

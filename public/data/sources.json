@@ -198,6 +198,28 @@
    "status": "ok",
    "notes": "tools/curated/polarizability.toml: the recommended value and its uncertainty for all 118 elements, in atomic units, transcribed via the MIT-licensed mendeleev package (v1.3.0), whose metadata cites the table as updated by its authors in 2023."
   },
+  "fock1935": {
+   "id": "fock1935",
+   "title": "Fock: the hidden four-dimensional symmetry of the hydrogen atom",
+   "url": "https://doi.org/10.1007/BF01336904",
+   "licence": "Published work; cite",
+   "licenceUrl": "https://doi.org/10.1007/BF01336904",
+   "citation": "V. Fock, Zur Theorie des Wasserstoffatoms, Z. Phys. 98, 145-154 (1935), doi:10.1007/BF01336904.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Cited by the symmetry note of the mathematical panel: hydrogen's 2n² degeneracy as an SO(4) symmetry."
+  },
+  "barut1967": {
+   "id": "barut1967",
+   "title": "Barut & Kleinert: the hydrogen atom from a noncompact dynamical group",
+   "url": "https://doi.org/10.1103/PhysRev.156.1541",
+   "licence": "Published work; cite",
+   "licenceUrl": "https://doi.org/10.1103/PhysRev.156.1541",
+   "citation": "A. O. Barut and H. Kleinert, Transition probabilities of the hydrogen atom from noncompact dynamical groups, Phys. Rev. 156, 1541-1545 (1967), doi:10.1103/PhysRev.156.1541.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Cited by the symmetry note of the mathematical panel: all hydrogen levels in one representation of SO(4,2)."
+  },
   "steck_alkali": {
    "id": "steck_alkali",
    "title": "Alkali D Line Data (Daniel A. Steck)",
@@ -352,7 +374,7 @@
    "licenceUrl": "https://doi.org/10.1039/C0CP01575J",
    "citation": "P. Pyykkö, Phys. Chem. Chem. Phys. 13, 161 (2011).",
    "kind": "curated",
-   "status": "not_yet_used",
+   "status": "ok",
    "notes": "v0.2."
   },
   "karshenboim2005": {

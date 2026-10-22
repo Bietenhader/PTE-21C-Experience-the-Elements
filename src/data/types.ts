@@ -1123,3 +1123,34 @@ export interface ColourMatchingFile {
     number
   ];
 }
+/**
+ * public/data/relativity.json: where relativity changes chemistry, and where the periodic table ends (SPEC §10.5), from tools/curated/relativity.toml.
+ */
+export interface RelativityFile {
+  schemaVersion: 1;
+  /**
+   * @minItems 1
+   */
+  notes: [RelativityNote, ...RelativityNote[]];
+  limits: RelativityLimit[];
+}
+/**
+ * One element whose chemistry relativity changes, in our own words, with its paper.
+ */
+export interface RelativityNote {
+  Z: number;
+  topic: string;
+  text: string;
+  source: SourceId;
+  doi?: string;
+  reference?: string;
+}
+/**
+ * Where the periodic table would end for a finite nucleus (the point-nucleus limit Z = 1/α is computed from CODATA in the app).
+ */
+export interface RelativityLimit {
+  name: string;
+  Z: number;
+  text: string;
+  source: SourceId;
+}

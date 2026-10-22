@@ -1,0 +1,191 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 60rem;
+}
+
+.subheading {
+  margin: var(--space-4) 0 var(--space-1);
+  font-size: 0.9375rem;
+}
+
+.term {
+  font-family: var(--font-num);
+  font-size: 1.05em;
+  white-space: nowrap;
+}
+
+.term sup,
+.term sub {
+  font-size: 0.7em;
+}
+
+/* Orbital boxes */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin: var(--space-3) 0;
+}
+
+.shell {
+  margin: 0;
+}
+
+.shell figcaption {
+  margin-block-start: var(--space-1);
+  font-family: var(--font-num);
+  font-size: 0.9375rem;
+}
+
+.boxRow {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  inline-size: 2.25rem;
+}
+
+.arrows {
+  display: grid;
+  place-items: center;
+  inline-size: 2.25rem;
+  block-size: 2.25rem;
+  border: 1px solid var(--text-muted);
+  margin-inline-start: -1px;
+  font-size: 1.15rem;
+  letter-spacing: 0.1em;
+}
+
+.ml {
+  color: var(--text-muted);
+  font-family: var(--font-num);
+  font-size: 0.6875rem;
+}
+
+.details {
+  margin-block: var(--space-2);
+  font-size: 0.875rem;
+}
+
+.details summary {
+  cursor: pointer;
+  min-block-size: 2rem;
+  line-height: 2rem;
+}
+
+/* Tables */
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.table caption {
+  margin-block-end: var(--space-1);
+  text-align: start;
+}
+
+.table th,
+.table td {
+  padding: 0.2rem 0.6rem;
+  border-block-end: 1px solid var(--border);
+  text-align: start;
+}
+
+.table thead th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.table tbody th {
+  font-weight: 500;
+}
+
+.total th,
+.total td {
+  border-block-start: 2px solid var(--border);
+}
+
+.steps {
+  margin: 0 0 var(--space-2);
+  padding-inline-start: 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.steps li {
+  margin-block-end: var(--space-1);
+}
+
+.config {
+  font-family: var(--font-mono);
+}
+
+/* Agreement marks say it in words too, never by colour alone. */
+.agree {
+  color: var(--accent-post-transition-metal);
+  font-weight: 600;
+}
+
+.disagree {
+  color: var(--accent-alkaline-earth-metal);
+  font-weight: 600;
+}
+
+.label {
+  padding: 0 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.curve {
+  fill: none;
+  stroke: var(--link);
+  stroke-width: 1.75;
+}
+
+.mine {
+  fill: var(--focus);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+}
+
+.notes {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.notes li {
+  margin-block-end: var(--space-2);
+}
+
+.notes li[data-current] {
+  padding: var(--space-1) var(--space-2);
+  border-inline-start: 3px solid var(--focus);
+  background: var(--surface-raised);
+  list-style-position: inside;
+}
+
+.prose p {
+  margin: 0 0 var(--space-2);
+  max-inline-size: 75ch;
+  font-size: 0.9375rem;
+}
+
+/* Displayed formulas keep to the screen on a phone (the Landé formula is the widest). */
+@media (max-width: 40rem) {
+  .panel :global(.katex-display) {
+    font-size: 0.82em;
+  }
+}

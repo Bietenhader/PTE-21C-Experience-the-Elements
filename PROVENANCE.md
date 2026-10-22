@@ -25,6 +25,8 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `slater1930` | [Slater's rules for atomic screening constants](https://doi.org/10.1103/PhysRev.36.57) | [Published method; cite](https://doi.org/10.1103/PhysRev.36.57) | — | used |
 | `clementi_zeff` | [Clementi–Raimondi effective nuclear charges](https://doi.org/10.1063/1.1733573) | [Published numerical values; cite](https://doi.org/10.1063/1.1733573) | — | used |
 | `schwerdtfeger2019` | [Table of static dipole polarizabilities of the neutral elements (Schwerdtfeger & Nagle)](https://doi.org/10.1080/00268976.2018.1535143) | [Published numerical values; cite](https://doi.org/10.1080/00268976.2018.1535143) | — | used |
+| `fock1935` | [Fock: the hidden four-dimensional symmetry of the hydrogen atom](https://doi.org/10.1007/BF01336904) | [Published work; cite](https://doi.org/10.1007/BF01336904) | — | used |
+| `barut1967` | [Barut & Kleinert: the hydrogen atom from a noncompact dynamical group](https://doi.org/10.1103/PhysRev.156.1541) | [Published work; cite](https://doi.org/10.1103/PhysRev.156.1541) | — | used |
 | `steck_alkali` | [Alkali D Line Data (Daniel A. Steck)](https://steck.us/alkalidata/) | [Compiled reference data; cite the sheet and revision](https://steck.us/alkalidata/) | — | not yet used |
 | `allegrini2022` | [Survey of hyperfine measurements in alkali atoms](https://arxiv.org/abs/2209.11423) | [Scientific facts; cite](https://arxiv.org/abs/2209.11423) | — | used |
 | `arimondo1977` | [Experimental determinations of the hyperfine structure in the alkali atoms](https://doi.org/10.1103/RevModPhys.49.31) | [Scientific facts; cite](https://doi.org/10.1103/RevModPhys.49.31) | — | not yet used |
@@ -38,7 +40,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `cod` | [Crystallography Open Database](https://www.crystallography.net/cod/) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | — | used |
 | `lodders2025` | [Solar System elemental abundances from the solar photosphere and CI-chondrites](https://doi.org/10.1007/s11214-025-01146-w) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | — | used |
 | `kobayashi2020` | [The origin of elements from carbon to uranium](https://doi.org/10.3847/1538-4357/abae65) | [Facts; cite; approximate transcription](https://doi.org/10.3847/1538-4357/abae65) | — | used |
-| `pyykko2011` | [A suggested periodic table up to Z ≤ 172](https://doi.org/10.1039/C0CP01575J) | [Facts; cite](https://doi.org/10.1039/C0CP01575J) | — | not yet used |
+| `pyykko2011` | [A suggested periodic table up to Z ≤ 172](https://doi.org/10.1039/C0CP01575J) | [Facts; cite](https://doi.org/10.1039/C0CP01575J) | — | used |
 | `karshenboim2005` | [Precision physics of simple atoms: QED tests, nuclear structure and fundamental constants](https://doi.org/10.1016/j.physrep.2005.08.008) | [Scientific facts; cite](https://arxiv.org/abs/hep-ph/0509010) | — | used |
 | `primary_literature` | [Primary research papers (one per row, by DOI)](https://www.doi.org/) | [Scientific facts; cite](https://www.doi.org/) | — | used |
 | `cgpm_resolutions` | [Resolutions of the General Conference on Weights and Measures (CGPM)](https://www.bipm.org/en/committees/cg/cgpm/resolutions) | [© BIPM; definitions are facts; cite](https://www.bipm.org/en/legal-notice) | — | used |
@@ -68,6 +70,8 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `slater1930` — J. C. Slater, Atomic shielding constants, Phys. Rev. 36, 57–64 (1930), doi:10.1103/PhysRev.36.57.
 - `clementi_zeff` — E. Clementi and D. L. Raimondi, J. Chem. Phys. 38, 2686 (1963), doi:10.1063/1.1733573; E. Clementi, D. L. Raimondi and W. P. Reinhardt, J. Chem. Phys. 47, 1300 (1967), doi:10.1063/1.1712084.
 - `schwerdtfeger2019` — P. Schwerdtfeger and J. K. Nagle, 2018 Table of static dipole polarizabilities of the neutral elements in the periodic table, Mol. Phys. 117, 1200-1225 (2019), doi:10.1080/00268976.2018.1535143.
+- `fock1935` — V. Fock, Zur Theorie des Wasserstoffatoms, Z. Phys. 98, 145-154 (1935), doi:10.1007/BF01336904.
+- `barut1967` — A. O. Barut and H. Kleinert, Transition probabilities of the hydrogen atom from noncompact dynamical groups, Phys. Rev. 156, 1541-1545 (1967), doi:10.1103/PhysRev.156.1541.
 - `allegrini2022` — M. Allegrini, E. Arimondo and L. A. Orozco, Survey of hyperfine structure measurements in alkali atoms, J. Phys. Chem. Ref. Data 51, 043102 (2022), arXiv:2209.11423.
 - `olmschenk_catalog` — S. Olmschenk, Laser-cooled atoms and ions catalog, https://personal.denison.edu/~olmschenks/atom_catalog.html and ion_catalog.html.
 - `images_of_elements` — Jürgen Kummer, images-of-elements.com — photographs of the chemical elements, CC BY 3.0; each photo is credited with a link to its element page.
@@ -78,6 +82,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `cod` — S. Gražulis et al., Crystallography Open Database – an open-access collection of crystal structures, J. Appl. Cryst. 42, 726–729 (2009), doi:10.1107/S0021889809016690; each structure is cited by its COD id and original reference.
 - `lodders2025` — K. Lodders, M. Bergemann and H. Palme, Solar System elemental abundances from the solar photosphere and CI-chondrites, Space Sci. Rev. 221, 23 (2025), doi:10.1007/s11214-025-01146-w.
 - `kobayashi2020` — C. Kobayashi, A. I. Karakas and M. Lugaro, The origin of elements from carbon to uranium, ApJ 900, 179 (2020), doi:10.3847/1538-4357/abae65, arXiv:2008.04660.
+- `pyykko2011` — P. Pyykkö, Phys. Chem. Chem. Phys. 13, 161 (2011).
 - `karshenboim2005` — S. G. Karshenboim, Phys. Rep. 422, 1 (2005), doi:10.1016/j.physrep.2005.08.008, arXiv:hep-ph/0509010.
 - `primary_literature` — The paper named by the DOI (or arXiv identifier) given with each value; listed in full in PROVENANCE.md.
 - `cgpm_resolutions` — Conférence Générale des Poids et Mesures, Resolutions (BIPM), each cited by its DOI 10.59161/CGPM<year>RES<n>E.

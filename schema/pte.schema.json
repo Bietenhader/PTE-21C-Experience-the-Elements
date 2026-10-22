@@ -2875,6 +2875,95 @@
         "z"
       ],
       "additionalProperties": false
+    },
+    "RelativityFile": {
+      "description": "public/data/relativity.json: where relativity changes chemistry, and where the periodic table ends (SPEC §10.5), from tools/curated/relativity.toml.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelativityNote"
+          },
+          "minItems": 1
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelativityLimit"
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "notes",
+        "limits"
+      ],
+      "additionalProperties": false
+    },
+    "RelativityNote": {
+      "description": "One element whose chemistry relativity changes, in our own words, with its paper.",
+      "type": "object",
+      "properties": {
+        "Z": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 118
+        },
+        "topic": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Z",
+        "topic",
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "RelativityLimit": {
+      "description": "Where the periodic table would end for a finite nucleus (the point-nucleus limit Z = 1/α is computed from CODATA in the app).",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "Z": {
+          "type": "integer"
+        },
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
+      },
+      "required": [
+        "name",
+        "Z",
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
     }
   }
 }

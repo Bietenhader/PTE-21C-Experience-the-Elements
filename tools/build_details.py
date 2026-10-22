@@ -387,6 +387,23 @@ def build_colour(report: Report) -> int:
     return 1
 
 
+def build_relativity() -> int:
+    """public/data/relativity.json: where relativity changes chemistry and where the table ends (SPEC §10.5)."""
+    import curated
+
+    keep = ("Z", "topic", "text", "source", "doi", "reference")
+    doc = {
+        "schemaVersion": 1,
+        "notes": [{k: r[k] for k in keep if k in r} for r in curated.load("relativity.toml", "note")],
+        "limits": [
+            {k: r[k] for k in ("name", "Z", "text", "source")} for r in curated.load("relativity.toml", "limit")
+        ],
+    }
+    validator("RelativityFile").validate(doc)
+    dump_json(DATA_DIR / "relativity.json", doc)
+    return 1
+
+
 def build_details(report: Report | None = None) -> dict[str, int]:
     own_report = report is None
     report = report or Report()
@@ -406,6 +423,7 @@ def build_details(report: Report | None = None) -> dict[str, int]:
         counts[name] = builder(data, symbols, report)
     counts["elements"] = build_elements(load_json(DATA_DIR / "index.json"), report)
     counts["colour"] = build_colour(report)
+    counts["relativity"] = build_relativity()
     if own_report and report.sections:
         # Append this step's findings to the report build.py wrote (python tools/pipeline.py runs both).
         path = TOOLS_DIR / "build-report.md"

@@ -163,6 +163,26 @@ citation = "P. Schwerdtfeger and J. K. Nagle, 2018 Table of static dipole polari
 kind = "curated"
 notes = "tools/curated/polarizability.toml: the recommended value and its uncertainty for all 118 elements, in atomic units, transcribed via the MIT-licensed mendeleev package (v1.3.0), whose metadata cites the table as updated by its authors in 2023."
 
+[fock1935]
+title = "Fock: the hidden four-dimensional symmetry of the hydrogen atom"
+url = "https://doi.org/10.1007/BF01336904"
+licence = "Published work; cite"
+licence_url = "https://doi.org/10.1007/BF01336904"
+citation = "V. Fock, Zur Theorie des Wasserstoffatoms, Z. Phys. 98, 145-154 (1935), doi:10.1007/BF01336904."
+kind = "reference"
+used_in_app = true
+notes = "Cited by the symmetry note of the mathematical panel: hydrogen's 2n² degeneracy as an SO(4) symmetry."
+
+[barut1967]
+title = "Barut & Kleinert: the hydrogen atom from a noncompact dynamical group"
+url = "https://doi.org/10.1103/PhysRev.156.1541"
+licence = "Published work; cite"
+licence_url = "https://doi.org/10.1103/PhysRev.156.1541"
+citation = "A. O. Barut and H. Kleinert, Transition probabilities of the hydrogen atom from noncompact dynamical groups, Phys. Rev. 156, 1541-1545 (1967), doi:10.1103/PhysRev.156.1541."
+kind = "reference"
+used_in_app = true
+notes = "Cited by the symmetry note of the mathematical panel: all hydrogen levels in one representation of SO(4,2)."
+
 [steck_alkali]
 title = "Alkali D Line Data (Daniel A. Steck)"
 url = "https://steck.us/alkalidata/"
@@ -285,9 +305,9 @@ title = "A suggested periodic table up to Z ≤ 172"
 url = "https://doi.org/10.1039/C0CP01575J"
 licence = "Facts; cite"
 licence_url = "https://doi.org/10.1039/C0CP01575J"
-citation = "P. Pyykkö, Phys. Chem. Chem. Phys. 13, 161 (2011)."
+citation = "P. Pyykkö, A suggested periodic table up to Z ≤ 172, based on Dirac–Fock calculations on atoms and ions, Phys. Chem. Chem. Phys. 13, 161-168 (2011), doi:10.1039/C0CP01575J."
 kind = "curated"
-notes = "v0.2."
+notes = "M4: the finite-nucleus end of the table (tools/curated/relativity.toml). v0.2: the period-8 placements."
 
 [karshenboim2005]
 title = "Precision physics of simple atoms: QED tests, nuclear structure and fundamental constants"

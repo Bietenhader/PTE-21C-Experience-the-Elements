@@ -8,7 +8,16 @@ self.onmessage = (event: MessageEvent<{ id: number; req: OrbitalRequest }>) => {
   const { id, req } = event.data;
   try {
     const result = computeOrbital(req);
-    const buffers = [result.positions, result.normals, result.colors, result.nodal?.positions, result.nodal?.normals, result.sliceImage];
+    const buffers = [
+      result.positions,
+      result.normals,
+      result.indices,
+      result.colors,
+      result.nodal?.positions,
+      result.nodal?.normals,
+      result.nodal?.indices,
+      result.sliceImage,
+    ];
     const transfer = buffers.filter((b) => b !== undefined).map((b) => b.buffer as ArrayBuffer);
     (self as unknown as Worker).postMessage({ id, result }, transfer as Transferable[]);
   } catch (err) {

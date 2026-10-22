@@ -115,14 +115,22 @@ function Gallery({
   onSelect: (key: string) => void;
 }) {
   const [drawn, setDrawn] = useState(0);
+  const [elapsed, setElapsed] = useState<number | null>(null);
+  const count = useRef(0);
   const done = drawn >= list.length;
-  // Marks for the timing test (SPEC §17.5, M3): from the gallery's start to its last picture.
+  // From the gallery's start to its last picture: shown under the gallery, and read by the timing test
+  // (SPEC §17.5, M3 acceptance).
   useEffect(() => {
     performance.mark("pte:orbitals-start");
   }, []);
-  useEffect(() => {
-    if (done) performance.measure("pte:orbitals-ready", { start: "pte:orbitals-start", detail: { count: list.length } });
-  }, [done, list.length]);
+  const onDrawn = () => {
+    count.current += 1;
+    setDrawn(count.current);
+    if (count.current === list.length) {
+      const m = performance.measure("pte:orbitals-ready", { start: "pte:orbitals-start", detail: { count: list.length } });
+      setElapsed(m.duration);
+    }
+  };
   const noWebgl = thumbnailRenderer(THUMB) === null;
   return (
     <div>
@@ -148,10 +156,15 @@ function Gallery({
             element={element}
             selected={selected === `${s.n},${s.l}`}
             onSelect={() => onSelect(`${s.n},${s.l}`)}
-            onDrawn={() => setDrawn((d) => d + 1)}
+            onDrawn={onDrawn}
           />
         ))}
       </ul>
+      {/* Announced once, when the last picture is in; each tile says "computing…" until then. */}
+      <p className={shared.muted} aria-live="polite" data-testid="orbital-timing">
+        {elapsed !== null &&
+          `All ${list.length} computed and drawn in ${(elapsed / 1000).toFixed(1)} s on this device (${gridSize()}³ grid points each).`}
+      </p>
     </div>
   );
 }
@@ -190,13 +203,23 @@ function OrbitalLabel({ n, l, m, kind }: { n: number; l: number; m: number; kind
   );
 }
 
-function Viewer({ element, s }: { element: ElementIndexEntry; s: SubshellInfo }) {
-  const [kind, setKind] = useState<OrbitalKind>("real");
+function Viewer({ element, s, chosen }: { element: ElementIndexEntry; s: SubshellInfo; chosen: boolean }) {
+  const [kind, setKindState] = useState<OrbitalKind>("real");
+  // What someone asked to see goes to the head of the queue; the first picture waits for the gallery.
+  const [asked, setAsked] = useState(false);
+  const urgent = chosen || asked;
+  const setKind = (k: OrbitalKind) => {
+    setAsked(true);
+    setKindState(k);
+  };
   // The orientation belongs to the subshell it was chosen for; a new subshell starts at m = 0.
   const here = `${s.n},${s.l}`;
   const [choice, setChoice] = useState({ shell: here, m: 0 });
   const m = choice.shell === here ? choice.m : 0;
-  const setM = (mm: number) => setChoice({ shell: here, m: mm });
+  const setM = (mm: number) => {
+    setAsked(true);
+    setChoice({ shell: here, m: mm });
+  };
   const [phase, setPhase] = useState(true);
   const [nodal, setNodal] = useState(false);
   const [slice, setSlice] = useState(false);
@@ -211,12 +234,14 @@ function Viewer({ element, s }: { element: ElementIndexEntry; s: SubshellInfo })
 
   useEffect(() => {
     let live = true;
-    requestOrbital({ n: s.n, l: s.l, m, z: s.zeff.value, kind, grid: gridSize(), nodal: kind === "real", slice: 160 }, true)
+    requestOrbital({ n: s.n, l: s.l, m, z: s.zeff.value, kind, grid: gridSize(), nodal: kind === "real", slice: 160 }, urgent)
       .then((o) => live && setResult({ key: want, orbital: o }))
       .catch(() => live && setResult((r) => ({ key: want, ...(r?.orbital ? { orbital: r.orbital } : {}), failed: true })));
     return () => {
       live = false;
     };
+    // `urgent` only orders the queue; a change of it alone needs no new request.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [s.n, s.l, s.zeff.value, m, kind, want]);
 
   const name = spokenName(s.n, s.l, m, kind);
@@ -457,7 +482,7 @@ export default function Panel({ element: e, sources }: PanelProps) {
   const detail = useElementDetail(e.Z);
   return (
     <WhenLoaded files={[detail]}>
-      {(d) => <Body e={e} d={d} sources={sources} />}
+      {(d) => <Body key={e.Z} e={e} d={d} sources={sources} />}
     </WhenLoaded>
   );
 }
@@ -466,6 +491,7 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: Parameters<typeof su
   const list = useMemo(() => subshells(e, d), [e, d]);
   const initial = [...list].reverse().find((s) => s.valence) ?? list[list.length - 1];
   const [selected, setSelected] = useState(initial ? `${initial.n},${initial.l}` : "");
+  const [chosen, setChosen] = useState(false);
   const sel = list.find((s) => `${s.n},${s.l}` === selected) ?? initial;
   const slater = list.some((s) => s.zeff.method === "slater");
   const radii = d.orbitals.radii;
@@ -482,11 +508,19 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: Parameters<typeof su
         </p>
       )}
       <Section title="Orbital gallery" id="gallery">
-        <Gallery element={e} list={list} selected={selected} onSelect={setSelected} />
+        <Gallery
+          element={e}
+          list={list}
+          selected={selected}
+          onSelect={(key) => {
+            setChosen(true);
+            setSelected(key);
+          }}
+        />
       </Section>
       {sel && (
         <Section title={`${sel.label} in 3D`} id="viewer">
-          <Viewer element={e} s={sel} />
+          <Viewer element={e} s={sel} chosen={chosen} />
         </Section>
       )}
       <Section title="Shell stack" id="stack">

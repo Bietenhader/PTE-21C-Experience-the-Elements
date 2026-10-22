@@ -19,8 +19,11 @@ import {
 } from "three";
 import type { OrbitalResult } from "./field";
 
-export function orbitalGeometry(o: Pick<OrbitalResult, "positions" | "normals"> & { colors?: Float32Array }): BufferGeometry {
+export function orbitalGeometry(
+  o: Pick<OrbitalResult, "positions" | "normals" | "indices"> & { colors?: Float32Array },
+): BufferGeometry {
   const g = new BufferGeometry();
+  g.setIndex(new BufferAttribute(o.indices, 1));
   g.setAttribute("position", new BufferAttribute(o.positions, 3));
   g.setAttribute("normal", new BufferAttribute(o.normals, 3));
   if (o.colors) g.setAttribute("color", new BufferAttribute(o.colors, 3));
@@ -53,20 +56,37 @@ export function addLights(scene: Scene): void {
   scene.add(rim);
 }
 
+/** Whether WebGL runs on a GPU: a context that refuses software rendering can be created. */
+function hasGpu(): boolean {
+  const probe = document.createElement("canvas");
+  const gl = probe.getContext("webgl2", { failIfMajorPerformanceCaveat: true });
+  gl?.getExtension("WEBGL_lose_context")?.loseContext();
+  return gl !== null;
+}
+
 export class ThumbnailRenderer {
   private renderer: WebGLRenderer;
   private scene = new Scene();
   private camera = new PerspectiveCamera(30, 1, 0.1, 100);
   private material = new MeshStandardMaterial({ vertexColors: true, side: DoubleSide, roughness: 0.55, metalness: 0 });
 
+  /** True when the browser draws WebGL in software (no GPU): antialiasing is then left off, as it costs ~4×. */
+  readonly software: boolean;
+
   constructor(size: number) {
-    this.renderer = new WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: false });
+    this.software = !hasGpu();
+    this.renderer = new WebGLRenderer({ antialias: !this.software, alpha: true });
     this.renderer.setPixelRatio(1);
     this.renderer.setSize(size, size, false);
     this.renderer.setClearColor(0x000000, 0);
     addLights(this.scene);
     // Compile the shader now, while the workers compute, rather than on the first picture.
-    const warm = new Mesh(orbitalGeometry({ positions: new Float32Array(9), normals: new Float32Array(9), colors: new Float32Array(9) }), this.material);
+    const warm = new Mesh(orbitalGeometry({
+        positions: new Float32Array(9),
+        normals: new Float32Array(9),
+        indices: new Uint32Array([0, 1, 2]),
+        colors: new Float32Array(9),
+      }), this.material);
     this.scene.add(warm);
     this.renderer.compile(this.scene, this.camera);
     this.scene.remove(warm);

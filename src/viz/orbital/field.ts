@@ -38,9 +38,11 @@ export interface OrbitalResult {
   enclosed: number;
   positions: Float32Array;
   normals: Float32Array;
+  /** Three vertex indices per triangle. */
+  indices: Uint32Array;
   /** RGB per vertex in [0, 1]. */
   colors: Float32Array;
-  nodal?: { positions: Float32Array; normals: Float32Array };
+  nodal?: { positions: Float32Array; normals: Float32Array; indices: Uint32Array };
   /** |ψ|² on the xz-plane as RGBA bytes, `slice × slice` pixels, x to the right and z up. */
   sliceImage?: Uint8ClampedArray;
   sliceSize?: number;
@@ -70,39 +72,117 @@ function ramp(t: number): [number, number, number] {
   return [Math.min(1, 1.6 * u * u + 0.05), Math.min(1, 0.1 + 0.95 * u), Math.min(1, 0.25 + 0.7 * u * (1 - u) + 0.2 * u)];
 }
 
-export function computeOrbital(req: OrbitalRequest): OrbitalResult {
-  const t0 = performance.now();
+/**
+ * Signs of a real orbital ψ under the reflections x → −x, y → −y and z → −z. The angular factor is
+ * Re or Im of (x + iy)^|m| times a polynomial in z of parity (−1)^(l−|m|); the radial factor is even.
+ * |ψ|² is even under all three for every orbital, real or complex.
+ */
+export function reflectionSigns(l: number, m: number): [number, number, number] {
+  const a = Math.abs(m);
+  const sx = m >= 0 ? (a % 2 ? -1 : 1) : a % 2 ? 1 : -1;
+  const sy = m >= 0 ? 1 : -1;
+  const sz = (l - a) % 2 ? -1 : 1;
+  return [sx, sy, sz];
+}
+
+export interface Field {
+  half: number;
+  step: number;
+  density: Float32Array;
+  /** ψ itself, for real orbitals (the nodal surfaces are where it is zero). */
+  psi: Float32Array | null;
+  /** The density on one octant only (i, j, k ≥ n/2): every value of `density` appears in it 1/8 as often. */
+  octant: Float32Array;
+}
+
+/**
+ * ψ and |ψ|² on the grid. The grid points are symmetric about the origin (the point count is even),
+ * so one octant is evaluated and mirrored into the other seven: an eighth of the work.
+ */
+export function sampleField(req: Pick<OrbitalRequest, "n" | "l" | "m" | "z" | "kind" | "grid">): Field {
   const { n: N, l, m, z, kind, grid: G } = req;
+  if (G % 2) throw new RangeError(`grid must have an even number of points, got ${G}`);
   const half = meanRadius(N, l, z) + 3 * radiusSpread(N, l, z);
   const step = (2 * half) / (G - 1);
   const R = radialFunction(N, l, z);
   const Y = kind === "real" ? realHarmonicFunction(l, m) : complexMagnitudeFunction(l, m);
+  const [sx, sy, sz] = reflectionSigns(l, m);
+  const H = G / 2;
   const density = new Float32Array(G * G * G);
   const psi = kind === "real" ? new Float32Array(G * G * G) : null;
+  const octant = new Float32Array(H * H * H);
   const eps = step * 1e-3;
-  for (let k = 0; k < G; k++) {
+  let o = 0;
+  for (let k = H; k < G; k++) {
     const zz = -half + k * step;
-    for (let j = 0; j < G; j++) {
+    for (let j = H; j < G; j++) {
       const y = -half + j * step;
-      for (let i = 0; i < G; i++) {
+      // Row starts of the four mirror images of row (j, k): +y+z, −y+z, +y−z, −y−z.
+      const r0 = G * (j + G * k);
+      const r1 = G * (G - 1 - j + G * k);
+      const r2 = G * (j + G * (G - 1 - k));
+      const r3 = G * (G - 1 - j + G * (G - 1 - k));
+      for (let i = H; i < G; i++) {
         const x = -half + i * step;
         const r = Math.sqrt(x * x + y * y + zz * zz) || eps;
         const v = R(r) * Y(x, y, zz, r);
-        const idx = i + G * (j + G * k);
-        density[idx] = v * v;
-        if (psi) psi[idx] = v;
+        const d = v * v;
+        octant[o++] = d;
+        const m = G - 1 - i;
+        density[r0 + i] = d;
+        density[r0 + m] = d;
+        density[r1 + i] = d;
+        density[r1 + m] = d;
+        density[r2 + i] = d;
+        density[r2 + m] = d;
+        density[r3 + i] = d;
+        density[r3 + m] = d;
+        if (psi) {
+          psi[r0 + i] = v;
+          psi[r0 + m] = sx * v;
+          psi[r1 + i] = sy * v;
+          psi[r1 + m] = sx * sy * v;
+          psi[r2 + i] = sz * v;
+          psi[r2 + m] = sx * sz * v;
+          psi[r3 + i] = sy * sz * v;
+          psi[r3 + m] = sx * sy * sz * v;
+        }
       }
     }
   }
-  const level = enclosedLevel(density, 0.9);
+  return { half, step, density, psi, octant };
+}
+
+export function computeOrbital(req: OrbitalRequest): OrbitalResult {
+  const t0 = performance.now();
+  const { n: N, l, m, z, kind, grid: G } = req;
+  const { half, step, density, psi, octant } = sampleField(req);
+  const R = radialFunction(N, l, z);
+  const Y = kind === "real" ? realHarmonicFunction(l, m) : complexMagnitudeFunction(l, m);
+  const eps = step * 1e-3;
+  // The level and the enclosed fraction are the same on one octant as on the whole grid.
+  const level = enclosedLevel(octant, 0.9);
   let total = 0;
   let inside = 0;
-  for (let i = 0; i < density.length; i++) {
-    const d = density[i] ?? 0;
-    total += d;
-    if (d >= level) inside += d;
+  let reach = 0; // the farthest octant index (per axis) still at or above the level
+  for (let k = 0, o = 0; k < G / 2; k++) {
+    for (let j = 0; j < G / 2; j++) {
+      for (let i = 0; i < G / 2; i++, o++) {
+        const d = octant[o] ?? 0;
+        total += d;
+        if (d >= level) {
+          inside += d;
+          if (i > reach) reach = i;
+          if (j > reach) reach = j;
+          if (k > reach) reach = k;
+        }
+      }
+    }
   }
-  const mesh = marchingCubes({ n: G, origin: -half, step, values: density }, level);
+  // Marching cubes only where the surface can be: the cube of cells around the points above the level.
+  const lo = Math.max(0, G / 2 - 2 - reach);
+  const hi = Math.min(G - 1, G / 2 + reach + 1);
+  const mesh = marchingCubes({ n: G, origin: -half, step, values: density }, level, { lo, hi });
   const colors = new Float32Array(mesh.positions.length);
   for (let p = 0; p < mesh.positions.length; p += 3) {
     const x = mesh.positions[p] ?? 0;
@@ -128,6 +208,7 @@ export function computeOrbital(req: OrbitalRequest): OrbitalResult {
     enclosed: total > 0 ? inside / total : 0,
     positions: mesh.positions,
     normals: mesh.normals,
+    indices: mesh.indices,
     colors,
     millis: 0,
   };

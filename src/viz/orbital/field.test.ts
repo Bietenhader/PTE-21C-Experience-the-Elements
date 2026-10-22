@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 import { describe, expect, it } from "vitest";
-import { computeOrbital, PHASE_NEGATIVE, PHASE_POSITIVE } from "./field";
+import { complexHarmonic, radial, realOrbital } from "../../physics/hydrogenic";
+import { computeOrbital, PHASE_NEGATIVE, PHASE_POSITIVE, reflectionSigns, sampleField } from "./field";
 
 describe("orbital pictures (SPEC §11.1)", () => {
   it("2p_z of hydrogen: the surface encloses 90 % of the grid's probability, lobes along ±z with opposite signs", () => {
@@ -46,5 +47,57 @@ describe("orbital pictures (SPEC §11.1)", () => {
     const distinct = new Set<string>();
     for (let p = 0; p < o.colors.length; p += 3) distinct.add(`${(o.colors[p] ?? 0).toFixed(1)},${(o.colors[p + 1] ?? 0).toFixed(1)}`);
     expect(distinct.size).toBeGreaterThan(4);
+  });
+
+  it("the mirrored octant gives the same ψ and |ψ|² as evaluating every point, for every l ≤ 3 and m", () => {
+    const G = 12;
+    for (let l = 0; l <= 3; l++) {
+      for (let m = -l; m <= l; m++) {
+        for (const kind of ["real", "complex"] as const) {
+          const n = l + 2;
+          const f = sampleField({ n, l, m, z: 1.7, kind, grid: G });
+          // Errors relative to the orbital's largest value on the grid (ψ itself vanishes on the nodes).
+          const peak = Math.sqrt(f.density.reduce((a, d) => Math.max(a, d), 0));
+          for (let idx = 0; idx < G * G * G; idx += 7) {
+            const i = idx % G;
+            const j = Math.floor(idx / G) % G;
+            const k = Math.floor(idx / (G * G));
+            const x = -f.half + i * f.step;
+            const y = -f.half + j * f.step;
+            const zz = -f.half + k * f.step;
+            const r = Math.sqrt(x * x + y * y + zz * zz);
+            const psi =
+              kind === "real" ? realOrbital(n, l, m, 1.7, x, y, zz) : radial(n, l, 1.7, r) * complexHarmonic(l, m, x, y, zz, r).magnitude;
+            const scale = Math.max(peak * 1e-3, Math.abs(psi));
+            expect(Math.abs((f.density[idx] ?? 0) - psi * psi) / (scale * scale), `l=${l} m=${m} ${kind} at ${i},${j},${k}`).toBeLessThan(1e-4);
+            if (kind === "real") expect(Math.abs((f.psi?.[idx] ?? 0) - psi) / scale, `ψ l=${l} m=${m} at ${i},${j},${k}`).toBeLessThan(1e-4);
+          }
+        }
+      }
+    }
+  });
+
+  it("reflection signs of the named real orbitals", () => {
+    expect(reflectionSigns(1, 1)).toEqual([-1, 1, 1]); // p_x
+    expect(reflectionSigns(1, -1)).toEqual([1, -1, 1]); // p_y
+    expect(reflectionSigns(1, 0)).toEqual([1, 1, -1]); // p_z
+    expect(reflectionSigns(2, -2)).toEqual([-1, -1, 1]); // d_xy
+    expect(reflectionSigns(2, 1)).toEqual([-1, 1, -1]); // d_xz
+    expect(reflectionSigns(3, -2)).toEqual([-1, -1, -1]); // f_xyz
+  });
+
+  it("limiting marching cubes to the surface's box changes nothing", async () => {
+    const { marchingCubes } = await import("./marchingCubes");
+    for (const [n, l, m] of [
+      [1, 0, 0],
+      [3, 2, 0],
+      [4, 3, 3],
+    ] as const) {
+      const o = computeOrbital({ n, l, m, z: 2, kind: "real", grid: 40 });
+      const f = sampleField({ n, l, m, z: 2, kind: "real", grid: 40 });
+      const full = marchingCubes({ n: 40, origin: -f.half, step: f.step, values: f.density }, o.level);
+      expect(o.positions.length).toBe(full.positions.length);
+      expect(Array.from(o.positions.slice(0, 30))).toEqual(Array.from(full.positions.slice(0, 30)));
+    }
   });
 });

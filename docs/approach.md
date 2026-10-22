@@ -418,6 +418,57 @@ Orbitals, electromagnetic & ionization, spectrum, and nucleus (SPEC §10.1, §10
   then selects the panel it settles on. Before, the end of an earlier scroll could land after the next panel
   had been chosen and undo it.
 
+## M4: panels, batch 2
+
+Probability, physical, mathematical, AMO, chemistry, biology and history (SPEC §10.3–10.6, §10.9–10.11).
+
+### Shared
+
+- **The property test covers all eleven panels** (`tests/e2e/panels.spec.ts`, 118 × 11): no console error,
+  no "NaN", "undefined", "Infinity" or "[object Object]" on screen (the panels' own wording avoids those words
+  too), every Missing value with one of the five reasons, and every ionization stage drawn.
+- **"Not yet compiled" is not "not measured".** Properties PTE-21C has not gathered yet (on the electromagnetic
+  panel: magnetic ordering, resistivity, superconductivity, work function, band gap) are named under "Not yet
+  compiled in PTE-21C" as plain text. In M3 they were shown as Missing `not_measured`, which was untrue: they
+  have been measured; we have not compiled them.
+
+### Electromagnetic: polarizability
+
+- **Static dipole polarizability** of all 118 neutral atoms from Schwerdtfeger & Nagle's 2018 table (Mol. Phys.
+  117, 1200 (2019)), the recommended value with its uncertainty, in atomic units, and as a volume in Å³
+  (1 a.u. = a₀³, a₀ from CODATA). Transcribed via mendeleev 1.3.0 (MIT), whose metadata cites the table as
+  updated by its authors; mendeleev is not a dependency. The table mixes experiment and high-level theory; each
+  value's note says so.
+
+### Mathematical & theoretical
+
+- **Computed, not stored.** Quantum numbers, Hund's rules, the Landé formula, Slater's arithmetic and the
+  relativity estimates are pure functions in `src/physics/` (`terms.ts`, `zeff.ts` `slaterSteps`,
+  `madelung.ts` `anomalyKind`, `relativity.ts`), unit-tested. The only stored inputs are the measured
+  configuration and term (NIST), NIST's Landé factors (levels files), CODATA (now with the electron
+  g-factor) and `relativity.json`.
+- **Hund's rules with several open subshells** (Gd, U, Ru, Pt, …): the spins and orbital momenta are added and
+  the third rule is taken from the subshell carrying the largest L. With that, Hund's rules reproduce NIST's
+  ground term for every element in LS coupling except cerium (4f 5d pair into ¹G°₄), and the panel says when
+  they disagree. For jj-coupled ground levels (Pb, Sg, Bh, Hs) the panel explains why S and L are not good
+  quantum numbers instead of comparing.
+- **Landé factor:** the LS formula with g_L = 1 and g_s = |g_e| from CODATA, applied to the measured term where
+  NIST gives one in LS coupling (else to Hund's term), next to NIST's measured g_J. J = 0 levels have none
+  (not_applicable), even where NIST's table prints 0.
+- **Aufbau anomalies** are classified by what moved where: an s electron into a d shell left half full or full
+  (Cr, Cu, Mo, Pd, Ag, Au); an s electron into d otherwise (Nb, Ru, Rh, Pt); an f electron in d (La, Ce, Gd,
+  Ac, Th, Pa, U, Np, Cm); a d electron in p (Lr, relativistic). The explanation is one of four short texts and
+  is labelled "explanation, not derivation", as SPEC §10.5 asks.
+- **Screening:** Slater's rules for the outermost electron (largest n, then largest l — the one IE₁ removes for
+  nearly every element), with each kind of shielding electron, its count and its share; Clementi–Raimondi's
+  value for comparison; IE ≈ R∞hc·Z_eff²/n² (and Slater's own n* for n ≥ 4) against NIST's IE₁.
+- **Relativity:** v/c ≈ Zα, γ and the 1s contraction 1/γ (Bohr model, named on screen); the point-nucleus limit
+  Z = 1/α computed from CODATA; the finite-nucleus limit (≈ 172–173) and four notes where relativity changes
+  chemistry (gold's colour, liquid mercury, the lead–acid battery, francium's IE₁ above caesium's), our own
+  words, one Crossref-checked paper each, in `tools/curated/relativity.toml` → `public/data/relativity.json`.
+- **Symmetry note:** two paragraphs on SO(4) (Fock 1935) and SO(4,2) (Barut & Kleinert 1967) and the 2n²
+  degeneracy; registered as references and cited with source chips.
+
 ## Tooling
 
 - Versions are pinned exactly. TypeScript 6.0 is used because typescript-eslint does not yet support

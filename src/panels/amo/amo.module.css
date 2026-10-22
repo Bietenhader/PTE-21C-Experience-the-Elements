@@ -1,0 +1,175 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 64rem;
+}
+
+/* Display formulas side by side where there is room, one under another on a phone. */
+.formulas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-6);
+  margin-block-end: var(--space-2);
+}
+
+.formulas :global(.katex-display) {
+  margin: 0.4em 0;
+}
+
+/* On the narrowest screens a formula scrolls inside its own box, never the page. */
+.formulas > div {
+  max-inline-size: 100%;
+  overflow: auto hidden;
+}
+
+.card {
+  margin: 0 0 var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+}
+
+.cardTitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-2);
+  font-size: 1rem;
+}
+
+.cardBody {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (max-width: 40rem) {
+  .cardBody {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.chip {
+  display: inline-block;
+  margin-inline-end: var(--space-1);
+  padding: 0 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Level diagrams */
+.diagram {
+  display: block;
+  max-inline-size: 100%;
+  overflow: visible;
+}
+
+.level {
+  stroke: var(--text);
+  stroke-width: 2;
+}
+
+.connector {
+  stroke: var(--text-muted);
+  stroke-dasharray: 3 3;
+  stroke-width: 1;
+}
+
+.arrow,
+.decay {
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+}
+
+.laser {
+  stroke: var(--link);
+  stroke-width: 3;
+}
+
+.head {
+  fill: var(--text-muted);
+}
+
+.levelLabel,
+.small {
+  fill: var(--text);
+  font-family: var(--font-num);
+  font-size: 12px;
+}
+
+.small {
+  fill: var(--text-muted);
+  font-size: 11px;
+}
+
+/* Tables */
+.tableWrap {
+  overflow-x: auto;
+  margin-block-end: var(--space-2);
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.table caption {
+  margin-block-end: var(--space-2);
+  text-align: start;
+}
+
+.table th,
+.table td {
+  padding: 0.25rem 0.6rem;
+  border-block-end: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table thead th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.num {
+  white-space: nowrap;
+}
+
+.table tbody th {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.more {
+  margin-block: var(--space-2);
+}
+
+.more summary {
+  cursor: pointer;
+  min-block-size: 2rem;
+  line-height: 2rem;
+}
+
+/* Timelines */
+.timeline {
+  margin: 0;
+  padding-inline-start: 1.1rem;
+  font-size: 0.9375rem;
+}
+
+.timeline li {
+  margin-block-end: var(--space-2);
+}
+
+.timeline li[data-mine] {
+  font-weight: 600;
+}

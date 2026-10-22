@@ -5,6 +5,41 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added — milestone M4 (panels, batch 2)
+
+- **Probability & statistics:** the radial probability P(r) and its cumulative curve for any subshell with a
+  radius slider; bosons and fermions per isotope with the first BEC and degenerate Fermi gas; Maxwell–Boltzmann
+  speeds and the thermal de Broglie wavelength on a temperature slider down past the recoil limit; the isotope
+  mixture and the atomic weight as a statistic; the NIST uncertainty notation explained.
+- **Physical & engineering:** phase, density, melting and boiling points; molar and specific heat capacity
+  (CRC Handbook); the crystal structure with a 3D unit cell for ten structure types; allotropes; abundance in
+  crust, sea water, Solar System and body on one log scale; production, price and the EU critical-raw-material
+  flag; sourced uses; GHS hazards from PubChem (EU harmonised classification first).
+- **Mathematical & theoretical:** quantum numbers of every valence electron; Hund's rules worked step by step
+  against NIST's measured term; the Landé g-factor against NIST's; Slater's screening arithmetic and the
+  hydrogenic IE estimate; Aufbau anomalies explained by kind; relativity (Zα, γ, 1s contraction, the limits of
+  the table, four notes where relativity changes chemistry); the symmetry of hydrogen.
+- **AMO & metrology:** hyperfine structure with F-level diagrams, nuclear moments, atomic clocks from the BIPM
+  list, laser cooling with computed Doppler and recoil limits, and the timeline of the second.
+- **Chemistry & bonding:** oxidation states with an example compound each, a size ladder (Shannon ionic,
+  covalent and van der Waals radii), electronegativity, bonding, well-known compounds checked against PubChem,
+  reactions with air, water and acids (HSDB, CAMEO, Greenwood & Earnshaw), coordination numbers.
+- **Biology & ecology:** essentiality for plants and humans, the amount in the reference body, toxicity notes,
+  IARC groups read from IARC's list at build time, soil and food-web notes, isotope uses with their papers.
+- **History & naming:** discovery, the place on a world map (Natural Earth, GeoNames), a timeline of all 118
+  discoveries, name and symbol origins, historical photographs where vendored.
+- **Electromagnetic:** the static dipole polarizability of all 118 atoms (Schwerdtfeger & Nagle 2019).
+- Tests: the 118 × 11 property test (every element on every panel), specs for each new panel (including the
+  AMO acceptance for Cs, Rb, Sr, Yb, Al, Hg, Th and helium's not_applicable), unit tests for term symbols,
+  Hund's rules, the Landé formula, Slater's steps, anomaly kinds, laser-cooling limits, hyperfine levels and
+  thermal speeds.
+
+### Changed — M4
+
+- Properties not yet compiled are listed as "Not yet compiled in PTE-21C" instead of "not measured".
+- Units with a subscript (μ_N) are written with a real subscript; very large values with uncertainties in the
+  thousands use powers of ten.
+
 ### Added — milestone M3 (sheet and panels, batch 1)
 
 - **Orbitals** (Tier A): a 3D picture of every occupied subshell, ordered by orbital energy, at the 90 %

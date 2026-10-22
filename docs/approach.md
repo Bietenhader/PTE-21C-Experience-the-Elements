@@ -497,6 +497,66 @@ Probability, physical, mathematical, AMO, chemistry, biology and history (SPEC �
 - **Oxidation states** are PubChem's list, common ones in bold as on the tile. Where PubChem's "common" list
   is odd (Pd +3) a note says so; the tile's data is not changed.
 
+### Physical & engineering
+
+- **Basics** (phase, density, melting and boiling points) are PubChem's, in the temperature unit chosen in
+  Settings; PubChem gives no uncertainties and the panel says so.
+- **Heat capacity:** molar C_p at 25 °C for 85 elements from the CRC Handbook (95th ed.), transcribed via
+  mendeleev 1.3.0, whose metadata cites that table, and spot-checked (Fe, Gd, Hg, H₂). The specific heat is
+  computed from it and the standard atomic weight, with the formula shown.
+- **Crystal structure:** cell parameters from the Crystallography Open Database entry already in the data, and a
+  3D unit cell drawn to scale for ten common structure types (the rest show parameters only). three.js loads
+  only when a 3D view is first shown, and the cell is drawn only while the panel is open.
+- **Abundance** in four places on one log scale (crust, sea water, Solar System, human body). The pipeline puts
+  all four on mg/kg (`abundanceByMass`), so the 70 kg reference body stays out of app code; a litre of sea
+  water is taken as one kilogram, and the caption says so.
+- **Production and price:** USGS world production and a dated unit value; values older than five years are
+  not shown. The EU critical-raw-material flag sits here.
+- **Uses:** 2–5 bullets per element in our own words, each with its source (mostly USGS, else PubChem, the
+  IUPAC discovery reports or BIPM), and only what the source supports. Elements 101–118 say there is no use
+  outside research.
+- **GHS hazards** from PubChem's compound records: the EU harmonised classification where one exists (29
+  elements), else the ECHA C&L notification summary with the most reports (55), with the share of reports
+  behind each statement and, prominently, the share saying the substance is not hazardous (iron: 74 %). 34
+  have none: not_measured up to Fm (radioactive ones with a note), not_applicable from Z = 100 on, where no
+  substance exists to classify. The pictograms are drawn as our own red-bordered diamonds with the code and
+  name, not the official symbols. The biology panel shows the same label.
+- **Thermal conductivity, expansion, elastic moduli, speed of sound and hardness** are listed as "not yet
+  compiled": the only primary table found for conductivity is a scanned PDF.
+- **One source per book:** the allotropes and the chemistry panel cite the same Greenwood & Earnshaw entry.
+
+### AMO & metrology
+
+- **Hyperfine:** one card per curated isotope with I, J, A, B and the ground splitting, and an F-level diagram
+  with the splitting to scale. Where only the J = ½ splitting is stored, A = splitting ÷ (I + ½), labelled
+  "computed; its sign is not given". No hyperfine structure gives not_applicable with the reason (helium:
+  I = 0 and J = 0); an element not yet in the curated table gives not_measured with the note "Not yet in
+  PTE-21C's curated hyperfine table" (none of the five reasons is closer).
+- **Clocks** from the BIPM list, with relative uncertainty and role (Cs defines the second; the Th-229 nuclear
+  transition links its paper). **Laser cooling:** λ and Γ/2π from NIST, the Doppler and recoil limits and the
+  saturation intensity computed from CODATA and labelled "(computed)", and the first MOT, BEC and degenerate
+  Fermi gas with their DOIs. Rows for the natural mixture use the standard atomic weight for the recoil, and
+  say so.
+- **The timeline of the second** is shared by all elements; this element's entries are marked ◆ and in bold.
+
+### Probability & statistics
+
+- **Where is the electron:** P(r) and its cumulative curve for any subshell, hydrogenic with Clementi–Raimondi
+  Z_eff (the same badge as the orbitals panel), the most probable and mean radii marked, and a radius slider.
+- **Bosons and fermions** per isotope; the BEC and degenerate-Fermi-gas badges appear only on rows for a
+  specific isotope.
+- **Thermal motion:** Maxwell–Boltzmann speeds and the thermal de Broglie wavelength, with a log temperature
+  slider from 1000 K down to half the recoil limit for laser-cooled elements (else 0.1 μK), and the density a
+  condensate would need.
+- **Uncertainty:** the NIST bracket notation explained once, with this element's most and least precisely known
+  values; "least precisely known" skips values whose uncertainty is as large as the value, and says so.
+
+### Number formatting
+
+- A stored unit with a subscript (`μ_N`, the nuclear magneton) is written μ with subscript N.
+- A very large value whose uncertainty is in the thousands or more switches to powers of ten:
+  2.020 407 384 335(2) × 10¹⁵ Hz rather than 2 020 407 384 335 000(2000) Hz.
+
 ### Biology & ecology, history & naming
 
 - **Builders** for both panels live in `tools/build_lifeandhistory.py`, called from `build_details.py`.

@@ -5,6 +5,42 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added — milestone M3 (sheet and panels, batch 1)
+
+- **Orbitals** (Tier A): a 3D picture of every occupied subshell, ordered by orbital energy, at the 90 %
+  probability surface; a 3D viewer with real or complex orbitals, phase colours, nodal surfaces, a |ψ|² slice
+  and turn buttons; the shell stack (all radial distributions on one axis, linear or log r, with the
+  covalent and van der Waals radii); nodes, occupancies, effective charges and orbital energies; the
+  approximation badge always shown. Marching cubes in a pool of Web Workers.
+- **Electromagnetic & ionization:** the ionization ladder with every stage NIST lists and the shell closures,
+  electron affinity, Pauling and Allen electronegativity, Mulliken's computed with its formula, IE₁ on the
+  sawtooth of all elements, and the properties not yet compiled shown as missing with the reason.
+- **Spectrum & energy levels:** the visible emission strip of the atom (and its ion) in CIE 1931 colours,
+  the strongest lines, an approximate overall glow, and a Grotrian diagram with the laser-cooling and clock
+  transitions marked.
+- **Nucleus & isotopes:** every known isotope by half-life and decay mode, the record of any isotope, decay
+  and survival with a calculator, binding energy per nucleon, magic numbers, spin and parity, cosmic origin,
+  and the thorium-229 nuclear clock.
+- Shared: chart frame with caption and "Show as table", source-chip popovers, KaTeX formulas, keyboard-
+  reachable sideways-scrolling tables; three.js, @react-three/fiber and KaTeX (MIT; KaTeX fonts OFL 1.1).
+- Tests: the 118 × 4 property test (every element on every new panel, no console errors, every Missing with
+  its reason, every ionization stage drawn), the orbital-gallery timing test for Fe, Cs, Gd and Og, axe on
+  the new panels, unit tests for the physics (hydrogenic orbitals, Slater's rules, CIE colours, decay,
+  isosurface level, marching cubes).
+
+### Changed
+
+- On phones the element sheet's header folds to a name bar while reading a long panel; the tab row keeps
+  the current tab in sight.
+- Half-lives are converted with the IAEA's year (mean tropical year) everywhere.
+- Thorium's and uranium's AGB share in the cosmic origin is labelled "returned, not made".
+
+### Fixed
+
+- NIST levels files kept a series limit instead of the first ionization limit (32 files).
+- Isotope mass uncertainties carried floating-point noise; width limits were worded as half-life limits.
+- Safari: a scroll event as the sheet closed reset the remembered panel.
+
 ### Added — milestone M2 (data complete for v0.1)
 
 - New fetchers: NIST ASD energy levels and spectral lines, NIST SRD 141 orbital energies, the BIPM list of

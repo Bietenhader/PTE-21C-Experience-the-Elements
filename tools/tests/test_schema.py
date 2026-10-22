@@ -131,7 +131,13 @@ def test_per_element_files_match_schema(folder, definition):
 
 
 @pytest.mark.parametrize(
-    ("name", "definition"), [("metrology.json", "MetrologyFile"), ("cie1931.json", "ColourMatchingFile")]
+    ("name", "definition"),
+    [
+        ("metrology.json", "MetrologyFile"),
+        ("cie1931.json", "ColourMatchingFile"),
+        ("relativity.json", "RelativityFile"),
+        ("worldmap.json", "WorldMapFile"),
+    ],
 )
 def test_shared_files_match_schema(name, definition):
     schema = load_json(SCHEMA_DIR / "pte.schema.json")

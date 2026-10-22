@@ -841,6 +841,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 47.0,
+   "unc": 3.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -943,6 +950,93 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.84,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Lead-acid batteries take about two-thirds (67 %): car starter batteries, standby power and motive power.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ammunition, ceramics and glass.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Its density makes it a shield against X-rays and gamma rays.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H360FD",
+     "text": "May damage fertility; May damage the unborn child"
+    },
+    {
+     "code": "H362",
+     "text": "May cause harm to breast-fed children"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5352425,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 14.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 3e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.02088,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 1.71429,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -951,6 +1045,112 @@
    "reason": "not_measured",
    "note": "For lead, the AGB-star band in Fig. 39 runs off the top of its box at the Sun's formation, so the shares cannot be read; the paper says only that AGB stars are the main source of lead."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "A freshly cut surface dulls quickly in air under a thin protective film of oxide and carbonate.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Insoluble in water; soft water containing air or carbon dioxide slowly dissolves traces of it — why lead pipes were abandoned.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Hydrochloric and sulfuric acid barely attack it because the lead salts formed do not dissolve; nitric acid dissolves it.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "PbS",
+    "name": "lead sulfide",
+    "note": "the ore galena",
+    "source": "pubchem_compounds",
+    "cid": 14819
+   },
+   {
+    "formula": "PbO2",
+    "name": "lead dioxide",
+    "note": "the positive plate of car batteries",
+    "source": "pubchem_compounds",
+    "cid": 14793
+   },
+   {
+    "formula": "PbSO4",
+    "name": "lead sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24008
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "PbO2",
+    "name": "lead dioxide",
+    "source": "pubchem_compounds",
+    "cid": 14793
+   },
+   {
+    "state": 2,
+    "formula": "PbO",
+    "name": "lead(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 14827
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 119.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 129.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 65.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 77.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 94.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5352425
  },
  "amo": {
   "hyperfine": [],
@@ -961,7 +1161,33 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "toxicity": [
+   {
+    "text": "Lead harms the brain, kidneys and blood and is most dangerous to young children and to the unborn; no level of exposure is known to be without harm.",
+    "source": "who_lead"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Lead compounds, inorganic",
+    "group": "2A",
+    "volumes": [
+     "Sup 7",
+     "87"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Lead",
+    "group": "2B",
+    "volumes": [
+     "23",
+     "Sup 7"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

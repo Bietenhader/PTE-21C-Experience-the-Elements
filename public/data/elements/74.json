@@ -775,6 +775,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 68.0,
+   "unc": 15.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -878,6 +885,87 @@
    "strategic": true,
    "listedAs": "tungsten",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.27,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "About 60 % becomes cemented carbide for cutting and wear-resistant tools in construction, metalworking, mining and drilling.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Alloys and specialty steels.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Electrodes, filaments, wires and heating elements, and welding.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 73.4
+    },
+    {
+     "code": "H252",
+     "text": "Self-heating in large quantities; may catch fire",
+     "share": 47.8
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23964,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 741,
+   "notMeetingCriteria": {
+    "share": 26.5,
+    "reports": 196,
+    "of": 741
+   },
+   "note": "Aggregated by PubChem from 741 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 26.5 % of the reports (196 of 741) say tungsten does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 1.25,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.0001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0008096,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -891,6 +979,73 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.510, massive_stars 0.402, neutron_star_mergers 0.087); quantised to 0.05. Stack height 90 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in dry air at ordinary temperatures; oxidises when hot, which is why lamp filaments sit in vacuum or inert gas.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Resists most acids; a mixture of nitric and hydrofluoric acid dissolves it.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "WC",
+    "name": "tungsten carbide",
+    "note": "cutting tools and drill bits",
+    "source": "pubchem_compounds",
+    "cid": 2724274
+   },
+   {
+    "formula": "WO3",
+    "name": "tungsten trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14811
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "WO3",
+    "name": "tungsten trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14811
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 42.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 60.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23964
  },
  "amo": {
   "hyperfine": [],
@@ -914,7 +1069,12 @@
   "nameOrigin": "From the Swedish tung sten, 'heavy stone', the old name of the mineral now called scheelite.",
   "symbolNote": "W comes from wolfram, the element's name in German and several other languages, after the ore wolframite.",
   "source": "pubchem",
-  "note": "CIAAW credits Scheele (1781) with the discovery and the Elhuyar brothers (1783) with the first isolation, while PubChem's year and Jefferson Lab credit the brothers, who reduced the acid from wolframite with charcoal. Woulfe had suspected a new substance in wolframite in 1779."
+  "note": "CIAAW credits Scheele (1781) with the discovery and the Elhuyar brothers (1783) with the first isolation, while PubChem's year and Jefferson Lab credit the brothers, who reduced the acid from wolframite with charcoal. Woulfe had suspected a new substance in wolframite in 1779.",
+  "placeLocation": {
+   "lat": 43.115,
+   "lon": -2.417,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Tungsten is a dense, steel-grey transition metal with the highest melting point of any metal, 3695 K, which is why it made the glowing filaments of incandescent bulbs and still forms welding electrodes and X-ray targets. Its name is Swedish for ‘heavy stone’, while its symbol, W, comes from wolfram, after the ore wolframite; tungsten carbide, extremely hard, tips drills and cutting tools. In the atom, relativity shows: chromium and molybdenum above it take a d⁵ s¹ arrangement, but tungsten keeps two 6s electrons, [Xe] 4f¹⁴ 5d⁴ 6s² (ground term ⁵D₀), because relativistic effects draw the 6s orbital inward and lower its energy.",

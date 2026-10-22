@@ -1,0 +1,125 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 60rem;
+}
+
+.needs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-3);
+}
+
+/* The status is written in words; the border style repeats it for a quick glance, never alone. */
+.need {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+}
+
+.need[data-status="yes"] {
+  border-inline-start: 4px solid var(--text);
+}
+
+.need[data-status="beneficial"],
+.need[data-status="probable"] {
+  border-inline-start: 4px dashed var(--text-muted);
+}
+
+.need p {
+  margin: var(--space-1) 0 0;
+}
+
+.needTitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.status {
+  font-weight: 700;
+}
+
+.notes,
+.uses {
+  margin: 0 0 var(--space-3);
+  padding-inline-start: 1.1rem;
+}
+
+.notes li,
+.uses li {
+  margin-block-end: var(--space-2);
+  overflow-wrap: anywhere;
+}
+
+.uses {
+  padding: 0;
+  list-style: none;
+}
+
+.uses li {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: var(--space-1) var(--space-3);
+}
+
+.useHead {
+  display: flex;
+  flex-direction: column;
+}
+
+.isotope {
+  font-family: var(--font-num);
+  font-size: 1.0625rem;
+}
+
+.field {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.doi {
+  font-size: 0.8125rem;
+  overflow-wrap: anywhere;
+}
+
+.table {
+  margin-block: var(--space-2) var(--space-3);
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table caption {
+  margin-block-end: var(--space-1);
+  text-align: start;
+}
+
+.table th,
+.table td {
+  padding: 0.25rem 0.6rem 0.25rem 0;
+  border-block-end: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table thead th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.table tbody th {
+  font-weight: 500;
+}
+
+@media (max-width: 40rem) {
+  .uses li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .useHead {
+    flex-direction: row;
+    gap: var(--space-2);
+    align-items: baseline;
+  }
+}

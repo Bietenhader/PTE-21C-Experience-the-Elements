@@ -626,6 +626,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 272.0,
+   "unc": 10.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -733,6 +740,136 @@
    "source": "eu_crm",
    "viaMineral": true,
    "note": "Baryte (barite, BaSO4) is a mineral, listed for the mineral itself (mainly used as a weighting agent in drilling fluids), not for barium metal or compounds."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 28.07,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "More than 90 % of barite (barium sulfate) sold in the U.S. weighs down the drilling fluid of oil and gas wells.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "A filler in paints, plastics, rubber and brake pads.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Barite blocks X-rays: high-density concrete shields X-ray rooms and reactors, and very pure barium sulfate is swallowed for X-ray images of the gut.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    },
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 37.8
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously",
+     "share": 42.6
+    },
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas",
+     "share": 44.5
+    },
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed",
+     "share": 36.2
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage",
+     "share": 36.2
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 43.5
+    },
+    {
+     "code": "H318",
+     "text": "Causes serious eye damage",
+     "share": 36.2
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 43.5
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 43.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5355457,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 519,
+   "notMeetingCriteria": {
+    "share": 9.4,
+    "reports": 49,
+    "of": 519
+   },
+   "note": "Aggregated by PubChem from 519 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 9.4 % of the reports (49 of 519) say barium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 425.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.013,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.01937,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.314286,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -745,6 +882,71 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.959, massive_stars 0.035, neutron_star_mergers 0.006); quantised to 0.05. Stack height 85 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises readily in moist air; the finely divided metal ignites by itself.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts rapidly with water, giving barium hydroxide and hydrogen.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with acids.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "BaSO4",
+    "name": "barium sulfate",
+    "note": "the barium meal of X-ray imaging; the ore barite",
+    "source": "pubchem_compounds",
+    "cid": 24414
+   },
+   {
+    "formula": "BaCO3",
+    "name": "barium carbonate",
+    "source": "pubchem_compounds",
+    "cid": 10563
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "BaSO4",
+    "name": "barium sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24414
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 135.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 142.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5355457
  },
  "amo": {
   "hyperfine": [
@@ -796,7 +998,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Several repump lasers are needed, so no single repump is given."
+    "note": "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Several repump lasers are needed, so no single repump is given."
    },
    {
     "A": "natural",
@@ -846,7 +1048,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Greek barys, 'heavy', via baryta, the oxide named after the dense mineral barite.",
   "source": "pubchem",
-  "note": "Scheele had distinguished baryta from lime in 1774; Davy isolated the metal by electrolysis."
+  "note": "Scheele had distinguished baryta from lime in 1774; Davy isolated the metal by electrolysis.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Barium is a soft, silvery alkaline-earth metal so reactive that it is kept under oil; its name comes from the Greek for heavy, after its dense ore, barite. Soluble barium salts are poisonous, yet patients swallow a ‘barium meal’ of barium sulfate before X-ray examinations of the gut: the sulfate is too insoluble to be absorbed, while the heavy barium atoms stop X-rays and outline the stomach and intestines. Barium nitrate gives fireworks their green. In the nucleus, barium-138, about 72 per cent of natural barium, has 82 neutrons, a magic number that completes a nuclear shell and makes it especially stable.",

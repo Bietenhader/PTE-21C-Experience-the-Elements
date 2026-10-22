@@ -653,6 +653,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 109.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -694,6 +701,51 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "No use outside basic research: only small amounts have ever been made.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Mendelevium-256 has been used to study its chemistry in solution.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -702,6 +754,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Mendelevium metal has never been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Mendelevium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Mendelevium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Mendelevium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No compound has been isolated; in solution it is mostly +3, with a reachable +2 state."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 23943,
+  "sources": [
+   "greenwood1997"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -725,7 +812,12 @@
   "symbolNote": "Proposed with the symbol Mv; IUPAC changed it to Md in 1957.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "First made one atom at a time by Ghiorso, Harvey, Choppin, Thompson and Seaborg, by bombarding einsteinium-253 with helium ions. The 1993 IUPAC/IUPAP report credits the Berkeley group."
+  "note": "First made one atom at a time by Ghiorso, Harvey, Choppin, Thompson and Seaborg, by bombarding einsteinium-253 with helium ions. The 1993 IUPAC/IUPAP report credits the Berkeley group.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Mendelevium is a synthetic actinide named after Dmitri Mendeleev, the chemist who arranged the elements into the periodic table. It was made at Berkeley in 1955 by striking a minute target of einsteinium-253 with helium ions, and it was the first element identified one atom at a time; the isotope produced, mendelevium-256, has a half-life of about 78 minutes. Even its longest-lived isotope, mendelevium-258, lasts only about 52 days, so its chemistry is known only from trace experiments, which reveal a +2 state alongside the usual +3. The atom, [Rn] 5f¹³ 7s², is a single electron short of a full 5f shell, giving a ²F°₇/₂ ground term.",

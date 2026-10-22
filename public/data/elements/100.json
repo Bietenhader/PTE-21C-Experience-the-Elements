@@ -647,6 +647,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 113.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -688,6 +695,51 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "No use outside basic research: only tiny amounts have been made, and its isotopes are short-lived.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Studied to learn about the heaviest nuclei and the rest of the periodic table.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -696,6 +748,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Fermium metal has never been made; it is expected to be a metal like the other actinides."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Fermium has been studied only as tracer amounts in solution; the element itself has never been prepared."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Fermium has been studied only as tracer amounts in solution; the element itself has never been prepared."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Fermium has been studied only as tracer amounts in solution; the element itself has never been prepared."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only studied as tracer amounts in solution, where it is +3 (with some +2)."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 23998,
+  "sources": [
+   "greenwood1997"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -716,7 +803,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After Enrico Fermi.",
   "source": "pubchem",
-  "note": "Identified in coral from the 'Ivy Mike' test site about two months after the November 1952 explosion, so possibly in early 1953; published in 1955. A Stockholm group independently reported element 100 in 1954."
+  "note": "Identified in coral from the 'Ivy Mike' test site about two months after the November 1952 explosion, so possibly in early 1953; published in 1955. A Stockholm group independently reported element 100 in 1954.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Fermium is a synthetic actinide named after Enrico Fermi, found, like einsteinium, in the fallout of the 1952 'Ivy Mike' hydrogen-bomb test, in coral shipped from the Pacific test site to Berkeley; the result stayed secret until 1955. It is the heaviest element that can be built up by neutron capture in reactors or explosions, and no fermium metal has ever been prepared; everything heavier has to be assembled in accelerators. The reason is nuclear: fermium-258 splits by spontaneous fission with a half-life of only 370 microseconds, so adding neutrons leads to a dead end. Its longest-lived isotope, fermium-257, lasts about 100 days, and the atom's ground level is ³H₆.",

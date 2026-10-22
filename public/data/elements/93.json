@@ -607,6 +607,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 151.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -691,6 +698,51 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Neptunium-237, a by-product of making plutonium in reactors, is used in neutron detectors.",
+    "source": "pubchem"
+   },
+   {
+    "text": "It splits with fast neutrons, and so is of interest for fast reactors.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental neptunium (CID 23933). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -699,6 +751,112 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes slowly in air at room temperature and oxidises quickly when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The reaction of neptunium metal with water is not described in the sources used here."
+   },
+   "acids": {
+    "text": "Dissolves in hydrochloric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NpO2",
+    "name": "neptunium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 44148103
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "NpF6",
+    "name": "neptunium hexafluoride",
+    "source": "pubchem_compounds",
+    "cid": 19695135
+   },
+   {
+    "state": 5,
+    "formula": "NpO2⁺",
+    "name": "neptunyl(V) ion",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "NpO2",
+    "name": "neptunium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 44148103
+   },
+   {
+    "state": 3,
+    "formula": "NpCl3",
+    "name": "neptunium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 71402371
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 101.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 87.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 98.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 75.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23933
  },
  "amo": {
   "hyperfine": [],
@@ -720,7 +878,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After Neptune, the planet beyond Uranus.",
   "source": "pubchem",
-  "note": "The first transuranium element, made as neptunium-239 by neutron capture in uranium-238. Fermi's 1934 claim to have made element 93 turned out to be nuclear fission."
+  "note": "The first transuranium element, made as neptunium-239 by neutron capture in uranium-238. Fermi's 1934 claim to have made element 93 turned out to be nuclear fission.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Neptunium is a silvery, radioactive actinide metal and the first element beyond uranium ever made: Edwin McMillan and Philip Abelson produced neptunium-239 at Berkeley in 1940 by striking uranium with slow neutrons. Following Uranus, it was named after the next planet out, Neptune. Six years earlier Enrico Fermi had believed he had made element 93 in much the same way, but he had in fact split uranium nuclei, observing fission without recognising it. Its longest-lived isotope, neptunium-237, has a half-life of about 2.1 million years. The atom's ground configuration, [Rn] 5f⁴ 6d¹ 7s², departs from the Aufbau prediction 5f⁵ 7s², and its ground term is ⁶L₁₁/₂.",

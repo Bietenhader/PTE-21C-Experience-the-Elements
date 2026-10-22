@@ -478,6 +478,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 38.0,
+   "unc": 4.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -519,6 +526,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -527,6 +581,45 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Bohrium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Bohrium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Bohrium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   }
+  },
+  "compounds": [
+   {
+    "formula": "BhO3Cl",
+    "name": "bohrium oxychloride",
+    "note": "six molecules, identified in a gas-phase experiment in 2000",
+    "source": "primary_literature",
+    "doi": "10.1038/35024044"
+   }
+  ],
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951713,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -550,7 +643,12 @@
   "symbolNote": "Proposed as nielsbohrium (Ns); shortened to bohrium (Bh) in 1997. Temporary name: unnilseptium (Uns).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "PubChem gives 1976, the year of a Dubna claim; the 1993 IUPAC/IUPAP report found the 1981 Darmstadt work convincing."
+  "note": "PubChem gives 1976, the year of a Dubna claim; the 1993 IUPAC/IUPAP report found the 1981 Darmstadt work convincing.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Bohrium is a synthetic element in group 7, below rhenium, named after the Danish physicist Niels Bohr. A Dubna team reported it in 1976, and in 1981 a group at the GSI laboratory in Darmstadt made it convincingly by fusing bismuth-209 with chromium-54, identifying six atoms of bohrium-262, whose half-life is about a tenth of a second. Chemists have since turned single atoms of a longer-lived isotope into a volatile oxychloride that behaves like rhenium's. Only small numbers of atoms exist, its heavier isotopes lasting from seconds to about a minute. Theory predicts [Rn] 5f¹⁴ 6d⁵ 7s² with a ground level of J = 5/2, matching rhenium's half-filled d shell, though none of this has been measured.",

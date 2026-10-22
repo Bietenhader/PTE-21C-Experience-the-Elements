@@ -769,6 +769,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 74.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -872,6 +879,87 @@
    "strategic": false,
    "listedAs": "tantalum",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.36,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Capacitors for electronics.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Metallurgy, including tantalum alloys and carbides.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "It resists almost all chemical attack, so it is used for chemical-plant equipment.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 56.0
+    },
+    {
+     "code": "H252",
+     "text": "Self-heating in large quantities; may catch fire",
+     "share": 37.8
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23956,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 455,
+   "notMeetingCriteria": {
+    "share": 44.0,
+    "reports": 200,
+    "of": 455
+   },
+   "note": "Aggregated by PubChem from 455 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 44 % of the reports (200 of 455) say tantalum does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 2.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 2e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0001202,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -885,6 +973,70 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.474, massive_stars 0.477, neutron_star_mergers 0.049); quantised to 0.05. Stack height 91 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Very resistant: reacts with oxygen only on heating; the powder, though, can ignite in air.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not attacked by any aqueous acid except hydrofluoric, nor by aqueous alkalis; molten alkali attacks it slowly.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Ta2O5",
+    "name": "tantalum pentoxide",
+    "note": "the dielectric of tantalum capacitors",
+    "source": "pubchem_compounds",
+    "cid": 62157
+   },
+   {
+    "formula": "TaC",
+    "name": "tantalum carbide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "Ta2O5",
+    "name": "tantalum pentoxide",
+    "source": "pubchem_compounds",
+    "cid": 62157
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 64.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VIII",
+    "radius": {
+     "value": 74.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23956
  },
  "amo": {
   "hyperfine": [],
@@ -909,7 +1061,12 @@
   ],
   "nameOrigin": "From Tantalus of Greek myth, who stood in water he could never drink, because the oxide takes up no acid even when soaked in it.",
   "source": "pubchem",
-  "note": "Long confused with niobium until Marignac separated them in 1866. Los Alamos credits von Bolton with the first fairly pure, ductile metal in 1903; Jefferson Lab gives 1907 for the first fairly pure samples."
+  "note": "Long confused with niobium until Marignac separated them in 1866. Los Alamos credits von Bolton with the first fairly pure, ductile metal in 1903; Jefferson Lab gives 1907 for the first fairly pure samples.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Tantalum is a hard, grey, heavy transition metal that shrugs off almost every acid, so it is used in chemical plant, surgical implants and, above all, the tiny capacitors inside phones and laptops. It is named after Tantalus of Greek myth, condemned to stand in water he could never drink, because the metal sits in acid without taking any up. Its nuclei hold a rarity: a minute fraction of natural tantalum is tantalum-180 in a long-lived excited nuclear state, the only such isomer to survive in nature since before the Earth formed, and its decay has never been observed. The atom’s ground state is [Xe] 4f¹⁴ 5d³ 6s², ⁴F₃/₂.",

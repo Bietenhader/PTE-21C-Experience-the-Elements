@@ -82,6 +82,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 1.38375,
+   "unc": 2e-05,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -196,6 +203,91 @@
    "strategic": false,
    "listedAs": "helium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 20.786,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Laboratory, analytical and specialty gases are the largest use (22 %), then inert atmospheres for making chips and optical fibre (17 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Liquid helium cools the superconducting magnets of MRI scanners (15 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Lifts balloons and airships (17 %); also used in welding (8 %) and in breathing gas for diving (5 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Finds leaks in vacuum and pressure equipment (5 %); helium-3 is used in neutron detectors and quantum-computing research.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated",
+     "share": 65.6
+    },
+    {
+     "code": "H281",
+     "text": "Contains refrigerated gas; may cause cryogenic burns or injury",
+     "share": 35.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23987,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 491,
+   "notMeetingCriteria": {
+    "share": 0.4,
+    "reports": 2,
+    "of": 491
+   },
+   "note": "Aggregated by PubChem from 491 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 0.4 % of the reports (2 of 491) say helium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.008,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 7e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 275200.0,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -204,6 +296,35 @@
    "reason": "not_measured",
    "note": "Fig. 39 cannot be read for helium: its box is full to the top, and the paper says the coloured areas include helium that stars merely returned to space. Most helium was made in the Big Bang, but the figure gives no split we can quote."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "note": "Single atoms; helium stays liquid down to absolute zero unless it is put under pressure.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water; very slightly soluble in it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Inert: forms no stable compounds under ordinary conditions.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "No stable neutral compound is known; the HeH⁺ ion and Na₂He (made only at very high pressure) are the exceptions."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 23987
  },
  "amo": {
   "hyperfine": [],
@@ -233,7 +354,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Cooled in the metastable 2 3S1 state. Ritz value; NIST lists no observed wavelength for this component. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The MOT paper's title does not name the isotope."
+    "note": "Cooled in the metastable 2 3S1 state. Ritz value; NIST lists no observed wavelength for this component. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. The MOT paper's title does not name the isotope."
    },
    {
     "A": 4,
@@ -317,7 +438,12 @@
   ],
   "nameOrigin": "From the Greek helios, 'Sun', because it was first seen as an unexplained yellow line in the solar spectrum.",
   "source": "pubchem",
-  "note": "Janssen recorded the line during the solar eclipse of August 1868 (the map dot is his observing site) and Lockyer argued it came from an unknown element. Ramsay found the gas on Earth in the uranium mineral cleveite in 1895; Cleve and Langlet found it there independently."
+  "note": "Janssen recorded the line during the solar eclipse of August 1868 (the map dot is his observing site) and Lockyer argued it came from an unknown element. Ramsay found the gas on Earth in the uranium mineral cleveite in 1895; Cleve and Langlet found it there independently.",
+  "placeLocation": {
+   "lat": 16.33,
+   "lon": 80.45,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Helium is a noble gas, the second lightest element and the second most common in the universe; on Earth it is collected from natural gas, where it has gathered after being released as alpha particles by uranium and thorium decaying in rocks. It was first spotted in 1868 as a yellow line near 587.6 nm in the light of the Sun, long before anyone found it on Earth. Its two electrons fill the 1s shell (ground term ¹S₀), giving helium the highest first ionisation energy of any element, about 2372 kJ/mol, so it forms no stable compounds under ordinary conditions.",

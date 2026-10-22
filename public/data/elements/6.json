@@ -145,6 +145,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 11.3,
+   "unc": 0.4,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -258,6 +265,117 @@
    "source": "eu_crm",
    "viaMineral": true,
    "note": "Coking coal is a sedimentary rock/fuel (mostly carbon, with H, O, N, S and ash) used to make metallurgical coke; it is listed as a material, not as elemental carbon. Graphite is a mineral form (allotrope) of carbon; the 2023 study assessed 'natural graphite', the Regulation's critical list says 'graphite'. Strategic entry 'graphite — battery grade' is not restricted to natural graphite: Art. 3(3) asks the Commission to assess at the first review 'whether ... synthetic graphite should remain in the list of strategic raw materials'."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 8.517,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Natural graphite goes into batteries, brake linings, lubricants, furnace linings and steelmaking.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Industrial diamond, about 97 % of it synthetic, cuts and polishes stone, roads and metals, drills for oil and minerals, and is used in making computer chips.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Metallurgical coal is used to make steel.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "Graphite",
+    "note": "Flat sheets of carbon hexagons stacked loosely: soft, black and electrically conducting along the sheets.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "Diamond",
+    "note": "Every atom bonded to four others in a three-dimensional network: the hardest natural material, transparent and insulating.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Lonsdaleite (hexagonal diamond)",
+    "note": "Diamond's tetrahedral bonding stacked in a hexagonal pattern; found in meteorites and made under shock.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Fullerenes",
+    "note": "Closed cages of carbon atoms, such as the football-shaped C₆₀, found in 1985.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Graphene",
+    "note": "A single sheet of graphite, one atom thick, first isolated in 2004.",
+    "source": "primary_literature",
+    "doi": "10.1126/science.1102896"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 55.1
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 51.1
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5462310,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 2727,
+   "notMeetingCriteria": {
+    "share": 40.2,
+    "reports": 1095,
+    "of": 2727
+   },
+   "note": "Aggregated by PubChem from 2727 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 40.2 % of the reports (1095 of 2727) say carbon does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 200.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 28.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 3336.0,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 228571.0,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -270,6 +388,98 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.489, massive_stars 0.511); quantised to 0.05. Stack height 48 px. Cross-check with the paper's text: '49% of C ... produced by AGB stars (at t=9.2 Gyr)' (figure reading 0.489)."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent layers",
+   "note": "Graphite: sheets of carbon hexagons stacked by weak forces. Diamond is a covalent network.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Bulk graphite or diamond is stable in air at room temperature; fine carbon dust is flammable and freshly made powders can self-heat.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Insoluble in water and does not react with it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Insoluble in acids and alkalis; only hot oxidising acids attack graphite.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CO2",
+    "name": "carbon dioxide",
+    "source": "pubchem_compounds",
+    "cid": 280
+   },
+   {
+    "formula": "CH4",
+    "name": "methane",
+    "source": "pubchem_compounds",
+    "cid": 297
+   },
+   {
+    "formula": "CaCO3",
+    "name": "calcium carbonate",
+    "note": "limestone, chalk and marble",
+    "source": "pubchem_compounds",
+    "cid": 10112
+   },
+   {
+    "formula": "SiC",
+    "name": "silicon carbide",
+    "source": "pubchem_compounds",
+    "cid": 9863
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "CO2",
+    "name": "carbon dioxide",
+    "source": "pubchem_compounds",
+    "cid": 280
+   },
+   {
+    "state": 2,
+    "formula": "CO",
+    "name": "carbon monoxide",
+    "source": "pubchem_compounds",
+    "cid": 281
+   },
+   {
+    "state": -4,
+    "formula": "CH4",
+    "name": "methane",
+    "source": "pubchem_compounds",
+    "cid": 297
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 15.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 16.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462310
  },
  "amo": {
   "hyperfine": [],
@@ -303,7 +513,30 @@
    "text": "The backbone of proteins, fats, carbohydrates and nucleic acids.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 14,
+    "field": "dating",
+    "text": "Carbon-14, made by cosmic rays in the air, enters every living thing and decays once it dies; in 1949 Arnold and Libby showed that the fraction left dates organic remains, checking it on wood and objects of known age.",
+    "source": "primary_literature",
+    "doi": "10.1126/science.110.2869.678"
+   },
+   {
+    "A": 14,
+    "field": "tracer",
+    "text": "Giving algae carbon dioxide labelled with carbon-14 for seconds at a time let Bassham, Benson and Calvin trace the path of carbon in photosynthesis, the cycle now named after them.",
+    "source": "primary_literature",
+    "doi": "10.1016/S0021-9258(18)56368-7"
+   },
+   {
+    "A": 13,
+    "field": "environment",
+    "text": "Land plants fall into two groups by their ratio of carbon-13 to carbon-12; the groups match the two main photosynthetic pathways, C3 and C4, so the ratio tells them apart.",
+    "source": "primary_literature",
+    "doi": "10.1104/pp.47.3.380"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

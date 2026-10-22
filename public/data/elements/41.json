@@ -492,6 +492,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 98.0,
+   "unc": 8.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -594,6 +601,82 @@
    "strategic": false,
    "listedAs": "niobium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.6,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "About three-quarters of U.S. niobium (77 %) strengthens steel, as ferroniobium.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "The rest (23 %) goes into superalloys, mainly for aerospace.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Niobium–titanium wire makes superconducting magnets; pure niobium cavities accelerate particles.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 34.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23936,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 529,
+   "notMeetingCriteria": {
+    "share": 58.0,
+    "reports": 307,
+    "of": 529
+   },
+   "note": "Aggregated by PubChem from 529 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 58 % of the reports (307 of 529) say niobium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 20.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.002176,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -607,6 +690,96 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.613, massive_stars 0.330, neutron_star_mergers 0.057); quantised to 0.05. Stack height 67 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Protected by an oxide film at room temperature; oxidises when heated in air.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Not attacked by water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Resists most acids, including aqua regia; attacked by hydrofluoric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Nb2O5",
+    "name": "niobium pentoxide",
+    "source": "pubchem_compounds",
+    "cid": 9903420
+   },
+   {
+    "formula": "LiNbO3",
+    "name": "lithium niobate",
+    "note": "a crystal for optical modulators",
+    "source": "pubchem_compounds",
+    "cid": 159404
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "Nb2O5",
+    "name": "niobium pentoxide",
+    "source": "pubchem_compounds",
+    "cid": 9903420
+   },
+   {
+    "state": 3,
+    "formula": "NbCl3",
+    "name": "niobium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 83580
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "IV",
+    "radius": {
+     "value": 48.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 64.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VIII",
+    "radius": {
+     "value": 74.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23936
  },
  "amo": {
   "hyperfine": [],
@@ -632,7 +805,12 @@
   "nameOrigin": "From Niobe, daughter of Tantalus in Greek myth, because the element is so hard to tell apart from tantalum.",
   "symbolNote": "Hatchett called it columbium (symbol Cb), a name that stayed in American use; IUPAC chose niobium in 1949 (Los Alamos says 1950).",
   "source": "pubchem",
-  "note": "Wollaston wrongly declared it identical to tantalum in 1809; Heinrich Rose re-established it (1844 per Jefferson Lab, 1846 per CIAAW) and named it niobium, and Marignac confirmed the distinction in 1866. CIAAW's 1846 date for Blomstrand's isolation conflicts with the 1864 of the other two sources."
+  "note": "Wollaston wrongly declared it identical to tantalum in 1809; Heinrich Rose re-established it (1844 per Jefferson Lab, 1846 per CIAAW) and named it niobium, and Marignac confirmed the distinction in 1866. CIAAW's 1846 date for Blomstrand's isolation conflicts with the 1864 of the other two sources.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Niobium is a soft, grey, ductile transition metal, named after Niobe, daughter of Tantalus in Greek myth, because it is so hard to tell apart from its chemical twin, tantalum. Its most surprising job is in hospitals: the coils of most MRI scanners are wound from niobium–titanium wire, which carries current with zero resistance when chilled by liquid helium, and pure niobium itself becomes a superconductor below about 9 K. Its electrons break the simple filling rule: the measured ground configuration is [Kr] 4d⁴ 5s¹, not the predicted 4d³ 5s², leaving five unpaired electrons and the ground term ⁶D₁/₂.",

@@ -313,6 +313,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 97.0,
+   "unc": 10.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -423,6 +430,82 @@
    "strategic": false,
    "listedAs": "scandium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.52,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Aluminium alloys for aerospace.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Solid oxide fuel cells for power generation and backup power.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Smaller uses: electronics, and alloys for military equipment and sporting goods.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 93.3
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23952,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 105,
+   "notMeetingCriteria": {
+    "share": 4.8,
+    "reports": 5,
+    "of": 105
+   },
+   "note": "Aggregated by PubChem from 105 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 4.8 % of the reports (5 of 105) say scandium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 22.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 6e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.04634,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -435,6 +518,72 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.959, white_dwarfs 0.041); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes slowly in air, forming a thin oxide layer.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with hot water, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Sc2O3",
+    "name": "scandium oxide",
+    "source": "pubchem_compounds",
+    "cid": 134661
+   },
+   {
+    "formula": "ScCl3",
+    "name": "scandium chloride",
+    "source": "pubchem_compounds",
+    "cid": 82586
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Sc2O3",
+    "name": "scandium oxide",
+    "source": "pubchem_compounds",
+    "cid": 134661
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 74.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 87.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23952
  },
  "amo": {
   "hyperfine": [
@@ -490,7 +639,12 @@
   ],
   "nameOrigin": "From Scandia, the Latin name for Scandinavia, where its minerals were found.",
   "source": "pubchem",
-  "note": "Cleve showed the same year that it was Mendeleev's predicted eka-boron. Los Alamos gives 1878. The 1937 metal preparation: Z. anorg. allg. Chem. 231, 54 (doi:10.1002/zaac.19372310107)."
+  "note": "Cleve showed the same year that it was Mendeleev's predicted eka-boron. Los Alamos gives 1878. The 1937 metal preparation: Z. anorg. allg. Chem. 231, 54 (doi:10.1002/zaac.19372310107).",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Scandium is a light, silvery transition metal, named after Scandinavia, where its minerals were found; small additions of it strengthen the aluminium alloys used in some aircraft parts and sports equipment. Its existence was foreseen: Mendeleev left a gap in his table for an element he called eka-boron and predicted its properties, and scandium, discovered in 1879, filled that gap closely. Scandium is the first element to place an electron in a 3d orbital, giving [Ar] 3d¹ 4s² and the ground term ²D₃/₂, yet in compounds it almost always gives away all three outer electrons; with no d electrons left, its compounds are usually colourless.",

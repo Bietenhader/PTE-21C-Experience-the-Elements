@@ -45,6 +45,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 76.0,
+   "unc": 15.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -86,6 +93,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing calcium-48 with a berkelium-249 target in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1515/pac-2015-0502"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1515/pac-2015-0502"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -94,6 +148,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Tennessine's chemistry has never been studied in experiments; everything about it is predicted."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Tennessine's chemistry has never been studied in experiments; everything about it is predicted."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Tennessine's chemistry has never been studied in experiments; everything about it is predicted."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; its chemistry is known only from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 175670872,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -118,7 +207,12 @@
   "symbolNote": "Temporary name: ununseptium (Uus); named tennessine in 2016.",
   "source": "iupac_discovery",
   "doi": "10.1515/pac-2015-0502",
-  "note": "Made from calcium-48 on berkelium-249; the 2016 IUPAC/IUPAP report found the Dubna–Livermore–Oak Ridge claim compliant. The name also acknowledges Vanderbilt University and the University of Tennessee."
+  "note": "Made from calcium-48 on berkelium-249; the 2016 IUPAC/IUPAP report found the Dubna–Livermore–Oak Ridge claim compliant. The name also acknowledges Vanderbilt University and the University of Tennessee.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Tennessine is a synthetic element in group 17, below astatine, named after the US state of Tennessee, home of Oak Ridge National Laboratory, Vanderbilt University and the University of Tennessee. Its discovery, announced in April 2010 by a Russian–American team at Dubna, depended on a rare target: berkelium-249 bred in a reactor at Oak Ridge. Because that berkelium decays with a half-life of 330 days, it had to be shipped and bombarded with calcium-48 promptly. Only a few atoms resulted, and its two known isotopes have half-lives of only about 21 and 51 milliseconds. Calculations predict [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁵, and strong spin–orbit effects should make it less like a typical halogen than iodine is.",

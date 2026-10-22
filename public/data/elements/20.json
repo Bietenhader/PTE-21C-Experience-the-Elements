@@ -289,6 +289,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 160.8,
+   "unc": 4.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -371,6 +378,77 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.929,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Lime (calcium oxide) is used above all in steelmaking, then in chemicals, flue-gas cleaning, construction and water treatment.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Gypsum (calcium sulfate) makes wallboard and plaster and is used in cement and agriculture.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Calcium metal extracts thorium, uranium and zirconium from their compounds and removes oxygen, sulfur and carbon from alloys.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5460341,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 41500.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 412.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 73.97,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 14285.7,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -384,6 +462,90 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.092, massive_stars 0.512, white_dwarfs 0.397); quantised to 0.05. Stack height 80 px. Cross-check with the paper's text: '39% of Ca ... come from SNe Ia' (figure reading 0.397). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises in air to a film that sticks and protects it; calcium burns with a red flame.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts readily with water, giving calcium hydroxide and hydrogen.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts with dilute acids, giving off hydrogen.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CaCO3",
+    "name": "calcium carbonate",
+    "note": "limestone, chalk, marble, shells",
+    "source": "pubchem_compounds",
+    "cid": 10112
+   },
+   {
+    "formula": "CaO",
+    "name": "calcium oxide",
+    "note": "quicklime",
+    "source": "pubchem_compounds",
+    "cid": 14778
+   },
+   {
+    "formula": "CaSO4",
+    "name": "calcium sulfate",
+    "note": "gypsum is its hydrate",
+    "source": "pubchem_compounds",
+    "cid": 24497
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "CaO",
+    "name": "calcium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14778
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 100.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VII",
+    "radius": {
+     "value": 106.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 112.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5460341
  },
  "amo": {
   "hyperfine": [
@@ -558,7 +720,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Latin calx, 'lime' (calcium oxide).",
   "source": "pubchem",
-  "note": "PubChem lists the year as 'Ancient' because lime was used in antiquity. Davy obtained the impure metal, building on Berzelius and Pontin's electrolysis of lime into a mercury amalgam."
+  "note": "PubChem lists the year as 'Ancient' because lime was used in antiquity. Davy obtained the impure metal, building on Berzelius and Pontin's electrolysis of lime into a mercury amalgam.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Calcium is a reactive alkaline-earth metal that we almost never see pure; instead we meet it in bones and teeth, in seashells, chalk, limestone and marble, and in the pectin 'glue' that holds neighbouring plant cells together. Calcium-48, only 0.187 % of natural calcium, is remarkably rich in neutrons yet almost stable, decaying with a half-life of about 2.9 × 10¹⁹ years. The reason is a nuclear shell effect: its 20 protons and 28 neutrons are both 'magic numbers' that close nuclear shells, so it is doubly magic. Beams of calcium-48 were used to create the heaviest elements yet made. The atom itself is [Ar] 4s², ground term ¹S₀.",

@@ -725,6 +725,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 144.0,
+   "unc": 15.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -814,6 +821,92 @@
    "listedAs": "heavy rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.03,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Lasers.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "X-ray devices, and metallurgy.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 94.0
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 80.0
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 80.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23961,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 50,
+   "notMeetingCriteria": {
+    "share": 6.0,
+    "reports": 3,
+    "of": 50
+   },
+   "note": "Aggregated by PubChem from 50 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 6 % of the reports (3 of 50) say thulium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.52,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1.7e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0002116,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -827,6 +920,64 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.234, massive_stars 0.721, neutron_star_mergers 0.046); quantised to 0.05. Stack height 83 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Fairly stable in dry air; tarnishes slowly in moist air.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Tm2O3",
+    "name": "thulium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159411
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Tm2O3",
+    "name": "thulium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159411
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 88.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 99.4,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23961
  },
  "amo": {
   "hyperfine": [],
@@ -861,7 +1012,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Only stable isotope. First thulium BEC (2020). NIST observed value. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Only stable isotope. First thulium BEC (2020). NIST observed value. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    }
   ],
   "siHistory": []
@@ -879,7 +1030,12 @@
   "place": "Uppsala, Sweden",
   "nameOrigin": "From Thule, the ancient name of a far-northern land, here standing for Scandinavia.",
   "source": "pubchem",
-  "note": "Cleve separated its oxide from erbia along with holmia. CIAAW credits the American chemist Charles James with its first isolation in 1911."
+  "note": "Cleve separated its oxide from erbia along with holmia. CIAAW credits the American chemist Charles James with its first isolation in 1911.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Thulium is a soft, silver-grey lanthanide named after Thule, a classical name for the far north, and it is the scarcest of the lanthanides that have stable isotopes. That rarity long kept it a curiosity, but thulium made radioactive in a reactor serves as a compact source for portable X-ray units, and thulium-doped fibre lasers are used in surgery. All natural thulium is thulium-169, with nuclear spin 1/2. Its electron shell, [Xe] 4f¹³ 6s², lacks just one electron to fill the 4f subshell, so it behaves like a single ‘hole’ with orbital angular momentum L = 3, giving the ground level ²F°₇/₂.",

@@ -460,6 +460,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 112.0,
+   "unc": 10.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -501,6 +508,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -509,6 +563,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Rutherfordium is made a few atoms at a time and lives seconds to hours; its reactions with air, water and acids are known only from predictions based on its place in group 4."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Rutherfordium is made a few atoms at a time and lives seconds to hours; its reactions with air, water and acids are known only from predictions based on its place in group 4."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Rutherfordium is made a few atoms at a time and lives seconds to hours; its reactions with air, water and acids are known only from predictions based on its place in group 4."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only single molecules have been studied, in fast gas-phase and solution experiments (for example RfCl₄)."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951715,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -533,7 +622,12 @@
   "symbolNote": "Dubna proposed kurchatovium (Ku) and Berkeley rutherfordium (Rf); a 1994 IUPAC proposal would have called it dubnium, but rutherfordium was adopted in 1997. Its temporary systematic name was unnilquadium (Unq).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "The 1993 IUPAC/IUPAP report judged the Dubna chemistry experiments and the Berkeley experiments of 1969 practically simultaneous, and both demonstrated element 104; PubChem gives the 1964 Dubna claim."
+  "note": "The 1993 IUPAC/IUPAP report judged the Dubna chemistry experiments and the Berkeley experiments of 1969 practically simultaneous, and both demonstrated element 104; PubChem gives the 1964 Dubna claim.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Rutherfordium, named after Ernest Rutherford, is the first transactinide element and sits below hafnium in group 4. Teams at Dubna in 1964 and at Berkeley in 1969 both claimed it, using different reactions, and credit was eventually shared after a long dispute. Only small numbers of atoms have ever been made, and most of its isotopes live for seconds or less, though some, such as rutherfordium-261, last about a minute, long enough for single-atom chemistry, which shows that it forms a volatile chloride as hafnium does. Calculations give it hafnium's outer pattern, [Rn] 5f¹⁴ 6d² 7s² with a ³F₂ ground level, but no spectrum has been measured.",

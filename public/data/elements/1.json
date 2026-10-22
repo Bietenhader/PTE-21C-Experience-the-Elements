@@ -72,6 +72,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 4.50711,
+   "unc": 3e-05,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -161,6 +168,90 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 28.836,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of H₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "Large amounts are combined with nitrogen from the air to make ammonia, the basis of nitrogen fertilisers.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Oil refineries use it to strip sulfur out of fuels and to break heavy oil into lighter products; it is also a raw material for methanol.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Turns liquid vegetable oils into solid fats (hydrogenation).",
+    "source": "pubchem"
+   },
+   {
+    "text": "Liquid hydrogen burned with liquid oxygen drives rockets; fuel cells turn hydrogen into electricity.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Its isotopes: heavy water (deuterium) slows neutrons in some reactors; tritium makes exit signs glow without power.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H220",
+     "text": "Extremely flammable gas"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 783,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 1400.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 108000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 706100.0,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 100000.0,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -172,6 +263,66 @@
    "source": "kobayashi2020",
    "note": "Paper Sect. 3.5: 'H and most of He are produced in Big Bang nucleosynthesis. The small green and blue areas also includes the amounts returned to the ISM via stellar mass loss'. Stars only destroy or return H, so the figure's green/blue (raw reading at the 9.2-Gyr line: AGB 0.14, massive 0.05; box saturated) are recycled Big-Bang H, not production. Value set from the statement, not read off the figure."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "H₂ molecules, held together in the liquid and solid only by weak van der Waals forces.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Highly flammable: it burns in air to water, and mixtures of hydrogen and air can explode.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Does not react with water and barely dissolves in it.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Does not react with acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "H2O",
+    "name": "water",
+    "source": "pubchem_compounds",
+    "cid": 962
+   },
+   {
+    "formula": "HCl",
+    "name": "hydrogen chloride",
+    "source": "pubchem_compounds",
+    "cid": 313
+   },
+   {
+    "formula": "NaH",
+    "name": "sodium hydride",
+    "note": "a salt-like hydride containing H⁻",
+    "source": "pubchem_compounds",
+    "cid": 24758
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "HCl",
+    "name": "hydrogen chloride",
+    "source": "pubchem_compounds",
+    "cid": 313
+   },
+   {
+    "state": -1,
+    "formula": "LiH",
+    "name": "lithium hydride",
+    "source": "pubchem_compounds",
+    "cid": 62714
+   }
+  ],
+  "ionicRadii": [],
+  "pubchemCid": 783
  },
  "amo": {
   "hyperfine": [
@@ -323,7 +474,23 @@
    "text": "Part of water and of every organic molecule in the body.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 3,
+    "field": "tracer",
+    "text": "Broad-bean root tips fed tritium-labelled thymidine, a DNA building block, were followed through two cell divisions in 1957: each chromosome kept one labelled and one new half, a first view of how chromosomes are copied.",
+    "source": "primary_literature",
+    "doi": "10.1073/pnas.43.1.122"
+   },
+   {
+    "A": 2,
+    "field": "tracer",
+    "text": "Water labelled with deuterium and oxygen-18 measures the energy a free-living animal or person spends: hydrogen leaves the body only in water, oxygen in water and in exhaled CO2, so the difference between their loss rates gives the CO2 produced.",
+    "source": "primary_literature",
+    "doi": "10.1016/0022-5193(66)90185-8"
+   }
+  ]
  },
  "history": {
   "discovered": 1766,
@@ -333,7 +500,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "Coined by Lavoisier from the Greek hydor, 'water', and -genes, 'producing', because burning it yields water.",
   "source": "pubchem",
-  "note": "Boyle had made the gas around 1671 without recognizing it as new; Cavendish showed it was a distinct substance. Los Alamos prints 1776, apparently a slip for 1766."
+  "note": "Boyle had made the gas around 1671 without recognizing it as new; Cavendish showed it was a distinct substance. Los Alamos prints 1776, apparently a slip for 1766.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Hydrogen is the lightest element, a colourless gas of two-atom molecules and the main fuel of the stars; on Earth we meet it mostly bound into water and the molecules of living things. Its ordinary nucleus is a single proton, but about 0.0145 % of natural hydrogen is deuterium, whose nucleus also holds a neutron and which makes 'heavy water'. With one electron in the 1s orbital (ground term ²S₁/₂), hydrogen is the only neutral atom whose Schrödinger equation can be solved exactly. The deep red line in a hydrogen lamp's glow is the Balmer line at 656.3 nm, emitted as the electron falls from the third shell to the second.",

@@ -232,6 +232,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 37.3,
+   "unc": 0.7,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -338,6 +345,77 @@
    "listedAs": "silicon metal",
    "source": "eu_crm",
    "note": "Silicon metal only (not silica minerals; silica sand was assessed and is not critical)."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 19.99,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Ferrosilicon is used in iron foundries and steelmaking; silicon metal goes into aluminium alloys.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "The chemical industry makes silicones from silicon metal.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Very pure silicon wafers are the basis of computer chips and solar cells.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Grown quartz crystals (silicon dioxide) keep time in electronic circuits.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 5461123,
+   "source": "pubchem_ghs",
+   "reports": 3263,
+   "notMeetingCriteria": {
+    "share": 96.3,
+    "reports": 3142,
+    "of": 3263
+   },
+   "notClassified": true,
+   "note": "Aggregated by PubChem from 3263 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 96.3 % of the reports (3142 of 3263) say silicon does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 282000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 2.2,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 858.9,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 257.143,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -351,6 +429,94 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.102, massive_stars 0.681, white_dwarfs 0.217); quantised to 0.05. Stack height 82 px. Cross-check with the paper's text: '22% of Si ... come from SNe Ia' (figure reading 0.217). Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent network",
+   "note": "The diamond structure: each atom bonded to four others.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air at room temperature under a thin oxide layer; fine silicon dust is flammable and can explode.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Insoluble in water and does not react with it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Resists acids except a mixture of hydrofluoric and nitric acid; dissolves in hot alkali, giving hydrogen.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "SiO2",
+    "name": "silicon dioxide",
+    "note": "quartz and sand",
+    "source": "pubchem_compounds",
+    "cid": 24261
+   },
+   {
+    "formula": "SiC",
+    "name": "silicon carbide",
+    "source": "pubchem_compounds",
+    "cid": 9863
+   },
+   {
+    "formula": "SiCl4",
+    "name": "silicon tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 24816
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "SiO2",
+    "name": "silicon dioxide",
+    "source": "pubchem_compounds",
+    "cid": 24261
+   },
+   {
+    "state": 2,
+    "formula": "SiO",
+    "name": "silicon monoxide",
+    "source": "pubchem_compounds",
+    "cid": 66241
+   },
+   {
+    "state": -4,
+    "formula": "Mg2Si",
+    "name": "magnesium silicide",
+    "source": "pubchem_compounds",
+    "cid": 89858
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 26.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 40.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5461123
  },
  "amo": {
   "hyperfine": [],
@@ -381,7 +547,19 @@
    "text": "May help bone and connective tissue form; essentiality in humans is not proven.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "iarc": [
+   {
+    "agent": "Silica dust, crystalline, in the form of quartz or cristobalite",
+    "group": "1",
+    "volumes": [
+     "Sup 7",
+     "68",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1824,
@@ -391,7 +569,12 @@
   "place": "Stockholm, Sweden",
   "nameOrigin": "From the Latin silex (genitive silicis), 'flint', with the ending of carbon and boron.",
   "source": "pubchem",
-  "note": "PubChem's YearDiscovered (1854) is the year Deville first made crystalline silicon. Gay-Lussac and Thénard had probably made impure silicon in 1811."
+  "note": "PubChem's YearDiscovered (1854) is the year Deville first made crystalline silicon. Gay-Lussac and Thénard had probably made impure silicon in 1811.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Silicon is a hard, grey, shiny metalloid and, after oxygen, the most abundant element in Earth's crust, where it is locked in sand, quartz and nearly all rocks. Purified, it is the material of computer chips and solar cells; in nature, grasses and horsetails lay down tiny glassy silica bodies that stiffen their leaves and stems. Near-perfect spheres of silicon enriched in silicon-28, which makes up about 92 % of natural silicon, were used to count atoms precisely enough to help fix the constants behind the new definition of the kilogram. Like carbon above it, the atom has two unpaired p electrons: [Ne] 3s² 3p², ground term ³P₀.",

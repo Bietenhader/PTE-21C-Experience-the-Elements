@@ -851,6 +851,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 129.0,
+   "unc": 17.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -944,6 +951,101 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.665,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Fuel for nuclear power stations, usually as uranium dioxide; uranium-235 is the natural isotope that splits.",
+    "source": "pubchem"
+   },
+   {
+    "text": "The 2025 U.S. critical-minerals list names nuclear fuel and medical applications.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Once coloured glass and ceramic glazes yellow to orange-red, a use abandoned for health reasons.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "α-uranium",
+    "note": "Orthorhombic: the form at room temperature.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "β- and γ-uranium",
+    "note": "On heating, a complex tetragonal form and then a body-centred cubic one.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H300",
+     "text": "Fatal if swallowed"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 23989,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem. GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 2.7,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.0032,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0001729,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.00128571,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -960,6 +1062,147 @@
    ]
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "A coat of oxide forms in air; the powder can ignite. A strong reducing agent that reacts with nearly all non-metals.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water or steam.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in hydrochloric and nitric acid; hardly attacked by alkalis.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "UO2",
+    "name": "uranium dioxide",
+    "note": "the fuel in most nuclear reactors",
+    "source": "pubchem_compounds",
+    "cid": 51003830
+   },
+   {
+    "formula": "UF6",
+    "name": "uranium hexafluoride",
+    "note": "the gas used to enrich uranium",
+    "source": "pubchem_compounds",
+    "cid": 24560
+   },
+   {
+    "formula": "U3O8",
+    "name": "triuranium octoxide",
+    "note": "yellowcake's main constituent",
+    "source": "pubchem_compounds",
+    "cid": 92028829
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "UF6",
+    "name": "uranium hexafluoride",
+    "source": "pubchem_compounds",
+    "cid": 24560
+   },
+   {
+    "state": 5,
+    "formula": "UF5",
+    "name": "uranium pentafluoride",
+    "source": "pubchem_compounds",
+    "cid": 83723
+   },
+   {
+    "state": 4,
+    "formula": "UO2",
+    "name": "uranium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 51003830
+   },
+   {
+    "state": 3,
+    "formula": "UCl3",
+    "name": "uranium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 167444
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 102.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 89.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 100.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 52.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 73.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 6,
+    "coordination": "VIII",
+    "radius": {
+     "value": 86.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23989
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],
@@ -969,7 +1212,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Uranium, mixture of isotopes (see Radionuclides, alpha-particle-emitting, internally deposited)",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1789,
@@ -983,7 +1237,12 @@
   ],
   "nameOrigin": "After the planet Uranus, discovered by William Herschel in 1781.",
   "source": "pubchem",
-  "note": "What Klaproth obtained was an oxide; Péligot first made the metal by reducing uranium tetrachloride with potassium."
+  "note": "What Klaproth obtained was an oxide; Péligot first made the metal by reducing uranium tetrachloride with potassium.",
+  "placeLocation": {
+   "lat": 52.524,
+   "lon": 13.4,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Uranium is the dense, silvery-grey actinide metal that fuels nuclear reactors, named in 1789 after the then newly discovered planet Uranus; in 1896 Henri Becquerel discovered radioactivity while studying its salts. Nature built reactors first: about 1.7 billion years ago, uranium ore at Oklo in Gabon sustained fission chain reactions on its own, because uranium-235 then made up about 3 per cent of natural uranium instead of today's 0.72 per cent. In the atom, one electron goes into 6d rather than 5f, giving [Rn] 5f³ 6d¹ 7s² against the Aufbau prediction 5f⁴ 7s², and the ground term ⁵L°₆ carries a total orbital angular momentum of L = 8.",

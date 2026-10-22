@@ -613,6 +613,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 132.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -697,6 +704,63 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Plutonium-238 heats radioisotope generators that power space probes too far from the Sun for solar panels (Galileo, Cassini).",
+    "source": "pubchem"
+   },
+   {
+    "text": "Plutonium-239 sustains a chain reaction: nuclear weapons, and fuel in some reactors.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "α-plutonium",
+    "note": "Monoclinic and brittle: the form at room temperature.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "β-, γ-, δ-, δ′- and ε-plutonium",
+    "note": "Five more forms between room temperature and the melting point, more than any other element; δ-plutonium is about a fifth less dense than α.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental plutonium (CID 23940). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -705,6 +769,117 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "A metal with six solid forms between room temperature and its melting point.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes quickly in moist air, forming a powdery oxide; the fine powder can ignite.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with water, faster when warm.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in hydrochloric acid; concentrated nitric acid makes it passive.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "PuO2",
+    "name": "plutonium dioxide",
+    "note": "fuel of space probes' radioisotope generators",
+    "source": "greenwood1997"
+   },
+   {
+    "formula": "PuF4",
+    "name": "plutonium tetrafluoride",
+    "source": "pubchem_compounds",
+    "cid": 139558
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "PuF6",
+    "name": "plutonium hexafluoride",
+    "source": "pubchem_compounds",
+    "cid": 518809
+   },
+   {
+    "state": 5,
+    "formula": "PuO2⁺",
+    "name": "plutonyl(V) ion",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "PuO2",
+    "name": "plutonium dioxide",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 3,
+    "formula": "PuCl3",
+    "name": "plutonium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 15763885
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 100.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 96.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 74.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 71.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23940
  },
  "amo": {
   "hyperfine": [],
@@ -715,7 +890,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Plutonium",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1940,
@@ -730,7 +916,12 @@
   "isolated": 1943,
   "nameOrigin": "After Pluto, then counted as the planet beyond Neptune.",
   "source": "pubchem",
-  "note": "Made by bombarding uranium-238 with deuterons from the 60-inch cyclotron at Berkeley; the paper was submitted in January 1941 but withheld until 1946 for wartime secrecy. The first metal was made in November 1943 (Los Alamos). Jefferson Lab gives 1941 and spells Wahl as 'Wohl'."
+  "note": "Made by bombarding uranium-238 with deuterons from the 60-inch cyclotron at Berkeley; the paper was submitted in January 1941 but withheld until 1946 for wartime secrecy. The first metal was made in November 1943 (Los Alamos). Jefferson Lab gives 1941 and spells Wahl as 'Wohl'.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Plutonium is a radioactive actinide metal first made at Berkeley in 1940–41, whose discovery stayed secret until after the Second World War; plutonium-239, with a half-life of about 24,000 years, drives nuclear weapons and some reactors, while plutonium-238 powers spacecraft far from the Sun. As a metal it is notoriously awkward: at ordinary pressure it passes through six crystal forms between room temperature and its melting point, with densities from about 16 to nearly 20 grams per cubic centimetre. Its ground configuration, [Rn] 5f⁶ 7s², holds six unpaired 5f electrons with parallel spins, yet spin and orbital momentum cancel exactly in the ⁷F₀ ground level, with J = 0.",

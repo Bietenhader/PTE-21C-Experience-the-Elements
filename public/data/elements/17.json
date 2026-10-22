@@ -250,6 +250,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 14.6,
+   "unc": 0.1,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -343,6 +350,110 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 33.949,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of Cl₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "Chlorine is made from brine (salt water); chlorine and caustic soda makers are the main chemical users of salt.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Disinfects drinking water and swimming pools.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Needed to make plastics, solvents, medicines, dyes and paper products.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "name": "Oxidising"
+    },
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    },
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H270",
+     "text": "May cause or intensify fire; oxidizer"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H331",
+     "text": "Toxic if inhaled"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 24526,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 145.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 19400.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 5.768,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 1357.14,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -354,6 +465,108 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.989, white_dwarfs 0.011); quantised to 0.05. Stack height 14 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.07 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not burn; a strong oxidising gas that attacks many metals and organic materials.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Dissolves in water, forming a mixture of hydrochloric and hypochlorous acids.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not dissolved by acids; it oxidises what it reacts with.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NaCl",
+    "name": "sodium chloride",
+    "source": "pubchem_compounds",
+    "cid": 5234
+   },
+   {
+    "formula": "HCl",
+    "name": "hydrogen chloride",
+    "source": "pubchem_compounds",
+    "cid": 313
+   },
+   {
+    "formula": "NaClO",
+    "name": "sodium hypochlorite",
+    "note": "household bleach",
+    "source": "pubchem_compounds",
+    "cid": 23665760
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 7,
+    "formula": "HClO4",
+    "name": "perchloric acid",
+    "source": "pubchem_compounds",
+    "cid": 24247
+   },
+   {
+    "state": 5,
+    "formula": "KClO3",
+    "name": "potassium chlorate",
+    "source": "pubchem_compounds",
+    "cid": 6426889
+   },
+   {
+    "state": 1,
+    "formula": "NaClO",
+    "name": "sodium hypochlorite",
+    "source": "pubchem_compounds",
+    "cid": 23665760
+   },
+   {
+    "state": -1,
+    "formula": "NaCl",
+    "name": "sodium chloride",
+    "source": "pubchem_compounds",
+    "cid": 5234
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -1,
+    "coordination": "VI",
+    "radius": {
+     "value": 181.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "IV",
+    "radius": {
+     "value": 8.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 7,
+    "coordination": "VI",
+    "radius": {
+     "value": 27.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 24526
  },
  "amo": {
   "hyperfine": [],
@@ -385,7 +598,12 @@
   "place": "Uppsala, Sweden",
   "nameOrigin": "From the Greek chloros, 'pale green' or 'yellow-green', the colour of the gas.",
   "source": "pubchem",
-  "note": "Scheele made the gas from pyrolusite and hydrochloric acid but thought it contained oxygen; Davy showed in 1810 that it is an element and named it."
+  "note": "Scheele made the gas from pyrolusite and hydrochloric acid but thought it contained oxygen; Davy showed in 1810 that it is an element and named it.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Chlorine is a greenish-yellow, choking gas from the halogen group; we meet it bound and harmless in table salt, while small doses of chlorine or its compounds keep drinking water and swimming pools free of microbes. Natural chlorine is a mixture of two stable isotopes, about 75.8 % chlorine-35 and 24.2 % chlorine-37, which is why its atomic weight, about 35.45, is so far from a whole number. The atom, [Ne] 3s² 3p⁵ (ground term ²P°₃/₂), lacks one electron to close its shell, and it releases more energy on capturing an extra electron than any other element, even fluorine.",

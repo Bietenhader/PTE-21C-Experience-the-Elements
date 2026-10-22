@@ -202,6 +202,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 71.2,
+   "unc": 0.4,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -312,6 +319,81 @@
    "strategic": true,
    "listedAs": "magnesium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.869,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Most primary magnesium (69 %) is used in castings, chiefly for cars.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Alloyed into aluminium for packaging and transport (15 %), and used to remove sulfur from iron and steel (9 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Magnesium compounds are used for environmental treatment, road de-icing, chemicals, agriculture and furnace linings.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5462224,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 23300.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1290.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 770.1,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 271.429,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -324,6 +406,87 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.128, massive_stars 0.867, white_dwarfs 0.005); quantised to 0.05. Stack height 78 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'Mg is slightly under-produced in the model.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in ordinary air under a thin oxide film; oxidises slowly in moist air and is strongly attacked by salt spray.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts only slowly with cold water, giving hydrogen; powder reacts faster.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in most acids with hydrogen given off; hydrofluoric acid leaves it almost untouched.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "MgO",
+    "name": "magnesium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14792
+   },
+   {
+    "formula": "MgSO4",
+    "name": "magnesium sulfate",
+    "note": "Epsom salt is its hydrate",
+    "source": "pubchem_compounds",
+    "cid": 24083
+   },
+   {
+    "formula": "MgCl2",
+    "name": "magnesium chloride",
+    "source": "pubchem_compounds",
+    "cid": 5360315
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "MgO",
+    "name": "magnesium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14792
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 57.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 89.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462224
  },
  "amo": {
   "hyperfine": [
@@ -375,7 +538,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The paper reports Ramsey spectroscopy on laser cooled and trapped Mg; the isotope is not named in the title. NIST observed value."
+    "note": "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. The paper reports Ramsey spectroscopy on laser cooled and trapped Mg; the isotope is not named in the title. NIST observed value."
    },
    {
     "A": "natural",
@@ -434,7 +597,12 @@
   ],
   "nameOrigin": "From Magnesia, a district of Thessaly in Greece, which gave its name to several minerals.",
   "source": "pubchem",
-  "note": "PubChem's YearDiscovered (1808) is the year Davy first obtained the metal, in impure form; CIAAW credits Bussy with the pure metal in 1831, which Los Alamos calls the first coherent metal."
+  "note": "PubChem's YearDiscovered (1808) is the year Davy first obtained the metal, in impure form; CIAAW credits Bussy with the pure metal in 1831, which Los Alamos calls the first coherent metal.",
+  "placeLocation": {
+   "lat": 55.948,
+   "lon": -3.219,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Magnesium is a light, silvery alkaline-earth metal that burns with a dazzling white flame, once used in photographers' flashes; alloyed, it lightens car and aircraft parts. Its most important place in biology is the centre of every chlorophyll molecule, where a single magnesium ion is gripped by four nitrogen atoms of the surrounding ring; leaves short of magnesium turn yellow between their veins. The atom has the closed configuration [Ne] 3s² (ground term ¹S₀). Of its three stable isotopes, only magnesium-25, about 10 % of the total, has a nuclear spin (5/2); the other two have none.",

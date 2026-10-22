@@ -25,18 +25,25 @@ import fetch_bipm
 import fetch_ciaaw
 import fetch_cie
 import fetch_codata
+import fetch_geonames
 import fetch_iaea
+import fetch_iarc
 import fetch_images
+import fetch_natural_earth
 import fetch_nist_awic
 import fetch_nist_gsie
 import fetch_nist_levels
 import fetch_nist_lines
 import fetch_nist_srd141
 import fetch_pubchem
+import fetch_pubchem_ghs
+import fetch_pubchem_hsdb
 from common import SourceUnavailable
 
 FETCHERS = [
     fetch_pubchem,
+    fetch_pubchem_hsdb,
+    fetch_pubchem_ghs,
     fetch_nist_gsie,
     fetch_nist_awic,
     fetch_iaea,
@@ -48,6 +55,9 @@ FETCHERS = [
     fetch_bipm,
     fetch_cie,
     fetch_images,
+    fetch_natural_earth,
+    fetch_geonames,
+    fetch_iarc,
 ]
 
 

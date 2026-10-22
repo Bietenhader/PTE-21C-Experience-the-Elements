@@ -533,6 +533,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 55.0,
+   "unc": 8.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -635,6 +642,83 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.35,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Electrical and electronic uses take a quarter (25 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Investment bars (18 %), coins and medals (14 %), and jewellery and silverware (6 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Solar cells (15 %), and brazing and solder (3 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Kills bacteria: wound dressings, medical instruments, water purification.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H361f",
+     "text": "Suspected of damaging fertility"
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 23954,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.075,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 4e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.001658,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -648,6 +732,86 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.154, massive_stars 0.800, neutron_star_mergers 0.045); quantised to 0.05. Stack height 81 px. Paper: 'Ag is over-produced by a factor of 6'; fractions are of the model's (too high) Ag."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in clean air and water, but tarnishes black in air containing sulfur compounds or ozone.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and not attacked by it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in nitric acid and hot concentrated sulfuric acid; not in hydrochloric or dilute sulfuric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "AgNO3",
+    "name": "silver nitrate",
+    "source": "pubchem_compounds",
+    "cid": 24470
+   },
+   {
+    "formula": "AgCl",
+    "name": "silver chloride",
+    "source": "pubchem_compounds",
+    "cid": 24561
+   },
+   {
+    "formula": "Ag2S",
+    "name": "silver sulfide",
+    "note": "the black tarnish on silver",
+    "source": "pubchem_compounds",
+    "cid": 166738
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "AgNO3",
+    "name": "silver nitrate",
+    "source": "pubchem_compounds",
+    "cid": 24470
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 100.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 115.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 128.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23954
  },
  "amo": {
   "hyperfine": [
@@ -720,7 +884,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title. NIST observed value (Ritz 328.1629601 nm)."
+    "note": "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title. NIST observed value (Ritz 328.1629601 nm)."
    }
   ],
   "siHistory": []

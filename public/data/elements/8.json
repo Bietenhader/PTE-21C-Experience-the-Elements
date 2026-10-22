@@ -157,6 +157,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 5.3,
+   "unc": 0.2,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -249,6 +256,98 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 29.378,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of O₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "Steelworks blow oxygen through molten pig iron to burn out impurities.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Burned with acetylene, it gives the very hot flame used for welding.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Given to patients with breathing problems; liquid oxygen is a rocket propellant.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Water enriched in oxygen-18 and deuterium is used to measure how much energy people and animals use.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "Dioxygen, O₂",
+    "note": "The oxygen of air: a colourless gas whose molecules are magnetic (two unpaired electrons).",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "Ozone, O₃",
+    "note": "A pale blue, sharp-smelling and much more reactive gas, made by electric discharges or ultraviolet light.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "name": "Oxidising"
+    },
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H270",
+     "text": "May cause or intensify fire; oxidizer"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 977,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 461000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 857000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 7902.0,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 614286.0,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -261,6 +360,87 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.104, massive_stars 0.888, white_dwarfs 0.008); quantised to 0.05. Stack height 85 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "O₂ molecules (and O₃, ozone); O₂ has two unpaired electrons, so liquid oxygen is drawn into a magnet.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "A fifth of the air; a strong oxidising agent that makes most other substances burn.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water; slightly soluble, which is what fish breathe.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Does not react with acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "H2O",
+    "name": "water",
+    "source": "pubchem_compounds",
+    "cid": 962
+   },
+   {
+    "formula": "SiO2",
+    "name": "silicon dioxide",
+    "note": "quartz and sand",
+    "source": "pubchem_compounds",
+    "cid": 24261
+   },
+   {
+    "formula": "H2O2",
+    "name": "hydrogen peroxide",
+    "source": "pubchem_compounds",
+    "cid": 784
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": -2,
+    "formula": "H2O",
+    "name": "water",
+    "source": "pubchem_compounds",
+    "cid": 962
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -2,
+    "coordination": "IV",
+    "radius": {
+     "value": 138.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": -2,
+    "coordination": "VI",
+    "radius": {
+     "value": 140.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": -2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 142.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 977
  },
  "amo": {
   "hyperfine": [],
@@ -293,7 +473,23 @@
    "text": "Part of water and most biomolecules; the final electron acceptor of respiration.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 18,
+    "field": "tracer",
+    "text": "Water labelled with oxygen-18 showed in 1941 that the oxygen released in photosynthesis comes from water, not from carbon dioxide.",
+    "source": "primary_literature",
+    "doi": "10.1021/ja01848a512"
+   },
+   {
+    "A": 18,
+    "field": "environment",
+    "text": "The oxygen-18 share in the shells of fossil foraminifera records the temperature and ice volume of past oceans; Emiliani's 1955 study of deep-sea cores mapped the glacial cycles of the Pleistocene.",
+    "source": "primary_literature",
+    "doi": "10.1086/626295"
+   }
+  ]
  },
  "history": {
   "discovered": 1774,
@@ -304,7 +500,12 @@
   "place": "Calne, United Kingdom",
   "nameOrigin": "Named by Lavoisier from the Greek oxys, 'sharp' or 'acid', and -genes, 'producing', because he wrongly thought every acid contains it.",
   "source": "pubchem",
-  "note": "Scheele made it first (1771 according to CIAAW) but his book appeared only in 1777, so Priestley, who published in 1774, is usually credited. The map dot marks Priestley's laboratory at Bowood, near Calne."
+  "note": "Scheele made it first (1771 according to CIAAW) but his book appeared only in 1777, so Priestley, who published in 1774, is usually credited. The map dot marks Priestley's laboratory at Bowood, near Calne.",
+  "placeLocation": {
+   "lat": 51.439,
+   "lon": -2.006,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Oxygen is a reactive nonmetal and, by mass, the most common element in Earth's crust, bound up in water and in silicate rocks. Almost all the free oxygen in the air was released by photosynthesis, as algae and plants split water molecules using the energy of sunlight. Cooled below its boiling point of 90.2 K, oxygen becomes a pale-blue liquid that clings to the poles of a strong magnet. That magnetism has a quantum origin: the O₂ molecule keeps two unpaired electrons, a triplet state that simple bonding diagrams miss, and the free atom, [He] 2s² 2p⁴, also has two unpaired electrons and the ground term ³P₂.",

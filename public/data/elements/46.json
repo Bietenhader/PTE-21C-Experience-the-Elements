@@ -507,6 +507,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 26.14,
+   "unc": 0.1,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -608,6 +615,100 @@
    "listedAs": "platinum group metals",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.98,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Car catalytic converters.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Electronics and chemical catalysts.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 31.5
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 17.7
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 18.0
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 15.9
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 17.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23938,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 616,
+   "notMeetingCriteria": {
+    "share": 59.3,
+    "reports": 365,
+    "of": 616
+   },
+   "note": "Aggregated by PubChem from 616 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 59.3 % of the reports (365 of 616) say palladium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.015,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "value": 0.004509,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -621,6 +722,71 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.234, massive_stars 0.717, neutron_star_mergers 0.049); quantised to 0.05. Stack height 76 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air, even when warm, and does not tarnish in hydrogen sulfide; turns to the oxide at red heat. It soaks up large volumes of hydrogen.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Not attacked by water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "The most reactive of the platinum metals: dissolves slowly in nitric acid and readily in aqua regia.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "PdCl2",
+    "name": "palladium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24290
+   },
+   {
+    "formula": "PdO",
+    "name": "palladium(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 73974
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "PdCl2",
+    "name": "palladium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24290
+   }
+  ],
+  "oxidationNote": "True palladium(III) compounds are rare; palladium's everyday states are +2 and +4.",
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23938
  },
  "amo": {
   "hyperfine": [],
@@ -641,7 +807,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "After the asteroid Pallas, discovered in 1802 and named after the goddess Pallas Athena.",
   "source": "pubchem",
-  "note": "Wollaston first announced it anonymously, without describing how he had made it."
+  "note": "Wollaston first announced it anonymously, without describing how he had made it.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Palladium is a silvery-white platinum-group metal, the least dense and lowest-melting of its family, used in catalytic converters, dental alloys and, mixed with gold, white gold. At room temperature it acts as a metal sponge for hydrogen, soaking up as much as 900 times its own volume of the gas, and heated palladium lets hydrogen slip through while blocking other gases, a neat way to purify it. Its atom is unique: the ground configuration is [Kr] 4d¹⁰, with no electron at all in the fifth shell, even though palladium sits in period 5. The filling rule predicts 4d⁸ 5s², but the completely filled d shell (¹S₀) wins.",

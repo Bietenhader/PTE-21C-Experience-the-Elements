@@ -45,6 +45,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 31.0,
+   "unc": 4.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -86,6 +93,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/PAC-REP-10-05-01"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/PAC-REP-10-05-01"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -94,6 +148,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; adsorption experiments show that it is very volatile."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Flerovium's chemistry is known only from predictions and single-atom adsorption experiments."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Flerovium's chemistry is known only from predictions and single-atom adsorption experiments."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Flerovium's chemistry is known only from predictions and single-atom adsorption experiments."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; single-atom experiments have tested how it sticks to surfaces, and the rest comes from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 168007562,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -118,7 +207,12 @@
   "symbolNote": "Temporary name: ununquadium (Uuq); named flerovium in 2012.",
   "source": "iupac_discovery",
   "doi": "10.1351/PAC-REP-10-05-01",
-  "note": "Made from calcium-48 and plutonium; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration on the strength of its 2004 experiments. Los Alamos gives 1999, the year the first report was published."
+  "note": "Made from calcium-48 and plutonium; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration on the strength of its 2004 experiments. Los Alamos gives 1999, the year the first report was published.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Flerovium is a synthetic element in group 14, below lead, named after the Flerov Laboratory of Nuclear Reactions at Dubna and its founder, Georgy Flyorov. Teams there first reported it in 1998, made by firing calcium-48 ions at plutonium, and only small numbers of atoms have been produced since. Its isotopes are long-lived by superheavy standards, flerovium-289 having a half-life of about 2.4 seconds, a hint of the predicted island of stability around element 114. Single-atom experiments show that it is unusually volatile. Relativity is predicted to split its 7p subshell so strongly that the two outer electrons, in [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p², fill a closed 7p₁/₂ level, making it relatively inert.",

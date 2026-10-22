@@ -801,6 +801,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 246.0,
+   "unc": 4.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -882,6 +889,61 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Radium-226 was used to treat cancer from close range (brachytherapy), sealed in needles or seeds.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Formerly in self-luminous paint for watch and instrument dials, now replaced by safer sources.",
+    "source": "pubchem"
+   },
+   {
+    "text": "With beryllium it makes a neutron source; the old unit of radioactivity, the curie, was based on radium-226.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental radium (CID 6328144). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 9e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 8.9e-11,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "value": 4.42857e-10,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -890,6 +952,58 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Turns black at once in air, forming a nitride; its radioactivity makes its salts glow faintly.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts vigorously with water, like barium, giving radium hydroxide and hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "RaCl2",
+    "name": "radium chloride",
+    "source": "greenwood1997"
+   },
+   {
+    "formula": "RaSO4",
+    "name": "radium sulfate",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "RaCl2",
+    "name": "radium chloride",
+    "source": "greenwood1997"
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 148.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 6328144
  },
  "amo": {
   "hyperfine": [],
@@ -919,7 +1033,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Radioactive. Cooled on the 1S0-3P1 intercombination line; the same paper trapped 225Ra and 226Ra. NIST Ra I value; isotope shift not applied. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Radioactive. Cooled on the 1S0-3P1 intercombination line; the same paper trapped 225Ra and 226Ra. NIST Ra I value; isotope shift not applied. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    },
    {
     "A": 225,
@@ -953,7 +1067,45 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "A": 223,
+    "field": "medicine",
+    "text": "Radium-223, an alpha emitter that the body treats like calcium, settles where bone is rebuilt around tumours; a 2013 trial showed that it prolongs life in prostate cancer that has spread to bone.",
+    "source": "primary_literature",
+    "doi": "10.1056/NEJMoa1213755"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Radium-224 and its decay products",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Radium-226 and its decay products",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Radium-228 and its decay products",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1898,
@@ -969,7 +1121,12 @@
   ],
   "nameOrigin": "From the Latin radius, 'ray', for its intense radioactivity.",
   "source": "pubchem",
-  "note": "Gustave Bémont co-signed the 1898 announcement. Los Alamos dates the isolation of the metal (electrolysis of radium chloride on a mercury cathode, then distillation of the amalgam) to 1911; the Curie–Debierne paper appeared in 1910 (Comptes rendus 151)."
+  "note": "Gustave Bémont co-signed the 1898 announcement. Los Alamos dates the isolation of the metal (electrolysis of radium chloride on a mercury cathode, then distillation of the amalgam) to 1911; the Curie–Debierne paper appeared in 1910 (Comptes rendus 151).",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Radium is a radioactive alkaline-earth metal that Marie and Pierre Curie extracted from pitchblende in 1898; a tonne of uranium ore yields only about 0.14 grams of it. Its salts glow faintly in the dark, which once led to its use in luminous paint for watch dials. Radium-226, with a half-life of 1600 years, defined the old unit of activity, the curie, and the Curies' own laboratory notebooks are still too contaminated to handle safely. Its nucleus has a rare trick: radium-223, radium-226 and some other radium isotopes occasionally fling out a whole carbon-14 nucleus instead of an alpha particle, a process called cluster decay.",

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 import { describe, expect, it } from "vitest";
 import { CODATA, EV_IN_KJ_PER_MOL } from "./constants";
-import { celsiusToKelvin, convertEnergy, convertTemperature, evToKjPerMol, kelvinToCelsius, kjPerMolToEv } from "./units";
+import { celsiusToKelvin, convertEnergy, convertTemperature, evToKjPerMol, kelvinToCelsius, kjPerMolToEv, polarizabilityAuToA3 } from "./units";
 
 describe("unit conversions", () => {
   it("uses the exact CODATA factor e·N_A", () => {
@@ -20,6 +20,12 @@ describe("unit conversions", () => {
   it("round-trips K ↔ °C", () => {
     expect(kelvinToCelsius(273.15)).toBe(0);
     expect(celsiusToKelvin(kelvinToCelsius(1811))).toBeCloseTo(1811, 12);
+  });
+
+  it("converts a polarizability from atomic units to Å³ with a₀ from CODATA", () => {
+    // 1 a.u. = a₀³ = 0.148 184 7… Å³; hydrogen’s 4.507 11 a.u. is 0.668 Å³.
+    expect(polarizabilityAuToA3(1)).toBeCloseTo(0.1481847, 7);
+    expect(polarizabilityAuToA3(4.50711)).toBeCloseTo(0.667885, 6);
   });
 
   it("marks the SI defining constants exact", () => {

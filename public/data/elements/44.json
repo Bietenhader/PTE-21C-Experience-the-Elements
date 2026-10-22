@@ -514,6 +514,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 72.0,
+   "unc": 10.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -614,6 +621,83 @@
    "listedAs": "platinum group metals",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.06,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Catalysts, electronic components and computer chips.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Small additions harden platinum and palladium for wear-resistant electrical contacts, and make titanium far more corrosion-resistant.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 49.9
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 22.9
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23950,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 455,
+   "notMeetingCriteria": {
+    "share": 26.4,
+    "reports": 120,
+    "of": 455
+   },
+   "note": "Aggregated by PubChem from 455 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 26.4 % of the reports (120 of 455) say ruthenium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 7e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.005464,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -627,6 +711,68 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.265, massive_stars 0.612, neutron_star_mergers 0.123); quantised to 0.05. Stack height 70 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not tarnish in air at room temperature; oxidises above about 800 °C.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Not attacked by water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Not attacked by acids, not even aqua regia; dissolved by molten alkali with an oxidiser.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "RuO2",
+    "name": "ruthenium dioxide",
+    "note": "in thick-film resistors",
+    "source": "pubchem_compounds",
+    "cid": 82848
+   },
+   {
+    "formula": "RuO4",
+    "name": "ruthenium tetroxide",
+    "source": "pubchem_compounds",
+    "cid": 119079
+   },
+   {
+    "formula": "RuCl3",
+    "name": "ruthenium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 61850
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "RuCl3",
+    "name": "ruthenium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 61850
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 68.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23950
  },
  "amo": {
   "hyperfine": [],
@@ -647,7 +793,12 @@
   "place": "Kazan, Russia",
   "nameOrigin": "From Ruthenia, a Medieval Latin name for Russia, where the platinum ore came from.",
   "source": "pubchem",
-  "note": "PubChem's YearDiscovered (1827) refers to Osann's claim (1828 in CIAAW); Klaus showed that Osann's material was impure and obtained the metal itself. Śniadecki's 1807 claim had been withdrawn."
+  "note": "PubChem's YearDiscovered (1827) refers to Osann's claim (1828 in CIAAW); Klaus showed that Osann's material was impure and obtained the metal itself. Śniadecki's 1807 claim had been withdrawn.",
+  "placeLocation": {
+   "lat": 55.752,
+   "lon": 49.124,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Ruthenium is a hard, silvery platinum-group metal, recovered as a by-product of platinum and nickel refining and named after Ruthenia, a Latin name for Russia, because it was first isolated from platinum ore from the Ural Mountains. A pinch goes a long way: about a tenth of a per cent of ruthenium makes titanium far more resistant to corrosion, and small additions harden platinum and palladium for hard-wearing electrical contacts. Its atom breaks the filling rule: the measured ground configuration is [Kr] 4d⁷ 5s¹, not the predicted 4d⁶ 5s², giving four unpaired electrons and the ground term ⁵F₅.",

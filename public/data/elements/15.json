@@ -239,6 +239,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 25.0,
+   "unc": 1.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -358,6 +365,98 @@
    "listedAs": "phosphate rock + phosphorus",
    "source": "eu_crm",
    "note": "Phosphate rock is a sedimentary rock (mainly apatite) mined for phosphorus; listed as the rock. Elemental (white) phosphorus, listed separately from phosphate rock."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 23.824,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "More than 95 % of U.S. phosphate rock is made into phosphoric acid for fertilisers and animal-feed supplements.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "The rest becomes elemental phosphorus for industrial compounds, mainly the herbicide glyphosate.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "White phosphorus",
+    "note": "Separate P₄ tetrahedra: a waxy solid that glows in air and catches fire by itself. It is the thermodynamic reference form, although not the most stable.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "Red phosphorus",
+    "note": "Made by heating white phosphorus: a polymeric, far less reactive form, used on matchbox striking strips.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Black phosphorus",
+    "note": "The most stable form: puckered layers, flaky and graphite-like, made under high pressure.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Violet (Hittorf's) phosphorus",
+    "note": "A crystalline polymeric form of long tubes of phosphorus atoms.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    },
+    {
+     "code": "H412",
+     "text": "Harmful to aquatic life with long lasting effects"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5462309,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 1050.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 7.948,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 8285.71,
+    "unit": "mg/kg",
+    "source": "kerr1982",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass."
+   }
   }
  },
  "nucleus": {
@@ -370,6 +469,102 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.096, massive_stars 0.901, white_dwarfs 0.003); quantised to 0.05. Stack height 67 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "White phosphorus is made of P₄ tetrahedra; red and black phosphorus are covalent networks.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "White phosphorus glows in the dark and catches fire on its own in air at about 30 °C; red and black phosphorus are stable in air.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water; white phosphorus is stored under water to keep air away.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Hot concentrated nitric acid oxidises it to phosphoric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "H3PO4",
+    "name": "phosphoric acid",
+    "source": "pubchem_compounds",
+    "cid": 1004
+   },
+   {
+    "formula": "P2O5",
+    "name": "phosphorus pentoxide",
+    "note": "the molecule is P₄O₁₀; a powerful drying agent",
+    "source": "pubchem_compounds",
+    "cid": 6326975
+   },
+   {
+    "formula": "PCl3",
+    "name": "phosphorus trichloride",
+    "source": "pubchem_compounds",
+    "cid": 24387
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "H3PO4",
+    "name": "phosphoric acid",
+    "source": "pubchem_compounds",
+    "cid": 1004
+   },
+   {
+    "state": 3,
+    "formula": "PCl3",
+    "name": "phosphorus trichloride",
+    "source": "pubchem_compounds",
+    "cid": 24387
+   },
+   {
+    "state": -3,
+    "formula": "PH3",
+    "name": "phosphine",
+    "source": "pubchem_compounds",
+    "cid": 24404
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 44.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "IV",
+    "radius": {
+     "value": 17.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 38.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462309
  },
  "amo": {
   "hyperfine": [],
@@ -390,7 +585,41 @@
    "text": "Bone mineral (calcium phosphate), ATP, DNA and RNA, and cell membranes.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 32,
+    "field": "tracer",
+    "text": "Phosphorus-32 fed to rats in 1935, one of the first radioactive tracers in physiology, showed that the phosphorus in bone is constantly exchanged rather than laid down for good.",
+    "source": "primary_literature",
+    "doi": "10.1038/136754a0"
+   },
+   {
+    "A": 32,
+    "field": "tracer",
+    "text": "With phage DNA labelled by phosphorus-32 and phage protein by sulfur-35, Hershey and Chase showed in 1952 that mainly the DNA enters the infected bacterium: evidence that genes are made of DNA.",
+    "source": "primary_literature",
+    "doi": "10.1085/jgp.36.1.39"
+   }
+  ],
+  "environment": [
+   {
+    "text": "Phosphorus is the nutrient that most often limits algae in lakes, so phosphate in runoff and sewage is a main driver of their eutrophication.",
+    "source": "primary_literature",
+    "doi": "10.1016/S0269-7491(99)00091-3"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Phosphorus-32, as phosphate",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1669,
@@ -400,7 +629,12 @@
   "place": "Hamburg, Germany",
   "nameOrigin": "From the Greek phosphoros, 'light-bearer', because white phosphorus glows in the dark.",
   "source": "pubchem",
-  "note": "Brand, an alchemist, prepared it by boiling down large amounts of urine."
+  "note": "Brand, an alchemist, prepared it by boiling down large amounts of urine.",
+  "placeLocation": {
+   "lat": 53.552,
+   "lon": 9.998,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Phosphorus is a reactive nonmetal found in several forms: waxy white phosphorus, which must be kept under water, the red phosphorus of matchbox strikers, and violet and black varieties. Life cannot do without it, in DNA, in the energy carrier ATP, in bones, and as one of the three main nutrients in crop fertilisers. In 1669 the alchemist Hennig Brand isolated it by boiling down large amounts of urine; the green glow of white phosphorus in air comes from slow oxidation, a kind of chemiluminescence, not from phosphorescence. The atom has a half-filled 3p subshell, [Ne] 3s² 3p³ (ground term ⁴S°₃/₂), and phosphorus-31, its only stable isotope, has nuclear spin 1/2, ideal for NMR.",

@@ -424,6 +424,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 16.78,
+   "unc": 0.02,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -508,6 +515,78 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 20.786,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Semiconductor manufacture takes two-thirds of krypton (67 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Lamps (20 %), and the gap between the panes of insulated windows (10 %).",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated",
+     "share": 50.2
+    },
+    {
+     "code": "H281",
+     "text": "Contains refrigerated gas; may cause cryogenic burns or injury",
+     "share": 49.8
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5416,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 532,
+   "note": "Aggregated by PubChem from 532 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.0001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.00021,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.1468,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -521,6 +600,38 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.389, massive_stars 0.562, neutron_star_mergers 0.049); quantised to 0.05. Stack height 46 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Inert towards acids; only fluorine forces it into a compound, KrF₂.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "KrF2",
+    "name": "krypton difluoride",
+    "note": "unstable; one of very few krypton compounds",
+    "source": "pubchem_compounds",
+    "cid": 83721
+   }
+  ],
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 5416
  },
  "amo": {
   "hyperfine": [],
@@ -646,7 +757,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Cooled in the metastable 5s [3/2]2 (1s5) state; the paper traps the even isotopes separately and quotes atom numbers for 84Kr. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
+    "note": "Cooled in the metastable 5s [3/2]2 (1s5) state; the paper traps the even isotopes separately and quotes atom numbers for 84Kr. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Wavelength is NIST's value for the element; the isotope shift for this isotope is not applied."
    }
   ],
   "siHistory": [
@@ -687,7 +798,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Greek kryptos, 'hidden'.",
   "source": "pubchem",
-  "note": "Found on 30 May 1898 in what remained when nearly all of a liquid-air sample had evaporated."
+  "note": "Found on 30 May 1898 in what remained when nearly all of a liquid-air sample had evaporated.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Krypton is a dense, colourless noble gas, rare in air and named from the Greek for 'hidden'; it fills some high-performance light bulbs and photographic flash tubes. It is also one of the few noble gases that can be coaxed into compounds, the best known being krypton difluoride. For part of the twentieth century the metre itself was defined by the wavelength of an orange-red line, 605.6 nm in air, emitted by krypton-86, a nucleus with a closed shell of 50 neutrons. The atom's 36 electrons fill every subshell up to 4p ([Ar] 3d¹⁰ 4s² 4p⁶, ground term ¹S₀), giving a first ionisation energy of 1351 kJ/mol.",

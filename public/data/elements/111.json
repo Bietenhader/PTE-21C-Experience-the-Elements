@@ -45,6 +45,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 32.0,
+   "unc": 6.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -86,6 +93,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac200375101601"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac200375101601"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -94,6 +148,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Roentgenium's chemistry has never been studied in experiments. Calculations suggest it would be a noble metal, like gold."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Roentgenium's chemistry has never been studied in experiments. Calculations suggest it would be a noble metal, like gold."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Roentgenium's chemistry has never been studied in experiments. Calculations suggest it would be a noble metal, like gold."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; its chemistry is known only from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 135476786,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -117,7 +206,12 @@
   "symbolNote": "Temporary name: unununium (Uuu); named roentgenium in 2004.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac200375101601",
-  "note": "Three atoms made in late 1994 from nickel-64 on bismuth-209; the 2003 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI."
+  "note": "Three atoms made in late 1994 from nickel-64 on bismuth-209; the 2003 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Roentgenium is a synthetic element in group 11, the heavy sibling of copper, silver and gold, named after Wilhelm Röntgen, who discovered X-rays. A team at GSI in Darmstadt made it in late 1994 by fusing bismuth-209 with nickel-64 and identified three atoms of roentgenium-272, an isotope with a half-life of about 4 milliseconds. Only small numbers of atoms have been produced since; roentgenium-282 lasts around 100 seconds, and its chemistry is unexplored. Gold has the famous 5d¹⁰ 6s¹ arrangement, but for roentgenium calculations predict [Rn] 5f¹⁴ 6d⁹ 7s², because relativity stabilises the 7s orbital so strongly that it holds two electrons while 6d keeps a vacancy.",

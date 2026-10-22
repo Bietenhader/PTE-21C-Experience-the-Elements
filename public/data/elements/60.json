@@ -671,6 +671,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 208.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -771,6 +778,102 @@
    "listedAs": "light rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.45,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Permanent magnets.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Lasers and catalysts.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 34.3
+    },
+    {
+     "code": "H251",
+     "text": "Self-heating; may catch fire",
+     "share": 33.3
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 41.9
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 41.9
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 10.6
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23934,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 463,
+   "notMeetingCriteria": {
+    "share": 56.4,
+    "reports": 261,
+    "of": 463
+   },
+   "note": "Aggregated by PubChem from 463 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 56.4 % of the reports (261 of 463) say neodymium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 41.5,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 2.8e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.00387,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -784,6 +887,65 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.824, massive_stars 0.135, neutron_star_mergers 0.041); quantised to 0.05. Stack height 89 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes quickly in air; it is kept under oil or sealed in plastic.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Nd2O3",
+    "name": "neodymium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159373
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Nd2O3",
+    "name": "neodymium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159373
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 98.3,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 110.9,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23934
  },
  "amo": {
   "hyperfine": [],
@@ -805,7 +967,12 @@
   "isolated": 1925,
   "nameOrigin": "From the Greek neos, 'new', and didymos, 'twin': the new twin separated from 'didymium'.",
   "source": "pubchem",
-  "note": "CIAAW gives 1841 and Mosander, meaning the discovery of 'didymium', the mixture from which Auer separated it. Los Alamos dates the first fairly pure metal to 1925 without naming who made it."
+  "note": "CIAAW gives 1841 and Mosander, meaning the discovery of 'didymium', the mixture from which Auer separated it. Los Alamos dates the first fairly pure metal to 1925 without naming who made it.",
+  "placeLocation": {
+   "lat": 48.202,
+   "lon": 16.365,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Neodymium is a silvery lanthanide that tarnishes quickly in air and is the key ingredient of neodymium–iron–boron magnets, the strongest permanent magnets in everyday use, found in headphones, hard drives, electric-car motors and wind turbines. Its name means ‘new twin’: it hid inside ‘didymium’ for decades until Carl Auer von Welsbach separated it from praseodymium in 1885. The free atom has four unpaired 4f electrons ([Xe] 4f⁴ 6s², ground term ⁵I₄). Because the 4f shell lies deep inside the atom, shielded by outer electrons, it keeps much of its orbital magnetism even in a crystal, and that helps lock the magnetisation of the magnets in place.",

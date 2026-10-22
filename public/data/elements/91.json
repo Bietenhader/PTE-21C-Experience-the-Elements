@@ -848,6 +848,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 154.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -932,6 +939,55 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "No use outside basic research: it is scarce, very radioactive and toxic.",
+    "source": "pubchem"
+   },
+   {
+    "text": "What is studied is usually extracted from spent nuclear fuel.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental protactinium (CID 23945). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 1.4e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 5e-11,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -940,6 +996,88 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes slowly in air.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only small amounts of protactinium metal have been made; its reaction with water is not described."
+   },
+   "acids": {
+    "text": "Dissolves in hydrochloric acid; in solution it readily forms insoluble hydrolysis products.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Pa2O5",
+    "name": "protactinium pentoxide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "Pa2O5",
+    "name": "protactinium pentoxide",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "PaCl4",
+    "name": "protactinium(IV) chloride",
+    "source": "pubchem_compounds",
+    "cid": 101946431
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 90.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 101.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 78.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VIII",
+    "radius": {
+     "value": 91.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23945
  },
  "amo": {
   "hyperfine": [],
@@ -966,7 +1104,12 @@
   ],
   "nameOrigin": "From the Greek protos, 'first', joined to actinium, because it decays into actinium.",
   "source": "pubchem",
-  "note": "Fajans and Göhring named their short-lived isotope brevium. Hahn and Meitner in Berlin and Soddy and Cranston in Britain independently found protactinium-231 in 1917–18; IUPAC shortened protoactinium to protactinium in 1949."
+  "note": "Fajans and Göhring named their short-lived isotope brevium. Hahn and Meitner in Berlin and Soddy and Cranston in Britain independently found protactinium-231 in 1917–18; IUPAC shortened protoactinium to protactinium in 1949.",
+  "placeLocation": {
+   "lat": 49.0,
+   "lon": 8.4,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Protactinium is a rare, toxic and strongly radioactive actinide between thorium and uranium; its name means 'before actinium', because its main isotope, protactinium-231, with a half-life of about 33,000 years, decays into actinium. The first isotope found, in 1913, vanished so quickly that its discoverers called the element brevium. Collecting a real sample was heroic work: in 1961 British chemists processed about 55 tonnes of ore to obtain some 125 grams of the pure element. In the atom one electron sits in 6d, [Rn] 5f² 6d¹ 7s², instead of the Aufbau prediction 5f³ 7s², and the large combined orbital momentum, L = 7, gives the ground term the rare letter K: ⁴K₁₁/₂.",

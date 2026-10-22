@@ -227,6 +227,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 57.8,
+   "unc": 1.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -335,6 +342,81 @@
    "listedAs": "bauxite/alumina/aluminium",
    "source": "eu_crm",
    "note": "Ore (bauxite), intermediate (alumina) and metal (aluminium) listed as one entry; aluminium is named, so the mapping is direct."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.2,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Transport is the largest use (36 % of U.S. consumption).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Packaging (24 %), building (13 %), electrical uses (9 %), consumer durables and machinery (8 % each).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Overhead power lines are made of aluminium because it is light, though it conducts less well than copper.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5359268,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 82300.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.002,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 66.92,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.871429,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -347,6 +429,79 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.109, massive_stars 0.891); quantised to 0.05. Stack height 71 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "A thin, tight oxide film forms at once and protects the metal; fine aluminium dust can ignite and explode.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "The oxide film stops any reaction with water; unprotected metal or powder releases hydrogen.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in dilute hydrochloric and sulfuric acid, and in caustic alkalis, giving off hydrogen.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Al2O3",
+    "name": "aluminum oxide",
+    "note": "corundum; ruby and sapphire are coloured forms",
+    "source": "pubchem_compounds",
+    "cid": 9989226
+   },
+   {
+    "formula": "AlCl3",
+    "name": "aluminum chloride",
+    "source": "pubchem_compounds",
+    "cid": 24012
+   },
+   {
+    "formula": "Al2(SO4)3",
+    "name": "aluminum sulfate",
+    "source": "pubchem_compounds",
+    "cid": 24850
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Al2O3",
+    "name": "aluminum oxide",
+    "source": "pubchem_compounds",
+    "cid": 9989226
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "radius": {
+     "value": 39.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 53.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5359268
  },
  "amo": {
   "hyperfine": [
@@ -419,7 +574,14 @@
    "text": "No known role in the body.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "environment": [
+   {
+    "text": "In acid soils aluminium dissolves as Al³⁺, which stops root growth; it is the main factor limiting crop growth on acid soils.",
+    "source": "primary_literature",
+    "doi": "10.1146/annurev.pp.46.060195.001321"
+   }
+  ]
  },
  "history": {
   "discovered": 1825,
@@ -434,7 +596,12 @@
   ],
   "nameOrigin": "From alumina and alum (Latin alumen), the compounds in which the metal was first suspected.",
   "source": "pubchem",
-  "note": "PubChem lists the year as 'Ancient' because alum was used in antiquity; the metal itself was unknown before 1825. Lavoisier had suspected alumina to be the oxide of an unknown metal (1787)."
+  "note": "PubChem lists the year as 'Ancient' because alum was used in antiquity; the metal itself was unknown before 1825. Lavoisier had suspected alumina to be the oxide of an unknown metal (1787).",
+  "placeLocation": {
+   "lat": 55.681,
+   "lon": 12.562,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Aluminium is a light, silvery metal and the most abundant metal in Earth's crust; we meet it as drink cans, kitchen foil, window frames and aircraft skins. It looks reactive on paper, yet it barely corrodes, because a thin, transparent oxide film seals its surface within moments of exposure to air. Its radioactive isotope aluminium-26, with a half-life of about 717,000 years, was a major heat source that melted some of the first small planetary bodies of the young Solar System. The atom's single 3p electron ([Ne] 3s² 3p¹, ground term ²P°₁/₂) is easier to remove than magnesium's outer 3s electron: 578 kJ/mol against 738 kJ/mol.",

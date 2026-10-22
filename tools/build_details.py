@@ -19,6 +19,8 @@ from pathlib import Path
 
 import jsonschema
 
+import build_chemistry
+import build_physical
 import fetch_iaea
 import fetch_nist_levels
 import fetch_nist_lines
@@ -387,6 +389,23 @@ def build_colour(report: Report) -> int:
     return 1
 
 
+def build_relativity() -> int:
+    """public/data/relativity.json: where relativity changes chemistry and where the table ends (SPEC §10.5)."""
+    import curated
+
+    keep = ("Z", "topic", "text", "source", "doi", "reference")
+    doc = {
+        "schemaVersion": 1,
+        "notes": [{k: r[k] for k in keep if k in r} for r in curated.load("relativity.toml", "note")],
+        "limits": [
+            {k: r[k] for k in ("name", "Z", "text", "source")} for r in curated.load("relativity.toml", "limit")
+        ],
+    }
+    validator("RelativityFile").validate(doc)
+    dump_json(DATA_DIR / "relativity.json", doc)
+    return 1
+
+
 def build_details(report: Report | None = None) -> dict[str, int]:
     own_report = report is None
     report = report or Report()
@@ -406,6 +425,10 @@ def build_details(report: Report | None = None) -> dict[str, int]:
         counts[name] = builder(data, symbols, report)
     counts["elements"] = build_elements(load_json(DATA_DIR / "index.json"), report)
     counts["colour"] = build_colour(report)
+    counts["relativity"] = build_relativity()
+    import build_lifeandhistory
+
+    counts["worldmap"] = build_lifeandhistory.build_worldmap(report)
     if own_report and report.sections:
         # Append this step's findings to the report build.py wrote (python tools/pipeline.py runs both).
         path = TOOLS_DIR / "build-report.md"
@@ -735,26 +758,21 @@ def origin_record(row: dict | None, omitted: dict | None) -> dict:
     )
 
 
-def biology_record(row: dict | None) -> dict:
+def polarizability_record(row: dict | None) -> dict:
+    """Static dipole polarizability of the neutral atom (Schwerdtfeger & Nagle 2019), in atomic units."""
     if not row:
-        return {
-            "essentialPlant": "no",
-            "essentialHuman": "no",
-            "note": "Not known to be essential for plants or for humans.",
-        }
-    out: dict = {"essentialPlant": row.get("essential_plant", "no"), "essentialHuman": row.get("essential_human", "no")}
-    if row.get("plant_class"):
-        out["plantClass"] = row["plant_class"]
-    for side in ("plant", "human"):
-        if row.get(f"{side}_role"):
-            out[f"{side}Role"] = {
-                "text": row[f"{side}_role"],
-                "source": row[f"{side}_source"],
-                **({"doi": row[f"{side}_doi"]} if row.get(f"{side}_doi") else {}),
-            }
-    if row.get("note"):
-        out["note"] = row["note"]
-    return out
+        return missing("not_measured", "The Schwerdtfeger & Nagle table has no value for this element.")
+    return quantity(
+        row["value_au"],
+        "a.u.",
+        row["source"],
+        unc=row.get("unc_au"),
+        note="Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from "
+        "high-level calculation.",
+    )
+
+
+# biology and history records: tools/build_lifeandhistory.py (M4).
 
 
 def load_prose(z: int, symbol: str) -> dict | None:
@@ -778,28 +796,6 @@ def load_prose(z: int, symbol: str) -> dict | None:
     if not 60 <= words <= 120:
         raise ValueError(f"prose/{z}.md: {words} words (SPEC §6.2: 60–120)")
     return {"text": body, "sources": sources}
-
-
-def history_record(row: dict | None) -> dict:
-    if not row:
-        return {}
-    out: dict = {"discovered": row["discovered"]}
-    keys = {
-        "discovered_text": "discoveredText",
-        "discoverers": "discoverers",
-        "place": "place",
-        "isolated": "isolated",
-        "isolated_by": "isolatedBy",
-        "name_origin": "nameOrigin",
-        "symbol_note": "symbolNote",
-        "source": "source",
-        "doi": "doi",
-        "note": "note",
-    }
-    for k, v in keys.items():
-        if row.get(k) not in (None, "", []):
-            out[v] = row[k]
-    return out
 
 
 def build_elements(index: dict, report: Report) -> int:
@@ -846,7 +842,10 @@ def build_elements(index: dict, report: Report) -> int:
     cooling: dict[int, list] = {}
     for r in curated.load("lasercooling.toml"):
         cooling.setdefault(r["Z"], []).append(r)
-    biology = {r["Z"]: r for r in curated.load("biology.toml")}
+    import build_lifeandhistory as life
+
+    biology, biology_extra = life.load_biology(report)
+    places = life.load_places(report)
     prod_rows: dict[int, list] = {}
     for r in curated.load("production.toml"):
         prod_rows.setdefault(r["Z"], []).append(r)
@@ -861,6 +860,7 @@ def build_elements(index: dict, report: Report) -> int:
     crystal = {r["Z"]: r for r in curated.load("crystal.toml")}
     crystal_omitted = {r["Z"]: r for r in curated.load("crystal.toml", "omitted")}
     origin = {r["Z"]: r for r in curated.load("nucleosynthesis.toml")}
+    polar = {r["Z"]: r for r in curated.load("polarizability.toml")}
     origin_omitted = {r["Z"]: r for r in curated.load("nucleosynthesis.toml", "omitted")}
 
     folder = DATA_DIR / "elements"
@@ -895,6 +895,7 @@ def build_elements(index: dict, report: Report) -> int:
             "ionizationEnergies": ladder(gsie[z]) if z in gsie else {"source": "nist_gsie", "unit": "eV", "stages": []},
             "electronAffinity": e["electronAffinity"],
             "en": en,
+            "polarizability": polarizability_record(polar.get(z)),
         }
         ref_iso = e["hyperfineHeadline"].get("isotope") if "isotope" in e["hyperfineHeadline"] else None
         doc["probability"] = (
@@ -910,7 +911,9 @@ def build_elements(index: dict, report: Report) -> int:
             "production": production_record(prod_rows.get(z, [])),
             "critical": critical_record(crit.get(z)),
         }
+        doc["physical"] |= build_physical.record(e, doc["physical"])
         doc["nucleus"] = {"origin": origin_record(origin.get(z), origin_omitted.get(z))}
+        doc["chemistry"] = build_chemistry.record(z, report)
         amo = metrology.get(z, {"clocks": [], "siHistory": []})
         doc["amo"] = {
             "hyperfine": [
@@ -920,8 +923,8 @@ def build_elements(index: dict, report: Report) -> int:
             "laserCooling": [lasercooling_record(r, lines["windows"]) for r in cooling.get(z, [])],
             "siHistory": amo["siHistory"],
         }
-        doc["biology"] = biology_record(biology.get(z))
-        hist = history_record(history.get(z))
+        doc["biology"] = life.biology_record(biology.get(z), biology_extra.get(z))
+        hist = life.history_record(history.get(z), places)
         if hist:
             doc["history"] = hist
         prose = load_prose(z, e["symbol"])

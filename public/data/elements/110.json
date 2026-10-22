@@ -454,6 +454,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 32.0,
+   "unc": 3.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -495,6 +502,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac200173060959"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac200173060959"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -503,6 +557,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Darmstadtium's chemistry has never been studied in experiments: its atoms live too briefly. Everything about its reactivity is predicted."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Darmstadtium's chemistry has never been studied in experiments: its atoms live too briefly. Everything about its reactivity is predicted."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Darmstadtium's chemistry has never been studied in experiments: its atoms live too briefly. Everything about its reactivity is predicted."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; its chemistry is known only from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 135476787,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -526,7 +615,12 @@
   "symbolNote": "Temporary name: ununnilium (Uun); named darmstadtium in 2003.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac200173060959",
-  "note": "First atom detected on 9 November 1994 from nickel ions fired at lead; the 2001 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI."
+  "note": "First atom detected on 9 November 1994 from nickel ions fired at lead; the 2001 IUPAC/IUPAP report credited the Hofmann et al. collaboration at GSI.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Darmstadtium is a synthetic element in group 10, below platinum, named after the German city of Darmstadt, where the GSI laboratory detected its first atom on 9 November 1994. Producing that atom meant firing at least a billion billion nickel-62 ions at a lead-208 target over about a week; the product, darmstadtium-269, has a half-life of about 0.2 milliseconds. Heavier isotopes made since last longer, darmstadtium-281 about 12 seconds, but only small numbers of atoms have ever existed. Calculations predict the configuration [Rn] 5f¹⁴ 6d⁸ 7s², unlike platinum's 5d⁹ 6s¹: relativity draws the 7s orbital inwards and lowers its energy, so it keeps both electrons. None of this has been measured.",

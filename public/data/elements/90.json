@@ -826,6 +826,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 217.0,
+   "unc": 54.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -919,6 +926,120 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.32,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its uses are few because it is radioactive.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Strengthens magnesium alloys at high temperature, and coats tungsten filaments in electronic devices.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Thorium-232 can be turned into fissile uranium-233 in a reactor, a possible nuclear fuel.",
+    "source": "pubchem"
+   },
+   {
+    "text": "The thorium-229 nucleus has a transition low enough to be driven by a laser, the basis of experimental nuclear clocks.",
+    "source": "primary_literature",
+    "doi": "10.1038/s41586-024-07839-6"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "name": "Oxidising"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H272",
+     "text": "May intensify fire; oxidizer",
+     "share": 11.1
+    },
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 88.9
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 83.3
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 83.3
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 83.3
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure",
+     "share": 83.3
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23960,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 18,
+   "notMeetingCriteria": {
+    "share": 11.1,
+    "reports": 2,
+    "of": 18
+   },
+   "note": "Aggregated by PubChem from 18 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 11.1 % of the reports (2 of 18) say thorium does not meet the GHS hazard criteria. GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 9.6,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0003062,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -935,6 +1056,81 @@
     "agb"
    ]
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Pure thorium keeps in air, slowly darkening; the finely divided metal can ignite by itself.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Attacked only slowly by water.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Hydrochloric acid attacks it vigorously; nitric acid makes it passive; most other common acids attack it only slowly.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "ThO2",
+    "name": "thorium dioxide",
+    "note": "the glowing material of old gas mantles; the highest-melting oxide",
+    "source": "pubchem_compounds",
+    "cid": 14808
+   },
+   {
+    "formula": "ThF4",
+    "name": "thorium tetrafluoride",
+    "source": "pubchem_compounds",
+    "cid": 83680
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "ThO2",
+    "name": "thorium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 14808
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 94.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 105.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "IX",
+    "radius": {
+     "value": 109.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23960
  },
  "amo": {
   "hyperfine": [],
@@ -969,7 +1165,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Thorium-232 and its decay products",
+    "group": "1",
+    "volumes": [
+     "78",
+     "100D"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1828,
@@ -984,7 +1191,12 @@
   ],
   "nameOrigin": "After Thor, the thunder god of Norse mythology.",
   "source": "pubchem",
-  "note": "The mineral (now thorite) came from Løvøya, Norway, by way of Morten and Jens Esmark. Los Alamos dates Berzelius's identification to 1829. Lely and Hamburger's metal: Z. anorg. Chem. 87, 209 (1914; doi:10.1002/zaac.19140870114)."
+  "note": "The mineral (now thorite) came from Løvøya, Norway, by way of Morten and Jens Esmark. Los Alamos dates Berzelius's identification to 1829. Lely and Hamburger's metal: Z. anorg. Chem. 87, 209 (1914; doi:10.1002/zaac.19140870114).",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Thorium is a weakly radioactive, silvery actinide metal named after Thor, the Norse god of thunder, by Jöns Jacob Berzelius, who identified it in 1828 in a mineral from Norway. It is more than three times as abundant in Earth's crust as uranium. Its oxide has the highest melting point of any oxide, about 3300 °C, and gas-lamp mantles made with it glowed a dazzling white; modern mantles mostly use non-radioactive substitutes. Its main isotope, thorium-232, has a half-life of 14 billion years. In the atom, the two electrons outside the 7s² pair sit in 6d, giving [Rn] 6d² 7s² rather than the Aufbau prediction 5f² 7s², and a ³F₂ ground term.",

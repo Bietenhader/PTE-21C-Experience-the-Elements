@@ -163,6 +163,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 3.74,
+   "unc": 0.08,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -282,6 +289,102 @@
    "source": "eu_crm",
    "viaMineral": true,
    "note": "Fluorspar (fluorite, CaF2) is a mineral and the main industrial source of fluorine (via hydrofluoric acid); listed as the mineral."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 31.304,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of F₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "Fluorspar is turned into hydrogen fluoride, the raw material for virtually all fluorine chemicals, above all refrigerants and fluoropolymers.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Fluorine chemicals are needed to make aluminium and to process uranium; hydrogen fluoride cleans and etches silicon chips.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Fluoride in toothpaste and drinking water helps prevent tooth decay.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Fluorine-18, attached to glucose, is a tracer for PET scans of organs, bones and the brain.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "name": "Oxidising"
+    },
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    },
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H270",
+     "text": "May cause or intensify fire; oxidizer"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 24524,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 585.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1.3,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.7424,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 37.1429,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -294,6 +397,78 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.501, massive_stars 0.499); quantised to 0.05. Stack height 48 px. Cross-check with the paper's text: '51% of F ... produced by AGB stars' (figure reading 0.501)."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "F₂ molecules with an unusually weak F–F bond, one reason fluorine is so reactive.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "The most reactive element: it attacks almost everything, and most substances burn in it.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts with water, even ice, to give hydrofluoric acid, oxygen and ozone, sometimes explosively.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Oxidises what it meets; it is not dissolved by acids but reacts with them.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HF",
+    "name": "hydrogen fluoride",
+    "source": "pubchem_compounds",
+    "cid": 14917
+   },
+   {
+    "formula": "CaF2",
+    "name": "calcium fluoride",
+    "note": "the mineral fluorite",
+    "source": "pubchem_compounds",
+    "cid": 84512
+   },
+   {
+    "formula": "SF6",
+    "name": "sulfur hexafluoride",
+    "source": "pubchem_compounds",
+    "cid": 17358
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": -1,
+    "formula": "NaF",
+    "name": "sodium fluoride",
+    "source": "pubchem_compounds",
+    "cid": 5235
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -1,
+    "coordination": "IV",
+    "radius": {
+     "value": 131.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": -1,
+    "coordination": "VI",
+    "radius": {
+     "value": 133.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 24524
  },
  "amo": {
   "hyperfine": [],
@@ -308,7 +483,27 @@
    "text": "Strengthens tooth enamel against decay; EFSA sets an adequate intake for this reason but does not consider it essential.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "isotopeUses": [
+   {
+    "A": 18,
+    "field": "medicine",
+    "text": "Fluorine-18 in a glucose analogue (FDG), first made in 1978 to measure how much sugar the brain uses: cells take it up like glucose but cannot use it further, so it collects where they are most active, which a PET scanner then sees.",
+    "source": "primary_literature",
+    "doi": "10.1002/jlcr.2580140204"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Fluorides (inorganic, used in drinking-water)",
+    "group": "3",
+    "volumes": [
+     "27",
+     "Sup 7"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1771,
@@ -323,7 +518,12 @@
   ],
   "nameOrigin": "From fluorspar (fluorite), whose name comes from the Latin fluere, 'to flow', because miners added the mineral to ores to help them melt.",
   "source": "pubchem",
-  "note": "PubChem's YearDiscovered (1670) is the date of the earliest known use of a fluorine compound to etch glass, not of the element. Los Alamos prints the isolation year as 1866, a slip for 1886. Moissan isolated the gas by electrolysis in a platinum apparatus."
+  "note": "PubChem's YearDiscovered (1670) is the date of the earliest known use of a fluorine compound to etch glass, not of the element. Los Alamos prints the isolation year as 1866, a slip for 1886. Moissan isolated the gas by electrolysis in a platinum apparatus.",
+  "placeLocation": {
+   "lat": 59.86,
+   "lon": 17.64,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Fluorine is a pale-yellow, poisonous gas and the most reactive of all elements; we meet it tamed, as fluoride in toothpaste, in non-stick pan coatings and in the mineral fluorite. Fluorite often glows under ultraviolet light, and it lent its name both to the element and to the word 'fluorescence'. A fluorine atom, [He] 2s² 2p⁵, is one electron short of a closed shell (ground term ²P°₃/₂), and it pulls on shared electrons harder than any other atom, with the highest Pauling electronegativity, 3.98. Its only stable isotope, fluorine-19, has nuclear spin 1/2, which makes fluorine-containing drugs easy to follow by NMR.",

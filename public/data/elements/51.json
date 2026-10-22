@@ -573,6 +573,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 43.0,
+   "unc": 2.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -684,6 +691,119 @@
    "strategic": false,
    "listedAs": "antimony",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.23,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Metal products including flame retardants take 49 % of U.S. use.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Antimony-hardened lead for lead-acid batteries and ammunition (40 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ceramics, glass and rubber (11 %).",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed",
+     "share": 18.2
+    },
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 23.4
+    },
+    {
+     "code": "H332",
+     "text": "Harmful if inhaled",
+     "share": 26.9
+    },
+    {
+     "code": "H351",
+     "text": "Suspected of causing cancer",
+     "share": 31.8
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure",
+     "share": 20.5
+    },
+    {
+     "code": "H411",
+     "text": "Toxic to aquatic life with long lasting effects",
+     "share": 38.6
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5354495,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 748,
+   "notMeetingCriteria": {
+    "share": 18.7,
+    "reports": 140,
+    "of": 748
+   },
+   "note": "Aggregated by PubChem from 748 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 18.7 % of the reports (140 of 748) say antimony does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.2,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.00024,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.001263,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -697,6 +817,88 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.250, massive_stars 0.303, neutron_star_mergers 0.447); quantised to 0.05. Stack height 72 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent layers",
+   "note": "Puckered layers like grey arsenic; a brittle semimetal.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not tarnish in dry air and only slowly in moist air.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not affected by cold dilute acids; attacked by hot concentrated sulfuric acid and readily by aqua regia.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Sb2S3",
+    "name": "antimony trisulfide",
+    "note": "the ore stibnite, the 'kohl' of antiquity",
+    "source": "pubchem_compounds",
+    "cid": 16685273
+   },
+   {
+    "formula": "Sb2O3",
+    "name": "antimony trioxide",
+    "note": "a flame retardant",
+    "source": "pubchem_compounds",
+    "cid": 14794
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "SbCl5",
+    "name": "antimony pentachloride",
+    "source": "pubchem_compounds",
+    "cid": 24294
+   },
+   {
+    "state": 3,
+    "formula": "Sb2O3",
+    "name": "antimony trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14794
+   },
+   {
+    "state": -3,
+    "formula": "SbH3",
+    "name": "stibine",
+    "source": "pubchem_compounds",
+    "cid": 9359
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 60.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 5354495
  },
  "amo": {
   "hyperfine": [
@@ -764,7 +966,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Trivalent antimony",
+    "group": "2A",
+    "volumes": [
+     "47",
+     "131"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

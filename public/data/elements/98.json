@@ -635,6 +635,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 122.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -676,6 +683,55 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Californium-252 is a strong, compact neutron source.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Its neutrons reveal the composition of ores, coal and cement (neutron activation), and find water and oil layers in wells.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Occasionally used to treat cancer with neutrons.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental californium (CID 23997). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -684,6 +740,54 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises slowly in air at room temperature, faster in moist air or when warmed.",
+    "source": "hsdb"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only milligram amounts of californium metal exist; its reaction with water is not described."
+   },
+   "acids": {
+    "text": "Dissolves in mineral acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Cf2O3",
+    "name": "californium oxide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Cf2O3",
+    "name": "californium oxide",
+    "source": "greenwood1997"
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 95.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23997
  },
  "amo": {
   "hyperfine": [],
@@ -707,7 +811,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After California, the state and the university where it was made.",
   "source": "pubchem",
-  "note": "Made by helium-ion bombardment of microgram amounts of curium-242 in the Berkeley 60-inch cyclotron."
+  "note": "Made by helium-ion bombardment of microgram amounts of curium-242 in the Berkeley 60-inch cyclotron.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Californium is a synthetic actinide metal, made at Berkeley in 1950 by striking curium-242 with helium ions, and named after the state. Its isotope californium-252, with a half-life of about 2.6 years, is an astonishingly strong neutron emitter: a single microgram releases around 170 million neutrons every minute, which makes it a compact source for locating water and oil layers in boreholes and for detecting gold and silver in ores. The atom's ten 5f electrons, [Rn] 5f¹⁰ 7s², form a ⁵I₈ ground level; its J = 8 equals that of dysprosium, the lanthanide above it, and no element has a larger total angular momentum in its ground state.",

@@ -520,6 +520,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 66.0,
+   "unc": 10.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -613,6 +620,80 @@
    "listedAs": "platinum group metals",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.98,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Catalysts, above all in car catalytic converters.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Electrical components.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Hardens platinum for thermocouples, laboratory crucibles and the nozzles through which glass fibre is drawn.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 15.3
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23948,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 294,
+   "notMeetingCriteria": {
+    "share": 81.3,
+    "reports": 239,
+    "of": 294
+   },
+   "note": "Aggregated by PubChem from 294 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 81.3 % of the reports (239 of 294) say rhodium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "value": 0.001072,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -626,6 +707,61 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.171, massive_stars 0.737, neutron_star_mergers 0.093); quantised to 0.05. Stack height 74 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air at room temperature; at red heat it slowly oxidises to rhodium(III) oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Compact rhodium resists every acid, even aqua regia; only the finely divided metal dissolves in aqua regia.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "RhCl3",
+    "name": "rhodium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 24872
+   },
+   {
+    "formula": "Rh2O3",
+    "name": "rhodium(III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 159409
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "RhCl3",
+    "name": "rhodium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 24872
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 66.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23948
  },
  "amo": {
   "hyperfine": [],
@@ -646,7 +782,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Greek rhodon, 'rose', for the rose-red colour of its salts in solution.",
   "source": "pubchem",
-  "note": "Found in South American platinum ore just after palladium; Los Alamos dates the work to 1803–1804."
+  "note": "Found in South American platinum ore just after palladium; Los Alamos dates the work to 1803–1804.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Rhodium is a rare, hard, highly reflective platinum-group metal. Most of it goes into the catalytic converters of cars, where it helps turn nitrogen oxides into harmless nitrogen, and it is electroplated onto white-gold jewellery for a bright finish that does not tarnish. William Hyde Wollaston found it in 1803 and named it after the Greek for rose, for the rose-red colour of its salts. Its electrons defy the simple filling rule: the ground state is [Kr] 4d⁸ 5s¹ rather than 4d⁷ 5s². Its only stable isotope, rhodium-103, has nuclear spin 1/2 but a tiny magnetic moment, making it one of the hardest nuclei to detect by NMR.",

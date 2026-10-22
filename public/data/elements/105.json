@@ -466,6 +466,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 42.0,
+   "unc": 4.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -507,6 +514,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -515,6 +569,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Dubnium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Dubnium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Dubnium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only single molecules have been studied, in fast gas-phase and solution experiments."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951718,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -539,7 +628,12 @@
   "symbolNote": "Berkeley proposed hahnium (Ha) and Dubna nielsbohrium (Ns); IUPAC proposed joliotium (Jl) in 1994 before adopting dubnium (Db) in 1997. Temporary name: unnilpentium (Unp).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "The 1993 IUPAC/IUPAP report found Berkeley's and Dubna's 1970 reports practically simultaneous and of equal weight, so credit is shared; PubChem gives 1967, the year of Dubna's first report."
+  "note": "The 1993 IUPAC/IUPAP report found Berkeley's and Dubna's 1970 reports practically simultaneous and of equal weight, so credit is shared; PubChem gives 1967, the year of Dubna's first report.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Dubnium is a synthetic element in group 5, below tantalum, named after the Russian town of Dubna, whose laboratory reported it in 1967; a Berkeley team claimed it independently in 1970. The rivalry fed years of argument over names, and the Berkeley proposal, hahnium, was eventually abandoned. Only a few atoms are made in any experiment, yet dubnium-268 is remarkably durable for so heavy a nucleus: its half-life of about 28 hours is the longest of any known isotope beyond lawrencium. Theory predicts the outer configuration [Rn] 5f¹⁴ 6d³ 7s² and a ⁴F₃/₂ ground level, the same pattern as tantalum, but neither has been measured.",

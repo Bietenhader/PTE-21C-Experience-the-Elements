@@ -318,6 +318,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 87.0,
+   "unc": 10.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -426,6 +433,78 @@
    "listedAs": "titanium metal",
    "source": "eu_crm",
    "note": "Titanium metal only; the 2023 study assessed 'titanium' (minerals) and 'titanium metal' separately, and only titanium metal is critical."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.06,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Most titanium ore becomes titanium dioxide, the white pigment of paints, plastics and paper.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Titanium metal is used mainly in aerospace.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also in armour, chemical plants, ships' hardware, medical implants and power generation.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "α-titanium",
+    "note": "Hexagonal close-packed: the form up to about 880 °C.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "β-titanium",
+    "note": "Body-centred cubic: the form at higher temperature, up to the melting point.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 23963,
+   "source": "pubchem_ghs",
+   "reports": 808,
+   "notClassified": true,
+   "note": "Aggregated by PubChem from 808 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. The reports say titanium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 5650.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 3.554,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -440,6 +519,114 @@
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.079, massive_stars 0.537, white_dwarfs 0.384); quantised to 0.05. Stack height 43 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
   }
  },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Protected by its oxide film at ordinary temperatures; combines with oxygen at red heat, and titanium dust is flammable.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water at room temperature; it decomposes steam only at 700–800 °C.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Attacked by acids only on heating; nitric acid oxidises it.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "TiO2",
+    "name": "titanium dioxide",
+    "note": "the white pigment in paints and sunscreens",
+    "source": "pubchem_compounds",
+    "cid": 26042
+   },
+   {
+    "formula": "TiCl4",
+    "name": "titanium tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 24193
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "TiO2",
+    "name": "titanium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 26042
+   },
+   {
+    "state": 3,
+    "formula": "TiCl3",
+    "name": "titanium trichloride",
+    "source": "pubchem_compounds",
+    "cid": 62646
+   },
+   {
+    "state": 2,
+    "formula": "TiO",
+    "name": "titanium monoxide",
+    "source": "pubchem_compounds",
+    "cid": 61685
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 67.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 42.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 60.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 74.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23963
+ },
  "amo": {
   "hyperfine": [],
   "clocks": [],
@@ -449,7 +636,18 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Titanium dioxide",
+    "group": "2B",
+    "volumes": [
+     "47",
+     "93"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1791,

@@ -451,6 +451,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 319.8,
+   "unc": 0.3,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -546,6 +553,95 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 31.06,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Specialty glass is the leading market, including glass for fibre-optic networks.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Rubidium atomic clocks keep telecommunication networks and satellite navigation in step.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ultracold rubidium atoms are used in research, including work towards quantum computers.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Rubidium-82 can trace blood flow in PET scans.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously",
+     "share": 98.8
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage",
+     "share": 91.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5357696,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 81,
+   "notMeetingCriteria": {
+    "share": 1.2,
+    "reports": 1,
+    "of": 81
+   },
+   "note": "Aggregated by PubChem from 81 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 1.2 % of the reports (1 of 81) say rubidium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 90.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.12,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.01855,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -559,6 +655,70 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.258, massive_stars 0.635, neutron_star_mergers 0.107); quantised to 0.05. Stack height 71 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes at once in air and can catch fire by itself.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Reacts violently with water, giving rubidium hydroxide and hydrogen, which the heat usually ignites.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "RbCl",
+    "name": "rubidium chloride",
+    "source": "pubchem_compounds",
+    "cid": 62683
+   },
+   {
+    "formula": "RbOH",
+    "name": "rubidium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 62393
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "RbCl",
+    "name": "rubidium chloride",
+    "source": "pubchem_compounds",
+    "cid": 62683
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 152.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 161.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5357696
  },
  "amo": {
   "hyperfine": [
@@ -746,7 +906,12 @@
   ],
   "nameOrigin": "From the Latin rubidus, 'deep red', for the red lines in its spectrum.",
   "source": "pubchem",
-  "note": "Found with the spectroscope in the mineral lepidolite."
+  "note": "Found with the spectroscope in the mineral lepidolite.",
+  "placeLocation": {
+   "lat": 49.42,
+   "lon": 8.7,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Rubidium is a soft, silvery alkali metal that melts at 312.46 K (about 39 °C) and bursts into flame in air. It was discovered in 1861 by examining with a prism the light of a mineral heated in a flame, and named from the Latin for 'deep red' after two red lines in its spectrum. Over a quarter of natural rubidium, 27.83 %, is radioactive rubidium-87, decaying so slowly, with a half-life of 4.97 × 10¹⁰ years, that geologists use it to date ancient rocks. The atom, [Kr] 5s¹ (ground term ²S₁/₂), has one outer electron whose two hyperfine levels set the tick of rubidium atomic clocks, and rubidium-87 formed the first Bose–Einstein condensate.",

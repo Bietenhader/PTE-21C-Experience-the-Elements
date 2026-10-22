@@ -165,6 +165,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 2.6611,
+   "unc": 3e-05,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -249,6 +256,78 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 20.786,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Lamps and signs take about half of neon use (53 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Semiconductor manufacture takes most of the rest (32 %); plasma displays take 12 %.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated",
+     "share": 62.6
+    },
+    {
+     "code": "H281",
+     "text": "Contains refrigerated gas; may cause cryogenic burns or injury",
+     "share": 37.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23935,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 430,
+   "note": "Aggregated by PubChem from 430 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.005,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.00012,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 2440.0,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -261,6 +340,34 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.142, massive_stars 0.858); quantised to 0.05. Stack height 77 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Inert: no neutral compound is known.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "No stable neutral compound is known."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 23935
  },
  "amo": {
   "hyperfine": [],
@@ -290,7 +397,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Cooled in the metastable 3s [3/2]2 (Paschen 1s5) state. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
+    "note": "Cooled in the metastable 3s [3/2]2 (Paschen 1s5) state. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
    }
   ],
   "siHistory": [
@@ -318,7 +425,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Greek neos, 'new'.",
   "source": "pubchem",
-  "note": "Identified by its bright spectral lines in a fraction of liquefied air, shortly after krypton."
+  "note": "Identified by its bright spectral lines in a fraction of liquefied air, shortly after krypton.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Neon is a noble gas present in air only in traces and obtained by distilling liquefied air. Its fame comes from glowing signs: an electric current through neon at low pressure gives a warm red-orange light, and only that colour is true neon, the other shades coming from different gases or from coatings on the tube. Neon's ten electrons fill the first two shells completely ([He] 2s² 2p⁶, ground term ¹S₀), and only helium holds its outermost electron more tightly, with neon's first ionisation energy at 2081 kJ/mol. No stable chemical compound of neon is known.",

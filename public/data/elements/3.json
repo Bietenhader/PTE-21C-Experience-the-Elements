@@ -110,6 +110,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 164.1125,
+   "unc": 0.0005,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -215,6 +222,83 @@
    "strategic": true,
    "listedAs": "lithium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.86,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Rechargeable batteries take almost all of it: 88 % of world use, for electric vehicles, grid storage, electronics and power tools.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Lithium minerals go into ceramics and glass (4 % of world use).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Lubricating greases (2 %); smaller uses are air treatment, fluxes for casting steel, and medicine.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 3028194,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 20.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.18,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0119,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -223,6 +307,88 @@
    "reason": "not_measured",
    "note": "The paper calls its lithium model 'very uncertain' and leaves out cosmic rays and novae, which make some lithium; its box in Fig. 39 is full to the top, so no split is quoted."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stays bright in dry air; in moist air its surface slowly gathers a film of hydroxide, carbonate and nitride.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts with water, giving lithium hydroxide and hydrogen — the least vigorously of the alkali metals.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with mineral acids.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Li2CO3",
+    "name": "lithium carbonate",
+    "note": "used in batteries, glass and as a mood-stabilising drug",
+    "source": "pubchem_compounds",
+    "cid": 11125
+   },
+   {
+    "formula": "LiOH",
+    "name": "lithium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 3939
+   },
+   {
+    "formula": "Li3N",
+    "name": "lithium nitride",
+    "note": "lithium is the only alkali metal that reacts with nitrogen at room temperature",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "LiCl",
+    "name": "lithium chloride",
+    "source": "pubchem_compounds",
+    "cid": 433294
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 59.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 92.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 3028194
  },
  "amo": {
   "hyperfine": [
@@ -347,7 +513,12 @@
   "place": "Stockholm, Sweden",
   "nameOrigin": "From the Greek lithos, 'stone', since it was first found in a mineral (petalite).",
   "source": "pubchem",
-  "note": "Arfwedson worked in Berzelius's Stockholm laboratory. CIAAW gives 1818. Sources differ on the first isolation of the metal: Jefferson Lab credits electrolysis by Brande and Davy, while CIAAW names Bunsen and Matthiessen (1855), who made it in quantity."
+  "note": "Arfwedson worked in Berzelius's Stockholm laboratory. CIAAW gives 1818. Sources differ on the first isolation of the metal: Jefferson Lab credits electrolysis by Brande and Davy, while CIAAW names Bunsen and Matthiessen (1855), who made it in quantity.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Lithium is the lightest metal, a soft, silvery alkali metal that tarnishes quickly in moist air; today we meet it mainly inside the rechargeable batteries of phones and electric cars. With a density of only 0.534 g/cm³ it is the least dense solid element and would float on water, although it reacts with the water as it does so. Its configuration [He] 2s¹ leaves one outer electron alone in the 2s orbital (ground term ²S₁/₂). When that electron is lifted to 2p and falls back, it emits the deep red line near 670.8 nm that colours lithium flames crimson.",

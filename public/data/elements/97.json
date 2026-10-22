@@ -629,6 +629,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 125.0,
+   "unc": 25.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -670,6 +677,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Berkelium-249 was the target from which tennessine (element 117) was first made, by bombarding it with calcium-48.",
+    "source": "iupac_discovery",
+    "doi": "10.1515/pac-2015-0502"
+   },
+   {
+    "text": "It has no use outside research.",
+    "source": "iupac_discovery",
+    "doi": "10.1515/pac-2015-0502"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental berkelium (CID 23971). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -678,6 +732,81 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises in air; only milligram amounts have been handled.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only milligram amounts of berkelium metal have ever been made; its reaction with water is not described."
+   },
+   "acids": {
+    "text": "Dissolves in mineral acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "BkO2",
+    "name": "berkelium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 165360219
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "BkO2",
+    "name": "berkelium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 165360219
+   },
+   {
+    "state": 3,
+    "formula": "BkCl3",
+    "name": "berkelium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 21149391
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 96.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 83.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 93.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23971
  },
  "amo": {
   "hyperfine": [],
@@ -700,7 +829,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After Berkeley, California, where it was made, in the way terbium was named after Ytterby.",
   "source": "pubchem",
-  "note": "Made in December 1949 by alpha bombardment of americium-241 and published in 1950 (Phys. Rev. 77, 838). Jefferson Lab also lists Kenneth Street Jr., who is not an author of the discovery paper."
+  "note": "Made in December 1949 by alpha bombardment of americium-241 and published in 1950 (Phys. Rev. 77, 838). Jefferson Lab also lists Kenneth Street Jr., who is not an author of the discovery paper.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Berkelium is a synthetic actinide metal, first made in December 1949 at Berkeley, California, by firing alpha particles at americium-241, and named after the city. It is so scarce that the first compound anyone could actually see, prepared in 1962, weighed about three billionths of a gram. Its chief use today is as raw material for heavier elements: berkelium-249, which has a half-life of 330 days, was the target from which tennessine was made. The atom's nine 5f electrons, in [Rn] 5f⁹ 7s², leave five spins unpaired and give a ⁶H°₁₅/₂ ground term, whose total angular momentum, J = 15/2, is among the largest of any element.",

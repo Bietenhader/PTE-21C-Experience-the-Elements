@@ -781,6 +781,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 62.0,
+   "unc": 3.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -885,6 +892,82 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.48,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Superalloys for the hot turbine parts of jet engines and gas turbines (about 80 % of use).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Platinum–rhenium catalysts that turn petroleum into high-octane petrol (15 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Thermocouples, electrical contacts and filaments.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 63.9
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23947,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 393,
+   "notMeetingCriteria": {
+    "share": 34.9,
+    "reports": 137,
+    "of": 393
+   },
+   "note": "Aggregated by PubChem from 393 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 34.9 % of the reports (137 of 393) say rhenium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.0007,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 4e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0003363,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -898,6 +981,102 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.169, massive_stars 0.711, neutron_star_mergers 0.120); quantised to 0.05. Stack height 78 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air at room temperature; oxidises to the volatile heptoxide when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Resists hydrochloric acid; dissolves in nitric acid and hot concentrated sulfuric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Re2O7",
+    "name": "rhenium heptoxide",
+    "source": "pubchem_compounds",
+    "cid": 123106
+   },
+   {
+    "formula": "KReO4",
+    "name": "potassium perrhenate",
+    "source": "pubchem_compounds",
+    "cid": 3661560
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 7,
+    "formula": "Re2O7",
+    "name": "rhenium heptoxide",
+    "source": "pubchem_compounds",
+    "cid": 123106
+   },
+   {
+    "state": 6,
+    "formula": "ReO3",
+    "name": "rhenium trioxide",
+    "source": "pubchem_compounds",
+    "cid": 102110
+   },
+   {
+    "state": 4,
+    "formula": "ReO2",
+    "name": "rhenium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 82847
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 63.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 55.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "IV",
+    "radius": {
+     "value": 38.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "VI",
+    "radius": {
+     "value": 53.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23947
  },
  "amo": {
   "hyperfine": [],
@@ -921,7 +1100,12 @@
   "isolated": 1928,
   "nameOrigin": "From Rhenus, the Latin name of the Rhine.",
   "source": "pubchem",
-  "note": "Detected by X-ray spectroscopy in platinum ores and columbite; in 1928 about 1 g was won from some 660 kg of molybdenite (Jefferson Lab names Noddack and Berg for this step)."
+  "note": "Detected by X-ray spectroscopy in platinum ores and columbite; in 1928 about 1 g was won from some 660 kg of molybdenite (Jefferson Lab names Noddack and Berg for this step).",
+  "placeLocation": {
+   "lat": 52.524,
+   "lon": 13.4,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Rhenium is one of the rarest elements in Earth’s crust, a dense, silvery transition metal recovered mainly from the flue dust of molybdenum roasting. Discovered in 1925 and named after the river Rhine, it was the last element with a stable isotope to be found. Most of it now goes into nickel superalloys for jet-engine turbine blades, which must endure intense heat for years. Curiously, most natural rhenium is radioactive: rhenium-187, about 63 per cent of the total, decays to osmium-187 with a half-life of 4.33 × 10¹⁰ years, a clock used to date meteorites and ore deposits. Only rhenium-185 is stable.",

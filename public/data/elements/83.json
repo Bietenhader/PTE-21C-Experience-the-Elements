@@ -846,6 +846,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 48.0,
+   "unc": 4.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -957,6 +964,66 @@
    "strategic": true,
    "listedAs": "bismuth",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.52,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Mostly as chemicals: stomach remedies (bismuth subsalicylate), cosmetics and pigments.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "A non-toxic replacement for lead in brass plumbing fittings, solders and free-machining steels.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Low-melting bismuth alloys trigger fire sprinklers.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 5359367,
+   "source": "pubchem_ghs",
+   "reports": 382,
+   "notClassified": true,
+   "note": "Aggregated by PubChem from 382 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. The reports say bismuth does not meet the GHS hazard criteria. GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.0085,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 2e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0009064,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -970,6 +1037,89 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.458, massive_stars 0.484, neutron_star_mergers 0.058); quantised to 0.05. Stack height 61 px. Bi box: the model stack at t = 9.2 Gyr lies well below the X/Xsun = 1 line."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "Puckered layers like antimony; a brittle metal that conducts electricity poorly.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidised only on the surface in air, often turning iridescent; heated in air it burns to bismuth trioxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water at room temperature.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in nitric acid and hot concentrated sulfuric acid; hardly attacked by hydrochloric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Bi2O3",
+    "name": "bismuth trioxide",
+    "source": "pubchem_compounds",
+    "cid": 160977
+   },
+   {
+    "formula": "BiOCl",
+    "name": "bismuth oxychloride",
+    "note": "a pearly pigment in cosmetics",
+    "source": "pubchem_compounds",
+    "cid": 173065887
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "NaBiO3",
+    "name": "sodium bismuthate",
+    "source": "pubchem_compounds",
+    "cid": 4063671
+   },
+   {
+    "state": 3,
+    "formula": "Bi2O3",
+    "name": "bismuth trioxide",
+    "source": "pubchem_compounds",
+    "cid": 160977
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 103.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 117.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 5,
+    "coordination": "VI",
+    "radius": {
+     "value": 76.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5359367
  },
  "amo": {
   "hyperfine": [],
@@ -990,7 +1140,12 @@
   "place": "Paris, France",
   "nameOrigin": "From the German Wismut (Latinized bisemutum), a miners' word of uncertain origin, possibly from weisse Masse, 'white mass'.",
   "source": "pubchem",
-  "note": "The metal was handled long before but confused with tin and lead; Geoffroy the Younger showed that it is distinct from lead."
+  "note": "The metal was handled long before but confused with tin and lead; Geoffroy the Younger showed that it is distinct from lead.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Bismuth is a brittle, silvery metal with a faint pink tinge, used in low-melting alloys for fire sprinklers and fuses and, as its salts, in remedies for upset stomachs. Like water, it expands as it freezes, by about 3 per cent. It was long counted as the heaviest stable element, but its only natural isotope, bismuth-209, does decay, emitting an alpha particle with a half-life of about 2 × 10¹⁹ years, vastly longer than the age of the universe. The nucleus has 126 neutrons, a magic number, and spin 9/2, while the atom's three 6p electrons align their spins to give a ⁴S°₃/₂ ground term.",

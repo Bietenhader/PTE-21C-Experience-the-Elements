@@ -9,11 +9,10 @@ A quantum-aware, photographic periodic table for the web. Every element gets its
 its nucleus and its place in the physics of measurement — and **every number on screen has a source**. Where
 nothing has been measured, the table says so and says why, instead of showing a plausible guess.
 
-> **Status: milestone M3 (sheet and panels, batch 1).** All 118 elements from real, sourced data, in four
-> layouts that morph into one another, with trend arrows, heatmaps and maps, search, hover cards, pinch-zoom,
-> credited photographs and an About page. Four of the eleven panels of the element sheet are filled in —
-> orbitals in 3D, ionization and electronegativity, spectrum and energy levels, nucleus and isotopes; the
-> other seven follow in M4. See [STATUS.md](STATUS.md).
+> **Status: milestone M4 (panels, batch 2).** All 118 elements from real, sourced data, in four layouts that
+> morph into one another, with trend arrows, heatmaps and maps, search, hover cards, pinch-zoom, credited
+> photographs and an About page. All eleven panels of the element sheet are filled in. Next is M5, the
+> v0.1.0 release. See [STATUS.md](STATUS.md).
 
 ![The four layouts morphing into one another](docs/media/m1-morph.webp)
 
@@ -24,6 +23,10 @@ nothing has been measured, the table says so and says why, instead of showing a 
 | Orbitals of gadolinium | The shell stack: 4f inside 6s | Phone |
 |---|---|---|
 | ![The orbital gallery of gadolinium](docs/screenshots/m3-desktop-orbitals.png) | ![All radial distributions of gadolinium on one axis](docs/screenshots/m3-desktop-shell-stack.png) | ![The orbital gallery on a phone](docs/screenshots/m3-phone-orbitals.png) |
+
+| Hund's rules for iron, step by step | Caesium's hyperfine levels | Phone: why gold is yellow |
+|---|---|---|
+| ![The mathematical panel of iron](docs/screenshots/m4-desktop-math.png) | ![The AMO panel of caesium](docs/screenshots/m4-desktop-amo.png) | ![The relativity notes on a phone](docs/screenshots/m4-phone-math.png) |
 
 ## Using it
 
@@ -45,6 +48,21 @@ nothing has been measured, the table says so and says why, instead of showing a 
   - *Spectrum & energy levels* — the visible lines in true colour, the strongest lines, a Grotrian diagram.
   - *Nucleus & isotopes* — every isotope by half-life and decay, a survival calculator, binding energy,
     cosmic origin.
+  - *Probability & statistics* — where the electron is likely to be, bosons and fermions, the speeds of a gas
+    of the atoms at any temperature, the isotope mix, and how uncertainties are written.
+  - *Physical & engineering* — phase, density, melting and boiling points, heat capacity, the crystal's unit
+    cell in 3D, allotropes, abundance, production and price, uses and GHS hazards.
+  - *Mathematical & theoretical* — every valence electron's quantum numbers, Hund's rules worked step by step
+    next to the measured term, the Landé factor, Slater's screening arithmetic, Aufbau anomalies explained,
+    and how fast the 1s electron moves (relativity).
+  - *AMO & metrology* — hyperfine structure, nuclear moments, atomic clocks, laser cooling with its computed
+    limits, and the timeline of the second.
+  - *Chemistry & bonding* — oxidation states with an example compound each, ionic, covalent and van der
+    Waals radii, electronegativity, bonding, well-known compounds and reactions with air, water and acids.
+  - *Biology & ecology* — whether plants and people need the element, how much is in the body, toxicity,
+    IARC groups, soils and food webs, and isotopes used in biology and medicine.
+  - *History & naming* — the discovery, its place on a world map, a timeline of all 118 discoveries, and
+    where the name and symbol come from.
 
   Every chart has "Show as table"; every source label opens its citation.
 - **Keyboard:** Tab follows Z, arrow keys move across the table, Enter opens, Esc closes, `/` search, `L`

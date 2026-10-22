@@ -1,118 +1,141 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M3 — Sheet and panels, batch 1 · **ready for Fin's review and design review**
+**Current milestone:** M4 — Panels, batch 2 · **ready for Fin's review (and his review of `biology.toml`)**
 **Last updated:** 2026-10-22
-**Next:** M4 (panels batch 2: probability, physical, mathematical, AMO, materials, biology, history), after
-Fin's review of M3.
+**Next:** M5 — release v0.1.0 (README with screenshots, About page, CHANGELOG, GitHub Release), after Fin's
+review of M4.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
-## For Fin: what to look at (M3)
+## For Fin: what to look at (M4)
 
-Open any element and use the tabs at the top of its sheet. Four panels are now filled in:
+All eleven tabs of an element's sheet are now filled in. The seven new ones, with a good element to try:
 
-1. **Orbitals** — a small 3D picture of every electron shell the atom has (iron has 7, oganesson 19), the
-   outer ones outlined in yellow. Click a picture to see it large below: drag it to turn it, choose the other
-   orientations (p_x, p_y, p_z …), switch to the "complex" view, show where the wave is zero (nodal
-   surfaces) or a cross-section. Further down: the **shell stack** (every shell's size on one axis — this is
-   where you see that in gadolinium the 4f shell sits deep inside the 6s shell) and a table of the numbers.
-   A grey note at the top says honestly which approximation this is.
-   *Try:* `#/Gd/orbitals`, `#/Og/orbitals`.
-2. **Electromagnetic & ionization** — the energy to pull off each electron in turn (the big jumps are
-   closed shells), electron affinity, three electronegativity scales, and where the element sits on the
-   sawtooth of all elements. *Try:* `#/Na/em`.
-3. **Spectrum & energy levels** — the coloured lines the atom gives off, its strongest lines, and a diagram of
-   its energy levels with the laser-cooling and clock transitions marked. *Try:* `#/Sr/spectrum`, `#/Hg/spectrum`.
-4. **Nucleus & isotopes** — every known isotope with its half-life, how the radioactive ones decay (with a
-   little calculator: "what is the chance one nucleus survives 1000 years?"), how tightly the nucleus is
-   bound, and where in the universe the element was made. *Try:* `#/U/nucleus`, `#/Th/nucleus`.
+1. **Probability & statistics** — where the electron probably is (a curve and a slider: "within this radius
+   the 5s electron is inside with probability 40 %"), whether each isotope is a boson or a fermion, how fast
+   the atoms of a gas move at any temperature (slide down to the laser-cooling limits), the isotope mix, and
+   what the "(2)" after a number means. *Try:* `#/Rb/probability`.
+2. **Physical & engineering** — density, melting and boiling points, heat capacity, the crystal's unit cell in
+   3D (drag it to turn it), allotropes, how common the element is in rock, sea water, the Solar System and
+   your body, world production and price, uses, and the GHS hazard label. *Try:* `#/Fe/physical`,
+   `#/C/physical`.
+3. **Mathematical & theoretical** — each outer electron's four quantum numbers, Hund's rules worked step by
+   step next to the term NIST measured (they agree for every element except cerium, and the panel says so),
+   Slater's screening arithmetic, why some configurations break the filling rule, and how fast gold's inner
+   electron moves (58 % of light speed — why gold is yellow). *Try:* `#/Fe/math`, `#/Au/math`.
+4. **AMO & metrology** — the hyperfine levels (caesium's define the second), nuclear moments, atomic clocks,
+   laser cooling with its temperature limits, and the history of the second. *Try:* `#/Cs/amo`, `#/Th/amo`,
+   `#/He/amo` (helium has no hyperfine structure, and it says why).
+5. **Chemistry & bonding** — oxidation states with an example compound for each, a size ladder of the ion and
+   atom, electronegativity, bonding, well-known compounds and how the element reacts with air, water and
+   acids. *Try:* `#/Fe/chemistry`, `#/Og/chemistry`.
+6. **Biology & ecology** — whether plants and people need the element, how much is in a body, toxicity,
+   cancer classifications (IARC), soils and food webs, and isotopes used in biology and medicine.
+   *Try:* `#/P/biology`, `#/Cs/biology`.
+7. **History & naming** — the discovery, its place on a world map, a timeline of all 118 discoveries and where
+   the name comes from. *Try:* `#/Ra/history`.
 
-Every chart has a "Show as table" button, and every grey source label opens a small card saying where the
-number comes from.
+### Your review of `tools/curated/biology.toml` (F3)
 
-**The design review (F4) is part of M3's acceptance.** Please look at the screenshots in the pull request (or
-the live preview after merging) and tell me what you would change: colours, sizes, order, wording, anything.
+Your rows from M2 are unchanged. Everything new is at the end of the file, after the line
+`# M4 additions` (line 344). On GitHub: open the pull request → "Files changed" → `tools/curated/biology.toml`.
+Every row has its source; papers have a DOI that was checked; all text is in our own words.
 
-**One thing to try on your Mac:** open `#/Og/orbitals`. Under the gallery it says how long the 19 pictures took
-*on your computer*. The goal is under 2 seconds on an M1 Mac. I measured 2.2 s in my cloud machine, which has no
-graphics card (it draws 3D in software), so yours should be faster — please tell me the number you see.
+- **21 isotope uses** (`[[isotope_use]]`): tritium (chromosome copying, 1957), deuterium + oxygen-18 (doubly
+  labelled water), carbon-14 (dating; Calvin's photosynthesis tracer), carbon-13 (C3/C4 plants), nitrogen-15
+  (Meselson–Stahl; food webs), oxygen-18 (oxygen from water in photosynthesis; past ocean temperatures),
+  fluorine-18 (FDG scans), phosphorus-32 (Hevesy), phosphorus-32 and sulfur-35 (Hershey–Chase),
+  strontium-87 (archaeology), technetium-99m, iodine-131 (thyroid treatment; after Chernobyl), caesium-137
+  (uptake by plants), gadolinium (MRI contrast), lutetium-177, radium-223.
+- **11 soil and environment notes** (`[[environment]]`): boron, nitrogen, phosphorus, sodium (salinity),
+  aluminium (acid soils), arsenic, selenium (Kesterson), strontium, cadmium, mercury, radon.
+- **6 toxicity notes** (`[[toxicity]]`): arsenic, cadmium (itai-itai), mercury (Minamata), lead, polonium,
+  radon.
+- **30 IARC entries** (`[[iarc]]`): only the agent's name is typed; the group (1, 2A, 2B, 3) is read from
+  IARC's own list when the data is built.
 
-## M3 acceptance criteria (SPEC §18)
+Please say "biology OK", or tell me which rows to change or remove.
+
+## M4 acceptance criteria (SPEC §18)
 
 | Criterion | State |
 |---|---|
-| §13.3 sheet tests pass | Done — all sheet tests pass on desktop and phone (Chromium) |
-| 118 × 4 property test | Done — every element on each of the four panels: no console errors, every missing value names its reason, nothing like "NaN" on screen (`tests/e2e/panels.spec.ts`, 3.6 min) |
-| Orbital gallery for Fe, Cs, Gd, Og within 2 s (M1 Mac) / 6 s (mobile profile) | Mobile profile met: 0.7 / 0.9 / 1.0 / 1.4 s. Desktop measured on the cloud VM without a GPU: 1.1 / 1.6 / 1.5 / 2.2 s — **please confirm on your Mac** (see above) |
-| Ionization ladder shows all stages for every element | Done — every stage NIST lists is drawn (all Z stages for Z ≤ 103; 68–73 stages for Z = 104–110); Z ≥ 111 says NIST lists none, with only a predicted IE₁ |
-| Spectrum strip renders for ≥ 90 elements | Done — 98 elements |
-| Design review with Fin | **Waiting for you** |
+| 118 × 11 property test | Done — every element on each of the eleven panels: no console errors, nothing like "NaN" on screen, every missing value names its reason (`tests/e2e/panels.spec.ts`) |
+| Every Missing carries a reason | Done — checked by the property test on every panel of every element, and by the pipeline |
+| AMO panel: hyperfine, clock and laser-cooling data for Cs, Rb, Sr, Yb, Al, Hg, Th; `not_applicable` reasons for e.g. He | Done — for each of the seven elements every hyperfine row, clock and laser-cooling line in the data is on screen; helium says *not applicable* because I = 0 and J = 0 (`tests/e2e/amo.spec.ts`, desktop and phone) |
+| Fin has reviewed `biology.toml` | **Waiting for you** (see above) |
 
-Also: 228 unit tests, 121 pipeline tests and 149 end-to-end tests (Chromium, desktop and phone; 17 more are
-for the other profile only) pass; the Lighthouse budgets hold (mobile score 94, initial JavaScript 108.5 kB of
-300 kB — the 3D library loads only with the orbitals panel — first table paint 1.33 s); lint, type checks and
-the licence check of the code dependencies are clean.
+Also: 294 unit tests, 162 pipeline tests and 268 end-to-end tests (Chromium, desktop and phone; 24 more are for
+the other profiles only) pass; the Lighthouse budgets hold (mobile score 94, initial JavaScript 109.1 kB of
+300 kB, first table paint 1.27 s); lint, type checks, the licence audit of the data and the licence check of
+the code dependencies are clean.
 
 ## What changed this session
 
-- **The four panels** above, plus the pieces they share: chart frames with captions and tables, source cards,
-  formulas (KaTeX), and 3D drawing (three.js).
-- **Phones:** the element sheet's top part (photographs and summary) folds away while you read a long panel,
-  so the panel gets the whole screen; scrolling back to the top (or the button "Show photographs and
-  summary") brings it back. The tab row now always shows the current tab.
-- **Your data refresh** (the seven Commons photographs) is merged; all photo credits checked.
-- **Data fixes found while building the panels** (all from the pipeline, nothing typed by hand):
-  - **Thorium and uranium "made in dying low-mass stars (AGB), 10 %"** was wrong as worded: those stars
-    cannot make anything heavier than lead and bismuth. The share in the paper's figure is material they
-    *returned* to space. It now says "returned, not made", and a test stops this from happening again.
-  - The energy-level files had the wrong ionization limit for 32 elements (sodium said 71.4 eV instead of
-    5.14 eV); fixed and tested.
-  - Half-lives in years now use the same year as the IAEA's data (before, thorium-232 read 1.39997 × 10¹⁰
-    years instead of 1.40 × 10¹⁰).
-  - Tidier numbers for isotope masses, and clearer wording where only a limit is known.
-- **Speed:** each orbital picture is now computed about five times faster than in the first version.
-- **Docs:** every M3 decision is in `docs/approach.md` (section "M3: panels, batch 1"); NOTICE.md lists the new
-  libraries and the KaTeX fonts' licence.
+- **The seven panels** above, built in parallel and merged one by one; each has its own browser tests on
+  desktop and phone, including an accessibility check (axe).
+- **The electromagnetic panel** now shows the polarizability of all 118 atoms (how easily the electron cloud
+  is pushed by an electric field). Properties not compiled yet are named under "Not yet compiled in
+  PTE-21C" instead of being marked "not measured", which was untrue.
+- **New data, all from `tools/`, each value with its source:**
+  - chemistry for every element (`chemistry.toml`): every compound formula was checked against PubChem;
+    where PubChem's record was wrong (for example Li₃N, PuO₂) the row cites Greenwood & Earnshaw instead;
+  - ionic radii (Shannon 1976), heat capacities (CRC Handbook), allotropes, uses for every element, GHS
+    hazards from PubChem;
+  - the places of discovery on a world map (Natural Earth and GeoNames), IARC groups from IARC's list;
+  - notes where relativity changes chemistry (gold, mercury, the car battery, francium), one paper each.
+- **Fixes:**
+  - oganesson's chemistry notes now cite the 2020 paper that actually predicts it is a solid;
+  - a few laser-cooling notes showed a raw data key on screen; they now read in plain words;
+  - "μ_N" (nuclear magneton) is written with a real subscript, and a 16-digit frequency with powers of ten;
+  - two entries for the same textbook were merged into one source.
+- **Docs:** every M4 decision is in `docs/approach.md` (section "M4: panels, batch 2"); README and CHANGELOG
+  updated.
 
 ## Questions for Fin — defaults in place, nothing waits on them
 
-1. **Colour table for the spectra.** The colours of spectral lines are computed from the international
-   standard for human colour vision (CIE 1931). Its numbers are a cited standard table, but the file the CIE
-   publishes is under CC BY-SA 4.0. **Default: keep it**, credited as a standard table. The alternative is a
-   published formula that imitates the table (Wyman et al. 2013); on screen you could not tell them apart.
-2. **Cosmic origin of thorium and uranium** (see above): **default:** keep the paper's 10 % but label it
-   "returned, not made". The alternative is to leave that share out and show 100 % from exploding stars.
-3. From M2, still with their defaults: elements 109–118 predictions kept; Lodders 2025 solar abundances;
-   black phosphorus as phosphorus's crystal.
+1. **GHS labels without an EU classification.** For 55 elements the EU has no official classification, so the
+   panel shows the summary of what companies reported to the EU chemicals agency (ECHA), with the share of
+   reports behind each hazard. For iron, 74 % of reports say "not hazardous" and the rest mostly concern
+   iron *powder*. **Default:** show it, with that share in a box above the pictograms. The alternative is to
+   show only official EU classifications (29 elements) and "not classified" for the rest.
+2. **Values copied via the mendeleev package** (heat capacities from the CRC Handbook, ionic radii from
+   Shannon 1976) were spot-checked but not compared line by line with the printed tables. If your library has
+   the CRC Handbook (95th edition) or Shannon's paper, a spot check of a few rows would be welcome.
+   **Default:** keep them; PROVENANCE.md says how they were transcribed.
+3. **Still open from M3:** the time the oganesson orbital gallery takes on your Mac (`#/Og/orbitals`, the
+   number under the gallery). And, with defaults kept: the CIE colour table; thorium's and uranium's "returned,
+   not made" share; the M2 defaults (elements 109–118 predictions, Lodders 2025, black phosphorus).
 
 ## Blocked
 
-- Nothing. (The four Commons photographs from M2 came with your data refresh.)
+- Nothing. Two websites refused this cloud machine, and other sources were used instead: Wikidata (too many
+  requests) → coordinates from Natural Earth and GeoNames; ECHA (403) → GHS classifications via PubChem.
 
 ## Not yet compiled (honest gaps, not errors)
 
-- **Hyperfine splittings:** 18 elements have the headline value on the tile; 42 more have hyperfine structure
-  that is not yet in our table (the tile says *hfs n/m*, as agreed). More rows come with the AMO panel in M4.
-- **Polarizability, magnetic ordering, resistivity, superconductivity, work function, band gap** are listed
-  on the electromagnetic panel as "not measured — not yet compiled", rather than hidden. If you can download
-  the polarizability table (Schwerdtfeger & Nagle 2019) through your university, I can transcribe it.
-- **Flame-test colours** are shown as not yet compiled (no sourced table yet).
+- **Hyperfine splittings:** 27 elements have curated rows; the AMO panel says "Not yet in PTE-21C's curated
+  hyperfine table" for the others that have hyperfine structure.
+- **Electromagnetic:** magnetic ordering, resistivity, superconductivity, work function, band gap.
+- **Physical:** thermal conductivity and expansion, elastic moduli, speed of sound, hardness (the only primary
+  table found for conductivity is a scanned PDF). Metallic radii on the chemistry panel.
+- **Flame-test colours** (no sourced table yet).
+- **History:** eight discoveries have no single place in our table (Ti, Ga, As, Te, Sm, Dy, Ho, Pt); the map
+  says so. Historical photographs exist only for Pm, Ra, Cm and Fm.
 - **Orbital energies beyond uranium:** NIST's table (SRD 141) stops at Z = 92; the orbitals panel says so.
-- **Uranium's energy levels:** NIST lists just one level for the neutral atom, so its diagram is nearly empty.
 
 ## Notes (things that differ from what you might expect)
 
-- **The orbital pictures are an approximation** (hydrogen-like shapes with an effective nuclear charge). The
-  shapes are exact for one electron; the sizes are approximate for heavy atoms (the outer shells in the
-  shell stack can come out noticeably larger than they really are). The panel says so in its grey note; the more accurate
-  version (Tier B) is planned for v0.2.
-- **Each gallery picture is scaled to fit its tile**; true sizes are in the shell stack.
-- **Cosmic origin is an approximation**, read off a figure of a model (Kobayashi et al. 2020) in 5 % steps.
-- **Rubidium's D2 line (780.03 nm in air)** sits just outside the 380–780 nm "visible" window of the spectrum
-  strip; it is in the laser-cooling data, where it belongs.
+- **The GHS diamonds are drawn by PTE-21C** (red border, code and name), not the official pictogram artwork.
+  GHS has no hazard class for radioactivity; radioactive elements say so.
+- **The chemistry panel's reaction notes describe chemistry, not safe handling**, and the panel says so.
+- **No toxicity note does not mean safe**; the biology panel says that in words.
+- **The orbital pictures and the probability curves are approximations** (hydrogen-like shapes with an
+  effective nuclear charge); both panels say so in their grey note.
+- **Laser-cooling limits are computed** from the line's wavelength and width (marked "computed").
 
 ## FIN items — defaults in use (SPEC §19)
 
@@ -120,9 +143,9 @@ the licence check of the code dependencies are clean.
 |---|---|---|
 | F1 Attribution name | "Bietenhader (Fin)" (README, footer, package) | Confirm or change before M5 |
 | F2 GitHub Pages | Source "GitHub Actions" | Done (2026-10-20) |
-| F3 Review `biology.toml` and the image report | Reviewed in M2 ("LGTM") | Biology again at M4 |
-| F4 Design review | — | **Now (M3)**: comments on the screenshots or the live site |
-| F5 Subtitle | "A fresh perspective on the Periodic Table of the Elements" | Confirm or change |
+| F3 Review `biology.toml` and the image report | Reviewed in M2 ("LGTM") | **Now (M4):** the new rows (see above) |
+| F4 Design review | M3: "the screenshots look good" | Comments on the M4 screenshots welcome |
+| F5 Subtitle | "A fresh perspective on the Periodic Table of the Elements" | Confirm or change before M5 |
 
 ## Earlier decisions (still in force)
 

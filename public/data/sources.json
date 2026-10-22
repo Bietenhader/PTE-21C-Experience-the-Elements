@@ -13,6 +13,87 @@
    "retrieved": "2026-10-22",
    "notes": "REST: rest/pug/periodictable/JSON (one request) and rest/pug_view/data/element/{Z}/JSON (one per element). PubChem aggregates data from Jefferson Lab and Los Alamos National Laboratory (both U.S. DOE); the oxidation-state lists used here come from those two contributors via PubChem."
   },
+  "hsdb": {
+   "id": "hsdb",
+   "title": "Hazardous Substances Data Bank (HSDB), records of the elemental substances in PubChem",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/source/hsdb",
+   "licence": "Public domain (U.S. Government work, National Library of Medicine)",
+   "licenceUrl": "https://www.nlm.nih.gov/web_policies.html",
+   "citation": "Hazardous Substances Data Bank (HSDB), U.S. National Library of Medicine, via PubChem (National Center for Biotechnology Information): compound records of the elemental substances, sections Stability/Shelf Life, Other Experimental Properties and Reactivities and Incompatibilities. https://pubchem.ncbi.nlm.nih.gov/source/hsdb",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "tools/fetch_pubchem_hsdb.py caches the 'Experimental Properties' part of the PubChem record of each elemental substance (found by name). The reactivity notes in tools/curated/chemistry.toml restate what these records say in our own words; no HSDB sentence is copied. The build checks that each note citing hsdb has an HSDB record behind it."
+  },
+  "cameo_chemicals": {
+   "id": "cameo_chemicals",
+   "title": "CAMEO Chemicals (NOAA), records of the elemental substances in PubChem",
+   "url": "https://cameochemicals.noaa.gov/",
+   "licence": "Free for use (U.S. NOAA); facts restated in our own words, no text copied — some CAMEO data is under its providers' copyright",
+   "licenceUrl": "https://cameochemicals.noaa.gov/help/reference/terms_and_conditions.htm",
+   "citation": "CAMEO Chemicals, Office of Response and Restoration, U.S. National Oceanic and Atmospheric Administration, with the U.S. EPA, via PubChem: sections Air and Water Reactions and Reactive Group of the elemental substances. https://cameochemicals.noaa.gov/",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "tools/fetch_pubchem_hsdb.py caches the 'Stability and Reactivity' part of each elemental substance's PubChem record, where CAMEO Chemicals describes reactions with air and water. Used only as the grounding of our own-words notes in tools/curated/chemistry.toml."
+  },
+  "pubchem_compounds": {
+   "id": "pubchem_compounds",
+   "title": "PubChem Compound records (formulas of named compounds)",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/",
+   "licence": "Public domain (U.S. Government work)",
+   "licenceUrl": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+   "citation": "PubChem, National Center for Biotechnology Information, U.S. National Library of Medicine: compound records found by name (PUG REST compound/name/{name}/property/MolecularFormula). https://pubchem.ncbi.nlm.nih.gov/",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "Every compound in tools/curated/chemistry.toml that cites this source is looked up by its name (or by the row's `lookup` name); a compound whose PubChem molecular formula has different element counts from ours is left out and reported, and the record's CID is stored with each one that matches."
+  },
+  "shannon1976": {
+   "id": "shannon1976",
+   "title": "Shannon's effective ionic radii",
+   "url": "https://doi.org/10.1107/S0567739476001551",
+   "licence": "Published scientific table; cite",
+   "licenceUrl": "https://doi.org/10.1107/S0567739476001551",
+   "citation": "R. D. Shannon, Revised effective ionic radii and systematic studies of interatomic distances in halides and chalcogenides, Acta Crystallographica A32, 751–767 (1976), doi:10.1107/S0567739476001551.",
+   "kind": "curated",
+   "status": "ok",
+   "notes": "Effective ionic radii (not crystal radii) of the ions in the elements' common oxidation states, in tools/curated/ionic_radii.toml, transcribed via the mendeleev package 1.3.0 (MIT), whose metadata cites Shannon (1976) for this table (and Lundberg 2016 for some additions, not marked per row). Not re-checked against the printed table."
+  },
+  "greenwood1997": {
+   "id": "greenwood1997",
+   "title": "Greenwood & Earnshaw, Chemistry of the Elements",
+   "url": "https://doi.org/10.1016/C2009-0-30414-6",
+   "licence": "Textbook; facts cited",
+   "licenceUrl": "https://doi.org/10.1016/C2009-0-30414-6",
+   "citation": "N. N. Greenwood and A. Earnshaw, Chemistry of the Elements, 2nd edition, Butterworth-Heinemann, Oxford (1997), ISBN 978-0-7506-3365-9, doi:10.1016/C2009-0-30414-6.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Cited for mainstream, textbook-level facts in tools/curated/chemistry.toml (bonding type of the element, well-known compounds, reactivity where no HSDB or CAMEO record exists). Statements are our own words."
+  },
+  "turler2013": {
+   "id": "turler2013",
+   "title": "Advances in the production and chemistry of the heaviest elements",
+   "url": "https://doi.org/10.1021/cr3002438",
+   "licence": "Scientific facts; cite",
+   "licenceUrl": "https://doi.org/10.1021/cr3002438",
+   "citation": "A. Türler and V. Pershina, Advances in the production and chemistry of the heaviest elements, Chem. Rev. 113, 1237–1312 (2013), doi:10.1021/cr3002438.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Cited in tools/curated/chemistry.toml for what is (and is not) known of the chemistry of Z = 104-117: single-atom experiments and predictions. Statements are our own words."
+  },
+  "pubchem_ghs": {
+   "id": "pubchem_ghs",
+   "title": "PubChem compound records — GHS Classification of the elemental substances",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/ghs/",
+   "licence": "PubChem: public domain (U.S. Government work); the classifications are facts reported by their contributors (EU CLP Annex VI; ECHA C&L Inventory notifications, reuse with acknowledgement)",
+   "licenceUrl": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+   "citation": "PubChem, National Center for Biotechnology Information, U.S. National Library of Medicine, compound records of the elemental substances, section 'GHS Classification' (rest/pug_view/data/compound/{CID}/JSON?heading=GHS+Classification); classifications from Regulation (EC) No 1272/2008 (CLP), Annex VI, and from the notifications to the ECHA C&L Inventory as aggregated by PubChem.",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "One name lookup (rest/pug/compound/name/{name}/cids/JSON) and one GHS request per element, 2 per second. Shown: the EU harmonised classification where one exists, otherwise PubChem's aggregation of the ECHA C&L notifications with the most reports (with the share of reports behind each hazard statement, and the share that says the substance does not meet the GHS criteria), otherwise the first other contributor. GHS has no hazard class for radioactivity."
+  },
   "nist_gsie": {
    "id": "nist_gsie",
    "title": "NIST Atomic Spectra Database — Ionization Energies",
@@ -187,6 +268,39 @@
    "status": "ok",
    "notes": "tools/curated/zeff.toml (He-Rn): Z_eff = n x zeta, taken from the transcription of both tables in the MIT-licensed mendeleev package (v1.3.0, table screeningconstants); closed-shell atoms were recomputed independently as a check (agreement 1e-4 for He-Ar, 0.013 for Zn and Kr). Slater's rules are used for Z > 86."
   },
+  "schwerdtfeger2019": {
+   "id": "schwerdtfeger2019",
+   "title": "Table of static dipole polarizabilities of the neutral elements (Schwerdtfeger & Nagle)",
+   "url": "https://doi.org/10.1080/00268976.2018.1535143",
+   "licence": "Published numerical values; cite",
+   "licenceUrl": "https://doi.org/10.1080/00268976.2018.1535143",
+   "citation": "P. Schwerdtfeger and J. K. Nagle, 2018 Table of static dipole polarizabilities of the neutral elements in the periodic table, Mol. Phys. 117, 1200-1225 (2019), doi:10.1080/00268976.2018.1535143.",
+   "kind": "curated",
+   "status": "ok",
+   "notes": "tools/curated/polarizability.toml: the recommended value and its uncertainty for all 118 elements, in atomic units, transcribed via the MIT-licensed mendeleev package (v1.3.0), whose metadata cites the table as updated by its authors in 2023."
+  },
+  "fock1935": {
+   "id": "fock1935",
+   "title": "Fock: the hidden four-dimensional symmetry of the hydrogen atom",
+   "url": "https://doi.org/10.1007/BF01336904",
+   "licence": "Published work; cite",
+   "licenceUrl": "https://doi.org/10.1007/BF01336904",
+   "citation": "V. Fock, Zur Theorie des Wasserstoffatoms, Z. Phys. 98, 145-154 (1935), doi:10.1007/BF01336904.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Cited by the symmetry note of the mathematical panel: hydrogen's 2n² degeneracy as an SO(4) symmetry."
+  },
+  "barut1967": {
+   "id": "barut1967",
+   "title": "Barut & Kleinert: the hydrogen atom from a noncompact dynamical group",
+   "url": "https://doi.org/10.1103/PhysRev.156.1541",
+   "licence": "Published work; cite",
+   "licenceUrl": "https://doi.org/10.1103/PhysRev.156.1541",
+   "citation": "A. O. Barut and H. Kleinert, Transition probabilities of the hydrogen atom from noncompact dynamical groups, Phys. Rev. 156, 1541-1545 (1967), doi:10.1103/PhysRev.156.1541.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Cited by the symmetry note of the mathematical panel: all hydrogen levels in one representation of SO(4,2)."
+  },
   "steck_alkali": {
    "id": "steck_alkali",
    "title": "Alkali D Line Data (Daniel A. Steck)",
@@ -311,6 +425,17 @@
    "status": "ok",
    "notes": "One CIF per element, read into tools/curated/crystal.toml (space group, Pearson symbol, cell lengths and angles, temperature where stated). Entries from before 1947 are avoided because of the old kX unit."
   },
+  "crc_handbook": {
+   "id": "crc_handbook",
+   "title": "CRC Handbook of Chemistry and Physics, 95th edition — Heat capacity of the elements at 25 °C",
+   "url": "https://doi.org/10.1201/b17118",
+   "licence": "Cited scientific table (numerical values are facts; cite)",
+   "licenceUrl": "https://doi.org/10.1201/b17118",
+   "citation": "W. M. Haynes (ed.), CRC Handbook of Chemistry and Physics, 95th edition, CRC Press, Boca Raton (2014), doi:10.1201/b17118, section 4, 'Heat capacity of the elements at 25 °C'; values as transcribed in the mendeleev package 1.3.0 (MIT), whose property metadata cites this edition.",
+   "kind": "curated",
+   "status": "ok",
+   "notes": "Molar heat capacity C_p at 25 °C and 1 bar in tools/curated/thermal.toml, per mole of atoms, or of molecules for H2, N2, O2, F2, Cl2, Br2 and I2 as the table gives them. Transcribed once from mendeleev; not checked line by line against the printed handbook."
+  },
   "lodders2025": {
    "id": "lodders2025",
    "title": "Solar System elemental abundances from the solar photosphere and CI-chondrites",
@@ -341,7 +466,7 @@
    "licenceUrl": "https://doi.org/10.1039/C0CP01575J",
    "citation": "P. Pyykkö, Phys. Chem. Chem. Phys. 13, 161 (2011).",
    "kind": "curated",
-   "status": "not_yet_used",
+   "status": "ok",
    "notes": "v0.2."
   },
   "karshenboim2005": {
@@ -432,6 +557,17 @@
    "status": "ok",
    "notes": "Added in M2. Human roles of elements without an EFSA reference value (tools/curated/biology.toml)."
   },
+  "smits2020": {
+   "id": "smits2020",
+   "title": "Oganesson: a noble gas element that is neither noble nor a gas",
+   "url": "https://doi.org/10.1002/anie.202011976",
+   "licence": "Scientific facts; cite",
+   "licenceUrl": "https://doi.org/10.1002/anie.202011976",
+   "citation": "O. R. Smits, J.-M. Mewes, P. Jerabek and P. Schwerdtfeger, Oganesson: a noble gas element that is neither noble nor a gas, Angew. Chem. Int. Ed. 59, 23636–23640 (2020), doi:10.1002/anie.202011976.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Cited in tools/curated/chemistry.toml for oganesson: calculations that make it a solid at room temperature and more reactive than the other noble gases. Statements are our own words; DOI checked against Crossref."
+  },
   "smits2023": {
    "id": "smits2023",
    "title": "Pushing the limits of the periodic table — a review on atomic relativistic electronic structure theory and calculations for the superheavy elements",
@@ -475,6 +611,97 @@
    "kind": "reference",
    "status": "ok",
    "notes": "Added in M2. Discovery years and the laboratories credited for Z >= 101 (tools/curated/history.toml)."
+  },
+  "natural_earth": {
+   "id": "natural_earth",
+   "title": "Natural Earth: 1:110m land and 1:10m populated places",
+   "url": "https://www.naturalearthdata.com/",
+   "licence": "Public domain (Natural Earth terms of use)",
+   "licenceUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+   "citation": "Natural Earth, free vector and raster map data, naturalearthdata.com: ne_110m_land and ne_10m_populated_places_simple (GeoJSON from the natural-earth-vector repository, github.com/nvkelso/natural-earth-vector).",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "Added in M4. The world outline of the history panel (simplified by tools/build_lifeandhistory.py into public/data/worldmap.json) and the coordinates of most discovery places (tools/curated/places.toml)."
+  },
+  "geonames": {
+   "id": "geonames",
+   "title": "GeoNames geographical database (cities with at least 5000 inhabitants)",
+   "url": "https://www.geonames.org/",
+   "licence": "CC BY 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+   "citation": "GeoNames, geographical database, www.geonames.org; bulk file cities5000.zip from download.geonames.org/export/dump/.",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "Added in M4. Coordinates of the discovery towns too small for Natural Earth (Calne, Freiberg, Köping, Bergara, Halle, Dubna, Darmstadt, Wako), each picked by its GeoNames id in tools/curated/places.toml."
+  },
+  "iarc_classifications": {
+   "id": "iarc_classifications",
+   "title": "IARC Monographs: List of Classifications (agents classified by the IARC Monographs)",
+   "url": "https://monographs.iarc.who.int/list-of-classifications",
+   "licence": "© IARC/WHO; the classifications are facts, cited",
+   "licenceUrl": "https://monographs.iarc.who.int/",
+   "citation": "International Agency for Research on Cancer, IARC Monographs on the Identification of Carcinogenic Hazards to Humans, List of Classifications, monographs.iarc.who.int/list-of-classifications (group and volumes per agent).",
+   "kind": "fetched",
+   "status": "ok",
+   "retrieved": "2026-10-22",
+   "notes": "Added in M4. The carcinogen group of element-related agents on the biology panel; biology.toml names the agent, and the group comes from the fetched list (the script webapi.iarc.who.int/loc/loc.app.js that draws the IARC page)."
+  },
+  "who_lead": {
+   "id": "who_lead",
+   "title": "WHO fact sheet: Lead poisoning",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health",
+   "licence": "© WHO; facts, cited",
+   "licenceUrl": "https://www.who.int/about/policies/publishing/copyright",
+   "citation": "World Health Organization, Lead poisoning, fact sheet, 10 June 2026, www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Toxicity note for lead (biology.toml)."
+  },
+  "who_mercury": {
+   "id": "who_mercury",
+   "title": "WHO fact sheet: Mercury and health",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/mercury-and-health",
+   "licence": "© WHO; facts, cited",
+   "licenceUrl": "https://www.who.int/about/policies/publishing/copyright",
+   "citation": "World Health Organization, Mercury and health, fact sheet, 24 October 2024, www.who.int/news-room/fact-sheets/detail/mercury-and-health.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Toxicity and environmental notes for mercury (biology.toml)."
+  },
+  "who_arsenic": {
+   "id": "who_arsenic",
+   "title": "WHO fact sheet: Arsenic",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/arsenic",
+   "licence": "© WHO; facts, cited",
+   "licenceUrl": "https://www.who.int/about/policies/publishing/copyright",
+   "citation": "World Health Organization, Arsenic, fact sheet, 7 December 2022, www.who.int/news-room/fact-sheets/detail/arsenic.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Toxicity and environmental notes for arsenic (biology.toml)."
+  },
+  "who_radon": {
+   "id": "who_radon",
+   "title": "WHO fact sheet: Radon",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/radon-and-health",
+   "licence": "© WHO; facts, cited",
+   "licenceUrl": "https://www.who.int/about/policies/publishing/copyright",
+   "citation": "World Health Organization, Radon, fact sheet, 25 January 2023, www.who.int/news-room/fact-sheets/detail/radon-and-health.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. Toxicity and environmental notes for radon (biology.toml)."
+  },
+  "unscear_chernobyl": {
+   "id": "unscear_chernobyl",
+   "title": "UNSCEAR: The Chernobyl accident (assessments of 2000, 2008 and later)",
+   "url": "https://www.unscear.org/unscear/en/areas-of-work/chernobyl.html",
+   "licence": "© United Nations; facts, cited",
+   "licenceUrl": "https://www.un.org/en/about-us/terms-of-use",
+   "citation": "United Nations Scientific Committee on the Effects of Atomic Radiation, The Chernobyl accident, www.unscear.org/unscear/en/areas-of-work/chernobyl.html, summarizing UNSCEAR 2008 Report Vol. II, Annex D, Health effects due to radiation from the Chernobyl accident (United Nations, 2011).",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added in M4. The iodine-131 note on the biology panel (milk, children's thyroids, thyroid cancers by 2005)."
   }
  }
 }

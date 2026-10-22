@@ -806,6 +806,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 33.91,
+   "unc": 0.34,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -912,6 +919,91 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.983,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Relays, sensors, switches and valves took 65 % of the mercury in U.S. products; dental amalgam 27 %.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Some chlorine plants still use a mercury cathode; mercury is also a catalyst.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Lamps (1 %).",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 23931,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.085,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 3e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.002359,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -924,6 +1016,104 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.691, massive_stars 0.304, neutron_star_mergers 0.005); quantised to 0.05. Stack height 98 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "A metal, but with such weak bonds between atoms that it is liquid at room temperature.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Does not tarnish in air at room temperature when pure, but slowly evaporates; near its boiling point it oxidises to mercury(II) oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and does not react with it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Not attacked by hydrochloric or dilute sulfuric acid; dissolves in nitric acid and hot concentrated sulfuric acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HgS",
+    "name": "mercury(II) sulfide",
+    "note": "cinnabar, the red pigment vermilion",
+    "source": "pubchem_compounds",
+    "cid": 62402
+   },
+   {
+    "formula": "Hg2Cl2",
+    "name": "mercury(I) chloride",
+    "note": "calomel",
+    "source": "pubchem_compounds",
+    "cid": 24956
+   },
+   {
+    "formula": "HgO",
+    "name": "mercury(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 30856
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "HgCl2",
+    "name": "mercury(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24085
+   },
+   {
+    "state": 1,
+    "formula": "Hg2Cl2",
+    "name": "mercury(I) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24956
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 119.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 96.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 102.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 114.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23931
  },
  "amo": {
   "hyperfine": [
@@ -1091,7 +1281,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Cooled on the 1S0-3P1 intercombination line. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Cooled on the 1S0-3P1 intercombination line. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    },
    {
     "A": "natural",
@@ -1148,7 +1338,38 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "environment": [
+   {
+    "text": "Bacteria turn mercury released into water into methylmercury, which builds up in fish and shellfish, most in large predatory fish.",
+    "source": "who_mercury"
+   }
+  ],
+  "toxicity": [
+   {
+    "text": "Mercury harms the nervous system above all, and the unborn and young children most; at Minamata, Japan, methylmercury in factory waste poisoned people who ate the local fish (Minamata disease).",
+    "source": "primary_literature",
+    "doi": "10.3109/10408449509089885"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Methylmercury compounds",
+    "group": "2B",
+    "volumes": [
+     "58"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Mercury and inorganic mercury compounds",
+    "group": "3",
+    "volumes": [
+     "58"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": "antiquity",

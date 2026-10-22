@@ -1,0 +1,45 @@
+{
+ "schemaVersion": 1,
+ "notes": [
+  {
+   "Z": 79,
+   "topic": "Why gold is yellow",
+   "text": "Relativity pulls gold's 6s orbital in and lowers its energy while the 5d orbitals expand. The gap between them shrinks until light absorbed in lifting a 5d electron to 6s falls in the blue: gold reflects yellow and red. Silver, one row up, absorbs only in the ultraviolet and looks white.",
+   "source": "primary_literature",
+   "doi": "10.1021/ar50140a002",
+   "reference": "P. Pyykkö and J. P. Desclaux, Relativity and the periodic system of elements, Acc. Chem. Res. 12, 276 (1979)"
+  },
+  {
+   "Z": 80,
+   "topic": "Why mercury is liquid",
+   "text": "Mercury's contracted, tightly held 6s electrons bind its atoms only weakly to one another. Simulations of the solid with and without relativistic effects put the melting point about 105 K apart: without relativity mercury would be a solid at room temperature.",
+   "source": "primary_literature",
+   "doi": "10.1002/anie.201302742",
+   "reference": "F. Calvo, E. Pahl, M. Wormit and P. Schwerdtfeger, Evidence for low-temperature melting of mercury owing to relativity, Angew. Chem. Int. Ed. 52, 7583 (2013)"
+  },
+  {
+   "Z": 82,
+   "topic": "The lead–acid battery",
+   "text": "A car battery's lead–acid cell gives about 2.1 volts. Calculations with and without relativity find that roughly 1.7 to 1.8 volts of that come from relativistic effects, mostly on lead's 6s electrons.",
+   "source": "primary_literature",
+   "doi": "10.1103/PhysRevLett.106.018301",
+   "reference": "R. Ahuja, A. Blomqvist, P. Larsson, P. Pyykkö and P. Zaleski-Ejgierd, Relativity and the lead-acid battery, Phys. Rev. Lett. 106, 018301 (2011)"
+  },
+  {
+   "Z": 87,
+   "topic": "Francium holds its electron tighter than caesium",
+   "text": "Down the alkali metals the first ionization energy falls, because the outer s electron sits ever farther out. Francium breaks the trend: its 7s electron is relativistically contracted and more tightly bound, so francium's first ionization energy is higher than caesium's (compare the two values from NIST on this panel).",
+   "source": "primary_literature",
+   "doi": "10.1021/cr00085a006",
+   "reference": "P. Pyykkö, Relativistic effects in structural chemistry, Chem. Rev. 88, 563 (1988)"
+  }
+ ],
+ "limits": [
+  {
+   "name": "finite nucleus",
+   "Z": 173,
+   "text": "A real nucleus has a size, which moves that limit up: near Z ≈ 172–173 the 1s level would reach the negative-energy continuum (−2mc²), and an empty 1s level would fill itself by creating an electron–positron pair from the vacuum.",
+   "source": "pyykko2011"
+  }
+ ]
+}

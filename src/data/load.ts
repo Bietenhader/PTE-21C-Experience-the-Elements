@@ -7,19 +7,7 @@
 
 import { useEffect, useState } from "react";
 import { LAYOUT_IDS, type LayoutId } from "../app/route";
-import type {
-  ColourMatchingFile,
-  CoverageFile,
-  ElementDetailFile,
-  IndexFile,
-  IsotopesFile,
-  LayoutFile,
-  LevelsFile,
-  MetrologyFile,
-  SourcesFile,
-  SpectraFile,
-  TrendsFile,
-} from "./types";
+import type { ColourMatchingFile, CoverageFile, ElementDetailFile, IndexFile, IsotopesFile, LayoutFile, LevelsFile, MetrologyFile, RelativityFile, SourcesFile, SpectraFile, TrendsFile } from "./types";
 
 export function dataUrl(path: string): string {
   return `${import.meta.env.BASE_URL}data/${path}`;
@@ -118,4 +106,5 @@ export const useLevels = (z: number, exists: boolean) => useJson<LevelsFile>(exi
 export const useMetrology = () => useJson<MetrologyFile>("metrology.json");
 export const useColourTable = () => useJson<ColourMatchingFile>("cie1931.json");
 export const useTrends = () => useJson<TrendsFile>("trends.json");
+export const useRelativity = () => useJson<RelativityFile>("relativity.json");
 

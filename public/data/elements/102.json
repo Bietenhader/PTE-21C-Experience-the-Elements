@@ -658,6 +658,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 110.0,
+   "unc": 6.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -699,6 +706,52 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "No use outside basic research: only tiny amounts have ever been made.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Its atoms are made a few at a time, by fusing lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -707,6 +760,51 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Nobelium metal has never been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Nobelium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Nobelium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Nobelium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "No compound has been isolated; unusually for an actinide, +2 is its stable state in water."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 110.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 24822,
+  "sources": [
+   "greenwood1997"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -729,7 +827,12 @@
   "nameOrigin": "After Alfred Nobel; the name was proposed for a 1957 claim from the Nobel Institute in Stockholm and was kept.",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "PubChem gives 1957, the year of the Stockholm claim, which could not be reproduced. Berkeley reported work in 1958 and Jefferson Lab says Berkeley was eventually credited, but the 1993 IUPAC/IUPAP report gives the credit to two 1966 Dubna papers."
+  "note": "PubChem gives 1957, the year of the Stockholm claim, which could not be reproduced. Berkeley reported work in 1958 and Jefferson Lab says Berkeley was eventually credited, but the 1993 IUPAC/IUPAP report gives the credit to two 1966 Dubna papers.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Nobelium is a synthetic actinide named after Alfred Nobel, and its name outlived its discovery claim: a team working in Stockholm announced element 102 in 1957, but nobody could reproduce the result. Groups at Berkeley and Dubna established the element over the following years, yet the original name was kept. Unlike most actinides, it favours the +2 oxidation state in solution. Its longest-lived isotope, nobelium-259, lasts just under an hour. With every 5f orbital filled, [Rn] 5f¹⁴ 7s², the atom has a closed-shell ¹S₀ ground state, and its first ionisation energy, about 639 kJ/mol, has been measured by laser spectroscopy on atoms produced a few at a time.",

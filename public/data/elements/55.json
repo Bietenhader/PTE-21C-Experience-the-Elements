@@ -620,6 +620,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 400.9,
+   "unc": 0.7,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -715,6 +722,102 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 32.21,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Defines the second: one second is 9 192 631 770 periods of the caesium-133 clock transition.",
+    "source": "si_brochure"
+   },
+   {
+    "text": "Caesium atomic clocks are used in satellite navigation, aircraft guidance and telephone networks.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Very dense caesium formate brines are used to drill deep, hot, high-pressure oil and gas wells.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Caesium catalysts, and caesium iodide in X-ray panels; caesium-137 in industrial gauges and sterilisation.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously",
+     "share": 99.4
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage",
+     "share": 99.4
+    },
+    {
+     "code": "H318",
+     "text": "Causes serious eye damage",
+     "share": 71.5
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5354618,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 158,
+   "notMeetingCriteria": {
+    "share": 0.6,
+    "reports": 1,
+    "of": 158
+   },
+   "note": "Aggregated by PubChem from 158 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 0.6 % of the reports (1 of 158) say caesium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 3.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.0003,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.001492,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.0214286,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -728,6 +831,71 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.374, massive_stars 0.499, neutron_star_mergers 0.127); quantised to 0.05. Stack height 68 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Catches fire by itself in air at room temperature if its surface is clean.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Reacts explosively with water: the heat ignites the hydrogen released, leaving caesium hydroxide.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with acids, halogens and other oxidisers.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CsCl",
+    "name": "cesium chloride",
+    "note": "gives its name to a common crystal structure",
+    "source": "pubchem_compounds",
+    "cid": 24293
+   },
+   {
+    "formula": "CsOH",
+    "name": "cesium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 62750
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "CsCl",
+    "name": "cesium chloride",
+    "source": "pubchem_compounds",
+    "cid": 24293
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 167.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 174.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5354618
  },
  "amo": {
   "hyperfine": [
@@ -821,7 +989,16 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "A": 137,
+    "field": "environment",
+    "text": "Caesium-137 from fallout behaves much like potassium: plant roots take it up through their potassium transporters, and clay minerals hold it in the soil, which is why potassium fertiliser and clay-rich soils keep it out of crops.",
+    "source": "primary_literature",
+    "doi": "10.1093/jexbot/51.351.1635"
+   }
+  ]
  },
  "history": {
   "discovered": 1860,
@@ -836,7 +1013,12 @@
   ],
   "nameOrigin": "From the Latin caesius, 'sky-blue' or 'blue-grey', for the blue lines in its spectrum.",
   "source": "pubchem",
-  "note": "The first element discovered with the spectroscope, in mineral water from Dürkheim."
+  "note": "The first element discovered with the spectroscope, in mineral water from Dürkheim.",
+  "placeLocation": {
+   "lat": 49.42,
+   "lon": 8.7,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Caesium is a soft, pale-gold alkali metal that melts at 301.59 K (about 28 °C), so a sealed glass ampoule of it turns liquid in a warm hand; it reacts explosively with water. Robert Bunsen and Gustav Kirchhoff discovered it in 1860 by analysing mineral water with a spectroscope and named it after the Latin for sky blue, for two blue lines in its spectrum. Its lone 6s electron is the most loosely bound of any element (first ionisation energy 375.7 kJ/mol). It couples to the spin-7/2 nucleus of caesium-133, splitting the ground level in two, and the transition between them, exactly 9 192 631 770 Hz, defines the second.",

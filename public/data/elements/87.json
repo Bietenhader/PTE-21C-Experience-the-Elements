@@ -795,6 +795,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 317.8,
+   "unc": 2.4,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -836,6 +843,52 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "No use outside basic research: only tiny amounts have ever been made.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Francium atoms have been laser-cooled and trapped (first in 1996) for precision measurements in atomic physics.",
+    "source": "primary_literature",
+    "doi": "10.1103/PhysRevLett.76.3522"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental francium (CID 6328145). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -844,6 +897,52 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No weighable amount of francium has ever been gathered; it is expected to be an alkali metal like caesium."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Its longest-lived isotope lasts 22 minutes, so only clouds of atoms and trace amounts in solution have been studied; it is expected to react with air and water even more violently than caesium."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Its longest-lived isotope lasts 22 minutes, so only clouds of atoms and trace amounts in solution have been studied; it is expected to react with air and water even more violently than caesium."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Its longest-lived isotope lasts 22 minutes, so only clouds of atoms and trace amounts in solution have been studied; it is expected to react with air and water even more violently than caesium."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only trace amounts in solution have been studied; francium behaves like the other alkali metals."
+  },
+  "oxidationExamples": [],
+  "oxidationNote": "In solution francium is +1, like the other alkali metals.",
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 180.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 6328145,
+  "sources": [
+   "greenwood1997"
+  ]
  },
  "amo": {
   "hyperfine": [
@@ -931,7 +1030,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Radioactive. NIST Fr I value; isotope shift not applied. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Radioactive. NIST Fr I value; isotope shift not applied. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    }
   ],
   "siHistory": []
@@ -949,7 +1048,12 @@
   "place": "Paris, France",
   "nameOrigin": "After France, Perey's home country.",
   "source": "pubchem",
-  "note": "Found at the Curie Institute among the decay products of actinium-227; no weighable amount has ever been isolated."
+  "note": "Found at the Curie Institute among the decay products of actinium-227; no weighable amount has ever been isolated.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Francium is the heaviest alkali metal, a chemical cousin of caesium that never lasts long: its longest-lived isotope, francium-223, has a half-life of 22 minutes, and Earth's crust is estimated to hold no more than about 30 grams at any time. Marguerite Perey discovered it in 1939 among the decay products of actinium, and no weighable amount has ever been isolated. Physicists instead study small clouds of its atoms held in laser traps, tuned to its red D2 line at 718 nm. Surprisingly, its first ionisation energy, about 393 kJ/mol, is higher than caesium's 376 kJ/mol: relativistic effects contract the 7s orbital and bind its single electron more tightly.",

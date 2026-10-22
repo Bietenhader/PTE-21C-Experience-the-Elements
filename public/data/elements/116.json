@@ -45,6 +45,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 67.0,
+   "unc": 10.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -86,6 +93,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/PAC-REP-10-05-01"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/PAC-REP-10-05-01"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -94,6 +148,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Livermorium's chemistry has never been studied in experiments; everything about it is predicted."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Livermorium's chemistry has never been studied in experiments; everything about it is predicted."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Livermorium's chemistry has never been studied in experiments; everything about it is predicted."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; its chemistry is known only from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 168007550,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -117,7 +206,12 @@
   "symbolNote": "Temporary name: ununhexium (Uuh); named livermorium in 2012.",
   "source": "iupac_discovery",
   "doi": "10.1351/PAC-REP-10-05-01",
-  "note": "First reported in 2000 from calcium-48 on curium-248; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration."
+  "note": "First reported in 2000 from calcium-48 on curium-248; the 2011 IUPAC/IUPAP report credited the Dubna–Livermore collaboration.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Livermorium is a synthetic element in group 16, below polonium, named after Lawrence Livermore National Laboratory in California, whose scientists worked with the Dubna team that announced it in December 2000. It was made by fusing calcium-48 with curium-248, and every known isotope is fleeting: livermorium-293, the longest-lived measured so far, has a half-life of only about a tenth of a second. Only small numbers of atoms have ever been made, and its chemistry is unexplored. Calculations predict [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁴, with a closed 7p₁/₂ pair and two electrons in the higher 7p₃/₂ level, which should make +2 its most important oxidation state.",

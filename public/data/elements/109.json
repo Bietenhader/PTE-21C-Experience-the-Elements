@@ -454,6 +454,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 34.0,
+   "unc": 3.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -495,6 +502,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -503,6 +557,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Meitnerium's chemistry has never been studied in experiments: its atoms live too briefly. Everything about its reactivity is predicted."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Meitnerium's chemistry has never been studied in experiments: its atoms live too briefly. Everything about its reactivity is predicted."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Meitnerium's chemistry has never been studied in experiments: its atoms live too briefly. Everything about its reactivity is predicted."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; its chemistry is known only from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951716,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -525,7 +614,12 @@
   "symbolNote": "Temporary name: unnilennium (Une).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "A single atom was observed on 29 August 1982, made by fusing iron-58 with bismuth-209."
+  "note": "A single atom was observed on 29 August 1982, made by fusing iron-58 with bismuth-209.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Meitnerium is a synthetic element in group 9, below iridium, named after Lise Meitner, who helped to explain nuclear fission; it is the only element named after a woman alone. It was first made at GSI in Darmstadt on 29 August 1982, when a week of bombarding bismuth-209 with iron-58 produced a single fused nucleus of meitnerium-266, an isotope with a half-life of about 2 milliseconds. Only a few atoms have been made since; its heavier isotopes survive for seconds, and its chemistry has never been studied. The configuration [Rn] 5f¹⁴ 6d⁷ 7s², the same outer pattern as iridium, is a theoretical prediction, not a measurement.",

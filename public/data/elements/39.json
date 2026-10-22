@@ -481,6 +481,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 162.0,
+   "unc": 12.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -584,6 +591,111 @@
    "listedAs": "heavy rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.53,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Ceramics and phosphors are the leading uses.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Yttrium–aluminium garnet crystals are used in lasers for industry, medicine and communication.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Smaller amounts go into optical glass, optical fibre, pigments, catalysts and alloys.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 31.2
+    },
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air",
+     "share": 15.5
+    },
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 14.8
+    },
+    {
+     "code": "H312",
+     "text": "Harmful in contact with skin",
+     "share": 14.8
+    },
+    {
+     "code": "H332",
+     "text": "Harmful if inhaled",
+     "share": 14.8
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 10.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23993,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 317,
+   "notMeetingCriteria": {
+    "share": 56.8,
+    "reports": 180,
+    "of": 317
+   },
+   "note": "Aggregated by PubChem from 317 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 56.8 % of the reports (180 of 317) say yttrium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 33.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1.3e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.01221,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -596,6 +708,66 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.784, massive_stars 0.187, neutron_star_mergers 0.029); quantised to 0.05. Stack height 66 px. Text: '22% of [this element] can be produced from ECSNe ... which is included in the blue areas'; the figure's whole blue band reads lower (0.187), probably because the text percentage is relative to the solar value while the model overproduces s-process elements. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises when heated in air or oxygen.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Decomposes cold water slowly and boiling water quickly.",
+    "source": "hsdb"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Y2O3",
+    "name": "yttrium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159374
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Y2O3",
+    "name": "yttrium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159374
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 90.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 101.9,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23993
  },
  "amo": {
   "hyperfine": [
@@ -638,7 +810,12 @@
   "place": "Turku, Finland",
   "nameOrigin": "From Ytterby, the Swedish village whose quarry supplied the mineral (later named gadolinite).",
   "source": "pubchem",
-  "note": "Gadolin found a new 'earth', yttria; Jefferson Lab gives 1789. Mosander showed in 1843 that yttria also held the oxides of erbium and terbium."
+  "note": "Gadolin found a new 'earth', yttria; Jefferson Lab gives 1789. Mosander showed in 1843 that yttria also held the oxides of erbium and terbium.",
+  "placeLocation": {
+   "lat": 60.454,
+   "lon": 22.255,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Yttrium is a silvery transition metal that behaves chemically much like the rare-earth elements and is mined together with them. It is named after Ytterby, a village near Stockholm whose quarry has given its name to more elements than any other place on Earth. Yttrium compounds, doped with europium, made the red glow of old colour television screens; others form the crystals of many industrial lasers and a copper oxide that was the first material to superconduct above the boiling point of liquid nitrogen. The atom has a single 4d electron, [Kr] 4d¹ 5s² (ground term ²D₃/₂), and its only stable isotope, yttrium-89, has a closed shell of 50 neutrons.",

@@ -673,6 +673,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 205.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -769,6 +776,82 @@
    "listedAs": "light rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.94,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Car catalytic converters.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Polishing powders, glass and ceramics.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Metallurgy.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 96.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23974,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 502,
+   "notMeetingCriteria": {
+    "share": 2.2,
+    "reports": 11,
+    "of": 502
+   },
+   "note": "Aggregated by PubChem from 502 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 2.2 % of the reports (11 of 502) say cerium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 66.5,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1.2e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.005088,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -781,6 +864,90 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.956, massive_stars 0.030, neutron_star_mergers 0.015); quantised to 0.05. Stack height 98 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises in air; the powdered metal ignites by itself, and an alloy rich in cerium gives the sparks of lighter flints.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts with water, slowly in the cold and quickly when hot, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CeO2",
+    "name": "cerium dioxide",
+    "note": "glass-polishing powder and catalytic converters",
+    "source": "pubchem_compounds",
+    "cid": 73963
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "CeO2",
+    "name": "cerium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 73963
+   },
+   {
+    "state": 3,
+    "formula": "CeCl3",
+    "name": "cerium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24636
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 101.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 114.3,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 87.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 97.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23974
  },
  "amo": {
   "hyperfine": [],
@@ -808,7 +975,12 @@
   ],
   "nameOrigin": "After the asteroid (now dwarf planet) Ceres, discovered in 1801 and named after the Roman goddess of agriculture.",
   "source": "pubchem",
-  "note": "Found independently by Berzelius and Hisinger in Sweden and by Klaproth in Germany; the map dot marks Stockholm."
+  "note": "Found independently by Berzelius and Hisinger in Sweden and by Klaproth in Germany; the map dot marks Stockholm.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Cerium is the most abundant of the rare-earth metals, more plentiful in Earth’s crust than copper, and an iron-grey metal so reactive that scratching the pure metal can make it ignite. That is why lighter flints, made of a cerium-rich alloy called mischmetal mixed with iron, throw sparks when struck; cerium oxide is also used to polish glass. Cerium’s 4f and 5d electrons have almost the same energy, so its ground state is [Xe] 4f¹ 5d¹ 6s² instead of the predicted 4f² 6s² (ground term ¹G°₄), and it can give up a fourth electron with ease, making the Ce⁴⁺ ion a strong oxidising agent.",

@@ -196,6 +196,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 162.7,
+   "unc": 0.5,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -292,6 +299,89 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 28.23,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Soda ash (sodium carbonate) is used mostly for glass (45 %) and chemicals (28 %), and in soaps and detergents (5 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Salt (sodium chloride) is the feedstock for chlorine and caustic soda, and is spread on winter roads (about 37 % of U.S. salt).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Sodium-vapour street lamps give their yellow light; liquid sodium has been used to cool nuclear reactors.",
+    "source": "pubchem"
+   },
+   {
+    "text": "The metal is used to produce titanium and chemicals such as sodium cyanide and sodium hydride.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5360545,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 23600.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 10800.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 39.3,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 1428.57,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -304,6 +394,87 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.137, massive_stars 0.863); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes quickly to a dull grey and burns in air when heated, forming sodium oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Reacts violently with water, giving sodium hydroxide and hydrogen, which often catches fire.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with acids, forming the sodium salts (with hydrochloric acid, common salt).",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NaCl",
+    "name": "sodium chloride",
+    "note": "table salt",
+    "source": "pubchem_compounds",
+    "cid": 5234
+   },
+   {
+    "formula": "NaOH",
+    "name": "sodium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 14798
+   },
+   {
+    "formula": "NaHCO3",
+    "name": "sodium bicarbonate",
+    "note": "baking soda",
+    "source": "pubchem_compounds",
+    "cid": 516892
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "NaCl",
+    "name": "sodium chloride",
+    "source": "pubchem_compounds",
+    "cid": 5234
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 99.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 102.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 118.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5360545
  },
  "amo": {
   "hyperfine": [
@@ -378,7 +549,14 @@
    "text": "The main positive ion outside cells; controls water balance and, with potassium, nerve signals.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "environment": [
+   {
+    "text": "Salt, mostly sodium chloride, in irrigated and naturally saline soils limits crop yields worldwide; most crops suffer when sodium builds up in their leaves.",
+    "source": "primary_literature",
+    "doi": "10.1146/annurev.arplant.59.032607.092911"
+   }
+  ]
  },
  "history": {
   "discovered": 1807,
@@ -389,7 +567,12 @@
   "nameOrigin": "Named by Davy after soda (caustic soda), the compound he split by electrolysis to obtain it.",
   "symbolNote": "Na comes from the Latin natrium, after natron, a naturally occurring soda salt.",
   "source": "pubchem",
-  "note": "Obtained by electrolysis of molten caustic soda at the Royal Institution, soon after potassium."
+  "note": "Obtained by electrolysis of molten caustic soda at the Royal Institution, soon after potassium.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Sodium is a soft, silvery alkali metal that can be cut with a knife and must be kept under oil, because it reacts vigorously with water; we meet it every day in table salt and as the ions that help carry signals along our nerves. It melts at about 371 K (98 °C), below the boiling point of water. The yellow glow of salt in a flame, and of old street lamps, is a pair of lines at 589.0 and 589.6 nm. Both come from the lone 3s electron ([Ne] 3s¹) falling back from 3p, a level split in two by spin–orbit coupling into ²P°₃/₂ and ²P°₁/₂.",

@@ -1045,6 +1045,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 203.0,
+   "unc": 12.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -1121,6 +1128,54 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.2,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Actinium-225 is used against cancer: bound to a carrier molecule, its alpha particles and those of its decay products kill tumour cells.",
+    "source": "pubchem"
+   },
+   {
+    "text": "It is also used to produce neutrons; it has no significant commercial use.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental actinium (CID 23965). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 5.5e-10,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -1129,6 +1184,55 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises quickly in moist air; its radioactivity makes it glow faintly blue in the dark.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts with water, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Ac2O3",
+    "name": "actinium oxide",
+    "source": "pubchem_compounds",
+    "cid": 21946271
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Ac2O3",
+    "name": "actinium oxide",
+    "source": "pubchem_compounds",
+    "cid": 21946271
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 112.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23965
  },
  "amo": {
   "hyperfine": [],
@@ -1150,7 +1254,12 @@
   "place": "Paris, France",
   "nameOrigin": "From the Greek aktis (genitive aktinos), 'ray' or 'beam'.",
   "source": "pubchem",
-  "note": "Debierne reported it in 1899 and Giesel found it independently in 1902; the map dot marks Debierne's Paris. Jefferson Lab gives Giesel's middle name as Otto."
+  "note": "Debierne reported it in 1899 and Giesel found it independently in 1902; the map dot marks Debierne's Paris. Jefferson Lab gives Giesel's middle name as Otto.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Actinium is a soft, silvery, radioactive metal that gives the actinide series its name, taken from the Greek for a ray; André-Louis Debierne identified it in 1899, and its chemistry closely resembles that of lanthanum. Its longest-lived isotope, actinium-227, has a half-life of about 22 years. Another has found a new purpose: actinium-225 is being developed as a cancer treatment, because its chain of decays releases several alpha particles that can destroy tumour cells at very close range. Although it heads the actinide row, the atom holds no 5f electron at all: its ground configuration is [Rn] 6d¹ 7s², not the Aufbau prediction 5f¹ 7s², giving a ²D₃/₂ ground term.",

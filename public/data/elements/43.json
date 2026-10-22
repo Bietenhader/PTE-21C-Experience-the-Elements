@@ -508,6 +508,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 79.0,
+   "unc": 10.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -588,6 +595,51 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Technetium-99m, which lasts about six hours, is used to image bones, heart, kidneys and tumours in nuclear medicine.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Used to calibrate particle detectors; it protects steel from corrosion, but only in sealed systems because it is radioactive.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental technetium (CID 23957). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -596,6 +648,93 @@
    "reason": "not_measured",
    "note": "Technetium has no long-lived isotope, so none of it survives from before the Solar System; its box in Fig. 39 is empty."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Silvery metal that tarnishes slowly in moist air; burns in fluorine or oxygen when heated.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Not attacked by water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in nitric acid and aqua regia, and in hydrogen peroxide solutions, as the pertechnetate ion; not in hydrochloric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NaTcO4",
+    "name": "sodium pertechnetate",
+    "note": "carrier of technetium-99m in hospitals",
+    "source": "pubchem_compounds",
+    "cid": 74086836
+   },
+   {
+    "formula": "TcO2",
+    "name": "technetium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 6857437
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 7,
+    "formula": "NaTcO4",
+    "name": "sodium pertechnetate",
+    "source": "pubchem_compounds",
+    "cid": 74086836
+   },
+   {
+    "state": 6,
+    "formula": "TcF6",
+    "name": "technetium hexafluoride",
+    "source": "greenwood1997"
+   },
+   {
+    "state": 4,
+    "formula": "TcO2",
+    "name": "technetium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 6857437
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 64.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "IV",
+    "radius": {
+     "value": 37.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 7,
+    "coordination": "VI",
+    "radius": {
+     "value": 56.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23957
  },
  "amo": {
   "hyperfine": [],
@@ -606,7 +745,17 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "A": 99,
+    "isomer": "m",
+    "field": "medicine",
+    "text": "Technetium-99m, milked on site from a generator of its parent molybdenum-99, is the workhorse of nuclear-medicine imaging: its six-hour half-life and single gamma line suit scans of bone, heart, kidneys and much else.",
+    "source": "primary_literature",
+    "doi": "10.1016/j.jcmg.2008.12.013"
+   }
+  ]
  },
  "history": {
   "discovered": 1937,
@@ -618,7 +767,12 @@
   "nameOrigin": "From the Greek technetos, 'artificial', as the first element to be made artificially.",
   "symbolNote": "Some older tables showed element 43 as masurium (Ma), from a 1925 claim that was never confirmed.",
   "source": "pubchem",
-  "note": "Found in a molybdenum sample bombarded with deuterons in Lawrence's Berkeley cyclotron. Kenna and Kuroda found traces in nature in 1962."
+  "note": "Found in a molybdenum sample bombarded with deuterons in Lawrence's Berkeley cyclotron. Kenna and Kuroda found traces in nature in 1962.",
+  "placeLocation": {
+   "lat": 38.127,
+   "lon": 13.348,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Technetium is a silvery transition metal with no stable isotopes; in 1937 it became the first element made artificially, from molybdenum bombarded in a cyclotron, and its name comes from the Greek for ‘artificial’. A short-lived excited form of technetium-99 is now the most widely used tracer in nuclear-medicine scans. Even its longest-lived isotopes survive only about four million years, so when astronomers found technetium lines in the light of certain red giant stars, it proved that stars forge new elements. Its ground configuration, [Kr] 4d⁵ 5s², follows the filling rule and leaves a half-filled 4d shell (⁶S₅/₂).",

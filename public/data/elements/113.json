@@ -45,6 +45,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 29.0,
+   "unc": 2.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -86,6 +93,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1515/pac-2015-0502"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1515/pac-2015-0502"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -94,6 +148,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Nihonium's chemistry is known almost entirely from predictions."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Nihonium's chemistry is known almost entirely from predictions."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Nihonium's chemistry is known almost entirely from predictions."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; what is known of its chemistry comes mostly from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 175670870,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -116,7 +205,12 @@
   "symbolNote": "Temporary name: ununtrium (Uut); named nihonium in 2016.",
   "source": "iupac_discovery",
   "doi": "10.1515/pac-2015-0502",
-  "note": "First atom made on 23 July 2004 from zinc-70 on bismuth-209; the 2016 IUPAC/IUPAP report credited the RIKEN collaboration. The first element discovered in Asia."
+  "note": "First atom made on 23 July 2004 from zinc-70 on bismuth-209; the 2016 IUPAC/IUPAP report credited the RIKEN collaboration. The first element discovered in Asia.",
+  "placeLocation": {
+   "lat": 35.789,
+   "lon": 139.623,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Nihonium is a synthetic element in group 13, below thallium, and the first element discovered in an Asian country; its name comes from Nihon, one way of saying 'Japan' in Japanese. At the RIKEN laboratory in Wako, researchers fired zinc-70 ions at bismuth-209 and caught their first atom on 23 July 2004; collecting only a handful of convincing atoms of nihonium-278, half-life about 1.4 milliseconds, took years. A heavier isotope, nihonium-286, lasts about 10 seconds. Its predicted configuration is [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p¹, with the lone outer electron in the strongly stabilised 7p₁/₂ level; no measurement exists, and its chemistry is barely explored.",

@@ -399,6 +399,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 40.0,
+   "unc": 1.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -494,6 +501,105 @@
    "strategic": true,
    "listedAs": "germanium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 23.222,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Germanium chemicals are used to make optical fibre.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Germanium wafers are the base of solar cells for satellites.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Night-vision devices and semiconductors.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Germanium and its oxide let infrared light through and are used in infrared optics.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 13.5
+    },
+    {
+     "code": "H361",
+     "text": "Suspected of damaging fertility or the unborn child",
+     "share": 27.3
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure",
+     "share": 27.3
+    },
+    {
+     "code": "H412",
+     "text": "Harmful to aquatic life with long lasting effects",
+     "share": 27.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 6326954,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 319,
+   "notMeetingCriteria": {
+    "share": 58.3,
+    "reports": 186,
+    "of": 319
+   },
+   "note": "Aggregated by PubChem from 319 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 58.3 % of the reports (186 of 319) say germanium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 1.5,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 5e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.2697,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -506,6 +612,90 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.090, massive_stars 0.909, neutron_star_mergers 0.001); quantised to 0.05. Stack height 62 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent network",
+   "note": "The diamond structure, like silicon.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Unaffected by air at room temperature; oxidises above about 600 °C.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and not attacked by it.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Resists hydrochloric and dilute sulfuric acid; dissolved by hot concentrated sulfuric acid, aqua regia and molten alkali.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "GeO2",
+    "name": "germanium dioxide",
+    "note": "used in optical-fibre glass",
+    "source": "pubchem_compounds",
+    "cid": 90478414
+   },
+   {
+    "formula": "GeCl4",
+    "name": "germanium tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 66226
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "GeO2",
+    "name": "germanium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 90478414
+   },
+   {
+    "state": 2,
+    "formula": "GeO",
+    "name": "germanium monoxide",
+    "source": "pubchem_compounds",
+    "cid": 6327639
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 73.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 39.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 53.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 6326954
  },
  "amo": {
   "hyperfine": [],
@@ -526,7 +716,12 @@
   "place": "Freiberg, Germany",
   "nameOrigin": "From Germania, the Latin name of Germany, Winkler's country.",
   "source": "pubchem",
-  "note": "Mendeleev's predicted eka-silicon, found in the silver mineral argyrodite; Winkler isolated it the same year."
+  "note": "Mendeleev's predicted eka-silicon, found in the silver mineral argyrodite; Winkler isolated it the same year.",
+  "placeLocation": {
+   "lat": 50.911,
+   "lon": 13.339,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Germanium is a grey-white, brittle metalloid and a semiconductor; the very first transistor was made from it, and today it forms the lenses of thermal cameras, because it lets infrared light through while blocking visible light. Its atom, [Ar] 3d¹⁰ 4s² 4p² (ground term ³P₀), mirrors the two unpaired p electrons of silicon and carbon above it. Germanium-76, 7.75 % of the natural element, sits at the heart of large underground detectors that search for an extremely rare nuclear decay, one that would show whether neutrinos are their own antiparticles. The crystals do double duty there: the germanium is both the material that might decay and the detector that would see it.",

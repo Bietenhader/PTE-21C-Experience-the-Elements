@@ -764,6 +764,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 103.0,
+   "unc": 6.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -863,6 +870,82 @@
    "strategic": false,
    "listedAs": "hafnium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.73,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "The leading use of hafnium metal is in superalloys for aerospace.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Control rods of nuclear reactors.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Semiconductors and ceramics.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air",
+     "share": 50.6
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23986,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 360,
+   "notMeetingCriteria": {
+    "share": 34.4,
+    "reports": 124,
+    "of": 360
+   },
+   "note": "Aggregated by PubChem from 360 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 34.4 % of the reports (124 of 360) say hafnium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 3.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 7e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0008591,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -875,6 +958,79 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.642, massive_stars 0.338, neutron_star_mergers 0.019); quantised to 0.05. Stack height 95 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Protected by its oxide film at room temperature; the dry powder is pyrophoric and burns fiercely.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Bulk hafnium hardly reacts with water; the powder gives off hydrogen with moisture.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Resists most acids and alkalis; hydrofluoric acid dissolves it.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HfO2",
+    "name": "hafnium dioxide",
+    "note": "the gate insulator in modern microchips",
+    "source": "pubchem_compounds",
+    "cid": 292779
+   },
+   {
+    "formula": "HfC",
+    "name": "hafnium carbide",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "HfO2",
+    "name": "hafnium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 292779
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 58.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 71.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 83.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23986
  },
  "amo": {
   "hyperfine": [],
@@ -896,7 +1052,12 @@
   "place": "Copenhagen, Denmark",
   "nameOrigin": "From Hafnia, the Latin name of Copenhagen, where it was found.",
   "source": "pubchem",
-  "note": "Found by X-ray spectroscopy in zirconium minerals, as Bohr's theory of electron shells predicted; Urbain's earlier 'celtium', sought among the rare earths, was a mistaken claim. Van Arkel and de Boer later made the metal."
+  "note": "Found by X-ray spectroscopy in zirconium minerals, as Bohr's theory of electron shells predicted; Urbain's earlier 'celtium', sought among the rare earths, was a mistaken claim. Van Arkel and de Boer later made the metal.",
+  "placeLocation": {
+   "lat": 55.681,
+   "lon": 12.562,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Hafnium is a silvery, corrosion-resistant transition metal named after Hafnia, the Latin name for Copenhagen, where Dirk Coster and George de Hevesy found it in 1923 by X-ray spectroscopy of zirconium ore, guided by Niels Bohr’s theory of electron shells. Its oxide insulates the tiniest transistors in modern computer chips, and because it soaks up neutrons it serves in reactor control rods. Hafnium is almost a chemical clone of zirconium: the fourteen 4f electrons added before it shield the nucleus poorly and shrink the atom (the lanthanide contraction), so both have a covalent radius of 175 pm, though hafnium is twice as dense.",

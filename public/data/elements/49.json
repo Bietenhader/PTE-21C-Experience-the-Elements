@@ -563,6 +563,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 65.0,
+   "unc": 4.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -669,6 +676,112 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.74,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Most indium becomes indium tin oxide, the transparent conductor in flat screens and touchscreens.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also in solders and alloys, semiconductors and research.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 15.1
+    },
+    {
+     "code": "H312",
+     "text": "Harmful in contact with skin",
+     "share": 12.7
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 15.4
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 13.2
+    },
+    {
+     "code": "H332",
+     "text": "Harmful if inhaled",
+     "share": 14.8
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 14.3
+    },
+    {
+     "code": "H372",
+     "text": "Causes damage to organs through prolonged or repeated exposure",
+     "share": 63.3
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5359967,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 371,
+   "notMeetingCriteria": {
+    "share": 18.6,
+    "reports": 69,
+    "of": 371
+   },
+   "note": "Aggregated by PubChem from 371 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 18.6 % of the reports (69 of 371) say indium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.25,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.02,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0006279,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -682,6 +795,81 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.562, massive_stars 0.243, neutron_star_mergers 0.196); quantised to 0.05. Stack height 64 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Quite stable in air at room temperature; burns when strongly heated, giving the oxide.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in mineral acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "In2O3",
+    "name": "indium oxide",
+    "note": "with tin, the transparent conductor ITO of touch screens",
+    "source": "pubchem_compounds",
+    "cid": 150905
+   },
+   {
+    "formula": "InP",
+    "name": "indium phosphide",
+    "source": "pubchem_compounds",
+    "cid": 31170
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "In2O3",
+    "name": "indium oxide",
+    "source": "pubchem_compounds",
+    "cid": 150905
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "radius": {
+     "value": 62.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 80.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 92.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5359967
  },
  "amo": {
   "hyperfine": [
@@ -771,7 +959,17 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Indium phosphide",
+    "group": "2A",
+    "volumes": [
+     "86"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1863,
@@ -782,7 +980,12 @@
   "place": "Freiberg, Germany",
   "nameOrigin": "From indigo, for the bright indigo-blue line in its spectrum.",
   "source": "pubchem",
-  "note": "Found while searching zinc ores for thallium; the discoverers later isolated the metal (CIAAW gives 1867)."
+  "note": "Found while searching zinc ores for thallium; the discoverers later isolated the metal (CIAAW gives 1867).",
+  "placeLocation": {
+   "lat": 50.911,
+   "lon": 13.339,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Indium is a very soft, silvery post-transition metal that a fingernail can dent; most of it now goes into indium tin oxide, the transparent conducting film on touchscreens and flat-panel displays. Oddly, most natural indium is radioactive: indium-115, about 96 per cent of the total, decays so slowly (half-life 4.41 × 10¹⁴ years) that its radioactivity is negligible, while the rare indium-113 is stable. Ferdinand Reich and Theodor Richter discovered the element in 1863 through a brilliant indigo spectral line at 451.1 nm, which gave it its name; the line is emitted when the outer electron drops from the 6s level to the upper fine-structure level of the ground term ²P°.",

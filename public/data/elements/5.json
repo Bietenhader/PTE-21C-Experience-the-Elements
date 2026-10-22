@@ -140,6 +140,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 20.5,
+   "unc": 0.1,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -244,6 +251,99 @@
    "listedAs": "boron",
    "source": "eu_crm",
    "note": "The 2023 study assessed 'boron/borate' (borate minerals); the Regulation lists 'boron'."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 11.087,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "The glass and ceramics industries are the main users of borates, including specialty glasses.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Borates also go into insulation, abrasives, cleaning products and insecticides, and into making semiconductors.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Used in nuclear energy, and to harden steel and glass.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "β-rhombohedral boron",
+    "note": "The stable form: a complicated framework of linked B₁₂ icosahedra, more than 100 atoms per cell.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "α-rhombohedral boron",
+    "note": "The simplest form: B₁₂ icosahedra packed in layers, 12 atoms per cell; red, transparent crystals.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Amorphous boron",
+    "note": "A brown powder without long-range order.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 46.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5462311,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 485,
+   "notMeetingCriteria": {
+    "share": 52.2,
+    "reports": 253,
+    "of": 485
+   },
+   "note": "Aggregated by PubChem from 485 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 52.2 % of the reports (253 of 485) say boron does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 10.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 4.44,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.005984,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.048 g."
+   }
   }
  },
  "nucleus": {
@@ -255,6 +355,89 @@
    "source": "kobayashi2020",
    "note": "Paper Sect. 3.5: 'Be and B are supposed to be produced by cosmic rays [Prantzos et al. 1993], which is not included in our model either.' Empty box in Fig. 39. Value is the paper's qualitative statement, not a modelled fraction."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent network",
+   "note": "B₁₂ icosahedra linked into a hard three-dimensional network.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Crystalline boron is very inert at room temperature; impure or amorphous boron is more reactive.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Does not react with water at room temperature.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Crystalline boron resists most acids; hot concentrated nitric acid oxidises it to boric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "H3BO3",
+    "name": "boric acid",
+    "source": "pubchem_compounds",
+    "cid": 7628
+   },
+   {
+    "formula": "Na2B4O7",
+    "name": "sodium tetraborate",
+    "note": "borax is its hydrate",
+    "source": "pubchem_compounds",
+    "cid": 10219853
+   },
+   {
+    "formula": "BF3",
+    "name": "boron trifluoride",
+    "source": "pubchem_compounds",
+    "cid": 6356
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "BCl3",
+    "name": "boron trichloride",
+    "source": "pubchem_compounds",
+    "cid": 25135
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "III",
+    "radius": {
+     "value": 1.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "IV",
+    "radius": {
+     "value": 11.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 27.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462311
  },
  "amo": {
   "hyperfine": [
@@ -298,7 +481,14 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
-  "note": "Human: no EFSA dietary reference value."
+  "note": "Human: no EFSA dietary reference value.",
+  "environment": [
+   {
+    "text": "Plants need boron, but the margin between too little and too much is narrow: soils or irrigation water rich in boron scorch leaf tips and margins.",
+    "source": "marschner2012",
+    "doi": "10.1016/B978-0-12-384905-2.00007-8"
+   }
+  ]
  },
  "history": {
   "discovered": 1808,
@@ -310,7 +500,12 @@
   "place": "Paris, France",
   "nameOrigin": "From borax, its best-known compound (a word traced to the Arabic buraq and Persian burah), given the ending of carbon.",
   "source": "pubchem",
-  "note": "Gay-Lussac and Thénard in Paris and Davy in London obtained it independently in 1808, all by heating boric acid with potassium."
+  "note": "Gay-Lussac and Thénard in Paris and Davy in London obtained it independently in 1808, all by heating boric acid with potassium.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Boron is a hard metalloid that appears as black, glittering crystals or a brown powder; we meet it in borax, in heat-resistant borosilicate glassware and, invisibly, in crops and other flowering plants, which need traces of it to hold their cell walls together. About 19.65 % of natural boron is boron-10, a nucleus that captures slow neutrons so readily that it is used in reactor control rods and radiation shielding. The atom's ground configuration, [He] 2s² 2p¹, leaves a single unpaired p electron (ground term ²P°₁/₂), and boron-10 has an unusually large nuclear spin, 3, for so light a nucleus.",

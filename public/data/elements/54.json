@@ -592,6 +592,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 27.32,
+   "unc": 0.2,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -677,6 +684,83 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 20.786,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Lamps (37 %) and semiconductor manufacture (36 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Lasers (13 %) and medicine (6 %).",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated",
+     "share": 66.2
+    },
+    {
+     "code": "H281",
+     "text": "Contains refrigerated gas; may cause cryogenic burns or injury",
+     "share": 27.9
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23991,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "reports": 373,
+   "notMeetingCriteria": {
+    "share": 5.9,
+    "reports": 22,
+    "of": 373
+   },
+   "note": "Aggregated by PubChem from 373 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 5.9 % of the reports (22 of 373) say xenon does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 3e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 5e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.02247,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -690,6 +774,50 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.270, massive_stars 0.698, neutron_star_mergers 0.032); quantised to 0.05. Stack height 82 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "monatomic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "No reaction with air.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "No reaction with water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Inert towards acids; fluorine and oxygen-fluorine compounds give it stable compounds.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "XeF2",
+    "name": "xenon difluoride",
+    "source": "pubchem_compounds",
+    "cid": 83674
+   },
+   {
+    "formula": "XeF4",
+    "name": "xenon tetrafluoride",
+    "source": "pubchem_compounds",
+    "cid": 123324
+   },
+   {
+    "formula": "XeO3",
+    "name": "xenon trioxide",
+    "note": "explosive",
+    "source": "greenwood1997"
+   }
+  ],
+  "oxidationExamples": [],
+  "oxidationNote": "As an element, xenon is 0; in its compounds it takes +2, +4, +6 and +8 (XeF₂, XeF₄, XeO₃).",
+  "ionicRadii": [],
+  "pubchemCid": 23991
  },
  "amo": {
   "hyperfine": [],
@@ -719,7 +847,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Cooled in the metastable 6s [3/2]2 (1s5) state; the MOT paper measures isotope shifts, so several isotopes were trapped. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Cooled in the metastable 6s [3/2]2 (1s5) state; the MOT paper measures isotope shifts, so several isotopes were trapped. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    }
   ],
   "siHistory": []
@@ -738,7 +866,12 @@
   "place": "London, United Kingdom",
   "nameOrigin": "From the Greek xenos, 'stranger' or 'foreigner'.",
   "source": "pubchem",
-  "note": "Found on 12 July 1898 in the least volatile fraction of liquefied air, weeks after krypton and neon."
+  "note": "Found on 12 July 1898 in the least volatile fraction of liquefied air, weeks after krypton and neon.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Xenon is a heavy, colourless noble gas, roughly one part in twenty million of air, extracted from liquefied air and used in brilliant flash lamps, car headlamps and the ion engines of spacecraft. Breathed with oxygen, it even works as a general anaesthetic. Its closed-shell atom ([Kr] 4d¹⁰ 5s² 5p⁶, ground term ¹S₀) was long thought unable to bond, until in 1962 Neil Bartlett noticed that xenon’s first ionisation energy, 1170 kJ/mol, is almost the same as that of the oxygen molecule, which he had just ionised with platinum hexafluoride. He tried xenon instead and made the first noble-gas compound.",

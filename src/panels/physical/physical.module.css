@@ -1,0 +1,144 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 60rem;
+}
+
+.value {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+}
+
+.note {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  line-height: 1.55;
+}
+
+.list li + li {
+  margin-block-start: var(--space-1);
+}
+
+/* The unit cell */
+.cellStage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.canvasBox {
+  overflow: hidden;
+  position: relative;
+  max-inline-size: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.canvasBox > p {
+  margin: var(--space-3);
+}
+
+.turns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.turns button {
+  min-inline-size: 2.75rem;
+  min-block-size: 2.75rem;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+/* The abundance bars */
+.bar {
+  fill: var(--link);
+  opacity: 0.85;
+}
+
+.barValueInside {
+  fill: var(--bg);
+  font-size: 0.75rem;
+  font-family: var(--font-num);
+}
+
+.noValue {
+  fill: var(--text-muted);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* The EU critical-raw-material flag: a word, not a colour, says which. */
+.flagOn,
+.flagOff {
+  display: inline-block;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.flagOn {
+  border: 1px solid var(--focus);
+  color: var(--text);
+}
+
+.flagOff {
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+/* GHS pictograms, drawn by PTE-21C: a white diamond with a red border and the code inside. */
+.pictograms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.pictogram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  inline-size: 6.5rem;
+  text-align: center;
+}
+
+.diamond {
+  fill: #ffffff;
+  stroke: #d00000;
+  stroke-width: 7;
+}
+
+.code {
+  fill: #000000;
+  font-family: var(--font-num);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.pictoName {
+  font-size: 0.8125rem;
+  line-height: 1.3;
+}
+
+.hcode {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+}

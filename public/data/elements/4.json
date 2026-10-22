@@ -115,6 +115,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 37.74,
+   "unc": 0.03,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -225,6 +232,105 @@
    "strategic": false,
    "listedAs": "beryllium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 16.443,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Consumer electronics take the largest share of beryllium products by sales (29 %), mostly as copper–beryllium alloy parts.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Aerospace and defence (24 %); pure beryllium metal serves mainly in defence and scientific equipment.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also industrial components (17 %), car electronics (9 %) and energy systems (8 %).",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H317",
+     "text": "May cause an allergic skin reaction"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    },
+    {
+     "code": "H350i",
+     "text": "May cause cancer by inhalation"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5460467,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 2.8,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 5.6e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.000181,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.000514286,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -236,6 +342,71 @@
    "source": "kobayashi2020",
    "note": "Paper Sect. 3.5: 'Be and B are supposed to be produced by cosmic rays [Prantzos et al. 1993], which is not included in our model either.' Empty box in Fig. 39. Value is the paper's qualitative statement, not a modelled fraction."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Resists oxidation at ordinary temperatures because a thin oxide film protects it.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Does not react with water under ordinary conditions.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "The oxide film slows attack by acids; it dissolves in aqueous alkali.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "BeO",
+    "name": "beryllium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14775
+   },
+   {
+    "formula": "BeCl2",
+    "name": "beryllium chloride",
+    "source": "pubchem_compounds",
+    "cid": 24588
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "BeO",
+    "name": "beryllium oxide",
+    "source": "pubchem_compounds",
+    "cid": 14775
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 27.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 45.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5460467
  },
  "amo": {
   "hyperfine": [
@@ -295,7 +466,19 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "iarc": [
+   {
+    "agent": "Beryllium and beryllium compounds",
+    "group": "1",
+    "volumes": [
+     "Sup 7",
+     "58",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1798,
@@ -312,7 +495,12 @@
   "nameOrigin": "From beryl (Greek beryllos), the gemstone that contains it.",
   "symbolNote": "Long called glucinium (symbol Gl), after the sweet taste of its salts; IUPAC chose the name beryllium in 1949.",
   "source": "pubchem",
-  "note": "CIAAW dates Vauquelin's discovery to 1797. Wöhler and Bussy obtained the metal independently, both by reducing the chloride with potassium."
+  "note": "CIAAW dates Vauquelin's discovery to 1797. Wöhler and Bussy obtained the metal independently, both by reducing the chloride with potassium.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Beryllium is a light, stiff, steel-grey metal of the alkaline-earth group, found in the mineral beryl, of which emerald and aquamarine are coloured varieties. Because X-rays pass through it easily, thin beryllium sheets serve as windows in X-ray tubes, and gold-coated beryllium forms the mirror segments of the James Webb Space Telescope. Beryllium has only one stable isotope, beryllium-9, whose nucleus has spin 3/2; the lighter beryllium-8 falls apart into two helium nuclei almost instantly, a bottleneck stars must overcome to make carbon. Its four electrons fill the 1s and 2s orbitals, giving [He] 2s² and the ground term ¹S₀.",

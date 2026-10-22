@@ -488,6 +488,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 112.0,
+   "unc": 13.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -593,6 +600,79 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.36,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Zircon (zirconium silicate) is used mostly in ceramics, and in foundry sand and furnace linings.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Zirconium ceramics shield hot parts of aerospace engines.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Zirconium metal hardly absorbs neutrons, so it is widely used inside nuclear reactors.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 23995,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 165.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 3e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.02931,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -606,6 +686,93 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.562, massive_stars 0.395, neutron_star_mergers 0.043); quantised to 0.05. Stack height 73 px. Text: '44% of [this element] can be produced from ECSNe ... which is included in the blue areas'; the figure's whole blue band reads lower (0.395), probably because the text percentage is relative to the solar value while the model overproduces s-process elements. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Bulk zirconium is unreactive at ordinary temperatures and oxidises readily only around 700 °C; powder, borings and shavings can ignite in air.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water; bulk metal is not attacked, but small amounts of water can speed the burning of zirconium dust.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Highly resistant to acids and alkalis except hydrofluoric acid, aqua regia and hot phosphoric acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "ZrO2",
+    "name": "zirconium dioxide",
+    "note": "zirconia ceramics",
+    "source": "pubchem_compounds",
+    "cid": 62395
+   },
+   {
+    "formula": "ZrSiO4",
+    "name": "zirconium silicate",
+    "note": "the gemstone and ore zircon",
+    "source": "pubchem_compounds",
+    "cid": 61775
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 4,
+    "formula": "ZrCl4",
+    "name": "zirconium tetrachloride",
+    "source": "pubchem_compounds",
+    "cid": 24817
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 4,
+    "coordination": "IV",
+    "radius": {
+     "value": 59.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 72.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VII",
+    "radius": {
+     "value": 78.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 4,
+    "coordination": "VIII",
+    "radius": {
+     "value": 84.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   }
+  ],
+  "pubchemCid": 23995
  },
  "amo": {
   "hyperfine": [],
@@ -631,7 +798,12 @@
   ],
   "nameOrigin": "From the mineral zircon, a name that goes back through Arabic to the Persian zargun, 'gold-coloured'.",
   "source": "pubchem",
-  "note": "Berzelius made impure metal in 1824; Lely and Hamburger made the pure metal (Z. anorg. Chem. 87, 209, 1914; doi:10.1002/zaac.19140870114)."
+  "note": "Berzelius made impure metal in 1824; Lely and Hamburger made the pure metal (Z. anorg. Chem. 87, 209, 1914; doi:10.1002/zaac.19140870114).",
+  "placeLocation": {
+   "lat": 52.524,
+   "lon": 13.4,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Zirconium is a strong, grey-white transition metal that resists corrosion and lets neutrons pass almost unhindered, so its alloys clad the fuel rods of nuclear reactors. Its oxide makes tough ceramic knives, dental crowns and the sparkling diamond imitation cubic zirconia. Tiny crystals of the mineral zircon from Western Australia are the oldest known fragments of Earth's crust, surviving from the planet's youth. The atom is [Kr] 4d² 5s² (ground term ³F₂), and zirconium's chemistry is almost identical to that of hafnium below it, because filling the 4f subshell before hafnium, the lanthanide contraction, shrinks hafnium to nearly zirconium's size.",

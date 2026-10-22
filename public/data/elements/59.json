@@ -665,6 +665,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 216.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -765,6 +772,111 @@
    "listedAs": "light rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines LREE as cerium, lanthanum, neodymium, praseodymium and samarium. Promethium is not assessed. Strategic via 'rare earth elements for permanent magnets (Nd, Pr, Tb, Dy, Gd, Sm, and Ce)', where the Regulation names the element explicitly."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.2,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Permanent magnets.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Aerospace alloys and batteries.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ceramics and colourants.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 52.6
+    },
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air",
+     "share": 28.3
+    },
+    {
+     "code": "H251",
+     "text": "Self-heating; may catch fire",
+     "share": 52.6
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 53.8
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 53.8
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 10.9
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23942,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 247,
+   "notMeetingCriteria": {
+    "share": 18.2,
+    "reports": 45,
+    "of": 247
+   },
+   "note": "Aggregated by PubChem from 247 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 18.2 % of the reports (45 of 247) say praseodymium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 9.2,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 6.4e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0007697,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -777,6 +889,65 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.825, massive_stars 0.158, neutron_star_mergers 0.017); quantised to 0.05. Stack height 95 px. Paper: 'The s-process elements are slightly overproduced even with the updated s-process yields.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Slowly tarnishes in air, forming a green oxide coat that flakes off.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with cold water and faster with hot water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Pr6O11",
+    "name": "praseodymium(III,IV) oxide",
+    "note": "yellow-green glass and ceramic colour",
+    "source": "pubchem_compounds",
+    "cid": 16211481
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "PrCl3",
+    "name": "praseodymium(III) chloride",
+    "source": "pubchem_compounds",
+    "cid": 66317
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 99.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 112.6,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23942
  },
  "amo": {
   "hyperfine": [],
@@ -797,7 +968,12 @@
   "place": "Vienna, Austria",
   "nameOrigin": "From the Greek prasios, 'leek-green', and didymos, 'twin', for its green salts and its origin in 'didymium'.",
   "source": "pubchem",
-  "note": "Auer split Mosander's 'didymium' into two elements, this one and neodymium."
+  "note": "Auer split Mosander's 'didymium' into two elements, this one and neodymium.",
+  "placeLocation": {
+   "lat": 48.202,
+   "lon": 16.365,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Praseodymium is a soft, silvery lanthanide that grows a green oxide skin in air; its name means ‘green twin’, because in 1885 Carl Auer von Welsbach split it from ‘didymium’, a supposed element that was really a mixture of praseodymium and neodymium. Its salts give glass and ceramic glazes a clean yellow, and glasses containing both twins are worn by glassblowers to cut out the yellow glare of hot glass. The atom keeps its filling-rule configuration, [Xe] 4f³ 6s², with three unpaired 4f electrons (ground term ⁴I°₉/₂). Its only stable isotope, praseodymium-141, has 82 neutrons, a magic number.",

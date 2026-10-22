@@ -688,6 +688,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 184.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -785,6 +792,88 @@
    "listedAs": "heavy rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.66,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Phosphors and nuclear control rods.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Europium oxide is the red phosphor of television screens; europium absorbs neutrons well.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 12.5
+    },
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air",
+     "share": 83.3
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously",
+     "share": 10.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23981,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 48,
+   "notMeetingCriteria": {
+    "share": 4.2,
+    "reports": 2,
+    "of": 48
+   },
+   "note": "Aggregated by PubChem from 48 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 4.2 % of the reports (2 of 48) say europium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 2.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1.3e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0004836,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -798,6 +887,90 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.197, massive_stars 0.720, neutron_star_mergers 0.084); quantised to 0.05. Stack height 80 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "The most reactive lanthanide: it oxidises rapidly in air and can ignite.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts with cold water, like calcium, giving hydrogen.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Eu2O3",
+    "name": "europium oxide",
+    "note": "the red phosphor of old colour TV screens",
+    "source": "pubchem_compounds",
+    "cid": 159371
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Eu2O3",
+    "name": "europium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159371
+   },
+   {
+    "state": 2,
+    "formula": "EuO",
+    "name": "europium(II) oxide",
+    "source": "pubchem_compounds",
+    "cid": 18439542
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 117.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 125.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 94.7,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 106.6,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23981
  },
  "amo": {
   "hyperfine": [],
@@ -819,7 +992,12 @@
   "place": "Paris, France",
   "nameOrigin": "After the continent of Europe.",
   "source": "pubchem",
-  "note": "Demarçay suspected it in samarium in 1896, the year CIAAW and Jefferson Lab give, and separated it in fairly pure form in 1901; Lecoq de Boisbaudran had seen some of its spectral lines in 1890."
+  "note": "Demarçay suspected it in samarium in 1896, the year CIAAW and Jefferson Lab give, and separated it in fairly pure form in 1901; Lecoq de Boisbaudran had seen some of its spectral lines in 1890.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Europium, named after the continent, is the most reactive of the lanthanides: it oxidises quickly in air and reacts with water much as calcium does. Its ions glow strongly under ultraviolet light, so europium compounds gave colour television screens their red and still supply the red and blue of many fluorescent lamps and white LEDs. Behind its quirks is a half-filled 4f shell, [Xe] 4f⁷ 6s², with seven unpaired electrons all spinning the same way (ground term ⁸S°₇/₂). Half-filled shells are especially stable, so europium readily forms the Eu²⁺ ion, while most lanthanides prefer to lose three electrons.",

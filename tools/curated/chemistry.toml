@@ -1,0 +1,2057 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# Chemistry & bonding (SPEC §10.9): one row per element, in our own words, every statement with a source.
+#
+# bonding            how the atoms of the element itself hold together: metallic | covalent network |
+#                    covalent layers | covalent chains | molecular | monatomic (with bonding_source)
+# air, water, acids  qualitative reactivity notes, each with *_source. They restate what the HSDB (`hsdb`)
+#                    or CAMEO Chemicals (`cameo_chemicals`) records of the elemental substance say, in our
+#                    own words; textbook facts cite `greenwood1997`. Where a note is absent the row gives
+#                    reactivity_missing (a SPEC §5.3 reason) and reactivity_note.
+# compounds          well-known compounds; `pubchem_compounds` rows are looked up by name (or by `lookup`,
+#                    when PubChem files the compound under another name) and the build checks PubChem's
+#                    formula against ours.
+#                    Where there are none the row gives compounds_missing (a SPEC §5.3 reason) and
+#                    compounds_note.
+# oxidation_examples one compound per common oxidation state (the bold states of the tile); an ion
+#                    (NpO2⁺) where that state lives mainly in solution. oxidation_note adds what the
+#                    examples leave out.
+# note_source       where a row has nothing but Missing notes, the source those notes rest on.
+# No sentence is copied from any source.
+
+[[row]]
+Z = 1  # H
+bonding = "molecular"
+bonding_note = "H₂ molecules, held together in the liquid and solid only by weak van der Waals forces."
+bonding_source = "greenwood1997"
+air = "Highly flammable: it burns in air to water, and mixtures of hydrogen and air can explode."
+air_source = "cameo_chemicals"
+water = "Does not react with water and barely dissolves in it."
+water_source = "greenwood1997"
+acids = "Does not react with acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "H2O", name = "water", source = "pubchem_compounds" },
+  { formula = "HCl", name = "hydrogen chloride", source = "pubchem_compounds" },
+  { formula = "NaH", name = "sodium hydride", note = "a salt-like hydride containing H⁻", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 1, formula = "HCl", name = "hydrogen chloride", source = "pubchem_compounds" },
+  { state = -1, formula = "LiH", name = "lithium hydride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 2  # He
+bonding = "monatomic"
+bonding_note = "Single atoms; helium stays liquid down to absolute zero unless it is put under pressure."
+bonding_source = "greenwood1997"
+air = "No reaction with air."
+air_source = "cameo_chemicals"
+water = "No reaction with water; very slightly soluble in it."
+water_source = "cameo_chemicals"
+acids = "Inert: forms no stable compounds under ordinary conditions."
+acids_source = "greenwood1997"
+compounds_missing = "not_applicable"
+compounds_note = "No stable neutral compound is known; the HeH⁺ ion and Na₂He (made only at very high pressure) are the exceptions."
+
+[[row]]
+Z = 3  # Li
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stays bright in dry air; in moist air its surface slowly gathers a film of hydroxide, carbonate and nitride."
+air_source = "hsdb"
+water = "Reacts with water, giving lithium hydroxide and hydrogen — the least vigorously of the alkali metals."
+water_source = "cameo_chemicals"
+acids = "Reacts violently with mineral acids."
+acids_source = "hsdb"
+compounds = [
+  { formula = "Li2CO3", name = "lithium carbonate", note = "used in batteries, glass and as a mood-stabilising drug", source = "pubchem_compounds" },
+  { formula = "LiOH", name = "lithium hydroxide", source = "pubchem_compounds" },
+  { formula = "Li3N", name = "lithium nitride", note = "lithium is the only alkali metal that reacts with nitrogen at room temperature", source = "greenwood1997" },
+]
+oxidation_examples = [
+  { state = 1, formula = "LiCl", name = "lithium chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 4  # Be
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Resists oxidation at ordinary temperatures because a thin oxide film protects it."
+air_source = "hsdb"
+water = "Does not react with water under ordinary conditions."
+water_source = "cameo_chemicals"
+acids = "The oxide film slows attack by acids; it dissolves in aqueous alkali."
+acids_source = "hsdb"
+compounds = [
+  { formula = "BeO", name = "beryllium oxide", source = "pubchem_compounds" },
+  { formula = "BeCl2", name = "beryllium chloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "BeO", name = "beryllium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 5  # B
+bonding = "covalent network"
+bonding_note = "B₁₂ icosahedra linked into a hard three-dimensional network."
+bonding_source = "greenwood1997"
+air = "Crystalline boron is very inert at room temperature; impure or amorphous boron is more reactive."
+air_source = "hsdb"
+water = "Does not react with water at room temperature."
+water_source = "greenwood1997"
+acids = "Crystalline boron resists most acids; hot concentrated nitric acid oxidises it to boric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "H3BO3", name = "boric acid", source = "pubchem_compounds" },
+  { formula = "Na2B4O7", name = "sodium tetraborate", note = "borax is its hydrate", source = "pubchem_compounds" },
+  { formula = "BF3", name = "boron trifluoride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "BCl3", name = "boron trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 6  # C
+bonding = "covalent layers"
+bonding_note = "Graphite: sheets of carbon hexagons stacked by weak forces. Diamond is a covalent network."
+bonding_source = "greenwood1997"
+air = "Bulk graphite or diamond is stable in air at room temperature; fine carbon dust is flammable and freshly made powders can self-heat."
+air_source = "cameo_chemicals"
+water = "Insoluble in water and does not react with it."
+water_source = "cameo_chemicals"
+acids = "Insoluble in acids and alkalis; only hot oxidising acids attack graphite."
+acids_source = "hsdb"
+compounds = [
+  { formula = "CO2", name = "carbon dioxide", source = "pubchem_compounds" },
+  { formula = "CH4", name = "methane", source = "pubchem_compounds" },
+  { formula = "CaCO3", name = "calcium carbonate", note = "limestone, chalk and marble", source = "pubchem_compounds" },
+  { formula = "SiC", name = "silicon carbide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "CO2", name = "carbon dioxide", source = "pubchem_compounds" },
+  { state = 2, formula = "CO", name = "carbon monoxide", source = "pubchem_compounds" },
+  { state = -4, formula = "CH4", name = "methane", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 7  # N
+bonding = "molecular"
+bonding_note = "N₂ molecules with a triple bond, one of the strongest bonds known — which is why nitrogen is so unreactive."
+bonding_source = "greenwood1997"
+air = "Unreactive; it makes up 78 % of the air. Electric sparks make it combine with oxygen to nitric oxide."
+air_source = "hsdb"
+water = "No reaction with water; slightly soluble."
+water_source = "cameo_chemicals"
+acids = "Does not react with acids."
+acids_source = "hsdb"
+compounds = [
+  { formula = "NH3", name = "ammonia", source = "pubchem_compounds" },
+  { formula = "HNO3", name = "nitric acid", source = "pubchem_compounds" },
+  { formula = "NO2", name = "nitrogen dioxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 5, formula = "HNO3", name = "nitric acid", source = "pubchem_compounds" },
+  { state = 4, formula = "NO2", name = "nitrogen dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "HNO2", name = "nitrous acid", source = "pubchem_compounds" },
+  { state = 2, formula = "NO", name = "nitric oxide", source = "pubchem_compounds" },
+  { state = 1, formula = "N2O", name = "nitrous oxide", source = "pubchem_compounds" },
+  { state = -1, formula = "NH2OH", name = "hydroxylamine", source = "pubchem_compounds" },
+  { state = -2, formula = "N2H4", name = "hydrazine", source = "pubchem_compounds" },
+  { state = -3, formula = "NH3", name = "ammonia", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 8  # O
+bonding = "molecular"
+bonding_note = "O₂ molecules (and O₃, ozone); O₂ has two unpaired electrons, so liquid oxygen is drawn into a magnet."
+bonding_source = "greenwood1997"
+air = "A fifth of the air; a strong oxidising agent that makes most other substances burn."
+air_source = "cameo_chemicals"
+water = "No reaction with water; slightly soluble, which is what fish breathe."
+water_source = "cameo_chemicals"
+acids = "Does not react with acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "H2O", name = "water", source = "pubchem_compounds" },
+  { formula = "SiO2", name = "silicon dioxide", note = "quartz and sand", source = "pubchem_compounds" },
+  { formula = "H2O2", name = "hydrogen peroxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = -2, formula = "H2O", name = "water", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 9  # F
+bonding = "molecular"
+bonding_note = "F₂ molecules with an unusually weak F–F bond, one reason fluorine is so reactive."
+bonding_source = "greenwood1997"
+air = "The most reactive element: it attacks almost everything, and most substances burn in it."
+air_source = "hsdb"
+water = "Reacts with water, even ice, to give hydrofluoric acid, oxygen and ozone, sometimes explosively."
+water_source = "cameo_chemicals"
+acids = "Oxidises what it meets; it is not dissolved by acids but reacts with them."
+acids_source = "hsdb"
+compounds = [
+  { formula = "HF", name = "hydrogen fluoride", source = "pubchem_compounds" },
+  { formula = "CaF2", name = "calcium fluoride", note = "the mineral fluorite", source = "pubchem_compounds" },
+  { formula = "SF6", name = "sulfur hexafluoride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = -1, formula = "NaF", name = "sodium fluoride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 10  # Ne
+bonding = "monatomic"
+bonding_source = "greenwood1997"
+air = "No reaction with air."
+air_source = "cameo_chemicals"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Inert: no neutral compound is known."
+acids_source = "greenwood1997"
+compounds_missing = "not_applicable"
+compounds_note = "No stable neutral compound is known."
+
+[[row]]
+Z = 11  # Na
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes quickly to a dull grey and burns in air when heated, forming sodium oxide."
+air_source = "hsdb"
+water = "Reacts violently with water, giving sodium hydroxide and hydrogen, which often catches fire."
+water_source = "cameo_chemicals"
+acids = "Reacts violently with acids, forming the sodium salts (with hydrochloric acid, common salt)."
+acids_source = "hsdb"
+compounds = [
+  { formula = "NaCl", name = "sodium chloride", note = "table salt", source = "pubchem_compounds" },
+  { formula = "NaOH", name = "sodium hydroxide", source = "pubchem_compounds" },
+  { formula = "NaHCO3", name = "sodium bicarbonate", note = "baking soda", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 1, formula = "NaCl", name = "sodium chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 12  # Mg
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stable in ordinary air under a thin oxide film; oxidises slowly in moist air and is strongly attacked by salt spray."
+air_source = "hsdb"
+water = "Reacts only slowly with cold water, giving hydrogen; powder reacts faster."
+water_source = "cameo_chemicals"
+acids = "Dissolves in most acids with hydrogen given off; hydrofluoric acid leaves it almost untouched."
+acids_source = "hsdb"
+compounds = [
+  { formula = "MgO", name = "magnesium oxide", source = "pubchem_compounds" },
+  { formula = "MgSO4", name = "magnesium sulfate", note = "Epsom salt is its hydrate", source = "pubchem_compounds" },
+  { formula = "MgCl2", name = "magnesium chloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "MgO", name = "magnesium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 13  # Al
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "A thin, tight oxide film forms at once and protects the metal; fine aluminium dust can ignite and explode."
+air_source = "hsdb"
+water = "The oxide film stops any reaction with water; unprotected metal or powder releases hydrogen."
+water_source = "cameo_chemicals"
+acids = "Dissolves in dilute hydrochloric and sulfuric acid, and in caustic alkalis, giving off hydrogen."
+acids_source = "hsdb"
+compounds = [
+  { formula = "Al2O3", name = "aluminum oxide", note = "corundum; ruby and sapphire are coloured forms", source = "pubchem_compounds" },
+  { formula = "AlCl3", name = "aluminum chloride", source = "pubchem_compounds" },
+  { formula = "Al2(SO4)3", name = "aluminum sulfate", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Al2O3", name = "aluminum oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 14  # Si
+bonding = "covalent network"
+bonding_note = "The diamond structure: each atom bonded to four others."
+bonding_source = "greenwood1997"
+air = "Stable in air at room temperature under a thin oxide layer; fine silicon dust is flammable and can explode."
+air_source = "cameo_chemicals"
+water = "Insoluble in water and does not react with it."
+water_source = "cameo_chemicals"
+acids = "Resists acids except a mixture of hydrofluoric and nitric acid; dissolves in hot alkali, giving hydrogen."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "SiO2", name = "silicon dioxide", note = "quartz and sand", source = "pubchem_compounds" },
+  { formula = "SiC", name = "silicon carbide", source = "pubchem_compounds" },
+  { formula = "SiCl4", name = "silicon tetrachloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "SiO2", name = "silicon dioxide", source = "pubchem_compounds" },
+  { state = 2, formula = "SiO", name = "silicon monoxide", source = "pubchem_compounds" },
+  { state = -4, formula = "Mg2Si", name = "magnesium silicide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 15  # P
+bonding = "molecular"
+bonding_note = "White phosphorus is made of P₄ tetrahedra; red and black phosphorus are covalent networks."
+bonding_source = "greenwood1997"
+air = "White phosphorus glows in the dark and catches fire on its own in air at about 30 °C; red and black phosphorus are stable in air."
+air_source = "hsdb"
+water = "Insoluble in water; white phosphorus is stored under water to keep air away."
+water_source = "greenwood1997"
+acids = "Hot concentrated nitric acid oxidises it to phosphoric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "H3PO4", name = "phosphoric acid", source = "pubchem_compounds" },
+  { formula = "P2O5", name = "phosphorus pentoxide", note = "the molecule is P₄O₁₀; a powerful drying agent", source = "pubchem_compounds" },
+  { formula = "PCl3", name = "phosphorus trichloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 5, formula = "H3PO4", name = "phosphoric acid", source = "pubchem_compounds" },
+  { state = 3, formula = "PCl3", name = "phosphorus trichloride", source = "pubchem_compounds" },
+  { state = -3, formula = "PH3", name = "phosphine", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 16  # S
+bonding = "molecular"
+bonding_note = "Crowns of eight atoms, S₈, in the common yellow forms; many other rings and chains exist."
+bonding_source = "greenwood1997"
+air = "Stable in air at room temperature; burns with a blue flame to sulfur dioxide when lit."
+air_source = "greenwood1997"
+water = "Insoluble in water and does not react with it."
+water_source = "greenwood1997"
+acids = "Not attacked by non-oxidising acids; hot concentrated nitric or sulfuric acid oxidise it."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "H2SO4", name = "sulfuric acid", source = "pubchem_compounds" },
+  { formula = "SO2", name = "sulfur dioxide", source = "pubchem_compounds" },
+  { formula = "H2S", name = "hydrogen sulfide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "H2SO4", name = "sulfuric acid", source = "pubchem_compounds" },
+  { state = 4, formula = "SO2", name = "sulfur dioxide", source = "pubchem_compounds" },
+  { state = -2, formula = "H2S", name = "hydrogen sulfide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 17  # Cl
+bonding = "molecular"
+bonding_source = "greenwood1997"
+air = "Does not burn; a strong oxidising gas that attacks many metals and organic materials."
+air_source = "cameo_chemicals"
+water = "Dissolves in water, forming a mixture of hydrochloric and hypochlorous acids."
+water_source = "cameo_chemicals"
+acids = "Not dissolved by acids; it oxidises what it reacts with."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "NaCl", name = "sodium chloride", source = "pubchem_compounds" },
+  { formula = "HCl", name = "hydrogen chloride", source = "pubchem_compounds" },
+  { formula = "NaClO", name = "sodium hypochlorite", note = "household bleach", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 7, formula = "HClO4", name = "perchloric acid", source = "pubchem_compounds" },
+  { state = 5, formula = "KClO3", name = "potassium chlorate", source = "pubchem_compounds" },
+  { state = 1, formula = "NaClO", name = "sodium hypochlorite", source = "pubchem_compounds" },
+  { state = -1, formula = "NaCl", name = "sodium chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 18  # Ar
+bonding = "monatomic"
+bonding_source = "greenwood1997"
+air = "No reaction with air, of which it makes up almost 1 %."
+air_source = "cameo_chemicals"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Not known to combine chemically with any element."
+acids_source = "hsdb"
+compounds_missing = "not_applicable"
+compounds_note = "No stable neutral compound is known; argon can be trapped in cages of other molecules (clathrates)."
+
+[[row]]
+Z = 19  # K
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes at once; oxidises so fast that the metal can melt and ignite."
+air_source = "cameo_chemicals"
+water = "Reacts violently with water, giving potassium hydroxide and hydrogen, which ignites with a lilac flame."
+water_source = "cameo_chemicals"
+acids = "Reacts violently with acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "KCl", name = "potassium chloride", note = "potash fertiliser", source = "pubchem_compounds" },
+  { formula = "KOH", name = "potassium hydroxide", source = "pubchem_compounds" },
+  { formula = "KNO3", name = "potassium nitrate", note = "saltpetre", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 1, formula = "KCl", name = "potassium chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 20  # Ca
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises in air to a film that sticks and protects it; calcium burns with a red flame."
+air_source = "hsdb"
+water = "Reacts readily with water, giving calcium hydroxide and hydrogen."
+water_source = "cameo_chemicals"
+acids = "Reacts with dilute acids, giving off hydrogen."
+acids_source = "hsdb"
+compounds = [
+  { formula = "CaCO3", name = "calcium carbonate", note = "limestone, chalk, marble, shells", source = "pubchem_compounds" },
+  { formula = "CaO", name = "calcium oxide", note = "quicklime", source = "pubchem_compounds" },
+  { formula = "CaSO4", name = "calcium sulfate", note = "gypsum is its hydrate", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "CaO", name = "calcium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 21  # Sc
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes slowly in air, forming a thin oxide layer."
+air_source = "greenwood1997"
+water = "Reacts slowly with hot water, giving hydrogen."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Sc2O3", name = "scandium oxide", source = "pubchem_compounds" },
+  { formula = "ScCl3", name = "scandium chloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Sc2O3", name = "scandium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 22  # Ti
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Protected by its oxide film at ordinary temperatures; combines with oxygen at red heat, and titanium dust is flammable."
+air_source = "hsdb"
+water = "No reaction with water at room temperature; it decomposes steam only at 700–800 °C."
+water_source = "hsdb"
+acids = "Attacked by acids only on heating; nitric acid oxidises it."
+acids_source = "hsdb"
+compounds = [
+  { formula = "TiO2", name = "titanium dioxide", note = "the white pigment in paints and sunscreens", source = "pubchem_compounds" },
+  { formula = "TiCl4", name = "titanium tetrachloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "TiO2", name = "titanium dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "TiCl3", name = "titanium trichloride", source = "pubchem_compounds" },
+  { state = 2, formula = "TiO", name = "titanium monoxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 23  # V
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Not oxidised by air at ordinary temperatures; oxidises readily above about 660 °C."
+air_source = "hsdb"
+water = "Barely affected by water or moisture at ordinary temperatures."
+water_source = "cameo_chemicals"
+acids = "Resists hydrochloric and dilute sulfuric acid, but nitric, hydrofluoric and concentrated sulfuric acid attack it."
+acids_source = "hsdb"
+compounds = [
+  { formula = "V2O5", name = "vanadium pentoxide", note = "catalyst for making sulfuric acid", source = "pubchem_compounds" },
+  { formula = "VCl4", name = "vanadium tetrachloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 5, formula = "V2O5", name = "vanadium pentoxide", source = "pubchem_compounds" },
+  { state = 4, formula = "VO2", name = "vanadium dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "V2O3", name = "vanadium trioxide", source = "pubchem_compounds" },
+  { state = 2, formula = "VCl2", name = "vanadium dichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 24  # Cr
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Resists attack by air at ordinary temperatures, which is why it is used for plating."
+air_source = "hsdb"
+water = "Insoluble in water and not attacked by it."
+water_source = "cameo_chemicals"
+acids = "Dissolves in dilute hydrochloric and sulfuric acid; nitric acid makes it passive."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Cr2O3", name = "chromium(III) oxide", note = "the green pigment chrome green", source = "pubchem_compounds" },
+  { formula = "K2Cr2O7", name = "potassium dichromate", source = "pubchem_compounds" },
+  { formula = "CrO3", name = "chromium trioxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "K2CrO4", name = "potassium chromate", source = "pubchem_compounds" },
+  { state = 3, formula = "Cr2O3", name = "chromium(III) oxide", source = "pubchem_compounds" },
+  { state = 2, formula = "CrCl2", name = "chromium(II) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 25  # Mn
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises superficially in air; burns with a bright light when heated."
+air_source = "hsdb"
+water = "Decomposes water slowly in the cold and quickly when heated, giving hydrogen."
+water_source = "hsdb"
+acids = "Dissolves in dilute mineral acids with hydrogen given off, forming manganese(II) salts."
+acids_source = "hsdb"
+compounds = [
+  { formula = "MnO2", name = "manganese dioxide", note = "in ordinary alkaline batteries", source = "pubchem_compounds" },
+  { formula = "KMnO4", name = "potassium permanganate", source = "pubchem_compounds" },
+  { formula = "MnSO4", name = "manganese(II) sulfate", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 7, formula = "KMnO4", name = "potassium permanganate", source = "pubchem_compounds" },
+  { state = 4, formula = "MnO2", name = "manganese dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "Mn2O3", name = "manganese(III) oxide", source = "pubchem_compounds" },
+  { state = 2, formula = "MnSO4", name = "manganese(II) sulfate", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 26  # Fe
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Keeps its shine in dry air, but rusts in moist air to hydrated iron oxides; fine iron powder can catch fire by itself."
+air_source = "hsdb"
+water = "Bulk iron does not react with pure water; in water containing air it rusts, and iron powder can release hydrogen."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute mineral acids, giving hydrogen; cold concentrated nitric or sulfuric acid leave it untouched, hot ones attack it."
+acids_source = "hsdb"
+compounds = [
+  { formula = "Fe2O3", name = "iron(III) oxide", lookup = "ferric oxide", note = "haematite, the main iron ore; rust is its hydrated form", source = "pubchem_compounds" },
+  { formula = "Fe3O4", name = "iron(II,III) oxide", lookup = "ferrosoferric oxide", note = "magnetite, the magnetic iron ore", source = "pubchem_compounds" },
+  { formula = "FeS2", name = "iron disulfide", note = "pyrite, fool's gold", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "FeCl3", name = "iron(III) chloride", source = "pubchem_compounds" },
+  { state = 2, formula = "FeSO4", name = "iron(II) sulfate", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 27  # Co
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Bulk cobalt is fairly stable in air at room temperature and oxidises when heated; the fine powder can burn."
+air_source = "greenwood1997"
+water = "Insoluble in water and not attacked by it."
+water_source = "cameo_chemicals"
+acids = "Dissolves slowly in dilute mineral acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "CoCl2", name = "cobalt(II) chloride", note = "blue when dry, pink when damp", source = "pubchem_compounds" },
+  { formula = "Co3O4", name = "cobalt(II,III) oxide", lookup = "tricobalt tetraoxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "CoF3", name = "cobalt(III) fluoride", source = "pubchem_compounds" },
+  { state = 2, formula = "CoCl2", name = "cobalt(II) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 28  # Ni
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stable in air at ordinary temperatures; burns in oxygen to nickel oxide."
+air_source = "hsdb"
+water = "Not affected by water."
+water_source = "hsdb"
+acids = "Attacked only slowly by dilute hydrochloric or sulfuric acid, but readily by nitric acid; resists molten alkali."
+acids_source = "hsdb"
+compounds = [
+  { formula = "NiO", name = "nickel(II) oxide", source = "pubchem_compounds" },
+  { formula = "NiSO4", name = "nickel(II) sulfate", note = "used for nickel plating", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Ni2O3", name = "nickel(III) oxide", source = "pubchem_compounds" },
+  { state = 2, formula = "NiCl2", name = "nickel(II) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 29  # Cu
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Dulls slowly in air and, in moist air, gathers the green coat of basic carbonate seen on copper roofs; heating gives a black oxide."
+air_source = "hsdb"
+water = "Insoluble in water and not attacked by it."
+water_source = "cameo_chemicals"
+acids = "Hardly attacked by cold hydrochloric or dilute sulfuric acid, but readily by dilute nitric acid and hot concentrated sulfuric acid."
+acids_source = "hsdb"
+compounds = [
+  { formula = "CuSO4", name = "copper(II) sulfate", note = "blue vitriol is its hydrate", source = "pubchem_compounds" },
+  { formula = "CuO", name = "copper(II) oxide", source = "pubchem_compounds" },
+  { formula = "Cu2O", name = "copper(I) oxide", note = "the red mineral cuprite", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "CuSO4", name = "copper(II) sulfate", source = "pubchem_compounds" },
+  { state = 1, formula = "Cu2O", name = "copper(I) oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 30  # Zn
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stable in dry air; in moist air it gains a white coat of basic carbonate that protects it, which is how galvanising works."
+air_source = "hsdb"
+water = "Not attacked by water in bulk; damp zinc dust can heat up and give off hydrogen."
+water_source = "cameo_chemicals"
+acids = "Dissolves slowly in dilute sulfuric or hydrochloric acid and quickly in nitric acid; also dissolves in alkalis as zincates."
+acids_source = "hsdb"
+compounds = [
+  { formula = "ZnO", name = "zinc oxide", note = "white pigment, sunscreen", source = "pubchem_compounds" },
+  { formula = "ZnS", name = "zinc sulfide", note = "the ore sphalerite", source = "pubchem_compounds" },
+  { formula = "ZnCl2", name = "zinc chloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "ZnO", name = "zinc oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 31  # Ga
+bonding = "metallic"
+bonding_note = "An unusual metal: Ga₂ pairs inside the solid, which is why it melts just above room temperature."
+bonding_source = "greenwood1997"
+air = "Stable in dry air; tarnishes in moist air or oxygen."
+air_source = "hsdb"
+water = "Not attacked by water at room temperature."
+water_source = "greenwood1997"
+acids = "Attacked by cold concentrated hydrochloric acid; hot nitric acid makes it passive; dissolves in alkalis, giving hydrogen."
+acids_source = "hsdb"
+compounds = [
+  { formula = "GaAs", name = "gallium arsenide", note = "semiconductor for LEDs and solar cells", source = "pubchem_compounds" },
+  { formula = "GaN", name = "gallium nitride", note = "the semiconductor of blue LEDs", source = "pubchem_compounds" },
+  { formula = "Ga2O3", name = "gallium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "GaCl3", name = "gallium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 32  # Ge
+bonding = "covalent network"
+bonding_note = "The diamond structure, like silicon."
+bonding_source = "greenwood1997"
+air = "Unaffected by air at room temperature; oxidises above about 600 °C."
+air_source = "hsdb"
+water = "Insoluble in water and not attacked by it."
+water_source = "greenwood1997"
+acids = "Resists hydrochloric and dilute sulfuric acid; dissolved by hot concentrated sulfuric acid, aqua regia and molten alkali."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "GeO2", name = "germanium dioxide", note = "used in optical-fibre glass", source = "pubchem_compounds" },
+  { formula = "GeCl4", name = "germanium tetrachloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "GeO2", name = "germanium dioxide", source = "pubchem_compounds" },
+  { state = 2, formula = "GeO", name = "germanium monoxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 33  # As
+bonding = "covalent layers"
+bonding_note = "Grey arsenic: puckered sheets of atoms, each bonded to three neighbours."
+bonding_source = "greenwood1997"
+air = "Loses its lustre in air, turning black and forming arsenic trioxide on the surface."
+air_source = "hsdb"
+water = "Insoluble in water."
+water_source = "cameo_chemicals"
+acids = "Not attacked by cold sulfuric or hydrochloric acid; nitric acid or hot sulfuric acid turn it into arsenous or arsenic acid."
+acids_source = "hsdb"
+compounds = [
+  { formula = "As2O3", name = "arsenic trioxide", note = "the classic poison 'white arsenic'; also a leukaemia drug", source = "pubchem_compounds" },
+  { formula = "GaAs", name = "gallium arsenide", source = "pubchem_compounds" },
+  { formula = "AsH3", name = "arsine", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 5, formula = "H3AsO4", name = "arsenic acid", source = "pubchem_compounds" },
+  { state = 3, formula = "As2O3", name = "arsenic trioxide", source = "pubchem_compounds" },
+  { state = -3, formula = "AsH3", name = "arsine", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 34  # Se
+bonding = "covalent chains"
+bonding_note = "Grey selenium: endless spiral chains of atoms; red selenium is made of Se₈ rings."
+bonding_source = "greenwood1997"
+air = "Stable in air at room temperature; burns with a blue flame when heated, giving selenium dioxide."
+air_source = "greenwood1997"
+water = "Insoluble in water."
+water_source = "cameo_chemicals"
+acids = "Oxidised by nitric acid to selenious acid and by sulfuric acid to selenic acid."
+acids_source = "hsdb"
+compounds = [
+  { formula = "SeO2", name = "selenium dioxide", source = "pubchem_compounds" },
+  { formula = "H2Se", name = "hydrogen selenide", source = "pubchem_compounds" },
+  { formula = "ZnSe", name = "zinc selenide", lookup = "selanylidenezinc", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "H2SeO4", name = "selenic acid", source = "pubchem_compounds" },
+  { state = 4, formula = "SeO2", name = "selenium dioxide", source = "pubchem_compounds" },
+  { state = -2, formula = "H2Se", name = "hydrogen selenide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 35  # Br
+bonding = "molecular"
+bonding_note = "Br₂ molecules; one of only two elements liquid at room temperature."
+bonding_source = "greenwood1997"
+air = "Gives off red-brown, choking fumes in air; a strong oxidiser."
+air_source = "cameo_chemicals"
+water = "Slightly soluble in water, giving 'bromine water', which contains hypobromous and hydrobromic acids."
+water_source = "greenwood1997"
+acids = "Not dissolved by acids; it oxidises what it reacts with."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "NaBr", name = "sodium bromide", source = "pubchem_compounds" },
+  { formula = "HBr", name = "hydrogen bromide", source = "pubchem_compounds" },
+  { formula = "AgBr", name = "silver bromide", note = "the light-sensitive salt of photographic film", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 5, formula = "KBrO3", name = "potassium bromate", source = "pubchem_compounds" },
+  { state = 1, formula = "HOBr", name = "hypobromous acid", source = "pubchem_compounds" },
+  { state = -1, formula = "NaBr", name = "sodium bromide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 36  # Kr
+bonding = "monatomic"
+bonding_source = "greenwood1997"
+air = "No reaction with air."
+air_source = "cameo_chemicals"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Inert towards acids; only fluorine forces it into a compound, KrF₂."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "KrF2", name = "krypton difluoride", note = "unstable; one of very few krypton compounds", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 37  # Rb
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes at once in air and can catch fire by itself."
+air_source = "cameo_chemicals"
+water = "Reacts violently with water, giving rubidium hydroxide and hydrogen, which the heat usually ignites."
+water_source = "cameo_chemicals"
+acids = "Reacts violently with acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "RbCl", name = "rubidium chloride", source = "pubchem_compounds" },
+  { formula = "RbOH", name = "rubidium hydroxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 1, formula = "RbCl", name = "rubidium chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 38  # Sr
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Quickly turns yellowish in air as an oxide film forms; heated, it combines with nitrogen and hydrogen too."
+air_source = "hsdb"
+water = "Reacts with water, giving strontium hydroxide and hydrogen."
+water_source = "hsdb"
+acids = "Dissolves in acids, giving off hydrogen."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "SrCO3", name = "strontium carbonate", source = "pubchem_compounds" },
+  { formula = "Sr(NO3)2", name = "strontium nitrate", note = "gives fireworks their red", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "SrO", name = "strontium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 39  # Y
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises when heated in air or oxygen."
+air_source = "hsdb"
+water = "Decomposes cold water slowly and boiling water quickly."
+water_source = "hsdb"
+acids = "Dissolves readily in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Y2O3", name = "yttrium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Y2O3", name = "yttrium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 40  # Zr
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Bulk zirconium is unreactive at ordinary temperatures and oxidises readily only around 700 °C; powder, borings and shavings can ignite in air."
+air_source = "hsdb"
+water = "Insoluble in water; bulk metal is not attacked, but small amounts of water can speed the burning of zirconium dust."
+water_source = "cameo_chemicals"
+acids = "Highly resistant to acids and alkalis except hydrofluoric acid, aqua regia and hot phosphoric acid."
+acids_source = "hsdb"
+compounds = [
+  { formula = "ZrO2", name = "zirconium dioxide", note = "zirconia ceramics", source = "pubchem_compounds" },
+  { formula = "ZrSiO4", name = "zirconium silicate", note = "the gemstone and ore zircon", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "ZrCl4", name = "zirconium tetrachloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 41  # Nb
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Protected by an oxide film at room temperature; oxidises when heated in air."
+air_source = "greenwood1997"
+water = "Not attacked by water."
+water_source = "greenwood1997"
+acids = "Resists most acids, including aqua regia; attacked by hydrofluoric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Nb2O5", name = "niobium pentoxide", source = "pubchem_compounds" },
+  { formula = "LiNbO3", name = "lithium niobate", note = "a crystal for optical modulators", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 5, formula = "Nb2O5", name = "niobium pentoxide", source = "pubchem_compounds" },
+  { state = 3, formula = "NbCl3", name = "niobium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 42  # Mo
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stable in air at ordinary temperatures; oxidises on strong heating."
+air_source = "hsdb"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Resists hydrofluoric and hydrochloric acid; oxidising acids such as nitric acid attack it."
+acids_source = "hsdb"
+compounds = [
+  { formula = "MoS2", name = "molybdenum disulfide", note = "the ore molybdenite, and a dry lubricant", source = "pubchem_compounds" },
+  { formula = "MoO3", name = "molybdenum trioxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "MoO3", name = "molybdenum trioxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 43  # Tc
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Silvery metal that tarnishes slowly in moist air; burns in fluorine or oxygen when heated."
+air_source = "greenwood1997"
+water = "Not attacked by water."
+water_source = "greenwood1997"
+acids = "Dissolves in nitric acid and aqua regia, and in hydrogen peroxide solutions, as the pertechnetate ion; not in hydrochloric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "NaTcO4", name = "sodium pertechnetate", note = "carrier of technetium-99m in hospitals", source = "pubchem_compounds" },
+  { formula = "TcO2", name = "technetium dioxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 7, formula = "NaTcO4", name = "sodium pertechnetate", source = "pubchem_compounds" },
+  { state = 6, formula = "TcF6", name = "technetium hexafluoride", source = "greenwood1997" },
+  { state = 4, formula = "TcO2", name = "technetium dioxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 44  # Ru
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Does not tarnish in air at room temperature; oxidises above about 800 °C."
+air_source = "greenwood1997"
+water = "Not attacked by water."
+water_source = "greenwood1997"
+acids = "Not attacked by acids, not even aqua regia; dissolved by molten alkali with an oxidiser."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "RuO2", name = "ruthenium dioxide", note = "in thick-film resistors", source = "pubchem_compounds" },
+  { formula = "RuO4", name = "ruthenium tetroxide", source = "pubchem_compounds" },
+  { formula = "RuCl3", name = "ruthenium trichloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "RuCl3", name = "ruthenium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 45  # Rh
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "No reaction with air at room temperature; at red heat it slowly oxidises to rhodium(III) oxide."
+air_source = "hsdb"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Compact rhodium resists every acid, even aqua regia; only the finely divided metal dissolves in aqua regia."
+acids_source = "hsdb"
+compounds = [
+  { formula = "RhCl3", name = "rhodium trichloride", source = "pubchem_compounds" },
+  { formula = "Rh2O3", name = "rhodium(III) oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "RhCl3", name = "rhodium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 46  # Pd
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stable in air, even when warm, and does not tarnish in hydrogen sulfide; turns to the oxide at red heat. It soaks up large volumes of hydrogen."
+air_source = "hsdb"
+water = "Not attacked by water."
+water_source = "greenwood1997"
+acids = "The most reactive of the platinum metals: dissolves slowly in nitric acid and readily in aqua regia."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "PdCl2", name = "palladium(II) chloride", source = "pubchem_compounds" },
+  { formula = "PdO", name = "palladium(II) oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "PdCl2", name = "palladium(II) chloride", source = "pubchem_compounds" },
+]
+oxidation_note = "True palladium(III) compounds are rare; palladium's everyday states are +2 and +4."
+
+[[row]]
+Z = 47  # Ag
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stable in clean air and water, but tarnishes black in air containing sulfur compounds or ozone."
+air_source = "hsdb"
+water = "Insoluble in water and not attacked by it."
+water_source = "cameo_chemicals"
+acids = "Dissolves in nitric acid and hot concentrated sulfuric acid; not in hydrochloric or dilute sulfuric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "AgNO3", name = "silver nitrate", source = "pubchem_compounds" },
+  { formula = "AgCl", name = "silver chloride", source = "pubchem_compounds" },
+  { formula = "Ag2S", name = "silver sulfide", note = "the black tarnish on silver", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 1, formula = "AgNO3", name = "silver nitrate", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 48  # Cd
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises slowly in moist air to cadmium oxide; finely divided cadmium can ignite."
+air_source = "hsdb"
+water = "Insoluble in water."
+water_source = "cameo_chemicals"
+acids = "Dissolves slowly in dilute acids, giving hydrogen, and readily in nitric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "CdS", name = "cadmium sulfide", note = "the pigment cadmium yellow", source = "pubchem_compounds" },
+  { formula = "CdTe", name = "cadmium telluride", note = "thin-film solar cells", source = "pubchem_compounds" },
+  { formula = "CdO", name = "cadmium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "CdS", name = "cadmium sulfide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 49  # In
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Quite stable in air at room temperature; burns when strongly heated, giving the oxide."
+air_source = "hsdb"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Dissolves in mineral acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "In2O3", name = "indium oxide", note = "with tin, the transparent conductor ITO of touch screens", source = "pubchem_compounds" },
+  { formula = "InP", name = "indium phosphide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "In2O3", name = "indium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 50  # Sn
+bonding = "metallic"
+bonding_note = "White tin is a metal; below 13 °C it can slowly change to grey tin, which has the diamond structure."
+bonding_source = "greenwood1997"
+air = "Stable in air in bulk; tin powder oxidises, especially when damp, and heated tin forms the oxide."
+air_source = "hsdb"
+water = "Resists distilled, soft and sea water; oxygen dissolved in the water speeds up attack."
+water_source = "hsdb"
+acids = "Dissolves slowly in dilute acids and readily in hot concentrated ones."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "SnO2", name = "tin(IV) oxide", note = "the ore cassiterite", source = "pubchem_compounds" },
+  { formula = "SnCl2", name = "tin(II) chloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "SnO2", name = "tin(IV) oxide", source = "pubchem_compounds" },
+  { state = 2, formula = "SnCl2", name = "tin(II) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 51  # Sb
+bonding = "covalent layers"
+bonding_note = "Puckered layers like grey arsenic; a brittle semimetal."
+bonding_source = "greenwood1997"
+air = "Does not tarnish in dry air and only slowly in moist air."
+air_source = "hsdb"
+water = "Insoluble in water."
+water_source = "cameo_chemicals"
+acids = "Not affected by cold dilute acids; attacked by hot concentrated sulfuric acid and readily by aqua regia."
+acids_source = "hsdb"
+compounds = [
+  { formula = "Sb2S3", name = "antimony trisulfide", note = "the ore stibnite, the 'kohl' of antiquity", source = "pubchem_compounds" },
+  { formula = "Sb2O3", name = "antimony trioxide", note = "a flame retardant", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 5, formula = "SbCl5", name = "antimony pentachloride", source = "pubchem_compounds" },
+  { state = 3, formula = "Sb2O3", name = "antimony trioxide", source = "pubchem_compounds" },
+  { state = -3, formula = "SbH3", name = "stibine", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 52  # Te
+bonding = "covalent chains"
+bonding_note = "Spiral chains of atoms, like grey selenium."
+bonding_source = "greenwood1997"
+air = "Tarnishes slightly in air; burns with a blue-green flame to tellurium dioxide when heated."
+air_source = "hsdb"
+water = "Insoluble in water and does not react with it."
+water_source = "cameo_chemicals"
+acids = "Reacts with nitric acid and with concentrated sulfuric acid, but not with hydrochloric acid."
+acids_source = "hsdb"
+compounds = [
+  { formula = "CdTe", name = "cadmium telluride", source = "pubchem_compounds" },
+  { formula = "TeO2", name = "tellurium dioxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "H6TeO6", name = "telluric acid", source = "pubchem_compounds" },
+  { state = 4, formula = "TeO2", name = "tellurium dioxide", source = "pubchem_compounds" },
+  { state = -2, formula = "H2Te", name = "hydrogen telluride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 53  # I
+bonding = "molecular"
+bonding_note = "I₂ molecules in a dark, shiny solid that sublimes to violet vapour."
+bonding_source = "greenwood1997"
+air = "No reaction with air; it slowly sublimes at room temperature into violet, corrosive vapour."
+air_source = "hsdb"
+water = "Only slightly soluble in water, but dissolves well in iodide solutions as triiodide."
+water_source = "hsdb"
+acids = "Not dissolved by acids; strong oxidising acids such as nitric acid oxidise it to iodic acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "KI", name = "potassium iodide", note = "added to iodised salt", source = "pubchem_compounds" },
+  { formula = "HI", name = "hydrogen iodide", source = "pubchem_compounds" },
+  { formula = "AgI", name = "silver iodide", note = "used to seed clouds", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 7, formula = "KIO4", name = "potassium periodate", source = "pubchem_compounds" },
+  { state = 5, formula = "KIO3", name = "potassium iodate", source = "pubchem_compounds" },
+  { state = 1, formula = "ICl", name = "iodine monochloride", source = "pubchem_compounds" },
+  { state = -1, formula = "KI", name = "potassium iodide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 54  # Xe
+bonding = "monatomic"
+bonding_source = "greenwood1997"
+air = "No reaction with air."
+air_source = "cameo_chemicals"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Inert towards acids; fluorine and oxygen-fluorine compounds give it stable compounds."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "XeF2", name = "xenon difluoride", source = "pubchem_compounds" },
+  { formula = "XeF4", name = "xenon tetrafluoride", source = "pubchem_compounds" },
+  { formula = "XeO3", name = "xenon trioxide", note = "explosive", source = "greenwood1997" },
+]
+oxidation_note = "As an element, xenon is 0; in its compounds it takes +2, +4, +6 and +8 (XeF₂, XeF₄, XeO₃)."
+
+[[row]]
+Z = 55  # Cs
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Catches fire by itself in air at room temperature if its surface is clean."
+air_source = "cameo_chemicals"
+water = "Reacts explosively with water: the heat ignites the hydrogen released, leaving caesium hydroxide."
+water_source = "cameo_chemicals"
+acids = "Reacts violently with acids, halogens and other oxidisers."
+acids_source = "hsdb"
+compounds = [
+  { formula = "CsCl", name = "cesium chloride", note = "gives its name to a common crystal structure", source = "pubchem_compounds" },
+  { formula = "CsOH", name = "cesium hydroxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 1, formula = "CsCl", name = "cesium chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 56  # Ba
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises readily in moist air; the finely divided metal ignites by itself."
+air_source = "hsdb"
+water = "Reacts rapidly with water, giving barium hydroxide and hydrogen."
+water_source = "cameo_chemicals"
+acids = "Reacts violently with acids."
+acids_source = "hsdb"
+compounds = [
+  { formula = "BaSO4", name = "barium sulfate", note = "the barium meal of X-ray imaging; the ore barite", source = "pubchem_compounds" },
+  { formula = "BaCO3", name = "barium carbonate", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "BaSO4", name = "barium sulfate", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 57  # La
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes quickly in air, forming an oxide coat that flakes off; burns readily when heated."
+air_source = "greenwood1997"
+water = "Reacts slowly with cold water and faster with hot water, giving hydrogen."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute acids, giving hydrogen."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "La2O3", name = "lanthanum oxide", note = "in high-refractive-index camera-lens glass", source = "pubchem_compounds" },
+  { formula = "LaNi5", name = "lanthanum nickel", note = "stores hydrogen in nickel-metal-hydride batteries", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "La2O3", name = "lanthanum oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 58  # Ce
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises in air; the powdered metal ignites by itself, and an alloy rich in cerium gives the sparks of lighter flints."
+air_source = "greenwood1997"
+water = "Reacts with water, slowly in the cold and quickly when hot, giving hydrogen."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "CeO2", name = "cerium dioxide", note = "glass-polishing powder and catalytic converters", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "CeO2", name = "cerium dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "CeCl3", name = "cerium(III) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 59  # Pr
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Slowly tarnishes in air, forming a green oxide coat that flakes off."
+air_source = "greenwood1997"
+water = "Reacts slowly with cold water and faster with hot water."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Pr6O11", name = "praseodymium(III,IV) oxide", note = "yellow-green glass and ceramic colour", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "PrCl3", name = "praseodymium(III) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 60  # Nd
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes quickly in air; it is kept under oil or sealed in plastic."
+air_source = "greenwood1997"
+water = "Reacts slowly with cold water and faster with hot water."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Nd2O3", name = "neodymium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Nd2O3", name = "neodymium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 61  # Pm
+bonding = "metallic"
+bonding_source = "greenwood1997"
+reactivity_missing = "not_measured"
+reactivity_note = "Promethium has no stable isotope and only small amounts of the metal have ever been made; its reactions with air, water and acids are expected to be like those of neodymium and samarium, but they have not been described from experiments."
+compounds = [
+  { formula = "Pm2O3", name = "promethium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Pm2O3", name = "promethium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 62  # Sm
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Reasonably stable in air at room temperature; ignites at about 150 °C."
+air_source = "hsdb"
+water = "Reacts slowly with cold water and faster with hot water."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "SmCo5", name = "samarium cobalt", note = "high-temperature permanent magnets", source = "pubchem_compounds" },
+  { formula = "Sm2O3", name = "samarium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Sm2O3", name = "samarium oxide", source = "pubchem_compounds" },
+  { state = 2, formula = "SmI2", name = "samarium(II) iodide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 63  # Eu
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "The most reactive lanthanide: it oxidises rapidly in air and can ignite."
+air_source = "greenwood1997"
+water = "Reacts with cold water, like calcium, giving hydrogen."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Eu2O3", name = "europium oxide", note = "the red phosphor of old colour TV screens", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Eu2O3", name = "europium oxide", source = "pubchem_compounds" },
+  { state = 2, formula = "EuO", name = "europium(II) oxide", lookup = "europium oxide (EuO)", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 64  # Gd
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Fairly stable in dry air; tarnishes in moist air, forming a white oxide."
+air_source = "greenwood1997"
+water = "Reacts slowly with water."
+water_source = "greenwood1997"
+acids = "Dissolves in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Gd2O3", name = "gadolinium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "GdCl3", name = "gadolinium chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 65  # Tb
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Fairly stable in air; tarnishes slowly."
+air_source = "greenwood1997"
+water = "Reacts slowly with cold water and faster with hot water."
+water_source = "greenwood1997"
+acids = "Dissolves in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Tb4O7", name = "terbium(III,IV) oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "TbCl3", name = "terbium(III) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 66  # Dy
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Fairly stable in air at room temperature; burns readily when heated."
+air_source = "greenwood1997"
+water = "Reacts slowly with cold water and faster with hot water."
+water_source = "greenwood1997"
+acids = "Dissolves in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Dy2O3", name = "dysprosium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Dy2O3", name = "dysprosium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 67  # Ho
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Fairly stable in dry air at room temperature; oxidises in moist air or when heated."
+air_source = "greenwood1997"
+water = "Reacts slowly with water."
+water_source = "greenwood1997"
+acids = "Dissolves in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Ho2O3", name = "holmium oxide", note = "a wavelength standard for spectrometers", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Ho2O3", name = "holmium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 68  # Er
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Fairly stable in air at room temperature; oxidises when heated."
+air_source = "greenwood1997"
+water = "Reacts slowly with water."
+water_source = "greenwood1997"
+acids = "Dissolves in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Er2O3", name = "erbium oxide", note = "pink colour in glass", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Er2O3", name = "erbium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 69  # Tm
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Fairly stable in dry air; tarnishes slowly in moist air."
+air_source = "greenwood1997"
+water = "Reacts slowly with cold water and faster with hot water."
+water_source = "greenwood1997"
+acids = "Dissolves in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Tm2O3", name = "thulium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Tm2O3", name = "thulium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 70  # Yb
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Slowly oxidises in air; kept sealed to stay bright."
+air_source = "greenwood1997"
+water = "Reacts slowly with water."
+water_source = "greenwood1997"
+acids = "Dissolves readily in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Yb2O3", name = "ytterbium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Yb2O3", name = "ytterbium oxide", source = "pubchem_compounds" },
+  { state = 2, formula = "YbCl2", name = "ytterbium(II) chloride", lookup = "ytterbium dichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 71  # Lu
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "The least reactive lanthanide: fairly stable in air."
+air_source = "greenwood1997"
+water = "Reacts slowly with water."
+water_source = "greenwood1997"
+acids = "Dissolves in dilute acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Lu2O3", name = "lutetium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Lu2O3", name = "lutetium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 72  # Hf
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Protected by its oxide film at room temperature; the dry powder is pyrophoric and burns fiercely."
+air_source = "cameo_chemicals"
+water = "Bulk hafnium hardly reacts with water; the powder gives off hydrogen with moisture."
+water_source = "cameo_chemicals"
+acids = "Resists most acids and alkalis; hydrofluoric acid dissolves it."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "HfO2", name = "hafnium dioxide", note = "the gate insulator in modern microchips", source = "pubchem_compounds" },
+  { formula = "HfC", name = "hafnium carbide", source = "greenwood1997" },
+]
+oxidation_examples = [
+  { state = 4, formula = "HfO2", name = "hafnium dioxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 73  # Ta
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Very resistant: reacts with oxygen only on heating; the powder, though, can ignite in air."
+air_source = "hsdb"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Not attacked by any aqueous acid except hydrofluoric, nor by aqueous alkalis; molten alkali attacks it slowly."
+acids_source = "hsdb"
+compounds = [
+  { formula = "Ta2O5", name = "tantalum pentoxide", note = "the dielectric of tantalum capacitors", source = "pubchem_compounds" },
+  { formula = "TaC", name = "tantalum carbide", source = "greenwood1997" },
+]
+oxidation_examples = [
+  { state = 5, formula = "Ta2O5", name = "tantalum pentoxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 74  # W
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stable in dry air at ordinary temperatures; oxidises when hot, which is why lamp filaments sit in vacuum or inert gas."
+air_source = "hsdb"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Resists most acids; a mixture of nitric and hydrofluoric acid dissolves it."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "WC", name = "tungsten carbide", note = "cutting tools and drill bits", source = "pubchem_compounds" },
+  { formula = "WO3", name = "tungsten trioxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "WO3", name = "tungsten trioxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 75  # Re
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Stable in air at room temperature; oxidises to the volatile heptoxide when heated."
+air_source = "greenwood1997"
+water = "No reaction with water."
+water_source = "greenwood1997"
+acids = "Resists hydrochloric acid; dissolves in nitric acid and hot concentrated sulfuric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Re2O7", name = "rhenium heptoxide", source = "pubchem_compounds" },
+  { formula = "KReO4", name = "potassium perrhenate", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 7, formula = "Re2O7", name = "rhenium heptoxide", source = "pubchem_compounds" },
+  { state = 6, formula = "ReO3", name = "rhenium trioxide", source = "pubchem_compounds" },
+  { state = 4, formula = "ReO2", name = "rhenium dioxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 76  # Os
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Solid osmium is unaffected by cold air, but the powder slowly gives off toxic osmium tetroxide."
+air_source = "hsdb"
+water = "No reaction with water."
+water_source = "greenwood1997"
+acids = "Barely affected by hydrochloric or sulfuric acid; aqua regia and oxidising acids attack it slowly."
+acids_source = "hsdb"
+compounds = [
+  { formula = "OsO4", name = "osmium tetroxide", note = "volatile and very toxic; used to stain biological samples", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "OsO2", name = "osmium dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "OsCl3", name = "osmium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 77  # Ir
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Does not tarnish in air; very fine iridium powder can ignite."
+air_source = "hsdb"
+water = "No reaction with water."
+water_source = "greenwood1997"
+acids = "The most corrosion-resistant metal known: not attacked by acids, not even aqua regia."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "IrO2", name = "iridium dioxide", note = "a catalyst for splitting water", source = "pubchem_compounds" },
+  { formula = "IrCl3", name = "iridium trichloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "IrO2", name = "iridium dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "IrCl3", name = "iridium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 78  # Pt
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "No reaction with air, at any ordinary temperature."
+air_source = "cameo_chemicals"
+water = "No reaction with water."
+water_source = "cameo_chemicals"
+acids = "Not attacked by single acids; dissolves in hot aqua regia."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "H2PtCl6", name = "chloroplatinic acid", source = "pubchem_compounds" },
+  { formula = "PtCl2(NH3)2", name = "cisplatin", note = "a cancer drug", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "H2PtCl6", name = "chloroplatinic acid", source = "pubchem_compounds" },
+  { state = 2, formula = "PtCl2(NH3)2", name = "cisplatin", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 79  # Au
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Never corrodes in air or oxygen; only sulfur tarnishes it a little."
+air_source = "hsdb"
+water = "No reaction with water."
+water_source = "greenwood1997"
+acids = "Not attacked by single acids; dissolves in aqua regia and in cyanide solutions with air."
+acids_source = "hsdb"
+compounds = [
+  { formula = "HAuCl4", name = "chloroauric acid", source = "pubchem_compounds" },
+  { formula = "AuCl", name = "gold(I) chloride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "HAuCl4", name = "chloroauric acid", source = "pubchem_compounds" },
+  { state = 1, formula = "AuCl", name = "gold(I) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 80  # Hg
+bonding = "metallic"
+bonding_note = "A metal, but with such weak bonds between atoms that it is liquid at room temperature."
+bonding_source = "greenwood1997"
+air = "Does not tarnish in air at room temperature when pure, but slowly evaporates; near its boiling point it oxidises to mercury(II) oxide."
+air_source = "hsdb"
+water = "Insoluble in water and does not react with it."
+water_source = "cameo_chemicals"
+acids = "Not attacked by hydrochloric or dilute sulfuric acid; dissolves in nitric acid and hot concentrated sulfuric acid."
+acids_source = "hsdb"
+compounds = [
+  { formula = "HgS", name = "mercury(II) sulfide", note = "cinnabar, the red pigment vermilion", source = "pubchem_compounds" },
+  { formula = "Hg2Cl2", name = "mercury(I) chloride", note = "calomel", source = "pubchem_compounds" },
+  { formula = "HgO", name = "mercury(II) oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 2, formula = "HgCl2", name = "mercury(II) chloride", source = "pubchem_compounds" },
+  { state = 1, formula = "Hg2Cl2", name = "mercury(I) chloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 81  # Tl
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises superficially in air to thallium(I) oxide; kept under oil."
+air_source = "hsdb"
+water = "Insoluble in water; slowly attacked by moist air."
+water_source = "greenwood1997"
+acids = "Dissolves in nitric and sulfuric acid; only slowly in hydrochloric acid, which coats it with insoluble chloride."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Tl2SO4", name = "thallium(I) sulfate", note = "a former rat poison", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "TlCl3", name = "thallium(III) chloride", source = "pubchem_compounds" },
+  { state = 1, formula = "Tl2SO4", name = "thallium(I) sulfate", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 82  # Pb
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "A freshly cut surface dulls quickly in air under a thin protective film of oxide and carbonate."
+air_source = "greenwood1997"
+water = "Insoluble in water; soft water containing air or carbon dioxide slowly dissolves traces of it — why lead pipes were abandoned."
+water_source = "greenwood1997"
+acids = "Hydrochloric and sulfuric acid barely attack it because the lead salts formed do not dissolve; nitric acid dissolves it."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "PbS", name = "lead sulfide", note = "the ore galena", source = "pubchem_compounds" },
+  { formula = "PbO2", name = "lead dioxide", note = "the positive plate of car batteries", source = "pubchem_compounds" },
+  { formula = "PbSO4", name = "lead sulfate", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "PbO2", name = "lead dioxide", source = "pubchem_compounds" },
+  { state = 2, formula = "PbO", name = "lead(II) oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 83  # Bi
+bonding = "metallic"
+bonding_note = "Puckered layers like antimony; a brittle metal that conducts electricity poorly."
+bonding_source = "greenwood1997"
+air = "Oxidised only on the surface in air, often turning iridescent; heated in air it burns to bismuth trioxide."
+air_source = "hsdb"
+water = "No reaction with water at room temperature."
+water_source = "greenwood1997"
+acids = "Dissolves in nitric acid and hot concentrated sulfuric acid; hardly attacked by hydrochloric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Bi2O3", name = "bismuth trioxide", source = "pubchem_compounds" },
+  { formula = "BiOCl", name = "bismuth oxychloride", note = "a pearly pigment in cosmetics", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 5, formula = "NaBiO3", name = "sodium bismuthate", source = "pubchem_compounds" },
+  { state = 3, formula = "Bi2O3", name = "bismuth trioxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 84  # Po
+bonding = "metallic"
+bonding_note = "The only element with a simple cubic crystal (α-polonium)."
+bonding_source = "greenwood1997"
+air = "Oxidises in air; its own intense radioactivity heats it and makes it glow blue."
+air_source = "greenwood1997"
+water_missing = "not_measured"
+water_note = "Not described for the bulk metal: only milligram amounts of polonium have ever been handled."
+acids = "Dissolves in dilute acids, forming pink polonium(II) solutions that its radiation quickly turns into yellow polonium(IV)."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "PoO2", name = "polonium dioxide", source = "greenwood1997" },
+]
+oxidation_examples = [
+  { state = 4, formula = "PoO2", name = "polonium dioxide", source = "greenwood1997" },
+  { state = 2, formula = "PoCl2", name = "polonium(II) chloride", lookup = "polonium dichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 85  # At
+bonding_missing = "predicted_only"
+bonding_note = "No visible amount of astatine has ever been made; calculations suggest the solid would be a metal."
+reactivity_missing = "not_measured"
+reactivity_note = "Astatine has only been studied as trace amounts in solution, where it behaves partly like iodine and partly like a metal; the reactions of the element with air, water and acids have never been observed."
+compounds_missing = "not_measured"
+compounds_note = "Only traces of astatine compounds (such as hydrogen astatide and astatine iodide) have been detected."
+note_source = "greenwood1997"
+
+[[row]]
+Z = 86  # Rn
+bonding = "monatomic"
+bonding_source = "greenwood1997"
+air = "No reaction with air."
+air_source = "greenwood1997"
+water = "Dissolves slightly in water and does not react with it."
+water_source = "greenwood1997"
+acids = "Inert towards acids; only fluorine has been made to combine with it."
+acids_source = "greenwood1997"
+compounds_missing = "not_measured"
+compounds_note = "Radon difluoride has been made in tiny amounts; radon's radioactivity makes its chemistry hard to study."
+
+[[row]]
+Z = 87  # Fr
+bonding_missing = "predicted_only"
+bonding_note = "No weighable amount of francium has ever been gathered; it is expected to be an alkali metal like caesium."
+reactivity_missing = "predicted_only"
+reactivity_note = "Its longest-lived isotope lasts 22 minutes, so only clouds of atoms and trace amounts in solution have been studied; it is expected to react with air and water even more violently than caesium."
+compounds_missing = "not_measured"
+compounds_note = "Only trace amounts in solution have been studied; francium behaves like the other alkali metals."
+oxidation_note = "In solution francium is +1, like the other alkali metals."
+note_source = "greenwood1997"
+
+[[row]]
+Z = 88  # Ra
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Turns black at once in air, forming a nitride; its radioactivity makes its salts glow faintly."
+air_source = "greenwood1997"
+water = "Reacts vigorously with water, like barium, giving radium hydroxide and hydrogen."
+water_source = "greenwood1997"
+acids = "Dissolves in acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "RaCl2", name = "radium chloride", source = "greenwood1997" },
+  { formula = "RaSO4", name = "radium sulfate", source = "greenwood1997" },
+]
+oxidation_examples = [
+  { state = 2, formula = "RaCl2", name = "radium chloride", source = "greenwood1997" },
+]
+
+[[row]]
+Z = 89  # Ac
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises quickly in moist air; its radioactivity makes it glow faintly blue in the dark."
+air_source = "greenwood1997"
+water = "Reacts with water, giving hydrogen."
+water_source = "greenwood1997"
+acids = "Dissolves in acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Ac2O3", name = "actinium oxide", lookup = "actinium(III) oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Ac2O3", name = "actinium oxide", lookup = "actinium(III) oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 90  # Th
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Pure thorium keeps in air, slowly darkening; the finely divided metal can ignite by itself."
+air_source = "hsdb"
+water = "Attacked only slowly by water."
+water_source = "hsdb"
+acids = "Hydrochloric acid attacks it vigorously; nitric acid makes it passive; most other common acids attack it only slowly."
+acids_source = "hsdb"
+compounds = [
+  { formula = "ThO2", name = "thorium dioxide", note = "the glowing material of old gas mantles; the highest-melting oxide", source = "pubchem_compounds" },
+  { formula = "ThF4", name = "thorium tetrafluoride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "ThO2", name = "thorium dioxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 91  # Pa
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes slowly in air."
+air_source = "greenwood1997"
+water_missing = "not_measured"
+water_note = "Only small amounts of protactinium metal have been made; its reaction with water is not described."
+acids = "Dissolves in hydrochloric acid; in solution it readily forms insoluble hydrolysis products."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Pa2O5", name = "protactinium pentoxide", source = "greenwood1997" },
+]
+oxidation_examples = [
+  { state = 5, formula = "Pa2O5", name = "protactinium pentoxide", source = "greenwood1997" },
+  { state = 4, formula = "PaCl4", name = "protactinium(IV) chloride", lookup = "protactinium tetrachloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 92  # U
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "A coat of oxide forms in air; the powder can ignite. A strong reducing agent that reacts with nearly all non-metals."
+air_source = "hsdb"
+water = "Reacts slowly with cold water and faster with hot water or steam."
+water_source = "greenwood1997"
+acids = "Dissolves in hydrochloric and nitric acid; hardly attacked by alkalis."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "UO2", name = "uranium dioxide", note = "the fuel in most nuclear reactors", source = "pubchem_compounds" },
+  { formula = "UF6", name = "uranium hexafluoride", note = "the gas used to enrich uranium", source = "pubchem_compounds" },
+  { formula = "U3O8", name = "triuranium octoxide", note = "yellowcake's main constituent", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "UF6", name = "uranium hexafluoride", source = "pubchem_compounds" },
+  { state = 5, formula = "UF5", name = "uranium pentafluoride", source = "pubchem_compounds" },
+  { state = 4, formula = "UO2", name = "uranium dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "UCl3", name = "uranium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 93  # Np
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes slowly in air at room temperature and oxidises quickly when heated."
+air_source = "greenwood1997"
+water_missing = "not_measured"
+water_note = "The reaction of neptunium metal with water is not described in the sources used here."
+acids = "Dissolves in hydrochloric acid."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "NpO2", name = "neptunium dioxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "NpF6", name = "neptunium hexafluoride", source = "pubchem_compounds" },
+  { state = 5, formula = "NpO2⁺", name = "neptunyl(V) ion", source = "greenwood1997" },
+  { state = 4, formula = "NpO2", name = "neptunium dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "NpCl3", name = "neptunium(III) chloride", lookup = "neptunium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 94  # Pu
+bonding = "metallic"
+bonding_note = "A metal with six solid forms between room temperature and its melting point."
+bonding_source = "greenwood1997"
+air = "Tarnishes quickly in moist air, forming a powdery oxide; the fine powder can ignite."
+air_source = "greenwood1997"
+water = "Reacts slowly with water, faster when warm."
+water_source = "greenwood1997"
+acids = "Dissolves readily in hydrochloric acid; concentrated nitric acid makes it passive."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "PuO2", name = "plutonium dioxide", note = "fuel of space probes' radioisotope generators", source = "greenwood1997" },
+  { formula = "PuF4", name = "plutonium tetrafluoride", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "PuF6", name = "plutonium hexafluoride", source = "pubchem_compounds" },
+  { state = 5, formula = "PuO2⁺", name = "plutonyl(V) ion", source = "greenwood1997" },
+  { state = 4, formula = "PuO2", name = "plutonium dioxide", source = "greenwood1997" },
+  { state = 3, formula = "PuCl3", name = "plutonium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 95  # Am
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes slowly in dry air."
+air_source = "greenwood1997"
+water_missing = "not_measured"
+water_note = "The reaction of americium metal with water is not described in the sources used here."
+acids = "Dissolves readily in acids; in solution the +3 ion is the stable form and is hard to oxidise."
+acids_source = "hsdb"
+compounds = [
+  { formula = "AmO2", name = "americium dioxide", note = "the source in ionisation smoke detectors", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 6, formula = "AmO2²⁺", name = "americyl(VI) ion", source = "greenwood1997" },
+  { state = 5, formula = "AmO2⁺", name = "americyl(V) ion", source = "greenwood1997" },
+  { state = 4, formula = "AmO2", name = "americium dioxide", source = "pubchem_compounds" },
+  { state = 3, formula = "AmCl3", name = "americium(III) chloride", lookup = "americium trichloride", source = "pubchem_compounds" },
+]
+oxidation_note = "In water americium is usually +3."
+
+[[row]]
+Z = 96  # Cm
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Tarnishes in air; its strong radioactivity heats the metal."
+air_source = "greenwood1997"
+water_missing = "not_measured"
+water_note = "The reaction of curium metal with water is not described in the sources used here."
+acids = "Dissolves in acids, giving curium(III) solutions."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Cm2O3", name = "curium(III) oxide", lookup = "curium oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Cm2O3", name = "curium(III) oxide", lookup = "curium oxide", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 97  # Bk
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises in air; only milligram amounts have been handled."
+air_source = "greenwood1997"
+water_missing = "not_measured"
+water_note = "Only milligram amounts of berkelium metal have ever been made; its reaction with water is not described."
+acids = "Dissolves in mineral acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "BkO2", name = "berkelium dioxide", lookup = "berkelium(IV) oxide", source = "pubchem_compounds" },
+]
+oxidation_examples = [
+  { state = 4, formula = "BkO2", name = "berkelium dioxide", lookup = "berkelium(IV) oxide", source = "pubchem_compounds" },
+  { state = 3, formula = "BkCl3", name = "berkelium(III) chloride", lookup = "berkelium trichloride", source = "pubchem_compounds" },
+]
+
+[[row]]
+Z = 98  # Cf
+bonding = "metallic"
+bonding_source = "greenwood1997"
+air = "Oxidises slowly in air at room temperature, faster in moist air or when warmed."
+air_source = "hsdb"
+water_missing = "not_measured"
+water_note = "Only milligram amounts of californium metal exist; its reaction with water is not described."
+acids = "Dissolves in mineral acids."
+acids_source = "greenwood1997"
+compounds = [
+  { formula = "Cf2O3", name = "californium oxide", source = "greenwood1997" },
+]
+oxidation_examples = [
+  { state = 3, formula = "Cf2O3", name = "californium oxide", source = "greenwood1997" },
+]
+
+[[row]]
+Z = 99  # Es
+bonding = "metallic"
+bonding_note = "Einsteinium metal has been made only in microgram amounts."
+bonding_source = "greenwood1997"
+reactivity_missing = "not_measured"
+reactivity_note = "Only micrograms of einsteinium have ever been available, and its radioactivity destroys samples within weeks; its reactions with air, water and acids have not been described."
+compounds_missing = "not_measured"
+compounds_note = "Only microgram amounts of a few compounds (oxide, halides) have been prepared."
+oxidation_note = "Einsteinium is +3 in solution."
+note_source = "greenwood1997"
+
+[[row]]
+Z = 100  # Fm
+bonding_missing = "predicted_only"
+bonding_note = "Fermium metal has never been made; it is expected to be a metal like the other actinides."
+reactivity_missing = "not_measured"
+reactivity_note = "Fermium has been studied only as tracer amounts in solution; the element itself has never been prepared."
+compounds_missing = "not_measured"
+compounds_note = "Only studied as tracer amounts in solution, where it is +3 (with some +2)."
+note_source = "greenwood1997"
+
+[[row]]
+Z = 101  # Md
+bonding_missing = "predicted_only"
+bonding_note = "Mendelevium metal has never been made."
+reactivity_missing = "not_measured"
+reactivity_note = "Mendelevium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+compounds_missing = "not_measured"
+compounds_note = "No compound has been isolated; in solution it is mostly +3, with a reachable +2 state."
+note_source = "greenwood1997"
+
+[[row]]
+Z = 102  # No
+bonding_missing = "predicted_only"
+bonding_note = "Nobelium metal has never been made."
+reactivity_missing = "not_measured"
+reactivity_note = "Nobelium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+compounds_missing = "not_measured"
+compounds_note = "No compound has been isolated; unusually for an actinide, +2 is its stable state in water."
+note_source = "greenwood1997"
+
+[[row]]
+Z = 103  # Lr
+bonding_missing = "predicted_only"
+bonding_note = "Lawrencium metal has never been made."
+reactivity_missing = "not_measured"
+reactivity_note = "Lawrencium has been studied only a few atoms at a time, in solution; the element itself has never been prepared."
+compounds_missing = "not_measured"
+compounds_note = "No compound has been isolated; in solution it is +3."
+note_source = "greenwood1997"
+
+[[row]]
+Z = 104  # Rf
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; calculations predict a metal."
+reactivity_missing = "predicted_only"
+reactivity_note = "Rutherfordium is made a few atoms at a time and lives seconds to hours; its reactions with air, water and acids are known only from predictions based on its place in group 4."
+compounds_missing = "not_measured"
+compounds_note = "Only single molecules have been studied, in fast gas-phase and solution experiments (for example RfCl₄)."
+note_source = "turler2013"
+
+[[row]]
+Z = 105  # Db
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; calculations predict a metal."
+reactivity_missing = "predicted_only"
+reactivity_note = "Dubnium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+compounds_missing = "not_measured"
+compounds_note = "Only single molecules have been studied, in fast gas-phase and solution experiments."
+note_source = "turler2013"
+
+[[row]]
+Z = 106  # Sg
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; calculations predict a metal."
+reactivity_missing = "predicted_only"
+reactivity_note = "Seaborgium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+compounds_missing = "not_measured"
+compounds_note = "Only single molecules have been studied, in fast gas-phase and solution experiments."
+note_source = "turler2013"
+
+[[row]]
+Z = 107  # Bh
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; calculations predict a metal."
+reactivity_missing = "predicted_only"
+reactivity_note = "Bohrium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+compounds = [
+  { formula = "BhO3Cl", name = "bohrium oxychloride", note = "six molecules, identified in a gas-phase experiment in 2000", source = "primary_literature", doi = "10.1038/35024044" },
+]
+note_source = "turler2013"
+
+[[row]]
+Z = 108  # Hs
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; calculations predict a metal."
+reactivity_missing = "predicted_only"
+reactivity_note = "Hassium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+compounds = [
+  { formula = "HsO4", name = "hassium tetroxide", note = "volatile like osmium tetroxide; seven molecules, studied in 2001", source = "primary_literature", doi = "10.1038/nature00980" },
+]
+note_source = "turler2013"
+
+[[row]]
+Z = 109  # Mt
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; calculations predict a metal."
+reactivity_missing = "predicted_only"
+reactivity_note = "Meitnerium's chemistry has never been studied in experiments: its atoms live too briefly. Everything about its reactivity is predicted."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; its chemistry is known only from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 110  # Ds
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; calculations predict a metal."
+reactivity_missing = "predicted_only"
+reactivity_note = "Darmstadtium's chemistry has never been studied in experiments: its atoms live too briefly. Everything about its reactivity is predicted."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; its chemistry is known only from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 111  # Rg
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; calculations predict a metal."
+reactivity_missing = "predicted_only"
+reactivity_note = "Roentgenium's chemistry has never been studied in experiments. Calculations suggest it would be a noble metal, like gold."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; its chemistry is known only from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 112  # Cn
+bonding_missing = "predicted_only"
+bonding_note = "Single atoms only; whether the bulk element would be a liquid metal, a semiconductor or even gas-like is still debated."
+reactivity_missing = "predicted_only"
+reactivity_note = "Single-atom experiments showed copernicium sticking to gold less strongly than mercury does, so it behaves as a very volatile metal; its reactions with air, water and acids are not known."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; single-atom experiments have tested how it sticks to surfaces, and the rest comes from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 113  # Nh
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made."
+reactivity_missing = "predicted_only"
+reactivity_note = "Nihonium's chemistry is known almost entirely from predictions."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; what is known of its chemistry comes mostly from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 114  # Fl
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made; adsorption experiments show that it is very volatile."
+reactivity_missing = "predicted_only"
+reactivity_note = "Flerovium's chemistry is known only from predictions and single-atom adsorption experiments."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; single-atom experiments have tested how it sticks to surfaces, and the rest comes from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 115  # Mc
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made."
+reactivity_missing = "predicted_only"
+reactivity_note = "Moscovium's chemistry is known almost entirely from predictions."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; what is known of its chemistry comes mostly from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 116  # Lv
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made."
+reactivity_missing = "predicted_only"
+reactivity_note = "Livermorium's chemistry has never been studied in experiments; everything about it is predicted."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; its chemistry is known only from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 117  # Ts
+bonding_missing = "predicted_only"
+bonding_note = "Only single atoms have been made."
+reactivity_missing = "predicted_only"
+reactivity_note = "Tennessine's chemistry has never been studied in experiments; everything about it is predicted."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; its chemistry is known only from calculations."
+note_source = "turler2013"
+
+[[row]]
+Z = 118  # Og
+bonding_missing = "predicted_only"
+bonding_note = "Only a handful of atoms have been observed. Although it sits under radon, calculations suggest that relativity would make it a solid at room temperature rather than a monatomic gas."
+reactivity_missing = "predicted_only"
+reactivity_note = "Oganesson's chemistry has never been studied in experiments; calculations suggest it would be far more reactive than the other noble gases."
+compounds_missing = "predicted_only"
+compounds_note = "No compound has been made; its chemistry is known only from calculations."
+note_source = "smits2020"

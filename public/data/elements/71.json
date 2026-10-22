@@ -757,6 +757,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 137.0,
+   "unc": 7.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -858,6 +865,78 @@
    "listedAs": "heavy rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.86,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Cancer therapies.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Medical imaging and electronics.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 88.2
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23929,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 51,
+   "notMeetingCriteria": {
+    "share": 7.8,
+    "reports": 4,
+    "of": 51
+   },
+   "note": "Aggregated by PubChem from 51 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 7.8 % of the reports (4 of 51) say lutetium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.8,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1.5e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0002054,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -871,6 +950,64 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.382, massive_stars 0.585, neutron_star_mergers 0.033); quantised to 0.05. Stack height 87 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "The least reactive lanthanide: fairly stable in air.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Lu2O3",
+    "name": "lutetium oxide",
+    "source": "pubchem_compounds",
+    "cid": 4323797
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Lu2O3",
+    "name": "lutetium oxide",
+    "source": "pubchem_compounds",
+    "cid": 4323797
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.1,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 97.7,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23929
  },
  "amo": {
   "hyperfine": [],
@@ -911,7 +1048,16 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "isotopeUses": [
+   {
+    "A": 177,
+    "field": "medicine",
+    "text": "Lutetium-177 bound to a molecule that docks onto prostate-cancer cells (PSMA-617) prolonged survival in advanced prostate cancer in a 2021 trial; its beta radiation is delivered from inside, at the tumour.",
+    "source": "primary_literature",
+    "doi": "10.1056/NEJMoa2107322"
+   }
+  ]
  },
  "history": {
   "discovered": 1907,
@@ -923,7 +1069,12 @@
   "nameOrigin": "From Lutetia, the Latin name of Paris.",
   "symbolNote": "Spelled lutecium until 1949; German-speaking chemists long called it cassiopeium (symbol Cp), Auer's name.",
   "source": "pubchem",
-  "note": "Urbain published first and won the naming; Auer von Welsbach separated it independently at about the same time."
+  "note": "Urbain published first and won the naming; Auer von Welsbach separated it independently at about the same time.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Lutetium is the last and densest of the lanthanides, a hard, silvery metal named after Lutetia, the Roman name for Paris. Two of its isotopes have unusual careers: natural lutetium-176, with a half-life of 3.76 × 10¹⁰ years, lets geologists date ancient rocks by its slow decay into hafnium, while reactor-made lutetium-177 is attached to molecules that seek out tumours in targeted cancer therapy. With a full 4f shell plus one 5d electron, [Xe] 4f¹⁴ 5d¹ 6s² (ground term ²D₃/₂), lutetium resembles yttrium, which is why many chemists place it, rather than lanthanum, in group 3.",

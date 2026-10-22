@@ -1,0 +1,76 @@
+/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+.panel {
+  max-inline-size: 60rem;
+}
+
+.note {
+  margin: var(--space-3) 0 0;
+  max-inline-size: 75ch;
+  font-size: 0.9375rem;
+}
+
+.doi {
+  font-size: 0.8125rem;
+  overflow-wrap: anywhere;
+}
+
+/* --- world map --- */
+
+.sea {
+  fill: var(--surface);
+}
+
+.graticule line {
+  stroke: var(--border);
+  stroke-width: 0.5;
+  stroke-dasharray: 2 3;
+}
+
+.land {
+  fill: var(--surface-raised);
+  stroke: var(--text-muted);
+  stroke-width: 0.6;
+  stroke-linejoin: round;
+}
+
+.ring {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.5;
+}
+
+.dot {
+  fill: var(--focus);
+  stroke: var(--text);
+  stroke-width: 1;
+}
+
+.placeLabel,
+.meLabel {
+  fill: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+/* --- timeline --- */
+
+.other {
+  fill: var(--text-muted);
+  opacity: 0.45;
+}
+
+.me {
+  fill: var(--focus);
+  stroke: var(--text);
+  stroke-width: 1.5;
+}
+
+.pointer {
+  stroke: var(--text);
+  stroke-width: 1;
+}

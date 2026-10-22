@@ -45,6 +45,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 71.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -86,6 +93,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1515/pac-2015-0502"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1515/pac-2015-0502"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -94,6 +148,41 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Moscovium's chemistry is known almost entirely from predictions."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Moscovium's chemistry is known almost entirely from predictions."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Moscovium's chemistry is known almost entirely from predictions."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "No compound has been made; what is known of its chemistry comes mostly from calculations."
+  },
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 175670871,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -119,7 +208,12 @@
   "symbolNote": "Temporary name: ununpentium (Uup); named moscovium in 2016.",
   "source": "iupac_discovery",
   "doi": "10.1515/pac-2015-0502",
-  "note": "Made from calcium-48 on americium-243 in July–August 2003; the 2016 IUPAC/IUPAP report found the Dubna–Livermore–Oak Ridge claims compliant. Los Alamos also lists Vanderbilt University among the discoverers."
+  "note": "Made from calcium-48 on americium-243 in July–August 2003; the 2016 IUPAC/IUPAP report found the Dubna–Livermore–Oak Ridge claims compliant. Los Alamos also lists Vanderbilt University among the discoverers.",
+  "placeLocation": {
+   "lat": 56.74,
+   "lon": 37.186,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Moscovium is a synthetic element in group 15, below bismuth, named after the Moscow region, home of the Dubna laboratory where it was made. Between July and August 2003 a Russian–American team fired calcium-48 ions at americium-243 and recorded four atoms, which decayed within a fraction of a second; the results were announced in February 2004. Its longest-lived known isotope, moscovium-290, has a half-life of only about 0.65 seconds, and only small numbers of atoms have ever been made. The predicted configuration, [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p³, places a single electron above a closed 7p₁/₂ pair, so theorists expect a +1 state to matter far more than it does for bismuth.",

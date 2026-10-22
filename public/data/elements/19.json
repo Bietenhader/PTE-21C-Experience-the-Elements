@@ -284,6 +284,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 289.7,
+   "unc": 0.3,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -394,6 +401,85 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 29.6,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "About 85 % of potash (potassium salts) is sold as fertiliser.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "The rest goes into chemical and industrial uses.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Potassium hydroxide makes soaps and detergents; potassium chloride is a salt substitute; a sodium–potassium alloy carries heat in some reactors.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5462222,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 20900.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 399.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 4.378,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 2000.0,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -406,6 +492,87 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (massive_stars 0.963, white_dwarfs 0.037); quantised to 0.05. Stack height 13 px. LOW PRECISION: the model abundance is small on this box's scale, so 1 px = 0.08 of the total. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.' Paper: 'K, Sc, V and Ti are known to be under-produced at all metallicity ranges in theoretical models with respect to the observations' and 'The under-production of the elements around Ti is a long-standing problem.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Tarnishes at once; oxidises so fast that the metal can melt and ignite.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Reacts violently with water, giving potassium hydroxide and hydrogen, which ignites with a lilac flame.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Reacts violently with acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "KCl",
+    "name": "potassium chloride",
+    "note": "potash fertiliser",
+    "source": "pubchem_compounds",
+    "cid": 4873
+   },
+   {
+    "formula": "KOH",
+    "name": "potassium hydroxide",
+    "source": "pubchem_compounds",
+    "cid": 14797
+   },
+   {
+    "formula": "KNO3",
+    "name": "potassium nitrate",
+    "note": "saltpetre",
+    "source": "pubchem_compounds",
+    "cid": 24434
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 1,
+    "formula": "KCl",
+    "name": "potassium chloride",
+    "source": "pubchem_compounds",
+    "cid": 4873
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 1,
+    "coordination": "IV",
+    "radius": {
+     "value": 137.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VI",
+    "radius": {
+     "value": 138.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 1,
+    "coordination": "VIII",
+    "radius": {
+     "value": 151.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 5462222
  },
  "amo": {
   "hyperfine": [
@@ -499,7 +666,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. The title does not name the isotope. Repumping uses the other ground hyperfine level on the same D2 line."
+    "note": "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. The title does not name the isotope. Repumping uses the other ground hyperfine level on the same D2 line."
    },
    {
     "A": 39,
@@ -606,7 +773,12 @@
   "nameOrigin": "Named by Davy after potash ('pot ashes'), the alkali he electrolysed to obtain it.",
   "symbolNote": "K comes from the New Latin kalium, from the Arabic al-qali, 'plant ashes'.",
   "source": "pubchem",
-  "note": "The first metal ever obtained by electrolysis, from molten caustic potash."
+  "note": "The first metal ever obtained by electrolysis, from molten caustic potash.",
+  "placeLocation": {
+   "lat": 51.502,
+   "lon": -0.119,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Potassium is a soft alkali metal that reacts so violently with water that the hydrogen released catches fire, its flame tinted lilac by the potassium. Living things depend on it: plants use potassium to open and close the pores in their leaves, which is why potash is a major fertiliser, and our nerves rely on it too. A small fraction, 0.0117 %, of natural potassium is radioactive potassium-40, with a half-life of about 1.25 billion years, so every human body is faintly radioactive. The nineteenth electron enters 4s rather than 3d, giving [Ar] 4s¹ (ground term ²S₁/₂): the first place in the table where a new shell starts before the one beneath is full.",

@@ -641,6 +641,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 118.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -682,6 +689,52 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "No use outside basic research: only small amounts have ever been made.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Einsteinium-253 was the target from which the first atoms of mendelevium were made (1955).",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental einsteinium (CID 23913). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -690,6 +743,42 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "note": "Einsteinium metal has been made only in microgram amounts.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only micrograms of einsteinium have ever been available, and its radioactivity destroys samples within weeks; its reactions with air, water and acids have not been described."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only micrograms of einsteinium have ever been available, and its radioactivity destroys samples within weeks; its reactions with air, water and acids have not been described."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Only micrograms of einsteinium have ever been available, and its radioactivity destroys samples within weeks; its reactions with air, water and acids have not been described."
+   }
+  },
+  "compounds": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "Only microgram amounts of a few compounds (oxide, halides) have been prepared."
+  },
+  "oxidationExamples": [],
+  "oxidationNote": "Einsteinium is +3 in solution.",
+  "ionicRadii": [],
+  "pubchemCid": 23913,
+  "sources": [
+   "greenwood1997"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -710,7 +799,12 @@
   "place": "Berkeley, United States",
   "nameOrigin": "After Albert Einstein.",
   "source": "pubchem",
-  "note": "Identified in December 1952 in fallout from the 'Ivy Mike' thermonuclear test (Enewetak Atoll, November 1952); the results were kept secret until 1955."
+  "note": "Identified in December 1952 in fallout from the 'Ivy Mike' thermonuclear test (Enewetak Atoll, November 1952); the results were kept secret until 1955.",
+  "placeLocation": {
+   "lat": 37.874,
+   "lon": -122.271,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Einsteinium is a synthetic actinide named after Albert Einstein, and it was found in an extraordinary place: debris from the first large hydrogen-bomb test, in the Pacific in November 1952, where uranium-238 nuclei had captured as many as 15 neutrons in an instant before climbing the table through a series of beta decays. The discovery was kept secret for several years. Einsteinium is still made only in tiny amounts, and its intense radiation damages any sample from within; einsteinium-253 has a half-life of about 20 days and the longest-lived isotope, einsteinium-252, about 470 days. The atom, [Rn] 5f¹¹ 7s², has three unpaired spins and a ⁴I°₁₅/₂ ground term.",

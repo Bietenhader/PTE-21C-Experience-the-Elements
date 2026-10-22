@@ -9,6 +9,13 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | id | Source | Licence / terms | Retrieved | Status |
 |---|---|---|---|---|
 | `pubchem` | [PubChem Periodic Table of Elements and element pages](https://pubchem.ncbi.nlm.nih.gov/periodic-table/) | [Public domain (U.S. Government work)](https://www.ncbi.nlm.nih.gov/home/about/policies/) | 2026-10-22 | used |
+| `hsdb` | [Hazardous Substances Data Bank (HSDB), records of the elemental substances in PubChem](https://pubchem.ncbi.nlm.nih.gov/source/hsdb) | [Public domain (U.S. Government work, National Library of Medicine)](https://www.nlm.nih.gov/web_policies.html) | 2026-10-22 | used |
+| `cameo_chemicals` | [CAMEO Chemicals (NOAA), records of the elemental substances in PubChem](https://cameochemicals.noaa.gov/) | [Free for use (U.S. NOAA); facts restated in our own words, no text copied — some CAMEO data is under its providers' copyright](https://cameochemicals.noaa.gov/help/reference/terms_and_conditions.htm) | 2026-10-22 | used |
+| `pubchem_compounds` | [PubChem Compound records (formulas of named compounds)](https://pubchem.ncbi.nlm.nih.gov/) | [Public domain (U.S. Government work)](https://www.ncbi.nlm.nih.gov/home/about/policies/) | 2026-10-22 | used |
+| `shannon1976` | [Shannon's effective ionic radii](https://doi.org/10.1107/S0567739476001551) | [Published scientific table; cite](https://doi.org/10.1107/S0567739476001551) | — | used |
+| `greenwood1997` | [Greenwood & Earnshaw, Chemistry of the Elements](https://doi.org/10.1016/C2009-0-30414-6) | [Textbook; facts cited](https://doi.org/10.1016/C2009-0-30414-6) | — | used |
+| `turler2013` | [Advances in the production and chemistry of the heaviest elements](https://doi.org/10.1021/cr3002438) | [Scientific facts; cite](https://doi.org/10.1021/cr3002438) | — | used |
+| `pubchem_ghs` | [PubChem compound records — GHS Classification of the elemental substances](https://pubchem.ncbi.nlm.nih.gov/ghs/) | [PubChem: public domain (U.S. Government work); the classifications are facts reported by their contributors (EU CLP Annex VI; ECHA C&L Inventory notifications, reuse with acknowledgement)](https://www.ncbi.nlm.nih.gov/home/about/policies/) | 2026-10-22 | used |
 | `nist_gsie` | [NIST Atomic Spectra Database — Ionization Energies](https://physics.nist.gov/PhysRefData/ASD/ionEnergy.html) | [Public domain (U.S. Government work); citation requested](https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications) | 2026-10-22 | used |
 | `nist_levels` | [NIST Atomic Spectra Database — Energy Levels](https://physics.nist.gov/PhysRefData/ASD/levels_form.html) | [Public domain (U.S. Government work); citation requested](https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications) | 2026-10-22 | used |
 | `nist_lines` | [NIST Atomic Spectra Database — Lines](https://physics.nist.gov/PhysRefData/ASD/lines_form.html) | [Public domain (U.S. Government work); citation requested](https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications) | 2026-10-22 | used |
@@ -24,6 +31,9 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `mclean_rhf` | [Roothaan–Hartree–Fock atomic wavefunctions, Z = 55–92](https://www.sciencedirect.com/journal/atomic-data-and-nuclear-data-tables) | [Published scientific tables; cite](https://www.sciencedirect.com/journal/atomic-data-and-nuclear-data-tables) | — | not yet used |
 | `slater1930` | [Slater's rules for atomic screening constants](https://doi.org/10.1103/PhysRev.36.57) | [Published method; cite](https://doi.org/10.1103/PhysRev.36.57) | — | used |
 | `clementi_zeff` | [Clementi–Raimondi effective nuclear charges](https://doi.org/10.1063/1.1733573) | [Published numerical values; cite](https://doi.org/10.1063/1.1733573) | — | used |
+| `schwerdtfeger2019` | [Table of static dipole polarizabilities of the neutral elements (Schwerdtfeger & Nagle)](https://doi.org/10.1080/00268976.2018.1535143) | [Published numerical values; cite](https://doi.org/10.1080/00268976.2018.1535143) | — | used |
+| `fock1935` | [Fock: the hidden four-dimensional symmetry of the hydrogen atom](https://doi.org/10.1007/BF01336904) | [Published work; cite](https://doi.org/10.1007/BF01336904) | — | used |
+| `barut1967` | [Barut & Kleinert: the hydrogen atom from a noncompact dynamical group](https://doi.org/10.1103/PhysRev.156.1541) | [Published work; cite](https://doi.org/10.1103/PhysRev.156.1541) | — | used |
 | `steck_alkali` | [Alkali D Line Data (Daniel A. Steck)](https://steck.us/alkalidata/) | [Compiled reference data; cite the sheet and revision](https://steck.us/alkalidata/) | — | not yet used |
 | `allegrini2022` | [Survey of hyperfine measurements in alkali atoms](https://arxiv.org/abs/2209.11423) | [Scientific facts; cite](https://arxiv.org/abs/2209.11423) | — | used |
 | `arimondo1977` | [Experimental determinations of the hyperfine structure in the alkali atoms](https://doi.org/10.1103/RevModPhys.49.31) | [Scientific facts; cite](https://doi.org/10.1103/RevModPhys.49.31) | — | not yet used |
@@ -35,9 +45,10 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `eu_crm` | [EU critical and strategic raw materials (Critical Raw Materials Act, 2024)](http://data.europa.eu/eli/reg/2024/1252/oj) | [Facts; cite](https://commission.europa.eu/legal-notice_en) | — | used |
 | `cie_cmf` | [CIE 1931 colour-matching functions, 2° standard colorimetric observer](https://doi.org/10.25039/CIE.DS.xvudnb9b) | [Cited standard table (CIE 018:2019, Table 6; ISO/CIE 11664-1:2019); the CIE's data file is CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 2026-10-22 | used |
 | `cod` | [Crystallography Open Database](https://www.crystallography.net/cod/) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | — | used |
+| `crc_handbook` | [CRC Handbook of Chemistry and Physics, 95th edition — Heat capacity of the elements at 25 °C](https://doi.org/10.1201/b17118) | [Cited scientific table (numerical values are facts; cite)](https://doi.org/10.1201/b17118) | — | used |
 | `lodders2025` | [Solar System elemental abundances from the solar photosphere and CI-chondrites](https://doi.org/10.1007/s11214-025-01146-w) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | — | used |
 | `kobayashi2020` | [The origin of elements from carbon to uranium](https://doi.org/10.3847/1538-4357/abae65) | [Facts; cite; approximate transcription](https://doi.org/10.3847/1538-4357/abae65) | — | used |
-| `pyykko2011` | [A suggested periodic table up to Z ≤ 172](https://doi.org/10.1039/C0CP01575J) | [Facts; cite](https://doi.org/10.1039/C0CP01575J) | — | not yet used |
+| `pyykko2011` | [A suggested periodic table up to Z ≤ 172](https://doi.org/10.1039/C0CP01575J) | [Facts; cite](https://doi.org/10.1039/C0CP01575J) | — | used |
 | `karshenboim2005` | [Precision physics of simple atoms: QED tests, nuclear structure and fundamental constants](https://doi.org/10.1016/j.physrep.2005.08.008) | [Scientific facts; cite](https://arxiv.org/abs/hep-ph/0509010) | — | used |
 | `primary_literature` | [Primary research papers (one per row, by DOI)](https://www.doi.org/) | [Scientific facts; cite](https://www.doi.org/) | — | used |
 | `cgpm_resolutions` | [Resolutions of the General Conference on Weights and Measures (CGPM)](https://www.bipm.org/en/committees/cg/cgpm/resolutions) | [© BIPM; definitions are facts; cite](https://www.bipm.org/en/legal-notice) | — | used |
@@ -46,14 +57,30 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `marschner2012` | [Marschner's Mineral Nutrition of Higher Plants, 3rd edition](https://doi.org/10.1016/C2009-0-63043-9) | [Facts; cite](https://doi.org/10.1016/C2009-0-63043-9) | — | used |
 | `efsa_drv` | [EFSA Dietary Reference Values for nutrients — summary report](https://doi.org/10.2903/sp.efsa.2017.e15121) | [Facts; cite](https://doi.org/10.2903/sp.efsa.2017.e15121) | — | used |
 | `zoroddu2019` | [The essential metals for humans: a brief overview](https://doi.org/10.1016/j.jinorgbio.2019.03.013) | [Facts; cite](https://doi.org/10.1016/j.jinorgbio.2019.03.013) | — | used |
+| `smits2020` | [Oganesson: a noble gas element that is neither noble nor a gas](https://doi.org/10.1002/anie.202011976) | [Scientific facts; cite](https://doi.org/10.1002/anie.202011976) | — | used |
 | `smits2023` | [Pushing the limits of the periodic table — a review on atomic relativistic electronic structure theory and calculations for the superheavy elements](https://doi.org/10.1016/j.physrep.2023.09.004) | [Scientific facts; cite](https://arxiv.org/abs/2301.02553) | — | not yet used |
 | `icrp23` | [ICRP Publication 23: Report of the Task Group on Reference Man (1975)](https://doi.org/10.1016/S0074-2740(75)80022-5) | [© ICRP; numerical values cited as a scientific table (facts)](https://www.icrp.org/) | — | used |
 | `kerr1982` | [Photon and neutron fluence-to-kerma conversion factors for ICRP-1975 reference man using improved elemental compositions for bone and marrow of the skeleton (ORNL/TM-8318)](https://www.osti.gov/biblio/7058905) | [U.S. Government report; distribution unlimited](https://www.osti.gov/servlets/purl/7058905) | — | used |
 | `iupac_discovery` | [IUPAC/IUPAP reports on the discovery of elements 101-118](https://iupac.org/what-we-do/periodic-table-of-elements/) | [Facts; cite](https://iupac.org/) | — | used |
+| `natural_earth` | [Natural Earth: 1:110m land and 1:10m populated places](https://www.naturalearthdata.com/) | [Public domain (Natural Earth terms of use)](https://www.naturalearthdata.com/about/terms-of-use/) | 2026-10-22 | used |
+| `geonames` | [GeoNames geographical database (cities with at least 5000 inhabitants)](https://www.geonames.org/) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 2026-10-22 | used |
+| `iarc_classifications` | [IARC Monographs: List of Classifications (agents classified by the IARC Monographs)](https://monographs.iarc.who.int/list-of-classifications) | [© IARC/WHO; the classifications are facts, cited](https://monographs.iarc.who.int/) | 2026-10-22 | used |
+| `who_lead` | [WHO fact sheet: Lead poisoning](https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
+| `who_mercury` | [WHO fact sheet: Mercury and health](https://www.who.int/news-room/fact-sheets/detail/mercury-and-health) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
+| `who_arsenic` | [WHO fact sheet: Arsenic](https://www.who.int/news-room/fact-sheets/detail/arsenic) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
+| `who_radon` | [WHO fact sheet: Radon](https://www.who.int/news-room/fact-sheets/detail/radon-and-health) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
+| `unscear_chernobyl` | [UNSCEAR: The Chernobyl accident (assessments of 2000, 2008 and later)](https://www.unscear.org/unscear/en/areas-of-work/chernobyl.html) | [© United Nations; facts, cited](https://www.un.org/en/about-us/terms-of-use) | — | used |
 
 ### Citations
 
 - `pubchem` — PubChem, National Center for Biotechnology Information, U.S. National Library of Medicine. Periodic Table of Elements. https://pubchem.ncbi.nlm.nih.gov/periodic-table/
+- `hsdb` — Hazardous Substances Data Bank (HSDB), U.S. National Library of Medicine, via PubChem (National Center for Biotechnology Information): compound records of the elemental substances, sections Stability/Shelf Life, Other Experimental Properties and Reactivities and Incompatibilities. https://pubchem.ncbi.nlm.nih.gov/source/hsdb
+- `cameo_chemicals` — CAMEO Chemicals, Office of Response and Restoration, U.S. National Oceanic and Atmospheric Administration, with the U.S. EPA, via PubChem: sections Air and Water Reactions and Reactive Group of the elemental substances. https://cameochemicals.noaa.gov/
+- `pubchem_compounds` — PubChem, National Center for Biotechnology Information, U.S. National Library of Medicine: compound records found by name (PUG REST compound/name/{name}/property/MolecularFormula). https://pubchem.ncbi.nlm.nih.gov/
+- `shannon1976` — R. D. Shannon, Revised effective ionic radii and systematic studies of interatomic distances in halides and chalcogenides, Acta Crystallographica A32, 751–767 (1976), doi:10.1107/S0567739476001551.
+- `greenwood1997` — N. N. Greenwood and A. Earnshaw, Chemistry of the Elements, 2nd edition, Butterworth-Heinemann, Oxford (1997), ISBN 978-0-7506-3365-9, doi:10.1016/C2009-0-30414-6.
+- `turler2013` — A. Türler and V. Pershina, Advances in the production and chemistry of the heaviest elements, Chem. Rev. 113, 1237–1312 (2013), doi:10.1021/cr3002438.
+- `pubchem_ghs` — PubChem, National Center for Biotechnology Information, U.S. National Library of Medicine, compound records of the elemental substances, section 'GHS Classification' (rest/pug_view/data/compound/{CID}/JSON?heading=GHS+Classification); classifications from Regulation (EC) No 1272/2008 (CLP), Annex VI, and from the notifications to the ECHA C&L Inventory as aggregated by PubChem.
 - `nist_gsie` — Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. National Institute of Standards and Technology, Gaithersburg, MD. DOI: https://doi.org/10.18434/T4W30F
 - `nist_levels` — Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. DOI: https://doi.org/10.18434/T4W30F
 - `nist_lines` — Kramida, A., Ralchenko, Yu., Reader, J. and NIST ASD Team (2024). NIST Atomic Spectra Database (version 5.12), [Online]. Available: https://physics.nist.gov/asd. DOI: https://doi.org/10.18434/T4W30F
@@ -66,6 +93,9 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `bipm_frequencies` — BIPM, Recommended values of standard frequencies for applications including the practical realization of the metre and secondary representations of the second (CCL-CCTF list, 2025 update), https://www.bipm.org/en/publications/mises-en-pratique/standard-frequencies — machine-readable via the BIPM Time Department CCL-CCTF API, https://webtai.bipm.org/api/ccl-cctf/
 - `slater1930` — J. C. Slater, Atomic shielding constants, Phys. Rev. 36, 57–64 (1930), doi:10.1103/PhysRev.36.57.
 - `clementi_zeff` — E. Clementi and D. L. Raimondi, J. Chem. Phys. 38, 2686 (1963), doi:10.1063/1.1733573; E. Clementi, D. L. Raimondi and W. P. Reinhardt, J. Chem. Phys. 47, 1300 (1967), doi:10.1063/1.1712084.
+- `schwerdtfeger2019` — P. Schwerdtfeger and J. K. Nagle, 2018 Table of static dipole polarizabilities of the neutral elements in the periodic table, Mol. Phys. 117, 1200-1225 (2019), doi:10.1080/00268976.2018.1535143.
+- `fock1935` — V. Fock, Zur Theorie des Wasserstoffatoms, Z. Phys. 98, 145-154 (1935), doi:10.1007/BF01336904.
+- `barut1967` — A. O. Barut and H. Kleinert, Transition probabilities of the hydrogen atom from noncompact dynamical groups, Phys. Rev. 156, 1541-1545 (1967), doi:10.1103/PhysRev.156.1541.
 - `allegrini2022` — M. Allegrini, E. Arimondo and L. A. Orozco, Survey of hyperfine structure measurements in alkali atoms, J. Phys. Chem. Ref. Data 51, 043102 (2022), arXiv:2209.11423.
 - `olmschenk_catalog` — S. Olmschenk, Laser-cooled atoms and ions catalog, https://personal.denison.edu/~olmschenks/atom_catalog.html and ion_catalog.html.
 - `images_of_elements` — Jürgen Kummer, images-of-elements.com — photographs of the chemical elements, CC BY 3.0; each photo is credited with a link to its element page.
@@ -74,8 +104,10 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `eu_crm` — Regulation (EU) 2024/1252 of the European Parliament and of the Council of 11 April 2024 (Critical Raw Materials Act), OJ L 2024/1252, 3.5.2024, CELEX 32024R1252: Annex I Section 1 (strategic) and Annex II Section 1 (critical raw materials); group memberships from the Commission's Study on the Critical Raw Materials for the EU 2023, doi:10.2873/725585.
 - `cie_cmf` — CIE (2019), Colour-matching functions of CIE 1931 standard colorimetric observer (data table), International Commission on Illumination, Vienna, doi:10.25039/CIE.DS.xvudnb9b; values from CIE 018:2019, The Basis of Physical Photometry, 3rd ed., Table 6, doi:10.25039/TR.018.2019.
 - `cod` — S. Gražulis et al., Crystallography Open Database – an open-access collection of crystal structures, J. Appl. Cryst. 42, 726–729 (2009), doi:10.1107/S0021889809016690; each structure is cited by its COD id and original reference.
+- `crc_handbook` — W. M. Haynes (ed.), CRC Handbook of Chemistry and Physics, 95th edition, CRC Press, Boca Raton (2014), doi:10.1201/b17118, section 4, 'Heat capacity of the elements at 25 °C'; values as transcribed in the mendeleev package 1.3.0 (MIT), whose property metadata cites this edition.
 - `lodders2025` — K. Lodders, M. Bergemann and H. Palme, Solar System elemental abundances from the solar photosphere and CI-chondrites, Space Sci. Rev. 221, 23 (2025), doi:10.1007/s11214-025-01146-w.
 - `kobayashi2020` — C. Kobayashi, A. I. Karakas and M. Lugaro, The origin of elements from carbon to uranium, ApJ 900, 179 (2020), doi:10.3847/1538-4357/abae65, arXiv:2008.04660.
+- `pyykko2011` — P. Pyykkö, Phys. Chem. Chem. Phys. 13, 161 (2011).
 - `karshenboim2005` — S. G. Karshenboim, Phys. Rep. 422, 1 (2005), doi:10.1016/j.physrep.2005.08.008, arXiv:hep-ph/0509010.
 - `primary_literature` — The paper named by the DOI (or arXiv identifier) given with each value; listed in full in PROVENANCE.md.
 - `cgpm_resolutions` — Conférence Générale des Poids et Mesures, Resolutions (BIPM), each cited by its DOI 10.59161/CGPM<year>RES<n>E.
@@ -84,9 +116,18 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `marschner2012` — P. Marschner (ed.), Marschner's Mineral Nutrition of Higher Plants, 3rd ed., Academic Press (2012); chapters cited by DOI.
 - `efsa_drv` — European Food Safety Authority, Dietary Reference Values for nutrients: Summary report, EFSA Supporting Publications 14, e15121 (2017), doi:10.2903/sp.efsa.2017.e15121.
 - `zoroddu2019` — M. A. Zoroddu, J. Aaseth, G. Crisponi, S. Medici, M. Peana and V. M. Nurchi, J. Inorg. Biochem. 195, 120 (2019), doi:10.1016/j.jinorgbio.2019.03.013.
+- `smits2020` — O. R. Smits, J.-M. Mewes, P. Jerabek and P. Schwerdtfeger, Oganesson: a noble gas element that is neither noble nor a gas, Angew. Chem. Int. Ed. 59, 23636–23640 (2020), doi:10.1002/anie.202011976.
 - `icrp23` — International Commission on Radiological Protection, Report of the Task Group on Reference Man, ICRP Publication 23, Pergamon (1975), Chapter 2, Table 110 'Reference Man: total body content for some elements', pp. 327-328, doi:10.1016/S0074-2740(75)80022-5.
 - `kerr1982` — G. D. Kerr, Photon and neutron fluence-to-kerma conversion factors for ICRP-1975 reference man using improved elemental compositions for bone and marrow of the skeleton, ORNL/TM-8318, Oak Ridge National Laboratory (1982), Table 1, https://www.osti.gov/biblio/7058905.
 - `iupac_discovery` — Transfermium Working Group (1993) and IUPAC/IUPAP Joint Working Party reports on the priority of claims to the discovery of elements 101 and beyond, Pure Appl. Chem. (each row cites its report by DOI).
+- `natural_earth` — Natural Earth, free vector and raster map data, naturalearthdata.com: ne_110m_land and ne_10m_populated_places_simple (GeoJSON from the natural-earth-vector repository, github.com/nvkelso/natural-earth-vector).
+- `geonames` — GeoNames, geographical database, www.geonames.org; bulk file cities5000.zip from download.geonames.org/export/dump/.
+- `iarc_classifications` — International Agency for Research on Cancer, IARC Monographs on the Identification of Carcinogenic Hazards to Humans, List of Classifications, monographs.iarc.who.int/list-of-classifications (group and volumes per agent).
+- `who_lead` — World Health Organization, Lead poisoning, fact sheet, 10 June 2026, www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health.
+- `who_mercury` — World Health Organization, Mercury and health, fact sheet, 24 October 2024, www.who.int/news-room/fact-sheets/detail/mercury-and-health.
+- `who_arsenic` — World Health Organization, Arsenic, fact sheet, 7 December 2022, www.who.int/news-room/fact-sheets/detail/arsenic.
+- `who_radon` — World Health Organization, Radon, fact sheet, 25 January 2023, www.who.int/news-room/fact-sheets/detail/radon-and-health.
+- `unscear_chernobyl` — United Nations Scientific Committee on the Effects of Atomic Radiation, The Chernobyl accident, www.unscear.org/unscear/en/areas-of-work/chernobyl.html, summarizing UNSCEAR 2008 Report Vol. II, Annex D, Health effects due to radiation from the Chernobyl accident (United Nations, 2011).
 
 ## Field coverage (of 118 elements)
 

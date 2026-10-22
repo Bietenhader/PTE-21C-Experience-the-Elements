@@ -10,7 +10,7 @@ import { useSettings } from "../../app/store";
 import { useElementDetail } from "../../data/load";
 import { concise, isMissing, superscriptDigits } from "../../data/format";
 import type { ElementIndexEntry, IonizationLadder, Missing, Q, SourcesFile } from "../../data/types";
-import { type EnergyUnit, kjPerMolToEv, convertEnergy } from "../../physics/units";
+import { type EnergyUnit, kjPerMolToEv, convertEnergy, polarizabilityAuToA3 } from "../../physics/units";
 import { Formula } from "../../ui/Formula";
 import { MissingValue, Quantity } from "../../ui/Quantity";
 import { ChartFrame } from "../../viz/ChartFrame";
@@ -242,15 +242,36 @@ function Mulliken({ e, unit }: { e: ElementIndexEntry; unit: EnergyUnit }) {
   );
 }
 
-/** Rows SPEC §10.2 lists that PTE-21C has not compiled yet — shown, with the reason, rather than left out. */
-const NOT_COMPILED: Array<[string, string]> = [
-  ["Static dipole polarizability", "The reference table (Schwerdtfeger & Nagle 2019) is not yet transcribed into PTE-21C's tables."],
-  ["Magnetic ordering and molar susceptibility", "Not yet compiled for PTE-21C; planned for a later version."],
-  ["Electrical resistivity", "Not yet compiled for PTE-21C; planned for a later version."],
-  ["Superconducting transition temperature", "Not yet compiled for PTE-21C; planned for a later version."],
-  ["Work function", "Not yet compiled for PTE-21C; planned for a later version."],
-  ["Band gap", "Not yet compiled for PTE-21C; planned for a later version."],
+/**
+ * Properties SPEC §10.2 lists that PTE-21C has not compiled yet. They are named, so their absence is
+ * visible, but they are not shown as missing values: "not measured" would be untrue — they have been
+ * measured; PTE-21C has not gathered the numbers yet.
+ */
+const NOT_COMPILED = [
+  "Magnetic ordering and molar magnetic susceptibility",
+  "Electrical resistivity",
+  "Superconducting transition temperature",
+  "Work function",
+  "Band gap",
 ];
+
+const NO_POLARIZABILITY: Missing = {
+  missing: true,
+  reason: "source_unavailable_at_build",
+  note: "The data file has no polarizability field; rebuild the data with tools/pipeline.py.",
+};
+
+function Polarizability({ q, sources }: { q: Q; sources: Sources }) {
+  if (isMissing(q)) return <MissingValue m={q} />;
+  return (
+    <span>
+      <Quantity q={q} sources={sources} />{" "}
+      <span className={shared.muted}>
+        = {Number(polarizabilityAuToA3(q.value).toPrecision(4))} Å³ (the polarizability volume; 1 a.u. = a₀³)
+      </span>
+    </span>
+  );
+}
 
 function Facts({ e, en, sources, unit }: { e: ElementIndexEntry; en: { pauling: Q; allen: Q }; sources: Sources; unit: EnergyUnit }) {
   return (
@@ -309,20 +330,28 @@ export default function Panel({ element: e, elements, sources }: PanelProps) {
             </Section>
             <Section title="Other electromagnetic properties" id="other">
               <dl className={shared.facts}>
-                {NOT_COMPILED.map(([label, note]) => (
-                  <div key={label} className={styles.row}>
-                    <dt>{label}</dt>
-                    <dd>
-                      <MissingValue m={{ missing: true, reason: "not_measured", note }} />
-                    </dd>
-                  </div>
-                ))}
+                <dt>Static dipole polarizability</dt>
+                <dd>
+                  <Polarizability q={d.em.polarizability ?? NO_POLARIZABILITY} sources={sources} />
+                </dd>
               </dl>
+              <p className={shared.muted}>
+                How easily the atom's electron cloud is pulled out of shape by an electric field: the dipole it acquires per
+                unit field. Large for the alkali metals, whose single outer electron is loosely held.
+              </p>
+              <h5 className={styles.subheading}>Not yet compiled in PTE-21C</h5>
+              <p className={shared.muted}>
+                These have been measured for many elements, but PTE-21C has not gathered sourced values for them yet:{" "}
+                {NOT_COMPILED.join("; ")}.
+              </p>
             </Section>
             <Section title="In context" id="context">
               <Sawtooth e={e} elements={elements} unit={unit} />
             </Section>
-            <SourcesFooter ids={collectSources(ladder, e.ie1, e.electronAffinity, d.em.en, elements.map((x) => x.ie1))} sources={sources} />
+            <SourcesFooter
+              ids={collectSources(ladder, e.ie1, e.electronAffinity, d.em.en, d.em.polarizability, elements.map((x) => x.ie1))}
+              sources={sources}
+            />
           </div>
         );
       }}

@@ -538,6 +538,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 46.0,
+   "unc": 2.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -644,6 +651,113 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.02,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Mainly in rechargeable nickel–cadmium batteries.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Cadmium telluride thin-film solar panels, and cadmium–zinc telluride radiation detectors.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also used in alloys, coatings and pigments.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H341",
+     "text": "Suspected of causing genetic defects"
+    },
+    {
+     "code": "H350",
+     "text": "May cause cancer"
+    },
+    {
+     "code": "H361fd",
+     "text": "Suspected of damaging fertility; Suspected of damaging the unborn child"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 23973,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.15,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.00011,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.005482,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.714286,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -657,6 +771,87 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.391, massive_stars 0.544, neutron_star_mergers 0.065); quantised to 0.05. Stack height 77 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Oxidises slowly in moist air to cadmium oxide; finely divided cadmium can ignite.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves slowly in dilute acids, giving hydrogen, and readily in nitric acid.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "CdS",
+    "name": "cadmium sulfide",
+    "note": "the pigment cadmium yellow",
+    "source": "pubchem_compounds",
+    "cid": 14783
+   },
+   {
+    "formula": "CdTe",
+    "name": "cadmium telluride",
+    "note": "thin-film solar cells",
+    "source": "pubchem_compounds",
+    "cid": 91501
+   },
+   {
+    "formula": "CdO",
+    "name": "cadmium oxide",
+    "source": "pubchem_compounds",
+    "cid": 10197697
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 2,
+    "formula": "CdS",
+    "name": "cadmium sulfide",
+    "source": "pubchem_compounds",
+    "cid": 14783
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "IV",
+    "radius": {
+     "value": 78.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 95.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 110.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23973
  },
  "amo": {
   "hyperfine": [
@@ -807,7 +1002,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
+    "note": "The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'. Isotope not named in the title."
    },
    {
     "A": "natural",
@@ -851,7 +1046,32 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "environment": [
+   {
+    "text": "Cadmium from phosphate fertilisers, sewage sludge, mining and industry builds up in soils; crops take it up, and food, rice and other staples above all, is most people's main source of it.",
+    "source": "primary_literature",
+    "doi": "10.1016/j.tplants.2012.08.003"
+   }
+  ],
+  "toxicity": [
+   {
+    "text": "Cadmium accumulates in the kidneys over decades; in Japan's Jinzū river basin it caused itai-itai disease, with kidney damage and brittle, painful bones.",
+    "source": "primary_literature",
+    "doi": "10.1016/j.taap.2009.03.015"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Cadmium and cadmium compounds",
+    "group": "1",
+    "volumes": [
+     "58",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1817,
@@ -861,7 +1081,12 @@
   "place": "Göttingen, Germany",
   "nameOrigin": "From the Latin cadmia (Greek kadmeia), the old name for calamine, the zinc ore in which it was found.",
   "source": "pubchem",
-  "note": "Noticed because some zinc carbonate samples turned yellow on heating."
+  "note": "Noticed because some zinc carbonate samples turned yellow on heating.",
+  "placeLocation": {
+   "lat": 51.52,
+   "lon": 9.92,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Cadmium is a soft, bluish-white metal obtained as a by-product of zinc refining; it is highly toxic, yet it has served in nickel–cadmium batteries, in reactor control rods because it swallows neutrons, and in the vivid cadmium yellows and reds of artists’ paints. Friedrich Stromeyer found it in 1817 after noticing that a zinc carbonate sample turned yellow when heated, a sign of an unknown impurity. Its closed-shell atom ([Kr] 4d¹⁰ 5s², ground term ¹S₀) emits a sharp red spectral line at 643.8 nm, between two excited singlet levels, so reproducible that it served for decades as an international reference for measuring length.",

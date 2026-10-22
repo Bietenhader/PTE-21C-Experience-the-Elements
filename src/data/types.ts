@@ -34,7 +34,8 @@ export type Unit =
   | "USD/kg"
   | "g"
   | "°"
-  | "kPa";
+  | "kPa"
+  | "J/(mol·K)";
 export type QuantityFlag = "measured" | "calculated" | "interpolated" | "estimated" | "predicted";
 export type MissingReason =
   "not_measured" | "not_applicable" | "no_stable_isotope" | "predicted_only" | "source_unavailable_at_build";
@@ -658,6 +659,100 @@ export interface Biology {
   plantRole?: SourcedText;
   humanRole?: SourcedText;
   note?: string;
+  /**
+   * Isotopes in biology and medicine (SPEC §10.10), our own words with a source per row. A is omitted when the use is not isotope-specific (gadolinium contrast agents).
+   */
+  isotopeUses?: {
+    A?: number;
+    isomer?: "m";
+    field: "medicine" | "tracer" | "dating" | "environment";
+    text: string;
+    source: SourceId;
+    doi?: string;
+  }[];
+  /**
+   * Environmental notes: soils, bioaccumulation, radioecology.
+   */
+  environment?: SourcedText[];
+  /**
+   * Curated toxicity notes, where a cited source supports one. Absent means no curated note, not 'safe'.
+   */
+  toxicity?: SourcedText[];
+  /**
+   * IARC carcinogen classifications of element-related agents; the group comes from the fetched IARC list.
+   */
+  iarc?: {
+    agent: string;
+    group: ("1" | "2A" | "2B" | "3") | Missing;
+    volumes?: string[];
+    source: SourceId;
+  }[];
+}
+/**
+ * Chemistry & bonding (SPEC §10.9): how the element bonds, how it reacts with air, water and acids (our own words, each with its source), well-known compounds, one compound per common oxidation state, and Shannon's ionic radii of its common ions.
+ */
+export interface Chemistry {
+  bonding: ChemistryBonding | Missing;
+  reactivity: {
+    air: SourcedText | Missing;
+    water: SourcedText | Missing;
+    acids: SourcedText | Missing;
+  };
+  compounds: [ChemistryCompound, ...ChemistryCompound[]] | Missing;
+  oxidationExamples: ChemistryOxidationExample[];
+  /**
+   * What to know about the oxidation states where examples are few or none.
+   */
+  oxidationNote?: string;
+  ionicRadii: ChemistryIonicRadius[];
+  /**
+   * PubChem compound record of the elemental substance (where the HSDB and CAMEO notes are).
+   */
+  pubchemCid?: number;
+  /**
+   * Where the record holds nothing but Missing notes: the sources those notes rest on.
+   */
+  sources?: SourceId[];
+}
+/**
+ * How the atoms of the element itself hold together.
+ */
+export interface ChemistryBonding {
+  type: "metallic" | "covalent network" | "covalent layers" | "covalent chains" | "molecular" | "monatomic";
+  note?: string;
+  source: SourceId;
+}
+export interface ChemistryCompound {
+  formula: string;
+  name: string;
+  note?: string;
+  source: SourceId;
+  doi?: string;
+  /**
+   * PubChem CID whose molecular formula the build checked.
+   */
+  cid?: number;
+}
+export interface ChemistryOxidationExample {
+  state: number;
+  formula: string;
+  name: string;
+  source: SourceId;
+  doi?: string;
+  cid?: number;
+}
+/**
+ * Shannon's effective ionic radius of one ion in one coordination (SPEC §10.9).
+ */
+export interface ChemistryIonicRadius {
+  charge: number;
+  /**
+   * Coordination number as Shannon writes it: Roman numeral, SQ square planar, PY pyramidal.
+   */
+  coordination: string;
+  spin?: "HS" | "LS";
+  radius: Quantity;
+  mostReliable?: boolean;
 }
 /**
  * public/data/elements/{Z}.json: per-panel detail, loaded when the sheet opens (SPEC §5, §10). Sections are keyed by panel slug.
@@ -730,6 +825,22 @@ export interface ElementDetailFile {
       doubtful?: boolean;
       note?: string;
     };
+    thermal: ThermalProperties;
+    /**
+     * @minItems 1
+     */
+    uses: [UseNote, ...UseNote[]];
+    allotropes: Allotrope[];
+    hazards: GhsHazards | Missing;
+    /**
+     * The four abundances on one scale for the log-scale bars: mg/kg, i.e. parts per million by mass. Derived in tools/build_physical.py from `abundance` (sea water taken as 1 kg per litre; the body amount divided by the 70 kg reference adult); each note says how.
+     */
+    abundanceByMass: {
+      crust: Q;
+      ocean: Q;
+      solar: Q;
+      body: Q;
+    };
   };
   amo: {
     hyperfine: HyperfineRecord[];
@@ -740,6 +851,7 @@ export interface ElementDetailFile {
   nucleus: {
     origin: CosmicOrigin | Missing;
   };
+  chemistry?: Chemistry;
   biology: Biology;
   history?: {
     discovered: number | "antiquity";
@@ -753,6 +865,16 @@ export interface ElementDetailFile {
     source: SourceId;
     doi?: string;
     note?: string;
+    /**
+     * Where the discovery place is, from the gazetteer named in tools/curated/places.toml (SPEC §10.11).
+     */
+    placeLocation?:
+      | {
+          lat: number;
+          lon: number;
+          source: SourceId;
+        }
+      | Missing;
   };
   /**
    * Our own 60–120-word text (tools/curated/prose/{Z}.md): what it is, one surprising fact, one quantum fact.
@@ -792,6 +914,73 @@ export interface CrystalStructure {
   reference: string;
   source: SourceId;
   note?: string;
+}
+/**
+ * Thermal properties of the element (SPEC §10.4). Molar heat capacity C_p at 25 °C and 1 bar, from the CRC Handbook, in J/(mol·K): per mole of atoms, or per mole of molecules where `formulaAtoms` is given (the diatomic gases and halogens).
+ */
+export interface ThermalProperties {
+  molarHeatCapacity: Q;
+  /**
+   * Atoms in the formula unit the value refers to (2 for H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂); absent = per mole of atoms.
+   */
+  formulaAtoms?: number;
+}
+/**
+ * One bullet of what the element is used for, in PTE-21C's own words, with its source (tools/curated/uses.toml).
+ */
+export interface UseNote {
+  text: string;
+  source: SourceId;
+  doi?: string;
+}
+/**
+ * A form of the pure element (tools/curated/allotropes.toml); `standard` marks the reference form at 25 °C and 1 bar.
+ */
+export interface Allotrope {
+  name: string;
+  note: string;
+  standard?: boolean;
+  source: SourceId;
+  doi?: string;
+}
+/**
+ * GHS classification of the elemental substance (SPEC §10.4), from its PubChem compound record: the EU harmonised classification where one exists, otherwise PubChem's aggregation of the ECHA C&L notifications with the most reports. Pictograms are drawn by PTE-21C from their codes.
+ */
+export interface GhsHazards {
+  pictograms: {
+    code: "GHS01" | "GHS02" | "GHS03" | "GHS04" | "GHS05" | "GHS06" | "GHS07" | "GHS08" | "GHS09";
+    /**
+     * Short name of what it warns of (tools/fetch_pubchem_ghs.py).
+     */
+    name: string;
+  }[];
+  signalWord?: "Danger" | "Warning";
+  hazardStatements: HazardStatement[];
+  basis: "eu_harmonised" | "echa_notifications" | "other";
+  reports?: number;
+  notMeetingCriteria?: {
+    share: number;
+    reports: number;
+    of: number;
+  };
+  /**
+   * The classification says the substance does not meet the GHS hazard criteria.
+   */
+  notClassified?: boolean;
+  /**
+   * PubChem compound ID of the elemental substance.
+   */
+  cid: number;
+  source: SourceId;
+  note: string;
+}
+export interface HazardStatement {
+  code: string;
+  text: string;
+  /**
+   * Per cent of the ECHA notifications that give this statement, as PubChem aggregates them.
+   */
+  share?: number;
 }
 /**
  * Share of the element made by each process when the Solar System formed (SPEC §10.7), read off Fig. 39 of Kobayashi, Karakas & Lugaro (2020): an approximation, flagged as such. Keys with zero share are omitted; the shares sum to 1.
@@ -1122,4 +1311,50 @@ export interface ColourMatchingFile {
     number,
     number
   ];
+}
+/**
+ * public/data/worldmap.json: the land outline behind the discovery map (SPEC §10.11), simplified from Natural Earth 1:110m land (public domain). Rings of [lon, lat] in degrees, equirectangular.
+ */
+export interface WorldMapFile {
+  schemaVersion: 1;
+  source: SourceId;
+  projection: "equirectangular";
+  bounds: {
+    lonMin: number;
+    lonMax: number;
+    latMin: number;
+    latMax: number;
+  };
+  rings: [[number, number], [number, number], [number, number], [number, number], ...[number, number][]][];
+}
+/**
+ * public/data/relativity.json: where relativity changes chemistry, and where the periodic table ends (SPEC §10.5), from tools/curated/relativity.toml.
+ */
+export interface RelativityFile {
+  schemaVersion: 1;
+  /**
+   * @minItems 1
+   */
+  notes: [RelativityNote, ...RelativityNote[]];
+  limits: RelativityLimit[];
+}
+/**
+ * One element whose chemistry relativity changes, in our own words, with its paper.
+ */
+export interface RelativityNote {
+  Z: number;
+  topic: string;
+  text: string;
+  source: SourceId;
+  doi?: string;
+  reference?: string;
+}
+/**
+ * Where the periodic table would end for a finite nucleus (the point-nucleus limit Z = 1/α is computed from CODATA in the app).
+ */
+export interface RelativityLimit {
+  name: string;
+  Z: number;
+  text: string;
+  source: SourceId;
 }

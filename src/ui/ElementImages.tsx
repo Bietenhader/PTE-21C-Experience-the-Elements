@@ -12,6 +12,8 @@ interface Props {
   element: ElementIndexEntry;
   size: "thumb" | "large";
   max: number;
+  /** Only photographs of this kind (the history panel shows the historical ones). */
+  kind?: ImageRef["kind"];
 }
 
 type Image = ImageRef | ImagePlaceholder;
@@ -45,8 +47,8 @@ function Placeholder({ img, element: e, size }: { img: ImagePlaceholder; element
   );
 }
 
-export function ElementImages({ element: e, size, max }: Props) {
-  const images = (e.images as Image[]).slice(0, max);
+export function ElementImages({ element: e, size, max, kind }: Props) {
+  const images = (e.images as Image[]).filter((img) => !kind || (isPhoto(img) && img.kind === kind)).slice(0, max);
   const base = import.meta.env.BASE_URL;
   return (
     <div className={styles.strip} data-size={size}>

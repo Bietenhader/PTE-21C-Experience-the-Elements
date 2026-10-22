@@ -1,0 +1,2028 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+# Effective ionic radii (pm) of the ions in each element's common oxidation states, from
+#   R. D. Shannon, Acta Cryst. A32, 751 (1976), doi:10.1107/S0567739476001551 (source `shannon1976`).
+# Transcribed via the mendeleev package 1.3.0 (MIT), whose metadata cites Shannon (1976) for this table
+# (and Lundberg 2016 for some additions, not marked per row); not re-checked against the printed table.
+# Kept: the common oxidation states of index.json (PubChem) and the coordination numbers IV, VI and VIII,
+# plus any row Shannon marks as most reliable. Effective ionic radii, not crystal radii (crystal = ionic + 14 pm
+# for most ions). coordination: Roman numeral, SQ = square planar; spin: HS high spin, LS low spin.
+
+[[row]]
+Z = 3  # Li
+charge = 1
+coordination = "IV"
+radius_pm = 59.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 3  # Li
+charge = 1
+coordination = "VI"
+radius_pm = 76.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 3  # Li
+charge = 1
+coordination = "VIII"
+radius_pm = 92.0
+source = "shannon1976"
+
+[[row]]
+Z = 4  # Be
+charge = 2
+coordination = "IV"
+radius_pm = 27.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 4  # Be
+charge = 2
+coordination = "VI"
+radius_pm = 45.0
+source = "shannon1976"
+
+[[row]]
+Z = 5  # B
+charge = 3
+coordination = "III"
+radius_pm = 1.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 5  # B
+charge = 3
+coordination = "IV"
+radius_pm = 11.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 5  # B
+charge = 3
+coordination = "VI"
+radius_pm = 27.0
+source = "shannon1976"
+
+[[row]]
+Z = 6  # C
+charge = 4
+coordination = "IV"
+radius_pm = 15.0
+source = "shannon1976"
+
+[[row]]
+Z = 6  # C
+charge = 4
+coordination = "VI"
+radius_pm = 16.0
+source = "shannon1976"
+
+[[row]]
+Z = 7  # N
+charge = 5
+coordination = "VI"
+radius_pm = 13.0
+source = "shannon1976"
+
+[[row]]
+Z = 7  # N
+charge = 3
+coordination = "VI"
+radius_pm = 16.0
+source = "shannon1976"
+
+[[row]]
+Z = 7  # N
+charge = -3
+coordination = "IV"
+radius_pm = 146.0
+source = "shannon1976"
+
+[[row]]
+Z = 8  # O
+charge = -2
+coordination = "IV"
+radius_pm = 138.0
+source = "shannon1976"
+
+[[row]]
+Z = 8  # O
+charge = -2
+coordination = "VI"
+radius_pm = 140.0
+source = "shannon1976"
+
+[[row]]
+Z = 8  # O
+charge = -2
+coordination = "VIII"
+radius_pm = 142.0
+source = "shannon1976"
+
+[[row]]
+Z = 9  # F
+charge = -1
+coordination = "IV"
+radius_pm = 131.0
+source = "shannon1976"
+
+[[row]]
+Z = 9  # F
+charge = -1
+coordination = "VI"
+radius_pm = 133.0
+source = "shannon1976"
+
+[[row]]
+Z = 11  # Na
+charge = 1
+coordination = "IV"
+radius_pm = 99.0
+source = "shannon1976"
+
+[[row]]
+Z = 11  # Na
+charge = 1
+coordination = "VI"
+radius_pm = 102.0
+source = "shannon1976"
+
+[[row]]
+Z = 11  # Na
+charge = 1
+coordination = "VIII"
+radius_pm = 118.0
+source = "shannon1976"
+
+[[row]]
+Z = 12  # Mg
+charge = 2
+coordination = "IV"
+radius_pm = 57.0
+source = "shannon1976"
+
+[[row]]
+Z = 12  # Mg
+charge = 2
+coordination = "VI"
+radius_pm = 72.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 12  # Mg
+charge = 2
+coordination = "VIII"
+radius_pm = 89.0
+source = "shannon1976"
+
+[[row]]
+Z = 13  # Al
+charge = 3
+coordination = "IV"
+radius_pm = 39.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 13  # Al
+charge = 3
+coordination = "VI"
+radius_pm = 53.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 14  # Si
+charge = 4
+coordination = "IV"
+radius_pm = 26.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 14  # Si
+charge = 4
+coordination = "VI"
+radius_pm = 40.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 15  # P
+charge = 5
+coordination = "IV"
+radius_pm = 17.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 15  # P
+charge = 5
+coordination = "VI"
+radius_pm = 38.0
+source = "shannon1976"
+
+[[row]]
+Z = 15  # P
+charge = 3
+coordination = "VI"
+radius_pm = 44.0
+source = "shannon1976"
+
+[[row]]
+Z = 16  # S
+charge = 6
+coordination = "IV"
+radius_pm = 12.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 16  # S
+charge = 6
+coordination = "VI"
+radius_pm = 29.0
+source = "shannon1976"
+
+[[row]]
+Z = 16  # S
+charge = 4
+coordination = "VI"
+radius_pm = 37.0
+source = "shannon1976"
+
+[[row]]
+Z = 16  # S
+charge = -2
+coordination = "VI"
+radius_pm = 184.0
+source = "shannon1976"
+
+[[row]]
+Z = 17  # Cl
+charge = 7
+coordination = "IV"
+radius_pm = 8.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 17  # Cl
+charge = 7
+coordination = "VI"
+radius_pm = 27.0
+source = "shannon1976"
+
+[[row]]
+Z = 17  # Cl
+charge = -1
+coordination = "VI"
+radius_pm = 181.0
+source = "shannon1976"
+
+[[row]]
+Z = 19  # K
+charge = 1
+coordination = "IV"
+radius_pm = 137.0
+source = "shannon1976"
+
+[[row]]
+Z = 19  # K
+charge = 1
+coordination = "VI"
+radius_pm = 138.0
+source = "shannon1976"
+
+[[row]]
+Z = 19  # K
+charge = 1
+coordination = "VIII"
+radius_pm = 151.0
+source = "shannon1976"
+
+[[row]]
+Z = 20  # Ca
+charge = 2
+coordination = "VI"
+radius_pm = 100.0
+source = "shannon1976"
+
+[[row]]
+Z = 20  # Ca
+charge = 2
+coordination = "VII"
+radius_pm = 106.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 20  # Ca
+charge = 2
+coordination = "VIII"
+radius_pm = 112.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 21  # Sc
+charge = 3
+coordination = "VI"
+radius_pm = 74.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 21  # Sc
+charge = 3
+coordination = "VIII"
+radius_pm = 87.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 22  # Ti
+charge = 4
+coordination = "IV"
+radius_pm = 42.0
+source = "shannon1976"
+
+[[row]]
+Z = 22  # Ti
+charge = 4
+coordination = "VI"
+radius_pm = 60.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 22  # Ti
+charge = 4
+coordination = "VIII"
+radius_pm = 74.0
+source = "shannon1976"
+
+[[row]]
+Z = 22  # Ti
+charge = 3
+coordination = "VI"
+radius_pm = 67.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 22  # Ti
+charge = 2
+coordination = "VI"
+radius_pm = 86.0
+source = "shannon1976"
+
+[[row]]
+Z = 23  # V
+charge = 5
+coordination = "IV"
+radius_pm = 35.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 23  # V
+charge = 5
+coordination = "V"
+radius_pm = 46.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 23  # V
+charge = 5
+coordination = "VI"
+radius_pm = 54.0
+source = "shannon1976"
+
+[[row]]
+Z = 23  # V
+charge = 4
+coordination = "VI"
+radius_pm = 58.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 23  # V
+charge = 4
+coordination = "VIII"
+radius_pm = 72.0
+source = "shannon1976"
+
+[[row]]
+Z = 23  # V
+charge = 3
+coordination = "VI"
+radius_pm = 64.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 23  # V
+charge = 2
+coordination = "VI"
+radius_pm = 79.0
+source = "shannon1976"
+
+[[row]]
+Z = 24  # Cr
+charge = 6
+coordination = "IV"
+radius_pm = 26.0
+source = "shannon1976"
+
+[[row]]
+Z = 24  # Cr
+charge = 6
+coordination = "VI"
+radius_pm = 44.0
+source = "shannon1976"
+
+[[row]]
+Z = 24  # Cr
+charge = 3
+coordination = "VI"
+radius_pm = 61.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 24  # Cr
+charge = 2
+coordination = "VI"
+spin = "HS"
+radius_pm = 80.0
+source = "shannon1976"
+
+[[row]]
+Z = 24  # Cr
+charge = 2
+coordination = "VI"
+spin = "LS"
+radius_pm = 73.0
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 7
+coordination = "IV"
+radius_pm = 25.0
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 7
+coordination = "VI"
+radius_pm = 46.0
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 4
+coordination = "IV"
+radius_pm = 39.0
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 4
+coordination = "VI"
+radius_pm = 53.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 3
+coordination = "VI"
+spin = "HS"
+radius_pm = 64.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 3
+coordination = "VI"
+spin = "LS"
+radius_pm = 58.0
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 2
+coordination = "IV"
+spin = "HS"
+radius_pm = 66.0
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 2
+coordination = "VI"
+spin = "HS"
+radius_pm = 83.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 2
+coordination = "VI"
+spin = "LS"
+radius_pm = 67.0
+source = "shannon1976"
+
+[[row]]
+Z = 25  # Mn
+charge = 2
+coordination = "VIII"
+radius_pm = 96.0
+source = "shannon1976"
+
+[[row]]
+Z = 26  # Fe
+charge = 3
+coordination = "IV"
+spin = "HS"
+radius_pm = 49.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 26  # Fe
+charge = 3
+coordination = "VI"
+spin = "HS"
+radius_pm = 64.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 26  # Fe
+charge = 3
+coordination = "VI"
+spin = "LS"
+radius_pm = 55.0
+source = "shannon1976"
+
+[[row]]
+Z = 26  # Fe
+charge = 3
+coordination = "VIII"
+spin = "HS"
+radius_pm = 78.0
+source = "shannon1976"
+
+[[row]]
+Z = 26  # Fe
+charge = 2
+coordination = "IV"
+spin = "HS"
+radius_pm = 63.0
+source = "shannon1976"
+
+[[row]]
+Z = 26  # Fe
+charge = 2
+coordination = "VI"
+spin = "HS"
+radius_pm = 78.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 26  # Fe
+charge = 2
+coordination = "VI"
+spin = "LS"
+radius_pm = 61.0
+source = "shannon1976"
+
+[[row]]
+Z = 26  # Fe
+charge = 2
+coordination = "VIII"
+spin = "HS"
+radius_pm = 92.0
+source = "shannon1976"
+
+[[row]]
+Z = 27  # Co
+charge = 3
+coordination = "VI"
+spin = "HS"
+radius_pm = 61.0
+source = "shannon1976"
+
+[[row]]
+Z = 27  # Co
+charge = 3
+coordination = "VI"
+spin = "LS"
+radius_pm = 54.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 27  # Co
+charge = 2
+coordination = "IV"
+spin = "HS"
+radius_pm = 58.0
+source = "shannon1976"
+
+[[row]]
+Z = 27  # Co
+charge = 2
+coordination = "VI"
+spin = "HS"
+radius_pm = 74.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 27  # Co
+charge = 2
+coordination = "VI"
+spin = "LS"
+radius_pm = 65.0
+source = "shannon1976"
+
+[[row]]
+Z = 27  # Co
+charge = 2
+coordination = "VIII"
+radius_pm = 90.0
+source = "shannon1976"
+
+[[row]]
+Z = 28  # Ni
+charge = 3
+coordination = "VI"
+spin = "HS"
+radius_pm = 60.0
+source = "shannon1976"
+
+[[row]]
+Z = 28  # Ni
+charge = 3
+coordination = "VI"
+spin = "LS"
+radius_pm = 56.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 28  # Ni
+charge = 2
+coordination = "IV"
+radius_pm = 55.0
+source = "shannon1976"
+
+[[row]]
+Z = 28  # Ni
+charge = 2
+coordination = "VI"
+radius_pm = 69.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 29  # Cu
+charge = 2
+coordination = "IV"
+radius_pm = 57.0
+source = "shannon1976"
+
+[[row]]
+Z = 29  # Cu
+charge = 2
+coordination = "IVSQ"
+radius_pm = 57.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 29  # Cu
+charge = 2
+coordination = "V"
+radius_pm = 65.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 29  # Cu
+charge = 2
+coordination = "VI"
+radius_pm = 73.0
+source = "shannon1976"
+
+[[row]]
+Z = 29  # Cu
+charge = 1
+coordination = "IV"
+radius_pm = 60.0
+source = "shannon1976"
+
+[[row]]
+Z = 29  # Cu
+charge = 1
+coordination = "VI"
+radius_pm = 77.0
+source = "shannon1976"
+
+[[row]]
+Z = 30  # Zn
+charge = 2
+coordination = "IV"
+radius_pm = 60.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 30  # Zn
+charge = 2
+coordination = "V"
+radius_pm = 68.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 30  # Zn
+charge = 2
+coordination = "VI"
+radius_pm = 74.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 30  # Zn
+charge = 2
+coordination = "VIII"
+radius_pm = 90.0
+source = "shannon1976"
+
+[[row]]
+Z = 31  # Ga
+charge = 3
+coordination = "IV"
+radius_pm = 47.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 31  # Ga
+charge = 3
+coordination = "VI"
+radius_pm = 62.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 32  # Ge
+charge = 4
+coordination = "IV"
+radius_pm = 39.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 32  # Ge
+charge = 4
+coordination = "VI"
+radius_pm = 53.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 32  # Ge
+charge = 2
+coordination = "VI"
+radius_pm = 73.0
+source = "shannon1976"
+
+[[row]]
+Z = 33  # As
+charge = 5
+coordination = "IV"
+radius_pm = 33.5
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 33  # As
+charge = 5
+coordination = "VI"
+radius_pm = 46.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 33  # As
+charge = 3
+coordination = "VI"
+radius_pm = 58.0
+source = "shannon1976"
+
+[[row]]
+Z = 34  # Se
+charge = 6
+coordination = "IV"
+radius_pm = 28.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 34  # Se
+charge = 6
+coordination = "VI"
+radius_pm = 42.0
+source = "shannon1976"
+
+[[row]]
+Z = 34  # Se
+charge = 4
+coordination = "VI"
+radius_pm = 50.0
+source = "shannon1976"
+
+[[row]]
+Z = 34  # Se
+charge = -2
+coordination = "VI"
+radius_pm = 198.0
+source = "shannon1976"
+
+[[row]]
+Z = 35  # Br
+charge = -1
+coordination = "VI"
+radius_pm = 196.0
+source = "shannon1976"
+
+[[row]]
+Z = 37  # Rb
+charge = 1
+coordination = "VI"
+radius_pm = 152.0
+source = "shannon1976"
+
+[[row]]
+Z = 37  # Rb
+charge = 1
+coordination = "VIII"
+radius_pm = 161.0
+source = "shannon1976"
+
+[[row]]
+Z = 38  # Sr
+charge = 2
+coordination = "VI"
+radius_pm = 118.0
+source = "shannon1976"
+
+[[row]]
+Z = 38  # Sr
+charge = 2
+coordination = "VIII"
+radius_pm = 126.0
+source = "shannon1976"
+
+[[row]]
+Z = 39  # Y
+charge = 3
+coordination = "VI"
+radius_pm = 90.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 39  # Y
+charge = 3
+coordination = "VIII"
+radius_pm = 101.9
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 40  # Zr
+charge = 4
+coordination = "IV"
+radius_pm = 59.0
+source = "shannon1976"
+
+[[row]]
+Z = 40  # Zr
+charge = 4
+coordination = "VI"
+radius_pm = 72.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 40  # Zr
+charge = 4
+coordination = "VII"
+radius_pm = 78.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 40  # Zr
+charge = 4
+coordination = "VIII"
+radius_pm = 84.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 41  # Nb
+charge = 5
+coordination = "IV"
+radius_pm = 48.0
+source = "shannon1976"
+
+[[row]]
+Z = 41  # Nb
+charge = 5
+coordination = "VI"
+radius_pm = 64.0
+source = "shannon1976"
+
+[[row]]
+Z = 41  # Nb
+charge = 5
+coordination = "VIII"
+radius_pm = 74.0
+source = "shannon1976"
+
+[[row]]
+Z = 41  # Nb
+charge = 3
+coordination = "VI"
+radius_pm = 72.0
+source = "shannon1976"
+
+[[row]]
+Z = 42  # Mo
+charge = 6
+coordination = "IV"
+radius_pm = 41.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 42  # Mo
+charge = 6
+coordination = "VI"
+radius_pm = 59.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 43  # Tc
+charge = 7
+coordination = "IV"
+radius_pm = 37.0
+source = "shannon1976"
+
+[[row]]
+Z = 43  # Tc
+charge = 7
+coordination = "VI"
+radius_pm = 56.0
+source = "shannon1976"
+
+[[row]]
+Z = 43  # Tc
+charge = 4
+coordination = "VI"
+radius_pm = 64.5
+source = "shannon1976"
+
+[[row]]
+Z = 44  # Ru
+charge = 3
+coordination = "VI"
+radius_pm = 68.0
+source = "shannon1976"
+
+[[row]]
+Z = 45  # Rh
+charge = 3
+coordination = "VI"
+radius_pm = 66.5
+source = "shannon1976"
+
+[[row]]
+Z = 46  # Pd
+charge = 3
+coordination = "VI"
+radius_pm = 76.0
+source = "shannon1976"
+
+[[row]]
+Z = 46  # Pd
+charge = 2
+coordination = "VI"
+radius_pm = 86.0
+source = "shannon1976"
+
+[[row]]
+Z = 47  # Ag
+charge = 1
+coordination = "IV"
+radius_pm = 100.0
+source = "shannon1976"
+
+[[row]]
+Z = 47  # Ag
+charge = 1
+coordination = "VI"
+radius_pm = 115.0
+source = "shannon1976"
+
+[[row]]
+Z = 47  # Ag
+charge = 1
+coordination = "VIII"
+radius_pm = 128.0
+source = "shannon1976"
+
+[[row]]
+Z = 48  # Cd
+charge = 2
+coordination = "IV"
+radius_pm = 78.0
+source = "shannon1976"
+
+[[row]]
+Z = 48  # Cd
+charge = 2
+coordination = "VI"
+radius_pm = 95.0
+source = "shannon1976"
+
+[[row]]
+Z = 48  # Cd
+charge = 2
+coordination = "VIII"
+radius_pm = 110.0
+source = "shannon1976"
+
+[[row]]
+Z = 49  # In
+charge = 3
+coordination = "IV"
+radius_pm = 62.0
+source = "shannon1976"
+
+[[row]]
+Z = 49  # In
+charge = 3
+coordination = "VI"
+radius_pm = 80.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 49  # In
+charge = 3
+coordination = "VIII"
+radius_pm = 92.0
+source = "shannon1976"
+
+[[row]]
+Z = 50  # Sn
+charge = 4
+coordination = "IV"
+radius_pm = 55.0
+source = "shannon1976"
+
+[[row]]
+Z = 50  # Sn
+charge = 4
+coordination = "VI"
+radius_pm = 69.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 50  # Sn
+charge = 4
+coordination = "VIII"
+radius_pm = 81.0
+source = "shannon1976"
+
+[[row]]
+Z = 51  # Sb
+charge = 5
+coordination = "VI"
+radius_pm = 60.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 51  # Sb
+charge = 3
+coordination = "VI"
+radius_pm = 76.0
+source = "shannon1976"
+
+[[row]]
+Z = 52  # Te
+charge = 6
+coordination = "IV"
+radius_pm = 43.0
+source = "shannon1976"
+
+[[row]]
+Z = 52  # Te
+charge = 6
+coordination = "VI"
+radius_pm = 56.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 52  # Te
+charge = 4
+coordination = "IV"
+radius_pm = 66.0
+source = "shannon1976"
+
+[[row]]
+Z = 52  # Te
+charge = 4
+coordination = "VI"
+radius_pm = 97.0
+source = "shannon1976"
+
+[[row]]
+Z = 52  # Te
+charge = -2
+coordination = "VI"
+radius_pm = 221.0
+source = "shannon1976"
+
+[[row]]
+Z = 53  # I
+charge = 7
+coordination = "IV"
+radius_pm = 42.0
+source = "shannon1976"
+
+[[row]]
+Z = 53  # I
+charge = 7
+coordination = "VI"
+radius_pm = 53.0
+source = "shannon1976"
+
+[[row]]
+Z = 53  # I
+charge = 5
+coordination = "IIIPY"
+radius_pm = 44.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 53  # I
+charge = 5
+coordination = "VI"
+radius_pm = 95.0
+source = "shannon1976"
+
+[[row]]
+Z = 53  # I
+charge = -1
+coordination = "VI"
+radius_pm = 220.0
+source = "shannon1976"
+
+[[row]]
+Z = 55  # Cs
+charge = 1
+coordination = "VI"
+radius_pm = 167.0
+source = "shannon1976"
+
+[[row]]
+Z = 55  # Cs
+charge = 1
+coordination = "VIII"
+radius_pm = 174.0
+source = "shannon1976"
+
+[[row]]
+Z = 56  # Ba
+charge = 2
+coordination = "VI"
+radius_pm = 135.0
+source = "shannon1976"
+
+[[row]]
+Z = 56  # Ba
+charge = 2
+coordination = "VIII"
+radius_pm = 142.0
+source = "shannon1976"
+
+[[row]]
+Z = 57  # La
+charge = 3
+coordination = "VI"
+radius_pm = 103.2
+source = "shannon1976"
+
+[[row]]
+Z = 57  # La
+charge = 3
+coordination = "VIII"
+radius_pm = 116.0
+source = "shannon1976"
+
+[[row]]
+Z = 58  # Ce
+charge = 4
+coordination = "VI"
+radius_pm = 87.0
+source = "shannon1976"
+
+[[row]]
+Z = 58  # Ce
+charge = 4
+coordination = "VIII"
+radius_pm = 97.0
+source = "shannon1976"
+
+[[row]]
+Z = 58  # Ce
+charge = 3
+coordination = "VI"
+radius_pm = 101.0
+source = "shannon1976"
+
+[[row]]
+Z = 58  # Ce
+charge = 3
+coordination = "VIII"
+radius_pm = 114.3
+source = "shannon1976"
+
+[[row]]
+Z = 59  # Pr
+charge = 3
+coordination = "VI"
+radius_pm = 99.0
+source = "shannon1976"
+
+[[row]]
+Z = 59  # Pr
+charge = 3
+coordination = "VIII"
+radius_pm = 112.6
+source = "shannon1976"
+
+[[row]]
+Z = 60  # Nd
+charge = 3
+coordination = "VI"
+radius_pm = 98.3
+source = "shannon1976"
+
+[[row]]
+Z = 60  # Nd
+charge = 3
+coordination = "VIII"
+radius_pm = 110.9
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 61  # Pm
+charge = 3
+coordination = "VI"
+radius_pm = 97.0
+source = "shannon1976"
+
+[[row]]
+Z = 61  # Pm
+charge = 3
+coordination = "VIII"
+radius_pm = 109.3
+source = "shannon1976"
+
+[[row]]
+Z = 62  # Sm
+charge = 3
+coordination = "VI"
+radius_pm = 95.8
+source = "shannon1976"
+
+[[row]]
+Z = 62  # Sm
+charge = 3
+coordination = "VIII"
+radius_pm = 107.9
+source = "shannon1976"
+
+[[row]]
+Z = 62  # Sm
+charge = 2
+coordination = "VIII"
+radius_pm = 127.0
+source = "shannon1976"
+
+[[row]]
+Z = 63  # Eu
+charge = 3
+coordination = "VI"
+radius_pm = 94.7
+source = "shannon1976"
+
+[[row]]
+Z = 63  # Eu
+charge = 3
+coordination = "VIII"
+radius_pm = 106.6
+source = "shannon1976"
+
+[[row]]
+Z = 63  # Eu
+charge = 2
+coordination = "VI"
+radius_pm = 117.0
+source = "shannon1976"
+
+[[row]]
+Z = 63  # Eu
+charge = 2
+coordination = "VIII"
+radius_pm = 125.0
+source = "shannon1976"
+
+[[row]]
+Z = 64  # Gd
+charge = 3
+coordination = "VI"
+radius_pm = 93.8
+source = "shannon1976"
+
+[[row]]
+Z = 64  # Gd
+charge = 3
+coordination = "VIII"
+radius_pm = 105.3
+source = "shannon1976"
+
+[[row]]
+Z = 65  # Tb
+charge = 3
+coordination = "VI"
+radius_pm = 92.3
+source = "shannon1976"
+
+[[row]]
+Z = 65  # Tb
+charge = 3
+coordination = "VIII"
+radius_pm = 104.0
+source = "shannon1976"
+
+[[row]]
+Z = 66  # Dy
+charge = 3
+coordination = "VI"
+radius_pm = 91.2
+source = "shannon1976"
+
+[[row]]
+Z = 66  # Dy
+charge = 3
+coordination = "VIII"
+radius_pm = 102.7
+source = "shannon1976"
+
+[[row]]
+Z = 67  # Ho
+charge = 3
+coordination = "VI"
+radius_pm = 90.1
+source = "shannon1976"
+
+[[row]]
+Z = 67  # Ho
+charge = 3
+coordination = "VIII"
+radius_pm = 101.5
+source = "shannon1976"
+
+[[row]]
+Z = 68  # Er
+charge = 3
+coordination = "VI"
+radius_pm = 89.0
+source = "shannon1976"
+
+[[row]]
+Z = 68  # Er
+charge = 3
+coordination = "VIII"
+radius_pm = 100.4
+source = "shannon1976"
+
+[[row]]
+Z = 69  # Tm
+charge = 3
+coordination = "VI"
+radius_pm = 88.0
+source = "shannon1976"
+
+[[row]]
+Z = 69  # Tm
+charge = 3
+coordination = "VIII"
+radius_pm = 99.4
+source = "shannon1976"
+
+[[row]]
+Z = 70  # Yb
+charge = 3
+coordination = "VI"
+radius_pm = 86.8
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 70  # Yb
+charge = 3
+coordination = "VIII"
+radius_pm = 98.5
+source = "shannon1976"
+
+[[row]]
+Z = 70  # Yb
+charge = 2
+coordination = "VI"
+radius_pm = 102.0
+source = "shannon1976"
+
+[[row]]
+Z = 70  # Yb
+charge = 2
+coordination = "VIII"
+radius_pm = 114.0
+source = "shannon1976"
+
+[[row]]
+Z = 71  # Lu
+charge = 3
+coordination = "VI"
+radius_pm = 86.1
+source = "shannon1976"
+
+[[row]]
+Z = 71  # Lu
+charge = 3
+coordination = "VIII"
+radius_pm = 97.7
+source = "shannon1976"
+
+[[row]]
+Z = 72  # Hf
+charge = 4
+coordination = "IV"
+radius_pm = 58.0
+source = "shannon1976"
+
+[[row]]
+Z = 72  # Hf
+charge = 4
+coordination = "VI"
+radius_pm = 71.0
+source = "shannon1976"
+
+[[row]]
+Z = 72  # Hf
+charge = 4
+coordination = "VIII"
+radius_pm = 83.0
+source = "shannon1976"
+
+[[row]]
+Z = 73  # Ta
+charge = 5
+coordination = "VI"
+radius_pm = 64.0
+source = "shannon1976"
+
+[[row]]
+Z = 73  # Ta
+charge = 5
+coordination = "VIII"
+radius_pm = 74.0
+source = "shannon1976"
+
+[[row]]
+Z = 74  # W
+charge = 6
+coordination = "IV"
+radius_pm = 42.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 74  # W
+charge = 6
+coordination = "VI"
+radius_pm = 60.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 75  # Re
+charge = 7
+coordination = "IV"
+radius_pm = 38.0
+source = "shannon1976"
+
+[[row]]
+Z = 75  # Re
+charge = 7
+coordination = "VI"
+radius_pm = 53.0
+source = "shannon1976"
+
+[[row]]
+Z = 75  # Re
+charge = 6
+coordination = "VI"
+radius_pm = 55.0
+source = "shannon1976"
+
+[[row]]
+Z = 75  # Re
+charge = 4
+coordination = "VI"
+radius_pm = 63.0
+source = "shannon1976"
+
+[[row]]
+Z = 76  # Os
+charge = 4
+coordination = "VI"
+radius_pm = 63.0
+source = "shannon1976"
+
+[[row]]
+Z = 77  # Ir
+charge = 4
+coordination = "VI"
+radius_pm = 62.5
+source = "shannon1976"
+
+[[row]]
+Z = 77  # Ir
+charge = 3
+coordination = "VI"
+radius_pm = 68.0
+source = "shannon1976"
+
+[[row]]
+Z = 78  # Pt
+charge = 4
+coordination = "VI"
+radius_pm = 62.5
+source = "shannon1976"
+
+[[row]]
+Z = 78  # Pt
+charge = 2
+coordination = "VI"
+radius_pm = 80.0
+source = "shannon1976"
+
+[[row]]
+Z = 79  # Au
+charge = 3
+coordination = "VI"
+radius_pm = 85.0
+source = "shannon1976"
+
+[[row]]
+Z = 79  # Au
+charge = 1
+coordination = "VI"
+radius_pm = 137.0
+source = "shannon1976"
+
+[[row]]
+Z = 80  # Hg
+charge = 2
+coordination = "IV"
+radius_pm = 96.0
+source = "shannon1976"
+
+[[row]]
+Z = 80  # Hg
+charge = 2
+coordination = "VI"
+radius_pm = 102.0
+source = "shannon1976"
+
+[[row]]
+Z = 80  # Hg
+charge = 2
+coordination = "VIII"
+radius_pm = 114.0
+source = "shannon1976"
+
+[[row]]
+Z = 80  # Hg
+charge = 1
+coordination = "VI"
+radius_pm = 119.0
+source = "shannon1976"
+
+[[row]]
+Z = 81  # Tl
+charge = 3
+coordination = "IV"
+radius_pm = 75.0
+source = "shannon1976"
+
+[[row]]
+Z = 81  # Tl
+charge = 3
+coordination = "VI"
+radius_pm = 88.5
+source = "shannon1976"
+
+[[row]]
+Z = 81  # Tl
+charge = 3
+coordination = "VIII"
+radius_pm = 98.0
+source = "shannon1976"
+
+[[row]]
+Z = 81  # Tl
+charge = 1
+coordination = "VI"
+radius_pm = 150.0
+source = "shannon1976"
+
+[[row]]
+Z = 81  # Tl
+charge = 1
+coordination = "VIII"
+radius_pm = 159.0
+source = "shannon1976"
+
+[[row]]
+Z = 82  # Pb
+charge = 4
+coordination = "IV"
+radius_pm = 65.0
+source = "shannon1976"
+
+[[row]]
+Z = 82  # Pb
+charge = 4
+coordination = "VI"
+radius_pm = 77.5
+source = "shannon1976"
+
+[[row]]
+Z = 82  # Pb
+charge = 4
+coordination = "VIII"
+radius_pm = 94.0
+source = "shannon1976"
+
+[[row]]
+Z = 82  # Pb
+charge = 2
+coordination = "VI"
+radius_pm = 119.0
+source = "shannon1976"
+
+[[row]]
+Z = 82  # Pb
+charge = 2
+coordination = "VIII"
+radius_pm = 129.0
+source = "shannon1976"
+
+[[row]]
+Z = 83  # Bi
+charge = 5
+coordination = "VI"
+radius_pm = 76.0
+source = "shannon1976"
+
+[[row]]
+Z = 83  # Bi
+charge = 3
+coordination = "VI"
+radius_pm = 103.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 83  # Bi
+charge = 3
+coordination = "VIII"
+radius_pm = 117.0
+source = "shannon1976"
+
+[[row]]
+Z = 84  # Po
+charge = 4
+coordination = "VI"
+radius_pm = 94.0
+source = "shannon1976"
+
+[[row]]
+Z = 84  # Po
+charge = 4
+coordination = "VIII"
+radius_pm = 108.0
+source = "shannon1976"
+
+[[row]]
+Z = 87  # Fr
+charge = 1
+coordination = "VI"
+radius_pm = 180.0
+source = "shannon1976"
+
+[[row]]
+Z = 88  # Ra
+charge = 2
+coordination = "VIII"
+radius_pm = 148.0
+source = "shannon1976"
+
+[[row]]
+Z = 89  # Ac
+charge = 3
+coordination = "VI"
+radius_pm = 112.0
+source = "shannon1976"
+
+[[row]]
+Z = 90  # Th
+charge = 4
+coordination = "VI"
+radius_pm = 94.0
+source = "shannon1976"
+
+[[row]]
+Z = 90  # Th
+charge = 4
+coordination = "VIII"
+radius_pm = 105.0
+source = "shannon1976"
+
+[[row]]
+Z = 90  # Th
+charge = 4
+coordination = "IX"
+radius_pm = 109.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 91  # Pa
+charge = 5
+coordination = "VI"
+radius_pm = 78.0
+source = "shannon1976"
+
+[[row]]
+Z = 91  # Pa
+charge = 5
+coordination = "VIII"
+radius_pm = 91.0
+source = "shannon1976"
+
+[[row]]
+Z = 91  # Pa
+charge = 4
+coordination = "VI"
+radius_pm = 90.0
+source = "shannon1976"
+
+[[row]]
+Z = 91  # Pa
+charge = 4
+coordination = "VIII"
+radius_pm = 101.0
+source = "shannon1976"
+
+[[row]]
+Z = 92  # U
+charge = 6
+coordination = "IV"
+radius_pm = 52.0
+source = "shannon1976"
+
+[[row]]
+Z = 92  # U
+charge = 6
+coordination = "VI"
+radius_pm = 73.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 92  # U
+charge = 6
+coordination = "VIII"
+radius_pm = 86.0
+source = "shannon1976"
+
+[[row]]
+Z = 92  # U
+charge = 5
+coordination = "VI"
+radius_pm = 76.0
+source = "shannon1976"
+
+[[row]]
+Z = 92  # U
+charge = 4
+coordination = "VI"
+radius_pm = 89.0
+source = "shannon1976"
+
+[[row]]
+Z = 92  # U
+charge = 4
+coordination = "VIII"
+radius_pm = 100.0
+most_reliable = true
+source = "shannon1976"
+
+[[row]]
+Z = 92  # U
+charge = 3
+coordination = "VI"
+radius_pm = 102.5
+source = "shannon1976"
+
+[[row]]
+Z = 93  # Np
+charge = 6
+coordination = "VI"
+radius_pm = 72.0
+source = "shannon1976"
+
+[[row]]
+Z = 93  # Np
+charge = 5
+coordination = "VI"
+radius_pm = 75.0
+source = "shannon1976"
+
+[[row]]
+Z = 93  # Np
+charge = 4
+coordination = "VI"
+radius_pm = 87.0
+source = "shannon1976"
+
+[[row]]
+Z = 93  # Np
+charge = 4
+coordination = "VIII"
+radius_pm = 98.0
+source = "shannon1976"
+
+[[row]]
+Z = 93  # Np
+charge = 3
+coordination = "VI"
+radius_pm = 101.0
+source = "shannon1976"
+
+[[row]]
+Z = 94  # Pu
+charge = 6
+coordination = "VI"
+radius_pm = 71.0
+source = "shannon1976"
+
+[[row]]
+Z = 94  # Pu
+charge = 5
+coordination = "VI"
+radius_pm = 74.0
+source = "shannon1976"
+
+[[row]]
+Z = 94  # Pu
+charge = 4
+coordination = "VI"
+radius_pm = 86.0
+source = "shannon1976"
+
+[[row]]
+Z = 94  # Pu
+charge = 4
+coordination = "VIII"
+radius_pm = 96.0
+source = "shannon1976"
+
+[[row]]
+Z = 94  # Pu
+charge = 3
+coordination = "VI"
+radius_pm = 100.0
+source = "shannon1976"
+
+[[row]]
+Z = 95  # Am
+charge = 4
+coordination = "VI"
+radius_pm = 85.0
+source = "shannon1976"
+
+[[row]]
+Z = 95  # Am
+charge = 4
+coordination = "VIII"
+radius_pm = 95.0
+source = "shannon1976"
+
+[[row]]
+Z = 95  # Am
+charge = 3
+coordination = "VI"
+radius_pm = 97.5
+source = "shannon1976"
+
+[[row]]
+Z = 95  # Am
+charge = 3
+coordination = "VIII"
+radius_pm = 109.0
+source = "shannon1976"
+
+[[row]]
+Z = 96  # Cm
+charge = 3
+coordination = "VI"
+radius_pm = 97.0
+source = "shannon1976"
+
+[[row]]
+Z = 97  # Bk
+charge = 4
+coordination = "VI"
+radius_pm = 83.0
+source = "shannon1976"
+
+[[row]]
+Z = 97  # Bk
+charge = 4
+coordination = "VIII"
+radius_pm = 93.0
+source = "shannon1976"
+
+[[row]]
+Z = 97  # Bk
+charge = 3
+coordination = "VI"
+radius_pm = 96.0
+source = "shannon1976"
+
+[[row]]
+Z = 98  # Cf
+charge = 3
+coordination = "VI"
+radius_pm = 95.0
+source = "shannon1976"
+
+[[row]]
+Z = 102  # No
+charge = 2
+coordination = "VI"
+radius_pm = 110.0
+source = "shannon1976"

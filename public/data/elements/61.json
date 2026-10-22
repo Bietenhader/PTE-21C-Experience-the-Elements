@@ -675,6 +675,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 200.0,
+   "unc": 20.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -716,6 +723,55 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Promethium-147, a beta emitter, measures the thickness of materials, for example coatings inside nuclear fuel cladding.",
+    "source": "pubchem"
+   },
+   {
+    "text": "It can make phosphors glow, the basis of small nuclear batteries; there is no large-scale use.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 23944,
+   "source": "pubchem_ghs",
+   "notClassified": true,
+   "note": "Aggregated by PubChem from the reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. The reports say promethium does not meet the GHS hazard criteria. GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -724,6 +780,67 @@
    "reason": "not_measured",
    "note": "Promethium has no long-lived isotope, so none of it survives from before the Solar System; its box in Fig. 39 is empty."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Promethium has no stable isotope and only small amounts of the metal have ever been made; its reactions with air, water and acids are expected to be like those of neodymium and samarium, but they have not been described from experiments."
+   },
+   "water": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Promethium has no stable isotope and only small amounts of the metal have ever been made; its reactions with air, water and acids are expected to be like those of neodymium and samarium, but they have not been described from experiments."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Promethium has no stable isotope and only small amounts of the metal have ever been made; its reactions with air, water and acids are expected to be like those of neodymium and samarium, but they have not been described from experiments."
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Pm2O3",
+    "name": "promethium oxide",
+    "source": "pubchem_compounds",
+    "cid": 11602575
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Pm2O3",
+    "name": "promethium oxide",
+    "source": "pubchem_compounds",
+    "cid": 11602575
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 97.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 109.3,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23944
  },
  "amo": {
   "hyperfine": [],
@@ -746,7 +863,12 @@
   "place": "Oak Ridge, United States",
   "nameOrigin": "After Prometheus, the Titan of Greek myth who stole fire from the gods.",
   "source": "pubchem",
-  "note": "Identified chemically by ion-exchange chromatography among uranium fission products at Clinton Laboratories (now Oak Ridge National Laboratory). Jefferson Lab dates the proof to 1944 and its announcement to after the war. Earlier claims, such as illinium and florentium in the 1920s, were not confirmed, and 1941–42 Ohio State work probably made it without chemical proof."
+  "note": "Identified chemically by ion-exchange chromatography among uranium fission products at Clinton Laboratories (now Oak Ridge National Laboratory). Jefferson Lab dates the proof to 1944 and its announcement to after the war. Earlier claims, such as illinium and florentium in the 1920s, were not confirmed, and 1941–42 Ohio State work probably made it without chemical proof.",
+  "placeLocation": {
+   "lat": 36.011,
+   "lon": -84.27,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Promethium is the only lanthanide with no stable isotopes: the longest-lived, promethium-145, has a half-life of just 17.7 years, so any present when the Earth formed vanished long ago, and only fleeting traces arise from the fission of uranium in rocks. It was identified in the 1940s among fission products from a nuclear reactor and named after Prometheus, who stole fire from the gods. Promethium-147, a gentle beta emitter, has lit luminous dials and powered tiny nuclear batteries. The atom follows the filling rule, [Xe] 4f⁵ 6s², with five unpaired 4f electrons and the ground term ⁶H°₅/₂.",

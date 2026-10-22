@@ -333,6 +333,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000b."
    }
+  },
+  "polarizability": {
+   "value": 83.0,
+   "unc": 12.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -433,6 +440,96 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 23.35,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Stainless and heat-resisting steels are the main use.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also needed for superalloys, and made into chromium chemicals.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Chrome plating gives a hard, shiny, corrosion-resistant surface; chromium colours glass green.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H317",
+     "text": "May cause an allergic skin reaction",
+     "share": 20.7
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 19.1
+    },
+    {
+     "code": "H334",
+     "text": "May cause allergy or asthma symptoms or breathing difficulties if inhaled",
+     "share": 20.3
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23976,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 2404,
+   "notMeetingCriteria": {
+    "share": 50.0,
+    "reports": 1202,
+    "of": 2404
+   },
+   "note": "Aggregated by PubChem from 2404 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 50 % of the reports (1202 of 2404) say chromium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 102.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.0003,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 21.07,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "ICRP Publication 23 (1975) gives only an upper limit for a 70 kg reference adult: less than 0.0018 g."
+   }
   }
  },
  "nucleus": {
@@ -446,6 +543,121 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.087, massive_stars 0.359, white_dwarfs 0.554); quantised to 0.05. Stack height 78 px. Paper: 'For the elements from Ne to Ge, the newly synthesized amounts are very small for AGB stars, and the small green areas are mostly for mass loss.'"
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Resists attack by air at ordinary temperatures, which is why it is used for plating.",
+    "source": "hsdb"
+   },
+   "water": {
+    "text": "Insoluble in water and not attacked by it.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Dissolves in dilute hydrochloric and sulfuric acid; nitric acid makes it passive.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Cr2O3",
+    "name": "chromium(III) oxide",
+    "note": "the green pigment chrome green",
+    "source": "pubchem_compounds",
+    "cid": 517277
+   },
+   {
+    "formula": "K2Cr2O7",
+    "name": "potassium dichromate",
+    "source": "pubchem_compounds",
+    "cid": 24502
+   },
+   {
+    "formula": "CrO3",
+    "name": "chromium trioxide",
+    "source": "pubchem_compounds",
+    "cid": 14915
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "K2CrO4",
+    "name": "potassium chromate",
+    "source": "pubchem_compounds",
+    "cid": 24597
+   },
+   {
+    "state": 3,
+    "formula": "Cr2O3",
+    "name": "chromium(III) oxide",
+    "source": "pubchem_compounds",
+    "cid": 517277
+   },
+   {
+    "state": 2,
+    "formula": "CrCl2",
+    "name": "chromium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 24871
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "HS",
+    "radius": {
+     "value": 80.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "spin": "LS",
+    "radius": {
+     "value": 73.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 61.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 26.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 44.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23976
  },
  "amo": {
   "hyperfine": [],
@@ -475,7 +687,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "MOT reported independently by Konstanz (EPL 1999, cited) and NIST (PRA 61, 053407 (2000), doi 10.1103/PhysRevA.61.053407). Wavelength: NIST observed value; NIST Ritz value is 425.553363 nm. first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "MOT reported independently by Konstanz (EPL 1999, cited) and NIST (PRA 61, 053407 (2000), doi 10.1103/PhysRevA.61.053407). Wavelength: NIST observed value; NIST Ritz value is 425.553363 nm. The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    },
    {
     "A": 52,
@@ -539,7 +751,36 @@
    "text": "Long thought to help insulin work; EFSA found no convincing evidence that it is essential.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
-  }
+  },
+  "iarc": [
+   {
+    "agent": "Chromium (VI) compounds",
+    "group": "1",
+    "volumes": [
+     "Sup 7",
+     "49",
+     "100C"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Chromium (III) compounds",
+    "group": "3",
+    "volumes": [
+     "49"
+    ],
+    "source": "iarc_classifications"
+   },
+   {
+    "agent": "Chromium, metallic",
+    "group": "3",
+    "volumes": [
+     "Sup 7",
+     "49"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1797,
@@ -553,7 +794,12 @@
   ],
   "nameOrigin": "From the Greek chroma, 'colour', for its brightly coloured compounds.",
   "source": "pubchem",
-  "note": "Found in crocoite, the 'Siberian red lead' mineral; Vauquelin obtained the metal the following year by heating the oxide with charcoal."
+  "note": "Found in crocoite, the 'Siberian red lead' mineral; Vauquelin obtained the metal the following year by heating the oxide with charcoal.",
+  "placeLocation": {
+   "lat": 48.858,
+   "lon": 2.353,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Chromium is a hard, shiny transition metal; a thin layer of it gives taps and bumpers their mirror finish, and mixed into steel it forms a self-healing oxide skin that makes the steel 'stainless'. Its name comes from the Greek for colour, and fittingly the red of ruby and much of the green of emerald come from small traces of chromium in the crystal. Chromium also breaks the simple filling rule: the Aufbau order predicts [Ar] 3d⁴ 4s², but measurement shows [Ar] 3d⁵ 4s¹, a half-filled d subshell plus one s electron. That leaves six unpaired electrons, the most of any element in its row, and the ground term ⁷S₃.",

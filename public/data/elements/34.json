@@ -411,6 +411,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 28.9,
+   "unc": 1.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -516,6 +523,104 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.363,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Metallurgy takes 40 % of world use, much of it in producing manganese metal by electrolysis.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Agriculture and animal health (20 %): a fertiliser additive and a dietary supplement for people and livestock.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Glassmaking (20 %), and electronics and solar cells (10 %); also the active ingredient of some anti-dandruff shampoos.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "Grey (trigonal) selenium",
+    "note": "Spiral chains of atoms: the stable, metallic-looking form, which conducts electricity better in light.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "Red (monoclinic) selenium",
+    "note": "Crystals of Se₈ rings, like those of sulfur.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Amorphous and glassy selenium",
+    "note": "Red powder or black glass without long-range order.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed"
+    },
+    {
+     "code": "H331",
+     "text": "Toxic if inhaled"
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 6326970,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.0002,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.1728,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -528,6 +633,110 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.170, massive_stars 0.817, neutron_star_mergers 0.012); quantised to 0.05. Stack height 81 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "covalent chains",
+   "note": "Grey selenium: endless spiral chains of atoms; red selenium is made of Se₈ rings.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Stable in air at room temperature; burns with a blue flame when heated, giving selenium dioxide.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Insoluble in water.",
+    "source": "cameo_chemicals"
+   },
+   "acids": {
+    "text": "Oxidised by nitric acid to selenious acid and by sulfuric acid to selenic acid.",
+    "source": "hsdb"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "SeO2",
+    "name": "selenium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 24007
+   },
+   {
+    "formula": "H2Se",
+    "name": "hydrogen selenide",
+    "source": "pubchem_compounds",
+    "cid": 533
+   },
+   {
+    "formula": "ZnSe",
+    "name": "zinc selenide",
+    "source": "pubchem_compounds",
+    "cid": 4298215
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 6,
+    "formula": "H2SeO4",
+    "name": "selenic acid",
+    "source": "pubchem_compounds",
+    "cid": 1089
+   },
+   {
+    "state": 4,
+    "formula": "SeO2",
+    "name": "selenium dioxide",
+    "source": "pubchem_compounds",
+    "cid": 24007
+   },
+   {
+    "state": -2,
+    "formula": "H2Se",
+    "name": "hydrogen selenide",
+    "source": "pubchem_compounds",
+    "cid": 533
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -2,
+    "coordination": "VI",
+    "radius": {
+     "value": 198.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 4,
+    "coordination": "VI",
+    "radius": {
+     "value": 50.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 6,
+    "coordination": "IV",
+    "radius": {
+     "value": 28.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 6,
+    "coordination": "VI",
+    "radius": {
+     "value": 42.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 6326970
  },
  "amo": {
   "hyperfine": [],
@@ -548,7 +757,25 @@
    "text": "Built into selenoproteins such as glutathione peroxidases, which protect cells from oxidation, and into enzymes that activate thyroid hormone.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
-  }
+  },
+  "environment": [
+   {
+    "text": "Selenium leached from soils by irrigation drainage collected in the Kesterson ponds in California in the early 1980s and caused deformed and dead embryos in water birds.",
+    "source": "primary_literature",
+    "doi": "10.1016/0048-9697(86)90104-X"
+   }
+  ],
+  "iarc": [
+   {
+    "agent": "Selenium and selenium compounds",
+    "group": "3",
+    "volumes": [
+     "9",
+     "Sup 7"
+    ],
+    "source": "iarc_classifications"
+   }
+  ]
  },
  "history": {
   "discovered": 1817,
@@ -558,7 +785,12 @@
   "place": "Stockholm, Sweden",
   "nameOrigin": "From the Greek selene, 'Moon', as a companion to tellurium, which is named after the Earth.",
   "source": "pubchem",
-  "note": "Found in residue from a Swedish sulfuric acid works; Berzelius first took it for tellurium."
+  "note": "Found in residue from a Swedish sulfuric acid works; Berzelius first took it for tellurium.",
+  "placeLocation": {
+   "lat": 59.324,
+   "lon": 18.066,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Selenium is a nonmetal that comes as a red powder or as grey, metallic-looking crystals; it was named after the Moon, as a partner to tellurium, named after the Earth. Selenium conducts electricity far better in light than in the dark, a property put to work in early light sensors and in photocopier drums. Animals need traces of it, yet some milkvetch plants hoard enough in their leaves to poison grazing livestock. The atom is [Ar] 3d¹⁰ 4s² 4p⁴ (ground term ³P₂). Selenium-82, 8.82 % of the natural element, is radioactive, but it decays by double beta decay so slowly, with a half-life of about 9.6 × 10¹⁹ years, that it far outlasts the age of the universe.",

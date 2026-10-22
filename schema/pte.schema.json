@@ -38,7 +38,8 @@
         "USD/kg",
         "g",
         "°",
-        "kPa"
+        "kPa",
+        "J/(mol·K)"
       ]
     },
     "QuantityFlag": {
@@ -2106,11 +2107,340 @@
         },
         "note": {
           "type": "string"
+        },
+        "isotopeUses": {
+          "description": "Isotopes in biology and medicine (SPEC §10.10), our own words with a source per row. A is omitted when the use is not isotope-specific (gadolinium contrast agents).",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "A": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "isomer": {
+                "type": "string",
+                "enum": [
+                  "m"
+                ]
+              },
+              "field": {
+                "type": "string",
+                "enum": [
+                  "medicine",
+                  "tracer",
+                  "dating",
+                  "environment"
+                ]
+              },
+              "text": {
+                "type": "string"
+              },
+              "source": {
+                "$ref": "#/definitions/SourceId"
+              },
+              "doi": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "field",
+              "text",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "environment": {
+          "description": "Environmental notes: soils, bioaccumulation, radioecology.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourcedText"
+          }
+        },
+        "toxicity": {
+          "description": "Curated toxicity notes, where a cited source supports one. Absent means no curated note, not 'safe'.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourcedText"
+          }
+        },
+        "iarc": {
+          "description": "IARC carcinogen classifications of element-related agents; the group comes from the fetched IARC list.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "agent": {
+                "type": "string"
+              },
+              "group": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "1",
+                      "2A",
+                      "2B",
+                      "3"
+                    ]
+                  },
+                  {
+                    "$ref": "#/definitions/Missing"
+                  }
+                ]
+              },
+              "volumes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "source": {
+                "$ref": "#/definitions/SourceId"
+              }
+            },
+            "required": [
+              "agent",
+              "group",
+              "source"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [
         "essentialPlant",
         "essentialHuman"
+      ],
+      "additionalProperties": false
+    },
+    "Chemistry": {
+      "description": "Chemistry & bonding (SPEC §10.9): how the element bonds, how it reacts with air, water and acids (our own words, each with its source), well-known compounds, one compound per common oxidation state, and Shannon's ionic radii of its common ions.",
+      "type": "object",
+      "properties": {
+        "bonding": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ChemistryBonding"
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ]
+        },
+        "reactivity": {
+          "type": "object",
+          "properties": {
+            "air": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/SourcedText"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            },
+            "water": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/SourcedText"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            },
+            "acids": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/SourcedText"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            }
+          },
+          "required": [
+            "air",
+            "water",
+            "acids"
+          ],
+          "additionalProperties": false
+        },
+        "compounds": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ChemistryCompound"
+              },
+              "minItems": 1
+            },
+            {
+              "$ref": "#/definitions/Missing"
+            }
+          ]
+        },
+        "oxidationExamples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChemistryOxidationExample"
+          }
+        },
+        "oxidationNote": {
+          "type": "string",
+          "description": "What to know about the oxidation states where examples are few or none."
+        },
+        "ionicRadii": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChemistryIonicRadius"
+          }
+        },
+        "pubchemCid": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "PubChem compound record of the elemental substance (where the HSDB and CAMEO notes are)."
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceId"
+          },
+          "description": "Where the record holds nothing but Missing notes: the sources those notes rest on."
+        }
+      },
+      "required": [
+        "bonding",
+        "reactivity",
+        "compounds",
+        "oxidationExamples",
+        "ionicRadii"
+      ],
+      "additionalProperties": false
+    },
+    "ChemistryBonding": {
+      "description": "How the atoms of the element itself hold together.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "metallic",
+            "covalent network",
+            "covalent layers",
+            "covalent chains",
+            "molecular",
+            "monatomic"
+          ]
+        },
+        "note": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
+      },
+      "required": [
+        "type",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ChemistryCompound": {
+      "type": "object",
+      "properties": {
+        "formula": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "cid": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "PubChem CID whose molecular formula the build checked."
+        }
+      },
+      "required": [
+        "formula",
+        "name",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ChemistryOxidationExample": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "integer"
+        },
+        "formula": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "cid": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "state",
+        "formula",
+        "name",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ChemistryIonicRadius": {
+      "description": "Shannon's effective ionic radius of one ion in one coordination (SPEC §10.9).",
+      "type": "object",
+      "properties": {
+        "charge": {
+          "type": "integer"
+        },
+        "coordination": {
+          "type": "string",
+          "description": "Coordination number as Shannon writes it: Roman numeral, SQ square planar, PY pyramidal."
+        },
+        "spin": {
+          "type": "string",
+          "enum": [
+            "HS",
+            "LS"
+          ]
+        },
+        "radius": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "mostReliable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "charge",
+        "coordination",
+        "radius"
       ],
       "additionalProperties": false
     },
@@ -2345,13 +2675,69 @@
                 "eu2023"
               ],
               "additionalProperties": false
+            },
+            "thermal": {
+              "$ref": "#/definitions/ThermalProperties"
+            },
+            "uses": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/UseNote"
+              }
+            },
+            "allotropes": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Allotrope"
+              }
+            },
+            "hazards": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/GhsHazards"
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
+            },
+            "abundanceByMass": {
+              "type": "object",
+              "description": "The four abundances on one scale for the log-scale bars: mg/kg, i.e. parts per million by mass. Derived in tools/build_physical.py from `abundance` (sea water taken as 1 kg per litre; the body amount divided by the 70 kg reference adult); each note says how.",
+              "properties": {
+                "crust": {
+                  "$ref": "#/definitions/Q"
+                },
+                "ocean": {
+                  "$ref": "#/definitions/Q"
+                },
+                "solar": {
+                  "$ref": "#/definitions/Q"
+                },
+                "body": {
+                  "$ref": "#/definitions/Q"
+                }
+              },
+              "required": [
+                "crust",
+                "ocean",
+                "solar",
+                "body"
+              ],
+              "additionalProperties": false
             }
           },
           "required": [
             "abundance",
             "production",
             "critical",
-            "crystal"
+            "crystal",
+            "thermal",
+            "uses",
+            "allotropes",
+            "hazards",
+            "abundanceByMass"
           ],
           "additionalProperties": false
         },
@@ -2410,6 +2796,9 @@
           ],
           "additionalProperties": false
         },
+        "chemistry": {
+          "$ref": "#/definitions/Chemistry"
+        },
         "biology": {
           "$ref": "#/definitions/Biology"
         },
@@ -2464,6 +2853,38 @@
             },
             "note": {
               "type": "string"
+            },
+            "placeLocation": {
+              "description": "Where the discovery place is, from the gazetteer named in tools/curated/places.toml (SPEC §10.11).",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "lat": {
+                      "type": "number",
+                      "minimum": -90,
+                      "maximum": 90
+                    },
+                    "lon": {
+                      "type": "number",
+                      "minimum": -180,
+                      "maximum": 180
+                    },
+                    "source": {
+                      "$ref": "#/definitions/SourceId"
+                    }
+                  },
+                  "required": [
+                    "lat",
+                    "lon",
+                    "source"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "$ref": "#/definitions/Missing"
+                }
+              ]
             }
           },
           "required": [
@@ -2752,6 +3173,204 @@
       ],
       "additionalProperties": false
     },
+    "ThermalProperties": {
+      "description": "Thermal properties of the element (SPEC §10.4). Molar heat capacity C_p at 25 °C and 1 bar, from the CRC Handbook, in J/(mol·K): per mole of atoms, or per mole of molecules where `formulaAtoms` is given (the diatomic gases and halogens).",
+      "type": "object",
+      "properties": {
+        "molarHeatCapacity": {
+          "$ref": "#/definitions/Q"
+        },
+        "formulaAtoms": {
+          "type": "integer",
+          "minimum": 2,
+          "description": "Atoms in the formula unit the value refers to (2 for H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂); absent = per mole of atoms."
+        }
+      },
+      "required": [
+        "molarHeatCapacity"
+      ],
+      "additionalProperties": false
+    },
+    "UseNote": {
+      "description": "One bullet of what the element is used for, in PTE-21C's own words, with its source (tools/curated/uses.toml).",
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "Allotrope": {
+      "description": "A form of the pure element (tools/curated/allotropes.toml); `standard` marks the reference form at 25 °C and 1 bar.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "standard": {
+          "type": "boolean"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "note",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "HazardStatement": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^H\\d{3}[A-Za-z]*(\\+H\\d{3}[A-Za-z]*)*$"
+        },
+        "text": {
+          "type": "string"
+        },
+        "share": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Per cent of the ECHA notifications that give this statement, as PubChem aggregates them."
+        }
+      },
+      "required": [
+        "code",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "GhsHazards": {
+      "description": "GHS classification of the elemental substance (SPEC §10.4), from its PubChem compound record: the EU harmonised classification where one exists, otherwise PubChem's aggregation of the ECHA C&L notifications with the most reports. Pictograms are drawn by PTE-21C from their codes.",
+      "type": "object",
+      "properties": {
+        "pictograms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "GHS01",
+                  "GHS02",
+                  "GHS03",
+                  "GHS04",
+                  "GHS05",
+                  "GHS06",
+                  "GHS07",
+                  "GHS08",
+                  "GHS09"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "description": "Short name of what it warns of (tools/fetch_pubchem_ghs.py)."
+              }
+            },
+            "required": [
+              "code",
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "signalWord": {
+          "type": "string",
+          "enum": [
+            "Danger",
+            "Warning"
+          ]
+        },
+        "hazardStatements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/HazardStatement"
+          }
+        },
+        "basis": {
+          "type": "string",
+          "enum": [
+            "eu_harmonised",
+            "echa_notifications",
+            "other"
+          ]
+        },
+        "reports": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "notMeetingCriteria": {
+          "type": "object",
+          "properties": {
+            "share": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "reports": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "of": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "share",
+            "reports",
+            "of"
+          ],
+          "additionalProperties": false
+        },
+        "notClassified": {
+          "type": "boolean",
+          "description": "The classification says the substance does not meet the GHS hazard criteria."
+        },
+        "cid": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "PubChem compound ID of the elemental substance."
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pictograms",
+        "hazardStatements",
+        "basis",
+        "cid",
+        "source",
+        "note"
+      ],
+      "additionalProperties": false
+    },
     "CoverageFile": {
       "description": "Per-field coverage over the 118 elements (SPEC §6.4, §13.1), written by tools/report.py for the About page.",
       "type": "object",
@@ -2873,6 +3492,157 @@
         "x",
         "y",
         "z"
+      ],
+      "additionalProperties": false
+    },
+    "WorldMapFile": {
+      "description": "public/data/worldmap.json: the land outline behind the discovery map (SPEC §10.11), simplified from Natural Earth 1:110m land (public domain). Rings of [lon, lat] in degrees, equirectangular.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "projection": {
+          "const": "equirectangular"
+        },
+        "bounds": {
+          "type": "object",
+          "properties": {
+            "lonMin": {
+              "type": "number"
+            },
+            "lonMax": {
+              "type": "number"
+            },
+            "latMin": {
+              "type": "number"
+            },
+            "latMax": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "lonMin",
+            "lonMax",
+            "latMin",
+            "latMax"
+          ],
+          "additionalProperties": false
+        },
+        "rings": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 4,
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "source",
+        "projection",
+        "bounds",
+        "rings"
+      ],
+      "additionalProperties": false
+    },
+    "RelativityFile": {
+      "description": "public/data/relativity.json: where relativity changes chemistry, and where the periodic table ends (SPEC §10.5), from tools/curated/relativity.toml.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelativityNote"
+          },
+          "minItems": 1
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelativityLimit"
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "notes",
+        "limits"
+      ],
+      "additionalProperties": false
+    },
+    "RelativityNote": {
+      "description": "One element whose chemistry relativity changes, in our own words, with its paper.",
+      "type": "object",
+      "properties": {
+        "Z": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 118
+        },
+        "topic": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Z",
+        "topic",
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "RelativityLimit": {
+      "description": "Where the periodic table would end for a finite nucleus (the point-nucleus limit Z = 1/α is computed from CODATA in the app).",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "Z": {
+          "type": "integer"
+        },
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        }
+      },
+      "required": [
+        "name",
+        "Z",
+        "text",
+        "source"
       ],
       "additionalProperties": false
     }

@@ -729,6 +729,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 139.0,
+   "unc": 6.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -825,6 +832,122 @@
    "listedAs": "heavy rare earth elements",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2) defines HREE as dysprosium, erbium, europium, gadolinium, holmium, lutetium, terbium, thulium, ytterbium, yttrium. Scandium is assessed and listed separately; promethium is not assessed."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.74,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Catalysts, lasers, metallurgy and scintillators (crystals that flash when radiation passes).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ytterbium ions and atoms run optical clocks; the BIPM recommends their frequencies as secondary representations of the second.",
+    "source": "bipm_frequencies"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 84.0
+    },
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air",
+     "share": 10.0
+    },
+    {
+     "code": "H252",
+     "text": "Self-heating in large quantities; may catch fire",
+     "share": 10.0
+    },
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 84.0
+    },
+    {
+     "code": "H312",
+     "text": "Harmful in contact with skin",
+     "share": 84.0
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 82.0
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 82.0
+    },
+    {
+     "code": "H332",
+     "text": "Harmful if inhaled",
+     "share": 84.0
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 82.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23992,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 50,
+   "notMeetingCriteria": {
+    "share": 6.0,
+    "reports": 3,
+    "of": 50
+   },
+   "note": "Aggregated by PubChem from 50 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 6 % of the reports (3 of 50) say ytterbium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 3.2,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 8.2e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.001369,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -838,6 +961,90 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.508, massive_stars 0.448, neutron_star_mergers 0.044); quantised to 0.05. Stack height 92 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "metallic",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Slowly oxidises in air; kept sealed to stay bright.",
+    "source": "greenwood1997"
+   },
+   "water": {
+    "text": "Reacts slowly with water.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Dissolves readily in dilute acids.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "Yb2O3",
+    "name": "ytterbium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159375
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 3,
+    "formula": "Yb2O3",
+    "name": "ytterbium oxide",
+    "source": "pubchem_compounds",
+    "cid": 159375
+   },
+   {
+    "state": 2,
+    "formula": "YbCl2",
+    "name": "ytterbium(II) chloride",
+    "source": "pubchem_compounds",
+    "cid": 83785
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": 2,
+    "coordination": "VI",
+    "radius": {
+     "value": 102.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 2,
+    "coordination": "VIII",
+    "radius": {
+     "value": 114.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   },
+   {
+    "charge": 3,
+    "coordination": "VI",
+    "radius": {
+     "value": 86.8,
+     "unit": "pm",
+     "source": "shannon1976"
+    },
+    "mostReliable": true
+   },
+   {
+    "charge": 3,
+    "coordination": "VIII",
+    "radius": {
+     "value": 98.5,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 23992
  },
  "amo": {
   "hyperfine": [
@@ -948,7 +1155,7 @@
      "source": "primary_literature"
     },
     "source": "olmschenk_catalog",
-    "note": "Broad 1S0-1P1 line used for the first MOT; narrow-line MOTs use 1S0-3P1 (NIST 555.801 nm). first_mot = the paper the Olmschenk catalog lists as first 'laser cooled and trapped'."
+    "note": "Broad 1S0-1P1 line used for the first MOT; narrow-line MOTs use 1S0-3P1 (NIST 555.801 nm). The first-trap paper is the one the Olmschenk catalog lists as first 'laser cooled and trapped'."
    },
    {
     "A": 174,
@@ -1072,7 +1279,12 @@
   "place": "Geneva, Switzerland",
   "nameOrigin": "From Ytterby, the Swedish village whose quarry gave the mineral it came from.",
   "source": "pubchem",
-  "note": "Urbain showed in 1907, as Auer von Welsbach did independently, that Marignac's ytterbia also contained a second element, lutetium."
+  "note": "Urbain showed in 1907, as Auer von Welsbach did independently, that Marignac's ytterbia also contained a second element, lutetium.",
+  "placeLocation": {
+   "lat": 46.21,
+   "lon": 6.14,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Ytterbium is a soft, silvery lanthanide, the fourth element named after Ytterby in Sweden. It is oddly light for its place: its density, 6.9 g/cm³, is far below that of its neighbours thulium (9.32) and lutetium (9.84), because each atom in the metal lends only two electrons to bonding instead of three. With its 4f shell full ([Xe] 4f¹⁴ 6s², ground term ¹S₀) it behaves like a simple two-electron atom: it absorbs strongly at 398.8 nm, and a much weaker green line at 555.6 nm, linking singlet and triplet levels, is used to laser-cool ytterbium for some of the world’s most precise atomic clocks.",

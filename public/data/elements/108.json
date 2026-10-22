@@ -484,6 +484,13 @@
     "reason": "not_measured",
     "note": "Allen's configuration energies (Mann et al. 2000) do not include this element."
    }
+  },
+  "polarizability": {
+   "value": 36.0,
+   "unc": 4.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {
@@ -525,6 +532,53 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its atoms are made a few at a time, by fusing two lighter nuclei in an accelerator.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   },
+   {
+    "text": "No use outside research into the heaviest nuclei and the end of the periodic table.",
+    "source": "iupac_discovery",
+    "doi": "10.1351/pac199365081757"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {
@@ -533,6 +587,45 @@
    "reason": "not_measured",
    "note": "Kobayashi et al. (2020) model the elements up to uranium that survive from before the Solar System; this element is not among them."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "missing": true,
+   "reason": "predicted_only",
+   "note": "Only single atoms have been made; calculations predict a metal."
+  },
+  "reactivity": {
+   "air": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Hassium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "water": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Hassium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   },
+   "acids": {
+    "missing": true,
+    "reason": "predicted_only",
+    "note": "Hassium is made a few atoms at a time; its reactivity is known only from predictions and single-atom chemistry."
+   }
+  },
+  "compounds": [
+   {
+    "formula": "HsO4",
+    "name": "hassium tetroxide",
+    "note": "volatile like osmium tetroxide; seven molecules, studied in 2001",
+    "source": "primary_literature",
+    "doi": "10.1038/nature00980"
+   }
+  ],
+  "oxidationExamples": [],
+  "ionicRadii": [],
+  "pubchemCid": 56951714,
+  "sources": [
+   "turler2013"
+  ]
  },
  "amo": {
   "hyperfine": [],
@@ -556,7 +649,12 @@
   "symbolNote": "A 1994 IUPAC proposal would have called it hahnium (Hn); hassium was adopted in 1997. Temporary name: unniloctium (Uno).",
   "source": "iupac_discovery",
   "doi": "10.1351/pac199365081757",
-  "note": "The 1993 IUPAC/IUPAP report judged that simultaneous, independent 1984 work in Darmstadt and Dubna established element 108; the Darmstadt group named it. The PubChem texts credit GSI alone."
+  "note": "The 1993 IUPAC/IUPAP report judged that simultaneous, independent 1984 work in Darmstadt and Dubna established element 108; the Darmstadt group named it. The PubChem texts credit GSI alone.",
+  "placeLocation": {
+   "lat": 49.872,
+   "lon": 8.65,
+   "source": "geonames"
+  }
  },
  "prose": {
   "text": "Hassium is a synthetic element in group 8, below osmium, named after Hesse, the German state in which Darmstadt lies. It was first made there at GSI in 1984 by fusing lead-208 with iron-58, giving atoms of hassium-265 with a half-life of about 2 milliseconds. Only a few atoms have been made since, yet chemists have turned a handful of them into a volatile tetroxide, just as osmium forms OsO₄. Its nucleus is notable too: hassium-270, with 108 protons and 162 neutrons, is regarded as a doubly magic deformed nucleus, and it survives for several seconds. Theory predicts the atom's configuration as [Rn] 5f¹⁴ 6d⁶ 7s², but it has not been measured.",

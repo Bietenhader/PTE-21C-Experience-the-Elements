@@ -117,3 +117,40 @@ export function isAnomalous(z: number, measured: string): boolean {
 export function coreSymbol(configuration: string): string | undefined {
   return /^\[([A-Z][a-z]?)\]/.exec(configuration)?.[1];
 }
+
+/**
+ * Why a measured configuration departs from the Madelung prediction, chosen from SPEC §10.5's small
+ * set by what moved where. This classifies; it does not derive (the UI says so):
+ * - "f-to-d": an f electron sits in d instead (La, Ce, Gd, Ac, Th, Pa, U, Np, Cm): (n−2)f and (n−1)d
+ *   are nearly degenerate.
+ * - "half-or-filled": s electrons moved into d and left it exactly half full or full (Cr, Cu, Mo, Pd,
+ *   Ag, Au): the extra exchange stabilization of a half-filled or filled d shell.
+ * - "d-s": s electrons moved into d without reaching half or full (Nb, Ru, Rh, Pt): (n−1)d and ns are
+ *   nearly degenerate.
+ * - "relativistic": a d electron moved to p (Lr: 7p instead of 6d): relativistic stabilization of
+ *   the s and p₁/₂ orbitals.
+ * null when the configuration follows the Madelung rule.
+ */
+export type AnomalyKind = "f-to-d" | "half-or-filled" | "d-s" | "relativistic";
+
+export function anomalyKind(z: number, measured: string): AnomalyKind | null {
+  if (!isAnomalous(z, measured)) return null;
+  const a = aufbau(z);
+  const m = parseConfiguration(measured);
+  const delta = new Map<string, number>();
+  for (const k of new Set([...a.keys(), ...m.keys()])) delta.set(k, (m.get(k) ?? 0) - (a.get(k) ?? 0));
+  const changed = (l: number, sign: 1 | -1) =>
+    [...delta].filter(([k, d]) => Number(k.split(",")[1]) === l && Math.sign(d) === sign).map(([k]) => k);
+  const fLost = changed(3, -1);
+  const dGained = changed(2, 1);
+  const dLost = changed(2, -1);
+  const sLost = changed(0, -1);
+  const pGained = changed(1, 1);
+  if (fLost.length && dGained.length) return "f-to-d";
+  if (dLost.length && pGained.length) return "relativistic";
+  if (sLost.length && dGained.length) {
+    const d = m.get(dGained[0] ?? "") ?? 0;
+    return d === 5 || d === 10 ? "half-or-filled" : "d-s";
+  }
+  return null;
+}

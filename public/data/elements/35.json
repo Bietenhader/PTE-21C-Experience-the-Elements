@@ -415,6 +415,13 @@
     "source": "allen_en",
     "note": "Configuration energy (Allen electronegativity) in eV, not converted to the Pauling-like scale; Mann 2000a."
    }
+  },
+  "polarizability": {
+   "value": 21.0,
+   "unc": 1.0,
+   "unit": "a.u.",
+   "source": "schwerdtfeger2019",
+   "note": "Recommended value of the 2018 table: from experiment where it is precise enough, otherwise from high-level calculation."
   }
  },
  "probability": {},
@@ -528,6 +535,94 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 75.69,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of Br₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "Mainly used to make brominated flame retardants.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Clear bromide brines are used as drilling fluids for oil and gas wells.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also used in water treatment and as a chemical intermediate.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    },
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 24408,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 2.4,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 67.3,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.03033,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 2.85714,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {
@@ -540,6 +635,83 @@
    "source": "kobayashi2020",
    "note": "Read off Fig. 39 at the dotted 'age of the Sun' line (t = 9.2 Gyr after the Big Bang, 4.6 Gyr ago): pixel fractions of the stacked areas (agb 0.131, massive_stars 0.845, neutron_star_mergers 0.024); quantised to 0.05. Stack height 82 px."
   }
+ },
+ "chemistry": {
+  "bonding": {
+   "type": "molecular",
+   "note": "Br₂ molecules; one of only two elements liquid at room temperature.",
+   "source": "greenwood1997"
+  },
+  "reactivity": {
+   "air": {
+    "text": "Gives off red-brown, choking fumes in air; a strong oxidiser.",
+    "source": "cameo_chemicals"
+   },
+   "water": {
+    "text": "Slightly soluble in water, giving 'bromine water', which contains hypobromous and hydrobromic acids.",
+    "source": "greenwood1997"
+   },
+   "acids": {
+    "text": "Not dissolved by acids; it oxidises what it reacts with.",
+    "source": "greenwood1997"
+   }
+  },
+  "compounds": [
+   {
+    "formula": "NaBr",
+    "name": "sodium bromide",
+    "source": "pubchem_compounds",
+    "cid": 253881
+   },
+   {
+    "formula": "HBr",
+    "name": "hydrogen bromide",
+    "source": "pubchem_compounds",
+    "cid": 260
+   },
+   {
+    "formula": "AgBr",
+    "name": "silver bromide",
+    "note": "the light-sensitive salt of photographic film",
+    "source": "pubchem_compounds",
+    "cid": 66199
+   }
+  ],
+  "oxidationExamples": [
+   {
+    "state": 5,
+    "formula": "KBrO3",
+    "name": "potassium bromate",
+    "source": "pubchem_compounds",
+    "cid": 23673461
+   },
+   {
+    "state": 1,
+    "formula": "HOBr",
+    "name": "hypobromous acid",
+    "source": "pubchem_compounds",
+    "cid": 83547
+   },
+   {
+    "state": -1,
+    "formula": "NaBr",
+    "name": "sodium bromide",
+    "source": "pubchem_compounds",
+    "cid": 253881
+   }
+  ],
+  "ionicRadii": [
+   {
+    "charge": -1,
+    "coordination": "VI",
+    "radius": {
+     "value": 196.0,
+     "unit": "pm",
+     "source": "shannon1976"
+    }
+   }
+  ],
+  "pubchemCid": 24408
  },
  "amo": {
   "hyperfine": [],
@@ -562,7 +734,12 @@
   "place": "Montpellier, France",
   "nameOrigin": "From the Greek bromos, 'stench', for its strong smell.",
   "source": "pubchem",
-  "note": "Löwig made it first, as a student in Heidelberg, but Balard published first (1826) and is usually credited; the map dot marks Balard's Montpellier."
+  "note": "Löwig made it first, as a student in Heidelberg, but Balard published first (1826) and is usually credited; the map dot marks Balard's Montpellier.",
+  "placeLocation": {
+   "lat": 43.61,
+   "lon": 3.87,
+   "source": "natural_earth"
+  }
  },
  "prose": {
   "text": "Bromine is a halogen and one of only two elements that are liquid at room temperature, the other being mercury: a dark red-brown liquid giving off an orange, foul-smelling vapour, which earned it a name from the Greek for 'stench'. Surprisingly, the Tyrian purple prized by ancient emperors, extracted from sea snails, is a bromine compound. The atom, [Ar] 3d¹⁰ 4s² 4p⁵ (ground term ²P°₃/₂), lacks one electron to fill its shell. Natural bromine is an almost even mix of two stable isotopes, 50.65 % bromine-79 and 49.35 % bromine-81, so molecules containing it show a tell-tale pair of nearly equal peaks in a mass spectrum.",

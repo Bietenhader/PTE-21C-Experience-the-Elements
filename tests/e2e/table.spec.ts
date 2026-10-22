@@ -67,7 +67,8 @@ test("makes no request outside its own origin (SPEC §2.7)", async ({ page, base
   });
   await open(page);
   await fullSize(page);
-  await page.mouse.wheel(0, 4000);
+  // Scroll to the bottom so lazy content loads; mobile WebKit has no mouse wheel.
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
   await page.waitForLoadState("networkidle");
   expect(foreign).toEqual([]);
 });

@@ -1,15 +1,34 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M2 — Data complete for v0.1 · **ready for review** (pull request open)
-**Last updated:** 2026-10-21
-**Next:** M3 (the panels' physics), after Fin's review of M2.
+**Current milestone:** M2 — Data complete for v0.1 · **complete** (merged 2026-10-22; the site is live)
+**Last updated:** 2026-10-22
+**Next:** M3 (the panels' physics), when Fin gives the go-ahead.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
-## For Fin: what to look at (M2 review)
+## After the merge (2026-10-22)
+
+- **Checked on the live site**, desktop and phone: all 118 elements, the photographs with their credits, the
+  short texts and the About page work; no request goes to any other site; no errors.
+- **The review items stay open on purpose.** No comments came with the merge, so the defaults stay in place
+  for `biology.toml`, the image report and the three questions below. Tell me any change whenever you like;
+  nothing in M3 depends on them.
+- **First nightly run on all browsers** (Firefox, Safari/WebKit, iPhone; it tested the M1 version):
+  182 tests passed, 4 failed, all in Safari's engine. Fixed on this branch, not yet on the live site:
+  - **A real bug.** Safari fires a scroll event on the panel strip as the element sheet closes. The app read
+    it as a swipe to the first panel, so the next element opened on *Orbitals* instead of the last panel
+    you used. Swiping on an iPhone could also jump back a panel mid-swipe. Now only a strip at rest on a
+    panel, in an open sheet, counts. A new test reproduces the bug in Chrome and passes with the fix.
+  - **A test problem.** One test scrolled with a mouse wheel, which phone Safari does not have; it now
+    scrolls the page directly.
+
+  The fix reaches the live site with the next pull request (M3), or sooner as a small separate one if you
+  would like that.
+
+## For Fin: what to look at (M2 review, merged)
 
 M2 is mostly invisible on the table itself: it fills the data behind every element, which the panels draw in
 M3 and M4. What you can see now:
@@ -119,5 +138,6 @@ licence check of the code dependencies are clean.
 
 ## Known issues and housekeeping
 
-- Firefox, Safari/WebKit and iPhone run in the nightly job only (this environment can run Chromium only).
+- Firefox, Safari/WebKit and iPhone run in the nightly job only (this environment can run Chromium only);
+  the first run's WebKit failures are fixed above.
 - ESLint 9 (a developer tool) is past end of life; the accessibility lint plugin still needs it.

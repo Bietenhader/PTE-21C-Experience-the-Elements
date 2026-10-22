@@ -48,6 +48,22 @@ test.describe("routing and the sheet", () => {
     await expect(page).toHaveURL(/#\/Cs\/history$/);
   });
 
+  test("a scroll event on the closed sheet does not change the remembered panel", async ({ page }) => {
+    // WebKit fires a scroll event on the panel strip as the dialog closes (its scroll position resets);
+    // that must not count as a swipe to the first panel.
+    await open(page, "#/Fe/history");
+    await page.keyboard.press("Escape");
+    await expect(page.getByTestId("sheet")).toBeHidden();
+    await page.getByTestId("panel-strip").evaluate((s) => {
+      s.scrollLeft = 0;
+      s.dispatchEvent(new Event("scroll"));
+      s.dispatchEvent(new Event("scrollend"));
+    });
+    await page.waitForTimeout(300);
+    await page.goto("./#/Cs");
+    await expect(page).toHaveURL(/#\/Cs\/history$/);
+  });
+
   test("table state rides in the URL: #/?layout=janet&g3=la&trend=ie1&view=heat", async ({ page }) => {
     await open(page, "#/?layout=janet&g3=la&trend=ie1&view=heat");
     await expect(page.getByRole("radio", { name: "Janet", exact: true })).toBeChecked();

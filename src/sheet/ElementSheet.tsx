@@ -145,13 +145,18 @@ function SheetBody({ element: e, panel, sources, onDismiss }: BodyProps) {
     return () => ro.disconnect();
   }, []);
 
-  // A swipe (or trackpad scroll) that settles on another panel selects it.
+  // A swipe (or trackpad scroll) that settles on another panel selects it. Only a strip at rest on a
+  // panel counts, and only while the sheet is open: WebKit also fires scroll events mid-animation and
+  // when the closing dialog resets the strip to 0, which must not select the first panel.
   useEffect(() => {
     const s = strip.current;
     if (!s) return;
     let timer: number | undefined;
     const settle = () => {
-      const i = Math.round(s.scrollLeft / Math.max(1, s.clientWidth));
+      const width = s.clientWidth;
+      if (!useView.getState().element || width === 0) return;
+      const i = Math.round(s.scrollLeft / width);
+      if (Math.abs(s.scrollLeft - i * width) > 2) return;
       const slug = PANELS[i]?.slug;
       if (slug && slug !== useView.getState().panel) setPanel(slug);
     };

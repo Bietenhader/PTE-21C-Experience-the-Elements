@@ -225,6 +225,15 @@ citation = "Regulation (EU) 2024/1252 of the European Parliament and of the Coun
 kind = "curated"
 notes = "Raw materials mapped to elements in tools/curated/critical_raw_materials.toml; mappings through a mineral (coking coal and graphite, fluorspar, baryte) are marked, and osmium (platinum-group metal, not assessed) is flagged doubtful."
 
+[cie_cmf]
+title = "CIE 1931 colour-matching functions, 2° standard colorimetric observer"
+url = "https://doi.org/10.25039/CIE.DS.xvudnb9b"
+licence = "Cited standard table (CIE 018:2019, Table 6; ISO/CIE 11664-1:2019); the CIE's data file is CC BY-SA 4.0"
+licence_url = "https://creativecommons.org/licenses/by-sa/4.0/"
+citation = "CIE (2019), Colour-matching functions of CIE 1931 standard colorimetric observer (data table), International Commission on Illumination, Vienna, doi:10.25039/CIE.DS.xvudnb9b; values from CIE 018:2019, The Basis of Physical Photometry, 3rd ed., Table 6, doi:10.25039/TR.018.2019."
+kind = "fetched"
+notes = "The standard observer x̄, ȳ, z̄ on the 5 nm grid 380–780 nm (SPEC §11.6), used as the numerical values of the international standard, with citation. The file's SHA-256 is checked against the CIE's own metadata record. Written to public/data/cie1931.json for the spectrum colours."
+
 [cod]
 title = "Crystallography Open Database"
 url = "https://www.crystallography.net/cod/"

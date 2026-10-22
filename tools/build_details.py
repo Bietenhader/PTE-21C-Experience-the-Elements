@@ -359,6 +359,21 @@ def build_levels(levels: dict, symbols: dict[int, str], report: Report) -> int:
 # --- main -----------------------------------------------------------------------------------
 
 
+def build_colour(report: Report) -> int:
+    """public/data/cie1931.json: the colour-matching functions for the spectrum colours (SPEC §11.6)."""
+    import fetch_cie
+
+    try:
+        table = fetch_cie.parse()
+    except (SourceUnavailable, OSError) as exc:
+        report.unavailable(fetch_cie.SOURCE, str(exc))
+        return 0
+    doc = {"schemaVersion": 1, "source": fetch_cie.SOURCE, "observer": "CIE 1931 2°", **table}
+    validator("ColourMatchingFile").validate(doc)
+    dump_json(DATA_DIR / "cie1931.json", doc)
+    return 1
+
+
 def build_details(report: Report | None = None) -> dict[str, int]:
     own_report = report is None
     report = report or Report()
@@ -377,6 +392,7 @@ def build_details(report: Report | None = None) -> dict[str, int]:
             continue
         counts[name] = builder(data, symbols, report)
     counts["elements"] = build_elements(load_json(DATA_DIR / "index.json"), report)
+    counts["colour"] = build_colour(report)
     if own_report and report.sections:
         # Append this step's findings to the report build.py wrote (python tools/pipeline.py runs both).
         path = TOOLS_DIR / "build-report.md"

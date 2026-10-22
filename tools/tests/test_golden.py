@@ -179,3 +179,12 @@ def test_every_element_file_names_its_cosmic_origin_and_crystal(by_symbol):
     assert fe["physical"]["crystal"]["pearson"] == "cI2"
     assert sum(fe["nucleus"]["origin"]["fractions"].values()) == pytest.approx(1)
     assert fe["nucleus"]["origin"]["flag"] == "estimated"
+
+
+def test_cie_standard_observer():
+    """SPEC §11.6: the CIE 1931 2° observer on the 5 nm grid; ȳ = 1 at 555 nm, x̄(600) = 1.0622."""
+    cie = load_json(DATA_DIR / "cie1931.json")
+    assert (cie["start"], cie["step"], len(cie["y"])) == (380, 5, 81)
+    assert cie["y"][(555 - 380) // 5] == 1.0
+    assert cie["x"][(600 - 380) // 5] == pytest.approx(1.0622, abs=1e-6)
+    assert max(cie["y"]) == 1.0

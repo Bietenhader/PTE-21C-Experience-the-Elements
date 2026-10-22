@@ -10,7 +10,7 @@ import pytest
 from conftest import LAYOUT_IDS
 
 from build import validate
-from common import CURATED_DIR, NUM_ELEMENTS, SCHEMA_DIR, TOOLS_DIR, load_json
+from common import CURATED_DIR, DATA_DIR, NUM_ELEMENTS, SCHEMA_DIR, TOOLS_DIR, load_json
 
 
 def test_schema_is_valid_draft7():
@@ -108,3 +108,32 @@ def test_fetched_sources_used_in_m0_have_retrieval_dates(sources):
     for sid, s in sources["sources"].items():
         if s["kind"] == "fetched" and s["status"] == "ok":
             assert s.get("retrieved"), sid
+
+
+DETAIL_FILES = [
+    ("elements", "ElementDetailFile"),
+    ("isotopes", "IsotopesFile"),
+    ("spectra", "SpectraFile"),
+    ("levels", "LevelsFile"),
+]
+
+
+@pytest.mark.parametrize(("folder", "definition"), DETAIL_FILES, ids=[f for f, _ in DETAIL_FILES])
+def test_per_element_files_match_schema(folder, definition):
+    """Every per-element file the panels load validates (SPEC §13.1), not only at build time."""
+    schema = load_json(SCHEMA_DIR / "pte.schema.json")
+    v = jsonschema.Draft7Validator({"$ref": f"#/definitions/{definition}", "definitions": schema["definitions"]})
+    files = sorted((DATA_DIR / folder).glob("*.json"))
+    assert files, f"public/data/{folder} is empty"
+    for f in files:
+        errors = list(v.iter_errors(load_json(f)))
+        assert not errors, f"{folder}/{f.name}: {errors[0].message}"
+
+
+@pytest.mark.parametrize(
+    ("name", "definition"), [("metrology.json", "MetrologyFile"), ("cie1931.json", "ColourMatchingFile")]
+)
+def test_shared_files_match_schema(name, definition):
+    schema = load_json(SCHEMA_DIR / "pte.schema.json")
+    v = jsonschema.Draft7Validator({"$ref": f"#/definitions/{definition}", "definitions": schema["definitions"]})
+    v.validate(load_json(DATA_DIR / name))

@@ -23,6 +23,7 @@ import build_layouts
 import build_trends
 import fetch_bipm
 import fetch_ciaaw
+import fetch_cie
 import fetch_codata
 import fetch_iaea
 import fetch_images
@@ -45,6 +46,7 @@ FETCHERS = [
     fetch_nist_lines,
     fetch_nist_srd141,
     fetch_bipm,
+    fetch_cie,
     fetch_images,
 ]
 

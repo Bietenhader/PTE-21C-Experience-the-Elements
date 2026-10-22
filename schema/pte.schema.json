@@ -2768,6 +2768,74 @@
         "fields"
       ],
       "additionalProperties": false
+    },
+    "ColourMatchingFile": {
+      "description": "public/data/cie1931.json: the CIE 1931 2° colour-matching functions x̄, ȳ, z̄ at 5 nm from 380 to 780 nm (SPEC §11.6), from the pipeline.",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "integer",
+          "enum": [
+            1
+          ]
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "observer": {
+          "type": "string"
+        },
+        "start": {
+          "type": "number",
+          "enum": [
+            380
+          ]
+        },
+        "step": {
+          "type": "number",
+          "enum": [
+            5
+          ]
+        },
+        "x": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 81,
+          "maxItems": 81
+        },
+        "y": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 81,
+          "maxItems": 81
+        },
+        "z": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 81,
+          "maxItems": 81
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "source",
+        "observer",
+        "start",
+        "step",
+        "x",
+        "y",
+        "z"
+      ],
+      "additionalProperties": false
     }
   }
 }

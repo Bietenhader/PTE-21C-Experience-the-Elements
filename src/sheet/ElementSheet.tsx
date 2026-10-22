@@ -113,6 +113,15 @@ interface BodyProps {
   onDismiss: () => void;
 }
 
+/** Scrolls the tab row so that the current tab is in sight (on a phone most tabs are off to the side). */
+function revealTab(list: HTMLElement | null, index: number, behavior: ScrollBehavior) {
+  const tab = list?.querySelector<HTMLElement>(`[data-slug="${PANELS[index]?.slug ?? ""}"]`);
+  if (!list || !tab || list.clientWidth === 0) return;
+  const lr = list.getBoundingClientRect();
+  const tr = tab.getBoundingClientRect();
+  if (tr.left < lr.left || tr.right > lr.right) list.scrollBy({ left: tr.left - lr.left - (lr.width - tr.width) / 2, behavior });
+}
+
 function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProps) {
   const ids = useId();
   const strip = useRef<HTMLDivElement>(null);
@@ -133,9 +142,29 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
     const s = strip.current;
     if (!s || s.clientWidth === 0) return;
     const left = index * s.clientWidth;
-    if (Math.abs(s.scrollLeft - left) > 2) s.scrollTo({ left, behavior: first.current || reduced ? "instant" : "smooth" });
+    const behavior = first.current || reduced ? "instant" : "smooth";
+    if (Math.abs(s.scrollLeft - left) > 2) s.scrollTo({ left, behavior });
     first.current = false;
+    revealTab(tablist.current, index, behavior);
   }, [index, reduced]);
+
+  // On a phone the header (photographs, summary) would leave little room for the panel: it folds to
+  // a name bar once the reader scrolls into a panel that is long enough, and opens again at its top.
+  const header = useRef<HTMLElement>(null);
+  const [compact, setCompact] = useState(false);
+  useEffect(() => {
+    const s = strip.current;
+    if (!s) return;
+    const onScroll = (ev: Event) => {
+      const panel = ev.target as HTMLElement;
+      if (!(panel instanceof HTMLElement) || panel.parentElement !== s || !panel.hasAttribute("data-current")) return;
+      const room = (header.current?.offsetHeight ?? 0) + 24;
+      if (panel.scrollTop <= 0) setCompact(false);
+      else if (panel.scrollTop > 24 && panel.scrollHeight - panel.clientHeight > room) setCompact(true);
+    };
+    s.addEventListener("scroll", onScroll, { capture: true, passive: true });
+    return () => s.removeEventListener("scroll", onScroll, { capture: true });
+  }, []);
 
   // When the strip first gets a size (the dialog has just opened) or changes size (a phone turned
   // sideways), snap straight to the current panel.
@@ -147,6 +176,7 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
       if (s.clientWidth === width) return;
       width = s.clientWidth;
       s.scrollTo({ left: indexRef.current * width, behavior: "instant" });
+      revealTab(tablist.current, indexRef.current, "instant");
       first.current = false;
     });
     ro.observe(s);
@@ -207,8 +237,8 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
     // The handler adds ←/→ panel switching for everything inside the sheet; the tabs and the
     // arrow buttons are the focusable controls it mirrors.
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-    <div className={styles.body} onKeyDown={onKeyDown} data-category={e.category}>
-      <header className={styles.header}>
+    <div className={styles.body} onKeyDown={onKeyDown} data-category={e.category} data-compact={compact || undefined}>
+      <header className={styles.header} ref={header}>
         <button type="button" className={styles.close} onClick={onDismiss} aria-label={`Close ${e.name}`}>
           <span aria-hidden="true">×</span>
         </button>
@@ -220,6 +250,11 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
             <h2 id="sheet-title" className={styles.name}>
               {e.name} <span className={styles.z}>Z = {e.Z}</span>
             </h2>
+            {compact && (
+              <button type="button" className={styles.expand} onClick={() => setCompact(false)} aria-expanded={false}>
+                Show photographs and summary
+              </button>
+            )}
             <p className={styles.meta}>
               {CATEGORY_NAME[e.category]} · {e.block}-block · period {e.period}
               {e.group === null ? "" : ` · group ${e.group}`} ·{" "}
@@ -293,7 +328,7 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
               <p className={styles.summary}>{p.summary}</p>
               {mounted.has(i) && (
                 <Suspense fallback={<p className={styles.muted}>Loading…</p>}>
-                  <Component element={e} elements={elements} sources={sources} />
+                  <Component element={e} elements={elements} sources={sources} active={i === index} />
                 </Suspense>
               )}
             </section>

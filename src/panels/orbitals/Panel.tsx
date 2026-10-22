@@ -8,7 +8,7 @@
 // - Nodes table, and the analytic checks.
 // The approximation badge is always visible.
 
-import { lazy, type RefObject, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useElementDetail } from "../../data/load";
 import { groupDigits, isMissing } from "../../data/format";
 import type { ElementIndexEntry, Missing, SourcesFile } from "../../data/types";
@@ -76,7 +76,7 @@ function GalleryTile({
     return () => {
       live = false;
     };
-    // onDrawn is stable for the gallery's lifetime
+    // onDrawn only bumps a ref and sets state, so the first one passed is as good as any later one.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [s.n, s.l, s.zeff.value]);
   const shape = spokenName(s.n, s.l, 0, "real");
@@ -479,51 +479,48 @@ function Checks({ s }: { s: SubshellInfo }) {
   );
 }
 
-export default function Panel({ element: e, sources }: PanelProps) {
+export default function Panel({ element: e, sources, active }: PanelProps) {
   const detail = useElementDetail(e.Z);
   return (
     <WhenLoaded files={[detail]}>
-      {(d) => <Body key={e.Z} e={e} d={d} sources={sources} />}
+      {(d) => <Body key={e.Z} e={e} d={d} sources={sources} active={active} />}
     </WhenLoaded>
   );
 }
 
-/**
- * True once the element has been on screen. The sheet mounts the panels next to the current one in
- * advance; the orbitals are computed only when this panel is actually shown.
- */
-function useSeen(ref: RefObject<HTMLElement | null>): boolean {
-  const [seen, setSeen] = useState(typeof IntersectionObserver === "undefined");
-  useEffect(() => {
-    const el = ref.current;
-    if (seen || !el) return;
-    const io = new IntersectionObserver((entries) => {
-      if (entries.some((x) => x.isIntersecting)) {
-        setSeen(true);
-        io.disconnect();
-      }
-    });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [ref, seen]);
-  return seen;
-}
-
-function Body({ e, d, sources }: { e: ElementIndexEntry; d: Parameters<typeof subshells>[1]; sources: Sources }) {
-  const root = useRef<HTMLDivElement>(null);
-  const seen = useSeen(root);
+function Body({
+  e,
+  d,
+  sources,
+  active,
+}: {
+  e: ElementIndexEntry;
+  d: Parameters<typeof subshells>[1];
+  sources: Sources;
+  active: boolean;
+}) {
+  // The sheet mounts the panels beside the current one in advance: the pictures wait until this one is shown.
+  const [seen, setSeen] = useState(active);
+  if (active && !seen) setSeen(true);
   const list = useMemo(() => subshells(e, d), [e, d]);
   const initial = [...list].reverse().find((s) => s.valence) ?? list[list.length - 1];
   const [selected, setSelected] = useState(initial ? `${initial.n},${initial.l}` : "");
   const [chosen, setChosen] = useState(false);
   const sel = list.find((s) => `${s.n},${s.l}` === selected) ?? initial;
-  const slater = list.some((s) => s.zeff.method === "slater");
+  const slater = list.filter((s) => s.zeff.method === "slater").map((s) => s.label);
   const radii = d.orbitals.radii;
   return (
-    <div className={styles.panel} ref={root}>
+    <div className={styles.panel}>
       <Badge>
         Hydrogenic approximation with Clementi–Raimondi Z<sub>eff</sub>
-        {slater ? " (Slater's rules where their table has no value)" : ""}. Angular shapes are exact for one electron;
+        {e.Z === 1
+          ? " (for hydrogen the effective charge is exactly 1 and the orbitals are exact, apart from tiny relativistic corrections)"
+          : slater.length === list.length
+            ? " — here Slater's rules instead, as their table stops at radon: rougher still"
+            : slater.length > 0
+              ? ` (Slater's rules for ${slater.join(", ")}, which their table does not cover: rougher still)`
+              : ""}
+        . Angular shapes are exact for one electron;
         radial scale is approximate for many-electron atoms. Tier B (Hartree–Fock radial functions) planned.
       </Badge>
       {e.configuration.flag === "predicted" && (

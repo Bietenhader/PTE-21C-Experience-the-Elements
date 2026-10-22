@@ -11,6 +11,9 @@ export interface PanelProps {
   /** Every element, for context such as "this element on the IE₁-vs-Z sawtooth". */
   elements: ElementIndexEntry[];
   sources: SourcesFile["sources"];
+  /** True while this panel is the one shown. The panels beside it are mounted in advance; costly work
+   *  (the orbital pictures) waits until its panel is shown. */
+  active: boolean;
 }
 
 export interface PanelModule {

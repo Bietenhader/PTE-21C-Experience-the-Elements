@@ -1,0 +1,533 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Molar heat capacity at 25 °C and 1 bar, C_p (SPEC §10.4), from the CRC Handbook of Chemistry and Physics,
+# 95th edition (W. M. Haynes, ed., 2014), table 'Heat capacity of the elements at 25 °C', as transcribed in the
+# mendeleev package 1.3.0 (MIT; its property metadata cites haynes2014crc for this column).
+# mendeleev is not a pipeline dependency: this file was written once by a script and is checked in.
+# formula_atoms: the CRC table gives the diatomic elements per mole of molecules (H2, N2, O2, F2, Cl2, Br2, I2);
+# it was detected from mendeleev's specific heat column, C_p / (c_p × atomic weight) = 2.
+# Elements the table does not list are absent here and shown as missing.
+
+[[row]]
+Z = 1
+symbol = "H"
+molar_heat_capacity = 28.836
+formula_atoms = 2
+formula = "H2"
+source = "crc_handbook"
+
+[[row]]
+Z = 2
+symbol = "He"
+molar_heat_capacity = 20.786
+source = "crc_handbook"
+
+[[row]]
+Z = 3
+symbol = "Li"
+molar_heat_capacity = 24.86
+source = "crc_handbook"
+
+[[row]]
+Z = 4
+symbol = "Be"
+molar_heat_capacity = 16.443
+source = "crc_handbook"
+
+[[row]]
+Z = 5
+symbol = "B"
+molar_heat_capacity = 11.087
+source = "crc_handbook"
+
+[[row]]
+Z = 6
+symbol = "C"
+molar_heat_capacity = 8.517
+source = "crc_handbook"
+
+[[row]]
+Z = 7
+symbol = "N"
+molar_heat_capacity = 29.124
+formula_atoms = 2
+formula = "N2"
+source = "crc_handbook"
+
+[[row]]
+Z = 8
+symbol = "O"
+molar_heat_capacity = 29.378
+formula_atoms = 2
+formula = "O2"
+source = "crc_handbook"
+
+[[row]]
+Z = 9
+symbol = "F"
+molar_heat_capacity = 31.304
+formula_atoms = 2
+formula = "F2"
+source = "crc_handbook"
+
+[[row]]
+Z = 10
+symbol = "Ne"
+molar_heat_capacity = 20.786
+source = "crc_handbook"
+
+[[row]]
+Z = 11
+symbol = "Na"
+molar_heat_capacity = 28.23
+source = "crc_handbook"
+
+[[row]]
+Z = 12
+symbol = "Mg"
+molar_heat_capacity = 24.869
+source = "crc_handbook"
+
+[[row]]
+Z = 13
+symbol = "Al"
+molar_heat_capacity = 24.2
+source = "crc_handbook"
+
+[[row]]
+Z = 14
+symbol = "Si"
+molar_heat_capacity = 19.99
+source = "crc_handbook"
+
+[[row]]
+Z = 15
+symbol = "P"
+molar_heat_capacity = 23.824
+source = "crc_handbook"
+
+[[row]]
+Z = 16
+symbol = "S"
+molar_heat_capacity = 22.7
+source = "crc_handbook"
+
+[[row]]
+Z = 17
+symbol = "Cl"
+molar_heat_capacity = 33.949
+formula_atoms = 2
+formula = "Cl2"
+source = "crc_handbook"
+
+[[row]]
+Z = 18
+symbol = "Ar"
+molar_heat_capacity = 20.786
+source = "crc_handbook"
+
+[[row]]
+Z = 19
+symbol = "K"
+molar_heat_capacity = 29.6
+source = "crc_handbook"
+
+[[row]]
+Z = 20
+symbol = "Ca"
+molar_heat_capacity = 25.929
+source = "crc_handbook"
+
+[[row]]
+Z = 21
+symbol = "Sc"
+molar_heat_capacity = 25.52
+source = "crc_handbook"
+
+[[row]]
+Z = 22
+symbol = "Ti"
+molar_heat_capacity = 25.06
+source = "crc_handbook"
+
+[[row]]
+Z = 23
+symbol = "V"
+molar_heat_capacity = 24.89
+source = "crc_handbook"
+
+[[row]]
+Z = 24
+symbol = "Cr"
+molar_heat_capacity = 23.35
+source = "crc_handbook"
+
+[[row]]
+Z = 25
+symbol = "Mn"
+molar_heat_capacity = 26.32
+source = "crc_handbook"
+
+[[row]]
+Z = 26
+symbol = "Fe"
+molar_heat_capacity = 25.1
+source = "crc_handbook"
+
+[[row]]
+Z = 27
+symbol = "Co"
+molar_heat_capacity = 24.81
+source = "crc_handbook"
+
+[[row]]
+Z = 28
+symbol = "Ni"
+molar_heat_capacity = 26.07
+source = "crc_handbook"
+
+[[row]]
+Z = 29
+symbol = "Cu"
+molar_heat_capacity = 24.44
+source = "crc_handbook"
+
+[[row]]
+Z = 30
+symbol = "Zn"
+molar_heat_capacity = 25.39
+source = "crc_handbook"
+
+[[row]]
+Z = 31
+symbol = "Ga"
+molar_heat_capacity = 26.03
+source = "crc_handbook"
+
+[[row]]
+Z = 32
+symbol = "Ge"
+molar_heat_capacity = 23.222
+source = "crc_handbook"
+
+[[row]]
+Z = 33
+symbol = "As"
+molar_heat_capacity = 24.64
+source = "crc_handbook"
+
+[[row]]
+Z = 34
+symbol = "Se"
+molar_heat_capacity = 25.363
+source = "crc_handbook"
+
+[[row]]
+Z = 35
+symbol = "Br"
+molar_heat_capacity = 75.69
+formula_atoms = 2
+formula = "Br2"
+source = "crc_handbook"
+
+[[row]]
+Z = 36
+symbol = "Kr"
+molar_heat_capacity = 20.786
+source = "crc_handbook"
+
+[[row]]
+Z = 37
+symbol = "Rb"
+molar_heat_capacity = 31.06
+source = "crc_handbook"
+
+[[row]]
+Z = 38
+symbol = "Sr"
+molar_heat_capacity = 26.79
+source = "crc_handbook"
+
+[[row]]
+Z = 39
+symbol = "Y"
+molar_heat_capacity = 26.53
+source = "crc_handbook"
+
+[[row]]
+Z = 40
+symbol = "Zr"
+molar_heat_capacity = 25.36
+source = "crc_handbook"
+
+[[row]]
+Z = 41
+symbol = "Nb"
+molar_heat_capacity = 24.6
+source = "crc_handbook"
+
+[[row]]
+Z = 42
+symbol = "Mo"
+molar_heat_capacity = 24.06
+source = "crc_handbook"
+
+[[row]]
+Z = 44
+symbol = "Ru"
+molar_heat_capacity = 24.06
+source = "crc_handbook"
+
+[[row]]
+Z = 45
+symbol = "Rh"
+molar_heat_capacity = 24.98
+source = "crc_handbook"
+
+[[row]]
+Z = 46
+symbol = "Pd"
+molar_heat_capacity = 25.98
+source = "crc_handbook"
+
+[[row]]
+Z = 47
+symbol = "Ag"
+molar_heat_capacity = 25.35
+source = "crc_handbook"
+
+[[row]]
+Z = 48
+symbol = "Cd"
+molar_heat_capacity = 26.02
+source = "crc_handbook"
+
+[[row]]
+Z = 49
+symbol = "In"
+molar_heat_capacity = 26.74
+source = "crc_handbook"
+
+[[row]]
+Z = 50
+symbol = "Sn"
+molar_heat_capacity = 26.99
+source = "crc_handbook"
+
+[[row]]
+Z = 51
+symbol = "Sb"
+molar_heat_capacity = 25.23
+source = "crc_handbook"
+
+[[row]]
+Z = 52
+symbol = "Te"
+molar_heat_capacity = 25.73
+source = "crc_handbook"
+
+[[row]]
+Z = 53
+symbol = "I"
+molar_heat_capacity = 54.43
+formula_atoms = 2
+formula = "I2"
+source = "crc_handbook"
+
+[[row]]
+Z = 54
+symbol = "Xe"
+molar_heat_capacity = 20.786
+source = "crc_handbook"
+
+[[row]]
+Z = 55
+symbol = "Cs"
+molar_heat_capacity = 32.21
+source = "crc_handbook"
+
+[[row]]
+Z = 56
+symbol = "Ba"
+molar_heat_capacity = 28.07
+source = "crc_handbook"
+
+[[row]]
+Z = 57
+symbol = "La"
+molar_heat_capacity = 27.11
+source = "crc_handbook"
+
+[[row]]
+Z = 58
+symbol = "Ce"
+molar_heat_capacity = 26.94
+source = "crc_handbook"
+
+[[row]]
+Z = 59
+symbol = "Pr"
+molar_heat_capacity = 27.2
+source = "crc_handbook"
+
+[[row]]
+Z = 60
+symbol = "Nd"
+molar_heat_capacity = 27.45
+source = "crc_handbook"
+
+[[row]]
+Z = 62
+symbol = "Sm"
+molar_heat_capacity = 29.54
+source = "crc_handbook"
+
+[[row]]
+Z = 63
+symbol = "Eu"
+molar_heat_capacity = 27.66
+source = "crc_handbook"
+
+[[row]]
+Z = 64
+symbol = "Gd"
+molar_heat_capacity = 37.03
+source = "crc_handbook"
+
+[[row]]
+Z = 65
+symbol = "Tb"
+molar_heat_capacity = 28.91
+source = "crc_handbook"
+
+[[row]]
+Z = 66
+symbol = "Dy"
+molar_heat_capacity = 28.16
+source = "crc_handbook"
+
+[[row]]
+Z = 67
+symbol = "Ho"
+molar_heat_capacity = 27.15
+source = "crc_handbook"
+
+[[row]]
+Z = 68
+symbol = "Er"
+molar_heat_capacity = 28.12
+source = "crc_handbook"
+
+[[row]]
+Z = 69
+symbol = "Tm"
+molar_heat_capacity = 27.03
+source = "crc_handbook"
+
+[[row]]
+Z = 70
+symbol = "Yb"
+molar_heat_capacity = 26.74
+source = "crc_handbook"
+
+[[row]]
+Z = 71
+symbol = "Lu"
+molar_heat_capacity = 26.86
+source = "crc_handbook"
+
+[[row]]
+Z = 72
+symbol = "Hf"
+molar_heat_capacity = 25.73
+source = "crc_handbook"
+
+[[row]]
+Z = 73
+symbol = "Ta"
+molar_heat_capacity = 25.36
+source = "crc_handbook"
+
+[[row]]
+Z = 74
+symbol = "W"
+molar_heat_capacity = 24.27
+source = "crc_handbook"
+
+[[row]]
+Z = 75
+symbol = "Re"
+molar_heat_capacity = 25.48
+source = "crc_handbook"
+
+[[row]]
+Z = 76
+symbol = "Os"
+molar_heat_capacity = 24.7
+source = "crc_handbook"
+
+[[row]]
+Z = 77
+symbol = "Ir"
+molar_heat_capacity = 25.1
+source = "crc_handbook"
+
+[[row]]
+Z = 78
+symbol = "Pt"
+molar_heat_capacity = 25.86
+source = "crc_handbook"
+
+[[row]]
+Z = 79
+symbol = "Au"
+molar_heat_capacity = 25.418
+source = "crc_handbook"
+
+[[row]]
+Z = 80
+symbol = "Hg"
+molar_heat_capacity = 27.983
+source = "crc_handbook"
+
+[[row]]
+Z = 81
+symbol = "Tl"
+molar_heat_capacity = 26.32
+source = "crc_handbook"
+
+[[row]]
+Z = 82
+symbol = "Pb"
+molar_heat_capacity = 26.84
+source = "crc_handbook"
+
+[[row]]
+Z = 83
+symbol = "Bi"
+molar_heat_capacity = 25.52
+source = "crc_handbook"
+
+[[row]]
+Z = 86
+symbol = "Rn"
+molar_heat_capacity = 20.786
+source = "crc_handbook"
+
+[[row]]
+Z = 89
+symbol = "Ac"
+molar_heat_capacity = 27.2
+source = "crc_handbook"
+
+[[row]]
+Z = 90
+symbol = "Th"
+molar_heat_capacity = 27.32
+source = "crc_handbook"
+
+[[row]]
+Z = 92
+symbol = "U"
+molar_heat_capacity = 27.665
+source = "crc_handbook"

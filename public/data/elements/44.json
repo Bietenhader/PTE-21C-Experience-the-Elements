@@ -621,6 +621,83 @@
    "listedAs": "platinum group metals",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.06,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Catalysts, electronic components and computer chips.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Small additions harden platinum and palladium for wear-resistant electrical contacts, and make titanium far more corrosion-resistant.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 49.9
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 22.9
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23950,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 455,
+   "notMeetingCriteria": {
+    "share": 26.4,
+    "reports": 120,
+    "of": 455
+   },
+   "note": "Aggregated by PubChem from 455 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 26.4 % of the reports (120 of 455) say ruthenium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 7e-07,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.005464,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

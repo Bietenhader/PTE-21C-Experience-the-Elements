@@ -1128,6 +1128,54 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.2,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Actinium-225 is used against cancer: bound to a carrier molecule, its alpha particles and those of its decay products kill tumour cells.",
+    "source": "pubchem"
+   },
+   {
+    "text": "It is also used to produce neutrons; it has no significant commercial use.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental actinium (CID 23965). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 5.5e-10,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

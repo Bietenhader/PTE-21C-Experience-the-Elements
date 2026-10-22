@@ -34,7 +34,8 @@ export type Unit =
   | "USD/kg"
   | "g"
   | "°"
-  | "kPa";
+  | "kPa"
+  | "J/(mol·K)";
 export type QuantityFlag = "measured" | "calculated" | "interpolated" | "estimated" | "predicted";
 export type MissingReason =
   "not_measured" | "not_applicable" | "no_stable_isotope" | "predicted_only" | "source_unavailable_at_build";
@@ -824,6 +825,22 @@ export interface ElementDetailFile {
       doubtful?: boolean;
       note?: string;
     };
+    thermal: ThermalProperties;
+    /**
+     * @minItems 1
+     */
+    uses: [UseNote, ...UseNote[]];
+    allotropes: Allotrope[];
+    hazards: GhsHazards | Missing;
+    /**
+     * The four abundances on one scale for the log-scale bars: mg/kg, i.e. parts per million by mass. Derived in tools/build_physical.py from `abundance` (sea water taken as 1 kg per litre; the body amount divided by the 70 kg reference adult); each note says how.
+     */
+    abundanceByMass: {
+      crust: Q;
+      ocean: Q;
+      solar: Q;
+      body: Q;
+    };
   };
   amo: {
     hyperfine: HyperfineRecord[];
@@ -897,6 +914,73 @@ export interface CrystalStructure {
   reference: string;
   source: SourceId;
   note?: string;
+}
+/**
+ * Thermal properties of the element (SPEC §10.4). Molar heat capacity C_p at 25 °C and 1 bar, from the CRC Handbook, in J/(mol·K): per mole of atoms, or per mole of molecules where `formulaAtoms` is given (the diatomic gases and halogens).
+ */
+export interface ThermalProperties {
+  molarHeatCapacity: Q;
+  /**
+   * Atoms in the formula unit the value refers to (2 for H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂); absent = per mole of atoms.
+   */
+  formulaAtoms?: number;
+}
+/**
+ * One bullet of what the element is used for, in PTE-21C's own words, with its source (tools/curated/uses.toml).
+ */
+export interface UseNote {
+  text: string;
+  source: SourceId;
+  doi?: string;
+}
+/**
+ * A form of the pure element (tools/curated/allotropes.toml); `standard` marks the reference form at 25 °C and 1 bar.
+ */
+export interface Allotrope {
+  name: string;
+  note: string;
+  standard?: boolean;
+  source: SourceId;
+  doi?: string;
+}
+/**
+ * GHS classification of the elemental substance (SPEC §10.4), from its PubChem compound record: the EU harmonised classification where one exists, otherwise PubChem's aggregation of the ECHA C&L notifications with the most reports. Pictograms are drawn by PTE-21C from their codes.
+ */
+export interface GhsHazards {
+  pictograms: {
+    code: "GHS01" | "GHS02" | "GHS03" | "GHS04" | "GHS05" | "GHS06" | "GHS07" | "GHS08" | "GHS09";
+    /**
+     * Short name of what it warns of (tools/fetch_pubchem_ghs.py).
+     */
+    name: string;
+  }[];
+  signalWord?: "Danger" | "Warning";
+  hazardStatements: HazardStatement[];
+  basis: "eu_harmonised" | "echa_notifications" | "other";
+  reports?: number;
+  notMeetingCriteria?: {
+    share: number;
+    reports: number;
+    of: number;
+  };
+  /**
+   * The classification says the substance does not meet the GHS hazard criteria.
+   */
+  notClassified?: boolean;
+  /**
+   * PubChem compound ID of the elemental substance.
+   */
+  cid: number;
+  source: SourceId;
+  note: string;
+}
+export interface HazardStatement {
+  code: string;
+  text: string;
+  /**
+   * Per cent of the ECHA notifications that give this statement, as PubChem aggregates them.
+   */
+  share?: number;
 }
 /**
  * Share of the element made by each process when the Solar System formed (SPEC §10.7), read off Fig. 39 of Kobayashi, Karakas & Lugaro (2020): an approximation, flagged as such. Keys with zero share are omitted; the shares sum to 1.

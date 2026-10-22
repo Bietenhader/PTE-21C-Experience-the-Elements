@@ -688,6 +688,77 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.73,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Cadmium telluride thin-film solar cells take most tellurium (70 % of world use).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Bismuth telluride thermoelectric devices, which cool or generate electricity (15 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Metallurgy (10 %): it makes steel and copper easier to machine.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H360Df",
+     "text": "May damage the unborn child; Suspected of damaging fertility"
+    },
+    {
+     "code": "H362",
+     "text": "May cause harm to breast-fed children"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 6327182,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "value": 0.01851,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

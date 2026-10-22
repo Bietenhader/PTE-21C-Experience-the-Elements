@@ -701,6 +701,51 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Never made in a weighable amount."
+   }
+  },
+  "uses": [
+   {
+    "text": "No use outside basic research: only small amounts have ever been made.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Mendelevium-256 has been used to study its chemistry in solution.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_applicable",
+   "note": "Only a few atoms have ever been made: there is no substance to classify."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

@@ -451,6 +451,119 @@
    "strategic": true,
    "listedAs": "manganese",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.32,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Mainly used in making iron and steel, as ferromanganese and silicomanganese.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Batteries, including ordinary dry cells.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Smaller uses: animal feed, fertilisers and brick colourant.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "α-manganese",
+    "note": "A complicated cubic structure with 58 atoms per cell: hard and brittle.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "β-, γ- and δ-manganese",
+    "note": "On heating, a second complex cubic form (20 atoms per cell), then face-centred and body-centred cubic forms.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 11.6
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 14.8
+    },
+    {
+     "code": "H411",
+     "text": "Toxic to aquatic life with long lasting effects",
+     "share": 10.9
+    },
+    {
+     "code": "H412",
+     "text": "Harmful to aquatic life with long lasting effects",
+     "share": 10.8
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23930,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 3101,
+   "notMeetingCriteria": {
+    "share": 46.1,
+    "reports": 1429,
+    "of": 3101
+   },
+   "note": "Aggregated by PubChem from 3101 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 46.1 % of the reports (1429 of 3101) say manganese does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 950.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.0002,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 15.58,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.171429,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

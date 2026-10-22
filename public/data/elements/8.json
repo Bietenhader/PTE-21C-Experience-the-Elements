@@ -256,6 +256,98 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 29.378,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of O₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "Steelworks blow oxygen through molten pig iron to burn out impurities.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Burned with acetylene, it gives the very hot flame used for welding.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Given to patients with breathing problems; liquid oxygen is a rocket propellant.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Water enriched in oxygen-18 and deuterium is used to measure how much energy people and animals use.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "Dioxygen, O₂",
+    "note": "The oxygen of air: a colourless gas whose molecules are magnetic (two unpaired electrons).",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "Ozone, O₃",
+    "note": "A pale blue, sharp-smelling and much more reactive gas, made by electric discharges or ultraviolet light.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "name": "Oxidising"
+    },
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H270",
+     "text": "May cause or intensify fire; oxidizer"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 977,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 461000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 857000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 7902.0,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 614286.0,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

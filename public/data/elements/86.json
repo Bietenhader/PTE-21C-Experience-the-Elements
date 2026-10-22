@@ -917,6 +917,56 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 20.786,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Small amounts have been used in hospitals to treat some cancers, sealed in tiny tubes placed in or near a tumour.",
+    "source": "pubchem"
+   },
+   {
+    "text": "For this it is collected from radium, which gives off radon continuously.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental radon (CID 24857). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 4e-13,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 6e-16,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

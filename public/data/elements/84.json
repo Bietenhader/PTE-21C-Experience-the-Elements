@@ -942,6 +942,59 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Polonium-210 removes static electricity in machinery that rolls paper, sheet metal or wire.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Sealed in brushes that clean dust from photographic film.",
+    "source": "pubchem"
+   },
+   {
+    "text": "With beryllium it makes a neutron source.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental polonium (CID 6328143). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 2e-10,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1.5e-14,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

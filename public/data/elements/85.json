@@ -907,6 +907,51 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The CRC table of heat capacities at 25 °C used here lists no value for this element."
+   }
+  },
+  "uses": [
+   {
+    "text": "Astatine-211 has been studied for radiotherapy of thyroid disease and cancer.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Otherwise no use outside basic research: only tiny amounts are made, and they are short-lived.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "missing": true,
+   "reason": "not_measured",
+   "note": "PubChem lists no GHS classification for elemental astatine (CID 5460480). GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for Earth's crust."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Lodders et al. (2025) give no solar-system mass fraction for this element."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

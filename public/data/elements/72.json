@@ -870,6 +870,82 @@
    "strategic": false,
    "listedAs": "hafnium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.73,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "The leading use of hafnium metal is in superalloys for aerospace.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Control rods of nuclear reactors.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Semiconductors and ceramics.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air",
+     "share": 50.6
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23986,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 360,
+   "notMeetingCriteria": {
+    "share": 34.4,
+    "reports": 124,
+    "of": 360
+   },
+   "note": "Aggregated by PubChem from 360 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 34.4 % of the reports (124 of 360) say hafnium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 3.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 7e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0008591,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

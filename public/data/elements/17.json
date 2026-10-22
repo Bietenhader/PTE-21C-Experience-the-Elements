@@ -350,6 +350,110 @@
   "production": {},
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 33.949,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of Cl₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "Chlorine is made from brine (salt water); chlorine and caustic soda makers are the main chemical users of salt.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Disinfects drinking water and swimming pools.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Needed to make plastics, solvents, medicines, dyes and paper products.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "name": "Oxidising"
+    },
+    {
+     "code": "GHS04",
+     "name": "Gas under pressure"
+    },
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H270",
+     "text": "May cause or intensify fire; oxidizer"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H331",
+     "text": "Toxic if inhaled"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 24526,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 145.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 19400.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 5.768,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 1357.14,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

@@ -345,6 +345,77 @@
    "listedAs": "silicon metal",
    "source": "eu_crm",
    "note": "Silicon metal only (not silica minerals; silica sand was assessed and is not critical)."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 19.99,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Ferrosilicon is used in iron foundries and steelmaking; silicon metal goes into aluminium alloys.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "The chemical industry makes silicones from silicon metal.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Very pure silicon wafers are the basis of computer chips and solar cells.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Grown quartz crystals (silicon dioxide) keep time in electronic circuits.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 5461123,
+   "source": "pubchem_ghs",
+   "reports": 3263,
+   "notMeetingCriteria": {
+    "share": 96.3,
+    "reports": 3142,
+    "of": 3263
+   },
+   "notClassified": true,
+   "note": "Aggregated by PubChem from 3263 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 96.3 % of the reports (3142 of 3263) say silicon does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 282000.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 2.2,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 858.9,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 257.143,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

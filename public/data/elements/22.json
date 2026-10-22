@@ -433,6 +433,78 @@
    "listedAs": "titanium metal",
    "source": "eu_crm",
    "note": "Titanium metal only; the 2023 study assessed 'titanium' (minerals) and 'titanium metal' separately, and only titanium metal is critical."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.06,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Most titanium ore becomes titanium dioxide, the white pigment of paints, plastics and paper.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Titanium metal is used mainly in aerospace.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also in armour, chemical plants, ships' hardware, medical implants and power generation.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "α-titanium",
+    "note": "Hexagonal close-packed: the form up to about 880 °C.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "β-titanium",
+    "note": "Body-centred cubic: the form at higher temperature, up to the melting point.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 23963,
+   "source": "pubchem_ghs",
+   "reports": 808,
+   "notClassified": true,
+   "note": "Aggregated by PubChem from 808 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. The reports say titanium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 5650.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 3.554,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

@@ -568,6 +568,116 @@
    "strategic": false,
    "listedAs": "strontium",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.79,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Most U.S. strontium (65 %), as the mineral celestite, is added to drilling fluids for oil and gas wells.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ceramic ferrite magnets (14 %), and the red of fireworks and signal flares (14 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Strontium-87 optical lattice clocks: the BIPM recommends their frequency as a secondary representation of the second.",
+    "source": "bipm_frequencies"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously",
+     "share": 80.6
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage",
+     "share": 52.3
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 14.5
+    },
+    {
+     "code": "H318",
+     "text": "Causes serious eye damage",
+     "share": 52.3
+    },
+    {
+     "code": "H360D",
+     "text": "May damage the unborn child",
+     "share": 48.0
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5359327,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 304,
+   "notMeetingCriteria": {
+    "share": 17.1,
+    "reports": 52,
+    "of": 304
+   },
+   "note": "Aggregated by PubChem from 304 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 17.1 % of the reports (52 of 304) say strontium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 370.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 7.9,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.06433,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 4.57143,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

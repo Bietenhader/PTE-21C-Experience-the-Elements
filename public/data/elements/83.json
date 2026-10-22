@@ -964,6 +964,66 @@
    "strategic": true,
    "listedAs": "bismuth",
    "source": "eu_crm"
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.52,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Mostly as chemicals: stomach remedies (bismuth subsalicylate), cosmetics and pigments.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "A non-toxic replacement for lead in brass plumbing fittings, solders and free-machining steels.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Low-melting bismuth alloys trigger fire sprinklers.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [],
+   "hazardStatements": [],
+   "basis": "echa_notifications",
+   "cid": 5359367,
+   "source": "pubchem_ghs",
+   "reports": 382,
+   "notClassified": true,
+   "note": "Aggregated by PubChem from 382 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. The reports say bismuth does not meet the GHS hazard criteria. GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.0085,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 2e-05,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0009064,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

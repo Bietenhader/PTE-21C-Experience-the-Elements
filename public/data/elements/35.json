@@ -535,6 +535,94 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 75.69,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of Br₂ molecules, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   },
+   "formulaAtoms": 2
+  },
+  "uses": [
+   {
+    "text": "Mainly used to make brominated flame retardants.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Clear bromide brines are used as drilling fluids for oil and gas wells.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also used in water treatment and as a chemical intermediate.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    },
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 24408,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 2.4,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 67.3,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.03033,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 2.85714,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

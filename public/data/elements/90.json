@@ -926,6 +926,120 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 27.32,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Its uses are few because it is radioactive.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Strengthens magnesium alloys at high temperature, and coats tungsten filaments in electronic devices.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Thorium-232 can be turned into fissile uranium-233 in a reactor, a possible nuclear fuel.",
+    "source": "pubchem"
+   },
+   {
+    "text": "The thorium-229 nucleus has a transition low enough to be driven by a laser, the basis of experimental nuclear clocks.",
+    "source": "primary_literature",
+    "doi": "10.1038/s41586-024-07839-6"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "name": "Oxidising"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H272",
+     "text": "May intensify fire; oxidizer",
+     "share": 11.1
+    },
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed",
+     "share": 88.9
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation",
+     "share": 83.3
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 83.3
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation",
+     "share": 83.3
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure",
+     "share": 83.3
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23960,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 18,
+   "notMeetingCriteria": {
+    "share": 11.1,
+    "reports": 2,
+    "of": 18
+   },
+   "note": "Aggregated by PubChem from 18 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 11.1 % of the reports (2 of 18) say thorium does not meet the GHS hazard criteria. GHS has no hazard class for radioactivity, which is regulated separately."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 9.6,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 1e-06,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.0003062,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

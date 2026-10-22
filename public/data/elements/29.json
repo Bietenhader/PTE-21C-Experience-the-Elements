@@ -478,6 +478,81 @@
    "listedAs": "copper",
    "source": "eu_crm",
    "note": "The 2023 study: copper does not meet the CRM thresholds but is included because it is a strategic raw material (Art. 4(2) requires strategic raw materials to be on the critical list)."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 24.44,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Building construction is the largest use (42 %).",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Electrical and electronic products (23 %); cables and wiring are its key application.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Transport equipment (18 %), consumer goods (10 %) and industrial machinery (7 %).",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 23978,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 60.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.00025,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 1.071,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 1.02857,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

@@ -651,6 +651,113 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 26.02,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Mainly in rechargeable nickel–cadmium batteries.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Cadmium telluride thin-film solar panels, and cadmium–zinc telluride radiation detectors.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Also used in alloys, coatings and pigments.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS06",
+     "name": "Acute toxicity"
+    },
+    {
+     "code": "GHS08",
+     "name": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "name": "Hazardous to the environment"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H341",
+     "text": "Suspected of causing genetic defects"
+    },
+    {
+     "code": "H350",
+     "text": "May cause cancer"
+    },
+    {
+     "code": "H361fd",
+     "text": "Suspected of damaging fertility; Suspected of damaging the unborn child"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 23973,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.15,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.00011,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.005482,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 0.714286,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

@@ -553,6 +553,95 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 31.06,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Specialty glass is the leading market, including glass for fibre-optic networks.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Rubidium atomic clocks keep telecommunication networks and satellite navigation in step.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Ultracold rubidium atoms are used in research, including work towards quantum computers.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Rubidium-82 can trace blood flow in PET scans.",
+    "source": "usgs_mcs"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "name": "Corrosive"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously",
+     "share": 98.8
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage",
+     "share": 91.4
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 5357696,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 81,
+   "notMeetingCriteria": {
+    "share": 1.2,
+    "reports": 1,
+    "of": 81
+   },
+   "note": "Aggregated by PubChem from 81 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 1.2 % of the reports (1 of 81) say rubidium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 90.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 0.12,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 0.01855,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

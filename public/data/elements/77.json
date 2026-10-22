@@ -894,6 +894,94 @@
    "listedAs": "platinum group metals",
    "source": "eu_crm",
    "note": "Group entry. The Regulation does not define its members; the Commission's 2023 study (p. 2, p. 16) assesses five PGMs: iridium, palladium, platinum, rhodium, ruthenium. Osmium was excluded from the 2017, 2020 and 2023 assessments for lack of data (study footnote 18) - see the separate osmium row."
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 25.1,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "Coatings on the anodes of electrochemical plants, and chemical catalysts.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Hardens platinum; iridium crucibles withstand very high temperatures.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Iridium-192 gamma rays inspect welds and castings for flaws, and treat cancer from inside the body.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "name": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H228",
+     "text": "Flammable solid",
+     "share": 18.1
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation",
+     "share": 20.1
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life",
+     "share": 41.8
+    }
+   ],
+   "basis": "echa_notifications",
+   "cid": 23924,
+   "source": "pubchem_ghs",
+   "signalWord": "Danger",
+   "reports": 249,
+   "notMeetingCriteria": {
+    "share": 36.9,
+    "reports": 92,
+    "of": 249
+   },
+   "note": "Aggregated by PubChem from 249 reports by companies to the ECHA C&L Inventory; the percentage after a statement is the share of reports that give it. 36.9 % of the reports (92 of 249) say iridium does not meet the GHS hazard criteria."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 0.001,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "The Jefferson Lab table on PubChem gives no estimate for sea water."
+   },
+   "solar": {
+    "value": 0.003667,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "missing": true,
+    "reason": "not_measured",
+    "note": "Our table from ICRP Publication 23 has no amount for this element in the reference body (tools/curated/abundance.toml lists what was left out and why)."
+   }
   }
  },
  "nucleus": {

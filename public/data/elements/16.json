@@ -362,6 +362,99 @@
   },
   "critical": {
    "eu2023": false
+  },
+  "thermal": {
+   "molarHeatCapacity": {
+    "value": 22.7,
+    "unit": "J/(mol·K)",
+    "source": "crc_handbook",
+    "note": "At 25 °C and 1 bar, per mole of atoms, for the form stable at 25 °C (CRC Handbook, 95th ed.)."
+   }
+  },
+  "uses": [
+   {
+    "text": "About 90 % of the sulfur used in the U.S. is used as sulfuric acid.",
+    "source": "usgs_mcs"
+   },
+   {
+    "text": "Sulfuric acid turns phosphate rock into fertiliser and fills lead-acid batteries.",
+    "source": "pubchem"
+   },
+   {
+    "text": "Sulfur vulcanises rubber and is used as a fungicide.",
+    "source": "pubchem"
+   }
+  ],
+  "allotropes": [
+   {
+    "name": "Rhombic sulfur (α-S₈)",
+    "note": "Yellow crystals of crown-shaped S₈ rings: the stable form at room temperature.",
+    "source": "greenwood1997",
+    "standard": true
+   },
+   {
+    "name": "Monoclinic sulfur (β-S₈)",
+    "note": "The same S₈ rings packed differently; stable just below the melting point.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Plastic (catena) sulfur",
+    "note": "Long chains of sulfur atoms, made by pouring hot molten sulfur into water; rubbery at first.",
+    "source": "greenwood1997"
+   },
+   {
+    "name": "Other rings",
+    "note": "Rings of 6 to 20 or more atoms (S₆, S₇, S₁₂, …) can be made as separate crystalline forms.",
+    "source": "greenwood1997"
+   }
+  ],
+  "hazards": {
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "name": "Harmful or irritant"
+    }
+   ],
+   "hazardStatements": [
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    }
+   ],
+   "basis": "eu_harmonised",
+   "cid": 5362487,
+   "source": "pubchem_ghs",
+   "signalWord": "Warning",
+   "note": "EU harmonised classification (CLP Regulation (EC) No 1272/2008, Annex VI), via PubChem."
+  },
+  "abundanceByMass": {
+   "crust": {
+    "value": 350.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Earth's crust, as given (mg/kg is parts per million by mass)."
+   },
+   "ocean": {
+    "value": 905.0,
+    "unit": "mg/kg",
+    "source": "pubchem",
+    "flag": "estimated",
+    "note": "Sea water, mg/L read as mg/kg: a litre of sea water is taken as one kilogram (it is slightly heavier; the difference cannot be seen on a logarithmic scale)."
+   },
+   "solar": {
+    "value": 416.5,
+    "unit": "mg/kg",
+    "source": "lodders2025",
+    "note": "Proto-solar mass fraction × 10⁶."
+   },
+   "body": {
+    "value": 2000.0,
+    "unit": "mg/kg",
+    "source": "icrp23",
+    "note": "Grams in the 70 kg reference adult of ICRP Publication 23, divided by its mass.",
+    "doi": "10.1016/S0074-2740(75)80022-5"
+   }
   }
  },
  "nucleus": {

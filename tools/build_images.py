@@ -97,6 +97,20 @@ def _strip(text: str | None) -> str:
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text or ""))).strip()
 
 
+def clean_author(text: str) -> str:
+    """Commons' Artist field without wiki leftovers: "Alchemist-hp ( talk ) ( www.x.de )" → "Alchemist-hp (www.x.de)",
+    and "Unknown author Unknown author" (a template rendered twice) → "Unknown author"."""
+    t = re.sub(r"\(\s*(talk|contribs)\s*\)", "", text, flags=re.IGNORECASE)
+    t = re.sub(r"\(\s+", "(", t)
+    t = re.sub(r"\s+\)", ")", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    words = t.split(" ")
+    half = len(words) // 2
+    if len(words) % 2 == 0 and half and words[:half] == words[half:]:
+        t = " ".join(words[:half])
+    return t
+
+
 def commons_licence(info: dict) -> str | None:
     """The most permissive allow-listed licence the Commons file offers, or None."""
     offered = set()
@@ -187,7 +201,7 @@ def commons_image(name: str, row: dict, element_name: str) -> dict | None:
     licence = commons_licence(info)
     if licence is None:
         raise ValueError(f"{name}: no licence on the allow-list ({info['meta'].get('LicenseShortName')})")
-    author = _strip(info["meta"].get("Artist")) or "Unknown author"
+    author = clean_author(_strip(info["meta"].get("Artist"))) or "Unknown author"
     page_url = info["descriptionUrl"] or f"https://commons.wikimedia.org/wiki/{name.replace(' ', '_')}"
     attribution = (
         f"{author}, {licence}" + ("" if licence == "Public domain" else f" — {LICENCES[licence]}") + f"; {page_url}"
@@ -319,6 +333,12 @@ def build_images(names: dict[int, str], iaea: dict[int, list[dict]] | None, repo
                     shutil.copy(dest / f"{old['k']}-{px}.webp", tmp / f"{k}-{px}.webp")
                 rec = {key: old[key] for key in ("title", "author", "licence", "sourceUrl", "source", "attribution")}
                 rec["note"] = old.get("note")
+                # A title or author correction applies without downloading the photo again.
+                rec["title"] = row.get("title", {}).get(pin) or rec["title"]
+                if rec["source"] == "commons":
+                    cleaned = clean_author(rec["author"])
+                    rec["attribution"] = rec["attribution"].replace(rec["author"], cleaned, 1)
+                    rec["author"] = cleaned
                 width, height = old["width"], old["height"]
             else:
                 problems.append(f"{pin}: not cached and no earlier conversion — run tools/fetch_images.py")

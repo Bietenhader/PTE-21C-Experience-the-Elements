@@ -77,3 +77,15 @@ def test_oxidation_list_ignores_commentary():
         False,
     )
     assert oxidation_list("-1, 0, +1,+2 ​(predicted)") == ([2, 1, 0, -1], True)
+
+
+def test_commons_author_names_lose_wiki_leftovers():
+    import build_images
+
+    assert (
+        build_images.clean_author("Alchemist-hp ( talk ) ( www.pse-mendelejew.de )")
+        == "Alchemist-hp (www.pse-mendelejew.de)"
+    )
+    assert build_images.clean_author("Unknown author Unknown author") == "Unknown author"
+    assert build_images.clean_author("Marco Cardin") == "Marco Cardin"
+    assert build_images.clean_author("Ed Ed Ed") == "Ed Ed Ed"  # only an exact doubling is merged

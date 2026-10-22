@@ -592,7 +592,7 @@ Credits on the page (they override the site's CC BY 3.0): 43 Tc Technetium Trans
 | `s/technetium.jpg` | Technetium | rejected | excluded in images.toml (not the element, an illustration, or not freely licensed) |
 | `File:Technetium-sample-cropped.jpg` | Technetium-sample-cropped.jpg | selected | pinned in images.toml |
 
-Shown: Technetium in a sealed ampoule under argon — CC BY-SA 4.0
+Shown: A strip of technetium metal — CC BY-SA 4.0
 
 ## 44 Ruthenium
 

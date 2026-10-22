@@ -77,7 +77,7 @@ function AboutBody({ titleId, elements, sources }: Props & { titleId: string }) 
       <p>
         PTE-21C is a periodic table that tries to be honest about what is measured and what is not. Every number
         carries its source; a value nobody has measured is shown as missing, with the reason, never as zero; and
-        where the table uses an approximation, it says so.
+        where the table uses an approximation, it says so. This is version {__APP_VERSION__}.
       </p>
 
       <section aria-labelledby={`${titleId}-privacy`}>
@@ -131,7 +131,7 @@ function AboutBody({ titleId, elements, sources }: Props & { titleId: string }) 
       <section aria-labelledby={`${titleId}-licence`}>
         <h3 id={`${titleId}-licence`}>Licence</h3>
         <p>
-          PTE-21C by Bietenhader (Fin) is licensed under{" "}
+          PTE-21C by Serafin Bietenhader is licensed under{" "}
           <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Data and photographs keep
           their own licences, listed above and with each photo. <a href={REPO}>Source code</a>.
         </p>

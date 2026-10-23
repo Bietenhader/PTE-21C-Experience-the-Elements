@@ -483,6 +483,16 @@
   },
   "note": "Human: no EFSA dietary reference value.",
   "groups": {
+   "animals": {
+    "status": "beneficial",
+    "roles": [
+     {
+      "text": "Not shown to be essential, but adding boron to low-boron feeds strengthened the bones of broiler chickens and laying hens in several trials.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0017"
+     }
+    ]
+   },
    "bacteria": {
     "status": "some",
     "roles": [

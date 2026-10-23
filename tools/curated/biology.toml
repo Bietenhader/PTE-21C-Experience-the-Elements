@@ -787,8 +787,9 @@ source = "iarc_classifications"
 # Cyert & Philpott 2013 (baker's yeast) for fungi; Wackett et al. 2004 and the genome surveys of
 # Gladyshev's group (Zhang et al. 2008, 2009, 2011; Ridge et al. 2008) for bacteria and archaea;
 # single papers for the striking cases. Every DOI was checked against Crossref.
-# FIN: the Suttle chapters could not be read from here (CABI's site refuses the request); each
-# sentence citing one states only the classic role of that chapter's element. Please check them.
+# Farm animals: every sentence citing Suttle (Mineral Nutrition of Livestock, 5th ed., 2022) was checked
+# against the book's text (Fin's copy); one chapter DOI per element. Elements the book counts as
+# "occasionally beneficial" (chapter 17) are "beneficial": helpful in some trials, not shown to be essential.
 
 # --- animals ---------------------------------------------------------------------------------
 
@@ -828,73 +829,73 @@ doi = "10.3390/ijms17010066"
 Z = 11
 group = "animals"
 status = "essential"
-role = "Holds water in the body fluids and carries nerve signals; plant feeds are often low in it, which is why farm animals are given salt."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0182"
+role = "The main positive ion of the body fluids outside the cells, holding water there and keeping the acid–base balance; plant feeds are often low in it, which is why farm animals are given salt."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0008"
 
 [[life]]
 Z = 12
 group = "animals"
 status = "essential"
 role = "Needed by many enzymes, by bone and by nerves and muscles; cattle grazing lush spring grass can run short and develop grass tetany."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0092"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0005"
 
 [[life]]
 Z = 15
 group = "animals"
 status = "essential"
 role = "Builds bone together with calcium and is part of DNA, ATP and cell membranes; grazing cattle on phosphorus-poor soils can run short."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0122"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0006"
 
 [[life]]
 Z = 16
 group = "animals"
 status = "essential"
 role = "Part of the amino acids methionine and cysteine, which the rumen microbes of cattle and sheep build from the sulfur in their feed."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0206"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0009"
 
 [[life]]
 Z = 17
 group = "animals"
 status = "essential"
 role = "The main negative ion of the body fluids and the chloride of stomach acid."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0182"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0008"
 
 [[life]]
 Z = 19
 group = "animals"
 status = "essential"
 role = "The main positive ion inside cells, needed for nerves and muscles to work."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0168"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0007"
 
 [[life]]
 Z = 20
 group = "animals"
 status = "essential"
 role = "The main mineral of bone and eggshell and a signal in nerves and muscles; dairy cows can get milk fever when their blood calcium drops at calving."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0054"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0004"
 
 [[life]]
 Z = 25
 group = "animals"
 status = "essential"
 role = "Activates enzymes that build cartilage and bone; chicks short of it develop deformed legs (perosis)."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0355"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0014"
 
 [[life]]
 Z = 26
 group = "animals"
 status = "essential"
 role = "Carries oxygen in haemoglobin and myoglobin; piglets reared indoors are born with small reserves and become anaemic without extra iron."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0334"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0013"
 
 [[life]]
 Z = 26
@@ -909,8 +910,8 @@ Z = 27
 group = "animals"
 status = "some"
 role = "Cattle and sheep need it in their feed: microbes in the rumen build it into vitamin B12, which the animal then absorbs."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0223"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0010"
 
 [[life]]
 Z = 27
@@ -925,8 +926,8 @@ Z = 29
 group = "animals"
 status = "essential"
 role = "Needed by enzymes of respiration, iron transport, pigment and connective tissue; lambs of copper-deficient ewes can be born with swayback."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0255"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0011"
 
 [[life]]
 Z = 29
@@ -941,16 +942,16 @@ Z = 30
 group = "animals"
 status = "essential"
 role = "Part of many enzymes and of proteins that switch genes on and off; young pigs short of it develop the skin disease parakeratosis."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0426"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0016"
 
 [[life]]
 Z = 34
 group = "animals"
 status = "some"
 role = "Farm animals need it for selenium enzymes such as glutathione peroxidase; lambs and calves short of it develop white muscle disease."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0377"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0015"
 
 [[life]]
 Z = 34
@@ -984,9 +985,77 @@ Z = 53
 group = "animals"
 status = "some"
 role = "Farm animals need it to make thyroid hormones, which set the pace of growth and metabolism; deficient livestock develop goitre."
-source = "suttle2010"
-doi = "10.1079/9781845934729.0306"
+source = "suttle2022"
+doi = "10.1079/9781789240924.0012"
 note = "Our source covers farm animals; it does not say whether animals without a thyroid gland need iodine."
+
+# --- animals: molybdenum and the "occasionally beneficial" elements (Suttle 2022, chapter 17) --------
+
+[[life]]
+Z = 42
+group = "animals"
+status = "essential"
+role = "Farm animals need traces for xanthine oxidoreductase, aldehyde oxidase and sulfite oxidase; chicks on a low-molybdenum diet given tungstate, which blocks it, grew poorly and became anaemic."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 5
+group = "animals"
+status = "beneficial"
+role = "Not shown to be essential, but adding boron to low-boron feeds strengthened the bones of broiler chickens and laying hens in several trials."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 24
+group = "animals"
+status = "beneficial"
+role = "Trivalent chromium helps cells take up glucose in response to insulin, and supplements changed protein, fat and nucleic-acid metabolism in livestock trials; it is not counted as essential."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 3
+group = "animals"
+status = "beneficial"
+role = "Goats on a diet almost free of lithium grew and bred poorly in one group's experiments, but the same signs followed the removal of other elements and may not show a true need."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+note = "Disputed: Suttle (2022) suggests the response may be hormesis rather than essentiality."
+
+[[life]]
+Z = 28
+group = "animals"
+status = "beneficial"
+role = "Chicks fed a purified diet almost free of nickel grew slowly and became anaemic until a trace was added, and rats showed similar signs; in cattle and sheep, the rumen's methane-making microbes depend on it."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 14
+group = "animals"
+status = "beneficial"
+role = "Chicks reared on a diet almost free of silicon grew 30–50 % slower and formed poor skulls and long bones; silicon helps build cartilage and connective tissue."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 23
+group = "animals"
+status = "beneficial"
+role = "Goats on a diet very low in vanadium aborted more often and gave less milk than goats given a little, though a shortage in poultry feeds is thought unlikely."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+# Suttle (2022, chapter 18): no essential function known in farm animals; in excess it is toxic.
+[[life]]
+Z = 9
+group = "animals"
+status = "none"
+role = "No essential function is known in farm animals: tooth decay and bone density seem unaffected in these short-lived animals, and too much fluoride causes fluorosis of teeth and bones."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0018"
 
 # --- fungi -----------------------------------------------------------------------------------
 

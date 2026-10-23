@@ -281,7 +281,7 @@
   },
   {
    "label": "Biology: a role in animals",
-   "count": 20,
+   "count": 26,
    "missing": {},
    "file": "biology.toml [[life]]",
    "note": "Only elements with a cited role; for the rest our sources name none."

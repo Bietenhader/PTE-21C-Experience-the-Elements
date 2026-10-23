@@ -503,7 +503,20 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "groups": {
+   "animals": {
+    "status": "beneficial",
+    "roles": [
+     {
+      "text": "Goats on a diet almost free of lithium grew and bred poorly in one group's experiments, but the same signs followed the removal of other elements and may not show a true need.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0017"
+     }
+    ],
+    "note": "Disputed: Suttle (2022) suggests the response may be hormesis rather than essentiality."
+   }
+  }
  },
  "history": {
   "discovered": 1817,

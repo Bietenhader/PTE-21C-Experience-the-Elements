@@ -725,16 +725,16 @@
    "status": "ok",
    "notes": "Added after M5. Which elements bacteria and archaea need or use: the six building-block elements, the major cations, chloride, boron, iron and manganese (biology.toml [[life]])."
   },
-  "suttle2010": {
-   "id": "suttle2010",
-   "title": "Mineral Nutrition of Livestock, 4th edition",
-   "url": "https://doi.org/10.1079/9781845934729.0000",
+  "suttle2022": {
+   "id": "suttle2022",
+   "title": "Mineral Nutrition of Livestock, 5th edition",
+   "url": "https://doi.org/10.1079/9781789240924.0000",
    "licence": "Textbook; facts cited",
-   "licenceUrl": "https://doi.org/10.1079/9781845934729.0000",
-   "citation": "N. F. Suttle, Mineral Nutrition of Livestock, 4th ed., CABI, Wallingford (2010), doi:10.1079/9781845934729.0000; one chapter per element, cited by DOI.",
+   "licenceUrl": "https://doi.org/10.1079/9781789240924.0000",
+   "citation": "N. F. Suttle, Mineral Nutrition of Livestock, 5th ed., CABI, Wallingford (2022), doi:10.1079/9781789240924.0000; one chapter per element, cited by its chapter DOI (10.1079/9781789240924.00NN, NN = chapter number).",
    "kind": "reference",
    "status": "ok",
-   "notes": "Added after M5. The minerals farm animals need and what goes wrong without them (biology.toml [[life]], animals)."
+   "notes": "Added after M5. The minerals farm animals need, the 'occasionally beneficial' elements and what goes wrong without them (biology.toml [[life]], animals). Every sentence was checked against the text of the 5th edition (Fin's copy); facts only, in our own words. Chapter DOIs checked against Crossref."
   },
   "zhang_gladyshev2011": {
    "id": "zhang_gladyshev2011",

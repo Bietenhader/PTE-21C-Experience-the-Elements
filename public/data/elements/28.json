@@ -679,6 +679,16 @@
   },
   "note": "Plant: Brown, Welch & Cary (1987). Human: no EFSA dietary reference value.",
   "groups": {
+   "animals": {
+    "status": "beneficial",
+    "roles": [
+     {
+      "text": "Chicks fed a purified diet almost free of nickel grew slowly and became anaemic until a trace was added, and rats showed similar signs; in cattle and sheep, the rumen's methane-making microbes depend on it.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0017"
+     }
+    ]
+   },
    "fungi": {
     "status": "some",
     "roles": [

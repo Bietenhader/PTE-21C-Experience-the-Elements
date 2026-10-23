@@ -24,24 +24,31 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ### Your review of the new biology rows (`[[life]]`, end of `tools/curated/biology.toml`)
 
-87 rows: animals 24, fungi 17, bacteria 27, archaea 19. Every DOI was checked against Crossref; all text is
+95 rows: animals 32, fungi 17, bacteria 27, archaea 19. Every DOI was checked against Crossref; all text is
 our own words. Status words: **essential** (needed by essentially all members of the group), **used by
-some, not all** (the sentence names which), **no known role** (with a source saying the group does without
+some, not all** (the sentence names which), **beneficial** (helpful in some trials, not shown to be
+needed), **no known role** (with a source saying the group does without
 it, e.g. fungi and selenium), and, with no row, "no role is known from PTE-21C's sources — that does not
 mean there is none". Things I would like your eye on:
 
-1. **The 14 farm-animal rows citing Suttle's *Mineral Nutrition of Livestock*** (marked `# FIN:`): CABI's
-   site refused this machine, so each sentence states only the classic role or deficiency disease of the
-   element (e.g. swayback in lambs for copper, grass tetany for magnesium). Please check them.
+1. **Farm animals, checked against your copy of Suttle's *Mineral Nutrition of Livestock* (5th ed., 2022).**
+   All 14 rows now cite the 5th edition, one chapter DOI per element (checked against Crossref). Every
+   sentence was compared with the book's text; one was reworded: sodium no longer says "carries nerve
+   signals" (the book does not say so) but "the main positive ion of the body fluids outside the cells,
+   holding water there and keeping the acid–base balance". New from the book: molybdenum (essential:
+   xanthine oxidoreductase, aldehyde oxidase, sulfite oxidase), and the elements its chapter 17 counts as
+   "occasionally beneficial", shown as **beneficial**: boron, chromium, lithium (marked disputed), nickel,
+   silicon, vanadium; fluorine as "no known role" (chapter 18: no essential function known, fluorosis in
+   excess). Left out: rubidium (the goat findings were not repeatable elsewhere) and arsenic (claims of
+   essentiality "disputed"). Only facts, in our own words; the book's text is not in the repository.
 2. **Generalisations:** animals' and fungi's building blocks (H, C, N, O, P, S) rest on Maret's overview
    figure; fungi's K, Mg, Ca, Mn, Fe, Zn, Cu on baker's yeast (the sentences say so); archaea's K and Mg on a
    review of prokaryotes in general.
 3. **Kept at "used by some" to stay careful:** bromine for animals (shown in fruit flies; the authors say
    all animals), iodine (the source covers farm animals), selenium and cobalt (insects lost them),
    molybdenum in archaea (about 5 % lack it).
-4. **Left out because they could not be checked:** nickel, chromium, boron and silicon for animals, cobalt
-   for fungi, manganese peroxidase of white-rot fungi, sodium pumps in methanogens. So nickel shows
-   "Humans: possibly essential" but "Animals: no known role in our sources".
+4. **Left out because they could not be checked:** cobalt for fungi, manganese peroxidase of white-rot
+   fungi, sodium pumps in methanogens.
 5. **One style for all six cards?** Humans and plants still say "Not essential — No known role." where the
    new cards say "No known role … that does not mean there is none". Default: leave humans and plants as
    you approved them.

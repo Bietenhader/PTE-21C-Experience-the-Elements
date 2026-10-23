@@ -78,6 +78,18 @@ test.describe("biology & ecology", () => {
     await expect(animals).toContainText("Shown in fruit flies");
   });
 
+  test("farm animals from Suttle's handbook: silicon beneficial, fluorine with no known role", async ({ page }) => {
+    await openBiology(page, "Si");
+    const animals = current(page).getByTestId("need-animals");
+    await expect(animals).toContainText("Animals: Beneficial");
+    await expect(animals).toContainText("connective tissue");
+    await expect(animals.getByRole("link", { name: "doi:10.1079/9781789240924.0017" })).toBeVisible();
+    await expect(current(page).getByTestId("needs-legend")).toContainText("beneficial");
+    await openBiology(page, "F");
+    await expect(current(page).getByTestId("need-animals")).toContainText("Animals: No known role");
+    await expect(current(page).getByTestId("need-animals")).toContainText("fluorosis");
+  });
+
   test("a group with no known role says so, and never 'not essential'", async ({ page }) => {
     await openBiology(page, "Ar");
     const panel = current(page);

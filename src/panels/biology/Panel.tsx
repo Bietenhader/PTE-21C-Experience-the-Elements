@@ -256,7 +256,8 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFile; s
         {b.note && <p className={shared.muted}>{b.note}</p>}
         <p className={shared.muted} data-testid="needs-legend">
           For animals, fungi, bacteria and archaea, “essential” means needed by essentially every member of the
-          group, and “used by some, not all” anything from a few members to most; the sentences say which.
+          group, “used by some, not all” anything from a few members to most (the sentences say which), and
+          “beneficial” helpful in some trials without being shown to be needed.
         </p>
       </Section>
 

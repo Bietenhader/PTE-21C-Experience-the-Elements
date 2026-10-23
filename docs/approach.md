@@ -624,7 +624,9 @@ Fin's look at the live site, on desktop and on his iPhone (video, 22 October 202
   evidence of absence. Status is in words; the card border repeats it, never alone.
 - **Sources:** open reviews first (Maret 2016, CC BY; Wackett et al. 2004; Zhang & Gladyshev 2011;
   Cyert & Philpott 2013 for baker's yeast), Gladyshev's group's genome surveys for Mo, Ni/Co and Cu,
-  Suttle's *Mineral Nutrition of Livestock* (one chapter per element, by DOI) for farm animals, and single
+  Suttle's *Mineral Nutrition of Livestock* (5th ed., 2022; one chapter per element, by DOI; every sentence
+  checked against Fin's copy of the book, facts only) for farm animals, including the elements its chapter 17
+  counts as "occasionally beneficial" (status `beneficial`), and single
   papers for striking cases (lanthanide methanol dehydrogenase, tungsten enzymes, F430, bromine and
   collagen IV, haemocyanin, vanadium nitrogenase and chloroperoxidase). Every DOI was checked against
   Crossref. Fin reviews all rows.

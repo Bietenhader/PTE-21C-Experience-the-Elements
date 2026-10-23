@@ -22,8 +22,8 @@ are listed in the README.
 ### Added — after Fin's look at the live site
 
 - **Biology & ecology for six groups of life:** "Does life need it?" now has cards for humans, animals,
-  plants, fungi, bacteria and archaea. 87 new sourced rows (`[[life]]` in `tools/curated/biology.toml`)
-  give each group's status in words (essential, used by some, no known role) with one sentence and its
+  plants, fungi, bacteria and archaea. 95 new sourced rows (`[[life]]` in `tools/curated/biology.toml`)
+  give each group's status in words (essential, used by some, beneficial, no known role) with one sentence and its
   source per role; a group without a row says that no role is known from PTE-21C's sources, which does not
   mean there is none. Four new coverage rows on the About page.
 

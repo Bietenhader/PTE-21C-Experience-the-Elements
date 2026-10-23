@@ -1,14 +1,26 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M5 — Release v0.1.0 · **ready for Fin's review**
+**Current milestone:** M5 — Release v0.1.0 · **merged (pull request #6); the release itself is on hold**
 **Last updated:** 2026-10-22
-**Next:** after Fin merges the M5 pull request, the release itself (tag `v0.1.0` and the GitHub Release). After
-that, v0.2 is not scheduled (SPEC §18).
+**Next:** Fin is taking a good look at the live site first. The tag `v0.1.0` and the GitHub Release are made only
+when he says so (and the CHANGELOG date is set to that day). After that, v0.2 is not scheduled (SPEC §18).
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
+
+## Your review on the iPhone (video, 2026-10-22)
+
+1. **The sheet on iPhone (Safari and Brave): fixed, in a pull request.** The photographs and summary were
+   taller than an iPhone screen, so the tabs sat under the browser's toolbar and the panels never appeared.
+   They now take at most a third of the screen and scroll on their own; the tabs and the panel are always
+   visible, and scrolling into a panel folds the top away as before. Tested at iPhone SE and iPhone 15 sizes.
+   *Please try it on your iPhone after merging.*
+2. **Biology & ecology for more groups of life: in progress.** Next to humans and plants: animals, fungi,
+   bacteria and archaea, each with its role and source. It comes as a separate pull request with the new
+   `biology.toml` rows for your review.
+3. **The release (tag `v0.1.0`) waits** until you are happy with both.
 
 ## For Fin: what to look at (M5)
 
@@ -37,7 +49,7 @@ and the tag fit, then creates the tag `v0.1.0` and the release page with the cha
 | README with screenshots and the honest limitations | Done — screenshots from M1, M3 and M4; new section "Honest limitations" |
 | About page with coverage and privacy statement | Done — coverage now includes the M4 fields; privacy statement unchanged |
 | CHANGELOG | Done — section [0.1.0], dated 2026-10-22 |
-| GitHub Release; tag `v0.1.0` | After the merge: the Release workflow creates both |
+| GitHub Release; tag `v0.1.0` | On hold until Fin's go; the Release workflow is merged and ready |
 
 Also: 294 unit tests and 162 pipeline tests pass; the About, table, probability and AMO browser tests pass on
 desktop and phone (the full browser suite runs in CI on the pull request); lint, type checks, the licence audit

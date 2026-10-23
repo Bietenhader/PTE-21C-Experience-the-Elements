@@ -19,6 +19,14 @@ are listed in the README.
 - A release workflow (`.github/workflows/release.yml`, started by hand) that creates the tag and the GitHub
   Release from this changelog.
 
+### Fixed — after Fin's look at the live site
+
+- iPhone (Safari and Brave): the element sheet's photographs and summary were taller than the screen, so
+  the tabs sat under the browser's toolbar and the panels never appeared. On phones the photographs and
+  summary now get at most a third of the screen and scroll on their own; the tabs and the panel are always in
+  sight, and the end of each panel can be scrolled above a floating toolbar. Tested at iPhone SE and
+  iPhone 15 screen sizes.
+
 ### Changed — M5
 
 - The licence and credit name is "Serafin Bietenhader".

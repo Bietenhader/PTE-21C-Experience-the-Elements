@@ -589,6 +589,19 @@ Probability, physical, mathematical, AMO, chemistry, biology and history (SPEC �
 - **README "Honest limitations":** approximations, predictions for Z ≥ 109, what is not compiled yet,
   transcribed tables, hazard labels, photographs, browsers.
 
+## After M5: Fin's review on an iPhone
+
+- **The sheet on short phone screens.** The phone layout stacked the photographs and summary, the tab row
+  and the panel in a full-height column, and the header was meant to fold once the reader scrolled into a
+  panel. On an iPhone with Safari's bars (about 375 × 548 to 393 × 659 CSS pixels) the header alone was
+  taller than the screen: the tab row started below the bottom edge, the panel got no height, so it could not
+  be scrolled and the header never folded. The Pixel 7 profile the tests used is tall enough to hide this.
+  Now the photographs and summary sit in a box of at most 34 % of the dynamic viewport height that scrolls
+  on its own (on desktop the box is `display: contents` and the grid is unchanged); panels end with extra
+  room (4 rem plus the safe-area inset) so their last lines can scroll above a floating browser toolbar.
+  `tests/e2e/sheet.spec.ts` checks both iPhone sizes: the tab row in the top 70 % of the screen, at least a
+  quarter of the screen for the panel, a tap on a tab switches it, and the header folds.
+
 ## Tooling
 
 - Versions are pinned exactly. TypeScript 6.0 is used because typescript-eslint does not yet support

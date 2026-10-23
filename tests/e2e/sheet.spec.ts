@@ -156,3 +156,41 @@ test.describe("mobile (SPEC §13.3)", () => {
     await expect(page.getByTestId("sheet")).toBeHidden();
   });
 });
+
+// An iPhone screen with Safari's bars is shorter than an element's photographs and summary: the tabs and
+// the panel must still be on screen when the sheet opens (they were pushed below the screen before).
+for (const [phone, viewport] of [
+  ["iPhone SE in Safari", { width: 375, height: 548 }],
+  ["iPhone 15 in Safari", { width: 393, height: 659 }],
+] as const) {
+  test.describe(`short phone screens: ${phone}`, () => {
+    test.skip(({ isMobile }) => !isMobile, "phone emulation only");
+    test.use({ viewport });
+
+    test("the tabs and the panel are on screen, and a tap on a tab switches the panel", async ({ page }) => {
+      await open(page, "#/V/biology");
+      const sheet = page.getByTestId("sheet");
+      await expect(sheet).toBeVisible();
+      await settled(page);
+      const tabs = await sheet.getByRole("tablist").boundingBox();
+      const panel = await sheet.locator('[role="tabpanel"][data-current]').boundingBox();
+      if (!tabs || !panel) throw new Error("no tabs or panel");
+      expect(tabs.y + tabs.height).toBeLessThanOrEqual(viewport.height * 0.7);
+      expect(Math.min(panel.y + panel.height, viewport.height) - panel.y).toBeGreaterThanOrEqual(viewport.height * 0.25);
+      await sheet.getByRole("tab", { name: "History & naming" }).tap();
+      await expect(page).toHaveURL(/#\/V\/history$/);
+      await expect(sheet.locator('[role="tabpanel"][data-current]')).toContainText("History & naming");
+    });
+
+    test("scrolling into a panel folds the photographs and summary away", async ({ page }) => {
+      await open(page, "#/V/biology");
+      const sheet = page.getByTestId("sheet");
+      await expect(sheet).toBeVisible();
+      await settled(page);
+      await sheet.locator('[role="tabpanel"][data-current]').evaluate((p) => p.scrollBy(0, 300));
+      await expect(sheet.getByRole("button", { name: "Show photographs and summary" })).toBeVisible();
+      const panel = await sheet.locator('[role="tabpanel"][data-current]').boundingBox();
+      expect(panel?.y ?? viewport.height).toBeLessThan(viewport.height * 0.35);
+    });
+  });
+}

@@ -281,15 +281,19 @@ function SheetBody({ element: e, elements, panel, sources, onDismiss }: BodyProp
             </p>
           </div>
         </div>
-        <div className={styles.photos}>
-          <ElementImages element={e} size="large" max={3} />
-        </div>
-        <div className={styles.prose}>
-          <Description z={e.Z} sources={sources} />
-          <p>{e.quantumFact}</p>
-          <p className={styles.muted}>
-            Discovered: {e.discovery.text} <SourceChip id={e.discovery.source} sources={sources} />.
-          </p>
+        {/* On a phone the photographs and summary get at most a third of the screen and scroll on their
+            own, so the tabs and the panel are always in sight (an iPhone screen is shorter than the text). */}
+        <div className={styles.more}>
+          <div className={styles.photos}>
+            <ElementImages element={e} size="large" max={3} />
+          </div>
+          <div className={styles.prose}>
+            <Description z={e.Z} sources={sources} />
+            <p>{e.quantumFact}</p>
+            <p className={styles.muted}>
+              Discovered: {e.discovery.text} <SourceChip id={e.discovery.source} sources={sources} />.
+            </p>
+          </div>
         </div>
       </header>
 

@@ -855,7 +855,7 @@ budgets: performance ≥ 90 on mobile, initial JS ≤ 300 kB gzip excluding the 
 **CC BY-NC-SA 4.0** for the code, the layouts, the curated data compilations, the prose and the design. `LICENSE`
 holds the full legal code; `README` carries the badge and this sentence: "PTE-21C is free for non-commercial use
 and redistribution, including modified versions, under the same licence. It is copyleft but not OSI-approved
-open source; commercial licences are available on request." Attribution name: **Serafin Bietenhader** (confirmed
+open source; commercial licences are available on request." Attribution name: **Samuel Serafin Bietenhader** (confirmed
 by Fin on 22 October 2026; default was "Bietenhader (Fin)"). Source files carry a one-line header: `SPDX-License-Identifier: CC-BY-NC-SA-4.0`.
 
 Record the reasoning in `docs/approach.md`: a non-commercial copyleft was chosen deliberately for an educational
@@ -997,7 +997,7 @@ data-refresh PR; German UI.
 
 **FIN (defaults apply until answered):**
 - F1 Attribution name for the licence and credits (default "Bietenhader (Fin)"). **Answered 2026-10-22:
-  "Serafin Bietenhader".**
+  "Serafin Bietenhader"; full name "Samuel Serafin Bietenhader" on 2026-10-23.**
 - F2 Enable GitHub Pages → Source "GitHub Actions" in the repo settings.
 - F3 Review `biology.toml` and `tools/raw/images-report.md` when M2 and M4 land.
 - F4 Design review at the end of M3.

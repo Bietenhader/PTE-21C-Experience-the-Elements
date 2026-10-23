@@ -5,7 +5,7 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
-## [0.1.0] - 2026-10-22
+## [0.1.0] - 2026-10-23
 
 The first release: all 118 elements in four layouts, each with a sheet of eleven panels, built from cited
 sources only. Live at https://bietenhader.github.io/PTE-21C-Experience-the-Elements/ — the honest limitations
@@ -37,7 +37,8 @@ are listed in the README.
 
 ### Changed — M5
 
-- The licence and credit name is "Serafin Bietenhader".
+- The licence and credit name is "Samuel Serafin Bietenhader"; the README ("How it was made") and the About
+  page credit the collaboration with Claude (Anthropic).
 - The "preview" note above the table is replaced by the version.
 
 ### Added — milestone M4 (panels, batch 2)

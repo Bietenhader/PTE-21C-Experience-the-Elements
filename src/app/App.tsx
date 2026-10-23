@@ -142,7 +142,7 @@ export function App({ boot }: { boot: Boot }) {
           served with it. Your settings stay in this browser.
         </p>
         <p>
-          PTE-21C by Serafin Bietenhader is licensed under{" "}
+          PTE-21C by Samuel Serafin Bietenhader is licensed under{" "}
           <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>: free for non-commercial use
           and redistribution, including modified versions, under the same licence. <a href={REPO}>Source code</a>.
         </p>

@@ -1,10 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 # STATUS
 
-**Current milestone:** M5 — Release v0.1.0 · **merged (pull request #6); the release itself is on hold**
-**Last updated:** 2026-10-22
-**Next:** Fin is taking a good look at the live site first. The tag `v0.1.0` and the GitHub Release are made only
-when he says so (and the CHANGELOG date is set to that day). After that, v0.2 is not scheduled (SPEC §18).
+**Current milestone:** M5 — Release v0.1.0 · **released on 2026-10-23** (tag `v0.1.0`, GitHub Release)
+**Last updated:** 2026-10-23
+**Next:** v0.2 is not scheduled (SPEC §18). Fin's open questions below still have their defaults.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
@@ -12,17 +11,17 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ## Your review on the iPhone (video, 2026-10-22)
 
-1. **The sheet on iPhone (Safari and Brave): fixed, in a pull request.** The photographs and summary were
+1. **The sheet on iPhone (Safari and Brave): fixed and merged** (pull request #7). The photographs and summary were
    taller than an iPhone screen, so the tabs sat under the browser's toolbar and the panels never appeared.
    They now take at most a third of the screen and scroll on their own; the tabs and the panel are always
    visible, and scrolling into a panel folds the top away as before. Tested at iPhone SE and iPhone 15 sizes.
    *Please try it on your iPhone after merging.*
-2. **Biology & ecology for more groups of life: ready for your review**, in its own pull request. Next to
-   humans and plants: animals, fungi, bacteria and archaea, each card with its status in words and one
-   sourced sentence per role. See "Your review of the new biology rows" below.
-3. **The release (tag `v0.1.0`) waits** until you are happy with both.
+2. **Biology & ecology for six groups of life: merged** (pull request #8) after your review ("biology OK",
+   2026-10-23). Humans, animals, plants, fungi, bacteria and archaea, each with its status in words and one
+   sourced sentence per role; the farm-animal rows were checked against Suttle's 5th edition.
+3. **The release (tag `v0.1.0`)** was made on 2026-10-23, after both were merged.
 
-### Your review of the new biology rows (`[[life]]`, end of `tools/curated/biology.toml`)
+### The new biology rows (`[[life]]`, end of `tools/curated/biology.toml`) — reviewed: "biology OK" (2026-10-23)
 
 95 rows: animals 32, fungi 17, bacteria 27, archaea 19. Every DOI was checked against Crossref; all text is
 our own words. Status words: **essential** (needed by essentially all members of the group), **used by
@@ -55,7 +54,9 @@ mean there is none". Things I would like your eye on:
 
 ## For Fin: what to look at (M5)
 
-1. **Your name.** The footer, the About page, the README and the package now say "Serafin Bietenhader".
+1. **Your name and the credits.** The footer, the About page, the README and the package say "Samuel Serafin
+   Bietenhader". The README section "How it was made" and the About page credit the collaboration with Claude
+   (Anthropic); the models and effort levels used go on one README line, which you fill in yourself.
 2. **The note above the table** used to say "Preview (milestone M2) …". It now says "Version 0.1.0. Open any
    element for its sheet: eleven panels, and every number with its source." The About page says the version too.
 3. **About → "How complete the data is"** now also counts everything added in M4 (polarizability, ionic
@@ -80,7 +81,7 @@ and the tag fit, then creates the tag `v0.1.0` and the release page with the cha
 | README with screenshots and the honest limitations | Done — screenshots from M1, M3 and M4; new section "Honest limitations" |
 | About page with coverage and privacy statement | Done — coverage now includes the M4 fields; privacy statement unchanged |
 | CHANGELOG | Done — section [0.1.0], dated 2026-10-22 |
-| GitHub Release; tag `v0.1.0` | On hold until Fin's go; the Release workflow is merged and ready |
+| GitHub Release; tag `v0.1.0` | Done — made by the Release workflow on 2026-10-23 |
 
 Also: 294 unit tests and 162 pipeline tests pass; the About, table, probability and AMO browser tests pass on
 desktop and phone (the full browser suite runs in CI on the pull request); lint, type checks, the licence audit
@@ -139,7 +140,7 @@ of the data and the licence check of the code dependencies are clean.
 
 | Item | Default in use | What you need to do |
 |---|---|---|
-| F1 Attribution name | "Serafin Bietenhader" (README, footer, About, package) | Answered 2026-10-22 |
+| F1 Attribution name | "Samuel Serafin Bietenhader" (README, footer, About, package) | Answered 2026-10-22; full name 2026-10-23 |
 | F2 GitHub Pages | Source "GitHub Actions" | Done (2026-10-20) |
 | F3 Review `biology.toml` and the image report | Reviewed in M2 ("LGTM") | M4 rows reviewed: "biology OK" (2026-10-22) |
 | F4 Design review | M3: "the screenshots look good" | Comments on the M4 screenshots welcome |

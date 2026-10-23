@@ -206,7 +206,8 @@ Every rule below is also logged per element in `tools/build-report.md`.
   median of three runs. Both numbers are printed with the result. Measured side by side at a 10× slowdown,
   M1 and M2 score the same (86–89 and 88–89), so M2's data did not slow the page.
 - **Cross-browser.** Pushes and pull requests run the end-to-end tests on Chromium (desktop and an Android
-  phone); the nightly workflow adds Firefox, WebKit and an iPhone. Swipe, pinch and long-press tests drive
+  phone); the "Nightly browsers" workflow adds Firefox, WebKit and an iPhone (its schedule paused since
+  2026-10-23 at Fin's request; it runs when started by hand). Swipe, pinch and long-press tests drive
   real touch events through the DevTools protocol and therefore run on Chromium only.
 
 ## M2: data

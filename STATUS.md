@@ -155,7 +155,9 @@ of the data and the licence check of the code dependencies are clean.
 
 ## Known issues and housekeeping
 
-- Firefox, Safari/WebKit and iPhone run in the nightly job only (this environment can run Chromium only).
+- Firefox, Safari/WebKit and iPhone run in the "Nightly browsers" workflow only (this environment can run Chromium
+  only). Its nightly schedule is **paused** since 2026-10-23 while peer feedback is collected; it runs when started by
+  hand (Actions → Nightly browsers → Run workflow). No workflow runs on a timer now.
 - ESLint 9 (a developer tool) is past end of life; the accessibility lint plugin still needs it.
 - The built site carries KaTeX's fonts in three formats (woff2, woff, ttf); browsers download only the one
   they need, and only when a formula is shown.

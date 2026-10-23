@@ -147,8 +147,8 @@ Data remain under their sources' terms ([PROVENANCE.md](PROVENANCE.md)); images 
 ### How it was made
 
 PTE-21C was made by Samuel Serafin Bietenhader in collaboration with Claude, an AI model by Anthropic. Claude
-wrote most of the code, the data pipeline and the curated texts under his direction and review; an earlier
-conversation with Claude produced the first exploration and the build specification ([SPEC.md](SPEC.md)).
+wrote most of the code (Claude Code, Opus 5.5 (effort: Extra)), the data pipeline and the curated texts under his direction and review; an earlier
+conversation with Claude (Claude Cowork, Fable 5.1 (effort: Max)) produced the first exploration and the build specification ([SPEC.md](SPEC.md)).
 Every curated row carries its source, and Samuel reviewed the biology rows himself. The licence and copyright
 are his: an AI model cannot hold copyright or grant a licence.
 

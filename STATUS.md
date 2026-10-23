@@ -12,17 +12,17 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ## Your review on the iPhone (video, 2026-10-22)
 
-1. **The sheet on iPhone (Safari and Brave): fixed, in a pull request.** The photographs and summary were
+1. **The sheet on iPhone (Safari and Brave): fixed and merged** (pull request #7). The photographs and summary were
    taller than an iPhone screen, so the tabs sat under the browser's toolbar and the panels never appeared.
    They now take at most a third of the screen and scroll on their own; the tabs and the panel are always
    visible, and scrolling into a panel folds the top away as before. Tested at iPhone SE and iPhone 15 sizes.
    *Please try it on your iPhone after merging.*
-2. **Biology & ecology for more groups of life: ready for your review**, in its own pull request. Next to
-   humans and plants: animals, fungi, bacteria and archaea, each card with its status in words and one
-   sourced sentence per role. See "Your review of the new biology rows" below.
+2. **Biology & ecology for six groups of life: merged** (pull request #8) after your review ("biology OK",
+   2026-10-23). Humans, animals, plants, fungi, bacteria and archaea, each with its status in words and one
+   sourced sentence per role; the farm-animal rows were checked against Suttle's 5th edition.
 3. **The release (tag `v0.1.0`) waits** until you are happy with both.
 
-### Your review of the new biology rows (`[[life]]`, end of `tools/curated/biology.toml`)
+### The new biology rows (`[[life]]`, end of `tools/curated/biology.toml`) — reviewed: "biology OK" (2026-10-23)
 
 95 rows: animals 32, fungi 17, bacteria 27, archaea 19. Every DOI was checked against Crossref; all text is
 our own words. Status words: **essential** (needed by essentially all members of the group), **used by

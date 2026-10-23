@@ -131,9 +131,14 @@ function AboutBody({ titleId, elements, sources }: Props & { titleId: string }) 
       <section aria-labelledby={`${titleId}-licence`}>
         <h3 id={`${titleId}-licence`}>Licence</h3>
         <p>
-          PTE-21C by Serafin Bietenhader is licensed under{" "}
+          PTE-21C by Samuel Serafin Bietenhader is licensed under{" "}
           <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Data and photographs keep
           their own licences, listed above and with each photo. <a href={REPO}>Source code</a>.
+        </p>
+        <p data-testid="made-with">
+          Made by Samuel Serafin Bietenhader in collaboration with Claude, an AI model by Anthropic, which wrote most
+          of the code, the data pipeline and the curated texts under his direction and review.{" "}
+          <a href={`${REPO}#how-it-was-made`}>How it was made</a>.
         </p>
       </section>
     </div>

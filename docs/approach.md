@@ -576,8 +576,12 @@ Probability, physical, mathematical, AMO, chemistry, biology and history (SPEC Â
 
 ## M5: release v0.1.0
 
-- **Attribution name:** "Serafin Bietenhader" (Fin's answer to F1), in the footer, the About page, the README
+- **Attribution name:** "Samuel Serafin Bietenhader" (Fin's answer to F1), in the footer, the About page, the README
   and `package.json`.
+- **Credits for the collaboration:** the README section "How it was made" and a line on the About page say
+  that the project was made with Claude (Anthropic) and how. The licence and copyright name only Fin, because
+  an AI model cannot hold copyright or grant a licence. The models used are listed on one README line, which
+  Fin keeps up to date himself.
 - **Version on screen:** the version comes from `package.json` through Vite (`__APP_VERSION__`), so the page,
   the About dialog and the release can never disagree. It replaces the "preview" note above the table.
 - **The release is made by GitHub, not from this sandbox:** `.github/workflows/release.yml` is started by hand

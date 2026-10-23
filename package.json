@@ -4,7 +4,7 @@
   "private": true,
   "description": "PTE-21C — Experience the Elements. A quantum-aware, photographic, swipeable periodic table.",
   "license": "CC-BY-NC-SA-4.0",
-  "author": "Serafin Bietenhader",
+  "author": "Samuel Serafin Bietenhader",
   "homepage": "https://bietenhader.github.io/PTE-21C-Experience-the-Elements/",
   "repository": {
     "type": "git",

@@ -140,6 +140,16 @@ Contributions are welcome under the project licence; see [CONTRIBUTING.md](CONTR
 PTE-21C is free for non-commercial use and redistribution, including modified versions, under the same
 licence. It is copyleft but not OSI-approved open source; commercial licences are available on request.
 
-© Serafin Bietenhader. Code, layouts, curated data compilations, prose and design: [CC BY-NC-SA 4.0](LICENSE).
+© 2026 Samuel Serafin Bietenhader. Code, layouts, curated data compilations, prose and design: [CC BY-NC-SA 4.0](LICENSE).
 Data remain under their sources' terms ([PROVENANCE.md](PROVENANCE.md)); images are credited in
 [CREDITS.md](CREDITS.md); third-party software and fonts keep their own licences ([NOTICE.md](NOTICE.md)).
+
+### How it was made
+
+PTE-21C was made by Samuel Serafin Bietenhader in collaboration with Claude, an AI model by Anthropic. Claude
+wrote most of the code, the data pipeline and the curated texts under his direction and review; an earlier
+conversation with Claude produced the first exploration and the build specification ([SPEC.md](SPEC.md)).
+Every curated row carries its source, and Samuel reviewed the biology rows himself. The licence and copyright
+are his: an AI model cannot hold copyright or grant a licence.
+
+- **AI models used:** Claude (Anthropic).

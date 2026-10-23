@@ -100,6 +100,10 @@ COVERAGE_NOTES = {
     "Annual production": "USGS gives no world production for the rest (none at all for hydrogen and oxygen).",
     "Cosmic origin (nucleosynthesis)": "Not in the model (Kobayashi et al. 2020), or its figure cannot be read.",
     "Biology: a known role": "No known role in plants or humans.",
+    "Biology: a role in animals": "Only elements with a cited role; for the rest our sources name none.",
+    "Biology: a role in fungi": "Only elements with a cited role; for the rest our sources name none.",
+    "Biology: a role in bacteria": "Only elements with a cited role; for the rest our sources name none.",
+    "Biology: a role in archaea": "Only elements with a cited role; for the rest our sources name none.",
 }
 
 
@@ -177,6 +181,14 @@ def detail_counts(details: dict[int, dict]) -> list[tuple[str, int, str]]:
             "Biology: a known role",
             n(lambda d: d["biology"].get("plantRole") or d["biology"].get("humanRole")),
             "biology.toml",
+        ),
+        *(
+            (
+                f"Biology: a role in {group}",
+                n(lambda d, g=group: d["biology"].get("groups", {}).get(g, {}).get("status") not in (None, "none")),
+                "biology.toml [[life]]",
+            )
+            for group in ("animals", "fungi", "bacteria", "archaea")
         ),
         ("History: discovery", n(lambda d: bool(d.get("history"))), "history.toml"),
         ("Our own short text", n(lambda d: bool(d.get("prose"))), "prose/{Z}.md"),

@@ -792,6 +792,53 @@
    "text": "Part of the molybdenum cofactor of enzymes such as sulfite oxidase and xanthine oxidase.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "All animals examined make the molybdenum cofactor and use it in two enzyme families, sulfite oxidase and xanthine oxidase.",
+      "source": "primary_literature",
+      "doi": "10.1016/j.jmb.2008.03.051"
+     },
+     {
+      "text": "Farm animals need traces for xanthine oxidoreductase, aldehyde oxidase and sulfite oxidase; chicks on a low-molybdenum diet given tungstate, which blocks it, grew poorly and became anaemic.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0017"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "All the filamentous ascomycetes surveyed and some basidiomycetes use it in sulfite and xanthine oxidases; baker's yeast, fission yeast and the other yeasts surveyed have lost it.",
+      "source": "primary_literature",
+      "doi": "10.1016/j.jmb.2008.03.051"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Almost all bacterial groups use it, bound to a pterin in enzymes such as nitrate reductase and formate dehydrogenase and, in nitrogen fixers, in nitrogenase; mycoplasmas and chlamydiae do without.",
+      "source": "primary_literature",
+      "doi": "10.1016/j.jmb.2008.03.051"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "About 95 % of the sequenced archaea surveyed use the molybdenum cofactor, more widely even than bacteria do.",
+      "source": "primary_literature",
+      "doi": "10.1016/j.jmb.2008.03.051"
+     }
+    ]
+   }
   }
  },
  "history": {

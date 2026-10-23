@@ -1,12 +1,21 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
-// Biology & ecology (SPEC §10.10): whether plants and people need the element and what for, how much
-// a body holds, what it does in soils and food webs, how it can harm, and its isotopes in biology and
-// medicine. Every sentence is our own wording from tools/curated/biology.toml, which Fin, a plant
-// scientist, reviews; the carcinogen groups are IARC's, read from the IARC list by the pipeline.
+// Biology & ecology (SPEC §10.10): whether six groups of life (humans, animals, plants, fungi, bacteria
+// and archaea) need the element and what for, how much a body holds, what it does in soils and food
+// webs, how it can harm, and its isotopes in biology and medicine. Every sentence is our own wording
+// from tools/curated/biology.toml, which Fin, a plant scientist, reviews; the carcinogen groups are
+// IARC's, read from the IARC list by the pipeline.
 
 import { useElementDetail } from "../../data/load";
 import { isMissing } from "../../data/format";
-import type { Biology, ElementDetailFile, ElementIndexEntry, Missing, SourcedText, SourcesFile } from "../../data/types";
+import type {
+  Biology,
+  ElementDetailFile,
+  ElementIndexEntry,
+  LifeGroup,
+  Missing,
+  SourcedText,
+  SourcesFile,
+} from "../../data/types";
 import { MissingValue, Quantity } from "../../ui/Quantity";
 import { SourceChip } from "../../ui/SourceChip";
 import { Section, SourcesFooter, WhenLoaded } from "../shared/Panel";
@@ -18,6 +27,7 @@ import styles from "./biology.module.css";
 type Sources = SourcesFile["sources"];
 type IsotopeUse = NonNullable<Biology["isotopeUses"]>[number];
 type Iarc = NonNullable<Biology["iarc"]>[number];
+type GroupKey = keyof NonNullable<Biology["groups"]>;
 
 const PLANT_STATUS: Record<Biology["essentialPlant"], string> = {
   yes: "Essential",
@@ -28,6 +38,20 @@ const HUMAN_STATUS: Record<Biology["essentialHuman"], string> = {
   yes: "Essential",
   probable: "Possibly essential",
   no: "Not essential",
+};
+// Animals, fungi, bacteria and archaea (biology.toml [[life]]). A group without an entry has no known
+// role in our sources, which is said as such, never as "not essential".
+const GROUP_NAME: Record<GroupKey, string> = {
+  animals: "Animals",
+  fungi: "Fungi",
+  bacteria: "Bacteria",
+  archaea: "Archaea",
+};
+const LIFE_STATUS: Record<LifeGroup["status"], string> = {
+  essential: "Essential",
+  some: "Used by some, not all",
+  beneficial: "Beneficial",
+  none: "No known role",
 };
 const PLANT_CLASS: Record<NonNullable<Biology["plantClass"]>, string> = {
   structural: "Taken up as carbon dioxide and water, not as a mineral nutrient.",
@@ -75,14 +99,16 @@ function Need({
   who,
   status,
   statusText,
-  role,
+  roles,
+  empty,
   extra,
   sources,
 }: {
   who: string;
   status: string;
   statusText: string;
-  role: SourcedText | undefined;
+  roles: SourcedText[];
+  empty: string;
   extra?: string | undefined;
   sources: Sources;
 }) {
@@ -91,15 +117,34 @@ function Need({
       <h5 className={styles.needTitle}>
         {who}: <span className={styles.status}>{statusText}</span>
       </h5>
-      {role ? (
-        <p>
-          <Said t={role} sources={sources} />
-        </p>
+      {roles.length > 0 ? (
+        roles.map((r) => (
+          <p key={r.text}>
+            <Said t={r} sources={sources} />
+          </p>
+        ))
       ) : (
-        <p className={shared.muted}>No known role.</p>
+        <p className={shared.muted}>{empty}</p>
       )}
       {extra && <p className={shared.muted}>{extra}</p>}
     </div>
+  );
+}
+
+/** The card of one group from biology.toml [[life]], or its honest default. */
+function GroupNeed({ e, b, group, sources }: { e: ElementIndexEntry; b: Biology; group: GroupKey; sources: Sources }) {
+  const g = b.groups?.[group];
+  const empty = `No role for ${e.name.toLowerCase()} in ${group} is known from PTE-21C's sources.`;
+  return (
+    <Need
+      who={GROUP_NAME[group]}
+      status={g?.status ?? "unknown"}
+      statusText={LIFE_STATUS[g?.status ?? "none"]}
+      roles={g?.roles ?? []}
+      empty={`${empty} That does not mean there is none.`}
+      extra={g?.note}
+      sources={sources}
+    />
   );
 }
 
@@ -187,22 +232,33 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFile; s
       <Section title="Does life need it?" id="essential">
         <div className={styles.needs}>
           <Need
-            who="Plants"
-            status={b.essentialPlant}
-            statusText={PLANT_STATUS[b.essentialPlant]}
-            role={b.plantRole}
-            extra={b.plantClass ? PLANT_CLASS[b.plantClass] : undefined}
-            sources={sources}
-          />
-          <Need
             who="Humans"
             status={b.essentialHuman}
             statusText={HUMAN_STATUS[b.essentialHuman]}
-            role={b.humanRole}
+            roles={b.humanRole ? [b.humanRole] : []}
+            empty="No known role."
             sources={sources}
           />
+          <GroupNeed e={e} b={b} group="animals" sources={sources} />
+          <Need
+            who="Plants"
+            status={b.essentialPlant}
+            statusText={PLANT_STATUS[b.essentialPlant]}
+            roles={b.plantRole ? [b.plantRole] : []}
+            empty="No known role."
+            extra={b.plantClass ? PLANT_CLASS[b.plantClass] : undefined}
+            sources={sources}
+          />
+          <GroupNeed e={e} b={b} group="fungi" sources={sources} />
+          <GroupNeed e={e} b={b} group="bacteria" sources={sources} />
+          <GroupNeed e={e} b={b} group="archaea" sources={sources} />
         </div>
         {b.note && <p className={shared.muted}>{b.note}</p>}
+        <p className={shared.muted} data-testid="needs-legend">
+          For animals, fungi, bacteria and archaea, “essential” means needed by essentially every member of the
+          group, “used by some, not all” anything from a few members to most (the sentences say which), and
+          “beneficial” helpful in some trials without being shown to be needed.
+        </p>
       </Section>
 
       <Section title="How much is in a human body" id="body">

@@ -586,6 +586,48 @@
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
   },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Builds bone together with calcium and is part of DNA, ATP and cell membranes; grazing cattle on phosphorus-poor soils can run short.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0006"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of DNA, RNA, ATP and membrane lipids.",
+      "source": "maret2016",
+      "doi": "10.3390/ijms17010066"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of DNA, RNA, ATP and membrane lipids.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of DNA, RNA, ATP and membrane lipids; one of the six elements found essential in every prokaryote analysed.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
+  },
   "isotopeUses": [
    {
     "A": 32,

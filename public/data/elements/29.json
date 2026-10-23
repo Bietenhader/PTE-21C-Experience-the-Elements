@@ -745,6 +745,53 @@
    "text": "Part of cytochrome c oxidase, superoxide dismutase and the proteins that handle iron.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Needed by enzymes of respiration, iron transport, pigment and connective tissue; lambs of copper-deficient ewes can be born with swayback.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0011"
+     },
+     {
+      "text": "Some molluscs and arthropods carry oxygen in their blood with haemocyanin, in which a pair of copper atoms binds each oxygen molecule.",
+      "source": "primary_literature",
+      "doi": "10.1007/s00018-016-2326-7"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Yeast needs it in cytochrome c oxidase for respiration, in copper–zinc superoxide dismutase and in the oxidase Fet3 that takes up iron.",
+      "source": "cyert_philpott2013",
+      "doi": "10.1534/genetics.112.147207"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "About seven in ten sequenced bacteria use it, mostly those that live with oxygen, above all in cytochrome c oxidase; most anaerobes have no copper proteins.",
+      "source": "primary_literature",
+      "doi": "10.1371/journal.pone.0001378"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Only about a third of the sequenced archaea use it, all of them in cytochrome c oxidase, the enzyme that hands electrons to oxygen.",
+      "source": "primary_literature",
+      "doi": "10.1371/journal.pone.0001378"
+     }
+    ]
+   }
   }
  },
  "history": {

@@ -593,6 +593,48 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of the amino acids methionine and cysteine, which the rumen microbes of cattle and sheep build from the sulfur in their feed.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0009"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of the amino acids cysteine and methionine.",
+      "source": "maret2016",
+      "doi": "10.3390/ijms17010066"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of the amino acids cysteine and methionine.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of the amino acids cysteine and methionine; one of the six elements found essential in every prokaryote analysed.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
+  },
   "isotopeUses": [
    {
     "A": 35,

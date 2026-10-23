@@ -70,6 +70,11 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `who_arsenic` | [WHO fact sheet: Arsenic](https://www.who.int/news-room/fact-sheets/detail/arsenic) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
 | `who_radon` | [WHO fact sheet: Radon](https://www.who.int/news-room/fact-sheets/detail/radon-and-health) | [© WHO; facts, cited](https://www.who.int/about/policies/publishing/copyright) | — | used |
 | `unscear_chernobyl` | [UNSCEAR: The Chernobyl accident (assessments of 2000, 2008 and later)](https://www.unscear.org/unscear/en/areas-of-work/chernobyl.html) | [© United Nations; facts, cited](https://www.un.org/en/about-us/terms-of-use) | — | used |
+| `maret2016` | [The Metals in the Biological Periodic System of the Elements: Concepts and Conjectures](https://doi.org/10.3390/ijms17010066) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | — | used |
+| `wackett2004` | [Microbial Genomics and the Periodic Table](https://doi.org/10.1128/AEM.70.2.647-655.2004) | [© American Society for Microbiology; facts, cited](https://journals.asm.org/non-commercial-tdm-license) | — | used |
+| `suttle2022` | [Mineral Nutrition of Livestock, 5th edition](https://doi.org/10.1079/9781789240924.0000) | [Textbook; facts cited](https://doi.org/10.1079/9781789240924.0000) | — | used |
+| `zhang_gladyshev2011` | [Comparative Genomics of Trace Element Dependence in Biology](https://doi.org/10.1074/jbc.R110.172833) | [Open access; facts, cited](https://doi.org/10.1074/jbc.R110.172833) | — | used |
+| `cyert_philpott2013` | [Regulation of Cation Balance in Saccharomyces cerevisiae](https://doi.org/10.1534/genetics.112.147207) | [© Genetics Society of America; facts, cited](https://doi.org/10.1534/genetics.112.147207) | — | used |
 
 ### Citations
 
@@ -128,6 +133,11 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `who_arsenic` — World Health Organization, Arsenic, fact sheet, 7 December 2022, www.who.int/news-room/fact-sheets/detail/arsenic.
 - `who_radon` — World Health Organization, Radon, fact sheet, 25 January 2023, www.who.int/news-room/fact-sheets/detail/radon-and-health.
 - `unscear_chernobyl` — United Nations Scientific Committee on the Effects of Atomic Radiation, The Chernobyl accident, www.unscear.org/unscear/en/areas-of-work/chernobyl.html, summarizing UNSCEAR 2008 Report Vol. II, Annex D, Health effects due to radiation from the Chernobyl accident (United Nations, 2011).
+- `maret2016` — W. Maret, The Metals in the Biological Periodic System of the Elements: Concepts and Conjectures, Int. J. Mol. Sci. 17, 66 (2016), doi:10.3390/ijms17010066.
+- `wackett2004` — L. P. Wackett, A. G. Dodge and L. B. M. Ellis, Microbial Genomics and the Periodic Table, Appl. Environ. Microbiol. 70, 647–655 (2004), doi:10.1128/AEM.70.2.647-655.2004.
+- `suttle2022` — N. F. Suttle, Mineral Nutrition of Livestock, 5th ed., CABI, Wallingford (2022), doi:10.1079/9781789240924.0000; one chapter per element, cited by its chapter DOI (10.1079/9781789240924.00NN, NN = chapter number).
+- `zhang_gladyshev2011` — Y. Zhang and V. N. Gladyshev, Comparative Genomics of Trace Element Dependence in Biology, J. Biol. Chem. 286, 23623–23629 (2011), doi:10.1074/jbc.R110.172833.
+- `cyert_philpott2013` — M. S. Cyert and C. C. Philpott, Regulation of Cation Balance in Saccharomyces cerevisiae, Genetics 193, 677–713 (2013), doi:10.1534/genetics.112.147207.
 
 ## Field coverage (of 118 elements)
 
@@ -172,6 +182,10 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | Annual production | 76 | — | production.toml |
 | Cosmic origin (nucleosynthesis) | 80 | — | kobayashi2020 |
 | Biology: a known role | 26 | — | biology.toml |
+| Biology: a role in animals | 26 | — | biology.toml [[life]] |
+| Biology: a role in fungi | 16 | — | biology.toml [[life]] |
+| Biology: a role in bacteria | 26 | — | biology.toml [[life]] |
+| Biology: a role in archaea | 17 | — | biology.toml [[life]] |
 | History: discovery | 118 | — | history.toml |
 | Our own short text | 118 | — | prose/{Z}.md |
 | Static dipole polarizability | 118 | — | schwerdtfeger2019 |

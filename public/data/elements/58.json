@@ -958,7 +958,19 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "groups": {
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "The volcanic-mudpot methanotroph Methylacidiphilum fumariolicum SolV cannot grow without light lanthanides such as cerium: its methanol dehydrogenase holds them where related enzymes hold calcium.",
+      "source": "primary_literature",
+      "doi": "10.1111/1462-2920.12249"
+     }
+    ]
+   }
+  }
  },
  "history": {
   "discovered": 1803,

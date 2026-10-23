@@ -484,6 +484,18 @@
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
   },
+  "groups": {
+   "animals": {
+    "status": "none",
+    "roles": [
+     {
+      "text": "No essential function is known in farm animals: tooth decay and bone density seem unaffected in these short-lived animals, and too much fluoride causes fluorosis of teeth and bones.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0018"
+     }
+    ]
+   }
+  },
   "isotopeUses": [
    {
     "A": 18,

@@ -678,6 +678,48 @@
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
   "note": "Plant: Brown, Welch & Cary (1987). Human: no EFSA dietary reference value.",
+  "groups": {
+   "animals": {
+    "status": "beneficial",
+    "roles": [
+     {
+      "text": "Chicks fed a purified diet almost free of nickel grew slowly and became anaemic until a trace was added, and rats showed similar signs; in cattle and sheep, the rumen's methane-making microbes depend on it.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0017"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Nearly all the filamentous ascomycetes, basidiomycetes and fission yeasts surveyed use it in urease, which splits urea; the budding yeasts, baker's yeast among them, do without it.",
+      "source": "primary_literature",
+      "doi": "10.1186/1471-2164-10-78"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Used by most bacteria surveyed, mainly in urease, which splits urea, and in nickel–iron hydrogenases, which make or use hydrogen gas; many parasites have lost it.",
+      "source": "primary_literature",
+      "doi": "10.1186/1471-2164-10-78"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Every methanogen examined makes methane with methyl-coenzyme M reductase, whose cofactor F430 holds nickel; many other archaea use nickel in hydrogenases.",
+      "source": "primary_literature",
+      "doi": "10.1186/1471-2164-10-78"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Nickel compounds",

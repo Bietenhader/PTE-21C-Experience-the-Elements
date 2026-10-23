@@ -660,6 +660,15 @@ export interface Biology {
   humanRole?: SourcedText;
   note?: string;
   /**
+   * Groups of life beyond plants and humans (biology.toml [[life]], added after M5), each with its status and one or more sourced sentences in our own words. A group that is absent has no known role in PTE-21C's sources, which is not proof that there is none.
+   */
+  groups?: {
+    animals?: LifeGroup;
+    fungi?: LifeGroup;
+    bacteria?: LifeGroup;
+    archaea?: LifeGroup;
+  };
+  /**
    * Isotopes in biology and medicine (SPEC §10.10), our own words with a source per row. A is omitted when the use is not isotope-specific (gadolinium contrast agents).
    */
   isotopeUses?: {
@@ -687,6 +696,17 @@ export interface Biology {
     volumes?: string[];
     source: SourceId;
   }[];
+}
+/**
+ * Whether a group of life needs or uses the element. essential: needed by essentially all members; some: used by some members (from a few to most), not by all; beneficial: helps, not required; none: a source says the group does without it.
+ */
+export interface LifeGroup {
+  status: "essential" | "some" | "beneficial" | "none";
+  /**
+   * @minItems 1
+   */
+  roles: [SourcedText, ...SourcedText[]];
+  note?: string;
 }
 /**
  * Chemistry & bonding (SPEC §10.9): how the element bonds, how it reacts with air, water and acids (our own words, each with its source), well-known compounds, one compound per common oxidation state, and Shannon's ionic radii of its common ions.

@@ -758,6 +758,53 @@
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
   },
+  "groups": {
+   "animals": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Farm animals need it for selenium enzymes such as glutathione peroxidase; lambs and calves short of it develop white muscle disease.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0015"
+     },
+     {
+      "text": "Not every animal, though: at least five insect species have lost all their selenium-containing proteins.",
+      "source": "primary_literature",
+      "doi": "10.1371/journal.pone.0002968"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "none",
+    "roles": [
+     {
+      "text": "Fungi seem to have lost all their selenium-containing proteins in the course of evolution.",
+      "source": "primary_literature",
+      "doi": "10.1016/j.bbagen.2009.05.014"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Built into some proteins as the amino acid selenocysteine, but more than half of the prokaryotes examined have no such protein; Deltaproteobacteria and Clostridia have the most.",
+      "source": "zhang_gladyshev2011",
+      "doi": "10.1074/jbc.R110.172833"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Some archaea build it into proteins as the amino acid selenocysteine, made by a pathway that is in principle the same as that of eukaryotes.",
+      "source": "primary_literature",
+      "doi": "10.1016/j.bbagen.2009.03.022"
+     }
+    ]
+   }
+  },
   "environment": [
    {
     "text": "Selenium leached from soils by irrigation drainage collected in the Kesterson ponds in California in the early 1980s and caused deformed and dead embryos in water birds.",

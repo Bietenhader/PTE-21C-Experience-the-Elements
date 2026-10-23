@@ -720,6 +720,43 @@
    "doi": "10.2903/sp.efsa.2017.e15121"
   },
   "note": "Human: EFSA sets its value for cobalamin (vitamin B12), not for cobalt itself.",
+  "groups": {
+   "animals": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Cattle and sheep need it in their feed: microbes in the rumen build it into vitamin B12, which the animal then absorbs.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0010"
+     },
+     {
+      "text": "A genome survey found vitamin B12 enzymes in all animals except insects, which seem to have lost them; only bacteria and archaea can make the vitamin.",
+      "source": "primary_literature",
+      "doi": "10.1186/1471-2164-10-78"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "About three quarters of the bacteria surveyed use it as vitamin B12, for example in methionine synthase; about half of these make the vitamin, the rest take it up.",
+      "source": "primary_literature",
+      "doi": "10.1186/1471-2164-10-78"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Nearly all archaea surveyed use vitamin B12; methanogens make it themselves and rely on it in enzymes that move methyl groups.",
+      "source": "primary_literature",
+      "doi": "10.1186/1471-2164-10-78"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Cobalt metal (without tungsten carbide or other metal alloys)",

@@ -587,6 +587,28 @@
    "text": "The main negative ion outside cells; part of stomach acid.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "The main negative ion of the body fluids and the chloride of stomach acid.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0008"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "The main inorganic negative ion in many microbes; at least some salt-loving bacteria, such as Halobacillus halophilus, need it to grow.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
   }
  },
  "history": {

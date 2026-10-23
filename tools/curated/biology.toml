@@ -31,6 +31,19 @@
 #   [[toxicity]]     a short toxicity note where a cited source supports it: Z, text, source / doi.
 #   [[iarc]]         IARC carcinogen classifications: Z and the agent's name exactly as IARC lists it;
 #                    the group itself is read from the fetched IARC list (tools/fetch_iarc.py).
+#
+# Added after M5 (FIN, please review these as well; they are the last block of the file):
+#   [[life]]         the groups of life beyond plants and humans, one row per sourced sentence:
+#                    Z, group ("animals" | "fungi" | "bacteria" | "archaea"), status, role (one
+#                    sentence, our own words), source / doi, note (optional; shown on the card).
+#                    status: "essential"  needed by essentially all members of the group;
+#                            "some"       used by some members (from a few to most), not by all;
+#                                         the role says which;
+#                            "beneficial" helps, but is not required;
+#                            "none"       a source says the group does without it.
+#                    Several rows for one element and group add sentences; they must give the same
+#                    status, and at most one of them a note. An element with no row for a group is
+#                    shown as "no known role in PTE-21C's sources", which is not proof there is none.
 # Body mass fractions are in abundance.toml (ICRP Reference Man); GHS hazard pictograms come from
 # PubChem with the physical panel. An element without a toxicity row has no curated note: the
 # panel says so, which does not mean the element is safe.
@@ -764,3 +777,794 @@ source = "iarc_classifications"
 Z = 94
 agent = "Plutonium"
 source = "iarc_classifications"
+
+# =============================================================================================
+# Groups of life beyond plants and humans (added for Fin's review, after M5)
+# =============================================================================================
+#
+# Sources: Maret 2016 (open access, CC BY) for the building-block elements of animals and fungi;
+# Suttle, Mineral Nutrition of Livestock (2010), one chapter per element, for farm animals;
+# Cyert & Philpott 2013 (baker's yeast) for fungi; Wackett et al. 2004 and the genome surveys of
+# Gladyshev's group (Zhang et al. 2008, 2009, 2011; Ridge et al. 2008) for bacteria and archaea;
+# single papers for the striking cases. Every DOI was checked against Crossref.
+# Farm animals: every sentence citing Suttle (Mineral Nutrition of Livestock, 5th ed., 2022) was checked
+# against the book's text (Fin's copy); one chapter DOI per element. Elements the book counts as
+# "occasionally beneficial" (chapter 17) are "beneficial": helpful in some trials, not shown to be essential.
+
+# --- animals ---------------------------------------------------------------------------------
+
+[[life]]
+Z = 1
+group = "animals"
+status = "essential"
+role = "Part of water and of every organic molecule in an animal's body."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 6
+group = "animals"
+status = "essential"
+role = "The backbone of proteins, fats, sugars and nucleic acids."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 7
+group = "animals"
+status = "essential"
+role = "Part of every amino acid and every base of DNA and RNA."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 8
+group = "animals"
+status = "essential"
+role = "Part of water and of most biomolecules, and breathed in to release energy from food."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 11
+group = "animals"
+status = "essential"
+role = "The main positive ion of the body fluids outside the cells, holding water there and keeping the acid–base balance; plant feeds are often low in it, which is why farm animals are given salt."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0008"
+
+[[life]]
+Z = 12
+group = "animals"
+status = "essential"
+role = "Needed by many enzymes, by bone and by nerves and muscles; cattle grazing lush spring grass can run short and develop grass tetany."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0005"
+
+[[life]]
+Z = 15
+group = "animals"
+status = "essential"
+role = "Builds bone together with calcium and is part of DNA, ATP and cell membranes; grazing cattle on phosphorus-poor soils can run short."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0006"
+
+[[life]]
+Z = 16
+group = "animals"
+status = "essential"
+role = "Part of the amino acids methionine and cysteine, which the rumen microbes of cattle and sheep build from the sulfur in their feed."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0009"
+
+[[life]]
+Z = 17
+group = "animals"
+status = "essential"
+role = "The main negative ion of the body fluids and the chloride of stomach acid."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0008"
+
+[[life]]
+Z = 19
+group = "animals"
+status = "essential"
+role = "The main positive ion inside cells, needed for nerves and muscles to work."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0007"
+
+[[life]]
+Z = 20
+group = "animals"
+status = "essential"
+role = "The main mineral of bone and eggshell and a signal in nerves and muscles; dairy cows can get milk fever when their blood calcium drops at calving."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0004"
+
+[[life]]
+Z = 25
+group = "animals"
+status = "essential"
+role = "Activates enzymes that build cartilage and bone; chicks short of it develop deformed legs (perosis)."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0014"
+
+[[life]]
+Z = 26
+group = "animals"
+status = "essential"
+role = "Carries oxygen in haemoglobin and myoglobin; piglets reared indoors are born with small reserves and become anaemic without extra iron."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0013"
+
+[[life]]
+Z = 26
+group = "animals"
+status = "essential"
+role = "Some invertebrates, such as sipunculid worms, bind oxygen with haemerythrin, which holds it between two iron atoms."
+source = "primary_literature"
+doi = "10.1007/s00018-016-2326-7"
+
+[[life]]
+Z = 27
+group = "animals"
+status = "some"
+role = "Cattle and sheep need it in their feed: microbes in the rumen build it into vitamin B12, which the animal then absorbs."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0010"
+
+[[life]]
+Z = 27
+group = "animals"
+status = "some"
+role = "A genome survey found vitamin B12 enzymes in all animals except insects, which seem to have lost them; only bacteria and archaea can make the vitamin."
+source = "primary_literature"
+doi = "10.1186/1471-2164-10-78"
+
+[[life]]
+Z = 29
+group = "animals"
+status = "essential"
+role = "Needed by enzymes of respiration, iron transport, pigment and connective tissue; lambs of copper-deficient ewes can be born with swayback."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0011"
+
+[[life]]
+Z = 29
+group = "animals"
+status = "essential"
+role = "Some molluscs and arthropods carry oxygen in their blood with haemocyanin, in which a pair of copper atoms binds each oxygen molecule."
+source = "primary_literature"
+doi = "10.1007/s00018-016-2326-7"
+
+[[life]]
+Z = 30
+group = "animals"
+status = "essential"
+role = "Part of many enzymes and of proteins that switch genes on and off; young pigs short of it develop the skin disease parakeratosis."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0016"
+
+[[life]]
+Z = 34
+group = "animals"
+status = "some"
+role = "Farm animals need it for selenium enzymes such as glutathione peroxidase; lambs and calves short of it develop white muscle disease."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0015"
+
+[[life]]
+Z = 34
+group = "animals"
+status = "some"
+role = "Not every animal, though: at least five insect species have lost all their selenium-containing proteins."
+source = "primary_literature"
+doi = "10.1371/journal.pone.0002968"
+
+# FIN: "some" because the need was shown in fruit flies only; the authors themselves say "all animals".
+[[life]]
+Z = 35
+group = "animals"
+status = "some"
+role = "Fruit flies cannot develop without bromide: the enzyme peroxidasin needs it to cross-link the collagen IV of basement membranes."
+source = "primary_literature"
+doi = "10.1016/j.cell.2014.05.009"
+note = "Shown in fruit flies; the authors conclude that bromine is essential for all animals."
+
+[[life]]
+Z = 42
+group = "animals"
+status = "essential"
+role = "All animals examined make the molybdenum cofactor and use it in two enzyme families, sulfite oxidase and xanthine oxidase."
+source = "primary_literature"
+doi = "10.1016/j.jmb.2008.03.051"
+
+# FIN: "some" because the source covers farm animals only; animals without a thyroid are not covered.
+[[life]]
+Z = 53
+group = "animals"
+status = "some"
+role = "Farm animals need it to make thyroid hormones, which set the pace of growth and metabolism; deficient livestock develop goitre."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0012"
+note = "Our source covers farm animals; it does not say whether animals without a thyroid gland need iodine."
+
+# --- animals: molybdenum and the "occasionally beneficial" elements (Suttle 2022, chapter 17) --------
+
+[[life]]
+Z = 42
+group = "animals"
+status = "essential"
+role = "Farm animals need traces for xanthine oxidoreductase, aldehyde oxidase and sulfite oxidase; chicks on a low-molybdenum diet given tungstate, which blocks it, grew poorly and became anaemic."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 5
+group = "animals"
+status = "beneficial"
+role = "Not shown to be essential, but adding boron to low-boron feeds strengthened the bones of broiler chickens and laying hens in several trials."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 24
+group = "animals"
+status = "beneficial"
+role = "Trivalent chromium helps cells take up glucose in response to insulin, and supplements changed protein, fat and nucleic-acid metabolism in livestock trials; it is not counted as essential."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 3
+group = "animals"
+status = "beneficial"
+role = "Goats on a diet almost free of lithium grew and bred poorly in one group's experiments, but the same signs followed the removal of other elements and may not show a true need."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+note = "Disputed: Suttle (2022) suggests the response may be hormesis rather than essentiality."
+
+[[life]]
+Z = 28
+group = "animals"
+status = "beneficial"
+role = "Chicks fed a purified diet almost free of nickel grew slowly and became anaemic until a trace was added, and rats showed similar signs; in cattle and sheep, the rumen's methane-making microbes depend on it."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 14
+group = "animals"
+status = "beneficial"
+role = "Chicks reared on a diet almost free of silicon grew 30–50 % slower and formed poor skulls and long bones; silicon helps build cartilage and connective tissue."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+[[life]]
+Z = 23
+group = "animals"
+status = "beneficial"
+role = "Goats on a diet very low in vanadium aborted more often and gave less milk than goats given a little, though a shortage in poultry feeds is thought unlikely."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0017"
+
+# Suttle (2022, chapter 18): no essential function known in farm animals; in excess it is toxic.
+[[life]]
+Z = 9
+group = "animals"
+status = "none"
+role = "No essential function is known in farm animals: tooth decay and bone density seem unaffected in these short-lived animals, and too much fluoride causes fluorosis of teeth and bones."
+source = "suttle2022"
+doi = "10.1079/9781789240924.0018"
+
+# --- fungi -----------------------------------------------------------------------------------
+
+[[life]]
+Z = 1
+group = "fungi"
+status = "essential"
+role = "Part of water and of every organic molecule in a fungal cell."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 6
+group = "fungi"
+status = "essential"
+role = "The backbone of every organic molecule in a fungal cell."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 7
+group = "fungi"
+status = "essential"
+role = "Part of every amino acid and every base of DNA and RNA."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 8
+group = "fungi"
+status = "essential"
+role = "Part of water and of most biomolecules."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 12
+group = "fungi"
+status = "essential"
+role = "A cofactor of many enzymes; yeast cells cannot grow and divide without it."
+source = "cyert_philpott2013"
+doi = "10.1534/genetics.112.147207"
+
+[[life]]
+Z = 15
+group = "fungi"
+status = "essential"
+role = "Part of DNA, RNA, ATP and membrane lipids."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 16
+group = "fungi"
+status = "essential"
+role = "Part of the amino acids cysteine and methionine."
+source = "maret2016"
+doi = "10.3390/ijms17010066"
+
+[[life]]
+Z = 19
+group = "fungi"
+status = "essential"
+role = "In baker's yeast it balances the negative charges in the cell and is needed to make proteins."
+source = "cyert_philpott2013"
+doi = "10.1534/genetics.112.147207"
+
+[[life]]
+Z = 20
+group = "fungi"
+status = "essential"
+role = "Baker's yeast needs it to grow and uses it as a signal, for example under stress or in response to mating pheromone."
+source = "cyert_philpott2013"
+doi = "10.1534/genetics.112.147207"
+
+[[life]]
+Z = 23
+group = "fungi"
+status = "some"
+role = "The fungus Curvularia inaequalis makes a chloroperoxidase with vanadium at its active site."
+source = "primary_literature"
+doi = "10.1073/pnas.93.1.392"
+
+[[life]]
+Z = 25
+group = "fungi"
+status = "essential"
+role = "In yeast it serves the mitochondrial superoxide dismutase and the sugar-transferring enzymes that decorate secreted proteins."
+source = "cyert_philpott2013"
+doi = "10.1534/genetics.112.147207"
+
+[[life]]
+Z = 26
+group = "fungi"
+status = "essential"
+role = "Iron proteins, with haem, iron–sulfur clusters or other iron centres, make up about 2 % of yeast proteins, many of them in respiration."
+source = "cyert_philpott2013"
+doi = "10.1534/genetics.112.147207"
+
+[[life]]
+Z = 28
+group = "fungi"
+status = "some"
+role = "Nearly all the filamentous ascomycetes, basidiomycetes and fission yeasts surveyed use it in urease, which splits urea; the budding yeasts, baker's yeast among them, do without it."
+source = "primary_literature"
+doi = "10.1186/1471-2164-10-78"
+
+[[life]]
+Z = 29
+group = "fungi"
+status = "essential"
+role = "Yeast needs it in cytochrome c oxidase for respiration, in copper–zinc superoxide dismutase and in the oxidase Fet3 that takes up iron."
+source = "cyert_philpott2013"
+doi = "10.1534/genetics.112.147207"
+
+[[life]]
+Z = 30
+group = "fungi"
+status = "essential"
+role = "Zinc proteins are the most common metal proteins of yeast, about a tenth of all its proteins."
+source = "cyert_philpott2013"
+doi = "10.1534/genetics.112.147207"
+
+[[life]]
+Z = 34
+group = "fungi"
+status = "none"
+role = "Fungi seem to have lost all their selenium-containing proteins in the course of evolution."
+source = "primary_literature"
+doi = "10.1016/j.bbagen.2009.05.014"
+
+[[life]]
+Z = 42
+group = "fungi"
+status = "some"
+role = "All the filamentous ascomycetes surveyed and some basidiomycetes use it in sulfite and xanthine oxidases; baker's yeast, fission yeast and the other yeasts surveyed have lost it."
+source = "primary_literature"
+doi = "10.1016/j.jmb.2008.03.051"
+
+# --- bacteria --------------------------------------------------------------------------------
+
+[[life]]
+Z = 1
+group = "bacteria"
+status = "essential"
+role = "Part of water and of all organic molecules; gradients of hydrogen ions across the membrane drive ATP synthesis."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 5
+group = "bacteria"
+status = "some"
+role = "Cyanobacteria need it to build working nitrogen-fixing heterocysts, and a signal molecule bacteria use to sense their own numbers contains borate."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 6
+group = "bacteria"
+status = "essential"
+role = "The backbone of all organic molecules; carbon, hydrogen, oxygen, nitrogen, phosphorus and sulfur make up about 97 % of an E. coli cell."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 7
+group = "bacteria"
+status = "essential"
+role = "Part of every protein and nucleic acid; one of the six elements found essential in every prokaryote analysed."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 8
+group = "bacteria"
+status = "essential"
+role = "Part of water and of most biomolecules."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 11
+group = "bacteria"
+status = "some"
+role = "Halophilic ('salt-loving') bacteria, found in at least six phyla, need concentrated salt solutions to grow."
+source = "primary_literature"
+doi = "10.1186/1746-1448-4-2"
+
+[[life]]
+Z = 12
+group = "bacteria"
+status = "essential"
+role = "Usually the most abundant doubly charged ion in the cell; it binds ATP and is a cofactor of many enzymes."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 15
+group = "bacteria"
+status = "essential"
+role = "Part of DNA, RNA, ATP and membrane lipids."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 16
+group = "bacteria"
+status = "essential"
+role = "Part of the amino acids cysteine and methionine."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 17
+group = "bacteria"
+status = "some"
+role = "The main inorganic negative ion in many microbes; at least some salt-loving bacteria, such as Halobacillus halophilus, need it to grow."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 19
+group = "bacteria"
+status = "essential"
+role = "The most common singly charged positive ion inside the cell: E. coli holds about 0.3 mol per litre."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 20
+group = "bacteria"
+status = "some"
+role = "Kept at low levels; some bacteria use it to hold secreted enzymes together, to form spores or in calcium-binding proteins."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 23
+group = "bacteria"
+status = "some"
+role = "Azotobacter chroococcum can fix nitrogen with an alternative nitrogenase that contains vanadium instead of molybdenum."
+source = "primary_literature"
+doi = "10.1038/322388a0"
+
+[[life]]
+Z = 25
+group = "bacteria"
+status = "some"
+role = "Many bacteria use it in enzymes; Deinococcus radiodurans even switches the way it breaks down glucose with the amount of manganese it holds."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 26
+group = "bacteria"
+status = "essential"
+role = "Built into iron–sulfur clusters, ancient cofactors found throughout life that carry electrons, bind substrates and help control genes."
+source = "primary_literature"
+doi = "10.1146/annurev.biochem.74.082803.133518"
+
+[[life]]
+Z = 26
+group = "bacteria"
+status = "essential"
+role = "A rare exception: the Lyme disease bacterium Borrelia burgdorferi appears to do without iron, using manganese in its place."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 27
+group = "bacteria"
+status = "some"
+role = "About three quarters of the bacteria surveyed use it as vitamin B12, for example in methionine synthase; about half of these make the vitamin, the rest take it up."
+source = "primary_literature"
+doi = "10.1186/1471-2164-10-78"
+
+[[life]]
+Z = 28
+group = "bacteria"
+status = "some"
+role = "Used by most bacteria surveyed, mainly in urease, which splits urea, and in nickel–iron hydrogenases, which make or use hydrogen gas; many parasites have lost it."
+source = "primary_literature"
+doi = "10.1186/1471-2164-10-78"
+
+[[life]]
+Z = 29
+group = "bacteria"
+status = "some"
+role = "About seven in ten sequenced bacteria use it, mostly those that live with oxygen, above all in cytochrome c oxidase; most anaerobes have no copper proteins."
+source = "primary_literature"
+doi = "10.1371/journal.pone.0001378"
+
+[[life]]
+Z = 30
+group = "bacteria"
+status = "essential"
+role = "Thought to be essential for all organisms: it sits in many enzymes, in structural and gene-control proteins and in some ribosomal proteins."
+source = "zhang_gladyshev2011"
+doi = "10.1074/jbc.R110.172833"
+
+[[life]]
+Z = 34
+group = "bacteria"
+status = "some"
+role = "Built into some proteins as the amino acid selenocysteine, but more than half of the prokaryotes examined have no such protein; Deltaproteobacteria and Clostridia have the most."
+source = "zhang_gladyshev2011"
+doi = "10.1074/jbc.R110.172833"
+
+[[life]]
+Z = 42
+group = "bacteria"
+status = "some"
+role = "Almost all bacterial groups use it, bound to a pterin in enzymes such as nitrate reductase and formate dehydrogenase and, in nitrogen fixers, in nitrogenase; mycoplasmas and chlamydiae do without."
+source = "primary_literature"
+doi = "10.1016/j.jmb.2008.03.051"
+
+[[life]]
+Z = 57
+group = "bacteria"
+status = "some"
+role = "The volcanic-mudpot methanotroph Methylacidiphilum fumariolicum SolV cannot grow without light lanthanides such as lanthanum: its methanol dehydrogenase holds them where related enzymes hold calcium."
+source = "primary_literature"
+doi = "10.1111/1462-2920.12249"
+
+[[life]]
+Z = 58
+group = "bacteria"
+status = "some"
+role = "The volcanic-mudpot methanotroph Methylacidiphilum fumariolicum SolV cannot grow without light lanthanides such as cerium: its methanol dehydrogenase holds them where related enzymes hold calcium."
+source = "primary_literature"
+doi = "10.1111/1462-2920.12249"
+
+[[life]]
+Z = 59
+group = "bacteria"
+status = "some"
+role = "The volcanic-mudpot methanotroph Methylacidiphilum fumariolicum SolV cannot grow without light lanthanides such as praseodymium: its methanol dehydrogenase holds them where related enzymes hold calcium."
+source = "primary_literature"
+doi = "10.1111/1462-2920.12249"
+
+[[life]]
+Z = 60
+group = "bacteria"
+status = "some"
+role = "The volcanic-mudpot methanotroph Methylacidiphilum fumariolicum SolV cannot grow without light lanthanides such as neodymium: its methanol dehydrogenase holds them where related enzymes hold calcium."
+source = "primary_literature"
+doi = "10.1111/1462-2920.12249"
+
+[[life]]
+Z = 74
+group = "bacteria"
+status = "some"
+role = "Some anaerobic bacteria, among them Clostridium thermoaceticum and Desulfovibrio gigas, use it bound to a pterin in enzymes such as formate dehydrogenase, as other organisms use molybdenum."
+source = "primary_literature"
+doi = "10.1111/j.1574-6976.1996.tb00226.x"
+
+# --- archaea ---------------------------------------------------------------------------------
+
+[[life]]
+Z = 1
+group = "archaea"
+status = "essential"
+role = "Part of water and of all organic molecules; one of the six elements found essential in every prokaryote analysed."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 6
+group = "archaea"
+status = "essential"
+role = "The backbone of all organic molecules; one of the six elements found essential in every prokaryote analysed."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 7
+group = "archaea"
+status = "essential"
+role = "Part of every protein and nucleic acid; one of the six elements found essential in every prokaryote analysed."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 8
+group = "archaea"
+status = "essential"
+role = "Part of water and of most biomolecules."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 11
+group = "archaea"
+status = "some"
+role = "Halobacterium and most of its relatives need more than 100–150 g of salt per litre to grow and to keep their cells intact."
+source = "primary_literature"
+doi = "10.1186/1746-1448-4-2"
+
+[[life]]
+Z = 12
+group = "archaea"
+status = "essential"
+role = "Usually the most abundant doubly charged ion in prokaryotic cells; genes for its transporter CorA are widespread in archaea as in bacteria."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 15
+group = "archaea"
+status = "essential"
+role = "Part of DNA, RNA, ATP and membrane lipids; one of the six elements found essential in every prokaryote analysed."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 16
+group = "archaea"
+status = "essential"
+role = "Part of the amino acids cysteine and methionine; one of the six elements found essential in every prokaryote analysed."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+# FIN: "essential" rests on a review of prokaryotes in general (Wackett et al.); the second sentence
+# is about the salt-loving Halobacteria only.
+[[life]]
+Z = 19
+group = "archaea"
+status = "essential"
+role = "One of the major positive ions of prokaryotic cells, though how much a cell holds varies widely between species."
+source = "wackett2004"
+doi = "10.1128/AEM.70.2.647-655.2004"
+
+[[life]]
+Z = 19
+group = "archaea"
+status = "essential"
+role = "Halobacteria balance the salty water outside by holding potassium chloride at molar concentrations inside, and their proteins are built to work in it."
+source = "primary_literature"
+doi = "10.1186/1746-1448-4-2"
+
+[[life]]
+Z = 26
+group = "archaea"
+status = "essential"
+role = "Built into iron–sulfur clusters, ancient cofactors found throughout life that carry electrons, bind substrates and help control genes."
+source = "primary_literature"
+doi = "10.1146/annurev.biochem.74.082803.133518"
+
+[[life]]
+Z = 26
+group = "archaea"
+status = "essential"
+role = "An extreme case: about 86 % of the proteins of the acid-loving Ferroplasma acidiphilum bind iron."
+source = "zhang_gladyshev2011"
+doi = "10.1074/jbc.R110.172833"
+
+[[life]]
+Z = 27
+group = "archaea"
+status = "some"
+role = "Nearly all archaea surveyed use vitamin B12; methanogens make it themselves and rely on it in enzymes that move methyl groups."
+source = "primary_literature"
+doi = "10.1186/1471-2164-10-78"
+
+[[life]]
+Z = 28
+group = "archaea"
+status = "some"
+role = "Every methanogen examined makes methane with methyl-coenzyme M reductase, whose cofactor F430 holds nickel; many other archaea use nickel in hydrogenases."
+source = "primary_literature"
+doi = "10.1186/1471-2164-10-78"
+
+[[life]]
+Z = 29
+group = "archaea"
+status = "some"
+role = "Only about a third of the sequenced archaea use it, all of them in cytochrome c oxidase, the enzyme that hands electrons to oxygen."
+source = "primary_literature"
+doi = "10.1371/journal.pone.0001378"
+
+[[life]]
+Z = 30
+group = "archaea"
+status = "essential"
+role = "Thought to be essential for all organisms; ribosomal and many other proteins bind it."
+source = "zhang_gladyshev2011"
+doi = "10.1074/jbc.R110.172833"
+
+[[life]]
+Z = 34
+group = "archaea"
+status = "some"
+role = "Some archaea build it into proteins as the amino acid selenocysteine, made by a pathway that is in principle the same as that of eukaryotes."
+source = "primary_literature"
+doi = "10.1016/j.bbagen.2009.03.022"
+
+[[life]]
+Z = 42
+group = "archaea"
+status = "some"
+role = "About 95 % of the sequenced archaea surveyed use the molybdenum cofactor, more widely even than bacteria do."
+source = "primary_literature"
+doi = "10.1016/j.jmb.2008.03.051"
+
+[[life]]
+Z = 74
+group = "archaea"
+status = "some"
+role = "Hyperthermophiles such as Pyrococcus furiosus cannot do without it: their aldehyde-oxidising enzymes hold tungsten bound to a pterin, where most organisms would use molybdenum."
+source = "primary_literature"
+doi = "10.1111/j.1574-6976.1996.tb00226.x"

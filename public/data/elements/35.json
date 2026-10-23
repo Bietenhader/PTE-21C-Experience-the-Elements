@@ -722,7 +722,20 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "groups": {
+   "animals": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Fruit flies cannot develop without bromide: the enzyme peroxidasin needs it to cross-link the collagen IV of basement membranes.",
+      "source": "primary_literature",
+      "doi": "10.1016/j.cell.2014.05.009"
+     }
+    ],
+    "note": "Shown in fruit flies; the authors conclude that bromine is essential for all animals."
+   }
+  }
  },
  "history": {
   "discovered": 1826,

@@ -661,6 +661,38 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
+  "groups": {
+   "animals": {
+    "status": "beneficial",
+    "roles": [
+     {
+      "text": "Goats on a diet very low in vanadium aborted more often and gave less milk than goats given a little, though a shortage in poultry feeds is thought unlikely.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0017"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "The fungus Curvularia inaequalis makes a chloroperoxidase with vanadium at its active site.",
+      "source": "primary_literature",
+      "doi": "10.1073/pnas.93.1.392"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Azotobacter chroococcum can fix nitrogen with an alternative nitrogenase that contains vanadium instead of molybdenum.",
+      "source": "primary_literature",
+      "doi": "10.1038/322388a0"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Vanadium pentoxide",

@@ -280,6 +280,34 @@
    "note": "No known role in plants or humans."
   },
   {
+   "label": "Biology: a role in animals",
+   "count": 26,
+   "missing": {},
+   "file": "biology.toml [[life]]",
+   "note": "Only elements with a cited role; for the rest our sources name none."
+  },
+  {
+   "label": "Biology: a role in fungi",
+   "count": 16,
+   "missing": {},
+   "file": "biology.toml [[life]]",
+   "note": "Only elements with a cited role; for the rest our sources name none."
+  },
+  {
+   "label": "Biology: a role in bacteria",
+   "count": 26,
+   "missing": {},
+   "file": "biology.toml [[life]]",
+   "note": "Only elements with a cited role; for the rest our sources name none."
+  },
+  {
+   "label": "Biology: a role in archaea",
+   "count": 17,
+   "missing": {},
+   "file": "biology.toml [[life]]",
+   "note": "Only elements with a cited role; for the rest our sources name none."
+  },
+  {
    "label": "History: discovery",
    "count": 118,
    "missing": {},

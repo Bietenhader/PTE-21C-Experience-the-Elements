@@ -548,6 +548,18 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
+  "groups": {
+   "animals": {
+    "status": "beneficial",
+    "roles": [
+     {
+      "text": "Chicks reared on a diet almost free of silicon grew 30–50 % slower and formed poor skulls and long bones; silicon helps build cartilage and connective tissue.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0017"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Silica dust, crystalline, in the form of quartz or cristobalite",

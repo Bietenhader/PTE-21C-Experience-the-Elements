@@ -17,10 +17,41 @@ This file is updated at the end of every working session (SPEC §17.5).
    They now take at most a third of the screen and scroll on their own; the tabs and the panel are always
    visible, and scrolling into a panel folds the top away as before. Tested at iPhone SE and iPhone 15 sizes.
    *Please try it on your iPhone after merging.*
-2. **Biology & ecology for more groups of life: in progress.** Next to humans and plants: animals, fungi,
-   bacteria and archaea, each with its role and source. It comes as a separate pull request with the new
-   `biology.toml` rows for your review.
+2. **Biology & ecology for more groups of life: ready for your review**, in its own pull request. Next to
+   humans and plants: animals, fungi, bacteria and archaea, each card with its status in words and one
+   sourced sentence per role. See "Your review of the new biology rows" below.
 3. **The release (tag `v0.1.0`) waits** until you are happy with both.
+
+### Your review of the new biology rows (`[[life]]`, end of `tools/curated/biology.toml`)
+
+95 rows: animals 32, fungi 17, bacteria 27, archaea 19. Every DOI was checked against Crossref; all text is
+our own words. Status words: **essential** (needed by essentially all members of the group), **used by
+some, not all** (the sentence names which), **beneficial** (helpful in some trials, not shown to be
+needed), **no known role** (with a source saying the group does without
+it, e.g. fungi and selenium), and, with no row, "no role is known from PTE-21C's sources — that does not
+mean there is none". Things I would like your eye on:
+
+1. **Farm animals, checked against your copy of Suttle's *Mineral Nutrition of Livestock* (5th ed., 2022).**
+   All 14 rows now cite the 5th edition, one chapter DOI per element (checked against Crossref). Every
+   sentence was compared with the book's text; one was reworded: sodium no longer says "carries nerve
+   signals" (the book does not say so) but "the main positive ion of the body fluids outside the cells,
+   holding water there and keeping the acid–base balance". New from the book: molybdenum (essential:
+   xanthine oxidoreductase, aldehyde oxidase, sulfite oxidase), and the elements its chapter 17 counts as
+   "occasionally beneficial", shown as **beneficial**: boron, chromium, lithium (marked disputed), nickel,
+   silicon, vanadium; fluorine as "no known role" (chapter 18: no essential function known, fluorosis in
+   excess). Left out: rubidium (the goat findings were not repeatable elsewhere) and arsenic (claims of
+   essentiality "disputed"). Only facts, in our own words; the book's text is not in the repository.
+2. **Generalisations:** animals' and fungi's building blocks (H, C, N, O, P, S) rest on Maret's overview
+   figure; fungi's K, Mg, Ca, Mn, Fe, Zn, Cu on baker's yeast (the sentences say so); archaea's K and Mg on a
+   review of prokaryotes in general.
+3. **Kept at "used by some" to stay careful:** bromine for animals (shown in fruit flies; the authors say
+   all animals), iodine (the source covers farm animals), selenium and cobalt (insects lost them),
+   molybdenum in archaea (about 5 % lack it).
+4. **Left out because they could not be checked:** cobalt for fungi, manganese peroxidase of white-rot
+   fungi, sodium pumps in methanogens.
+5. **One style for all six cards?** Humans and plants still say "Not essential — No known role." where the
+   new cards say "No known role … that does not mean there is none". Default: leave humans and plants as
+   you approved them.
 
 ## For Fin: what to look at (M5)
 

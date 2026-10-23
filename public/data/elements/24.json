@@ -752,6 +752,18 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
+  "groups": {
+   "animals": {
+    "status": "beneficial",
+    "roles": [
+     {
+      "text": "Trivalent chromium helps cells take up glucose in response to insulin, and supplements changed protein, fat and nucleic-acid metabolism in livestock trials; it is not counted as essential.",
+      "source": "suttle2022",
+      "doi": "10.1079/9781789240924.0017"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Chromium (VI) compounds",

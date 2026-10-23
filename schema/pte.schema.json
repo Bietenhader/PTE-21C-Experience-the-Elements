@@ -2108,6 +2108,25 @@
         "note": {
           "type": "string"
         },
+        "groups": {
+          "description": "Groups of life beyond plants and humans (biology.toml [[life]], added after M5), each with its status and one or more sourced sentences in our own words. A group that is absent has no known role in PTE-21C's sources, which is not proof that there is none.",
+          "type": "object",
+          "properties": {
+            "animals": {
+              "$ref": "#/definitions/LifeGroup"
+            },
+            "fungi": {
+              "$ref": "#/definitions/LifeGroup"
+            },
+            "bacteria": {
+              "$ref": "#/definitions/LifeGroup"
+            },
+            "archaea": {
+              "$ref": "#/definitions/LifeGroup"
+            }
+          },
+          "additionalProperties": false
+        },
         "isotopeUses": {
           "description": "Isotopes in biology and medicine (SPEC §10.10), our own words with a source per row. A is omitted when the use is not isotope-specific (gadolinium contrast agents).",
           "type": "array",
@@ -2212,6 +2231,36 @@
       "required": [
         "essentialPlant",
         "essentialHuman"
+      ],
+      "additionalProperties": false
+    },
+    "LifeGroup": {
+      "description": "Whether a group of life needs or uses the element. essential: needed by essentially all members; some: used by some members (from a few to most), not by all; beneficial: helps, not required; none: a source says the group does without it.",
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "essential",
+            "some",
+            "beneficial",
+            "none"
+          ]
+        },
+        "roles": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/SourcedText"
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "roles"
       ],
       "additionalProperties": false
     },

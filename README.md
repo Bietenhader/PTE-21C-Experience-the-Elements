@@ -107,7 +107,7 @@ or the physical reason an element has none.
 - **Photographs:** 96 elements have one; the rest show a placeholder saying why (never made in a visible
   amount, or no openly licensed photograph found).
 - **Browsers:** tested in Chromium on desktop and phone for every change; Firefox, Safari and the iPhone in
-  a nightly run. No offline mode yet.
+  a separate run, started by hand. No offline mode yet.
 - **English only.**
 
 ## Run it on a Mac

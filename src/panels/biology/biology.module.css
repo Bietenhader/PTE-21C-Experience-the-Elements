@@ -18,12 +18,14 @@
   background: var(--surface-raised);
 }
 
-.need[data-status="yes"] {
+.need[data-status="yes"],
+.need[data-status="essential"] {
   border-inline-start: 4px solid var(--text);
 }
 
 .need[data-status="beneficial"],
-.need[data-status="probable"] {
+.need[data-status="probable"],
+.need[data-status="some"] {
   border-inline-start: 4px dashed var(--text-muted);
 }
 

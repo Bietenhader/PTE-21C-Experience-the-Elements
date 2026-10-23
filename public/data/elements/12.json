@@ -582,6 +582,48 @@
    "text": "Needed by hundreds of enzymes, above all those that use ATP, which acts as a magnesium complex.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Needed by many enzymes, by bone and by nerves and muscles; cattle grazing lush spring grass can run short and develop grass tetany.",
+      "source": "suttle2010",
+      "doi": "10.1079/9781845934729.0092"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "A cofactor of many enzymes; yeast cells cannot grow and divide without it.",
+      "source": "cyert_philpott2013",
+      "doi": "10.1534/genetics.112.147207"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Usually the most abundant doubly charged ion in the cell; it binds ATP and is a cofactor of many enzymes.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Usually the most abundant doubly charged ion in prokaryotic cells; genes for its transporter CorA are widespread in archaea as in bacteria.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
   }
  },
  "history": {

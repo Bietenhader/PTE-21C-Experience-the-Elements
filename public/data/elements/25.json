@@ -798,6 +798,38 @@
    "text": "Part of enzymes such as mitochondrial superoxide dismutase and arginase.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Activates enzymes that build cartilage and bone; chicks short of it develop deformed legs (perosis).",
+      "source": "suttle2010",
+      "doi": "10.1079/9781845934729.0355"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "In yeast it serves the mitochondrial superoxide dismutase and the sugar-transferring enzymes that decorate secreted proteins.",
+      "source": "cyert_philpott2013",
+      "doi": "10.1534/genetics.112.147207"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Many bacteria use it in enzymes; Deinococcus radiodurans even switches the way it breaks down glucose with the amount of manganese it holds.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
   }
  },
  "history": {

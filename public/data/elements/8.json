@@ -474,6 +474,48 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of water and of most biomolecules, and breathed in to release energy from food.",
+      "source": "maret2016",
+      "doi": "10.3390/ijms17010066"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of water and of most biomolecules.",
+      "source": "maret2016",
+      "doi": "10.3390/ijms17010066"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of water and of most biomolecules.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of water and of most biomolecules.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
+  },
   "isotopeUses": [
    {
     "A": 18,

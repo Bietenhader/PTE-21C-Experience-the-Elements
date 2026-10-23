@@ -92,7 +92,7 @@ def test_every_curated_row_has_a_registered_source(toml_file, sources):
     doc = tomllib.loads((CURATED_DIR / toml_file).read_text(encoding="utf-8"))
     # images.toml chooses files (credits come with each file); trends.toml cites per trend.
     for table, rows in doc.items():
-        if table not in ("row", "clock", "event"):
+        if table not in ("row", "clock", "event", "life"):
             continue
         for row in rows:
             keys = [k for k in row if (k == "source" or k.endswith("_source")) and k != "wavelength_source"]

@@ -589,7 +589,11 @@ Probability, physical, mathematical, AMO, chemistry, biology and history (SPEC �
 - **README "Honest limitations":** approximations, predictions for Z ≥ 109, what is not compiled yet,
   transcribed tables, hazard labels, photographs, browsers.
 
-## After M5: Fin's review on an iPhone
+## After M5
+
+Fin's look at the live site, on desktop and on his iPhone (video, 22 October 2026).
+
+### The sheet on iPhones
 
 - **The sheet on short phone screens.** The phone layout stacked the photographs and summary, the tab row
   and the panel in a full-height column, and the header was meant to fold once the reader scrolled into a
@@ -601,6 +605,30 @@ Probability, physical, mathematical, AMO, chemistry, biology and history (SPEC �
   room (4 rem plus the safe-area inset) so their last lines can scroll above a floating browser toolbar.
   `tests/e2e/sheet.spec.ts` checks both iPhone sizes: the tab row in the top 70 % of the screen, at least a
   quarter of the screen for the panel, a tap on a tab switches it, and the header folds.
+
+### Biology: six groups of life
+
+- **Fin's request:** "Does life need it?" shows six cards — humans, animals, plants, fungi, bacteria,
+  archaea — instead of two. Humans and plants keep their M2 rows and wording unchanged.
+- **Data model:** `[[life]]` rows in `biology.toml`, one sourced sentence each (`Z`, `group`, `status`,
+  `role`, `source`, `doi`, optional `note`). `build_lifeandhistory.py` merges them into
+  `biology.groups.{animals,fungi,bacteria,archaea}` = `{status, roles: [SourcedText, …], note?}`, so a
+  group can carry several sentences with their own sources. The build stops on an unknown group, status
+  or column, an unregistered source, primary literature without a DOI, rows for one element and group
+  that disagree on the status, or two notes for them.
+- **Status vocabulary:** `essential` (needed by essentially all members of the group), `some` (used by
+  some members — from a few to most — but not all; the sentence says which; shown as "Used by some, not
+  all"), `beneficial` (helps, not required), `none` (a source says the group does without it, e.g. fungi
+  and selenium). With no row the card says no role is known from PTE-21C's sources and that this does
+  not mean there is none — never "not essential", because for microbes absence from a review is not
+  evidence of absence. Status is in words; the card border repeats it, never alone.
+- **Sources:** open reviews first (Maret 2016, CC BY; Wackett et al. 2004; Zhang & Gladyshev 2011;
+  Cyert & Philpott 2013 for baker's yeast), Gladyshev's group's genome surveys for Mo, Ni/Co and Cu,
+  Suttle's *Mineral Nutrition of Livestock* (one chapter per element, by DOI) for farm animals, and single
+  papers for striking cases (lanthanide methanol dehydrogenase, tungsten enzymes, F430, bromine and
+  collagen IV, haemocyanin, vanadium nitrogenase and chloroperoxidase). Every DOI was checked against
+  Crossref. Fin reviews all rows.
+- **Coverage:** four new rows in the coverage table ("Biology: a role in …"); a `none` row does not count.
 
 ## Tooling
 

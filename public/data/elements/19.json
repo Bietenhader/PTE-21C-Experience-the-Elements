@@ -762,6 +762,53 @@
    "text": "The main positive ion inside cells; with sodium it sets the membrane potential of nerves and muscles.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "The main positive ion inside cells, needed for nerves and muscles to work.",
+      "source": "suttle2010",
+      "doi": "10.1079/9781845934729.0168"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "In baker's yeast it balances the negative charges in the cell and is needed to make proteins.",
+      "source": "cyert_philpott2013",
+      "doi": "10.1534/genetics.112.147207"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "The most common singly charged positive ion inside the cell: E. coli holds about 0.3 mol per litre.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "One of the major positive ions of prokaryotic cells, though how much a cell holds varies widely between species.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     },
+     {
+      "text": "Halobacteria balance the salty water outside by holding potassium chloride at molar concentrations inside, and their proteins are built to work in it.",
+      "source": "primary_literature",
+      "doi": "10.1186/1746-1448-4-2"
+     }
+    ]
+   }
   }
  },
  "history": {

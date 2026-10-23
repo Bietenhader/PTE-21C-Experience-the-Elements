@@ -1056,7 +1056,29 @@
  "biology": {
   "essentialPlant": "no",
   "essentialHuman": "no",
-  "note": "Not known to be essential for plants or for humans."
+  "note": "Not known to be essential for plants or for humans.",
+  "groups": {
+   "bacteria": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Some anaerobic bacteria, among them Clostridium thermoaceticum and Desulfovibrio gigas, use it bound to a pterin in enzymes such as formate dehydrogenase, as other organisms use molybdenum.",
+      "source": "primary_literature",
+      "doi": "10.1111/j.1574-6976.1996.tb00226.x"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "some",
+    "roles": [
+     {
+      "text": "Hyperthermophiles such as Pyrococcus furiosus cannot do without it: their aldehyde-oxidising enzymes hold tungsten bound to a pterin, where most organisms would use molybdenum.",
+      "source": "primary_literature",
+      "doi": "10.1111/j.1574-6976.1996.tb00226.x"
+     }
+    ]
+   }
+  }
  },
  "history": {
   "discovered": 1783,

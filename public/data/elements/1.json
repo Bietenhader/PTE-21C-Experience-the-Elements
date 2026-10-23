@@ -475,6 +475,48 @@
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
   },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of water and of every organic molecule in an animal's body.",
+      "source": "maret2016",
+      "doi": "10.3390/ijms17010066"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of water and of every organic molecule in a fungal cell.",
+      "source": "maret2016",
+      "doi": "10.3390/ijms17010066"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of water and of all organic molecules; gradients of hydrogen ions across the membrane drive ATP synthesis.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of water and of all organic molecules; one of the six elements found essential in every prokaryote analysed.",
+      "source": "wackett2004",
+      "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
+  },
   "isotopeUses": [
    {
     "A": 3,

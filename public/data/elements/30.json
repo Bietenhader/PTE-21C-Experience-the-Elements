@@ -722,6 +722,48 @@
    "text": "Needed by hundreds of enzymes and by zinc-finger proteins that control genes; important for growth and immunity.",
    "source": "efsa_drv",
    "doi": "10.2903/sp.efsa.2017.e15121"
+  },
+  "groups": {
+   "animals": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Part of many enzymes and of proteins that switch genes on and off; young pigs short of it develop the skin disease parakeratosis.",
+      "source": "suttle2010",
+      "doi": "10.1079/9781845934729.0426"
+     }
+    ]
+   },
+   "fungi": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Zinc proteins are the most common metal proteins of yeast, about a tenth of all its proteins.",
+      "source": "cyert_philpott2013",
+      "doi": "10.1534/genetics.112.147207"
+     }
+    ]
+   },
+   "bacteria": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Thought to be essential for all organisms: it sits in many enzymes, in structural and gene-control proteins and in some ribosomal proteins.",
+      "source": "zhang_gladyshev2011",
+      "doi": "10.1074/jbc.R110.172833"
+     }
+    ]
+   },
+   "archaea": {
+    "status": "essential",
+    "roles": [
+     {
+      "text": "Thought to be essential for all organisms; ribosomal and many other proteins bind it.",
+      "source": "zhang_gladyshev2011",
+      "doi": "10.1074/jbc.R110.172833"
+     }
+    ]
+   }
   }
  },
  "history": {

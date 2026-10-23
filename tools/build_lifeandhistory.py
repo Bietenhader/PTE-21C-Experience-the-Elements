@@ -4,7 +4,8 @@ world outline behind the discovery map, public/data/worldmap.json.
 
 biology: tools/curated/biology.toml (FIN reviews it) — the essential-element rows from M2 plus, from
 M4, isotope uses, environmental and toxicity notes and IARC classifications (the group read from the
-fetched IARC list, never typed).
+fetched IARC list, never typed), and, after M5, the [[life]] rows for animals, fungi, bacteria and
+archaea (written to biology.groups).
 history: tools/curated/history.toml, with each discovery place given coordinates from the cached
 gazetteers named in tools/curated/places.toml (Natural Earth, or GeoNames for small towns).
 """
@@ -17,11 +18,18 @@ import curated
 import fetch_geonames
 import fetch_iarc
 import fetch_natural_earth
-from common import DATA_DIR, Report, SourceUnavailable, missing
+from common import DATA_DIR, NUM_ELEMENTS, Report, SourceUnavailable, missing
 
 # --- biology ------------------------------------------------------------------------------------
 
 BIOLOGY_TABLES = ("isotope_use", "environment", "toxicity", "iarc")
+
+# Groups of life beyond plants and humans (biology.toml [[life]]), in the order the panel shows them,
+# and what a row may say about one: essential (needed by essentially all members), some (used by some,
+# not all), beneficial (helps, not required), none (a source says the group does without it).
+LIFE_GROUPS = ("animals", "fungi", "bacteria", "archaea")
+LIFE_STATUS = ("essential", "some", "beneficial", "none")
+LIFE_COLUMNS = {"Z", "group", "status", "role", "source", "doi", "note"}
 
 
 def _sourced(row: dict) -> dict:
@@ -31,13 +39,53 @@ def _sourced(row: dict) -> dict:
     return out
 
 
-def load_biology(report: Report) -> tuple[dict[int, dict], dict[int, dict[str, list]]]:
-    """(the M2 rows by Z, {Z: {table: [rows]}} for the M4 tables)."""
+def life_groups(rows: list[dict]) -> dict[int, dict[str, dict]]:
+    """{Z: {group: {status, roles, note?}}} from the [[life]] rows of biology.toml.
+
+    Each row adds one sourced sentence (a role) to its element and group. The build stops, naming the
+    row, on an unknown group, status or column, a source not registered in tools/sources.toml, a
+    primary_literature row without a DOI, rows of one element and group that disagree on the status,
+    or more than one note for them.
+    """
+    registry = curated.registry()
+    out: dict[int, dict[str, dict]] = {}
+    for r in rows:
+        where = f"biology.toml [[life]] Z={r.get('Z')!r} group={r.get('group')!r}"
+        z = r.get("Z")
+        if not isinstance(z, int) or not 1 <= z <= NUM_ELEMENTS:
+            raise ValueError(f"{where}: Z must be an atomic number from 1 to {NUM_ELEMENTS}")
+        if r.get("group") not in LIFE_GROUPS:
+            raise ValueError(f"{where}: unknown group; use one of {', '.join(LIFE_GROUPS)}")
+        if r.get("status") not in LIFE_STATUS:
+            raise ValueError(f"{where}: unknown status {r.get('status')!r}; use one of {', '.join(LIFE_STATUS)}")
+        if extra := sorted(set(r) - LIFE_COLUMNS):
+            raise ValueError(f"{where}: unknown column(s) {', '.join(extra)}")
+        if not isinstance(r.get("role"), str) or not r["role"].strip():
+            raise ValueError(f"{where}: no role sentence")
+        if r.get("source") not in registry:
+            raise ValueError(f"{where}: source {r.get('source')!r} is not registered in tools/sources.toml")
+        if r["source"] == "primary_literature" and not r.get("doi"):
+            raise ValueError(f"{where}: primary_literature without a DOI")
+        rec = out.setdefault(z, {}).setdefault(r["group"], {"status": r["status"], "roles": []})
+        if rec["status"] != r["status"]:
+            raise ValueError(f"{where}: status {r['status']!r}, but another row says {rec['status']!r}")
+        if r.get("note"):
+            if "note" in rec:
+                raise ValueError(f"{where}: more than one note")
+            rec["note"] = r["note"]
+        rec["roles"].append({"text": r["role"], "source": r["source"], **({"doi": r["doi"]} if r.get("doi") else {})})
+    return {z: {g: groups[g] for g in LIFE_GROUPS if g in groups} for z, groups in sorted(out.items())}
+
+
+def load_biology(report: Report) -> tuple[dict[int, dict], dict[int, dict]]:
+    """(the M2 rows by Z, {Z: {table: [rows]}} for the M4 tables, plus "groups" from [[life]])."""
     rows = {r["Z"]: r for r in curated.load("biology.toml")}
-    extras: dict[int, dict[str, list]] = {}
+    extras: dict[int, dict] = {}
     for table in BIOLOGY_TABLES:
         for r in curated.load("biology.toml", table):
             extras.setdefault(r["Z"], {}).setdefault(table, []).append(r)
+    for z, groups in life_groups(curated.load("biology.toml", "life")).items():
+        extras.setdefault(z, {})["groups"] = groups
     try:
         iarc = fetch_iarc.parse()
     except (SourceUnavailable, OSError) as exc:
@@ -54,7 +102,7 @@ def load_biology(report: Report) -> tuple[dict[int, dict], dict[int, dict[str, l
     return rows, extras
 
 
-def biology_record(row: dict | None, extra: dict[str, list] | None) -> dict:
+def biology_record(row: dict | None, extra: dict | None) -> dict:
     if not row:
         out: dict = {
             "essentialPlant": "no",
@@ -75,6 +123,8 @@ def biology_record(row: dict | None, extra: dict[str, list] | None) -> dict:
         if row.get("note"):
             out["note"] = row["note"]
     extra = extra or {}
+    if extra.get("groups"):
+        out["groups"] = extra["groups"]
     uses = []
     for r in extra.get("isotope_use", []):
         use = {"field": r["field"], **_sourced(r)}

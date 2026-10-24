@@ -2226,6 +2226,9 @@
             ],
             "additionalProperties": false
           }
+        },
+        "plants": {
+          "$ref": "#/definitions/PlantDetail"
         }
       },
       "required": [
@@ -2261,6 +2264,243 @@
       "required": [
         "status",
         "roles"
+      ],
+      "additionalProperties": false
+    },
+    "PlantDetail": {
+      "description": "Plant nutrition in detail (tools/curated/plants.toml, added after v0.1.0), for the essential and beneficial elements; shown when a visitor opens 'More about plants'. uptake: the form in which roots (or leaves) take the element up; typical: the average concentration in shoot dry matter sufficient for adequate growth (Marschner, Table 1.3), in mg/kg. Every part is optional: an absent part means the sources used give nothing for it, not that there is nothing to know.",
+      "type": "object",
+      "properties": {
+        "uptake": {
+          "$ref": "#/definitions/SourcedText"
+        },
+        "phloem": {
+          "description": "Mobility in the phloem (Marschner, Table 3.8): where shortage shows first follows from it.",
+          "type": "object",
+          "properties": {
+            "mobility": {
+              "type": "string",
+              "enum": [
+                "high",
+                "intermediate",
+                "low",
+                "variable"
+              ]
+            },
+            "source": {
+              "$ref": "#/definitions/SourceId"
+            },
+            "doi": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "mobility",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "typical": {
+          "$ref": "#/definitions/Quantity"
+        },
+        "job": {
+          "description": "Mengel and Kirkby's four groups of plant nutrients by biochemical job: 1 built into organic matter by oxidation and reduction (C, H, O, N, S); 2 bound as esters (P, B, Si); 3 as free ions (K, Na, Mg, Ca, Mn, Cl); 4 in enzymes as chelates, passing electrons by changing valence (Fe, Cu, Zn, Mo, Ni).",
+          "type": "object",
+          "properties": {
+            "group": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4
+            },
+            "source": {
+              "$ref": "#/definitions/SourceId"
+            },
+            "doi": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "group",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "known": {
+          "description": "When the element was shown to be essential (or beneficial), with whom, or in words.",
+          "type": "object",
+          "properties": {
+            "year": {
+              "type": "integer"
+            },
+            "by": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/definitions/SourceId"
+            },
+            "doi": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "levels": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/PlantLevel"
+          }
+        },
+        "notes": {
+          "type": "object",
+          "properties": {
+            "deficiency": {
+              "description": "What too little does and where it happens.",
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/SourcedText"
+              }
+            },
+            "toxicity": {
+              "description": "What too much does and where it happens.",
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/SourcedText"
+              }
+            },
+            "soil": {
+              "description": "How available the element is in soils; fertilisers.",
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/SourcedText"
+              }
+            },
+            "partners": {
+              "description": "Mycorrhiza, nitrogen-fixing nodules and other partners.",
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/SourcedText"
+              }
+            },
+            "wild": {
+              "description": "Wild plants: indicator and accumulator plants, salty and serpentine soils.",
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/SourcedText"
+              }
+            },
+            "forest": {
+              "description": "Forests and trees.",
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/SourcedText"
+              }
+            },
+            "food": {
+              "description": "Crop quality and the link to human and animal nutrition.",
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/SourcedText"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "PlantLevel": {
+      "description": "Concentrations in a plant's leaves (or the tissue named in `part`), dry matter, in mg/kg (converted by the pipeline from the unit printed, kept in `printedUnit`). kind 'bands': the source's classes, deficient below deficientBelow, adequate from adequateLow to adequateHigh, excess above excessAbove (the zones between are the source's 'low' and 'high'); 'normal': a usual or sufficiency range (adequateLow to adequateHigh); 'critical': the level below which the plant is short (trees often respond to fertiliser), in deficientBelow.",
+      "type": "object",
+      "properties": {
+        "plant": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string",
+          "enum": [
+            "cereals",
+            "legumes",
+            "vegetables",
+            "fruit",
+            "conifers",
+            "broadleaf",
+            "other"
+          ]
+        },
+        "part": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "bands",
+            "normal",
+            "critical"
+          ]
+        },
+        "deficientBelow": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "adequateLow": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "adequateHigh": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "excessAbove": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "mg/kg"
+          ]
+        },
+        "printedUnit": {
+          "type": "string",
+          "enum": [
+            "mg/kg",
+            "μg/g",
+            "g/kg",
+            "mg/g",
+            "%"
+          ]
+        },
+        "note": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "doi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "plant",
+        "group",
+        "kind",
+        "unit",
+        "printedUnit",
+        "source"
       ],
       "additionalProperties": false
     },

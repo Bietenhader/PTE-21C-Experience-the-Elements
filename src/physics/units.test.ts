@@ -1,7 +1,17 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 import { describe, expect, it } from "vitest";
 import { CODATA, EV_IN_KJ_PER_MOL } from "./constants";
-import { celsiusToKelvin, convertEnergy, convertTemperature, evToKjPerMol, kelvinToCelsius, kjPerMolToEv, polarizabilityAuToA3 } from "./units";
+import {
+  celsiusToKelvin,
+  convertEnergy,
+  convertTemperature,
+  evToKjPerMol,
+  fromMgPerKg,
+  kelvinToCelsius,
+  kjPerMolToEv,
+  massFractionUnit,
+  polarizabilityAuToA3,
+} from "./units";
 
 describe("unit conversions", () => {
   it("uses the exact CODATA factor e·N_A", () => {
@@ -39,5 +49,13 @@ describe("unit conversions", () => {
     expect(convertEnergy(0.4715, "eV", "kJ/mol")).toBeCloseTo(45.49, 2); // Cs electron affinity
     expect(convertTemperature(1811, "K")).toBe(1811);
     expect(convertTemperature(1811, "°C")).toBeCloseTo(1537.85, 10);
+  });
+
+  it("shows plant tissue levels in g/kg from 1000 mg/kg on, without float noise", () => {
+    expect(massFractionUnit(999)).toBe("mg/kg");
+    expect(massFractionUnit(1000)).toBe("g/kg");
+    expect(fromMgPerKg(70, "g/kg")).toBe(0.07);
+    expect(fromMgPerKg(1500, "g/kg")).toBe(1.5);
+    expect(fromMgPerKg(20, "mg/kg")).toBe(20);
   });
 });

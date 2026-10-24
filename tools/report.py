@@ -104,6 +104,9 @@ COVERAGE_NOTES = {
     "Biology: a role in fungi": "Only elements with a cited role; for the rest our sources name none.",
     "Biology: a role in bacteria": "Only elements with a cited role; for the rest our sources name none.",
     "Biology: a role in archaea": "Only elements with a cited role; for the rest our sources name none.",
+    "Biology: plants in detail": "So far the elements plants need or benefit from; what too much of the others "
+    "does to plants is to follow.",
+    "Biology: leaf levels of plants": "Only where one of the plant-nutrition books gives a level for a named plant.",
 }
 
 
@@ -189,6 +192,12 @@ def detail_counts(details: dict[int, dict]) -> list[tuple[str, int, str]]:
                 "biology.toml [[life]]",
             )
             for group in ("animals", "fungi", "bacteria", "archaea")
+        ),
+        ("Biology: plants in detail", n(lambda d: bool(d["biology"].get("plants"))), "plants.toml"),
+        (
+            "Biology: leaf levels of plants",
+            n(lambda d: bool(d["biology"].get("plants", {}).get("levels"))),
+            "plants.toml [[leaf_level]]",
         ),
         ("History: discovery", n(lambda d: bool(d.get("history"))), "history.toml"),
         ("Our own short text", n(lambda d: bool(d.get("prose"))), "prose/{Z}.md"),

@@ -5,6 +5,25 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added
+
+- **Plants in detail** (Biology & ecology): the Plants card has a "More about plants" button that opens
+  the details below the six cards — how roots take the element up, how it moves in the plant, how much a
+  well-fed shoot holds, its job, since when it is known to be needed, leaf levels of a few crops and trees
+  as "too little, enough, too much" (chart and table), and sourced notes on shortage, excess, soils,
+  partners in the soil, wild plants, forests and crops. For the 14 essential mineral nutrients, the
+  beneficial elements Na, Si, Co, Se, Al and I, and briefly C, H and O, from Marschner (4th ed., 2023),
+  Mengel & Kirkby (5th ed., 2001), Barker & Pilbeam (2nd ed., 2015), Binkley & Fisher (5th ed., 2020) and
+  Epstein (1972); data in `tools/curated/plants.toml`. Two new coverage rows on the About page.
+- The legend under the cards names the open debate on what counts as a plant nutrient (Brown, Zhao &
+  Dobermann 2022).
+
+### Changed
+
+- The plant sentences now cite the 4th edition of Marschner's *Mineral Nutrition of Plants* (2023)
+  instead of the 3rd (2012), each checked against the new text. Iodine is "beneficial" for plants, as the
+  4th edition lists it.
+
 ## [0.1.0] - 2026-10-23
 
 The first release: all 118 elements in four layouts, each with a sheet of eleven panels, built from cited

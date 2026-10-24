@@ -148,3 +148,91 @@ test.describe("biology & ecology", () => {
     }
   });
 });
+
+// Plants in detail (tools/curated/plants.toml, after v0.1.0): the Plants card's "More about plants".
+test.describe("plants in detail", () => {
+  test("zinc: the Plants card opens its details below the cards, takes the focus there and gives it back", async ({
+    page,
+  }) => {
+    await openBiology(page, "Zn");
+    const panel = current(page);
+    const more = panel.getByTestId("more-plants");
+    await expect(more).toHaveAttribute("aria-expanded", "false");
+    await expect(panel.getByTestId("plant-detail")).toHaveCount(0);
+    await more.focus();
+    await page.keyboard.press("Enter");
+    await expect(more).toHaveAttribute("aria-expanded", "true");
+    const detail = panel.getByTestId("plant-detail");
+    const heading = detail.getByRole("heading", { name: "Zinc in plants" });
+    await expect(heading).toBeFocused();
+    await expect(heading).toBeInViewport();
+    const glance = detail.getByTestId("plant-glance");
+    await expect(glance).toContainText("Zn²⁺");
+    await expect(glance).toContainText("moves to some extent");
+    await expect(glance).toContainText("about 20 mg/kg");
+    await expect(glance).toContainText("Since 1926");
+    await expect(detail.getByTestId("leaf-levels")).toBeVisible();
+    await expect(detail.locator('[data-topic="deficiency"]')).toContainText("Too little");
+    await detail.getByRole("button", { name: "Less about plants" }).click();
+    await expect(panel.getByTestId("plant-detail")).toHaveCount(0);
+    await expect(more).toBeFocused();
+    await expect(more).toHaveAttribute("aria-expanded", "false");
+  });
+
+  test("potassium: leaf levels in g/kg, as a chart and as a table", async ({ page }) => {
+    await openBiology(page, "K");
+    const panel = current(page);
+    await panel.getByTestId("more-plants").click();
+    const chart = panel.getByTestId("leaf-levels");
+    await expect(chart.locator("svg")).toContainText("g/kg of dry matter");
+    await expect(panel.getByTestId("plant-glance")).toContainText("about 10 g/kg");
+    await chart.getByRole("button", { name: "Show as table" }).click();
+    const rows = chart.locator("tbody tr");
+    expect(await rows.count()).toBeGreaterThanOrEqual(2);
+    await expect(rows.first()).toContainText("g/kg");
+  });
+
+  test("elements plants do without have no button; the legend names the debate on 'plant nutrients'", async ({
+    page,
+  }) => {
+    await openBiology(page, "Au");
+    await expect(current(page).getByTestId("more-plants")).toHaveCount(0);
+    const legend = current(page).getByTestId("needs-legend");
+    await expect(legend).toContainText("plant nutrients");
+    await expect(legend.getByRole("link", { name: "doi:10.1007/s11104-021-05171-w" })).toBeVisible();
+  });
+
+  test("iodine: beneficial for plants in the 4th edition of Marschner", async ({ page }) => {
+    await openBiology(page, "I");
+    await expect(current(page).getByTestId("need-plants")).toContainText("Plants: Beneficial");
+  });
+
+  test("every essential and beneficial element opens its details without errors or sideways scrolling", async ({
+    page,
+  }) => {
+    const errors: string[] = [];
+    page.on("console", (m) => {
+      if (m.type() === "error") errors.push(m.text());
+    });
+    page.on("pageerror", (e) => errors.push(String(e)));
+    const symbols = ["H", "C", "N", "O", "Na", "Mg", "Al", "Si", "P", "S", "Cl", "K", "Ca", "Mn", "Fe", "Co", "Ni", "Cu"];
+    for (const s of [...symbols, "Zn", "Se", "Mo", "I", "B"]) {
+      await openBiology(page, s);
+      const panel = current(page);
+      await panel.getByTestId("more-plants").click();
+      await expect(panel.getByTestId("plant-detail"), s).toBeVisible();
+      const overflow = await panel.evaluate((el) => el.scrollWidth - el.clientWidth);
+      expect(overflow, `${s}: the panel scrolls sideways`).toBeLessThanOrEqual(1);
+    }
+    expect(errors).toEqual([]);
+  });
+
+  test("axe: the plant details of N, Zn, B, Si and I", async ({ page }) => {
+    for (const s of ["N", "Zn", "B", "Si", "I"]) {
+      await openBiology(page, s);
+      await current(page).getByTestId("more-plants").click();
+      await expect(current(page).getByTestId("plant-detail")).toBeVisible();
+      expect(await axeViolations(page), s).toEqual([]);
+    }
+  });
+});

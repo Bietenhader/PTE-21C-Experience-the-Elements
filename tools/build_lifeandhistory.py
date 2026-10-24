@@ -5,7 +5,8 @@ world outline behind the discovery map, public/data/worldmap.json.
 biology: tools/curated/biology.toml (FIN reviews it) — the essential-element rows from M2 plus, from
 M4, isotope uses, environmental and toxicity notes and IARC classifications (the group read from the
 fetched IARC list, never typed), and, after M5, the [[life]] rows for animals, fungi, bacteria and
-archaea (written to biology.groups).
+archaea (written to biology.groups); after v0.1.0, the plant details of tools/curated/plants.toml
+(FIN reviews it too), written to biology.plants.
 history: tools/curated/history.toml, with each discovery place given coordinates from the cached
 gazetteers named in tools/curated/places.toml (Natural Earth, or GeoNames for small towns).
 """
@@ -13,6 +14,7 @@ gazetteers named in tools/curated/places.toml (Natural Earth, or GeoNames for sm
 from __future__ import annotations
 
 import math
+from decimal import Decimal
 
 import curated
 import fetch_geonames
@@ -77,8 +79,175 @@ def life_groups(rows: list[dict]) -> dict[int, dict[str, dict]]:
     return {z: {g: groups[g] for g in LIFE_GROUPS if g in groups} for z, groups in sorted(out.items())}
 
 
+# Plants in detail (plants.toml, after v0.1.0): the topics of [[plant_note]] in the order the panel
+# shows them, the groups of plants a [[leaf_level]] row may stand for, and how to read its numbers.
+PLANT_TOPICS = ("deficiency", "toxicity", "soil", "partners", "wild", "forest", "food")
+PLANT_GROUPS = ("cereals", "legumes", "vegetables", "fruit", "conifers", "broadleaf", "other")
+PHLOEM_MOBILITY = ("high", "intermediate", "low", "variable")
+LEVEL_KINDS = ("bands", "normal", "critical")
+# The units the books print leaf levels in, as factors to mg per kg of dry matter (μg/g is the same).
+TO_MG_PER_KG = {"mg/kg": 1, "μg/g": 1, "g/kg": 1000, "mg/g": 1000, "%": 10000}
+# [[plant]] facts: column prefix → (output key, the columns it may have besides <prefix>_source/_doi).
+PLANT_FACTS = {
+    "uptake": ("uptake", {"uptake"}),
+    "phloem": ("phloem", {"phloem"}),
+    "typical": ("typical", {"typical_mg_kg"}),
+    "job": ("job", {"job"}),
+    "known": ("known", {"known_year", "known_by", "known_text"}),
+}
+NOTE_COLUMNS = {"Z", "topic", "text", "source", "doi"}
+LEVEL_COLUMNS = {
+    "Z", "plant", "group", "part", "kind", "deficient_below", "adequate_low", "adequate_high", "excess_above",
+    "unit", "source", "doi", "note",
+}  # fmt: skip
+LEVEL_NUMBERS = ("deficient_below", "adequate_low", "adequate_high", "excess_above")
+
+
+def _check_z(z: object, where: str) -> int:
+    if not isinstance(z, int) or not 1 <= z <= NUM_ELEMENTS:
+        raise ValueError(f"{where}: Z must be an atomic number from 1 to {NUM_ELEMENTS}")
+    return z
+
+
+def _cite(r: dict, prefix: str = "") -> dict:
+    out = {"source": r[f"{prefix}source"]}
+    if r.get(f"{prefix}doi"):
+        out["doi"] = r[f"{prefix}doi"]
+    return out
+
+
+def _mg_per_kg(v: float, unit: str) -> float:
+    """A printed leaf level in mg/kg, without binary noise (0.07 mg/g is 70, not 70.00000000000001)."""
+    return float(Decimal(str(v)) * TO_MG_PER_KG[unit])
+
+
+def _plant_facts(r: dict) -> dict:
+    where = f"plants.toml [[plant]] Z={r.get('Z')!r}"
+    allowed = {"Z"}
+    for prefix, (_, cols) in PLANT_FACTS.items():
+        allowed |= cols | {f"{prefix}_source", f"{prefix}_doi"}
+    if extra := sorted(set(r) - allowed):
+        raise ValueError(f"{where}: unknown column(s) {', '.join(extra)}")
+    out: dict = {}
+    for prefix, (key, cols) in PLANT_FACTS.items():
+        given = cols & set(r)
+        if not given:
+            if f"{prefix}_source" in r:
+                raise ValueError(f"{where}: {prefix}_source without a value")
+            continue
+        if f"{prefix}_source" not in r:
+            raise ValueError(f"{where}: {', '.join(sorted(given))} without {prefix}_source")
+        cite = _cite(r, f"{prefix}_")
+        if prefix == "uptake":
+            out[key] = {"text": r["uptake"], **cite}
+        elif prefix == "phloem":
+            if r["phloem"] not in PHLOEM_MOBILITY:
+                raise ValueError(f"{where}: phloem must be one of {', '.join(PHLOEM_MOBILITY)}")
+            out[key] = {"mobility": r["phloem"], **cite}
+        elif prefix == "typical":
+            if not r["typical_mg_kg"] > 0:
+                raise ValueError(f"{where}: typical_mg_kg must be positive")
+            out[key] = {"value": r["typical_mg_kg"], "unit": "mg/kg", **cite, "note": "in shoot dry matter"}
+        elif prefix == "job":
+            if r["job"] not in (1, 2, 3, 4):
+                raise ValueError(f"{where}: job must be 1, 2, 3 or 4")
+            out[key] = {"group": r["job"], **cite}
+        else:
+            if "known_year" not in r and "known_text" not in r:
+                raise ValueError(f"{where}: known_by needs known_year or known_text")
+            names = {"known_year": "year", "known_by": "by", "known_text": "text"}
+            out[key] = {names[c]: r[c] for c in ("known_year", "known_by", "known_text") if c in r} | cite
+    return out
+
+
+def _leaf_level(r: dict) -> dict:
+    where = f"plants.toml [[leaf_level]] Z={r.get('Z')!r} plant={r.get('plant')!r}"
+    if extra := sorted(set(r) - LEVEL_COLUMNS):
+        raise ValueError(f"{where}: unknown column(s) {', '.join(extra)}")
+    if r.get("group") not in PLANT_GROUPS:
+        raise ValueError(f"{where}: unknown group; use one of {', '.join(PLANT_GROUPS)}")
+    if r.get("kind") not in LEVEL_KINDS:
+        raise ValueError(f"{where}: unknown kind; use one of {', '.join(LEVEL_KINDS)}")
+    if r.get("unit") not in TO_MG_PER_KG:
+        raise ValueError(f"{where}: unit must be one of {', '.join(TO_MG_PER_KG)} (as printed)")
+    if not isinstance(r.get("plant"), str) or not r["plant"].strip():
+        raise ValueError(f"{where}: no plant name")
+    given = [c for c in LEVEL_NUMBERS if c in r]
+    need = {
+        "bands": ({"adequate_low", "adequate_high"}, set()),
+        "normal": ({"adequate_low", "adequate_high"}, {"deficient_below", "excess_above"}),
+        "critical": ({"deficient_below"}, {"adequate_low", "adequate_high", "excess_above"}),
+    }[r["kind"]]
+    if missing_cols := sorted(need[0] - set(given)):
+        raise ValueError(f"{where}: kind {r['kind']!r} needs {', '.join(missing_cols)}")
+    if wrong := sorted(need[1] & set(given)):
+        raise ValueError(f"{where}: kind {r['kind']!r} has no {', '.join(wrong)}")
+    values = [r[c] for c in given]
+    if any(not isinstance(v, int | float) or v <= 0 for v in values):
+        raise ValueError(f"{where}: levels must be positive numbers")
+    # A deficient class may end where the adequate one starts ("< 20", "20–40"); the adequate range itself
+    # must have a width.
+    if values != sorted(values) or r.get("adequate_low", 0) >= r.get("adequate_high", float("inf")):
+        raise ValueError(f"{where}: levels must rise from deficient_below to excess_above")
+    names = {"deficient_below": "deficientBelow", "adequate_low": "adequateLow", "adequate_high": "adequateHigh",
+             "excess_above": "excessAbove"}  # fmt: skip
+    out: dict = {"plant": r["plant"], "group": r["group"]}
+    if r.get("part"):
+        out["part"] = r["part"]
+    out["kind"] = r["kind"]
+    out |= {names[c]: _mg_per_kg(r[c], r["unit"]) for c in given}
+    out |= {"unit": "mg/kg", "printedUnit": r["unit"]}
+    if r.get("note"):
+        out["note"] = r["note"]
+    return out | _cite(r)
+
+
+def plant_details(facts: list[dict], notes: list[dict], levels: list[dict]) -> dict[int, dict]:
+    """{Z: biology.plants} from the three tables of plants.toml.
+
+    The build stops, naming the row, on an unknown column, topic, group, kind, mobility or unit, a fact
+    without its source, levels that do not rise, two [[plant]] rows for one element, or two leaf levels
+    of one element for the same group of plants.
+    """
+    out: dict[int, dict] = {}
+    for r in facts:
+        z = _check_z(r.get("Z"), f"plants.toml [[plant]] Z={r.get('Z')!r}")
+        if z in out:
+            raise ValueError(f"plants.toml [[plant]] Z={z}: more than one row")
+        out[z] = _plant_facts(r)
+    for r in notes:
+        where = f"plants.toml [[plant_note]] Z={r.get('Z')!r} topic={r.get('topic')!r}"
+        z = _check_z(r.get("Z"), where)
+        if extra := sorted(set(r) - NOTE_COLUMNS):
+            raise ValueError(f"{where}: unknown column(s) {', '.join(extra)}")
+        if r.get("topic") not in PLANT_TOPICS:
+            raise ValueError(f"{where}: unknown topic; use one of {', '.join(PLANT_TOPICS)}")
+        if not isinstance(r.get("text"), str) or not r["text"].strip():
+            raise ValueError(f"{where}: no text")
+        out.setdefault(z, {}).setdefault("notes", {}).setdefault(r["topic"], []).append(_sourced(r))
+    for r in levels:
+        z = _check_z(r.get("Z"), f"plants.toml [[leaf_level]] Z={r.get('Z')!r}")
+        rec = out.setdefault(z, {}).setdefault("levels", [])
+        level = _leaf_level(r)
+        if r["group"] != "other" and any(x["group"] == r["group"] for x in rec):
+            raise ValueError(f"plants.toml [[leaf_level]] Z={z}: two rows for the group {r['group']!r}")
+        rec.append(level)
+    for rec in out.values():
+        if "notes" in rec:
+            rec["notes"] = {t: rec["notes"][t] for t in PLANT_TOPICS if t in rec["notes"]}
+        if "levels" in rec:
+            rec["levels"].sort(key=lambda x: PLANT_GROUPS.index(x["group"]))
+    return dict(sorted(out.items()))
+
+
+def load_plants() -> dict[int, dict]:
+    """plant_details() of the committed tools/curated/plants.toml."""
+    return plant_details(*(curated.load("plants.toml", table) for table in ("plant", "plant_note", "leaf_level")))
+
+
 def load_biology(report: Report) -> tuple[dict[int, dict], dict[int, dict]]:
-    """(the M2 rows by Z, {Z: {table: [rows]}} for the M4 tables, plus "groups" from [[life]])."""
+    """(the M2 rows by Z, {Z: {table: [rows]}} for the M4 tables, plus "groups" from [[life]] and
+    "plants" from plants.toml)."""
     rows = {r["Z"]: r for r in curated.load("biology.toml")}
     extras: dict[int, dict] = {}
     for table in BIOLOGY_TABLES:
@@ -86,6 +255,13 @@ def load_biology(report: Report) -> tuple[dict[int, dict], dict[int, dict]]:
             extras.setdefault(r["Z"], {}).setdefault(table, []).append(r)
     for z, groups in life_groups(curated.load("biology.toml", "life")).items():
         extras.setdefault(z, {})["groups"] = groups
+    for z, rec in load_plants().items():
+        # Uptake, typical amounts and leaf levels belong to elements plants need or benefit from; a note
+        # (for example on toxicity) may concern any element.
+        status = rows.get(z, {}).get("essential_plant", "no")
+        if status == "no" and set(rec) - {"notes"}:
+            raise ValueError(f"plants.toml Z={z}: facts or leaf levels, but biology.toml says plants do not need it")
+        extras.setdefault(z, {})["plants"] = rec
     try:
         iarc = fetch_iarc.parse()
     except (SourceUnavailable, OSError) as exc:
@@ -125,6 +301,8 @@ def biology_record(row: dict | None, extra: dict | None) -> dict:
     extra = extra or {}
     if extra.get("groups"):
         out["groups"] = extra["groups"]
+    if extra.get("plants"):
+        out["plants"] = extra["plants"]
     uses = []
     for r in extra.get("isotope_use", []):
         use = {"field": r["field"], **_sourced(r)}

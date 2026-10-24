@@ -30,3 +30,9 @@ export function convertTemperature(kelvin: number, to: TemperatureUnit): number 
  * units the atomic unit of polarizability is a₀³, so α′ = α(a.u.) · (a₀ / Å)³.
  */
 export const polarizabilityAuToA3 = (au: number): number => au * (CODATA.a0.value * 1e10) ** 3;
+
+/** Plant tissue concentrations: stored in mg per kg of dry matter, shown in g/kg once they reach 1000 mg/kg,
+ * as plant scientists write the macronutrients (1 g/kg = 1 mg/g = 0.1 %). */
+export type MassFractionUnit = "mg/kg" | "g/kg";
+export const massFractionUnit = (largestMgPerKg: number): MassFractionUnit => (largestMgPerKg >= 1000 ? "g/kg" : "mg/kg");
+export const fromMgPerKg = (mgPerKg: number, to: MassFractionUnit): number => (to === "g/kg" ? mgPerKg / 1000 : mgPerKg);

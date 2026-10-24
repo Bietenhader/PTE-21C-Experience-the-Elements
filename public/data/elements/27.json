@@ -710,9 +710,9 @@
   "essentialHuman": "yes",
   "plantClass": "beneficial",
   "plantRole": {
-   "text": "Needed by the nitrogen-fixing bacteria in legume root nodules, which use it in vitamin B12 (cobalamin); not needed by the plant itself.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+   "text": "Needed by the nitrogen-fixing bacteria in legume root nodules, which build it into vitamin B12 (cobalamin); no essential role in the plant itself is known, though small amounts can delay leaf ageing.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00012-5"
   },
   "humanRole": {
    "text": "The metal at the heart of vitamin B12, which we must take in already made.",
@@ -753,6 +753,67 @@
       "text": "Nearly all archaea surveyed use vitamin B12; methanogens make it themselves and rely on it in enzymes that move methyl groups.",
       "source": "primary_literature",
       "doi": "10.1186/1471-2164-10-78"
+     }
+    ]
+   }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Co²⁺ ions; most of it stays in the roots",
+    "source": "barker_pilbeam2015",
+    "doi": "10.1201/b18458-21"
+   },
+   "known": {
+    "text": "1960, when Ahmed and Evans reported that legumes living on nitrogen fixed in their root nodules need it",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00012-5"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "On low-cobalt soils, legumes that rely on their nodules for nitrogen form fewer, weaker nodules, start fixing nitrogen weeks late and yellow as if short of nitrogen; legumes fed with nitrate grow well without it.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Treating the seed with cobalt corrects the shortage, best together with leaf sprays; field responses are rare, but have been seen on poor sandy soils.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Too much cobalt makes leaves fall early, stops them greening, discolours the veins and holds back shoot growth; the step from too little to too much is fairly small.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-21"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Soils formed from serpentine and other magnesium-rich rocks are rich in cobalt, those from granite, sandstone or limestone poor; much of it is held on manganese oxides, where plants cannot reach it.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_19"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Rhizobium and other nitrogen-fixing bacteria cannot live without cobalt: they build it into vitamin B12, which they need, among other things, to make the leghaemoglobin of the nodules; the root nodules of alder need it too.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Most leaves hold less than 0.2 mg of cobalt per kg of dry matter, but a few plants of metal-rich soils store up to 5000 mg per kg.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "food": [
+     {
+      "text": "Grazing ruminants need cobalt so that their rumen microbes can make vitamin B12; on low-cobalt soils, forage with less than about 0.07 mg per kg leaves them short, a widespread problem.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
      }
     ]
    }

@@ -524,16 +524,60 @@
    "status": "ok",
    "notes": "Added in M2. tools/curated/electronegativity_allen.toml: configuration energies in eV, as transcribed in the MIT-licensed mendeleev package (v1.3.0). For He and groups 1-2 they equal the first ionization energy (checked against NIST to 0.003 eV, except H and Cs). Not converted to the Pauling-like scale."
   },
-  "marschner2012": {
-   "id": "marschner2012",
-   "title": "Marschner's Mineral Nutrition of Higher Plants, 3rd edition",
-   "url": "https://doi.org/10.1016/C2009-0-63043-9",
-   "licence": "Facts; cite",
-   "licenceUrl": "https://doi.org/10.1016/C2009-0-63043-9",
-   "citation": "P. Marschner (ed.), Marschner's Mineral Nutrition of Higher Plants, 3rd ed., Academic Press (2012); chapters cited by DOI.",
-   "kind": "curated",
+  "marschner2023": {
+   "id": "marschner2023",
+   "title": "Marschner's Mineral Nutrition of Plants, 4th edition",
+   "url": "https://doi.org/10.1016/C2019-0-00491-8",
+   "licence": "Textbook; facts cited",
+   "licenceUrl": "https://doi.org/10.1016/C2019-0-00491-8",
+   "citation": "Z. Rengel, I. Cakmak and P. J. White (eds.), Marschner's Mineral Nutrition of Plants, 4th ed., Academic Press (2023), doi:10.1016/C2019-0-00491-8; chapters cited by DOI.",
+   "kind": "reference",
    "status": "ok",
-   "notes": "Added in M2. Which elements are essential or beneficial for plants (tools/curated/biology.toml)."
+   "notes": "Which elements are essential or beneficial for plants and what they do (tools/curated/biology.toml, moved from the 3rd edition of 2012 after v0.1.0), and the plant details in tools/curated/plants.toml: uptake form, mobility in the phloem (Table 3.8), the concentration in shoots sufficient for growth (Table 1.3), the year each micronutrient was shown to be essential (Table 1.1), signs of too little and too much, soils, crop quality. Facts only, in our own words; checked against the text of the 4th edition (Fin's copy). Chapter DOIs checked against Crossref."
+  },
+  "mengel_kirkby2001": {
+   "id": "mengel_kirkby2001",
+   "title": "Principles of Plant Nutrition, 5th edition",
+   "url": "https://doi.org/10.1007/978-94-010-1009-2",
+   "licence": "Textbook; facts cited",
+   "licenceUrl": "https://doi.org/10.1007/978-94-010-1009-2",
+   "citation": "K. Mengel and E. A. Kirkby (with H. Kosegarten and T. Appel), Principles of Plant Nutrition, 5th ed., Kluwer Academic Publishers, Dordrecht (2001), doi:10.1007/978-94-010-1009-2; chapters cited by DOI.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after v0.1.0. tools/curated/plants.toml: the four groups of plant nutrients by their biochemical job (chapter 1), the leaf levels of maize and apple classed from deficient to excess (Tables 2.20 and 2.21), soils and fertilisers. Facts only, in our own words; checked against the text of the 5th edition (Fin's copy). Chapter DOIs checked against Crossref."
+  },
+  "barker_pilbeam2015": {
+   "id": "barker_pilbeam2015",
+   "title": "Handbook of Plant Nutrition, 2nd edition",
+   "url": "https://doi.org/10.1201/b18458",
+   "licence": "Textbook; facts cited",
+   "licenceUrl": "https://doi.org/10.1201/b18458",
+   "citation": "A. V. Barker and D. J. Pilbeam (eds.), Handbook of Plant Nutrition, 2nd ed., CRC Press, Boca Raton (2015), doi:10.1201/b18458; one chapter per element, cited by its chapter DOI.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after v0.1.0. tools/curated/plants.toml: leaf levels of crops and trees from the element chapters' tables (for zinc and iron the usual ranges by group of plants, which the book takes from Bryson et al. 2014), and notes on beneficial elements. Facts only, in our own words; checked against the text of the 2nd edition (Fin's copy). Chapter DOIs checked against Crossref."
+  },
+  "binkley_fisher2020": {
+   "id": "binkley_fisher2020",
+   "title": "Ecology and Management of Forest Soils, 5th edition",
+   "url": "https://doi.org/10.1002/9781119455745",
+   "licence": "Textbook; facts cited",
+   "licenceUrl": "https://doi.org/10.1002/9781119455745",
+   "citation": "D. Binkley and R. F. Fisher, Ecology and Management of Forest Soils, 5th ed., Wiley-Blackwell, Hoboken (2020), doi:10.1002/9781119455745; chapters cited by DOI.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after v0.1.0. tools/curated/plants.toml: nutrients in forests (Table 8.3) and the foliar levels below which trees often respond to fertiliser (Table 13.2). Facts only, in our own words; checked against the text of the 5th edition (Fin's copy). Chapter DOIs checked against Crossref."
+  },
+  "epstein1972": {
+   "id": "epstein1972",
+   "title": "Mineral Nutrition of Plants: Principles and Perspectives",
+   "url": "https://search.worldcat.org/search?q=bn:047124340X",
+   "licence": "Textbook; facts cited",
+   "licenceUrl": "https://search.worldcat.org/search?q=bn:047124340X",
+   "citation": "E. Epstein, Mineral Nutrition of Plants: Principles and Perspectives, John Wiley & Sons, New York (1972), ISBN 0-471-24340-X.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after v0.1.0. tools/curated/plants.toml: history (the tests for an essential element; the elements known to be essential by the end of the 19th century) and the ecology of wild plants (indicator and accumulator plants, serpentine and salty soils). Never used for an element's present status: the book predates, for example, the discovery that nickel is essential. Facts only, in our own words."
   },
   "efsa_drv": {
    "id": "efsa_drv",

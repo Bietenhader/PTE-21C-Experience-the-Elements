@@ -204,6 +204,11 @@
   font-weight: 600;
 }
 
+.groupWord {
+  fill: var(--text-muted);
+  font-weight: 400;
+}
+
 .hatch {
   stroke: var(--text-muted);
   stroke-width: 1.2;
@@ -225,6 +230,13 @@
 .critical {
   stroke: var(--text);
   stroke-width: 2.5;
+}
+
+.criticalRange {
+  fill: var(--text);
+  fill-opacity: 0.55;
+  stroke: var(--text);
+  stroke-width: 1;
 }
 
 .levelKey {

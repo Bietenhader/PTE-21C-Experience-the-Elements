@@ -791,7 +791,7 @@ export interface PlantDetail {
   };
 }
 /**
- * Concentrations in a plant's leaves (or the tissue named in `part`), dry matter, in mg/kg (converted by the pipeline from the unit printed, kept in `printedUnit`). kind 'bands': the source's classes, deficient below deficientBelow, adequate from adequateLow to adequateHigh, excess above excessAbove (the zones between are the source's 'low' and 'high'); 'normal': a usual or sufficiency range (adequateLow to adequateHigh); 'critical': the level below which the plant is short (trees often respond to fertiliser), in deficientBelow.
+ * Concentrations in a plant's leaves (or the tissue named in `part`), dry matter, in mg/kg (converted by the pipeline from the unit printed, kept in `printedUnit`). kind 'bands': the source's classes, deficient below deficientBelow, adequate from adequateLow to adequateHigh, excess above excessAbove (the zones between are the source's 'low' and 'high'); 'normal': a usual or sufficiency range (adequateLow to adequateHigh); 'critical': the level below which the plant is short (trees often respond to fertiliser), in deficientBelow, or a critical range from deficientBelow to criticalHigh.
  */
 export interface PlantLevel {
   plant: string;
@@ -799,6 +799,7 @@ export interface PlantLevel {
   part?: string;
   kind: "bands" | "normal" | "critical";
   deficientBelow?: number;
+  criticalHigh?: number;
   adequateLow?: number;
   adequateHigh?: number;
   excessAbove?: number;

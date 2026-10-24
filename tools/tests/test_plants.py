@@ -122,6 +122,17 @@ def test_a_kind_without_its_numbers_stops_the_build():
         L.plant_details([], [], [row])
 
 
+def test_a_critical_level_may_be_a_range():
+    row = {k: v for k, v in LEVEL.items() if k not in ("adequate_low", "adequate_high", "excess_above")}
+    row |= {"kind": "critical", "deficient_below": 12, "critical_high": 15, "unit": "mg/g"}
+    (out,) = L.plant_details([], [], [row])[30]["levels"]
+    assert (out["deficientBelow"], out["criticalHigh"]) == (12000.0, 15000.0)
+    with pytest.raises(ValueError, match="has no critical_high"):
+        L.plant_details([], [], [{**LEVEL, "critical_high": 30}])
+    with pytest.raises(ValueError, match="must rise"):
+        L.plant_details([], [], [{**row, "critical_high": 10}])
+
+
 def test_a_deficient_class_may_end_where_enough_begins():
     (out,) = L.plant_details([], [], [{**LEVEL, "deficient_below": 20}])[30]["levels"]
     assert out["deficientBelow"] == out["adequateLow"] == 20

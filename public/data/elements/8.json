@@ -465,9 +465,9 @@
   "essentialHuman": "yes",
   "plantClass": "structural",
   "plantRole": {
-   "text": "Comes from CO2 and water; part of most organic molecules, and needed by roots and all other non-green tissues for respiration.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00001-7"
+   "text": "Taken up in carbon dioxide and water, and as oxygen gas; a main building block of all organic matter.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00016-2"
   },
   "humanRole": {
    "text": "Part of water and most biomolecules; the final electron acceptor of respiration.",
@@ -512,6 +512,31 @@
       "text": "Part of water and of most biomolecules.",
       "source": "wackett2004",
       "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
+  },
+  "plants": {
+   "uptake": {
+    "text": "In carbon dioxide and water, and as oxygen gas (O₂)",
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "job": {
+    "group": 1,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century; it comes with water and carbon dioxide",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "forest": [
+     {
+      "text": "Roots draw oxygen from the air in the soil's pores. In wet soil it can only creep in slowly, so waterlogged soils are where oxygen holds trees back.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
      }
     ]
    }

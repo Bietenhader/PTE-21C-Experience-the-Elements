@@ -702,9 +702,9 @@
   "essentialHuman": "yes",
   "plantClass": "macronutrient",
   "plantRole": {
-   "text": "Binds the pectins of cell walls, stabilizes membranes, and acts as a messenger inside the cell; it moves only in the xylem, so young tissue shows a shortage first.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+   "text": "Binds the pectins of cell walls, stabilizes membranes and acts as a messenger inside the cell; it hardly moves in the phloem, so fast-growing organs fed through the phloem, such as fleshy fruits and enclosed young leaves, run short first.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00019-8"
   },
   "humanRole": {
    "text": "Builds bones and teeth, and signals muscle contraction, nerve transmission and blood clotting.",
@@ -742,6 +742,175 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "The calcium ion Ca²⁺, from the soil water",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "phloem": {
+    "mobility": "low",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 5000,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 3,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Calcium hardly moves in the phloem, so fast-growing parts that get little water flow — fruits, tubers, enclosed leaves — run short first: tipburn in lettuce, blackheart in celery, blossom-end rot in tomatoes and watermelons, bitter pit in apples.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     },
+     {
+      "text": "In eucalypts the newly expanding leaves show it: the shoot tip dies back and the leaves buckle because their edges stop growing.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch13"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Most plants tolerate a great deal: mature leaves can hold more than a tenth of their dry weight as calcium without harm. Plants of acid soils, however, are hurt at lower levels than lime-loving plants.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Soils on limestone and chalk and young marsh soils are rich in calcium; old soils that have been weathered and leached for a long time — such as the Spodosols of cool regions and the Oxisols and Ultisols of the humid tropics — are poor in it.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_11"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Calcium signals are part of how a legume recognises its rhizobia and lets them in; in clovers, more calcium raises the root's release of the compounds that switch on the bacteria's nodulation genes.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Wild plants split into lime-lovers (calcicoles) of calcareous soils and lime-avoiders (calcifuges) of acid, calcium-poor soils. Often it is not calcium itself that keeps a calcicole off acid soil: Scabiosa columbaria fails there mainly because it cannot stand the dissolved aluminium.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_11"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Calcium rarely limits forests: perhaps on some deeply weathered tropical soils (Oxisols) and in some alpine spruce forests.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     },
+     {
+      "text": "Liming forest soils seldom helps the trees: trials in Finland and Sweden found growth about a tenth lower for 15–20 years, though sugar maples in a long-term trial in Quebec grew better after dolomitic lime.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch13"
+     }
+    ],
+    "food": [
+     {
+      "text": "Calcium sprays on apple trees cut losses in store: in one trial, bitter pit in stored Cox apples fell from 30 % to about 3 %.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at flowering",
+     "kind": "bands",
+     "deficientBelow": 1000.0,
+     "adequateLow": 2000.0,
+     "adequateHigh": 10000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.20. Low: 1–2; high: above 10; no excess class. The deficient class is printed '<I' in the scanned text, read as below 1.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Soybean",
+     "group": "legumes",
+     "part": "mature leaves of new growth",
+     "kind": "normal",
+     "adequateLow": 3500.0,
+     "adequateHigh": 20000.0,
+     "unit": "mg/kg",
+     "printedUnit": "g/kg",
+     "note": "Table 5.2, concentrations considered adequate (after Mills and Jones 1996).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-9"
+    },
+    {
+     "plant": "Tomato",
+     "group": "vegetables",
+     "part": "mature leaves of new growth",
+     "kind": "normal",
+     "adequateLow": 16000.0,
+     "adequateHigh": 32100.0,
+     "unit": "mg/kg",
+     "printedUnit": "g/kg",
+     "note": "Table 5.2, concentrations considered adequate (after Mills and Jones 1996).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-9"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves at the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 10000.0,
+     "adequateHigh": 15000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.21. Low: below 10; high: above 15.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Norway spruce",
+     "group": "conifers",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 400.0,
+     "criticalHigh": 600.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    },
+    {
+     "plant": "Eucalyptus grandis",
+     "group": "broadleaf",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 5600.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    }
+   ]
   }
  },
  "history": {

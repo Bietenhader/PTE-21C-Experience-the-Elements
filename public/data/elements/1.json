@@ -466,9 +466,9 @@
   "essentialHuman": "yes",
   "plantClass": "structural",
   "plantRole": {
-   "text": "Comes from water; part of every organic molecule, and the proton gradients across thylakoid and mitochondrial membranes drive ATP synthesis.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00001-7"
+   "text": "Taken up as water; with carbon and oxygen it is a main building block of all organic matter, built in through oxidation–reduction reactions.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00016-2"
   },
   "humanRole": {
    "text": "Part of water and of every organic molecule in the body.",
@@ -513,6 +513,31 @@
       "text": "Part of water and of all organic molecules; one of the six elements found essential in every prokaryote analysed.",
       "source": "wackett2004",
       "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Water (H₂O) from the soil, or from the air when it is very humid",
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "job": {
+    "group": 1,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century; it comes with water",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "forest": [
+     {
+      "text": "Trees get their hydrogen from water. Free hydrogen ions set how acid a soil is, and soils that are extremely acid or extremely alkaline hold forests back.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
      }
     ]
    }

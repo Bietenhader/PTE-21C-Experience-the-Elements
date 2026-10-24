@@ -97,10 +97,10 @@ PLANT_FACTS = {
 }
 NOTE_COLUMNS = {"Z", "topic", "text", "source", "doi"}
 LEVEL_COLUMNS = {
-    "Z", "plant", "group", "part", "kind", "deficient_below", "adequate_low", "adequate_high", "excess_above",
-    "unit", "source", "doi", "note",
+    "Z", "plant", "group", "part", "kind", "deficient_below", "critical_high", "adequate_low", "adequate_high",
+    "excess_above", "unit", "source", "doi", "note",
 }  # fmt: skip
-LEVEL_NUMBERS = ("deficient_below", "adequate_low", "adequate_high", "excess_above")
+LEVEL_NUMBERS = ("deficient_below", "critical_high", "adequate_low", "adequate_high", "excess_above")
 
 
 def _check_z(z: object, where: str) -> int:
@@ -173,9 +173,10 @@ def _leaf_level(r: dict) -> dict:
     if not isinstance(r.get("plant"), str) or not r["plant"].strip():
         raise ValueError(f"{where}: no plant name")
     given = [c for c in LEVEL_NUMBERS if c in r]
+    # A critical level may be a range (Binkley & Fisher: "12–15"): deficient_below to critical_high.
     need = {
-        "bands": ({"adequate_low", "adequate_high"}, set()),
-        "normal": ({"adequate_low", "adequate_high"}, {"deficient_below", "excess_above"}),
+        "bands": ({"adequate_low", "adequate_high"}, {"critical_high"}),
+        "normal": ({"adequate_low", "adequate_high"}, {"deficient_below", "critical_high", "excess_above"}),
         "critical": ({"deficient_below"}, {"adequate_low", "adequate_high", "excess_above"}),
     }[r["kind"]]
     if missing_cols := sorted(need[0] - set(given)):
@@ -189,8 +190,8 @@ def _leaf_level(r: dict) -> dict:
     # must have a width.
     if values != sorted(values) or r.get("adequate_low", 0) >= r.get("adequate_high", float("inf")):
         raise ValueError(f"{where}: levels must rise from deficient_below to excess_above")
-    names = {"deficient_below": "deficientBelow", "adequate_low": "adequateLow", "adequate_high": "adequateHigh",
-             "excess_above": "excessAbove"}  # fmt: skip
+    names = {"deficient_below": "deficientBelow", "critical_high": "criticalHigh", "adequate_low": "adequateLow",
+             "adequate_high": "adequateHigh", "excess_above": "excessAbove"}  # fmt: skip
     out: dict = {"plant": r["plant"], "group": r["group"]}
     if r.get("part"):
         out["part"] = r["part"]

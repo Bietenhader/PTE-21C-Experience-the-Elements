@@ -660,12 +660,18 @@ Fin's look at the live site, on desktop and on his iPhone (video, 22 October 202
   leaves (low, adequate, high), Binkley & Fisher's critical foliar levels for trees (N, P, K, Ca, Mg), and
   Barker & Pilbeam's per-element crop tables. So each element shows the groups its sources cover, at most
   one plant per group, and each row says how to read it: `bands` (the source's classes), `normal` (a usual
-  or sufficiency range) or `critical` (below it the plant is short). Values are kept as printed in the
-  TOML (`unit` = mg/kg, μg/g, g/kg, mg/g or %) and converted to mg/kg by the pipeline with decimal
-  arithmetic; the panel shows g/kg from 1000 mg/kg on (`src/physics/units.ts`). The chart puts the plants
+  or sufficiency range) or `critical` (below it the plant is short: a single level, or a range up to
+  `critical_high` where Binkley & Fisher print one, e.g. 12–15 mg/g nitrogen for Norway spruce). Values are
+  kept as printed in the TOML (`unit` = mg/kg, μg/g, g/kg, mg/g or %) and converted to mg/kg by the
+  pipeline with decimal arithmetic; the panel shows g/kg from 1000 mg/kg on (`src/physics/units.ts`). On a
+  narrow screen each plant's name and figures stand above its bar instead of beside it. The chart puts the plants
   on one logarithmic axis; too little and too much are hatched differently, "enough" is a solid outline and
   a usual range a dashed one, so nothing is told by colour alone; "Show as table" lists the numbers with
   the tissue sampled and the unit printed.
+- **Size of the first batch:** 22 elements (the 14 essential mineral nutrients; Na, Si, Co, Se, Al and I;
+  briefly H, C and O), 173 notes and 57 leaf levels, compiled from the books' text and spot-checked against
+  it. Cl and Ni have no leaf levels (the books give single measurements, not ranges), nor do the beneficial
+  elements; iodine has notes only.
 - **Moved to the 4th edition:** the plant sentences of `biology.toml` now cite *Marschner's Mineral
   Nutrition of Plants*, 4th ed. (2023), chapter by chapter, each checked against Fin's copy; nickel keeps
   Brown et al. (1987). Iodine is now "beneficial" for plants, as the 4th edition lists it (chapter 1).

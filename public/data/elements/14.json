@@ -539,9 +539,9 @@
   "essentialHuman": "probable",
   "plantClass": "beneficial",
   "plantRole": {
-   "text": "Deposited as silica in cell walls, it stiffens stems and leaves and protects against pests, fungi and drought; grasses such as rice accumulate the most.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+   "text": "Deposited as silica in cell walls, it stiffens stems and leaves and protects against pests, fungi and drought; among crops, grasses such as rice accumulate the most.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00012-5"
   },
   "humanRole": {
    "text": "May help bone and connective tissue form; essentiality in humans is not proven.",
@@ -556,6 +556,61 @@
       "text": "Chicks reared on a diet almost free of silicon grew 30–50 % slower and formed poor skulls and long bones; silicon helps build cartilage and connective tissue.",
       "source": "suttle2022",
       "doi": "10.1079/9781789240924.0017"
+     }
+    ]
+   }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Uncharged silicic acid, Si(OH)₄; rice and many other crops have transporter proteins for it",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00012-5"
+   },
+   "job": {
+    "group": 2,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "around 1960, when rice was found not to grow normally in nutrient solutions without it",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Rice short of silicon sets little grain: a rice mutant that cannot take it up lost over 90% of its yield in the field, which is why silicon fertilisers are spread on paddy fields in some countries.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Sugarcane needs at least 1% silicon by weight for a full cane yield; with only a quarter of that the yield halves, and leaves in full sun become freckled.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Plants take silicon from soil water as silicic acid released by weathering; deeply weathered soils such as Oxisols can run short of it, and liming lowers its uptake.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_19"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Grasses and sedges hold far more silicon than most flowering plants; much of it sits as tiny bodies of silica (phytoliths) in the skin of the leaf.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "The field horsetail (Equisetum arvense) cannot do without silicon; its gritty, silica-rich ash was once used to scour pots and pans.",
+      "source": "epstein1972"
+     }
+    ],
+    "food": [
+     {
+      "text": "Animals need a little silicon for their connective tissue, but grazing animals that eat much silica-rich grass can suffer wear of the rumen wall and deposits in the kidneys.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
      }
     ]
    }

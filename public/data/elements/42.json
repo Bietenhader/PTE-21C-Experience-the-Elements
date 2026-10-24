@@ -785,8 +785,8 @@
   "plantClass": "micronutrient",
   "plantRole": {
    "text": "Part of the molybdenum cofactor of nitrate reductase, and of nitrogenase in the bacteria that fix nitrogen in legume nodules; the plant's smallest requirement.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00017-4"
   },
   "humanRole": {
    "text": "Part of the molybdenum cofactor of enzymes such as sulfite oxidase and xanthine oxidase.",
@@ -839,6 +839,146 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Molybdate, MoO₄²⁻, which competes with sulfate at the root",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00017-4"
+   },
+   "phloem": {
+    "mobility": "intermediate",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 0.1,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 4,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "year": 1939,
+    "by": "D. I. Arnon and P. R. Stout",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Plants look starved of nitrogen, stunted and pale; in cauliflower and other broad-leaved plants the young leaf blades fail to form properly ('whiptail'), and citrus gets 'yellow spot'. Leaves are short below about 0.1–1.0 mg per kg of dry matter, depending on species and nitrogen source.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Plants tolerate very large amounts: the gap between too little and too much can be ten-thousand-fold. Excess turns shoots golden yellow, and in oilseed rape and tomato it stains the stems blue.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Iron oxides hold molybdate tightly in acid soils and release it as the soil becomes less acid: liming from pH 5 to pH 7 raised the molybdenum in soybean shoots tenfold. Sulfate fertilisers such as gypsum compete with it and cut its uptake.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Molybdenum is part of nitrogenase, so legumes that fix nitrogen need much more of it; a plant short of it sends what it has to the nodules first. Shortage in nodulating legumes is widespread on acid soils of the humid tropics.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Forest soils have not been found short of molybdenum, though some researchers suspect that tropical forests would fix more nitrogen if slightly more were available.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     }
+    ],
+    "food": [
+     {
+      "text": "Fodder with more than about 5–10 mg per kg of dry matter is suspect for cattle and horses: the excess causes a copper deficiency called molybdenosis (the 'teart' pastures of England are an example), and black cattle turn ginger.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_17"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Rice",
+     "group": "cereals",
+     "part": "upper fully developed leaves before flowering",
+     "kind": "normal",
+     "adequateLow": 0.4,
+     "adequateHigh": 1.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 13.1, sufficient range (Bergmann 1992).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-17"
+    },
+    {
+     "plant": "Soybean",
+     "group": "legumes",
+     "part": "upper fully developed leaves at the end of flowering",
+     "kind": "normal",
+     "adequateLow": 0.5,
+     "adequateHigh": 1.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 13.1, sufficient range (Bergmann 1992).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-17"
+    },
+    {
+     "plant": "Tomato",
+     "group": "vegetables",
+     "part": "recently matured leaf with petiole",
+     "kind": "normal",
+     "adequateLow": 0.2,
+     "adequateHigh": 0.6,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 13.1, sufficient range (Bryson et al. 2014).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-17"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "mature leaves from new growth",
+     "kind": "normal",
+     "adequateLow": 0.1,
+     "adequateHigh": 2.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 13.1, sufficient range (Bryson et al. 2014).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-17"
+    },
+    {
+     "plant": "Conifers",
+     "group": "conifers",
+     "part": "needles",
+     "kind": "critical",
+     "deficientBelow": 0.1,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Possible deficiency below this level (Carter 1992, cited in chapter 13); the book says micronutrient critical levels in trees are not well established.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    }
+   ]
   }
  },
  "history": {

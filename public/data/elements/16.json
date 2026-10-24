@@ -584,9 +584,9 @@
   "essentialHuman": "yes",
   "plantClass": "macronutrient",
   "plantRole": {
-   "text": "Taken up as sulfate; part of the amino acids cysteine and methionine, of glutathione and of iron–sulfur clusters.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+   "text": "Taken up as sulfate; part of the amino acids cysteine and methionine, of glutathione, and of defence compounds such as glucosinolates.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00019-8"
   },
   "humanRole": {
    "text": "Part of the amino acids methionine and cysteine; obtained from dietary protein.",
@@ -634,6 +634,136 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Sulfate (SO₄²⁻) from the soil water; leaves can also take in sulfur dioxide (SO₂) from the air",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00019-8"
+   },
+   "phloem": {
+    "mobility": "high",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 1000,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 1,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Leaves lose chlorophyll and protein and the plant grows slowly. Unlike nitrogen shortage, the yellowing in wheat is spread over old and young leaves alike; in legumes, sulfur shortage looks just like nitrogen shortage.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     },
+     {
+      "text": "In oilseed rape the young leaves show it first, turning reddish with dying edges, and the yellow flowers can turn white; fully developed rape leaves with less than about 6 mg of sulfur per gram of dry matter point to a shortage.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_8"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Plants put up with a lot of sulfate in the soil; only very salty soils do harm. Sulfur dioxide in polluted air is more dangerous, and trees and other perennials are hurt at about half the level that harms annual plants.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_8"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Most of a soil's sulfur is bound in organic matter, usually 100–1000 mg per kg in humid regions; it becomes available as microbes break that matter down, and sulfate is easily washed out.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_8"
+     },
+     {
+      "text": "Sulfur dioxide from industry once supplied much of crops' sulfur. Since emissions were cut in recent decades, sulfur shortage has become common on farmland, above all in rainy regions and on leached soils, and sulfur fertilisers are now used to correct it.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Nitrogen fixation in legume nodules is very sensitive to sulfur shortage: early on, it suffers more than photosynthesis does.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Sulfur rarely limits forests; trees take sulfate from the soil and some sulfur dioxide from the air.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     }
+    ],
+    "food": [
+     {
+      "text": "Wheat short of sulfur makes flour whose dough stretches less and gives a smaller loaf, because its grain proteins hold less of the sulfur amino acids that link the gluten together.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     },
+     {
+      "text": "The sharp taste of cabbage, mustard and their relatives comes from sulfur compounds (glucosinolates), which rise with the sulfur supply; more makes vegetables spicier but fodder less welcome to animals.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at first silks",
+     "kind": "bands",
+     "deficientBelow": 1000.0,
+     "adequateLow": 2100.0,
+     "adequateHigh": 5000.0,
+     "unit": "mg/kg",
+     "printedUnit": "%",
+     "note": "Table 7.2 (after Mills and Jones 1996 and others). Low: 0.10–0.20; high: above 0.50; no excess class.",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-11"
+    },
+    {
+     "plant": "Soybean",
+     "group": "legumes",
+     "part": "first trifoliate leaf at early flowering",
+     "kind": "bands",
+     "deficientBelow": 1500.0,
+     "adequateLow": 2100.0,
+     "adequateHigh": 4000.0,
+     "unit": "mg/kg",
+     "printedUnit": "%",
+     "note": "Table 7.2. Low: 0.15–0.20; high: above 0.40; no excess class.",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-11"
+    },
+    {
+     "plant": "Potato",
+     "group": "vegetables",
+     "part": "youngest mature leaf, plants 30 cm tall",
+     "kind": "normal",
+     "adequateLow": 1900.0,
+     "adequateHigh": 3600.0,
+     "unit": "mg/kg",
+     "printedUnit": "%",
+     "note": "Table 7.2, sufficient range (the only class given for potato).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-11"
+    }
+   ]
   },
   "isotopeUses": [
    {

@@ -940,8 +940,14 @@
   ]
  },
  "biology": {
-  "essentialPlant": "no",
+  "essentialPlant": "beneficial",
   "essentialHuman": "yes",
+  "plantClass": "beneficial",
+  "plantRole": {
+   "text": "Small doses have improved the growth and flowering of thale cress and other plants in experiments, probably by making them more tolerant of stress; it may be built into some plant proteins.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00012-5"
+  },
   "humanRole": {
    "text": "Built into the thyroid hormones thyroxine and triiodothyronine; shortage causes goitre.",
    "source": "efsa_drv",
@@ -958,6 +964,43 @@
      }
     ],
     "note": "Our source covers farm animals; it does not say whether animals without a thyroid gland need iodine."
+   }
+  },
+  "plants": {
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Land plants are not known to need it, but small doses improved the growth and flowering of thale cress (Arabidopsis) in recent experiments, perhaps because it is built into some plant proteins.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Too much iodine harms the older leaves first: in tomato they yellow and drop while the young ones stay dark green; such levels are far above those in farm soils, so it is not seen in the field.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Some seaweeds, unlike land plants, need iodine, and certain red and brown algae store it in special cells.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "food": [
+     {
+      "text": "Iodine is one of the four minerals, with iron, zinc and selenium, that efforts to enrich crops (biofortification) most often target against hidden hunger; iodised salt has also worked well.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     },
+     {
+      "text": "Spraying crops with iodine has raised the iodine content of the harvest in some studies.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00014-9"
+     }
+    ]
    }
   },
   "isotopeUses": [

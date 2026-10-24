@@ -2,12 +2,58 @@
 # STATUS
 
 **Current milestone:** M5 — Release v0.1.0 · **released on 2026-10-23** (tag `v0.1.0`, GitHub Release)
-**Last updated:** 2026-10-23
-**Next:** v0.2 is not scheduled (SPEC §18). Fin's open questions below still have their defaults.
+**Last updated:** 2026-10-24
+**Now:** "Plants in detail" in the Biology & ecology panel (pull request open, for Fin's review). Fin's open
+questions below still have their defaults.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
+
+## Plants in detail (2026-10-24) — please review `tools/curated/plants.toml`
+
+You chose design B: the Plants card now has a **"More about plants"** button; the details open below the
+six cards. They show how roots take the element up, how it moves in the phloem, how much a well-fed shoot
+holds, its job, since when it is known to be needed (or to help), a chart of leaf levels from too little to
+too much (with "Show as table"), and notes on shortage, excess, soils, partners in the soil, wild plants,
+forests, and crops and food. First batch: the 14 essential mineral nutrients, Na, Si, Co, Se, Al and I,
+and briefly H, C and O — 22 elements, 173 notes, 57 leaf levels, from the five books you sent plus Mengel
+& Kirkby. Each element in the file starts with a line like `# --- Zinc (Z = 30) ---`.
+
+1. **The six plant groups exist as one table only for zinc and iron** (Barker & Pilbeam). For the other
+   elements each chart shows the plants its books give levels for: maize and apple from Mengel & Kirkby
+   (Tables 2.20 and 2.21), Norway spruce and *Eucalyptus grandis* from Binkley & Fisher (critical levels,
+   N, P, K, Ca, Mg; Table 13.2 gives ranges such as 12–15 mg/g, drawn as a band), conifers for the
+   micronutrients from Binkley & Fisher's chapter 13 (after Carter 1992, "not well established"), and
+   Barker & Pilbeam's crop tables (soybean, alfalfa, tomato, potato, rice …). No leaf levels for Cl and Ni
+   (single measurements only) or for the beneficial elements.
+2. **Please check these numbers against your printed books** (the text files lose some characters):
+   - Maize, potassium: "too much" above **55** mg/g, although "high" ends at 35 (Mengel & Kirkby Table 2.20).
+   - Maize, manganese: "too much" above **350** μg/g (printed without ">").
+   - Maize, zinc: the "deficient" limit reads "<5" although "low" is 15–20 — left out.
+   - Maize, iron: the row is garbled — left out; cereals use Barker's grasses row instead.
+   - Apple, iron: adequate read as **50–150** (printed "5 -150"); apple, manganese: adequate 35–105, "high"
+     printed as >150.
+   - *Eucalyptus grandis*: calcium **5.6** and magnesium **3.5** mg/g, far above the other trees in Binkley
+     & Fisher's Table 13.2.
+   - Molybdenum in conifers: Barker gives Douglas fir 0.02–0.25 mg/kg as sufficient, Binkley & Fisher
+     call < 0.1 a possible deficiency — I used Binkley & Fisher.
+3. **The plant sentences of `biology.toml` now cite Marschner's 4th edition** (2023). Checked against the
+   new text; 12 were reworded to match it: H, C, O (taken up as water and CO₂; building blocks), N ("after
+   carbon, the element needed in the largest amount" instead of "most often limits growth"), Ca (hardly
+   moves in the phloem), S (glucosinolates instead of iron–sulfur clusters), Fe (pale yellow young leaves),
+   Zn (auxin "probably"), Si ("among crops"), Co (no essential role known, delays leaf ageing), Se (not
+   *shown* to be needed), Al (helps acid-soil plants such as tea and hydrangea that store it). The boron
+   soil note was moved too.
+4. **Iodine is now "beneficial" for plants**, because the 4th edition lists it among the beneficial
+   elements (chapter 1; experiments with thale cress and others, Kiferle et al. 2019/2021).
+5. **One line on the open debate** about what counts as a plant nutrient (Brown, Zhao & Dobermann 2022)
+   is in the legend under the six cards.
+6. **Your call:** silicon has single values for several crops grown side by side (rice 39.1, wheat 15.4,
+   maize 21.0, cucumber 22.9, chickpea 3.0 mg/g, Barker Table 20.1). They are not ranges, so they are not
+   shown; a "single value" row could show them. Default: leave them out.
+7. **Still to come (second pull request, as agreed):** what too much of other elements (Cd, Pb, Hg, As …)
+   does to plants, the lanthanides and vanadium.
 
 ## Your review on the iPhone (video, 2026-10-22)
 

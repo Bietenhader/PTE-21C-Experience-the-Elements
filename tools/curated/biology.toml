@@ -256,7 +256,7 @@ human_source = "zoroddu2019"
 human_doi = "10.1016/j.jinorgbio.2019.03.013"
 note = "Plant: Brown, Welch & Cary (1987). Human: no EFSA dietary reference value."
 
-# --- beneficial for plants (SPEC §6.2: Na, Si, Co, Se, Al) -------------------------------------
+# --- beneficial for plants (SPEC §6.2: Na, Si, Co, Se, Al; iodine from Marschner's 4th edition) ---
 
 [[row]]
 Z = 11
@@ -319,11 +319,9 @@ human_role = "No known role in the body."
 human_source = "zoroddu2019"
 human_doi = "10.1016/j.jinorgbio.2019.03.013"
 
-# --- essential or probably essential for humans only ------------------------------------------
-
 [[row]]
 Z = 53
-# Plants: beneficial since the 4th edition of Marschner (2023) lists iodine among the beneficial elements.
+# Iodine: beneficial since the 4th edition of Marschner (2023) lists it among the beneficial elements.
 essential_plant = "beneficial"
 plant_class = "beneficial"
 plant_role = "Small doses have improved the growth and flowering of thale cress and other plants in experiments, probably by making them more tolerant of stress; it may be built into some plant proteins."
@@ -333,6 +331,8 @@ essential_human = "yes"
 human_role = "Built into the thyroid hormones thyroxine and triiodothyronine; shortage causes goitre."
 human_source = "efsa_drv"
 human_doi = "10.2903/sp.efsa.2017.e15121"
+
+# --- essential or probably essential for humans only ------------------------------------------
 
 [[row]]
 Z = 9
@@ -535,9 +535,9 @@ doi = "10.1056/NEJMoa1213755"
 
 [[environment]]
 Z = 5
-text = "Plants need boron, but the margin between too little and too much is narrow: soils or irrigation water rich in boron scorch leaf tips and margins."
-source = "marschner2012"
-doi = "10.1016/B978-0-12-384905-2.00007-8"
+text = "Plants need boron, yet in dry regions soils formed from marine sediments, or irrigation water rich in boron, give them too much: older leaves yellow and then die from their tips and margins."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
 
 [[environment]]
 Z = 7

@@ -714,9 +714,9 @@
   "essentialHuman": "yes",
   "plantClass": "micronutrient",
   "plantRole": {
-   "text": "Holds the shape of many enzymes and of DNA-binding 'zinc finger' proteins; needed for auxin and protein synthesis.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+   "text": "Holds the shape of many enzymes and of DNA-binding 'zinc finger' proteins; needed for protein synthesis and probably for making the growth hormone auxin.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00017-4"
   },
   "humanRole": {
    "text": "Needed by hundreds of enzymes and by zinc-finger proteins that control genes; important for growth and immunity.",
@@ -764,6 +764,187 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Mainly the zinc ion Zn²⁺",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00017-4"
+   },
+   "phloem": {
+    "mobility": "intermediate",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 20,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 4,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "year": 1926,
+    "by": "A. L. Sommer and C. B. Lipman",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Shoots stop lengthening and leaves stay small, so fruit trees form 'little leaf' rosettes, while wheat gets whitish-brown patches on its middle leaves. Leaves are short below about 15–20 mg per kg of dry matter, and maize, rice and apple are among the most sensitive crops.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Too much zinc is rare in crops and happens mostly near mines and smelters or after sewage sludge. Roots stop lengthening and young leaves yellow, probably because zinc crowds out iron; liming the soil is the best remedy.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Shortage is widespread on limy soils and on old, highly weathered acid soils, where zinc clings to clay, iron oxides and lime. Unlike iron shortage, it is easily cured by spreading zinc sulfate on the soil.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "Heavy phosphate fertilising of zinc-poor soil can bring on zinc shortage.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Mycorrhizal fungi can supply up to half of a plant's zinc; heavy phosphate fertilising suppresses them, which is one reason it lowers the zinc in wheat grain.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "Some mycorrhizal fungi help forest trees and crops tolerate too much zinc by holding it in their own cell walls and vacuoles.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Zinc-tolerant strains of tufted hair-grass live on zinc-rich ground by locking the metal away in the vacuoles of their root cells.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "Bladder campion has races (ecotypes) that differ in how much zinc they tolerate; the tolerance is inherited through several genes.",
+      "source": "epstein1972"
+     }
+    ],
+    "forest": [
+     {
+      "text": "In eucalypts, zinc shortage makes the new leaves small and crowded, without the shoot tip dying back.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch13"
+     }
+    ],
+    "food": [
+     {
+      "text": "Wheat, rice and maize grains are naturally low in zinc, and higher-yielding varieties have diluted it further. Zinc sprays on wheat raise the zinc in the grain, best when the crop also gets plenty of nitrogen.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     },
+     {
+      "text": "In grain much of the zinc is bound to phytate, which people and other animals with a single stomach cannot digest, so less of it is absorbed.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at flowering",
+     "kind": "bands",
+     "adequateLow": 20.0,
+     "adequateHigh": 70.0,
+     "excessAbove": 150.0,
+     "unit": "mg/kg",
+     "printedUnit": "μg/g",
+     "note": "Table 2.20. Low: 15–20; high: 70–150. The deficient class is printed '<5' in the scan, which does not meet the low class at 15; left out.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Groundnut, soybean, beans",
+     "group": "legumes",
+     "part": "mature leaves or whole shoots",
+     "kind": "normal",
+     "adequateLow": 20.0,
+     "adequateHigh": 75.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 15.1, Grains – legumes (sufficiency or survey range from Bryson et al. 2014).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-19"
+    },
+    {
+     "plant": "Leafy vegetables",
+     "group": "vegetables",
+     "part": "mature or wrapper leaves",
+     "kind": "normal",
+     "adequateLow": 20.0,
+     "adequateHigh": 200.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 15.1, Vegetables – leafy (amaranth, celery, cabbage family, lettuce, rhubarb, spinach).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-19"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves from the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 25.0,
+     "adequateHigh": 50.0,
+     "unit": "mg/kg",
+     "printedUnit": "μg/g",
+     "note": "Table 2.21. Low: <25; high: >50.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Conifers",
+     "group": "conifers",
+     "part": "terminal cuttings or mature needles",
+     "kind": "normal",
+     "adequateLow": 15.0,
+     "adequateHigh": 70.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 15.1, Forest and landscape trees – softwoods (fir, cedar, larch, spruce, pine, hemlock and others).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-19"
+    },
+    {
+     "plant": "Broadleaf trees",
+     "group": "broadleaf",
+     "part": "mature leaves",
+     "kind": "normal",
+     "adequateLow": 10.0,
+     "adequateHigh": 200.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 15.1, Forest and landscape trees – hardwoods (maple, birch, beech, ash, oak, poplar, eucalyptus and others).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-19"
+    }
+   ]
   }
  },
  "history": {

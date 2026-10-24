@@ -52,17 +52,24 @@ const GROUP: Record<PlantLevel["group"], string> = {
   broadleaf: "broadleaf tree",
   other: "",
 };
+// Printed units that give the same number as the one shown (μg/g is mg/kg; mg/g is g/kg).
+const SAME_NUMBER: Record<MassFractionUnit, string[]> = { "mg/kg": ["mg/kg", "μg/g"], "g/kg": ["g/kg", "mg/g"] };
 // Where shortage shows first, from Marschner's chapter on diagnosis (11.2.2).
 const DIAGNOSIS_DOI = "10.1016/b978-0-12-819773-8.00008-3";
+
+/** "cereal" under "Maize", nothing under "Leafy vegetables" (the name says it already). */
+const groupWord = (l: PlantLevel) => (l.plant.toLowerCase().includes(GROUP[l.group]) ? "" : GROUP[l.group]);
 
 /** "one of the ten …" → "One of the ten ….", for a phrase shown on its own. */
 const sentence = (t: string) => `${t.charAt(0).toUpperCase()}${t.slice(1)}${/[.!?]$/.test(t) ? "" : "."}`;
 
 function numbers(l: PlantLevel): number[] {
-  return [l.deficientBelow, l.adequateLow, l.adequateHigh, l.excessAbove].filter((v): v is number => v !== undefined);
+  return [l.deficientBelow, l.criticalHigh, l.adequateLow, l.adequateHigh, l.excessAbove].filter(
+    (v): v is number => v !== undefined,
+  );
 }
 
-function Glance({ p, sources }: { p: PlantDetail; sources: Sources }) {
+function Glance({ p, beneficial, sources }: { p: PlantDetail; beneficial: boolean; sources: Sources }) {
   const typicalUnit = p.typical ? massFractionUnit(p.typical.value) : "mg/kg";
   return (
     <dl className={shared.facts} data-testid="plant-glance">
@@ -107,7 +114,7 @@ function Glance({ p, sources }: { p: PlantDetail; sources: Sources }) {
       )}
       {p.known && (
         <div className={styles.fact}>
-          <dt>Known to be needed</dt>
+          <dt>{beneficial ? "Known to help" : "Known to be needed"}</dt>
           <dd>
             {[
               p.known.year !== undefined ? `Since ${p.known.year}${p.known.by ? ` (${p.known.by})` : ""}.` : "",
@@ -152,10 +159,16 @@ function LeafLevels({ e, levels, sources }: { e: ElementIndexEntry; levels: Plan
       cells: [
         <>
           {l.plant}
-          {GROUP[l.group] ? <span className={shared.muted}> ({GROUP[l.group]})</span> : null}
+          {groupWord(l) ? <span className={shared.muted}> ({groupWord(l)})</span> : null}
         </>,
         l.part ?? "",
-        l.kind === "critical" ? `${show(l.deficientBelow, unit)} ${unit} (critical level)` : l.deficientBelow ? `${show(l.deficientBelow, unit)} ${unit}` : "",
+        l.kind === "critical"
+          ? l.criticalHigh !== undefined
+            ? `${show(l.deficientBelow, unit)}–${show(l.criticalHigh, unit)} ${unit} (critical range)`
+            : `${show(l.deficientBelow, unit)} ${unit} (critical level)`
+          : l.deficientBelow
+            ? `${show(l.deficientBelow, unit)} ${unit}`
+            : "",
         l.adequateLow !== undefined
           ? `${show(l.adequateLow, unit)}–${show(l.adequateHigh, unit)} ${unit}${l.kind === "normal" ? " (usual range)" : ""}`
           : "",
@@ -163,7 +176,7 @@ function LeafLevels({ e, levels, sources }: { e: ElementIndexEntry; levels: Plan
         <>
           <SourceChip id={l.source} sources={sources} />
           <Doi doi={l.doi} />
-          {l.printedUnit !== unit && <span className={shared.muted}> Printed in {l.printedUnit}.</span>}
+          {!SAME_NUMBER[unit].includes(l.printedUnit) && <span className={shared.muted}> Printed in {l.printedUnit}.</span>}
           {l.note && <span className={shared.muted}> {l.note}</span>}
         </>,
       ],
@@ -172,12 +185,26 @@ function LeafLevels({ e, levels, sources }: { e: ElementIndexEntry; levels: Plan
   return (
     <ChartFrame caption={caption} table={table} testId="leaf-levels">
       {({ width, captionId }) => {
-        const narrow = width < 420;
-        const M = { top: 4, right: 14, bottom: 34, left: narrow ? 100 : 136 };
-        const ROW = 40;
+        // Wide: the plant's name left of its bar. Narrow: the name, and the range in figures, above it.
+        const narrow = width < 520;
+        const CHAR = 7; // about the width of a character of the 12px label
+        const longest = Math.max(...levels.map((l) => l.plant.length));
+        const left = narrow ? 10 : Math.round(Math.min(width * 0.38, Math.max(96, longest * CHAR + 16)));
+        const M = { top: 4, right: 14, bottom: 34, left };
+        const ROW = narrow ? 52 : 40;
+        const barY = narrow ? 24 : 18;
+        const barH = 14;
         const H = M.top + ROW * levels.length + M.bottom;
-        const lo = Math.floor(Math.log10(Math.min(...all) / 2));
-        const hi = Math.ceil(Math.log10(Math.max(...all) * 2));
+        const lo = Math.floor(Math.log10(Math.min(...all) / 1.5));
+        const hi = Math.ceil(Math.log10(Math.max(...all) * 1.5));
+        const fit = (name: string) => {
+          const room = Math.floor((M.left - 12) / CHAR);
+          return narrow || name.length <= room ? name : `${name.slice(0, Math.max(1, room - 1))}…`;
+        };
+        const figures = (l: PlantLevel) =>
+          l.kind === "critical"
+            ? `${show(l.deficientBelow, unit)}${l.criticalHigh !== undefined ? `–${show(l.criticalHigh, unit)}` : ""} (critical)`
+            : `${show(l.adequateLow, unit)}–${show(l.adequateHigh, unit)}`;
         const x = scaleLog()
           .domain([10 ** lo, 10 ** hi])
           .range([M.left, width - M.right]);
@@ -212,28 +239,50 @@ function LeafLevels({ e, levels, sources }: { e: ElementIndexEntry; levels: Plan
               </text>
               {levels.map((l, i) => {
                 const y = M.top + i * ROW;
-                const barY = 18;
-                const barH = 14;
-                const left = x.range()[0] ?? M.left;
-                const right = x.range()[1] ?? width - M.right;
+                const right = width - M.right;
                 const label = `${l.plant}${l.part ? `, ${l.part}` : ""}`;
                 return (
                   <g key={`${l.group}-${l.plant}`} transform={`translate(0 ${y})`} data-kind={l.kind}>
-                    <text className={styles.plantLabel} x={M.left - 8} y={barY + barH / 2 - 5} textAnchor="end">
-                      {l.plant}
-                    </text>
-                    {GROUP[l.group] && (
-                      <text className={viz.label} x={M.left - 8} y={barY + barH / 2 + 9} textAnchor="end">
-                        {GROUP[l.group]}
-                      </text>
+                    {narrow ? (
+                      <>
+                        <text className={styles.plantLabel} x={M.left} y={12}>
+                          {l.plant}
+                          {groupWord(l) && <tspan className={styles.groupWord}> · {groupWord(l)}</tspan>}
+                        </text>
+                        <text className={viz.label} x={right} y={12} textAnchor="end">
+                          {figures(l)}
+                        </text>
+                      </>
+                    ) : (
+                      <>
+                        <text className={styles.plantLabel} x={M.left - 8} y={barY + barH / 2 - 5} textAnchor="end">
+                          {fit(l.plant)}
+                        </text>
+                        {groupWord(l) && (
+                          <text className={viz.label} x={M.left - 8} y={barY + barH / 2 + 9} textAnchor="end">
+                            {groupWord(l)}
+                          </text>
+                        )}
+                      </>
                     )}
                     {l.deficientBelow !== undefined && (
-                      <rect x={left} y={barY} width={Math.max(0, x(l.deficientBelow) - left)} height={barH} fill={`url(#${ids}-low)`}>
+                      <rect x={M.left} y={barY} width={Math.max(0, x(l.deficientBelow) - M.left)} height={barH} fill={`url(#${ids}-low)`}>
                         <title>{`${label}: too little below ${show(l.deficientBelow, unit)} ${unit}`}</title>
                       </rect>
                     )}
-                    {l.kind === "critical" && l.deficientBelow !== undefined && (
+                    {l.kind === "critical" && l.deficientBelow !== undefined && l.criticalHigh === undefined && (
                       <line className={styles.critical} x1={x(l.deficientBelow)} x2={x(l.deficientBelow)} y1={barY - 4} y2={barY + barH + 4} />
+                    )}
+                    {l.kind === "critical" && l.deficientBelow !== undefined && l.criticalHigh !== undefined && (
+                      <rect
+                        className={styles.criticalRange}
+                        x={x(l.deficientBelow)}
+                        y={barY - 4}
+                        width={Math.max(2.5, x(l.criticalHigh) - x(l.deficientBelow))}
+                        height={barH + 8}
+                      >
+                        <title>{`${label}: critical range ${show(l.deficientBelow, unit)}–${show(l.criticalHigh, unit)} ${unit}`}</title>
+                      </rect>
                     )}
                     {l.excessAbove !== undefined && (
                       <rect x={x(l.excessAbove)} y={barY} width={Math.max(0, right - x(l.excessAbove))} height={barH} fill={`url(#${ids}-high)`}>
@@ -251,14 +300,17 @@ function LeafLevels({ e, levels, sources }: { e: ElementIndexEntry; levels: Plan
                         >
                           <title>{`${label}: ${l.kind === "normal" ? "usual range" : "enough"} ${show(l.adequateLow, unit)}–${show(l.adequateHigh, unit)} ${unit}`}</title>
                         </rect>
-                        <text className={viz.label} x={(x(l.adequateLow) + x(l.adequateHigh)) / 2} y={barY - 4} textAnchor="middle">
-                          {show(l.adequateLow, unit)}–{show(l.adequateHigh, unit)}
-                        </text>
+                        {!narrow && (
+                          <text className={viz.label} x={(x(l.adequateLow) + x(l.adequateHigh)) / 2} y={barY - 4} textAnchor="middle">
+                            {figures(l)}
+                          </text>
+                        )}
                       </>
                     )}
-                    {l.kind === "critical" && l.deficientBelow !== undefined && (
-                      <text className={viz.label} x={x(l.deficientBelow) + 4} y={barY - 4}>
+                    {!narrow && l.kind === "critical" && l.deficientBelow !== undefined && (
+                      <text className={viz.label} x={x(l.criticalHigh ?? l.deficientBelow) + 4} y={barY - 1}>
                         {show(l.deficientBelow, unit)}
+                        {l.criticalHigh !== undefined ? `–${show(l.criticalHigh, unit)}` : ""}
                       </text>
                     )}
                   </g>
@@ -280,8 +332,8 @@ function LeafLevels({ e, levels, sources }: { e: ElementIndexEntry; levels: Plan
               )}
               {levels.some((l) => l.kind === "critical") && (
                 <li>
-                  <span className={`${styles.swatch} ${styles.swatchCritical}`} aria-hidden="true" /> critical level:
-                  trees below it often respond to fertiliser
+                  <span className={`${styles.swatch} ${styles.swatchCritical}`} aria-hidden="true" /> critical level
+                  or range: trees below it often respond to fertiliser
                 </li>
               )}
               {levels.some((l) => l.excessAbove !== undefined) && (
@@ -300,12 +352,15 @@ function LeafLevels({ e, levels, sources }: { e: ElementIndexEntry; levels: Plan
 export function PlantDetails({
   e,
   p,
+  beneficial,
   sources,
   headingRef,
   onClose,
 }: {
   e: ElementIndexEntry;
   p: PlantDetail;
+  /** Beneficial rather than essential for plants: "known to help" instead of "known to be needed". */
+  beneficial: boolean;
   sources: Sources;
   headingRef: Ref<HTMLHeadingElement>;
   onClose: () => void;
@@ -321,7 +376,7 @@ export function PlantDetails({
           Less about plants <span aria-hidden="true">▴</span>
         </button>
       </div>
-      <Glance p={p} sources={sources} />
+      <Glance p={p} beneficial={beneficial} sources={sources} />
       {p.phloem && (
         <p className={shared.muted}>
           A nutrient that moves readily in the phloem is moved out of older leaves when supply runs short, so the

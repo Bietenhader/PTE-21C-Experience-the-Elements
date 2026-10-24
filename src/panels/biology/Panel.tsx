@@ -277,6 +277,7 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFile; s
               <PlantDetails
                 e={e}
                 p={b.plants}
+                beneficial={b.essentialPlant === "beneficial"}
                 sources={sources}
                 headingRef={detailHeading}
                 onClose={() => {

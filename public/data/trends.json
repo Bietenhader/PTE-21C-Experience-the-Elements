@@ -2158,9 +2158,9 @@
   {
    "id": "essential-plants",
    "label": "Essential for plants",
-   "caption": "Elements plants cannot complete their life cycle without, and elements that benefit some plants, from tools/curated/biology.toml (Marschner's Mineral Nutrition of Higher Plants and cited reviews).",
+   "caption": "Elements plants cannot complete their life cycle without, and elements that benefit some plants, from tools/curated/biology.toml (Marschner's Mineral Nutrition of Plants and cited reviews).",
    "sources": [
-    "marschner2012",
+    "marschner2023",
     "primary_literature"
    ],
    "classes": [
@@ -2239,7 +2239,7 @@
     "50": "no",
     "51": "no",
     "52": "no",
-    "53": "no",
+    "53": "beneficial",
     "54": "no",
     "55": "no",
     "56": "no",

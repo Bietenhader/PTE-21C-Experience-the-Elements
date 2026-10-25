@@ -99,7 +99,11 @@ def context() -> dict:
     for r in curated_rows("lasercooling.toml"):
         cooled.setdefault(r["Z"], set()).add(r.get("charge", 0))
     biology = {r["Z"]: r for r in curated_rows("biology.toml")}
+    import build_lifeandhistory
+
+    life = build_lifeandhistory.life_groups(curated_rows("biology.toml", "life"))
     return {
+        "life": life,
         "cooled": cooled,
         "clocks": metrology["clocks"],
         "si": metrology["siHistory"],
@@ -137,6 +141,15 @@ def map_plants(e, ctx):
     return ctx["biology"].get(e["Z"], {}).get("essential_plant", "no")
 
 
+def map_life(group):
+    """Status of a group of life from biology.toml [[life]]; no row is "unknown", never "not needed"."""
+
+    def classify(e, ctx):
+        return ctx["life"].get(e["Z"], {}).get(group, {}).get("status", "unknown")
+
+    return classify
+
+
 def map_humans(e, ctx):
     return ctx["biology"].get(e["Z"], {}).get("essential_human", "no")
 
@@ -155,6 +168,9 @@ CONTEXT_CLASSIFIERS = {
     "laser-cooled": map_cooled,
     "clocks": map_clocks,
     "si-history": map_si,
+    "essential-bacteria": map_life("bacteria"),
+    "essential-fungi": map_life("fungi"),
+    "essential-archaea": map_life("archaea"),
     "essential-plants": map_plants,
     "essential-humans": map_humans,
     "origin": map_origin,

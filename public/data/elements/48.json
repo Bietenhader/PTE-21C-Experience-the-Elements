@@ -1047,6 +1047,48 @@
   "essentialPlant": "no",
   "essentialHuman": "no",
   "note": "Not known to be essential for plants or for humans.",
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "Cadmium is so like zinc that it travels in the plant by zinc's routes, but it binds much more strongly to the sulfur groups of enzymes and other proteins and disturbs them; it can also upset iron metabolism and yellow the leaves. Plants tolerate far more than animals do (5–10 mg per kg of dry matter against 0.5–1 in feed), so a crop can look healthy while unfit to eat.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     },
+     {
+      "text": "In animals and people cadmium builds up in the kidneys. Itai-itai disease in Japan, painful brittle bones, was traced to rice grown on paddy soils polluted by a mine.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Unpolluted soils hold less than 1 mg per kg; smelters (above all zinc smelters), sewage sludge, tyre wear and phosphate fertilisers made from cadmium-rich rock add more. It binds less in acid sandy soils, where it moves into plants and down to groundwater more easily; 3 mg per kg was proposed as a critical level for soils in Germany.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "wild": [
+     {
+      "text": "About 45 plant families have metal hyperaccumulators, but cleaning soil with plants is slow: even for cadmium, which crops take up readily, lowering a soil from 3 to 1 mg per kg would take about 200 years of cropping.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "food": [
+     {
+      "text": "Of the toxic elements that reach people mainly through plant foods, cadmium is the main worry: it moves readily from soil into crops and is far more toxic to people than to plants.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     },
+     {
+      "text": "Zinc fertiliser can lower cadmium uptake, because both use the same transporters; chloride from salty water or potassium chloride does the opposite, carrying more cadmium into crops.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     }
+    ]
+   }
+  },
   "environment": [
    {
     "text": "Cadmium from phosphate fertilisers, sewage sludge, mining and industry builds up in soils; crops take it up, and food, rice and other staples above all, is most people's main source of it.",

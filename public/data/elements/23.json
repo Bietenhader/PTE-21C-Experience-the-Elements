@@ -693,6 +693,29 @@
     ]
    }
   },
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "Tiny amounts seem to help higher plants, perhaps by aiding chlorophyll formation through iron, but this is hard to prove because traces of vanadium are in almost every chemical and water supply. A little more is already harmful: in Chinese green mustard and tomato it slowed growth and stopped side roots forming.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-26"
+     },
+     {
+      "text": "Fungi and some freshwater algae need vanadium, but for flowering plants reports of a benefit are rare and vague.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Most vanadium in soils comes from people: industrial catalysts, metal smelting, coal ash, burnt oil and phosphate fertilisers, some of which hold over 100 mg per kg. In soil it is mostly vanadate, held tightly by iron and manganese oxides, so little of it is available to roots.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-26"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Vanadium pentoxide",

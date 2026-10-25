@@ -194,7 +194,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | Biology: a role in fungi | 16 | — | biology.toml [[life]] |
 | Biology: a role in bacteria | 26 | — | biology.toml [[life]] |
 | Biology: a role in archaea | 17 | — | biology.toml [[life]] |
-| Biology: plants in detail | 23 | — | plants.toml |
+| Biology: plants in detail | 32 | — | plants.toml |
 | Biology: leaf levels of plants | 12 | — | plants.toml [[leaf_level]] |
 | History: discovery | 118 | — | history.toml |
 | Our own short text | 118 | — | prose/{Z}.md |

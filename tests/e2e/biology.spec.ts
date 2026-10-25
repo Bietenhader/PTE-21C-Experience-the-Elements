@@ -227,6 +227,16 @@ test.describe("plants in detail", () => {
     expect(errors).toEqual([]);
   });
 
+  test("cadmium and lead: what too much does to plants, with no facts or leaf levels", async ({ page }) => {
+    for (const s of ["Cd", "Pb"]) {
+      await openBiology(page, s);
+      await current(page).getByTestId("more-plants").click();
+      const detail = current(page).getByTestId("plant-detail");
+      await expect(detail.locator('[data-topic="toxicity"]'), s).toContainText("Too much");
+      await expect(detail.getByTestId("leaf-levels")).toHaveCount(0);
+    }
+  });
+
   test("axe: the plant details of N, Zn, B, Si and I", async ({ page }) => {
     for (const s of ["N", "Zn", "B", "Si", "I"]) {
       await openBiology(page, s);

@@ -968,6 +968,17 @@
      }
     ]
    }
+  },
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "Neodymium hardly moves within the plant: only about 1% of what the roots held reached stems and leaves. Like lanthanum, it hindered root growth in oats and barley.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-22"
+     }
+    ]
+   }
   }
  },
  "history": {

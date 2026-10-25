@@ -1339,6 +1339,31 @@
   "essentialPlant": "no",
   "essentialHuman": "no",
   "note": "Not known to be essential for plants or for humans.",
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "Plants stand 2–5 mg of mercury per kg of dry matter before they suffer, more than is acceptable in animal feed, so a plant can look healthy while holding too much for the food chain.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "soil": [
+     {
+      "text": "A critical level of 2 mg of mercury per kg was proposed for farm and garden soils in Germany.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "food": [
+     {
+      "text": "Seafood, not plants, is usually the main source of the mercury people eat.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     }
+    ]
+   }
+  },
   "environment": [
    {
     "text": "Bacteria turn mercury released into water into methylmercury, which builds up in fish and shellfish, most in large predatory fish.",

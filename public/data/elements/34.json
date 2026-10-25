@@ -749,9 +749,9 @@
   "essentialHuman": "yes",
   "plantClass": "beneficial",
   "plantRole": {
-   "text": "Not needed by plants, but at low levels it can raise antioxidant defences; some 'hyperaccumulator' plants store very large amounts, and crops are a main route of selenium into our diet.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+   "text": "Not shown to be needed by plants, but at low levels it can raise antioxidant defences; some 'hyperaccumulator' plants store very large amounts, and crops are a main route of selenium into our diet.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00012-5"
   },
   "humanRole": {
    "text": "Built into selenoproteins such as glutathione peroxidases, which protect cells from oxidation, and into enzymes that activate thyroid hormone.",
@@ -801,6 +801,74 @@
       "text": "Some archaea build it into proteins as the amino acid selenocysteine, made by a pathway that is in principle the same as that of eukaryotes.",
       "source": "primary_literature",
       "doi": "10.1016/j.bbagen.2009.03.022"
+     }
+    ]
+   }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Selenate (SeO₄²⁻) through the plant's sulfate carriers, or selenite (SeO₃²⁻), partly through phosphate carriers",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00012-5"
+   },
+   "known": {
+    "text": "the 1920s, when small doses were reported to stimulate the growth of lupins",
+    "source": "barker_pilbeam2015",
+    "doi": "10.1201/b18458-23"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "No plant is known to need it, but small doses have helped ryegrass grow, kept lettuce green for longer and, in one experiment, raised the seed yield of Brassica rapa by 43%.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Most crops cannot store much selenium safely: harm can start below 100 mg per kg of dry matter.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Plants with too much selenium are stunted and turn yellow; grasses can show snow-white leaves and pink roots.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Most soils hold between 0.01 and 2 mg of selenium per kg; seleniferous soils hold more than 5 mg.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Plants take up selenate far more readily than selenite; selenate forms in well-aerated alkaline soils, while in acid and neutral soils selenium is held tightly and little is available.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Milk vetches (Astragalus), Stanleya and a few other plants of selenium-rich soils store more than 1 g per kg of dry leaf without harm; it may protect them from grazing animals, which it can poison.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Such plants are selenium indicators: where they grow, the soil is rich in selenium.",
+      "source": "epstein1972"
+     }
+    ],
+    "food": [
+     {
+      "text": "Since the mid-1980s Finland has added selenate to all compound fertilisers, which more than doubled the selenium people there take in from cereals, vegetables, meat and milk.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Up to a billion people may get too little selenium, and plant foods are a main source of it, so enriching crops with selenium (biofortification) matters for health.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
      }
     ]
    }

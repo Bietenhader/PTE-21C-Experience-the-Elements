@@ -575,8 +575,8 @@
   "plantClass": "macronutrient",
   "plantRole": {
    "text": "The atom at the centre of chlorophyll; it also binds ATP and holds ribosomes together.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00019-8"
   },
   "humanRole": {
    "text": "Needed by hundreds of enzymes, above all those that use ATP, which acts as a magnesium complex.",
@@ -624,6 +624,172 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "The magnesium ion Mg²⁺, from the soil water",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "phloem": {
+    "mobility": "high",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 2000,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 3,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Fully grown leaves turn yellow between the veins while the veins stay green; strong light makes it worse. Many plants fall short below about 1–2 g of magnesium per kg of dry leaf, broad-leaved crops at somewhat higher levels.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     },
+     {
+      "text": "Signs start on the older leaves and move up the plant. In cereals the leaf base first shows small dark green spots on a pale yellow ground, later yellow stripes, with the leaf tips dying.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_12"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Extra magnesium is parked in the vacuoles, but very high leaf levels can harm plants in a drought, when the magnesium in the working parts of the cell rises enough to slow photosynthesis.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Sandy soils hold far less magnesium than clay soils (roughly 0.5 against 5 g per kg), and magnesium washes out of the topsoil even more easily than calcium.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_12"
+     },
+     {
+      "text": "Potassium, ammonium, calcium, manganese and acidity all hold back the roots' uptake of magnesium; magnesium shortage brought on by potassium is becoming a common sight on farms.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "wild": [
+     {
+      "text": "On soils formed from serpentine rock, magnesium far outweighs calcium; the vegetation there is sparse and distinctive, with many species found nowhere else, adapted mainly, it seems, to the low calcium and high magnesium.",
+      "source": "epstein1972"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Magnesium rarely limits forests worldwide, perhaps on some soils formed from pumice.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     },
+     {
+      "text": "In Central Europe magnesium shortage became widespread in spruce forests, made worse by air pollution and soil acidification; in spring, the older needles give up magnesium and green colour to the new ones.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "food": [
+     {
+      "text": "Grazing animals on low-magnesium pasture can develop grass tetany, a dangerous drop of magnesium in the blood; fertilising the grass with magnesium raises its content easily, and crops richer in magnesium also help people who get too little.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at flowering",
+     "kind": "bands",
+     "deficientBelow": 1000.0,
+     "adequateLow": 2000.0,
+     "adequateHigh": 10000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.20. Low: 1–2; high: above 10. The table gives no excess class for magnesium.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Soybean",
+     "group": "legumes",
+     "part": "fully developed trifoliate leaf at flowering",
+     "kind": "normal",
+     "adequateLow": 2500.0,
+     "adequateHigh": 7000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 6.7, optimal range after Campbell (2000); a second source in the same table gives 3000–10000.",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-10"
+    },
+    {
+     "plant": "Potato",
+     "group": "vegetables",
+     "part": "recently matured leaves",
+     "kind": "normal",
+     "adequateLow": 3600.0,
+     "adequateHigh": 4900.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 6.7, optimal range after Seefeldt (2013).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-10"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves at the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 2500.0,
+     "adequateHigh": 4000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.21. Low: below 2.5; high: above 4.0.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Norway spruce",
+     "group": "conifers",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 400.0,
+     "criticalHigh": 600.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    },
+    {
+     "plant": "Eucalyptus grandis",
+     "group": "broadleaf",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 3500.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    }
+   ]
   }
  },
  "history": {

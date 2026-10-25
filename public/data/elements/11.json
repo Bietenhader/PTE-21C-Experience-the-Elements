@@ -542,8 +542,8 @@
   "plantClass": "beneficial",
   "plantRole": {
    "text": "Essential for some C4 and CAM plants, which use it to move pyruvate into chloroplasts; can partly replace potassium as an osmoticum, and halophytes store it in large amounts.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00012-5"
   },
   "humanRole": {
    "text": "The main positive ion outside cells; controls water balance and, with potassium, nerve signals.",
@@ -578,6 +578,90 @@
       "text": "Halobacterium and most of its relatives need more than 100–150 g of salt per litre to grow and to keep their cells intact.",
       "source": "primary_literature",
       "doi": "10.1186/1746-1448-4-2"
+     }
+    ]
+   }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Na⁺ ions, which enter the roots through the plant's potassium channels and carriers",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00012-5"
+   },
+   "phloem": {
+    "mobility": "high",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "job": {
+    "group": 3,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "the late 1950s, when Brownell and Wood found that the Australian saltbush Atriplex vesicaria needs traces of it",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Many C4 plants, such as amaranths and saltbushes, grow poorly, turn pale and may fail to flower without traces of sodium, because their way of concentrating carbon dioxide in the leaf needs it; maize and sugarcane are exceptions.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Sugar beet, chard and other beets can let sodium do much of potassium's work in the cell sap, and then grow larger, fleshier leaves; most crops, such as maize and beans, cannot.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Where a dry climate and irrigation concentrate salt, the soil water can hold 50–100 millimoles of sodium per litre, enough to harm most crops.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Inside the cell, sodium gets in the way of the many enzymes that need potassium; salt-tolerant plants avoid this by locking it away in their vacuoles.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-25"
+     }
+    ],
+    "soil": [
+     {
+      "text": "In dry regions, evaporation draws salty water up to the surface; soils with more than 15% of their exchange sites taken by sodium (sodic soils) lose their structure and form crusts that roots, water and air struggle to get through.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-25"
+     },
+     {
+      "text": "Sodium fertiliser pays off mainly for sodium-loving crops such as sugar beet on soils low in potassium; where the soil holds plenty of potassium, yields do not respond.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Arbuscular mycorrhizal fungi on the roots lower sodium uptake in both C3 and C4 plants, according to a review of many studies.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Many plants of salty places (halophytes) grow better with plenty of sodium, which they store in their cell sap to hold on to water.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Halogeton glomeratus, a poisonous weed of western American rangeland, needs so much salt that sodium is almost a major nutrient for it.",
+      "source": "epstein1972"
+     }
+    ],
+    "food": [
+     {
+      "text": "Dairy cows need about 2 g of sodium per kg of feed, more than many pasture grasses contain; sodium fertiliser raises it in grasses such as ryegrass, and animals then eat more of the forage.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
      }
     ]
    }

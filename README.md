@@ -59,8 +59,10 @@ nothing has been measured, the table says so and says why, instead of showing a 
     limits, and the timeline of the second.
   - *Chemistry & bonding* — oxidation states with an example compound each, ionic, covalent and van der
     Waals radii, electronegativity, bonding, well-known compounds and reactions with air, water and acids.
-  - *Biology & ecology* — whether plants and people need the element, how much is in the body, toxicity,
-    IARC groups, soils and food webs, and isotopes used in biology and medicine.
+  - *Biology & ecology* — whether people, animals, plants, fungi, bacteria and archaea need the element;
+    for plants, "More about plants": uptake, mobility, leaf levels from too little to too much, soils,
+    forests and crops. How much is in the body, toxicity, IARC groups, soils and food webs, and isotopes
+    used in biology and medicine.
   - *History & naming* — the discovery, its place on a world map, a timeline of all 118 discoveries, and
     where the name and symbol come from.
 

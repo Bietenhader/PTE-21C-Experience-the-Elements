@@ -505,9 +505,9 @@
   "essentialHuman": "yes",
   "plantClass": "structural",
   "plantRole": {
-   "text": "Fixed from atmospheric CO2 in photosynthesis; the backbone of all organic matter.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00001-7"
+   "text": "Taken up as carbon dioxide from the air, or as bicarbonate; a main building block of all organic matter.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00016-2"
   },
   "humanRole": {
    "text": "The backbone of proteins, fats, carbohydrates and nucleic acids.",
@@ -552,6 +552,31 @@
       "text": "The backbone of all organic molecules; one of the six elements found essential in every prokaryote analysed.",
       "source": "wackett2004",
       "doi": "10.1128/AEM.70.2.647-655.2004"
+     }
+    ]
+   }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Carbon dioxide (CO₂) from the air; possibly a little bicarbonate from the soil water",
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "job": {
+    "group": 1,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century, by which time it was known to come from the air",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "forest": [
+     {
+      "text": "The carbon in wood comes from the air. The amount of carbon dioxide in the atmosphere can itself limit how fast forests grow, a limit that may ease as the gas becomes more plentiful.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
      }
     ]
    }

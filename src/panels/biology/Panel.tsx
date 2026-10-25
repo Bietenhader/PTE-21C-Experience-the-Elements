@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 // Biology & ecology (SPEC §10.10): whether six groups of life (humans, animals, plants, fungi, bacteria
 // and archaea) need the element and what for, how much a body holds, what it does in soils and food
-// webs, how it can harm, and its isotopes in biology and medicine. Every sentence is our own wording
-// from tools/curated/biology.toml, which Fin, a plant scientist, reviews; the carcinogen groups are
-// IARC's, read from the IARC list by the pipeline.
+// webs, how it can harm, and its isotopes in biology and medicine. A card with more to tell has a "More
+// about …" button that opens the details below the cards (plants, after v0.1.0: Plants.tsx). Every
+// sentence is our own wording from tools/curated/biology.toml and plants.toml, which Fin, a plant
+// scientist, reviews; the carcinogen groups are IARC's, read from the IARC list by the pipeline.
 
+import { type ReactNode, useEffect, useId, useRef, useState } from "react";
 import { useElementDetail } from "../../data/load";
 import { isMissing } from "../../data/format";
 import type {
@@ -23,6 +25,8 @@ import shared from "../shared/panel.module.css";
 import { collectSources } from "../shared/sources";
 import type { PanelProps } from "../types";
 import styles from "./biology.module.css";
+import { PlantDetails } from "./Plants";
+import { Doi, Said } from "./said";
 
 type Sources = SourcesFile["sources"];
 type IsotopeUse = NonNullable<Biology["isotopeUses"]>[number];
@@ -74,27 +78,6 @@ const IARC_GROUP: Record<string, string> = {
   "3": "Group 3: not classifiable as to its carcinogenicity to humans",
 };
 
-function Doi({ doi }: { doi?: string | undefined }) {
-  if (!doi) return null;
-  return (
-    <>
-      {" "}
-      <a href={`https://doi.org/${doi}`} className={styles.doi}>
-        doi:{doi}
-      </a>
-    </>
-  );
-}
-
-function Said({ t, sources }: { t: SourcedText; sources: Sources }) {
-  return (
-    <>
-      {t.text} <SourceChip id={t.source} sources={sources} />
-      <Doi doi={t.doi} />
-    </>
-  );
-}
-
 function Need({
   who,
   status,
@@ -102,6 +85,7 @@ function Need({
   roles,
   empty,
   extra,
+  more,
   sources,
 }: {
   who: string;
@@ -110,6 +94,8 @@ function Need({
   roles: SourcedText[];
   empty: string;
   extra?: string | undefined;
+  /** The card's "More about …" button, when there are details to open. */
+  more?: ReactNode;
   sources: Sources;
 }) {
   return (
@@ -127,6 +113,7 @@ function Need({
         <p className={shared.muted}>{empty}</p>
       )}
       {extra && <p className={shared.muted}>{extra}</p>}
+      {more}
     </div>
   );
 }
@@ -227,6 +214,30 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFile; s
   const uses = [...(b.isotopeUses ?? [])].sort((x, y) => FIELD_ORDER.indexOf(x.field) - FIELD_ORDER.indexOf(y.field));
   const toxic = b.toxicity ?? [];
   const iarc = b.iarc ?? [];
+  // "More about plants": the details open below the cards with a short animation, the panel glides down
+  // to them (instantly with reduced motion) and they take the focus; closing them from inside gives the
+  // focus back to the card's button.
+  const detailId = useId();
+  const [plantsOpen, setPlantsOpen] = useState(false);
+  const moreRef = useRef<HTMLButtonElement>(null);
+  const detailHeading = useRef<HTMLHeadingElement>(null);
+  const opened = useRef(false);
+  useEffect(() => {
+    const heading = detailHeading.current;
+    if (plantsOpen && opened.current && heading) {
+      // Glide down to the details (they open below all six cards), then put the focus on their heading.
+      heading.focus({ preventScroll: true });
+      // <html data-motion> holds the effective motion setting; reading it here keeps app/motion (and the
+      // settings store) out of this panel's chunk, which slowed the table's first paint.
+      const smooth = document.documentElement.dataset.motion === "full";
+      heading.closest("section")?.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+    }
+    opened.current = false;
+  }, [plantsOpen]);
+  const togglePlants = () => {
+    opened.current = !plantsOpen;
+    setPlantsOpen(!plantsOpen);
+  };
   return (
     <div className={styles.panel}>
       <Section title="Does life need it?" id="essential">
@@ -247,17 +258,54 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFile; s
             roles={b.plantRole ? [b.plantRole] : []}
             empty="No known role."
             extra={b.plantClass ? PLANT_CLASS[b.plantClass] : undefined}
+            more={
+              b.plants && (
+                <button
+                  ref={moreRef}
+                  type="button"
+                  className={styles.moreButton}
+                  aria-expanded={plantsOpen}
+                  aria-controls={detailId}
+                  onClick={togglePlants}
+                  data-testid="more-plants"
+                >
+                  {plantsOpen ? "Less about plants" : "More about plants"}{" "}
+                  <span aria-hidden="true">{plantsOpen ? "▴" : "▾"}</span>
+                </button>
+              )
+            }
             sources={sources}
           />
           <GroupNeed e={e} b={b} group="fungi" sources={sources} />
           <GroupNeed e={e} b={b} group="bacteria" sources={sources} />
           <GroupNeed e={e} b={b} group="archaea" sources={sources} />
         </div>
+        {b.plants && (
+          <div id={detailId} hidden={!plantsOpen}>
+            {plantsOpen && (
+              <PlantDetails
+                e={e}
+                p={b.plants}
+                beneficial={b.essentialPlant === "beneficial"}
+                sources={sources}
+                headingRef={detailHeading}
+                onClose={() => {
+                  setPlantsOpen(false);
+                  moreRef.current?.focus();
+                }}
+              />
+            )}
+          </div>
+        )}
         {b.note && <p className={shared.muted}>{b.note}</p>}
         <p className={shared.muted} data-testid="needs-legend">
           For animals, fungi, bacteria and archaea, “essential” means needed by essentially every member of the
           group, “used by some, not all” anything from a few members to most (the sentences say which), and
-          “beneficial” helpful in some trials without being shown to be needed.
+          “beneficial” helpful in some trials without being shown to be needed. For plants, “beneficial” means
+          helpful to some plants without being needed by all; plant scientists are debating whether to call
+          essential and beneficial elements alike “plant nutrients”.{" "}
+          <SourceChip id="primary_literature" sources={sources} />
+          <Doi doi="10.1007/s11104-021-05171-w" />
         </p>
       </Section>
 

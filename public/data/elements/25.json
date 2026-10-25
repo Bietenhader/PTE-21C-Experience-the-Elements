@@ -791,8 +791,8 @@
   "plantClass": "micronutrient",
   "plantRole": {
    "text": "Four manganese atoms and one calcium atom form the cluster in photosystem II that splits water and releases oxygen.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00017-4"
   },
   "humanRole": {
    "text": "Part of enzymes such as mitochondrial superoxide dismutase and arginase.",
@@ -830,6 +830,132 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Only as the divalent ion Mn²⁺",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00017-4"
+   },
+   "phloem": {
+    "mobility": "low",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 50,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 3,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "year": 1922,
+    "by": "J. S. McHargue",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "The youngest leaves yellow faintly between the veins, because manganese hardly moves out of older leaves; severe shortage adds brown spots. In the field cereals show it as patchy 'light spot disease', and peas as 'marsh spot' in their seeds.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "Oats, barley, wheat, soybean and peach are susceptible, rye is not. Manganese-short plants are also more easily killed by frost and more open to root-rot fungi such as take-all.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Too much shows as small brown spots on mature leaves, and in soybean as crinkled leaves. Tolerance differs enormously: growth falls at about 200 mg per kg of shoot dry matter in maize but only at about 5,300 in sunflower.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "soil": [
+     {
+      "text": "How much manganese is available swings with soil pH, moisture and air: limy, sandy and peaty soils tend to hold too little, while acid or waterlogged soils release too much.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "partners": [
+     {
+      "text": "On acid tropical soils, manganese toxicity often holds back nitrogen fixation by legumes; liming helps, and mycorrhizal fungi ease the toxicity.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     },
+     {
+      "text": "Plants with arbuscular mycorrhiza often take up less manganese than plants without the fungus, unlike zinc and copper, of which they take up more.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00004-6"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Plants that tolerate a lot of manganese, such as sunflower and stinging nettle, store the excess in the cell walls at the base of their leaf hairs, which turn dark.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Manganese rarely limits forests (perhaps on some limestone soils in New Zealand and South Africa), and manganese toxicity, which can harm farm crops, has not been reported in forests.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at flowering",
+     "kind": "bands",
+     "deficientBelow": 10.0,
+     "adequateLow": 20.0,
+     "adequateHigh": 200.0,
+     "excessAbove": 350.0,
+     "unit": "mg/kg",
+     "printedUnit": "μg/g",
+     "note": "Table 2.20. Low: 10–20; high: 200–250; the excess class is printed as '350' (the '>' seems lost in the scan).",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves from the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 35.0,
+     "adequateHigh": 105.0,
+     "unit": "mg/kg",
+     "printedUnit": "μg/g",
+     "note": "Table 2.21. Low: <35; high printed as >150.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Conifers",
+     "group": "conifers",
+     "part": "needles",
+     "kind": "critical",
+     "deficientBelow": 25.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Possible deficiency below this level (Carter 1992, cited in chapter 13); the book says micronutrient critical levels in trees are not well established.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    }
+   ]
   }
  },
  "history": {

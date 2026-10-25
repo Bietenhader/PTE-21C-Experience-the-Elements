@@ -125,3 +125,197 @@
     align-items: baseline;
   }
 }
+
+/* "More about plants": the card's button and the details it opens below the cards (after v0.1.0). */
+.moreButton {
+  margin-block-start: var(--space-2);
+  min-block-size: 2.25rem;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.moreButton:hover {
+  border-color: var(--text-muted);
+}
+
+.plantDetail {
+  margin-block-start: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-inline-start: 4px solid var(--text);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+}
+
+/* Opening: the box unfolds downwards and its border glows briefly, so the eye follows it (full motion only). */
+:root[data-motion="full"] .plantDetail {
+  transform-origin: top;
+  animation:
+    detail-open 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    detail-glow 1600ms ease-out;
+}
+
+@keyframes detail-open {
+  from {
+    opacity: 0;
+    transform: translateY(-16px) scaleY(0.96);
+  }
+}
+
+@keyframes detail-glow {
+  0%,
+  35% {
+    box-shadow: 0 0 0 3px var(--focus);
+  }
+  100% {
+    box-shadow: 0 0 0 3px transparent;
+  }
+}
+
+.detailHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  align-items: baseline;
+  justify-content: space-between;
+  margin-block-end: var(--space-3);
+}
+
+.detailHead .moreButton {
+  margin: 0;
+}
+
+.detailTitle {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.detailTitle:focus {
+  outline: none;
+}
+
+.detailTitle:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.fact {
+  display: contents;
+}
+
+.value {
+  font-family: var(--font-num);
+  font-weight: 600;
+}
+
+.topic {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+/* The leaf-level chart: the zones are told apart by pattern and outline, never by colour alone. */
+.plantLabel {
+  fill: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.groupWord {
+  fill: var(--text-muted);
+  font-weight: 400;
+}
+
+.hatch {
+  stroke: var(--text-muted);
+  stroke-width: 1.2;
+}
+
+.enough {
+  fill: var(--map-3);
+  stroke: var(--text);
+  stroke-width: 1;
+}
+
+.usual {
+  fill: var(--map-3);
+  stroke: var(--text);
+  stroke-width: 1;
+  stroke-dasharray: 4 2;
+}
+
+.critical {
+  stroke: var(--text);
+  stroke-width: 2.5;
+}
+
+.criticalRange {
+  fill: var(--text);
+  fill-opacity: 0.55;
+  stroke: var(--text);
+  stroke-width: 1;
+}
+
+.levelKey {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.levelKey li {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.swatch {
+  display: inline-block;
+  inline-size: 1.4rem;
+  block-size: 0.8rem;
+  border: 1px solid var(--border);
+}
+
+.swatchLow {
+  background: repeating-linear-gradient(135deg, var(--text-muted) 0 1px, transparent 1px 4px);
+}
+
+.swatchHigh {
+  background:
+    repeating-linear-gradient(45deg, var(--text-muted) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(135deg, var(--text-muted) 0 1px, transparent 1px 4px);
+}
+
+.swatchEnough {
+  border-color: var(--text);
+  background: var(--map-3);
+}
+
+.swatchUsual {
+  border: 1px dashed var(--text);
+  background: var(--map-3);
+}
+
+.swatchCritical {
+  inline-size: 0;
+  border: 0;
+  border-inline-start: 3px solid var(--text);
+}
+
+@media (max-width: 40rem) {
+  .plantDetail {
+    padding: var(--space-2);
+  }
+}

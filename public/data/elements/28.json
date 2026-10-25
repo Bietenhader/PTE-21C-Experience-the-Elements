@@ -720,6 +720,80 @@
     ]
    }
   },
+  "plants": {
+   "uptake": {
+    "text": "Ni²⁺, or nickel bound in small complexes",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00017-4"
+   },
+   "typical": {
+    "value": 0.1,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 4,
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "known": {
+    "year": 1987,
+    "by": "P. H. Brown and colleagues",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Cereals short of nickel yellow between the veins and get dead patches on their youngest leaves, much like iron shortage, and urea builds up to harmful levels in leaf tips because the enzyme that breaks it down, urease, contains nickel.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "The first cases in the field were pecan trees on sandy, poorly drained soils in the south-eastern USA, whose leaves grew deformed ('mouse-ear'). Barley seed from nickel-short plants germinates poorly.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Crops are more often harmed by too much nickel than too little, from industrial pollution, sewage sludge or heavy manuring. Sensitive species suffer above about 10 mg per kg of dry matter, moderately tolerant ones above about 50.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "soil": [
+     {
+      "text": "How much nickel roots can take up depends on soil pH, organic matter, waterlogging and temperature; zinc and copper compete with it at the root.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Nickel is part of hydrogenase in nodule bacteria and of urease in legumes. In field trials, nickel added to the soil raised soybean nodulation, nitrogen fixation and grain yield, most likely on sandy, low-nickel or limed soils.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Serpentine soils, rich in iron, magnesium, nickel, chromium and cobalt but poor in calcium, carry 'hyperaccumulators' such as some Alyssum species, whose leaves hold 10–30 g of nickel per kg of dry matter. They are used to clean polluted soil and even to harvest nickel.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Trees need nickel, but never in amounts that limit forest growth.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Nickel compounds",

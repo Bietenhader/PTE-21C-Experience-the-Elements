@@ -724,9 +724,9 @@
   "essentialHuman": "yes",
   "plantClass": "micronutrient",
   "plantRole": {
-   "text": "Carries electrons in cytochromes and iron–sulfur proteins of photosynthesis and respiration, and is needed to make chlorophyll; shortage yellows young leaves between the veins.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+   "text": "Carries electrons in cytochromes and iron–sulfur proteins of photosynthesis and respiration, and is needed to make chlorophyll; a shortage turns young leaves pale yellow (chlorosis).",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00017-4"
   },
   "humanRole": {
    "text": "Binds oxygen in haemoglobin and myoglobin and carries electrons in respiration.",
@@ -789,6 +789,182 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Fe²⁺, after the root reduces iron at its surface; grasses instead take up Fe³⁺ bound to chelators they release (phytosiderophores)",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00017-4"
+   },
+   "phloem": {
+    "mobility": "intermediate",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 100,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 4,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "year": 1843,
+    "by": "E. Gris",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Shortage always starts on the youngest leaves, which turn yellow between still-green veins and, when severe, entirely yellow; cereal leaves get yellow and green stripes. Citrus, fruit trees and grapevines are the crops most often affected.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_13"
+     },
+     {
+      "text": "Leaves are short of iron below about 50–150 mg per kg of dry matter. Limy (calcareous) soils are the classic place for it, where it is called lime-induced chlorosis.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "On waterlogged soils so much iron dissolves that rice leaves turn bronze; this 'bronzing' is the second most serious yield limit of wetland rice, often costing 15–30 % of the harvest.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Iron is the fourth most common element in the Earth's crust, yet in well-aerated, alkaline soils almost none of it dissolves, so plants depend on iron held by soluble organic molecules (chelates).",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "Iron salts spread on the soil soon turn into insoluble oxides; sprays on the leaves, or chelates that stay stable at high pH, work better.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_13"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Legume nodules need more iron than the rest of the plant, because it is built into nitrogenase, ferredoxin and the red pigment leghaemoglobin.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Plants that shun lime (calcifuges), such as azaleas, rhododendrons and blueberries, are particularly prone to yellowing from iron shortage.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_13"
+     }
+    ],
+    "forest": [
+     {
+      "text": "In forests iron limits growth only on some alkaline soils and for some tree species, and iron toxicity has not been reported in trees.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     },
+     {
+      "text": "In eucalypts, iron-short new leaves turn yellow with green veins, without the shoot tip dying back.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch13"
+     }
+    ],
+    "food": [
+     {
+      "text": "Wheat, rice and maize grains are naturally poor in iron, and fertilising raises their iron far less than their zinc. Phytate, the grain's store of phosphorus, binds iron and zinc, and people cannot digest it, so they absorb less.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Oats, rice, barley, rye, sorghum",
+     "group": "cereals",
+     "part": "mature leaves",
+     "kind": "normal",
+     "adequateLow": 20.0,
+     "adequateHigh": 200.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 11.3, Grains – grasses (sufficiency or survey range from Bryson et al. 2014). Used instead of the maize row of Mengel & Kirkby Table 2.20, whose iron row is garbled in the scan.",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-15"
+    },
+    {
+     "plant": "Groundnut, soybean, beans",
+     "group": "legumes",
+     "part": "mature leaves",
+     "kind": "normal",
+     "adequateLow": 25.0,
+     "adequateHigh": 300.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 11.3, Grains – legumes.",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-15"
+    },
+    {
+     "plant": "Leafy vegetables",
+     "group": "vegetables",
+     "part": "mature or wrapper leaves",
+     "kind": "normal",
+     "adequateLow": 50.0,
+     "adequateHigh": 500.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 11.3, Vegetables – leafy (amaranth, celery, cabbage family, lettuce, rhubarb, spinach).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-15"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves from the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 50.0,
+     "adequateHigh": 150.0,
+     "unit": "mg/kg",
+     "printedUnit": "μg/g",
+     "note": "Table 2.21. Low: <50; high: >150. The adequate range is printed '5 -150' in the scan; read as 50–150 because the low class ends at 50.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Conifers",
+     "group": "conifers",
+     "part": "terminal cuttings or mature needles",
+     "kind": "normal",
+     "adequateLow": 20.0,
+     "adequateHigh": 300.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 11.3, Forest and landscape trees – softwoods (fir, cedar, larch, spruce, pine, hemlock and others).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-15"
+    },
+    {
+     "plant": "Broadleaf trees",
+     "group": "broadleaf",
+     "part": "mature leaves",
+     "kind": "normal",
+     "adequateLow": 30.0,
+     "adequateHigh": 300.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Table 11.3, Forest and landscape trees – hardwoods (maple, birch, beech, ash, oak, poplar, eucalyptus and others).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-15"
+    }
+   ]
   }
  },
  "history": {

@@ -755,8 +755,8 @@
   "plantClass": "macronutrient",
   "plantRole": {
    "text": "The main cation of the cell sap; drives turgor and stomatal opening and activates many enzymes, without being built into organic molecules.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00019-8"
   },
   "humanRole": {
    "text": "The main positive ion inside cells; with sodium it sets the membrane potential of nerves and muscles.",
@@ -809,6 +809,149 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "The potassium ion K⁺, from the soil water; roots pick it out very selectively",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00019-8"
+   },
+   "phloem": {
+    "mobility": "high",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 10000,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 3,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Older leaves yellow and then die back from the edges, and plants become very sensitive to strong light; stems lignify poorly, so cereals fall over (lodge) more easily. It is common on sandy, salty and acid soils and where heavy cropping removes much potassium.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     },
+     {
+      "text": "At first the plant only grows more slowly — 'hidden hunger' — before leaf tips and margins die; clover shows scattered dead spots instead. Short plants wilt easily and cope worse with drought, frost and fungal attack.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_10"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Shortage is common on light sandy acid soils, highly weathered tropical soils and peats. Some clay minerals trap potassium between their layers so firmly that in one Michigan soil about nine tenths of the fertiliser potassium was locked away.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_10"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Potassium helps legumes keep their nodules supplied with sugar; in a review of 20 trials, giving potassium raised their nitrogen fixation by 180 %, mostly through better growth.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Potassium stays a free ion in trees and is easily washed out of leaves and soils. It limits forests only here and there, mostly on old soils and where nitrogen and phosphorus fertilisers have been added.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     }
+    ],
+    "food": [
+     {
+      "text": "Enough potassium gives cotton stronger, whiter fibres, and in processing tomatoes it improves the colour and reduces the 'yellow shoulder' disorder.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     },
+     {
+      "text": "Fleshy fruits and tubers need a lot of potassium: too little brings ripening faults such as 'greenback' in tomatoes and lowers many quality traits of potatoes.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at flowering",
+     "kind": "bands",
+     "deficientBelow": 10000.0,
+     "adequateLow": 15000.0,
+     "adequateHigh": 30000.0,
+     "excessAbove": 55000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.20. Low: 10–15; high: 30–35; the excess class is printed as above 55 (a gap after the high class, as for manganese in the same table).",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Soybean",
+     "group": "legumes",
+     "part": "upper fully developed trifoliate leaf before pods set",
+     "kind": "normal",
+     "adequateLow": 17000.0,
+     "adequateHigh": 25000.0,
+     "unit": "mg/kg",
+     "printedUnit": "g/kg",
+     "note": "Table 4.13, adequate level.",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-8"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves at the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 12000.0,
+     "adequateHigh": 18000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.21. Low: below 12; high: above 18.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Norway spruce",
+     "group": "conifers",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 3500.0,
+     "criticalHigh": 5000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    },
+    {
+     "plant": "Eucalyptus grandis",
+     "group": "broadleaf",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 3600.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    }
+   ]
   }
  },
  "history": {

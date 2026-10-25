@@ -308,6 +308,20 @@
    "note": "Only elements with a cited role; for the rest our sources name none."
   },
   {
+   "label": "Biology: plants in detail",
+   "count": 23,
+   "missing": {},
+   "file": "plants.toml",
+   "note": "So far the elements plants need or benefit from; what too much of the others does to plants is to follow."
+  },
+  {
+   "label": "Biology: leaf levels of plants",
+   "count": 12,
+   "missing": {},
+   "file": "plants.toml [[leaf_level]]",
+   "note": "Only where one of the plant-nutrition books gives a level for a named plant."
+  },
+  {
    "label": "History: discovery",
    "count": 118,
    "missing": {},

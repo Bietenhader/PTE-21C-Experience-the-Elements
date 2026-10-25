@@ -578,8 +578,8 @@
   "plantClass": "macronutrient",
   "plantRole": {
    "text": "Taken up as phosphate; carries energy in ATP and forms the backbone of DNA, RNA and membrane phospholipids.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00019-8"
   },
   "humanRole": {
    "text": "Bone mineral (calcium phosphate), ATP, DNA and RNA, and cell membranes.",
@@ -627,6 +627,173 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Phosphate ions, mostly H₂PO₄⁻, from the soil water",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00019-8"
+   },
+   "phloem": {
+    "mobility": "high",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 2000,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 2,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Leaves grow fewer and smaller but stay dark green, as their expansion is held back more than their chlorophyll; the plant sends more of its sugar to the roots. Flowering comes late, with fewer flowers and seeds.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     },
+     {
+      "text": "Short plants stand stiffly upright; the signs begin on the older leaves, and the stems of many annual plants turn reddish from anthocyanin pigments. Cereals form fewer side shoots.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_9"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Phosphorus poisoning is rare, because most plants throttle their phosphate uptake once they have enough. Many native plants of very poor soils in Australia and South Africa can hardly do this and are harmed when given phosphate fertiliser.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Over nine tenths of the phosphorus in a soil is locked away, in hardly soluble phosphates of calcium, iron and aluminium, in humus, or held on oxides and clays; only a tiny share is dissolved, and it reaches roots mainly by slow diffusion.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_9"
+     },
+     {
+      "text": "Most phosphate fertiliser is made from rock phosphate, a resource that cannot be renewed and is gradually being used up.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Arbuscular mycorrhizal fungi spread hyphae beyond the zone that roots have already emptied of phosphate and pass what they gather to the plant; in one experiment the hyphae supplied 70–80 % of all the phosphorus the plants took up.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00004-6"
+     },
+     {
+      "text": "Legumes with root nodules need more phosphorus than other plants, and a lack of it is often what limits their nitrogen fixation, above all on acid and on limy soils.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "wild": [
+     {
+      "text": "In ancient landscapes phosphorus, not nitrogen, is often the main limit on wild plant growth. Some plants grow dense 'cluster roots' that release a burst of organic acids and so 'mine' phosphate that mycorrhizal fungi cannot reach.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Phosphorus limits forests on old soils rich in iron and aluminium, common in the subtropics and tropics. Unlike nitrogen it has no gas form, so it cannot come from the air.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     },
+     {
+      "text": "Most mid-rotation loblolly pine plantations in the south-eastern USA grow faster when given nitrogen and phosphorus together, and intensively grown eucalypt plantations need large additions of both.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch13"
+     }
+    ],
+    "food": [
+     {
+      "text": "Seeds store most of their phosphorus as phytate. People cannot digest it, so the zinc and iron bound to it are poorly absorbed.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at flowering",
+     "kind": "bands",
+     "deficientBelow": 1000.0,
+     "adequateLow": 2000.0,
+     "adequateHigh": 5000.0,
+     "excessAbove": 8000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.20. Low: 1–2; high: 5–8. The deficient class is printed '<I' in the scanned text, read as below 1.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Soybean",
+     "group": "legumes",
+     "part": "mature new leaves before pods set",
+     "kind": "normal",
+     "adequateLow": 2500.0,
+     "adequateHigh": 5000.0,
+     "unit": "mg/kg",
+     "printedUnit": "%",
+     "note": "Table 3.1, average tissue concentrations after Mills and Jones (1996).",
+     "source": "barker_pilbeam2015",
+     "doi": "10.1201/b18458-7"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves at the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 1500.0,
+     "adequateHigh": 3000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.21. Low: below 1.5; high: above 3.0.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Norway spruce",
+     "group": "conifers",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 1200.0,
+     "criticalHigh": 1500.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    },
+    {
+     "plant": "Eucalyptus grandis",
+     "group": "broadleaf",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 1000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    }
+   ]
   },
   "isotopeUses": [
    {

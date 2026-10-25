@@ -696,6 +696,7 @@ export interface Biology {
     volumes?: string[];
     source: SourceId;
   }[];
+  plants?: PlantDetail;
 }
 /**
  * Whether a group of life needs or uses the element. essential: needed by essentially all members; some: used by some members (from a few to most), not by all; beneficial: helps, not required; none: a source says the group does without it.
@@ -707,6 +708,106 @@ export interface LifeGroup {
    */
   roles: [SourcedText, ...SourcedText[]];
   note?: string;
+}
+/**
+ * Plant nutrition in detail (tools/curated/plants.toml, added after v0.1.0), for the essential and beneficial elements; shown when a visitor opens 'More about plants'. uptake: the form in which roots (or leaves) take the element up; typical: the average concentration in shoot dry matter sufficient for adequate growth (Marschner, Table 1.3), in mg/kg. Every part is optional: an absent part means the sources used give nothing for it, not that there is nothing to know.
+ */
+export interface PlantDetail {
+  uptake?: SourcedText;
+  /**
+   * Mobility in the phloem (Marschner, Table 3.8): where shortage shows first follows from it.
+   */
+  phloem?: {
+    mobility: "high" | "intermediate" | "low" | "variable";
+    source: SourceId;
+    doi?: string;
+  };
+  typical?: Quantity;
+  /**
+   * Mengel and Kirkby's four groups of plant nutrients by biochemical job: 1 built into organic matter by oxidation and reduction (C, H, O, N, S); 2 bound as esters (P, B, Si); 3 as free ions (K, Na, Mg, Ca, Mn, Cl); 4 in enzymes as chelates, passing electrons by changing valence (Fe, Cu, Zn, Mo, Ni).
+   */
+  job?: {
+    group: number;
+    source: SourceId;
+    doi?: string;
+  };
+  /**
+   * When the element was shown to be essential (or beneficial), with whom, or in words.
+   */
+  known?: {
+    year?: number;
+    by?: string;
+    text?: string;
+    source: SourceId;
+    doi?: string;
+  };
+  /**
+   * @minItems 1
+   */
+  levels?: [PlantLevel, ...PlantLevel[]];
+  notes?: {
+    /**
+     * What too little does and where it happens.
+     *
+     * @minItems 1
+     */
+    deficiency?: [SourcedText, ...SourcedText[]];
+    /**
+     * What too much does and where it happens.
+     *
+     * @minItems 1
+     */
+    toxicity?: [SourcedText, ...SourcedText[]];
+    /**
+     * How available the element is in soils; fertilisers.
+     *
+     * @minItems 1
+     */
+    soil?: [SourcedText, ...SourcedText[]];
+    /**
+     * Mycorrhiza, nitrogen-fixing nodules and other partners.
+     *
+     * @minItems 1
+     */
+    partners?: [SourcedText, ...SourcedText[]];
+    /**
+     * Wild plants: indicator and accumulator plants, salty and serpentine soils.
+     *
+     * @minItems 1
+     */
+    wild?: [SourcedText, ...SourcedText[]];
+    /**
+     * Forests and trees.
+     *
+     * @minItems 1
+     */
+    forest?: [SourcedText, ...SourcedText[]];
+    /**
+     * Crop quality and the link to human and animal nutrition.
+     *
+     * @minItems 1
+     */
+    food?: [SourcedText, ...SourcedText[]];
+  };
+}
+/**
+ * Concentrations in a plant's leaves (or the tissue named in `part`), dry matter, in mg/kg (converted by the pipeline from the unit printed, kept in `printedUnit`). kind 'bands': the source's classes, deficient below deficientBelow, adequate from adequateLow to adequateHigh, excess above excessAbove (the zones between are the source's 'low' and 'high'); 'normal': a usual or sufficiency range (adequateLow to adequateHigh); 'critical': the level below which the plant is short (trees often respond to fertiliser), in deficientBelow, or a critical range from deficientBelow to criticalHigh.
+ */
+export interface PlantLevel {
+  plant: string;
+  group: "cereals" | "legumes" | "vegetables" | "fruit" | "conifers" | "broadleaf" | "other";
+  part?: string;
+  kind: "bands" | "normal" | "critical";
+  deficientBelow?: number;
+  criticalHigh?: number;
+  adequateLow?: number;
+  adequateHigh?: number;
+  excessAbove?: number;
+  unit: "mg/kg";
+  printedUnit: "mg/kg" | "μg/g" | "g/kg" | "mg/g" | "%";
+  note?: string;
+  source: SourceId;
+  doi?: string;
 }
 /**
  * Chemistry & bonding (SPEC §10.9): how the element bonds, how it reacts with air, water and acids (our own words, each with its source), well-known compounds, one compound per common oxidation state, and Shannon's ionic radii of its common ions.

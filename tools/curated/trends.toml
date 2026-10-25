@@ -381,8 +381,8 @@ classes = [
 [[map]]
 id = "essential-plants"
 label = "Essential for plants"
-caption = "Elements plants cannot complete their life cycle without, and elements that benefit some plants, from tools/curated/biology.toml (Marschner's Mineral Nutrition of Higher Plants and cited reviews)."
-sources = ["marschner2012", "primary_literature"]
+caption = "Elements plants cannot complete their life cycle without, and elements that benefit some plants, from tools/curated/biology.toml (Marschner's Mineral Nutrition of Plants and cited reviews)."
+sources = ["marschner2023", "primary_literature"]
 classes = [
   { id = "yes", label = "Essential", short = "ess.", description = "Required by all higher plants.", tone = 3 },
   { id = "beneficial", label = "Beneficial", short = "ben.", description = "Promotes growth in some plants, or is required by some taxa only.", tone = 2 },

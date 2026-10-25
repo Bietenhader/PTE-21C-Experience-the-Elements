@@ -54,7 +54,11 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `cgpm_resolutions` | [Resolutions of the General Conference on Weights and Measures (CGPM)](https://www.bipm.org/en/committees/cg/cgpm/resolutions) | [© BIPM; definitions are facts; cite](https://www.bipm.org/en/legal-notice) | — | used |
 | `bipm_mep_kilogram` | [Mise en pratique for the definition of the kilogram in the SI (SI Brochure, Appendix 2)](https://www.bipm.org/en/publications/mises-en-pratique) | [© BIPM; facts; cite](https://www.bipm.org/en/legal-notice) | — | used |
 | `allen_en` | [Configuration energies (Allen electronegativity) of the elements](https://doi.org/10.1021/ja992866e) | [Published numerical values; cite](https://doi.org/10.1021/ja992866e) | — | used |
-| `marschner2012` | [Marschner's Mineral Nutrition of Higher Plants, 3rd edition](https://doi.org/10.1016/C2009-0-63043-9) | [Facts; cite](https://doi.org/10.1016/C2009-0-63043-9) | — | used |
+| `marschner2023` | [Marschner's Mineral Nutrition of Plants, 4th edition](https://doi.org/10.1016/C2019-0-00491-8) | [Textbook; facts cited](https://doi.org/10.1016/C2019-0-00491-8) | — | used |
+| `mengel_kirkby2001` | [Principles of Plant Nutrition, 5th edition](https://doi.org/10.1007/978-94-010-1009-2) | [Textbook; facts cited](https://doi.org/10.1007/978-94-010-1009-2) | — | used |
+| `barker_pilbeam2015` | [Handbook of Plant Nutrition, 2nd edition](https://doi.org/10.1201/b18458) | [Textbook; facts cited](https://doi.org/10.1201/b18458) | — | used |
+| `binkley_fisher2020` | [Ecology and Management of Forest Soils, 5th edition](https://doi.org/10.1002/9781119455745) | [Textbook; facts cited](https://doi.org/10.1002/9781119455745) | — | used |
+| `epstein1972` | [Mineral Nutrition of Plants: Principles and Perspectives](https://search.worldcat.org/search?q=bn:047124340X) | [Textbook; facts cited](https://search.worldcat.org/search?q=bn:047124340X) | — | used |
 | `efsa_drv` | [EFSA Dietary Reference Values for nutrients — summary report](https://doi.org/10.2903/sp.efsa.2017.e15121) | [Facts; cite](https://doi.org/10.2903/sp.efsa.2017.e15121) | — | used |
 | `zoroddu2019` | [The essential metals for humans: a brief overview](https://doi.org/10.1016/j.jinorgbio.2019.03.013) | [Facts; cite](https://doi.org/10.1016/j.jinorgbio.2019.03.013) | — | used |
 | `smits2020` | [Oganesson: a noble gas element that is neither noble nor a gas](https://doi.org/10.1002/anie.202011976) | [Scientific facts; cite](https://doi.org/10.1002/anie.202011976) | — | used |
@@ -118,7 +122,11 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `cgpm_resolutions` — Conférence Générale des Poids et Mesures, Resolutions (BIPM), each cited by its DOI 10.59161/CGPM<year>RES<n>E.
 - `bipm_mep_kilogram` — CCM, Mise en pratique for the definition of the kilogram in the SI, SI Brochure 9th edition, Appendix 2 (BIPM).
 - `allen_en` — J. B. Mann, T. L. Meek and L. C. Allen, J. Am. Chem. Soc. 122, 2780 (2000), doi:10.1021/ja992866e; J. B. Mann, T. L. Meek, E. T. Knight, J. F. Capitani and L. C. Allen, J. Am. Chem. Soc. 122, 5132 (2000), doi:10.1021/ja9928677.
-- `marschner2012` — P. Marschner (ed.), Marschner's Mineral Nutrition of Higher Plants, 3rd ed., Academic Press (2012); chapters cited by DOI.
+- `marschner2023` — Z. Rengel, I. Cakmak and P. J. White (eds.), Marschner's Mineral Nutrition of Plants, 4th ed., Academic Press (2023), doi:10.1016/C2019-0-00491-8; chapters cited by DOI.
+- `mengel_kirkby2001` — K. Mengel and E. A. Kirkby (with H. Kosegarten and T. Appel), Principles of Plant Nutrition, 5th ed., Kluwer Academic Publishers, Dordrecht (2001), doi:10.1007/978-94-010-1009-2; chapters cited by DOI.
+- `barker_pilbeam2015` — A. V. Barker and D. J. Pilbeam (eds.), Handbook of Plant Nutrition, 2nd ed., CRC Press, Boca Raton (2015), doi:10.1201/b18458; one chapter per element, cited by its chapter DOI.
+- `binkley_fisher2020` — D. Binkley and R. F. Fisher, Ecology and Management of Forest Soils, 5th ed., Wiley-Blackwell, Hoboken (2020), doi:10.1002/9781119455745; chapters cited by DOI.
+- `epstein1972` — E. Epstein, Mineral Nutrition of Plants: Principles and Perspectives, John Wiley & Sons, New York (1972), ISBN 0-471-24340-X.
 - `efsa_drv` — European Food Safety Authority, Dietary Reference Values for nutrients: Summary report, EFSA Supporting Publications 14, e15121 (2017), doi:10.2903/sp.efsa.2017.e15121.
 - `zoroddu2019` — M. A. Zoroddu, J. Aaseth, G. Crisponi, S. Medici, M. Peana and V. M. Nurchi, J. Inorg. Biochem. 195, 120 (2019), doi:10.1016/j.jinorgbio.2019.03.013.
 - `smits2020` — O. R. Smits, J.-M. Mewes, P. Jerabek and P. Schwerdtfeger, Oganesson: a noble gas element that is neither noble nor a gas, Angew. Chem. Int. Ed. 59, 23636–23640 (2020), doi:10.1002/anie.202011976.
@@ -186,6 +194,8 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | Biology: a role in fungi | 16 | — | biology.toml [[life]] |
 | Biology: a role in bacteria | 26 | — | biology.toml [[life]] |
 | Biology: a role in archaea | 17 | — | biology.toml [[life]] |
+| Biology: plants in detail | 23 | — | plants.toml |
+| Biology: leaf levels of plants | 12 | — | plants.toml [[leaf_level]] |
 | History: discovery | 118 | — | history.toml |
 | Our own short text | 118 | — | prose/{Z}.md |
 | Static dipole polarizability | 118 | — | schwerdtfeger2019 |

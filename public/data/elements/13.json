@@ -566,14 +566,97 @@
   "essentialHuman": "no",
   "plantClass": "beneficial",
   "plantRole": {
-   "text": "At low concentrations it stimulates growth in some species, such as tea; in acid soils dissolved aluminium is instead a major cause of poor root growth.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00008-X"
+   "text": "Stimulates the growth of some plants adapted to acid soils, such as tea and hydrangea, which store it in their shoots; for most other plants, dissolved aluminium in acid soils is toxic and stunts the roots.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00012-5"
   },
   "humanRole": {
    "text": "No known role in the body.",
    "source": "zoroddu2019",
    "doi": "10.1016/j.jinorgbio.2019.03.013"
+  },
+  "plants": {
+   "uptake": {
+    "text": "Dissolved aluminium from acid soil water; in most plants it stays bound in the outer cell walls of the roots",
+    "source": "barker_pilbeam2015",
+    "doi": "10.1201/b18458-20"
+   },
+   "known": {
+    "text": "1955, when Chenery reported that the tea bush needs it for normal growth",
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_20"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Some plants of acid soils grow better with aluminium: tea roots grew two and a half times faster with it in one experiment, and the oak Quercus serrata, Melastoma and hydrangea respond too; how it helps is not yet understood.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "For most other plants, the gains reported in nutrient solutions are probably a side effect: the aluminium removes excess phosphate from the solution rather than meeting a real need.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-20"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "In acid soils, dissolved aluminium is toxic to most plants: within an hour the roots stop lengthening, then turn short and stubby with cracked tips, and the shoots wilt and show signs of calcium, magnesium, phosphorus and nitrogen shortage.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-20"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Above pH 5.5 soil water usually holds less than 1 mg of aluminium per litre, but much more dissolves as a soil becomes more acid.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     },
+     {
+      "text": "Liming with calcium and magnesium compounds neutralises the acidity; growing tolerant crops helps too, but works best together with liming, because the soil keeps acidifying.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-20"
+     }
+    ],
+    "partners": [
+     {
+      "text": "In acid soils aluminium hinders the multiplication of the Rhizobium bacteria, so legumes form fewer root nodules.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Some plants, mostly tropical trees and shrubs, gather aluminium in their leaves: over 1000 mg per kg of dry leaf, against under 200 mg in most plants; old tea leaves can hold 3%, and buckwheat is a crop that does the same.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-20"
+     },
+     {
+      "text": "The blue colour of hydrangea flowers comes from aluminium stored in the petals.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00012-5"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Dissolved aluminium in acid forest soils can hold back root growth, but tolerance of acid soils varies widely, and many tree species cope well.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch6"
+     },
+     {
+      "text": "Much of the aluminium dissolved in forest soil water is bound to dissolved organic matter, and in that form it is not toxic.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch7"
+     }
+    ],
+    "food": [
+     {
+      "text": "Tea is made from young leaves, which hold only about 600 mg of aluminium per kg, under 2% of the level in old leaves, so tea probably adds little to the aluminium people take in.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-20"
+     }
+    ]
+   }
   },
   "environment": [
    {

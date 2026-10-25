@@ -637,6 +637,51 @@ Fin's look at the live site, on desktop and on his iPhone (video, 22 October 202
   Crossref. Fin reviews all rows.
 - **Coverage:** four new rows in the coverage table ("Biology: a role in …"); a `none` row does not count.
 
+### Biology: plants in detail
+
+- **Fin's choice (design B of three):** the cards stay short; a card with more to tell gets a "More about …"
+  button, and its details open full-width below the six cards, one group at a time. Plants first, from
+  five plant-nutrition books Fin supplied; animals (Suttle) and humans (EFSA intakes) can follow in the
+  same pattern. The button has `aria-expanded`/`aria-controls`; opening moves the focus to the details'
+  heading (so a phone scrolls there), and "Less about plants" inside them gives the focus back to the button.
+- **Data:** `tools/curated/plants.toml`, its own file so Fin can review it like `biology.toml`. Three
+  tables: `[[plant]]` (one per element: uptake form; phloem mobility from Marschner's Table 3.8 only; the
+  shoot concentration sufficient for growth from Marschner's Table 1.3 only; Mengel & Kirkby's four groups
+  by biochemical job; when the element was shown to be needed, Marschner's Table 1.1 or Epstein for the
+  classic ten), `[[plant_note]]` (sourced sentences by topic: too little, too much, soil, partners, wild
+  plants, forests, crops and food) and `[[leaf_level]]` (leaf levels of a named plant). Each fact has its
+  own `_source` and chapter `_doi`. `build_lifeandhistory.py` writes `biology.plants`; the build stops on
+  an unknown column, topic, group, kind, mobility or unit, a fact without its source, levels that do not
+  rise, or two rows for one element and group. Facts and leaf levels are only allowed for elements that
+  `biology.toml` marks essential or beneficial for plants; notes (e.g. on toxicity) may concern any element.
+- **Leaf levels, as the books give them:** the "six groups of plants" Fin approved exist as one table only
+  for zinc and iron (Barker & Pilbeam's crop-class ranges, from Bryson et al. 2014). For the rest the
+  uniform tables are Mengel & Kirkby's maize ear leaf (deficient, low, adequate, high, excess) and apple
+  leaves (low, adequate, high), Binkley & Fisher's critical foliar levels for trees (N, P, K, Ca, Mg), and
+  Barker & Pilbeam's per-element crop tables. So each element shows the groups its sources cover, at most
+  one plant per group, and each row says how to read it: `bands` (the source's classes), `normal` (a usual
+  or sufficiency range) or `critical` (below it the plant is short: a single level, or a range up to
+  `critical_high` where Binkley & Fisher print one, e.g. 12–15 mg/g nitrogen for Norway spruce). Values are
+  kept as printed in the TOML (`unit` = mg/kg, μg/g, g/kg, mg/g or %) and converted to mg/kg by the
+  pipeline with decimal arithmetic; the panel shows g/kg from 1000 mg/kg on (`src/physics/units.ts`). On a
+  narrow screen each plant's name and figures stand above its bar instead of beside it. The chart puts the plants
+  on one logarithmic axis; too little and too much are hatched differently, "enough" is a solid outline and
+  a usual range a dashed one, so nothing is told by colour alone; "Show as table" lists the numbers with
+  the tissue sampled and the unit printed.
+- **Size of the first batch:** 22 elements (the 14 essential mineral nutrients; Na, Si, Co, Se, Al and I;
+  briefly H, C and O), 173 notes and 57 leaf levels, compiled from the books' text and spot-checked against
+  it. Cl and Ni have no leaf levels (the books give single measurements, not ranges), nor do the beneficial
+  elements; iodine has notes only.
+- **Moved to the 4th edition:** the plant sentences of `biology.toml` now cite *Marschner's Mineral
+  Nutrition of Plants*, 4th ed. (2023), chapter by chapter, each checked against Fin's copy; nickel keeps
+  Brown et al. (1987). Iodine is now "beneficial" for plants, as the 4th edition lists it (chapter 1).
+- **The open debate** on what counts as a plant nutrient (Brown, Zhao & Dobermann 2022) is one line in the
+  legend under the cards.
+- **Rights:** the books are all-rights-reserved; only facts are used, every sentence is ours, and none of
+  their text is in the repository. Leaf levels are a few rows per element, not whole tables.
+- **Still to come (Fin, second PR):** what too much of non-nutrients (Cd, Pb, Hg, As …) does to plants,
+  the lanthanides and vanadium.
+
 ## Tooling
 
 - Versions are pinned exactly. TypeScript 6.0 is used because typescript-eslint does not yet support

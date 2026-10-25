@@ -738,8 +738,8 @@
   "plantClass": "micronutrient",
   "plantRole": {
    "text": "Carries electrons in plastocyanin of photosynthesis and in cytochrome c oxidase; also needed for lignin and pollen formation.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00007-8"
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00017-4"
   },
   "humanRole": {
    "text": "Part of cytochrome c oxidase, superoxide dismutase and the proteins that handle iron.",
@@ -792,6 +792,153 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Cu²⁺; when copper is scarce, roots first reduce it to Cu⁺",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00017-4"
+   },
+   "phloem": {
+    "mobility": "intermediate",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 6,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 4,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "year": 1931,
+    "by": "C. B. Lipman and G. MacKinney",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Young leaves are distorted and bleached, and stems bend or twist because their walls lack lignin, so cereals fall over (lodge) easily. Grain and fruit suffer most, because copper-short plants make sterile pollen.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "Cereals turn bushy, with white twisted leaf tips and partly empty ears. Oats, spinach, wheat and lucerne respond most to copper fertiliser; beans, grass, potatoes and soybeans least.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_16"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Copper builds up in soils from years of copper fungicides (in vineyards and coffee plantations), sewage sludge and pig or poultry slurry. Roots stop growing first, because they trap most of the excess.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Shortage occurs on soils naturally poor in copper, such as leached sandy soils, and on soils that bind it, such as peats, limy and some clay soils; it is common enough on newly drained peat to be called 'reclamation disease'.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_16"
+     },
+     {
+      "text": "Copper sulfate or oxide spread on the soil can keep working for decades, up to 30 years in southern Australia; leaf sprays act faster but can scorch leaves if too strong.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Plants with arbuscular mycorrhiza usually take up more copper and zinc than plants without the fungus.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00004-6"
+     },
+     {
+      "text": "Too much copper in the soil harms nitrogen fixation in legume nodules.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "wild": [
+     {
+      "text": "On the copper-rich soils of the Democratic Republic of Congo grow copper-tolerant plants whose leaves have been reported to hold around 1,000 mg per kg of dry matter, though some of this may be dust on the leaves.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "Common bent grass on the spoil of a Welsh copper mine evolved copper-tolerant populations within about a century, very fast by the usual pace of evolution.",
+      "source": "epstein1972"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Twisted, deformed leading shoots in Douglas-fir have been traced to copper shortage, and in some cases to boron shortage.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch13"
+     }
+    ],
+    "food": [
+     {
+      "text": "Copper fertilisers can raise copper in food and fodder where people or livestock lack it, but must be used with care, because too much harms plants and animals.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00017-4"
+     },
+     {
+      "text": "Sheep are especially sensitive to copper-rich fodder; about 50 mg per kg of dry matter is taken as the upper limit for forage.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_16"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at flowering",
+     "kind": "bands",
+     "deficientBelow": 2.0,
+     "adequateLow": 6.0,
+     "adequateHigh": 50.0,
+     "excessAbove": 70.0,
+     "unit": "mg/kg",
+     "printedUnit": "μg/g",
+     "note": "Table 2.20. Low: 3–5; high: 50–70.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves from the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 5.0,
+     "adequateHigh": 12.0,
+     "unit": "mg/kg",
+     "printedUnit": "μg/g",
+     "note": "Table 2.21. Low: <5; high: >12.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Conifers",
+     "group": "conifers",
+     "part": "needles",
+     "kind": "critical",
+     "deficientBelow": 3.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/kg",
+     "note": "Possible deficiency below this level (Carter 1992, cited in chapter 13); the book says micronutrient critical levels in trees are not well established.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    }
+   ]
   }
  },
  "history": {

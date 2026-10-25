@@ -498,9 +498,9 @@
   "essentialHuman": "yes",
   "plantClass": "macronutrient",
   "plantRole": {
-   "text": "Taken up as nitrate or ammonium; part of amino acids, proteins, nucleic acids and chlorophyll, and the nutrient that most often limits plant growth.",
-   "source": "marschner2012",
-   "doi": "10.1016/B978-0-12-384905-2.00006-6"
+   "text": "Taken up mostly as nitrate or ammonium; part of proteins, nucleic acids and chlorophyll, and, after carbon, the element plants need in the largest amount.",
+   "source": "marschner2023",
+   "doi": "10.1016/b978-0-12-819773-8.00019-8"
   },
   "humanRole": {
    "text": "Part of every amino acid, protein and nucleic acid; obtained from dietary protein.",
@@ -548,6 +548,154 @@
      }
     ]
    }
+  },
+  "plants": {
+   "uptake": {
+    "text": "Nitrate (NO₃⁻) and ammonium (NH₄⁺) from the soil water; legumes also use N₂ from the air, through bacteria in their root nodules",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00019-8"
+   },
+   "phloem": {
+    "mobility": "high",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00002-2"
+   },
+   "typical": {
+    "value": 15000,
+    "unit": "mg/kg",
+    "source": "marschner2023",
+    "doi": "10.1016/b978-0-12-819773-8.00016-2",
+    "note": "in shoot dry matter"
+   },
+   "job": {
+    "group": 1,
+    "source": "mengel_kirkby2001",
+    "doi": "10.1007/978-94-010-1009-2_1"
+   },
+   "known": {
+    "text": "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions",
+    "source": "epstein1972"
+   },
+   "notes": {
+    "deficiency": [
+     {
+      "text": "Plants stay small, with narrow, pale green to yellow leaves; the yellowing starts on the older leaves, because the plant moves their nitrogen to the young ones. Cereals form fewer side shoots and fewer grains per ear.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "toxicity": [
+     {
+      "text": "Too much ammonium as the only nitrogen source harms many plants: leaves yellow, growth stalls and tissue dies. Barley is sensitive to it, rice tolerant; a little nitrate alongside eases the damage.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Soil particles do not hold nitrate, so it travels with the soil water and is easily lost. A crop takes up only about half of the fertiliser nitrogen in the first year; the rest stays in the soil or escapes, as nitrate into waters or as ammonia and nitrous oxide into the air.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     },
+     {
+      "text": "Factory-made nitrogen fertiliser comes from the Haber–Bosch process, which turns nitrogen from the air into ammonia at high temperature and pressure; it accounts for more than half of the energy used in commercial farming.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "partners": [
+     {
+      "text": "Only a small group of microbes can turn the air's N₂ into ammonia. Legumes house rhizobia in root nodules; alders, Casuarina, Ceanothus and some 200 other woody plants house Frankia instead, and cycads and the water fern Azolla partner with cyanobacteria.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00006-x"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Plants of acid soils and wetlands tend to prefer ammonium, while plants of limy soils prefer nitrate; in acid forest soils, ammonium and amino acids are the main forms of nitrogen on offer.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00019-8"
+     }
+    ],
+    "forest": [
+     {
+      "text": "Nitrogen is the nutrient that limits most temperate forests, many boreal ones and some tropical ones; trees get it from nitrate and ammonium released as soil organic matter decays.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     },
+     {
+      "text": "Without nitrogen-fixing plants a forest gains less than a kilogram of fixed nitrogen per hectare a year; with them, up to several hundred. Alders always carry their nodules, Ceanothus shrubs not always.",
+      "source": "binkley_fisher2020",
+      "doi": "10.1002/9781119455745.ch8"
+     }
+    ],
+    "food": [
+     {
+      "text": "Good nitrogen supply, with part of it given late in the season, raises the gluten proteins in wheat grain and so its baking quality; durum wheat for pasta is wanted with more than 12–13 % protein.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     },
+     {
+      "text": "Leafy vegetables such as spinach, lettuce and chard, and beetroot, can store a lot of nitrate, and food safety authorities set upper limits for spinach and lettuce; avoiding excess fertiliser and choosing the time of harvest keep levels down.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     }
+    ]
+   },
+   "levels": [
+    {
+     "plant": "Maize",
+     "group": "cereals",
+     "part": "ear leaf at flowering",
+     "kind": "bands",
+     "deficientBelow": 20000.0,
+     "adequateLow": 25000.0,
+     "adequateHigh": 35000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.20. Low: 20–25; high: above 35. The table gives no excess class for nitrogen.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Apple",
+     "group": "fruit",
+     "part": "leaves at the base of new shoots",
+     "kind": "bands",
+     "adequateLow": 18000.0,
+     "adequateHigh": 24000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 2.21. Low: below 18; high: above 24.",
+     "source": "mengel_kirkby2001",
+     "doi": "10.1007/978-94-010-1009-2_2"
+    },
+    {
+     "plant": "Norway spruce",
+     "group": "conifers",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 12000.0,
+     "criticalHigh": 15000.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    },
+    {
+     "plant": "Eucalyptus grandis",
+     "group": "broadleaf",
+     "part": "foliage",
+     "kind": "critical",
+     "deficientBelow": 12500.0,
+     "unit": "mg/kg",
+     "printedUnit": "mg/g",
+     "note": "Table 13.2; stands below it often respond to fertiliser.",
+     "source": "binkley_fisher2020",
+     "doi": "10.1002/9781119455745.ch13"
+    }
+   ]
   },
   "isotopeUses": [
    {

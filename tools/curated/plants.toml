@@ -1,0 +1,2353 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Plants in detail (Biology & ecology panel, "More about plants"; added after v0.1.0).
+# FIN REVIEWS THIS FILE — please mark anything wrong, too simple or missing; the app shows it as it stands.
+#
+# Facts from five plant-nutrition books (keys in tools/sources.toml), every sentence in our own words; none
+# of the books' text is in the repository. Each row names its book and, where the book has them, the
+# chapter DOI:
+#   marschner2023       Marschner's Mineral Nutrition of Plants, 4th ed. (Rengel, Cakmak & White, 2023)
+#   mengel_kirkby2001   Principles of Plant Nutrition, 5th ed. (Mengel & Kirkby, 2001)
+#   barker_pilbeam2015  Handbook of Plant Nutrition, 2nd ed. (Barker & Pilbeam, 2015)
+#   binkley_fisher2020  Ecology and Management of Forest Soils, 5th ed. (Binkley & Fisher, 2020)
+#   epstein1972         Mineral Nutrition of Plants: Principles and Perspectives (Epstein, 1972) — history
+#                       and the ecology of wild plants only, never for an element's present status
+#
+# [[plant]] — one per element, the facts "at a glance" (each with its own _source and _doi):
+#   uptake          the form roots (or leaves) take it up in
+#   phloem          high | intermediate | low | variable — Marschner's Table 3.8 only
+#   typical_mg_kg   average concentration in shoot dry matter sufficient for growth — Marschner's Table 1.3
+#   job             Mengel & Kirkby's four groups by biochemical job: 1 built into organic matter by
+#                   oxidation and reduction; 2 bound as esters; 3 as free ions; 4 in enzymes, passing electrons
+#   known_year / known_by / known_text   when it was shown to be needed (Marschner's Table 1.1 for the
+#                   micronutrients, Epstein for the classic ten) or, for a beneficial element, to help
+#
+# [[plant_note]] — sourced sentences by topic: deficiency (too little), toxicity (too much), soil, partners
+#   (mycorrhiza, nodules), wild (wild plants), forest, food (crops and food).
+#
+# [[leaf_level]] — leaf (tissue) levels of one named plant per group (cereals, legumes, vegetables, fruit,
+#   conifers, broadleaf), as the book prints them; the pipeline converts the unit to mg/kg. kind says how to
+#   read a row: bands = the book's classes (deficient below / adequate from–to / excess above; the gaps are
+#   its "low" and "high"), normal = a usual or sufficiency range, critical = the level (or range, up to
+#   critical_high) below which the plant is short — for trees, below which stands often respond to fertiliser.
+#
+# The build stops on an unknown column, topic, group, kind or unit, a fact without its source, levels that do
+# not rise, or two rows for one element and group (tools/build_lifeandhistory.py).
+
+# --- Hydrogen (Z = 1) ---
+[[plant]]
+Z = 1
+uptake = "Water (H₂O) from the soil, or from the air when it is very humid"
+uptake_source = "mengel_kirkby2001"
+uptake_doi = "10.1007/978-94-010-1009-2_1"
+job = 1
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century; it comes with water"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 1
+topic = "forest"
+text = "Trees get their hydrogen from water. Free hydrogen ions set how acid a soil is, and soils that are extremely acid or extremely alkaline hold forests back."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+# --- Boron (Z = 5) ---
+[[plant]]
+Z = 5
+uptake = "Uncharged boric acid, B(OH)₃"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00017-4"
+phloem = "variable"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 20
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 2
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_year = 1923
+known_by = "K. Warington"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00016-2"
+
+[[plant_note]]
+Z = 5
+topic = "deficiency"
+text = "Growing points suffer first: the youngest leaves and buds are deformed or die, stems thicken or crack, and flowers and young fruit drop. Typical disorders are hollow stem in broccoli, heart rot in sugar beet, brown heart in swede and turnip, and internal cork in apples."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 5
+topic = "deficiency"
+text = "Grasses such as wheat need several times less boron than clover and most other broad-leaved plants, probably because their cell walls hold less pectin. Boron shortage is thought to be more widespread in crops worldwide than shortage of any other micronutrient."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 5
+topic = "toxicity"
+text = "Too much boron is common in dry regions, on soils formed from marine sediments and where irrigation water is rich in boron; older leaves yellow and die back from their tips and edges. Tolerance ranges from about 100 mg per kg of leaf dry matter in maize to about 1,000 in squash."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 5
+topic = "soil"
+text = "Boric acid washes out of soil easily, so shortage is common in rainy regions and the tropics, and on sandy, alkaline or heavily limed soils; dry topsoil also cuts the supply to roots."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 5
+topic = "partners"
+text = "Legumes need four to five times more boron to build root nodules than to grow roots, so boron shortage means fewer and poorer nodules and less nitrogen fixed."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 5
+topic = "forest"
+text = "In Scots pine stands in northern Sweden that were fertilised with nitrogen, boron shortage killed the leading shoots; side shoots took over and the stems grew crooked."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+
+[[plant_note]]
+Z = 5
+topic = "food"
+text = "Seeds from boron-short plants can look normal yet give more weak or abnormal seedlings, as found in black gram."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[leaf_level]]
+Z = 5
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+deficient_below = 2
+adequate_low = 6
+adequate_high = 40
+excess_above = 55
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 3–5; high: 40–55."
+
+[[leaf_level]]
+Z = 5
+plant = "Alfalfa"
+group = "legumes"
+part = "top third of the plant shortly before flowering"
+kind = "bands"
+deficient_below = 20
+adequate_low = 31
+adequate_high = 80
+excess_above = 100
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-12"
+note = "Table 8.3, row citing Neubert et al. (1970): deficiency <20, sufficiency 31–80, toxicity >100."
+
+[[leaf_level]]
+Z = 5
+plant = "Tomato"
+group = "vegetables"
+part = "young mature leaves from the top of the plant"
+kind = "bands"
+deficient_below = 10
+adequate_low = 30
+adequate_high = 75
+excess_above = 200
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-12"
+note = "Table 8.3, row citing Neubert et al. (1970): deficiency <10, sufficiency 30–75, toxicity >200."
+
+[[leaf_level]]
+Z = 5
+plant = "Apple"
+group = "fruit"
+part = "leaves from the base of new shoots"
+kind = "bands"
+adequate_low = 25
+adequate_high = 50
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: <25; high: >50."
+
+[[leaf_level]]
+Z = 5
+plant = "Conifers"
+group = "conifers"
+part = "needles"
+kind = "critical"
+deficient_below = 12
+unit = "mg/kg"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Possible deficiency below this level (Carter 1992, cited in chapter 13); the book says micronutrient critical levels in trees are not well established."
+
+# --- Carbon (Z = 6) ---
+[[plant]]
+Z = 6
+uptake = "Carbon dioxide (CO₂) from the air; possibly a little bicarbonate from the soil water"
+uptake_source = "mengel_kirkby2001"
+uptake_doi = "10.1007/978-94-010-1009-2_1"
+job = 1
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century, by which time it was known to come from the air"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 6
+topic = "forest"
+text = "The carbon in wood comes from the air. The amount of carbon dioxide in the atmosphere can itself limit how fast forests grow, a limit that may ease as the gas becomes more plentiful."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+# --- Nitrogen (Z = 7) ---
+[[plant]]
+Z = 7
+uptake = "Nitrate (NO₃⁻) and ammonium (NH₄⁺) from the soil water; legumes also use N₂ from the air, through bacteria in their root nodules"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00019-8"
+phloem = "high"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 15000
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 1
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 7
+topic = "deficiency"
+text = "Plants stay small, with narrow, pale green to yellow leaves; the yellowing starts on the older leaves, because the plant moves their nitrogen to the young ones. Cereals form fewer side shoots and fewer grains per ear."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 7
+topic = "toxicity"
+text = "Too much ammonium as the only nitrogen source harms many plants: leaves yellow, growth stalls and tissue dies. Barley is sensitive to it, rice tolerant; a little nitrate alongside eases the damage."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 7
+topic = "soil"
+text = "Soil particles do not hold nitrate, so it travels with the soil water and is easily lost. A crop takes up only about half of the fertiliser nitrogen in the first year; the rest stays in the soil or escapes, as nitrate into waters or as ammonia and nitrous oxide into the air."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 7
+topic = "soil"
+text = "Factory-made nitrogen fertiliser comes from the Haber–Bosch process, which turns nitrogen from the air into ammonia at high temperature and pressure; it accounts for more than half of the energy used in commercial farming."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 7
+topic = "partners"
+text = "Only a small group of microbes can turn the air's N₂ into ammonia. Legumes house rhizobia in root nodules; alders, Casuarina, Ceanothus and some 200 other woody plants house Frankia instead, and cycads and the water fern Azolla partner with cyanobacteria."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 7
+topic = "wild"
+text = "Plants of acid soils and wetlands tend to prefer ammonium, while plants of limy soils prefer nitrate; in acid forest soils, ammonium and amino acids are the main forms of nitrogen on offer."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 7
+topic = "forest"
+text = "Nitrogen is the nutrient that limits most temperate forests, many boreal ones and some tropical ones; trees get it from nitrate and ammonium released as soil organic matter decays."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 7
+topic = "forest"
+text = "Without nitrogen-fixing plants a forest gains less than a kilogram of fixed nitrogen per hectare a year; with them, up to several hundred. Alders always carry their nodules, Ceanothus shrubs not always."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 7
+topic = "food"
+text = "Good nitrogen supply, with part of it given late in the season, raises the gluten proteins in wheat grain and so its baking quality; durum wheat for pasta is wanted with more than 12–13 % protein."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 7
+topic = "food"
+text = "Leafy vegetables such as spinach, lettuce and chard, and beetroot, can store a lot of nitrate, and food safety authorities set upper limits for spinach and lettuce; avoiding excess fertiliser and choosing the time of harvest keep levels down."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[leaf_level]]
+Z = 7
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+deficient_below = 20
+adequate_low = 25
+adequate_high = 35
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 20–25; high: above 35. The table gives no excess class for nitrogen."
+
+[[leaf_level]]
+Z = 7
+plant = "Apple"
+group = "fruit"
+part = "leaves at the base of new shoots"
+kind = "bands"
+adequate_low = 18
+adequate_high = 24
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: below 18; high: above 24."
+
+[[leaf_level]]
+Z = 7
+plant = "Norway spruce"
+group = "conifers"
+part = "foliage"
+kind = "critical"
+deficient_below = 12
+critical_high = 15
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser."
+
+[[leaf_level]]
+Z = 7
+plant = "Eucalyptus grandis"
+group = "broadleaf"
+part = "foliage"
+kind = "critical"
+deficient_below = 12.5
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2; stands below it often respond to fertiliser."
+
+# --- Oxygen (Z = 8) ---
+[[plant]]
+Z = 8
+uptake = "In carbon dioxide and water, and as oxygen gas (O₂)"
+uptake_source = "mengel_kirkby2001"
+uptake_doi = "10.1007/978-94-010-1009-2_1"
+job = 1
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century; it comes with water and carbon dioxide"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 8
+topic = "forest"
+text = "Roots draw oxygen from the air in the soil's pores. In wet soil it can only creep in slowly, so waterlogged soils are where oxygen holds trees back."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+# --- Sodium (Z = 11) ---
+[[plant]]
+Z = 11
+uptake = "Na⁺ ions, which enter the roots through the plant's potassium channels and carriers"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00012-5"
+phloem = "high"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+job = 3
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "the late 1950s, when Brownell and Wood found that the Australian saltbush Atriplex vesicaria needs traces of it"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 11
+topic = "deficiency"
+text = "Many C4 plants, such as amaranths and saltbushes, grow poorly, turn pale and may fail to flower without traces of sodium, because their way of concentrating carbon dioxide in the leaf needs it; maize and sugarcane are exceptions."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 11
+topic = "deficiency"
+text = "Sugar beet, chard and other beets can let sodium do much of potassium's work in the cell sap, and then grow larger, fleshier leaves; most crops, such as maize and beans, cannot."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 11
+topic = "toxicity"
+text = "Where a dry climate and irrigation concentrate salt, the soil water can hold 50–100 millimoles of sodium per litre, enough to harm most crops."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 11
+topic = "toxicity"
+text = "Inside the cell, sodium gets in the way of the many enzymes that need potassium; salt-tolerant plants avoid this by locking it away in their vacuoles."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-25"
+
+[[plant_note]]
+Z = 11
+topic = "soil"
+text = "In dry regions, evaporation draws salty water up to the surface; soils with more than 15% of their exchange sites taken by sodium (sodic soils) lose their structure and form crusts that roots, water and air struggle to get through."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-25"
+
+[[plant_note]]
+Z = 11
+topic = "soil"
+text = "Sodium fertiliser pays off mainly for sodium-loving crops such as sugar beet on soils low in potassium; where the soil holds plenty of potassium, yields do not respond."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 11
+topic = "partners"
+text = "Arbuscular mycorrhizal fungi on the roots lower sodium uptake in both C3 and C4 plants, according to a review of many studies."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 11
+topic = "wild"
+text = "Many plants of salty places (halophytes) grow better with plenty of sodium, which they store in their cell sap to hold on to water."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 11
+topic = "wild"
+text = "Halogeton glomeratus, a poisonous weed of western American rangeland, needs so much salt that sodium is almost a major nutrient for it."
+source = "epstein1972"
+
+[[plant_note]]
+Z = 11
+topic = "food"
+text = "Dairy cows need about 2 g of sodium per kg of feed, more than many pasture grasses contain; sodium fertiliser raises it in grasses such as ryegrass, and animals then eat more of the forage."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+# --- Magnesium (Z = 12) ---
+[[plant]]
+Z = 12
+uptake = "The magnesium ion Mg²⁺, from the soil water"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00016-2"
+phloem = "high"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 2000
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 3
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 12
+topic = "deficiency"
+text = "Fully grown leaves turn yellow between the veins while the veins stay green; strong light makes it worse. Many plants fall short below about 1–2 g of magnesium per kg of dry leaf, broad-leaved crops at somewhat higher levels."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 12
+topic = "deficiency"
+text = "Signs start on the older leaves and move up the plant. In cereals the leaf base first shows small dark green spots on a pale yellow ground, later yellow stripes, with the leaf tips dying."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_12"
+
+[[plant_note]]
+Z = 12
+topic = "toxicity"
+text = "Extra magnesium is parked in the vacuoles, but very high leaf levels can harm plants in a drought, when the magnesium in the working parts of the cell rises enough to slow photosynthesis."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 12
+topic = "soil"
+text = "Sandy soils hold far less magnesium than clay soils (roughly 0.5 against 5 g per kg), and magnesium washes out of the topsoil even more easily than calcium."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_12"
+
+[[plant_note]]
+Z = 12
+topic = "soil"
+text = "Potassium, ammonium, calcium, manganese and acidity all hold back the roots' uptake of magnesium; magnesium shortage brought on by potassium is becoming a common sight on farms."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 12
+topic = "wild"
+text = "On soils formed from serpentine rock, magnesium far outweighs calcium; the vegetation there is sparse and distinctive, with many species found nowhere else, adapted mainly, it seems, to the low calcium and high magnesium."
+source = "epstein1972"
+
+[[plant_note]]
+Z = 12
+topic = "forest"
+text = "Magnesium rarely limits forests worldwide, perhaps on some soils formed from pumice."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 12
+topic = "forest"
+text = "In Central Europe magnesium shortage became widespread in spruce forests, made worse by air pollution and soil acidification; in spring, the older needles give up magnesium and green colour to the new ones."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 12
+topic = "food"
+text = "Grazing animals on low-magnesium pasture can develop grass tetany, a dangerous drop of magnesium in the blood; fertilising the grass with magnesium raises its content easily, and crops richer in magnesium also help people who get too little."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[leaf_level]]
+Z = 12
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+deficient_below = 1
+adequate_low = 2
+adequate_high = 10
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 1–2; high: above 10. The table gives no excess class for magnesium."
+
+[[leaf_level]]
+Z = 12
+plant = "Soybean"
+group = "legumes"
+part = "fully developed trifoliate leaf at flowering"
+kind = "normal"
+adequate_low = 2500
+adequate_high = 7000
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-10"
+note = "Table 6.7, optimal range after Campbell (2000); a second source in the same table gives 3000–10000."
+
+[[leaf_level]]
+Z = 12
+plant = "Potato"
+group = "vegetables"
+part = "recently matured leaves"
+kind = "normal"
+adequate_low = 3600
+adequate_high = 4900
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-10"
+note = "Table 6.7, optimal range after Seefeldt (2013)."
+
+[[leaf_level]]
+Z = 12
+plant = "Apple"
+group = "fruit"
+part = "leaves at the base of new shoots"
+kind = "bands"
+adequate_low = 2.5
+adequate_high = 4.0
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: below 2.5; high: above 4.0."
+
+[[leaf_level]]
+Z = 12
+plant = "Norway spruce"
+group = "conifers"
+part = "foliage"
+kind = "critical"
+deficient_below = 0.4
+critical_high = 0.6
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser."
+
+[[leaf_level]]
+Z = 12
+plant = "Eucalyptus grandis"
+group = "broadleaf"
+part = "foliage"
+kind = "critical"
+deficient_below = 3.5
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2; stands below it often respond to fertiliser."
+
+# --- Aluminium (Z = 13) ---
+[[plant]]
+Z = 13
+uptake = "Dissolved aluminium from acid soil water; in most plants it stays bound in the outer cell walls of the roots"
+uptake_source = "barker_pilbeam2015"
+uptake_doi = "10.1201/b18458-20"
+known_text = "1955, when Chenery reported that the tea bush needs it for normal growth"
+known_source = "mengel_kirkby2001"
+known_doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 13
+topic = "deficiency"
+text = "Some plants of acid soils grow better with aluminium: tea roots grew two and a half times faster with it in one experiment, and the oak Quercus serrata, Melastoma and hydrangea respond too; how it helps is not yet understood."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 13
+topic = "deficiency"
+text = "For most other plants, the gains reported in nutrient solutions are probably a side effect: the aluminium removes excess phosphate from the solution rather than meeting a real need."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-20"
+
+[[plant_note]]
+Z = 13
+topic = "toxicity"
+text = "In acid soils, dissolved aluminium is toxic to most plants: within an hour the roots stop lengthening, then turn short and stubby with cracked tips, and the shoots wilt and show signs of calcium, magnesium, phosphorus and nitrogen shortage."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-20"
+
+[[plant_note]]
+Z = 13
+topic = "soil"
+text = "Above pH 5.5 soil water usually holds less than 1 mg of aluminium per litre, but much more dissolves as a soil becomes more acid."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 13
+topic = "soil"
+text = "Liming with calcium and magnesium compounds neutralises the acidity; growing tolerant crops helps too, but works best together with liming, because the soil keeps acidifying."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-20"
+
+[[plant_note]]
+Z = 13
+topic = "partners"
+text = "In acid soils aluminium hinders the multiplication of the Rhizobium bacteria, so legumes form fewer root nodules."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 13
+topic = "wild"
+text = "Some plants, mostly tropical trees and shrubs, gather aluminium in their leaves: over 1000 mg per kg of dry leaf, against under 200 mg in most plants; old tea leaves can hold 3%, and buckwheat is a crop that does the same."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-20"
+
+[[plant_note]]
+Z = 13
+topic = "wild"
+text = "The blue colour of hydrangea flowers comes from aluminium stored in the petals."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 13
+topic = "forest"
+text = "Dissolved aluminium in acid forest soils can hold back root growth, but tolerance of acid soils varies widely, and many tree species cope well."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch6"
+
+[[plant_note]]
+Z = 13
+topic = "forest"
+text = "Much of the aluminium dissolved in forest soil water is bound to dissolved organic matter, and in that form it is not toxic."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch7"
+
+[[plant_note]]
+Z = 13
+topic = "food"
+text = "Tea is made from young leaves, which hold only about 600 mg of aluminium per kg, under 2% of the level in old leaves, so tea probably adds little to the aluminium people take in."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-20"
+
+# --- Silicon (Z = 14) ---
+[[plant]]
+Z = 14
+uptake = "Uncharged silicic acid, Si(OH)₄; rice and many other crops have transporter proteins for it"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00012-5"
+job = 2
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "around 1960, when rice was found not to grow normally in nutrient solutions without it"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 14
+topic = "deficiency"
+text = "Rice short of silicon sets little grain: a rice mutant that cannot take it up lost over 90% of its yield in the field, which is why silicon fertilisers are spread on paddy fields in some countries."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 14
+topic = "deficiency"
+text = "Sugarcane needs at least 1% silicon by weight for a full cane yield; with only a quarter of that the yield halves, and leaves in full sun become freckled."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 14
+topic = "soil"
+text = "Plants take silicon from soil water as silicic acid released by weathering; deeply weathered soils such as Oxisols can run short of it, and liming lowers its uptake."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_19"
+
+[[plant_note]]
+Z = 14
+topic = "wild"
+text = "Grasses and sedges hold far more silicon than most flowering plants; much of it sits as tiny bodies of silica (phytoliths) in the skin of the leaf."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 14
+topic = "wild"
+text = "The field horsetail (Equisetum arvense) cannot do without silicon; its gritty, silica-rich ash was once used to scour pots and pans."
+source = "epstein1972"
+
+[[plant_note]]
+Z = 14
+topic = "food"
+text = "Animals need a little silicon for their connective tissue, but grazing animals that eat much silica-rich grass can suffer wear of the rumen wall and deposits in the kidneys."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+# --- Phosphorus (Z = 15) ---
+[[plant]]
+Z = 15
+uptake = "Phosphate ions, mostly H₂PO₄⁻, from the soil water"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00019-8"
+phloem = "high"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 2000
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 2
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 15
+topic = "deficiency"
+text = "Leaves grow fewer and smaller but stay dark green, as their expansion is held back more than their chlorophyll; the plant sends more of its sugar to the roots. Flowering comes late, with fewer flowers and seeds."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 15
+topic = "deficiency"
+text = "Short plants stand stiffly upright; the signs begin on the older leaves, and the stems of many annual plants turn reddish from anthocyanin pigments. Cereals form fewer side shoots."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_9"
+
+[[plant_note]]
+Z = 15
+topic = "toxicity"
+text = "Phosphorus poisoning is rare, because most plants throttle their phosphate uptake once they have enough. Many native plants of very poor soils in Australia and South Africa can hardly do this and are harmed when given phosphate fertiliser."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 15
+topic = "soil"
+text = "Over nine tenths of the phosphorus in a soil is locked away, in hardly soluble phosphates of calcium, iron and aluminium, in humus, or held on oxides and clays; only a tiny share is dissolved, and it reaches roots mainly by slow diffusion."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_9"
+
+[[plant_note]]
+Z = 15
+topic = "soil"
+text = "Most phosphate fertiliser is made from rock phosphate, a resource that cannot be renewed and is gradually being used up."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 15
+topic = "partners"
+text = "Arbuscular mycorrhizal fungi spread hyphae beyond the zone that roots have already emptied of phosphate and pass what they gather to the plant; in one experiment the hyphae supplied 70–80 % of all the phosphorus the plants took up."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00004-6"
+
+[[plant_note]]
+Z = 15
+topic = "partners"
+text = "Legumes with root nodules need more phosphorus than other plants, and a lack of it is often what limits their nitrogen fixation, above all on acid and on limy soils."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 15
+topic = "wild"
+text = "In ancient landscapes phosphorus, not nitrogen, is often the main limit on wild plant growth. Some plants grow dense 'cluster roots' that release a burst of organic acids and so 'mine' phosphate that mycorrhizal fungi cannot reach."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 15
+topic = "forest"
+text = "Phosphorus limits forests on old soils rich in iron and aluminium, common in the subtropics and tropics. Unlike nitrogen it has no gas form, so it cannot come from the air."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 15
+topic = "forest"
+text = "Most mid-rotation loblolly pine plantations in the south-eastern USA grow faster when given nitrogen and phosphorus together, and intensively grown eucalypt plantations need large additions of both."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+
+[[plant_note]]
+Z = 15
+topic = "food"
+text = "Seeds store most of their phosphorus as phytate. People cannot digest it, so the zinc and iron bound to it are poorly absorbed."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[leaf_level]]
+Z = 15
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+deficient_below = 1
+adequate_low = 2
+adequate_high = 5
+excess_above = 8
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 1–2; high: 5–8. The deficient class is printed '<I' in the scanned text, read as below 1."
+
+[[leaf_level]]
+Z = 15
+plant = "Soybean"
+group = "legumes"
+part = "mature new leaves before pods set"
+kind = "normal"
+adequate_low = 0.25
+adequate_high = 0.50
+unit = "%"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-7"
+note = "Table 3.1, average tissue concentrations after Mills and Jones (1996)."
+
+[[leaf_level]]
+Z = 15
+plant = "Apple"
+group = "fruit"
+part = "leaves at the base of new shoots"
+kind = "bands"
+adequate_low = 1.5
+adequate_high = 3.0
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: below 1.5; high: above 3.0."
+
+[[leaf_level]]
+Z = 15
+plant = "Norway spruce"
+group = "conifers"
+part = "foliage"
+kind = "critical"
+deficient_below = 1.2
+critical_high = 1.5
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser."
+
+[[leaf_level]]
+Z = 15
+plant = "Eucalyptus grandis"
+group = "broadleaf"
+part = "foliage"
+kind = "critical"
+deficient_below = 1.0
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2; stands below it often respond to fertiliser."
+
+# --- Sulfur (Z = 16) ---
+[[plant]]
+Z = 16
+uptake = "Sulfate (SO₄²⁻) from the soil water; leaves can also take in sulfur dioxide (SO₂) from the air"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00019-8"
+phloem = "high"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 1000
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 1
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 16
+topic = "deficiency"
+text = "Leaves lose chlorophyll and protein and the plant grows slowly. Unlike nitrogen shortage, the yellowing in wheat is spread over old and young leaves alike; in legumes, sulfur shortage looks just like nitrogen shortage."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 16
+topic = "deficiency"
+text = "In oilseed rape the young leaves show it first, turning reddish with dying edges, and the yellow flowers can turn white; fully developed rape leaves with less than about 6 mg of sulfur per gram of dry matter point to a shortage."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_8"
+
+[[plant_note]]
+Z = 16
+topic = "toxicity"
+text = "Plants put up with a lot of sulfate in the soil; only very salty soils do harm. Sulfur dioxide in polluted air is more dangerous, and trees and other perennials are hurt at about half the level that harms annual plants."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_8"
+
+[[plant_note]]
+Z = 16
+topic = "soil"
+text = "Most of a soil's sulfur is bound in organic matter, usually 100–1000 mg per kg in humid regions; it becomes available as microbes break that matter down, and sulfate is easily washed out."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_8"
+
+[[plant_note]]
+Z = 16
+topic = "soil"
+text = "Sulfur dioxide from industry once supplied much of crops' sulfur. Since emissions were cut in recent decades, sulfur shortage has become common on farmland, above all in rainy regions and on leached soils, and sulfur fertilisers are now used to correct it."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 16
+topic = "partners"
+text = "Nitrogen fixation in legume nodules is very sensitive to sulfur shortage: early on, it suffers more than photosynthesis does."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 16
+topic = "forest"
+text = "Sulfur rarely limits forests; trees take sulfate from the soil and some sulfur dioxide from the air."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 16
+topic = "food"
+text = "Wheat short of sulfur makes flour whose dough stretches less and gives a smaller loaf, because its grain proteins hold less of the sulfur amino acids that link the gluten together."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 16
+topic = "food"
+text = "The sharp taste of cabbage, mustard and their relatives comes from sulfur compounds (glucosinolates), which rise with the sulfur supply; more makes vegetables spicier but fodder less welcome to animals."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[leaf_level]]
+Z = 16
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at first silks"
+kind = "bands"
+deficient_below = 0.10
+adequate_low = 0.21
+adequate_high = 0.50
+unit = "%"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-11"
+note = "Table 7.2 (after Mills and Jones 1996 and others). Low: 0.10–0.20; high: above 0.50; no excess class."
+
+[[leaf_level]]
+Z = 16
+plant = "Soybean"
+group = "legumes"
+part = "first trifoliate leaf at early flowering"
+kind = "bands"
+deficient_below = 0.15
+adequate_low = 0.21
+adequate_high = 0.40
+unit = "%"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-11"
+note = "Table 7.2. Low: 0.15–0.20; high: above 0.40; no excess class."
+
+[[leaf_level]]
+Z = 16
+plant = "Potato"
+group = "vegetables"
+part = "youngest mature leaf, plants 30 cm tall"
+kind = "normal"
+adequate_low = 0.19
+adequate_high = 0.36
+unit = "%"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-11"
+note = "Table 7.2, sufficient range (the only class given for potato)."
+
+# --- Chlorine (Z = 17) ---
+[[plant]]
+Z = 17
+uptake = "Chloride, Cl⁻"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00017-4"
+phloem = "high"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 100
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 3
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_year = 1954
+known_by = "T. C. Broyer and colleagues"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00016-2"
+
+[[plant_note]]
+Z = 17
+topic = "deficiency"
+text = "Leaves wilt, above all at their edges in full sun, and the youngest leaves curl and shrivel; roots stay stubby with many short side roots. Crops with a high need, such as kiwifruit and coconut, are the most at risk."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 17
+topic = "deficiency"
+text = "The best-known field shortage is in wheat and barley on leached soils of the US Great Plains, where rain brings little chloride; yield losses of 7–10 % in wheat have been reported in the Americas."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 17
+topic = "toxicity"
+text = "Too much chloride is a worldwide problem of salty soils in dry regions. Most fruit trees, beans and cotton are harmed above about 3.5 g per kg of leaf dry matter, while barley, spinach, lettuce and sugar beet tolerate 20–30 g."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 17
+topic = "soil"
+text = "Chloride salts dissolve readily and move freely with soil water. Far from the sea, rain brings roughly what a crop needs as a micronutrient; near the coast it brings about ten times more."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 17
+topic = "wild"
+text = "In a survey of 670 wild plant species from 138 families, the most common leaf chloride level was about 5 g per kg of dry matter, far above the minimum plants need."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 17
+topic = "forest"
+text = "Trees need chlorine, but never in amounts that limit forest growth."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+# --- Potassium (Z = 19) ---
+[[plant]]
+Z = 19
+uptake = "The potassium ion K⁺, from the soil water; roots pick it out very selectively"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00019-8"
+phloem = "high"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 10000
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 3
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 19
+topic = "deficiency"
+text = "Older leaves yellow and then die back from the edges, and plants become very sensitive to strong light; stems lignify poorly, so cereals fall over (lodge) more easily. It is common on sandy, salty and acid soils and where heavy cropping removes much potassium."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 19
+topic = "deficiency"
+text = "At first the plant only grows more slowly — 'hidden hunger' — before leaf tips and margins die; clover shows scattered dead spots instead. Short plants wilt easily and cope worse with drought, frost and fungal attack."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_10"
+
+[[plant_note]]
+Z = 19
+topic = "soil"
+text = "Shortage is common on light sandy acid soils, highly weathered tropical soils and peats. Some clay minerals trap potassium between their layers so firmly that in one Michigan soil about nine tenths of the fertiliser potassium was locked away."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_10"
+
+[[plant_note]]
+Z = 19
+topic = "partners"
+text = "Potassium helps legumes keep their nodules supplied with sugar; in a review of 20 trials, giving potassium raised their nitrogen fixation by 180 %, mostly through better growth."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 19
+topic = "forest"
+text = "Potassium stays a free ion in trees and is easily washed out of leaves and soils. It limits forests only here and there, mostly on old soils and where nitrogen and phosphorus fertilisers have been added."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 19
+topic = "food"
+text = "Enough potassium gives cotton stronger, whiter fibres, and in processing tomatoes it improves the colour and reduces the 'yellow shoulder' disorder."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 19
+topic = "food"
+text = "Fleshy fruits and tubers need a lot of potassium: too little brings ripening faults such as 'greenback' in tomatoes and lowers many quality traits of potatoes."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[leaf_level]]
+Z = 19
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+deficient_below = 10
+adequate_low = 15
+adequate_high = 30
+excess_above = 55
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 10–15; high: 30–35; the excess class is printed as above 55 (a gap after the high class, as for manganese in the same table)."
+
+[[leaf_level]]
+Z = 19
+plant = "Soybean"
+group = "legumes"
+part = "upper fully developed trifoliate leaf before pods set"
+kind = "normal"
+adequate_low = 17
+adequate_high = 25
+unit = "g/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-8"
+note = "Table 4.13, adequate level."
+
+[[leaf_level]]
+Z = 19
+plant = "Apple"
+group = "fruit"
+part = "leaves at the base of new shoots"
+kind = "bands"
+adequate_low = 12
+adequate_high = 18
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: below 12; high: above 18."
+
+[[leaf_level]]
+Z = 19
+plant = "Norway spruce"
+group = "conifers"
+part = "foliage"
+kind = "critical"
+deficient_below = 3.5
+critical_high = 5.0
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser."
+
+[[leaf_level]]
+Z = 19
+plant = "Eucalyptus grandis"
+group = "broadleaf"
+part = "foliage"
+kind = "critical"
+deficient_below = 3.6
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2; stands below it often respond to fertiliser."
+
+# --- Calcium (Z = 20) ---
+[[plant]]
+Z = 20
+uptake = "The calcium ion Ca²⁺, from the soil water"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00016-2"
+phloem = "low"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 5000
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 3
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_text = "One of the ten elements recognised as essential in the second half of the 19th century, once plants could be grown in nutrient solutions"
+known_source = "epstein1972"
+
+[[plant_note]]
+Z = 20
+topic = "deficiency"
+text = "Calcium hardly moves in the phloem, so fast-growing parts that get little water flow — fruits, tubers, enclosed leaves — run short first: tipburn in lettuce, blackheart in celery, blossom-end rot in tomatoes and watermelons, bitter pit in apples."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 20
+topic = "deficiency"
+text = "In eucalypts the newly expanding leaves show it: the shoot tip dies back and the leaves buckle because their edges stop growing."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+
+[[plant_note]]
+Z = 20
+topic = "toxicity"
+text = "Most plants tolerate a great deal: mature leaves can hold more than a tenth of their dry weight as calcium without harm. Plants of acid soils, however, are hurt at lower levels than lime-loving plants."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[plant_note]]
+Z = 20
+topic = "soil"
+text = "Soils on limestone and chalk and young marsh soils are rich in calcium; old soils that have been weathered and leached for a long time — such as the Spodosols of cool regions and the Oxisols and Ultisols of the humid tropics — are poor in it."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_11"
+
+[[plant_note]]
+Z = 20
+topic = "partners"
+text = "Calcium signals are part of how a legume recognises its rhizobia and lets them in; in clovers, more calcium raises the root's release of the compounds that switch on the bacteria's nodulation genes."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 20
+topic = "wild"
+text = "Wild plants split into lime-lovers (calcicoles) of calcareous soils and lime-avoiders (calcifuges) of acid, calcium-poor soils. Often it is not calcium itself that keeps a calcicole off acid soil: Scabiosa columbaria fails there mainly because it cannot stand the dissolved aluminium."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_11"
+
+[[plant_note]]
+Z = 20
+topic = "forest"
+text = "Calcium rarely limits forests: perhaps on some deeply weathered tropical soils (Oxisols) and in some alpine spruce forests."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 20
+topic = "forest"
+text = "Liming forest soils seldom helps the trees: trials in Finland and Sweden found growth about a tenth lower for 15–20 years, though sugar maples in a long-term trial in Quebec grew better after dolomitic lime."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+
+[[plant_note]]
+Z = 20
+topic = "food"
+text = "Calcium sprays on apple trees cut losses in store: in one trial, bitter pit in stored Cox apples fell from 30 % to about 3 %."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00019-8"
+
+[[leaf_level]]
+Z = 20
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+deficient_below = 1
+adequate_low = 2
+adequate_high = 10
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 1–2; high: above 10; no excess class. The deficient class is printed '<I' in the scanned text, read as below 1."
+
+[[leaf_level]]
+Z = 20
+plant = "Soybean"
+group = "legumes"
+part = "mature leaves of new growth"
+kind = "normal"
+adequate_low = 3.5
+adequate_high = 20.0
+unit = "g/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-9"
+note = "Table 5.2, concentrations considered adequate (after Mills and Jones 1996)."
+
+[[leaf_level]]
+Z = 20
+plant = "Tomato"
+group = "vegetables"
+part = "mature leaves of new growth"
+kind = "normal"
+adequate_low = 16.0
+adequate_high = 32.1
+unit = "g/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-9"
+note = "Table 5.2, concentrations considered adequate (after Mills and Jones 1996)."
+
+[[leaf_level]]
+Z = 20
+plant = "Apple"
+group = "fruit"
+part = "leaves at the base of new shoots"
+kind = "bands"
+adequate_low = 10
+adequate_high = 15
+unit = "mg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: below 10; high: above 15."
+
+[[leaf_level]]
+Z = 20
+plant = "Norway spruce"
+group = "conifers"
+part = "foliage"
+kind = "critical"
+deficient_below = 0.4
+critical_high = 0.6
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2 gives the critical level as a range; stands below it often respond to fertiliser."
+
+[[leaf_level]]
+Z = 20
+plant = "Eucalyptus grandis"
+group = "broadleaf"
+part = "foliage"
+kind = "critical"
+deficient_below = 5.6
+unit = "mg/g"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Table 13.2; stands below it often respond to fertiliser."
+
+# --- Manganese (Z = 25) ---
+[[plant]]
+Z = 25
+uptake = "Only as the divalent ion Mn²⁺"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00017-4"
+phloem = "low"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 50
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 3
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_year = 1922
+known_by = "J. S. McHargue"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00016-2"
+
+[[plant_note]]
+Z = 25
+topic = "deficiency"
+text = "The youngest leaves yellow faintly between the veins, because manganese hardly moves out of older leaves; severe shortage adds brown spots. In the field cereals show it as patchy 'light spot disease', and peas as 'marsh spot' in their seeds."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 25
+topic = "deficiency"
+text = "Oats, barley, wheat, soybean and peach are susceptible, rye is not. Manganese-short plants are also more easily killed by frost and more open to root-rot fungi such as take-all."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 25
+topic = "toxicity"
+text = "Too much shows as small brown spots on mature leaves, and in soybean as crinkled leaves. Tolerance differs enormously: growth falls at about 200 mg per kg of shoot dry matter in maize but only at about 5,300 in sunflower."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 25
+topic = "soil"
+text = "How much manganese is available swings with soil pH, moisture and air: limy, sandy and peaty soils tend to hold too little, while acid or waterlogged soils release too much."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 25
+topic = "partners"
+text = "On acid tropical soils, manganese toxicity often holds back nitrogen fixation by legumes; liming helps, and mycorrhizal fungi ease the toxicity."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 25
+topic = "partners"
+text = "Plants with arbuscular mycorrhiza often take up less manganese than plants without the fungus, unlike zinc and copper, of which they take up more."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00004-6"
+
+[[plant_note]]
+Z = 25
+topic = "wild"
+text = "Plants that tolerate a lot of manganese, such as sunflower and stinging nettle, store the excess in the cell walls at the base of their leaf hairs, which turn dark."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 25
+topic = "forest"
+text = "Manganese rarely limits forests (perhaps on some limestone soils in New Zealand and South Africa), and manganese toxicity, which can harm farm crops, has not been reported in forests."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[leaf_level]]
+Z = 25
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+deficient_below = 10
+adequate_low = 20
+adequate_high = 200
+excess_above = 350
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 10–20; high: 200–250; the excess class is printed as '350' (the '>' seems lost in the scan)."
+
+[[leaf_level]]
+Z = 25
+plant = "Apple"
+group = "fruit"
+part = "leaves from the base of new shoots"
+kind = "bands"
+adequate_low = 35
+adequate_high = 105
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: <35; high printed as >150."
+
+[[leaf_level]]
+Z = 25
+plant = "Conifers"
+group = "conifers"
+part = "needles"
+kind = "critical"
+deficient_below = 25
+unit = "mg/kg"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Possible deficiency below this level (Carter 1992, cited in chapter 13); the book says micronutrient critical levels in trees are not well established."
+
+# --- Iron (Z = 26) ---
+[[plant]]
+Z = 26
+uptake = "Fe²⁺, after the root reduces iron at its surface; grasses instead take up Fe³⁺ bound to chelators they release (phytosiderophores)"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00017-4"
+phloem = "intermediate"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 100
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 4
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_year = 1843
+known_by = "E. Gris"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00016-2"
+
+[[plant_note]]
+Z = 26
+topic = "deficiency"
+text = "Shortage always starts on the youngest leaves, which turn yellow between still-green veins and, when severe, entirely yellow; cereal leaves get yellow and green stripes. Citrus, fruit trees and grapevines are the crops most often affected."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_13"
+
+[[plant_note]]
+Z = 26
+topic = "deficiency"
+text = "Leaves are short of iron below about 50–150 mg per kg of dry matter. Limy (calcareous) soils are the classic place for it, where it is called lime-induced chlorosis."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 26
+topic = "toxicity"
+text = "On waterlogged soils so much iron dissolves that rice leaves turn bronze; this 'bronzing' is the second most serious yield limit of wetland rice, often costing 15–30 % of the harvest."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 26
+topic = "soil"
+text = "Iron is the fourth most common element in the Earth's crust, yet in well-aerated, alkaline soils almost none of it dissolves, so plants depend on iron held by soluble organic molecules (chelates)."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 26
+topic = "soil"
+text = "Iron salts spread on the soil soon turn into insoluble oxides; sprays on the leaves, or chelates that stay stable at high pH, work better."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_13"
+
+[[plant_note]]
+Z = 26
+topic = "partners"
+text = "Legume nodules need more iron than the rest of the plant, because it is built into nitrogenase, ferredoxin and the red pigment leghaemoglobin."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 26
+topic = "wild"
+text = "Plants that shun lime (calcifuges), such as azaleas, rhododendrons and blueberries, are particularly prone to yellowing from iron shortage."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_13"
+
+[[plant_note]]
+Z = 26
+topic = "forest"
+text = "In forests iron limits growth only on some alkaline soils and for some tree species, and iron toxicity has not been reported in trees."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 26
+topic = "forest"
+text = "In eucalypts, iron-short new leaves turn yellow with green veins, without the shoot tip dying back."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+
+[[plant_note]]
+Z = 26
+topic = "food"
+text = "Wheat, rice and maize grains are naturally poor in iron, and fertilising raises their iron far less than their zinc. Phytate, the grain's store of phosphorus, binds iron and zinc, and people cannot digest it, so they absorb less."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[leaf_level]]
+Z = 26
+plant = "Oats, rice, barley, rye, sorghum"
+group = "cereals"
+part = "mature leaves"
+kind = "normal"
+adequate_low = 20
+adequate_high = 200
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-15"
+note = "Table 11.3, Grains – grasses (sufficiency or survey range from Bryson et al. 2014). Used instead of the maize row of Mengel & Kirkby Table 2.20, whose iron row is garbled in the scan."
+
+[[leaf_level]]
+Z = 26
+plant = "Groundnut, soybean, beans"
+group = "legumes"
+part = "mature leaves"
+kind = "normal"
+adequate_low = 25
+adequate_high = 300
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-15"
+note = "Table 11.3, Grains – legumes."
+
+[[leaf_level]]
+Z = 26
+plant = "Leafy vegetables"
+group = "vegetables"
+part = "mature or wrapper leaves"
+kind = "normal"
+adequate_low = 50
+adequate_high = 500
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-15"
+note = "Table 11.3, Vegetables – leafy (amaranth, celery, cabbage family, lettuce, rhubarb, spinach)."
+
+[[leaf_level]]
+Z = 26
+plant = "Apple"
+group = "fruit"
+part = "leaves from the base of new shoots"
+kind = "bands"
+adequate_low = 50
+adequate_high = 150
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: <50; high: >150. The adequate range is printed '5 -150' in the scan; read as 50–150 because the low class ends at 50."
+
+[[leaf_level]]
+Z = 26
+plant = "Conifers"
+group = "conifers"
+part = "terminal cuttings or mature needles"
+kind = "normal"
+adequate_low = 20
+adequate_high = 300
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-15"
+note = "Table 11.3, Forest and landscape trees – softwoods (fir, cedar, larch, spruce, pine, hemlock and others)."
+
+[[leaf_level]]
+Z = 26
+plant = "Broadleaf trees"
+group = "broadleaf"
+part = "mature leaves"
+kind = "normal"
+adequate_low = 30
+adequate_high = 300
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-15"
+note = "Table 11.3, Forest and landscape trees – hardwoods (maple, birch, beech, ash, oak, poplar, eucalyptus and others)."
+
+# --- Cobalt (Z = 27) ---
+[[plant]]
+Z = 27
+uptake = "Co²⁺ ions; most of it stays in the roots"
+uptake_source = "barker_pilbeam2015"
+uptake_doi = "10.1201/b18458-21"
+known_text = "1960, when Ahmed and Evans reported that legumes living on nitrogen fixed in their root nodules need it"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 27
+topic = "deficiency"
+text = "On low-cobalt soils, legumes that rely on their nodules for nitrogen form fewer, weaker nodules, start fixing nitrogen weeks late and yellow as if short of nitrogen; legumes fed with nitrate grow well without it."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 27
+topic = "deficiency"
+text = "Treating the seed with cobalt corrects the shortage, best together with leaf sprays; field responses are rare, but have been seen on poor sandy soils."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 27
+topic = "toxicity"
+text = "Too much cobalt makes leaves fall early, stops them greening, discolours the veins and holds back shoot growth; the step from too little to too much is fairly small."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-21"
+
+[[plant_note]]
+Z = 27
+topic = "soil"
+text = "Soils formed from serpentine and other magnesium-rich rocks are rich in cobalt, those from granite, sandstone or limestone poor; much of it is held on manganese oxides, where plants cannot reach it."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_19"
+
+[[plant_note]]
+Z = 27
+topic = "partners"
+text = "Rhizobium and other nitrogen-fixing bacteria cannot live without cobalt: they build it into vitamin B12, which they need, among other things, to make the leghaemoglobin of the nodules; the root nodules of alder need it too."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 27
+topic = "wild"
+text = "Most leaves hold less than 0.2 mg of cobalt per kg of dry matter, but a few plants of metal-rich soils store up to 5000 mg per kg."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 27
+topic = "food"
+text = "Grazing ruminants need cobalt so that their rumen microbes can make vitamin B12; on low-cobalt soils, forage with less than about 0.07 mg per kg leaves them short, a widespread problem."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+# --- Nickel (Z = 28) ---
+[[plant]]
+Z = 28
+uptake = "Ni²⁺, or nickel bound in small complexes"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00017-4"
+typical_mg_kg = 0.1
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 4
+job_source = "marschner2023"
+job_doi = "10.1016/b978-0-12-819773-8.00016-2"
+known_year = 1987
+known_by = "P. H. Brown and colleagues"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00016-2"
+
+[[plant_note]]
+Z = 28
+topic = "deficiency"
+text = "Cereals short of nickel yellow between the veins and get dead patches on their youngest leaves, much like iron shortage, and urea builds up to harmful levels in leaf tips because the enzyme that breaks it down, urease, contains nickel."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 28
+topic = "deficiency"
+text = "The first cases in the field were pecan trees on sandy, poorly drained soils in the south-eastern USA, whose leaves grew deformed ('mouse-ear'). Barley seed from nickel-short plants germinates poorly."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 28
+topic = "toxicity"
+text = "Crops are more often harmed by too much nickel than too little, from industrial pollution, sewage sludge or heavy manuring. Sensitive species suffer above about 10 mg per kg of dry matter, moderately tolerant ones above about 50."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 28
+topic = "soil"
+text = "How much nickel roots can take up depends on soil pH, organic matter, waterlogging and temperature; zinc and copper compete with it at the root."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 28
+topic = "partners"
+text = "Nickel is part of hydrogenase in nodule bacteria and of urease in legumes. In field trials, nickel added to the soil raised soybean nodulation, nitrogen fixation and grain yield, most likely on sandy, low-nickel or limed soils."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 28
+topic = "wild"
+text = "Serpentine soils, rich in iron, magnesium, nickel, chromium and cobalt but poor in calcium, carry 'hyperaccumulators' such as some Alyssum species, whose leaves hold 10–30 g of nickel per kg of dry matter. They are used to clean polluted soil and even to harvest nickel."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 28
+topic = "forest"
+text = "Trees need nickel, but never in amounts that limit forest growth."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+# --- Copper (Z = 29) ---
+[[plant]]
+Z = 29
+uptake = "Cu²⁺; when copper is scarce, roots first reduce it to Cu⁺"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00017-4"
+phloem = "intermediate"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 6
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 4
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_year = 1931
+known_by = "C. B. Lipman and G. MacKinney"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00016-2"
+
+[[plant_note]]
+Z = 29
+topic = "deficiency"
+text = "Young leaves are distorted and bleached, and stems bend or twist because their walls lack lignin, so cereals fall over (lodge) easily. Grain and fruit suffer most, because copper-short plants make sterile pollen."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 29
+topic = "deficiency"
+text = "Cereals turn bushy, with white twisted leaf tips and partly empty ears. Oats, spinach, wheat and lucerne respond most to copper fertiliser; beans, grass, potatoes and soybeans least."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_16"
+
+[[plant_note]]
+Z = 29
+topic = "toxicity"
+text = "Copper builds up in soils from years of copper fungicides (in vineyards and coffee plantations), sewage sludge and pig or poultry slurry. Roots stop growing first, because they trap most of the excess."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 29
+topic = "soil"
+text = "Shortage occurs on soils naturally poor in copper, such as leached sandy soils, and on soils that bind it, such as peats, limy and some clay soils; it is common enough on newly drained peat to be called 'reclamation disease'."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_16"
+
+[[plant_note]]
+Z = 29
+topic = "soil"
+text = "Copper sulfate or oxide spread on the soil can keep working for decades, up to 30 years in southern Australia; leaf sprays act faster but can scorch leaves if too strong."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 29
+topic = "partners"
+text = "Plants with arbuscular mycorrhiza usually take up more copper and zinc than plants without the fungus."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00004-6"
+
+[[plant_note]]
+Z = 29
+topic = "partners"
+text = "Too much copper in the soil harms nitrogen fixation in legume nodules."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 29
+topic = "wild"
+text = "On the copper-rich soils of the Democratic Republic of Congo grow copper-tolerant plants whose leaves have been reported to hold around 1,000 mg per kg of dry matter, though some of this may be dust on the leaves."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 29
+topic = "wild"
+text = "Common bent grass on the spoil of a Welsh copper mine evolved copper-tolerant populations within about a century, very fast by the usual pace of evolution."
+source = "epstein1972"
+
+[[plant_note]]
+Z = 29
+topic = "forest"
+text = "Twisted, deformed leading shoots in Douglas-fir have been traced to copper shortage, and in some cases to boron shortage."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+
+[[plant_note]]
+Z = 29
+topic = "food"
+text = "Copper fertilisers can raise copper in food and fodder where people or livestock lack it, but must be used with care, because too much harms plants and animals."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 29
+topic = "food"
+text = "Sheep are especially sensitive to copper-rich fodder; about 50 mg per kg of dry matter is taken as the upper limit for forage."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_16"
+
+[[leaf_level]]
+Z = 29
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+deficient_below = 2
+adequate_low = 6
+adequate_high = 50
+excess_above = 70
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 3–5; high: 50–70."
+
+[[leaf_level]]
+Z = 29
+plant = "Apple"
+group = "fruit"
+part = "leaves from the base of new shoots"
+kind = "bands"
+adequate_low = 5
+adequate_high = 12
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: <5; high: >12."
+
+[[leaf_level]]
+Z = 29
+plant = "Conifers"
+group = "conifers"
+part = "needles"
+kind = "critical"
+deficient_below = 3
+unit = "mg/kg"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Possible deficiency below this level (Carter 1992, cited in chapter 13); the book says micronutrient critical levels in trees are not well established."
+
+# --- Zinc (Z = 30) ---
+[[plant]]
+Z = 30
+uptake = "Mainly the zinc ion Zn²⁺"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00017-4"
+phloem = "intermediate"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 20
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 4
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_year = 1926
+known_by = "A. L. Sommer and C. B. Lipman"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00016-2"
+
+[[plant_note]]
+Z = 30
+topic = "deficiency"
+text = "Shoots stop lengthening and leaves stay small, so fruit trees form 'little leaf' rosettes, while wheat gets whitish-brown patches on its middle leaves. Leaves are short below about 15–20 mg per kg of dry matter, and maize, rice and apple are among the most sensitive crops."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 30
+topic = "toxicity"
+text = "Too much zinc is rare in crops and happens mostly near mines and smelters or after sewage sludge. Roots stop lengthening and young leaves yellow, probably because zinc crowds out iron; liming the soil is the best remedy."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 30
+topic = "soil"
+text = "Shortage is widespread on limy soils and on old, highly weathered acid soils, where zinc clings to clay, iron oxides and lime. Unlike iron shortage, it is easily cured by spreading zinc sulfate on the soil."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 30
+topic = "soil"
+text = "Heavy phosphate fertilising of zinc-poor soil can bring on zinc shortage."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 30
+topic = "partners"
+text = "Mycorrhizal fungi can supply up to half of a plant's zinc; heavy phosphate fertilising suppresses them, which is one reason it lowers the zinc in wheat grain."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 30
+topic = "partners"
+text = "Some mycorrhizal fungi help forest trees and crops tolerate too much zinc by holding it in their own cell walls and vacuoles."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 30
+topic = "wild"
+text = "Zinc-tolerant strains of tufted hair-grass live on zinc-rich ground by locking the metal away in the vacuoles of their root cells."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 30
+topic = "wild"
+text = "Bladder campion has races (ecotypes) that differ in how much zinc they tolerate; the tolerance is inherited through several genes."
+source = "epstein1972"
+
+[[plant_note]]
+Z = 30
+topic = "forest"
+text = "In eucalypts, zinc shortage makes the new leaves small and crowded, without the shoot tip dying back."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+
+[[plant_note]]
+Z = 30
+topic = "food"
+text = "Wheat, rice and maize grains are naturally low in zinc, and higher-yielding varieties have diluted it further. Zinc sprays on wheat raise the zinc in the grain, best when the crop also gets plenty of nitrogen."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 30
+topic = "food"
+text = "In grain much of the zinc is bound to phytate, which people and other animals with a single stomach cannot digest, so less of it is absorbed."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[leaf_level]]
+Z = 30
+plant = "Maize"
+group = "cereals"
+part = "ear leaf at flowering"
+kind = "bands"
+adequate_low = 20
+adequate_high = 70
+excess_above = 150
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.20. Low: 15–20; high: 70–150. The deficient class is printed '<5' in the scan, which does not meet the low class at 15; left out."
+
+[[leaf_level]]
+Z = 30
+plant = "Groundnut, soybean, beans"
+group = "legumes"
+part = "mature leaves or whole shoots"
+kind = "normal"
+adequate_low = 20
+adequate_high = 75
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-19"
+note = "Table 15.1, Grains – legumes (sufficiency or survey range from Bryson et al. 2014)."
+
+[[leaf_level]]
+Z = 30
+plant = "Leafy vegetables"
+group = "vegetables"
+part = "mature or wrapper leaves"
+kind = "normal"
+adequate_low = 20
+adequate_high = 200
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-19"
+note = "Table 15.1, Vegetables – leafy (amaranth, celery, cabbage family, lettuce, rhubarb, spinach)."
+
+[[leaf_level]]
+Z = 30
+plant = "Apple"
+group = "fruit"
+part = "leaves from the base of new shoots"
+kind = "bands"
+adequate_low = 25
+adequate_high = 50
+unit = "μg/g"
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_2"
+note = "Table 2.21. Low: <25; high: >50."
+
+[[leaf_level]]
+Z = 30
+plant = "Conifers"
+group = "conifers"
+part = "terminal cuttings or mature needles"
+kind = "normal"
+adequate_low = 15
+adequate_high = 70
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-19"
+note = "Table 15.1, Forest and landscape trees – softwoods (fir, cedar, larch, spruce, pine, hemlock and others)."
+
+[[leaf_level]]
+Z = 30
+plant = "Broadleaf trees"
+group = "broadleaf"
+part = "mature leaves"
+kind = "normal"
+adequate_low = 10
+adequate_high = 200
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-19"
+note = "Table 15.1, Forest and landscape trees – hardwoods (maple, birch, beech, ash, oak, poplar, eucalyptus and others)."
+
+# --- Selenium (Z = 34) ---
+[[plant]]
+Z = 34
+uptake = "Selenate (SeO₄²⁻) through the plant's sulfate carriers, or selenite (SeO₃²⁻), partly through phosphate carriers"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00012-5"
+known_text = "the 1920s, when small doses were reported to stimulate the growth of lupins"
+known_source = "barker_pilbeam2015"
+known_doi = "10.1201/b18458-23"
+
+[[plant_note]]
+Z = 34
+topic = "deficiency"
+text = "No plant is known to need it, but small doses have helped ryegrass grow, kept lettuce green for longer and, in one experiment, raised the seed yield of Brassica rapa by 43%."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 34
+topic = "toxicity"
+text = "Most crops cannot store much selenium safely: harm can start below 100 mg per kg of dry matter."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 34
+topic = "toxicity"
+text = "Plants with too much selenium are stunted and turn yellow; grasses can show snow-white leaves and pink roots."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 34
+topic = "soil"
+text = "Most soils hold between 0.01 and 2 mg of selenium per kg; seleniferous soils hold more than 5 mg."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 34
+topic = "soil"
+text = "Plants take up selenate far more readily than selenite; selenate forms in well-aerated alkaline soils, while in acid and neutral soils selenium is held tightly and little is available."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 34
+topic = "wild"
+text = "Milk vetches (Astragalus), Stanleya and a few other plants of selenium-rich soils store more than 1 g per kg of dry leaf without harm; it may protect them from grazing animals, which it can poison."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 34
+topic = "wild"
+text = "Such plants are selenium indicators: where they grow, the soil is rich in selenium."
+source = "epstein1972"
+
+[[plant_note]]
+Z = 34
+topic = "food"
+text = "Since the mid-1980s Finland has added selenate to all compound fertilisers, which more than doubled the selenium people there take in from cereals, vegetables, meat and milk."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 34
+topic = "food"
+text = "Up to a billion people may get too little selenium, and plant foods are a main source of it, so enriching crops with selenium (biofortification) matters for health."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+# --- Molybdenum (Z = 42) ---
+[[plant]]
+Z = 42
+uptake = "Molybdate, MoO₄²⁻, which competes with sulfate at the root"
+uptake_source = "marschner2023"
+uptake_doi = "10.1016/b978-0-12-819773-8.00017-4"
+phloem = "intermediate"
+phloem_source = "marschner2023"
+phloem_doi = "10.1016/b978-0-12-819773-8.00002-2"
+typical_mg_kg = 0.1
+typical_source = "marschner2023"
+typical_doi = "10.1016/b978-0-12-819773-8.00016-2"
+job = 4
+job_source = "mengel_kirkby2001"
+job_doi = "10.1007/978-94-010-1009-2_1"
+known_year = 1939
+known_by = "D. I. Arnon and P. R. Stout"
+known_source = "marschner2023"
+known_doi = "10.1016/b978-0-12-819773-8.00016-2"
+
+[[plant_note]]
+Z = 42
+topic = "deficiency"
+text = "Plants look starved of nitrogen, stunted and pale; in cauliflower and other broad-leaved plants the young leaf blades fail to form properly ('whiptail'), and citrus gets 'yellow spot'. Leaves are short below about 0.1–1.0 mg per kg of dry matter, depending on species and nitrogen source."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 42
+topic = "toxicity"
+text = "Plants tolerate very large amounts: the gap between too little and too much can be ten-thousand-fold. Excess turns shoots golden yellow, and in oilseed rape and tomato it stains the stems blue."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 42
+topic = "soil"
+text = "Iron oxides hold molybdate tightly in acid soils and release it as the soil becomes less acid: liming from pH 5 to pH 7 raised the molybdenum in soybean shoots tenfold. Sulfate fertilisers such as gypsum compete with it and cut its uptake."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00017-4"
+
+[[plant_note]]
+Z = 42
+topic = "partners"
+text = "Molybdenum is part of nitrogenase, so legumes that fix nitrogen need much more of it; a plant short of it sends what it has to the nodules first. Shortage in nodulating legumes is widespread on acid soils of the humid tropics."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00006-x"
+
+[[plant_note]]
+Z = 42
+topic = "forest"
+text = "Forest soils have not been found short of molybdenum, though some researchers suspect that tropical forests would fix more nitrogen if slightly more were available."
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch8"
+
+[[plant_note]]
+Z = 42
+topic = "food"
+text = "Fodder with more than about 5–10 mg per kg of dry matter is suspect for cattle and horses: the excess causes a copper deficiency called molybdenosis (the 'teart' pastures of England are an example), and black cattle turn ginger."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_17"
+
+[[leaf_level]]
+Z = 42
+plant = "Rice"
+group = "cereals"
+part = "upper fully developed leaves before flowering"
+kind = "normal"
+adequate_low = 0.4
+adequate_high = 1.0
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-17"
+note = "Table 13.1, sufficient range (Bergmann 1992)."
+
+[[leaf_level]]
+Z = 42
+plant = "Soybean"
+group = "legumes"
+part = "upper fully developed leaves at the end of flowering"
+kind = "normal"
+adequate_low = 0.5
+adequate_high = 1.0
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-17"
+note = "Table 13.1, sufficient range (Bergmann 1992)."
+
+[[leaf_level]]
+Z = 42
+plant = "Tomato"
+group = "vegetables"
+part = "recently matured leaf with petiole"
+kind = "normal"
+adequate_low = 0.2
+adequate_high = 0.6
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-17"
+note = "Table 13.1, sufficient range (Bryson et al. 2014)."
+
+[[leaf_level]]
+Z = 42
+plant = "Apple"
+group = "fruit"
+part = "mature leaves from new growth"
+kind = "normal"
+adequate_low = 0.10
+adequate_high = 2.00
+unit = "mg/kg"
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-17"
+note = "Table 13.1, sufficient range (Bryson et al. 2014)."
+
+[[leaf_level]]
+Z = 42
+plant = "Conifers"
+group = "conifers"
+part = "needles"
+kind = "critical"
+deficient_below = 0.1
+unit = "mg/kg"
+source = "binkley_fisher2020"
+doi = "10.1002/9781119455745.ch13"
+note = "Possible deficiency below this level (Carter 1992, cited in chapter 13); the book says micronutrient critical levels in trees are not well established."
+
+# --- Iodine (Z = 53) ---
+# No [[plant]] row: the sources give no uptake form, phloem mobility or dated discovery for iodine (see notes_C.md).
+
+[[plant_note]]
+Z = 53
+topic = "deficiency"
+text = "Land plants are not known to need it, but small doses improved the growth and flowering of thale cress (Arabidopsis) in recent experiments, perhaps because it is built into some plant proteins."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 53
+topic = "toxicity"
+text = "Too much iodine harms the older leaves first: in tomato they yellow and drop while the young ones stay dark green; such levels are far above those in farm soils, so it is not seen in the field."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 53
+topic = "wild"
+text = "Some seaweeds, unlike land plants, need iodine, and certain red and brown algae store it in special cells."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 53
+topic = "food"
+text = "Iodine is one of the four minerals, with iron, zinc and selenium, that efforts to enrich crops (biofortification) most often target against hidden hunger; iodised salt has also worked well."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 53
+topic = "food"
+text = "Spraying crops with iodine has raised the iodine content of the harvest in some studies."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00014-9"

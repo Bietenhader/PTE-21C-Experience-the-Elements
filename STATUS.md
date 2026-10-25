@@ -10,6 +10,19 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
+## Sector maps (2026-10-25) — please review `tools/curated/sectors.toml`
+
+- Three maps below "Essential for humans": energy, logistics & infrastructure, IT / computing / telecom.
+- **The rule had to change.** The sources say which technologies use a material, not whether it can be
+  replaced. So "essential" now means *used in every technology the JRC studied for that sector* and
+  "important" *used in some*. The caption says so.
+- **Energy covers renewables (batteries, electrolysers, wind, heat pumps, solar PV) and nuclear fuel (U)
+  only.** Fossil fuels burnt for electricity and heat (coal, oil, gas: C and H) are not covered yet:
+  `source_unavailable_at_build` — the IEA critical-minerals reports and Graedel et al. 2015 (PNAS) refused
+  this machine (HTTP 403). If you can download the PDFs, I can add them.
+- Grouped rows of the JRC tables (platinum-group metals, "light/heavy rare earths, rest") are left out because
+  the tables do not say which members are used; the magnet rare earths count as Nd, Pr, Dy, Tb (report p. 45).
+
 ## Plants, part 2, and three maps (2026-10-25) — please review
 
 - New notes at the end of the element blocks in `tools/curated/plants.toml`: V, La, Ce, Nd, Cr, As, Cd, Hg, Pb.

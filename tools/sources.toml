@@ -318,7 +318,16 @@ licence = "Public domain (U.S. Government work)"
 licence_url = "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
 citation = "U.S. Geological Survey, 2026, Mineral commodity summaries 2026 (ver. 1.3, May 2026), doi:10.3133/mcs2026; data: Mineral Commodity Summaries 2026 Data Release, doi:10.5066/P1WKQ63T (file MCS2026_Commodities_Data.csv)."
 kind = "curated"
-notes = "World production and U.S. price or unit value per element for 2025 (USGS estimates), year-stamped, in tools/curated/production.toml; every number keeps its CSV line. Data release licence: CC0. Prices are per kg of the material named (often an oxide, ore or alloy), as USGS gives them."
+notes = "World production and U.S. price or unit value per element for 2025 (USGS estimates), year-stamped, in tools/curated/production.toml; every number keeps its CSV line. Data release licence: CC0. Prices are per kg of the material named (often an oxide, ore or alloy), as USGS gives them. After v0.1.0 also a few end-use statements (Cu, Fe, Al, Zn, Pb, U) in tools/curated/sectors.toml."
+
+[jrc_foresight2023]
+title = "Supply chain analysis and material demand forecast in strategic technologies and sectors in the EU – A foresight study"
+url = "https://doi.org/10.2760/386650"
+licence = "CC BY 4.0"
+licence_url = "https://creativecommons.org/licenses/by/4.0/"
+citation = "S. Carrara et al., Supply chain analysis and material demand forecast in strategic technologies and sectors in the EU – A foresight study, JRC132889, Publications Office of the European Union, Luxembourg (2023), doi:10.2760/386650."
+kind = "reference"
+notes = "Added after v0.1.0. tools/curated/sectors.toml: which raw materials the technologies of the renewable-energy, e-mobility, energy-intensive-industry and ICT sectors use (Tables 7–10), for the maps Essential for energy, for logistics & infrastructure and for IT, computing & telecom. Read from the open PDF (cached in tools/raw/sectors/)."
 
 [eu_crm]
 title = "EU critical and strategic raw materials (Critical Raw Materials Act, 2024)"

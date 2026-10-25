@@ -1,0 +1,1027 @@
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+# Elements and three sectors of human technology: the maps "Essential for energy", "Essential for logistics &
+# infrastructure" and "Essential for IT, computing & telecom" (added after v0.1.0).
+# FIN REVIEWS THIS FILE — please mark anything wrong, too simple or missing.
+#
+# One [[sector]] row per element and sector:
+#   Z        atomic number
+#   sector   energy | infrastructure | ict
+#   status   essential | important     (an element with no row shows "No role named in PTE-21C's sources")
+#   role     one sentence, our own words
+#   source   key in tools/sources.toml; page = table or page in that source
+#
+# How the status is set (a counting rule, not a judgement of substitutes, which these sources do not give):
+#   jrc_foresight2023  the JRC's sector tables (Tables 7–10) mark which raw materials each technology of a
+#                      sector uses. "essential" = used in every technology the JRC studied for that sector;
+#                      "important" = used in some of them. Energy = Table 7 (renewable energy: batteries,
+#                      electrolysers, wind turbines, heat pumps, solar PV); infrastructure = Tables 8 and 9
+#                      (e-mobility; energy-intensive industry, i.e. green steel); ICT = Table 10. A mineral counts
+#                      for the element it is mined for (iron ore -> Fe, baryte -> Ba, fluorspar -> F, potash -> K,
+#                      limestone -> Ca, natural graphite -> C); "REE (magnets)" stands for Nd, Pr, Dy and Tb (the
+#                      report's magnet rare earths, p. 45). The grouped rows "PGM", "LREE (rest)" and
+#                      "HREE (rest)" are left out: the tables do not say which members each technology uses.
+#   usgs_mcs           a few clear end-use statements of the USGS Mineral Commodity Summaries 2026 (Cu, Fe, Al,
+#                      Zn, Pb for infrastructure; uranium, the fuel of nuclear power, for energy).
+# Not yet covered (sources not reachable from the build machine): fossil fuels burnt for electricity and heat
+# (coal, oil and gas: C and H), and the IEA's critical-minerals reports. Fin can supply the PDFs.
+#
+# Generated once from the cached reports by a script, then reviewed; edit by hand from here on.
+
+# --- energy ------------------------------------------------------------------------------------------
+
+[[sector]]
+Z = 3
+sector = "energy"
+status = "important"
+role = "As lithium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 5
+sector = "energy"
+status = "important"
+role = "As boron, used in 4 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 6
+sector = "energy"
+status = "important"
+role = "As natural graphite, used in 2 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 9
+sector = "energy"
+status = "important"
+role = "As fluorspar, used in 3 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 12
+sector = "energy"
+status = "important"
+role = "As magnesium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 13
+sector = "energy"
+status = "essential"
+role = "As aluminium, used in all 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 14
+sector = "energy"
+status = "important"
+role = "As silicon, used in 4 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 15
+sector = "energy"
+status = "important"
+role = "As phosphorus, used in 2 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 19
+sector = "energy"
+status = "important"
+role = "As potash, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 20
+sector = "energy"
+status = "important"
+role = "As limestone, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 21
+sector = "energy"
+status = "important"
+role = "As scandium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 22
+sector = "energy"
+status = "important"
+role = "As titanium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 23
+sector = "energy"
+status = "important"
+role = "As vanadium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 24
+sector = "energy"
+status = "important"
+role = "As chromium, used in 3 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 25
+sector = "energy"
+status = "important"
+role = "As manganese, used in 4 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 26
+sector = "energy"
+status = "essential"
+role = "As iron, used in all 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 27
+sector = "energy"
+status = "important"
+role = "As cobalt, used in 2 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 28
+sector = "energy"
+status = "essential"
+role = "As nickel, used in all 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 29
+sector = "energy"
+status = "essential"
+role = "As copper, used in all 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 30
+sector = "energy"
+status = "important"
+role = "As zinc, used in 4 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 31
+sector = "energy"
+status = "important"
+role = "As gallium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 32
+sector = "energy"
+status = "important"
+role = "As germanium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 33
+sector = "energy"
+status = "important"
+role = "As arsenic, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 34
+sector = "energy"
+status = "important"
+role = "As selenium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 38
+sector = "energy"
+status = "important"
+role = "As strontium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 40
+sector = "energy"
+status = "important"
+role = "As zirconium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 41
+sector = "energy"
+status = "important"
+role = "As niobium, used in 2 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 42
+sector = "energy"
+status = "important"
+role = "As molybdenum, used in 4 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 47
+sector = "energy"
+status = "important"
+role = "As silver, used in 3 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 48
+sector = "energy"
+status = "important"
+role = "As cadmium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 49
+sector = "energy"
+status = "important"
+role = "As indium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 50
+sector = "energy"
+status = "important"
+role = "As tin, used in 2 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 51
+sector = "energy"
+status = "important"
+role = "As antimony, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 52
+sector = "energy"
+status = "important"
+role = "As tellurium, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 56
+sector = "energy"
+status = "important"
+role = "As baryte, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 59
+sector = "energy"
+status = "important"
+role = "As a rare earth of permanent magnets, used in 3 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 60
+sector = "energy"
+status = "important"
+role = "As a rare earth of permanent magnets, used in 3 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 65
+sector = "energy"
+status = "important"
+role = "As a rare earth of permanent magnets, used in 3 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 66
+sector = "energy"
+status = "important"
+role = "As a rare earth of permanent magnets, used in 3 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 73
+sector = "energy"
+status = "important"
+role = "As tantalum, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 74
+sector = "energy"
+status = "important"
+role = "As tungsten, used in 1 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 79
+sector = "energy"
+status = "important"
+role = "As gold, used in 2 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 82
+sector = "energy"
+status = "important"
+role = "As lead, used in 2 of the 5 renewable-energy technologies the JRC studied (batteries, electrolysers, wind turbines, heat pumps and solar PV)."
+source = "jrc_foresight2023"
+page = "Table 7, p. 143"
+
+[[sector]]
+Z = 92
+sector = "energy"
+status = "essential"
+role = "The fuel of nuclear power stations; the USGS lists nuclear fuel as its main use."
+source = "usgs_mcs"
+page = "Table 6, Final 2025 Critical Minerals List"
+
+# --- infrastructure ----------------------------------------------------------------------------------
+
+[[sector]]
+Z = 1
+sector = "infrastructure"
+status = "important"
+role = "As hydrogen, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 3
+sector = "infrastructure"
+status = "important"
+role = "As lithium, used in 1 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 5
+sector = "infrastructure"
+status = "important"
+role = "As boron, used in 2 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 6
+sector = "infrastructure"
+status = "important"
+role = "As natural graphite, used in 2 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 9
+sector = "infrastructure"
+status = "important"
+role = "As fluorspar, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 12
+sector = "infrastructure"
+status = "important"
+role = "As magnesite, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 13
+sector = "infrastructure"
+status = "essential"
+role = "Transport takes about 36 % of the aluminium used in the US, packaging and building most of the rest."
+source = "usgs_mcs"
+page = "Aluminum, p. 40"
+
+[[sector]]
+Z = 14
+sector = "infrastructure"
+status = "essential"
+role = "As silicon, used in all 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 15
+sector = "infrastructure"
+status = "important"
+role = "As phosphorus, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 20
+sector = "infrastructure"
+status = "important"
+role = "As limestone, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 22
+sector = "infrastructure"
+status = "important"
+role = "As titanium, used in 1 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 23
+sector = "infrastructure"
+status = "important"
+role = "As vanadium, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 24
+sector = "infrastructure"
+status = "essential"
+role = "As chromium, used in all 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 25
+sector = "infrastructure"
+status = "essential"
+role = "As manganese, used in all 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 26
+sector = "infrastructure"
+status = "essential"
+role = "As steel: construction takes about 31 % of US steel shipments, cars 15 %."
+source = "usgs_mcs"
+page = "Iron and steel, p. 102"
+
+[[sector]]
+Z = 27
+sector = "infrastructure"
+status = "important"
+role = "As cobalt, used in 2 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 28
+sector = "infrastructure"
+status = "essential"
+role = "As nickel, used in all 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 29
+sector = "infrastructure"
+status = "essential"
+role = "Mostly used in building construction (42 %) and in electrical products; the USGS names cables and wiring as its use."
+source = "usgs_mcs"
+page = "Copper, p. 72"
+
+[[sector]]
+Z = 30
+sector = "infrastructure"
+status = "important"
+role = "Mostly used to galvanise steel against rust."
+source = "usgs_mcs"
+page = "Zinc, p. 212"
+
+[[sector]]
+Z = 38
+sector = "infrastructure"
+status = "important"
+role = "As strontium, used in 1 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 40
+sector = "infrastructure"
+status = "important"
+role = "As zirconium, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 42
+sector = "infrastructure"
+status = "important"
+role = "As molybdenum, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 47
+sector = "infrastructure"
+status = "important"
+role = "As silver, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 56
+sector = "infrastructure"
+status = "important"
+role = "As baryte, used in 1 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 59
+sector = "infrastructure"
+status = "important"
+role = "As a rare earth of permanent magnets, used in 2 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 60
+sector = "infrastructure"
+status = "important"
+role = "As a rare earth of permanent magnets, used in 2 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 65
+sector = "infrastructure"
+status = "important"
+role = "As a rare earth of permanent magnets, used in 2 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 66
+sector = "infrastructure"
+status = "important"
+role = "As a rare earth of permanent magnets, used in 2 of the 3 e-mobility technologies the JRC studied (batteries, fuel cells and traction motors)."
+source = "jrc_foresight2023"
+page = "Table 8, p. 154"
+
+[[sector]]
+Z = 79
+sector = "infrastructure"
+status = "important"
+role = "As gold, used in 1 of the 2 energy-intensive-industry technologies the JRC studied (hydrogen-based iron and electric-arc steelmaking, and heat pumps)."
+source = "jrc_foresight2023"
+page = "Table 9, p. 163"
+
+[[sector]]
+Z = 82
+sector = "infrastructure"
+status = "important"
+role = "About two thirds goes into lead-acid batteries, mostly for vehicles."
+source = "usgs_mcs"
+page = "Lead, p. 114"
+
+# --- ict ---------------------------------------------------------------------------------------------
+
+[[sector]]
+Z = 1
+sector = "ict"
+status = "important"
+role = "As hydrogen, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 2
+sector = "ict"
+status = "important"
+role = "As helium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 3
+sector = "ict"
+status = "important"
+role = "As lithium, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 4
+sector = "ict"
+status = "important"
+role = "As beryllium, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 5
+sector = "ict"
+status = "essential"
+role = "As boron, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 6
+sector = "ict"
+status = "important"
+role = "As natural graphite, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 9
+sector = "ict"
+status = "important"
+role = "As fluorspar, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 10
+sector = "ict"
+status = "important"
+role = "As neon, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 12
+sector = "ict"
+status = "important"
+role = "As magnesium, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 13
+sector = "ict"
+status = "essential"
+role = "As aluminium, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 14
+sector = "ict"
+status = "essential"
+role = "As silicon, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 15
+sector = "ict"
+status = "important"
+role = "As phosphorus, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 21
+sector = "ict"
+status = "important"
+role = "As scandium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 22
+sector = "ict"
+status = "important"
+role = "As titanium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 23
+sector = "ict"
+status = "important"
+role = "As vanadium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 24
+sector = "ict"
+status = "important"
+role = "As chromium, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 25
+sector = "ict"
+status = "essential"
+role = "As manganese, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 26
+sector = "ict"
+status = "essential"
+role = "As iron, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 27
+sector = "ict"
+status = "important"
+role = "As cobalt, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 28
+sector = "ict"
+status = "essential"
+role = "As nickel, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 29
+sector = "ict"
+status = "essential"
+role = "As copper, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 30
+sector = "ict"
+status = "essential"
+role = "As zinc, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 31
+sector = "ict"
+status = "essential"
+role = "As gallium, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 32
+sector = "ict"
+status = "essential"
+role = "As germanium, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 33
+sector = "ict"
+status = "essential"
+role = "As arsenic, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 34
+sector = "ict"
+status = "important"
+role = "As selenium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 36
+sector = "ict"
+status = "important"
+role = "As krypton, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 38
+sector = "ict"
+status = "important"
+role = "As strontium, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 40
+sector = "ict"
+status = "important"
+role = "As zirconium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 41
+sector = "ict"
+status = "important"
+role = "As niobium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 42
+sector = "ict"
+status = "important"
+role = "As molybdenum, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 47
+sector = "ict"
+status = "essential"
+role = "As silver, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 48
+sector = "ict"
+status = "important"
+role = "As cadmium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 49
+sector = "ict"
+status = "essential"
+role = "As indium, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 50
+sector = "ict"
+status = "essential"
+role = "As tin, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 51
+sector = "ict"
+status = "essential"
+role = "As antimony, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 52
+sector = "ict"
+status = "important"
+role = "As tellurium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 54
+sector = "ict"
+status = "important"
+role = "As xenon, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 56
+sector = "ict"
+status = "essential"
+role = "As baryte, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 59
+sector = "ict"
+status = "essential"
+role = "As a rare earth of permanent magnets, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 60
+sector = "ict"
+status = "essential"
+role = "As a rare earth of permanent magnets, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 65
+sector = "ict"
+status = "essential"
+role = "As a rare earth of permanent magnets, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 66
+sector = "ict"
+status = "essential"
+role = "As a rare earth of permanent magnets, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 72
+sector = "ict"
+status = "important"
+role = "As hafnium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 73
+sector = "ict"
+status = "important"
+role = "As tantalum, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 74
+sector = "ict"
+status = "important"
+role = "As tungsten, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 75
+sector = "ict"
+status = "important"
+role = "As rhenium, used in 1 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 79
+sector = "ict"
+status = "essential"
+role = "As gold, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 82
+sector = "ict"
+status = "important"
+role = "As lead, used in 2 of the 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"
+
+[[sector]]
+Z = 83
+sector = "ict"
+status = "essential"
+role = "As bismuth, used in all 3 ICT technologies the JRC studied (data transmission networks, data storage and servers, and smartphones, tablets and laptops)."
+source = "jrc_foresight2023"
+page = "Table 10, p. 168"

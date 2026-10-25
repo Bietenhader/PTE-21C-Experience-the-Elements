@@ -440,6 +440,39 @@ classes = [
 ]
 
 [[map]]
+id = "essential-energy"
+label = "Essential for energy"
+caption = "Elements that producing electricity and heat needs, from tools/curated/sectors.toml: the JRC's 2023 foresight study (renewable energy: batteries, electrolysers, wind turbines, heat pumps, solar PV; nuclear fuel from the USGS. Fossil fuels are not yet covered) and the USGS Mineral Commodity Summaries 2026. Essential = used in every technology the JRC studied for the sector; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none."
+sources = ["jrc_foresight2023", "usgs_mcs"]
+classes = [
+  { id = "essential", label = "Essential", short = "ess.", description = "Used in every technology of the sector that the sources studied.", tone = 3 },
+  { id = "important", label = "Important", short = "imp.", description = "Used in some of the sector's technologies.", tone = 2 },
+  { id = "none", label = "No role named", short = "none", description = "No role named in PTE-21C's sources; that does not mean it has none.", tone = 8 },
+]
+
+[[map]]
+id = "essential-infrastructure"
+label = "Essential for logistics & infrastructure"
+caption = "Elements that vehicles, steel and construction need, from tools/curated/sectors.toml: the JRC's 2023 foresight study (e-mobility and green steel; copper, steel, aluminium, zinc and lead from the USGS) and the USGS Mineral Commodity Summaries 2026. Essential = used in every technology the JRC studied for the sector; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none."
+sources = ["jrc_foresight2023", "usgs_mcs"]
+classes = [
+  { id = "essential", label = "Essential", short = "ess.", description = "Used in every technology of the sector that the sources studied.", tone = 3 },
+  { id = "important", label = "Important", short = "imp.", description = "Used in some of the sector's technologies.", tone = 2 },
+  { id = "none", label = "No role named", short = "none", description = "No role named in PTE-21C's sources; that does not mean it has none.", tone = 8 },
+]
+
+[[map]]
+id = "essential-ict"
+label = "Essential for IT, computing & telecom"
+caption = "Elements that IT, computing and telecom need, from tools/curated/sectors.toml: the JRC's 2023 foresight study (data transmission networks, data storage and servers, smartphones, tablets and laptops) and the USGS Mineral Commodity Summaries 2026. Essential = used in every technology the JRC studied for the sector; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none."
+sources = ["jrc_foresight2023", "usgs_mcs"]
+classes = [
+  { id = "essential", label = "Essential", short = "ess.", description = "Used in every technology of the sector that the sources studied.", tone = 3 },
+  { id = "important", label = "Important", short = "imp.", description = "Used in some of the sector's technologies.", tone = 2 },
+  { id = "none", label = "No role named", short = "none", description = "No role named in PTE-21C's sources; that does not mean it has none.", tone = 8 },
+]
+
+[[map]]
 id = "origin"
 label = "Cosmic origin (approximate)"
 caption = "The process that made most of each element present when the Solar System formed, read off Fig. 39 of Kobayashi, Karakas & Lugaro (2020) — an approximate transcription of a model, not a measurement."

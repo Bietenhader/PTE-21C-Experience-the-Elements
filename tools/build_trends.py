@@ -103,6 +103,7 @@ def context() -> dict:
 
     life = build_lifeandhistory.life_groups(curated_rows("biology.toml", "life"))
     return {
+        "sectors": sector_rows(curated_rows("sectors.toml", "sector")),
         "life": life,
         "cooled": cooled,
         "clocks": metrology["clocks"],
@@ -150,6 +151,42 @@ def map_life(group):
     return classify
 
 
+SECTORS = ("energy", "infrastructure", "ict")
+SECTOR_STATUS = ("essential", "important")
+SECTOR_COLUMNS = {"Z", "sector", "status", "role", "source", "page"}
+
+
+def sector_rows(rows: list[dict]) -> dict[tuple[int, str], dict]:
+    """{(Z, sector): row} from tools/curated/sectors.toml; a bad row stops the build and names itself."""
+    out: dict[tuple[int, str], dict] = {}
+    for r in rows:
+        where = f"sectors.toml [[sector]] Z={r.get('Z')!r} sector={r.get('sector')!r}"
+        if not isinstance(r.get("Z"), int) or not 1 <= r["Z"] <= 118:
+            raise ValueError(f"{where}: Z must be an atomic number from 1 to 118")
+        if r.get("sector") not in SECTORS:
+            raise ValueError(f"{where}: unknown sector; use one of {', '.join(SECTORS)}")
+        if r.get("status") not in SECTOR_STATUS:
+            raise ValueError(f"{where}: unknown status; use one of {', '.join(SECTOR_STATUS)}")
+        if extra := sorted(set(r) - SECTOR_COLUMNS):
+            raise ValueError(f"{where}: unknown column(s) {', '.join(extra)}")
+        if not isinstance(r.get("role"), str) or not r["role"].strip():
+            raise ValueError(f"{where}: no role sentence")
+        if (r["Z"], r["sector"]) in out:
+            raise ValueError(f"{where}: more than one row")
+        out[(r["Z"], r["sector"])] = r
+    return out
+
+
+def map_sector(sector):
+    """essential / important from sectors.toml; no row is "none" (no role named in our sources)."""
+
+    def classify(e, ctx):
+        row = ctx["sectors"].get((e["Z"], sector))
+        return row["status"] if row else "none"
+
+    return classify
+
+
 def map_humans(e, ctx):
     return ctx["biology"].get(e["Z"], {}).get("essential_human", "no")
 
@@ -173,6 +210,9 @@ CONTEXT_CLASSIFIERS = {
     "essential-archaea": map_life("archaea"),
     "essential-plants": map_plants,
     "essential-humans": map_humans,
+    "essential-energy": map_sector("energy"),
+    "essential-infrastructure": map_sector("infrastructure"),
+    "essential-ict": map_sector("ict"),
     "origin": map_origin,
 }
 

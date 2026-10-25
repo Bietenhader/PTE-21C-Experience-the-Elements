@@ -7,6 +7,7 @@
 // scientist, reviews; the carcinogen groups are IARC's, read from the IARC list by the pipeline.
 
 import { type ReactNode, useEffect, useId, useRef, useState } from "react";
+import { reducedMotionNow } from "../../app/motion";
 import { useElementDetail } from "../../data/load";
 import { isMissing } from "../../data/format";
 import type {
@@ -214,15 +215,21 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFile; s
   const uses = [...(b.isotopeUses ?? [])].sort((x, y) => FIELD_ORDER.indexOf(x.field) - FIELD_ORDER.indexOf(y.field));
   const toxic = b.toxicity ?? [];
   const iarc = b.iarc ?? [];
-  // "More about plants": the details open below the cards and take the focus (so a phone scrolls to
-  // them); closing them from inside gives the focus back to the card's button.
+  // "More about plants": the details open below the cards with a short animation, the panel glides down
+  // to them (instantly with reduced motion) and they take the focus; closing them from inside gives the
+  // focus back to the card's button.
   const detailId = useId();
   const [plantsOpen, setPlantsOpen] = useState(false);
   const moreRef = useRef<HTMLButtonElement>(null);
   const detailHeading = useRef<HTMLHeadingElement>(null);
   const opened = useRef(false);
   useEffect(() => {
-    if (plantsOpen && opened.current) detailHeading.current?.focus();
+    const heading = detailHeading.current;
+    if (plantsOpen && opened.current && heading) {
+      // Glide down to the details (they open below all six cards), then put the focus on their heading.
+      heading.focus({ preventScroll: true });
+      heading.closest("section")?.scrollIntoView({ behavior: reducedMotionNow() ? "auto" : "smooth", block: "start" });
+    }
     opened.current = false;
   }, [plantsOpen]);
   const togglePlants = () => {

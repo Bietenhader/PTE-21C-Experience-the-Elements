@@ -379,6 +379,45 @@ classes = [
 ]
 
 [[map]]
+id = "essential-bacteria"
+label = "Essential for bacteria"
+caption = "Whether bacteria need or use each element, from the [[life]] rows of tools/curated/biology.toml (reviews and papers cited per row). No row means no role is known from PTE-21C's sources, which does not mean there is none."
+sources = ["primary_literature", "wackett2004", "zhang_gladyshev2011"]
+classes = [
+  { id = "essential", label = "Essential", short = "ess.", description = "Needed by essentially all bacteria.", tone = 3 },
+  { id = "some", label = "Used by some", short = "some", description = "Used by some bacteria, from a few to most, not by all.", tone = 2 },
+  { id = "beneficial", label = "Beneficial", short = "ben.", description = "Helps in some studies without being shown to be needed.", tone = 4 },
+  { id = "none", label = "No role", short = "none", description = "A source says bacteria do without it.", tone = 7 },
+  { id = "unknown", label = "No known role", short = "?", description = "No role is known from PTE-21C's sources; that does not mean there is none.", tone = 8 },
+]
+
+[[map]]
+id = "essential-fungi"
+label = "Essential for fungi"
+caption = "Whether fungi need or use each element, from the [[life]] rows of tools/curated/biology.toml (reviews and papers cited per row). No row means no role is known from PTE-21C's sources, which does not mean there is none."
+sources = ["cyert_philpott2013", "maret2016", "primary_literature"]
+classes = [
+  { id = "essential", label = "Essential", short = "ess.", description = "Needed by essentially all fungi.", tone = 3 },
+  { id = "some", label = "Used by some", short = "some", description = "Used by some fungi, from a few to most, not by all.", tone = 2 },
+  { id = "beneficial", label = "Beneficial", short = "ben.", description = "Helps in some studies without being shown to be needed.", tone = 4 },
+  { id = "none", label = "No role", short = "none", description = "A source says fungi do without it.", tone = 7 },
+  { id = "unknown", label = "No known role", short = "?", description = "No role is known from PTE-21C's sources; that does not mean there is none.", tone = 8 },
+]
+
+[[map]]
+id = "essential-archaea"
+label = "Essential for archaea"
+caption = "Whether archaea need or use each element, from the [[life]] rows of tools/curated/biology.toml (reviews and papers cited per row). No row means no role is known from PTE-21C's sources, which does not mean there is none."
+sources = ["primary_literature", "wackett2004", "zhang_gladyshev2011"]
+classes = [
+  { id = "essential", label = "Essential", short = "ess.", description = "Needed by essentially all archaea.", tone = 3 },
+  { id = "some", label = "Used by some", short = "some", description = "Used by some archaea, from a few to most, not by all.", tone = 2 },
+  { id = "beneficial", label = "Beneficial", short = "ben.", description = "Helps in some studies without being shown to be needed.", tone = 4 },
+  { id = "none", label = "No role", short = "none", description = "A source says archaea do without it.", tone = 7 },
+  { id = "unknown", label = "No known role", short = "?", description = "No role is known from PTE-21C's sources; that does not mean there is none.", tone = 8 },
+]
+
+[[map]]
 id = "essential-plants"
 label = "Essential for plants"
 caption = "Elements plants cannot complete their life cycle without, and elements that benefit some plants, from tools/curated/biology.toml (Marschner's Mineral Nutrition of Plants and cited reviews)."

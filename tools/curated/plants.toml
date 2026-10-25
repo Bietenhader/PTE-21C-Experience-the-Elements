@@ -1389,6 +1389,43 @@ source = "binkley_fisher2020"
 doi = "10.1002/9781119455745.ch13"
 note = "Table 13.2; stands below it often respond to fertiliser."
 
+# --- Vanadium (Z = 23) ---
+[[plant_note]]
+Z = 23
+topic = "toxicity"
+text = "Tiny amounts seem to help higher plants, perhaps by aiding chlorophyll formation through iron, but this is hard to prove because traces of vanadium are in almost every chemical and water supply. A little more is already harmful: in Chinese green mustard and tomato it slowed growth and stopped side roots forming."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-26"
+
+[[plant_note]]
+Z = 23
+topic = "toxicity"
+text = "Fungi and some freshwater algae need vanadium, but for flowering plants reports of a benefit are rare and vague."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00012-5"
+
+[[plant_note]]
+Z = 23
+topic = "soil"
+text = "Most vanadium in soils comes from people: industrial catalysts, metal smelting, coal ash, burnt oil and phosphate fertilisers, some of which hold over 100 mg per kg. In soil it is mostly vanadate, held tightly by iron and manganese oxides, so little of it is available to roots."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-26"
+
+# --- Chromium (Z = 24) ---
+[[plant_note]]
+Z = 24
+topic = "toxicity"
+text = "People and animals use chromium, but no role in plants is known. In oats, severe chromium poisoning gave small roots and narrow, brownish-red leaves covered in tiny dead spots."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 24
+topic = "soil"
+text = "Most soils hold 15–100 mg per kg, bound in insoluble minerals and to clay and humus, so very little reaches plants. Soils on serpentine rock can hold several per cent, and chromium may add to their poor fertility."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
 # --- Manganese (Z = 25) ---
 [[plant]]
 Z = 25
@@ -2116,6 +2153,35 @@ source = "barker_pilbeam2015"
 doi = "10.1201/b18458-19"
 note = "Table 15.1, Forest and landscape trees – hardwoods (maple, birch, beech, ash, oak, poplar, eucalyptus and others)."
 
+# --- Arsenic (Z = 33) ---
+[[plant_note]]
+Z = 33
+topic = "toxicity"
+text = "Arsenate looks so much like phosphate that it enters roots through the phosphate carriers. Arsenate-tolerant races of the grass Yorkshire fog survive by taking up much less of it."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00018-6"
+
+[[plant_note]]
+Z = 33
+topic = "soil"
+text = "In flooded, airless soils arsenate is turned into arsenite and much more arsenic dissolves, especially where the soil is rich in organic matter."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00001-0"
+
+[[plant_note]]
+Z = 33
+topic = "food"
+text = "Rice is the main food source of arsenic, above all in parts of Asia where paddies are irrigated with arsenic-rich water: arsenite slips in through the roots' silicon transporters, which rice has in abundance. Silicon fertilisers compete with it and can lower the arsenic in the grain."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 33
+topic = "wild"
+text = "Some metal-loving plants growing on mine sites and metal-rich soils accumulate arsenic, although plants do not need it."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00007-1"
+
 # --- Selenium (Z = 34) ---
 [[plant]]
 Z = 34
@@ -2314,6 +2380,49 @@ source = "binkley_fisher2020"
 doi = "10.1002/9781119455745.ch13"
 note = "Possible deficiency below this level (Carter 1992, cited in chapter 13); the book says micronutrient critical levels in trees are not well established."
 
+# --- Cadmium (Z = 48) ---
+[[plant_note]]
+Z = 48
+topic = "toxicity"
+text = "Cadmium is so like zinc that it travels in the plant by zinc's routes, but it binds much more strongly to the sulfur groups of enzymes and other proteins and disturbs them; it can also upset iron metabolism and yellow the leaves. Plants tolerate far more than animals do (5–10 mg per kg of dry matter against 0.5–1 in feed), so a crop can look healthy while unfit to eat."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 48
+topic = "soil"
+text = "Unpolluted soils hold less than 1 mg per kg; smelters (above all zinc smelters), sewage sludge, tyre wear and phosphate fertilisers made from cadmium-rich rock add more. It binds less in acid sandy soils, where it moves into plants and down to groundwater more easily; 3 mg per kg was proposed as a critical level for soils in Germany."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 48
+topic = "food"
+text = "Of the toxic elements that reach people mainly through plant foods, cadmium is the main worry: it moves readily from soil into crops and is far more toxic to people than to plants."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 48
+topic = "toxicity"
+text = "In animals and people cadmium builds up in the kidneys. Itai-itai disease in Japan, painful brittle bones, was traced to rice grown on paddy soils polluted by a mine."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 48
+topic = "food"
+text = "Zinc fertiliser can lower cadmium uptake, because both use the same transporters; chloride from salty water or potassium chloride does the opposite, carrying more cadmium into crops."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 48
+topic = "wild"
+text = "About 45 plant families have metal hyperaccumulators, but cleaning soil with plants is slow: even for cadmium, which crops take up readily, lowering a soil from 3 to 1 mg per kg would take about 200 years of cropping."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
 # --- Iodine (Z = 53) ---
 # No [[plant]] row: the sources give no uptake form, phloem mobility or dated discovery for iodine (see notes_C.md).
 
@@ -2351,3 +2460,105 @@ topic = "food"
 text = "Spraying crops with iodine has raised the iodine content of the harvest in some studies."
 source = "marschner2023"
 doi = "10.1016/b978-0-12-819773-8.00014-9"
+
+# --- Lanthanum (Z = 57) ---
+[[plant_note]]
+Z = 57
+topic = "toxicity"
+text = "Studies disagree: in China small doses of lanthanides (mostly lanthanum and cerium salts) have been reported to improve crops, while other experiments found them toxic. Lanthanum harmed plants more than manganese, zinc or iron did, though less than copper, and it hindered root growth in oats and barley."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-22"
+
+[[plant_note]]
+Z = 57
+topic = "soil"
+text = "Lanthanum is, after cerium, the most common lanthanide in soils; together with cerium, neodymium, samarium and europium it makes up nine-tenths of their total. Only a few per cent of the lanthanum in Northern European farm soils is available to plants."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-22"
+
+[[plant_note]]
+Z = 57
+topic = "food"
+text = "Rare-earth fertilisers, lanthanides as nitrates, chlorides or bound to amino acids, are sold in China and applied to soil, seeds or leaves. Phosphate fertilisers also bring lanthanides into fields."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-22"
+
+[[plant_note]]
+Z = 57
+topic = "wild"
+text = "Some ferns gather far more lanthanides than other plants: species of Dryopteris, Asplenium, Adiantum and Dicranopteris held 10–40 mg of lanthanum per kg of dry fronds, against at most about 3 in other ferns."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-22"
+
+# --- Cerium (Z = 58) ---
+[[plant_note]]
+Z = 58
+topic = "soil"
+text = "Cerium is the most abundant lanthanide in soils, around 74 mg per kg on average in one survey and more in China. Horseradish has been shown to take it up as cerium(III)."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-22"
+
+[[plant_note]]
+Z = 58
+topic = "toxicity"
+text = "Like the other lanthanides, cerium seems to help some crops in small doses and harm them in larger ones; most of what is taken up stays in the roots, and seeds and fruits hold the least."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-22"
+
+# --- Neodymium (Z = 60) ---
+[[plant_note]]
+Z = 60
+topic = "toxicity"
+text = "Neodymium hardly moves within the plant: only about 1% of what the roots held reached stems and leaves. Like lanthanum, it hindered root growth in oats and barley."
+source = "barker_pilbeam2015"
+doi = "10.1201/b18458-22"
+
+# --- Mercury (Z = 80) ---
+[[plant_note]]
+Z = 80
+topic = "toxicity"
+text = "Plants stand 2–5 mg of mercury per kg of dry matter before they suffer, more than is acceptable in animal feed, so a plant can look healthy while holding too much for the food chain."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 80
+topic = "food"
+text = "Seafood, not plants, is usually the main source of the mercury people eat."
+source = "marschner2023"
+doi = "10.1016/b978-0-12-819773-8.00020-4"
+
+[[plant_note]]
+Z = 80
+topic = "soil"
+text = "A critical level of 2 mg of mercury per kg was proposed for farm and garden soils in Germany."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+# --- Lead (Z = 82) ---
+[[plant_note]]
+Z = 82
+topic = "toxicity"
+text = "Lead poisoning in plants is rarely seen in the field; almost everything known comes from nutrient-solution experiments, where even little lead badly stunted the roots of spruce seedlings. Organic lead from leaded petrol is far worse: 10 mg per kg of soil already stunted wheat, while 100 mg of ordinary lead did nothing."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 82
+topic = "soil"
+text = "Farm soils hold 2–200 mg per kg, more over lead ores. Lead clings to humus and stays in the top few centimetres; liming makes it even less available."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 82
+topic = "food"
+text = "Lead on crops came mostly from the air: plants beside busy roads held about 50 mg per kg of dry matter, 150 m away only 2–3, and most of it sat on the surface and washed off. Grain, tubers and roots stayed near their normal 0.5 mg per kg."
+source = "mengel_kirkby2001"
+doi = "10.1007/978-94-010-1009-2_20"
+
+[[plant_note]]
+Z = 82
+topic = "wild"
+text = "On old lead-mine tips in Wales, the bent grass Agrostis tenuis grew races that tolerate lead but not other metals, and the trait is inherited; sheep's fescue has lead-tolerant races too."
+source = "epstein1972"

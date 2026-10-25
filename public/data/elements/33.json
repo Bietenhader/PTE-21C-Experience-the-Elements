@@ -734,6 +734,38 @@
   "essentialPlant": "no",
   "essentialHuman": "no",
   "note": "Not known to be essential for plants or for humans.",
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "Arsenate looks so much like phosphate that it enters roots through the phosphate carriers. Arsenate-tolerant races of the grass Yorkshire fog survive by taking up much less of it.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00018-6"
+     }
+    ],
+    "soil": [
+     {
+      "text": "In flooded, airless soils arsenate is turned into arsenite and much more arsenic dissolves, especially where the soil is rich in organic matter.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00001-0"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Some metal-loving plants growing on mine sites and metal-rich soils accumulate arsenic, although plants do not need it.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00007-1"
+     }
+    ],
+    "food": [
+     {
+      "text": "Rice is the main food source of arsenic, above all in parts of Asia where paddies are irrigated with arsenic-rich water: arsenite slips in through the roots' silicon transporters, which rice has in abundance. Silicon fertilisers compete with it and can lower the arsenic in the grain.",
+      "source": "marschner2023",
+      "doi": "10.1016/b978-0-12-819773-8.00020-4"
+     }
+    ]
+   }
+  },
   "environment": [
    {
     "text": "Arsenic dissolved naturally from rocks into groundwater is the greatest threat from it: wells in Bangladesh and many other countries exceed safe levels, and crops irrigated with such water carry it into food.",

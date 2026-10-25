@@ -935,6 +935,38 @@
      }
     ]
    }
+  },
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "Studies disagree: in China small doses of lanthanides (mostly lanthanum and cerium salts) have been reported to improve crops, while other experiments found them toxic. Lanthanum harmed plants more than manganese, zinc or iron did, though less than copper, and it hindered root growth in oats and barley.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-22"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Lanthanum is, after cerium, the most common lanthanide in soils; together with cerium, neodymium, samarium and europium it makes up nine-tenths of their total. Only a few per cent of the lanthanum in Northern European farm soils is available to plants.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-22"
+     }
+    ],
+    "wild": [
+     {
+      "text": "Some ferns gather far more lanthanides than other plants: species of Dryopteris, Asplenium, Adiantum and Dicranopteris held 10–40 mg of lanthanum per kg of dry fronds, against at most about 3 in other ferns.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-22"
+     }
+    ],
+    "food": [
+     {
+      "text": "Rare-earth fertilisers, lanthanides as nitrates, chlorides or bound to amino acids, are sold in China and applied to soil, seeds or leaves. Phosphate fertilisers also bring lanthanides into fields.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-22"
+     }
+    ]
+   }
   }
  },
  "history": {

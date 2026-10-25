@@ -764,6 +764,24 @@
     ]
    }
   },
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "People and animals use chromium, but no role in plants is known. In oats, severe chromium poisoning gave small roots and narrow, brownish-red leaves covered in tiny dead spots.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Most soils hold 15–100 mg per kg, bound in insoluble minerals and to clay and humus, so very little reaches plants. Soils on serpentine rock can hold several per cent, and chromium may add to their poor fertility.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ]
+   }
+  },
   "iarc": [
    {
     "agent": "Chromium (VI) compounds",

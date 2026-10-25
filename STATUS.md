@@ -10,6 +10,16 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
+## Plants, part 2, and three maps (2026-10-25) — please review
+
+- New notes at the end of the element blocks in `tools/curated/plants.toml`: V, La, Ce, Nd, Cr, As, Cd, Hg, Pb.
+- **Vanadium:** Barker & Pilbeam call it apparently beneficial, Marschner (4th ed.) calls such reports "rare
+  and vague". Both views are given; its status stays "not essential". Your call.
+- Mercury is thin (the books say little); thallium was left out (not asked for).
+- Maps: Essential for bacteria / fungi / archaea, from the `[[life]]` rows you already approved.
+- Next (PR B): Energy, Logistics / Infrastructure, IT / Computing / Telecom — waiting for your choice of
+  literature and of the "essential" rule.
+
 ## Plants in detail (2026-10-24) — please review `tools/curated/plants.toml`
 
 You chose design B: the Plants card now has a **"More about plants"** button; the details open below the

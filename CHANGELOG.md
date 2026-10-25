@@ -5,6 +5,13 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added — plants, part 2, and three maps
+
+- "More about plants" now also covers vanadium, lanthanum, cerium and neodymium, and what too much
+  chromium, arsenic, cadmium, mercury and lead does to plants, to soils and to food (30 sourced notes).
+- Trend menu: **Essential for bacteria**, **fungi** and **archaea** maps (above "Essential for plants"),
+  from the `[[life]]` rows; an element without a row shows "No known role", never "not needed".
+
 ### Added
 
 - **Plants in detail** (Biology & ecology): the Plants card has a "More about plants" button that opens

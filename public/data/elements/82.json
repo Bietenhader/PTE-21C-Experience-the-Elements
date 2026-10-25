@@ -1162,6 +1162,37 @@
   "essentialPlant": "no",
   "essentialHuman": "no",
   "note": "Not known to be essential for plants or for humans.",
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "Lead poisoning in plants is rarely seen in the field; almost everything known comes from nutrient-solution experiments, where even little lead badly stunted the roots of spruce seedlings. Organic lead from leaded petrol is far worse: 10 mg per kg of soil already stunted wheat, while 100 mg of ordinary lead did nothing.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Farm soils hold 2–200 mg per kg, more over lead ores. Lead clings to humus and stays in the top few centimetres; liming makes it even less available.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ],
+    "wild": [
+     {
+      "text": "On old lead-mine tips in Wales, the bent grass Agrostis tenuis grew races that tolerate lead but not other metals, and the trait is inherited; sheep's fescue has lead-tolerant races too.",
+      "source": "epstein1972"
+     }
+    ],
+    "food": [
+     {
+      "text": "Lead on crops came mostly from the air: plants beside busy roads held about 50 mg per kg of dry matter, 150 m away only 2–3, and most of it sat on the surface and washed off. Grain, tubers and roots stayed near their normal 0.5 mg per kg.",
+      "source": "mengel_kirkby2001",
+      "doi": "10.1007/978-94-010-1009-2_20"
+     }
+    ]
+   }
+  },
   "toxicity": [
    {
     "text": "Lead harms the brain, kidneys and blood and is most dangerous to young children and to the unborn; no level of exposure is known to be without harm.",

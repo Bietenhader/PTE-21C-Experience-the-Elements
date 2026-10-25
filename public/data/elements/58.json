@@ -970,6 +970,24 @@
      }
     ]
    }
+  },
+  "plants": {
+   "notes": {
+    "toxicity": [
+     {
+      "text": "Like the other lanthanides, cerium seems to help some crops in small doses and harm them in larger ones; most of what is taken up stays in the roots, and seeds and fruits hold the least.",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-22"
+     }
+    ],
+    "soil": [
+     {
+      "text": "Cerium is the most abundant lanthanide in soils, around 74 mg per kg on average in one survey and more in China. Horseradish has been shown to take it up as cerium(III).",
+      "source": "barker_pilbeam2015",
+      "doi": "10.1201/b18458-22"
+     }
+    ]
+   }
   }
  },
  "history": {

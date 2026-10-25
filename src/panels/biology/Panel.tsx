@@ -7,7 +7,6 @@
 // scientist, reviews; the carcinogen groups are IARC's, read from the IARC list by the pipeline.
 
 import { type ReactNode, useEffect, useId, useRef, useState } from "react";
-import { reducedMotionNow } from "../../app/motion";
 import { useElementDetail } from "../../data/load";
 import { isMissing } from "../../data/format";
 import type {
@@ -228,7 +227,10 @@ function Body({ e, d, sources }: { e: ElementIndexEntry; d: ElementDetailFile; s
     if (plantsOpen && opened.current && heading) {
       // Glide down to the details (they open below all six cards), then put the focus on their heading.
       heading.focus({ preventScroll: true });
-      heading.closest("section")?.scrollIntoView({ behavior: reducedMotionNow() ? "auto" : "smooth", block: "start" });
+      // <html data-motion> holds the effective motion setting; reading it here keeps app/motion (and the
+      // settings store) out of this panel's chunk, which slowed the table's first paint.
+      const smooth = document.documentElement.dataset.motion === "full";
+      heading.closest("section")?.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
     }
     opened.current = false;
   }, [plantsOpen]);

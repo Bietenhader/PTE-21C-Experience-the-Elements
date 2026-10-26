@@ -56,10 +56,10 @@ page = "Table 7, p. 143"
 [[sector]]
 Z = 6
 sector = "energy"
-status = "important"
-role = "Coal, oil and natural gas, the fossil fuels, are carbon compounds that release energy when burnt: coal is a rock rich in carbon and hydrocarbons, and natural gas is mostly methane, one carbon atom with four hydrogens. As graphite, carbon also goes into batteries."
+status = "essential"
+role = "Essential as of 2026: coal, oil and natural gas, the fossil fuels, are carbon compounds that release energy when burnt, and in 2025 oil and natural gas alone supplied about 38 % and 36 % of the energy used in the United States. Coal is a rock rich in carbon, natural gas is mostly methane (one carbon atom with four hydrogens), and as graphite carbon also goes into batteries."
 source = "eia_energy_explained"
-page = "Coal, Oil and petroleum products, Natural gas"
+page = "Coal, Oil and petroleum products, Natural gas; U.S. energy facts explained (2025 shares)"
 
 [[sector]]
 Z = 9
@@ -1052,8 +1052,8 @@ page = "Table 1, p. 6297"
 [[sector]]
 Z = 1
 sector = "energy"
-status = "important"
-role = "Hydrogen is bound to carbon in the hydrocarbons of natural gas, coal and oil, and on its own it is an energy carrier: made from water, fossil fuels or biomass, it can be used as a fuel."
+status = "essential"
+role = "Essential as of 2026: hydrogen is bound to carbon in the hydrocarbons of oil and natural gas, which in 2025 supplied about three quarters of the energy used in the United States; on its own it is an energy carrier, made from water, fossil fuels or biomass and used as a fuel."
 source = "eia_energy_explained"
-page = "Hydrogen; Natural gas"
+page = "Hydrogen; Natural gas; U.S. energy facts explained (2025 shares)"
 

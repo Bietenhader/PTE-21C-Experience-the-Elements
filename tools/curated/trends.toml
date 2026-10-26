@@ -442,7 +442,7 @@ classes = [
 [[map]]
 id = "essential-energy"
 label = "Essential for energy"
-caption = "Elements that producing electricity and heat needs, from tools/curated/sectors.toml: the JRC's 2023 foresight study (renewable energy: batteries, electrolysers, wind turbines, heat pumps, solar PV), the IEA's report on critical minerals in clean energy, the US EIA on fossil fuels and hydrogen (carbon and hydrogen), and the USGS Mineral Commodity Summaries 2026 (uranium). Essential = used in every technology the JRC studied for the sector, or a main use named by the USGS; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none."
+caption = "Elements that producing electricity and heat needs, from tools/curated/sectors.toml: the JRC's 2023 foresight study (renewable energy: batteries, electrolysers, wind turbines, heat pumps, solar PV), the IEA's report on critical minerals in clean energy, the US EIA on fossil fuels and hydrogen (carbon and hydrogen), and the USGS Mineral Commodity Summaries 2026 (uranium). Essential = used in every technology the JRC studied for the sector, or a main use named by the USGS; carbon and hydrogen are marked essential as of 2026, because fossil fuels still supply most energy (US EIA); important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none."
 sources = ["jrc_foresight2023", "iea_critical_minerals2021", "eia_energy_explained", "usgs_mcs"]
 classes = [
   { id = "essential", label = "Essential", short = "ess.", description = "Used in every technology of the sector that the sources studied.", tone = 3 },

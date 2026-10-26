@@ -5,6 +5,15 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added — sector maps
+
+- Trend menu: **Essential for energy**, **for logistics & infrastructure** and **for IT, computing & telecom**
+  (below "Essential for humans"), from the JRC's 2023 foresight study of strategic technologies (CC BY 4.0),
+  the USGS Mineral Commodity Summaries 2026 (including cement and concrete), the IEA's report on critical
+  minerals in clean energy, the US EIA on fossil fuels and hydrogen, and Graedel et al. (PNAS 2015); data in
+  `tools/curated/sectors.toml`, one full sentence per element and sector. Essential = used in every technology
+  the JRC studied for the sector (or a main use named by the USGS), important = in some.
+
 ### Added — plants, part 2, and three maps
 
 - "More about plants" now also covers vanadium, lanthanum, cerium and neodymium, and what too much

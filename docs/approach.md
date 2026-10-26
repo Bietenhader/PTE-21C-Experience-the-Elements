@@ -682,6 +682,21 @@ Fin's look at the live site, on desktop and on his iPhone (video, 22 October 202
 - **Still to come (Fin, second PR):** what too much of non-nutrients (Cd, Pb, Hg, As …) does to plants,
   the lanthanides and vanadium.
 
+### Sector maps (energy, logistics & infrastructure, IT)
+
+- Data: `tools/curated/sectors.toml`, one `[[sector]]` row per element and sector (`Z`, `sector`, `status`,
+  `role`, `source`, `page`); `build_trends.py` checks it (unknown sector, status or column, empty role,
+  duplicates stop the build) and classifies essential / important / none.
+- Rule: counting, not judging substitutes — JRC 2023 (doi:10.2760/386650, CC BY 4.0) sector Tables 7–10 mark
+  which raw materials each technology uses; essential = every technology of the sector, important = some.
+  Infrastructure combines e-mobility (Table 8) and energy-intensive industry (Table 9). USGS MCS 2026 end-use
+  statements (Cu, Fe, Al, Zn, Pb, U; Ca for cement from the Cement, Stone (crushed) and Gypsum chapters) may set
+  "essential" where they name a main use; Graedel et al. 2015, the IEA pages Fin sent and the US EIA "Energy
+  Explained" pages (C and H as fuels) only add "important" rows or sharpen sentences.
+- Sentences (Fin: "full sentences"): for JRC rows, generated from the tables' columns (which technologies use
+  the raw material), read from the word positions of the PDF; others written by hand from the cited text.
+- Gaps, stated in STATUS.md: the Graedel supplements (per-element use tables) and the full IEA PDF.
+
 ## Tooling
 
 - Versions are pinned exactly. TypeScript 6.0 is used because typescript-eslint does not yet support

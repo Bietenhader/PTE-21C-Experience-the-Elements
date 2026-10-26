@@ -42,6 +42,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `images_of_elements` | [Images of elements (Jürgen Kummer)](https://images-of-elements.com/) | [CC BY 3.0 (attribution by link to the element page)](https://creativecommons.org/licenses/by/3.0/) | 2026-10-22 | used |
 | `commons` | [Wikimedia Commons](https://commons.wikimedia.org/) | [Per-file licences; only the allow-list in SPEC §15.3](https://commons.wikimedia.org/wiki/Commons:Licensing) | 2026-10-22 | used |
 | `usgs_mcs` | [USGS Mineral Commodity Summaries](https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries) | [Public domain (U.S. Government work)](https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits) | — | used |
+| `jrc_foresight2023` | [Supply chain analysis and material demand forecast in strategic technologies and sectors in the EU – A foresight study](https://doi.org/10.2760/386650) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | — | used |
 | `eu_crm` | [EU critical and strategic raw materials (Critical Raw Materials Act, 2024)](http://data.europa.eu/eli/reg/2024/1252/oj) | [Facts; cite](https://commission.europa.eu/legal-notice_en) | — | used |
 | `cie_cmf` | [CIE 1931 colour-matching functions, 2° standard colorimetric observer](https://doi.org/10.25039/CIE.DS.xvudnb9b) | [Cited standard table (CIE 018:2019, Table 6; ISO/CIE 11664-1:2019); the CIE's data file is CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 2026-10-22 | used |
 | `cod` | [Crystallography Open Database](https://www.crystallography.net/cod/) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | — | used |
@@ -79,6 +80,10 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `suttle2022` | [Mineral Nutrition of Livestock, 5th edition](https://doi.org/10.1079/9781789240924.0000) | [Textbook; facts cited](https://doi.org/10.1079/9781789240924.0000) | — | used |
 | `zhang_gladyshev2011` | [Comparative Genomics of Trace Element Dependence in Biology](https://doi.org/10.1074/jbc.R110.172833) | [Open access; facts, cited](https://doi.org/10.1074/jbc.R110.172833) | — | used |
 | `cyert_philpott2013` | [Regulation of Cation Balance in Saccharomyces cerevisiae](https://doi.org/10.1534/genetics.112.147207) | [© Genetics Society of America; facts, cited](https://doi.org/10.1534/genetics.112.147207) | — | used |
+| `graedel2015basis` | [On the materials basis of modern society](https://doi.org/10.1073/pnas.1312752110) | [Journal article; facts cited](https://doi.org/10.1073/pnas.1312752110) | — | used |
+| `graedel2015criticality` | [Criticality of metals and metalloids](https://doi.org/10.1073/pnas.1500415112) | [Journal article (PNAS user licence); facts cited](http://www.pnas.org/site/misc/userlicense.xhtml) | — | used |
+| `iea_critical_minerals2021` | [The Role of Critical Minerals in Clean Energy Transitions](https://doi.org/10.1787/f262b91c-en) | [IEA, all rights reserved; facts cited](https://www.iea.org/terms) | — | used |
+| `eia_energy_explained` | [Energy Explained (U.S. Energy Information Administration)](https://www.eia.gov/energyexplained/) | [Public domain (U.S. Government work)](https://www.eia.gov/about/copyrights_reuse.php) | — | used |
 
 ### Citations
 
@@ -110,6 +115,7 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `images_of_elements` — Jürgen Kummer, images-of-elements.com — photographs of the chemical elements, CC BY 3.0; each photo is credited with a link to its element page.
 - `commons` — Wikimedia Commons; each file credited individually in CREDITS.md.
 - `usgs_mcs` — U.S. Geological Survey, 2026, Mineral commodity summaries 2026 (ver. 1.3, May 2026), doi:10.3133/mcs2026; data: Mineral Commodity Summaries 2026 Data Release, doi:10.5066/P1WKQ63T (file MCS2026_Commodities_Data.csv).
+- `jrc_foresight2023` — S. Carrara et al., Supply chain analysis and material demand forecast in strategic technologies and sectors in the EU – A foresight study, JRC132889, Publications Office of the European Union, Luxembourg (2023), doi:10.2760/386650.
 - `eu_crm` — Regulation (EU) 2024/1252 of the European Parliament and of the Council of 11 April 2024 (Critical Raw Materials Act), OJ L 2024/1252, 3.5.2024, CELEX 32024R1252: Annex I Section 1 (strategic) and Annex II Section 1 (critical raw materials); group memberships from the Commission's Study on the Critical Raw Materials for the EU 2023, doi:10.2873/725585.
 - `cie_cmf` — CIE (2019), Colour-matching functions of CIE 1931 standard colorimetric observer (data table), International Commission on Illumination, Vienna, doi:10.25039/CIE.DS.xvudnb9b; values from CIE 018:2019, The Basis of Physical Photometry, 3rd ed., Table 6, doi:10.25039/TR.018.2019.
 - `cod` — S. Gražulis et al., Crystallography Open Database – an open-access collection of crystal structures, J. Appl. Cryst. 42, 726–729 (2009), doi:10.1107/S0021889809016690; each structure is cited by its COD id and original reference.
@@ -146,6 +152,10 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `suttle2022` — N. F. Suttle, Mineral Nutrition of Livestock, 5th ed., CABI, Wallingford (2022), doi:10.1079/9781789240924.0000; one chapter per element, cited by its chapter DOI (10.1079/9781789240924.00NN, NN = chapter number).
 - `zhang_gladyshev2011` — Y. Zhang and V. N. Gladyshev, Comparative Genomics of Trace Element Dependence in Biology, J. Biol. Chem. 286, 23623–23629 (2011), doi:10.1074/jbc.R110.172833.
 - `cyert_philpott2013` — M. S. Cyert and C. C. Philpott, Regulation of Cation Balance in Saccharomyces cerevisiae, Genetics 193, 677–713 (2013), doi:10.1534/genetics.112.147207.
+- `graedel2015basis` — T. E. Graedel, E. M. Harper, N. T. Nassar and B. K. Reck, On the materials basis of modern society, Proc. Natl. Acad. Sci. USA 112, 6295–6300 (2015), doi:10.1073/pnas.1312752110.
+- `graedel2015criticality` — T. E. Graedel, E. M. Harper, N. T. Nassar, P. Nuss and B. K. Reck, Criticality of metals and metalloids, Proc. Natl. Acad. Sci. USA 112, 4257–4262 (2015), doi:10.1073/pnas.1500415112.
+- `iea_critical_minerals2021` — International Energy Agency, The Role of Critical Minerals in Clean Energy Transitions, World Energy Outlook Special Report, IEA, Paris (2021, revised March 2022), doi:10.1787/f262b91c-en.
+- `eia_energy_explained` — U.S. Energy Information Administration, Energy Explained: Coal; Oil and petroleum products; Natural gas; Hydrogen, https://www.eia.gov/energyexplained/ (retrieved 2026-10-26).
 
 ## Field coverage (of 118 elements)
 

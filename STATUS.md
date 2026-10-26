@@ -32,6 +32,12 @@ This file is updated at the end of every working session (SPEC §17.5).
 - Grouped rows of the JRC tables (platinum-group metals, "light/heavy rare earths, rest") are still left out:
   the tables do not say which members are used; the magnet rare earths count as Nd, Pr, Dy, Tb (report p. 45).
 
+## Energy map from the full IEA report (2026-10-26) — please review
+
+- 17 energy sentences in `tools/curated/sectors.toml` now cite the IEA report you sent as text (page numbers
+  given); 6 new energy rows (Y, Pd, La, Hf, Ir, Pt), all "important". No status was raised.
+- Uranium is outside the IEA report's scope (p. 74); it keeps its USGS row.
+
 ## Plants, part 2, and three maps (2026-10-25) — please review
 
 - New notes at the end of the element blocks in `tools/curated/plants.toml`: V, La, Ce, Nd, Cr, As, Cd, Hg, Pb.

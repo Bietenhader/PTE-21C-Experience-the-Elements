@@ -5,6 +5,13 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Changed — energy map, from the full IEA report
+
+- 17 energy sentences rewritten from *The Role of Critical Minerals in Clean Energy Transitions* (IEA): which
+  battery chemistries use cobalt and manganese, crystalline-silicon and thin-film solar cells (Cd, Te, In, Ga,
+  Se), silver paste, magnet rare earths in wind turbines and electric motors, geothermal and nuclear plants.
+- Six new energy rows, all "important": Y, Pd, La, Hf, Ir, Pt (electrolysers, fuel cells, nuclear reactors).
+
 ### Added — sector maps
 
 - Trend menu: **Essential for energy**, **for logistics & infrastructure** and **for IT, computing & telecom**

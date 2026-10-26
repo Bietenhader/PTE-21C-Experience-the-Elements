@@ -41,9 +41,9 @@
 Z = 3
 sector = "energy"
 status = "important"
-role = "Lithium is one of the minerals that decide how well batteries perform, and electric cars need it in quantity."
+role = "Lithium is one of the minerals that decide how well batteries perform; every lithium-ion chemistry the IEA compares, including lithium iron phosphate, contains it."
 source = "iea_critical_minerals2021"
-page = "pp. 5, 6"
+page = "pp. 5, 88"
 
 [[sector]]
 Z = 5
@@ -89,9 +89,9 @@ page = "pp. 5, 11"
 Z = 14
 sector = "energy"
 status = "important"
-role = "Silicon is the material of solar cells; the JRC also lists it for electrolysers, wind turbines and heat pumps."
+role = "Crystalline silicon wafers make up most solar panels sold today; the amount of silicon per panel has more than halved since 2008 as wafers became thinner."
 source = "iea_critical_minerals2021"
-page = "pp. 6, 14"
+page = "p. 56"
 
 [[sector]]
 Z = 15
@@ -129,9 +129,9 @@ page = "Table 7, p. 143"
 Z = 22
 sector = "energy"
 status = "important"
-role = "Titanium goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Geothermal power plants, which run turbines on underground steam or hot water, are a main driver of titanium demand among low-carbon power technologies."
+source = "iea_critical_minerals2021"
+page = "p. 71"
 
 [[sector]]
 Z = 23
@@ -145,17 +145,17 @@ page = "Table 7, p. 143"
 Z = 24
 sector = "energy"
 status = "important"
-role = "Chromium goes into electrolysers that make hydrogen, wind turbines and heat pumps, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Chromium is used in nuclear and geothermal power plants, in wind turbines and in coal and gas plants, much of it in high-alloy steels."
+source = "iea_critical_minerals2021"
+page = "pp. 6, 71, 74"
 
 [[sector]]
 Z = 25
 sector = "energy"
 status = "important"
-role = "Manganese goes into batteries, electrolysers that make hydrogen, wind turbines and heat pumps, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Manganese is part of the cathodes of nickel-manganese-cobalt (NMC) batteries and of the steel in wind turbines."
+source = "iea_critical_minerals2021"
+page = "pp. 6, 88"
 
 [[sector]]
 Z = 26
@@ -169,9 +169,9 @@ page = "Table 7, p. 143"
 Z = 27
 sector = "energy"
 status = "important"
-role = "Cobalt goes into batteries and electrolysers that make hydrogen, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Cobalt stabilises the cathodes of nickel-based lithium-ion batteries; NMC 111 cells need almost eight times more cobalt than NCA cells, while lithium iron phosphate (LFP) cells need none."
+source = "iea_critical_minerals2021"
+page = "p. 88"
 
 [[sector]]
 Z = 28
@@ -201,9 +201,9 @@ page = "Table 7, p. 143"
 Z = 31
 sector = "energy"
 status = "important"
-role = "Gallium goes into solar panels, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Gallium is in the thin-film solar cells called CIGS (copper indium gallium diselenide) and in high-efficiency gallium arsenide cells."
+source = "iea_critical_minerals2021"
+page = "pp. 44, 56"
 
 [[sector]]
 Z = 32
@@ -225,9 +225,9 @@ page = "Table 7, p. 143"
 Z = 34
 sector = "energy"
 status = "important"
-role = "Selenium goes into solar panels, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Selenium is in the thin-film solar cells called CIGS (copper indium gallium diselenide), which use it instead of silicon and silver."
+source = "iea_critical_minerals2021"
+page = "p. 56"
 
 [[sector]]
 Z = 38
@@ -257,33 +257,33 @@ page = "Table 7, p. 143"
 Z = 42
 sector = "energy"
 status = "important"
-role = "Molybdenum goes into electrolysers that make hydrogen, wind turbines, solar panels and heat pumps, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Molybdenum is used in wind turbines and in geothermal, nuclear and coal power plants."
+source = "iea_critical_minerals2021"
+page = "pp. 6, 71, 74"
 
 [[sector]]
 Z = 47
 sector = "energy"
 status = "important"
-role = "Silver goes into solar cells, though each cell needs 40–50 % less of it than a decade ago; the JRC also lists it for electrolysers and heat pumps."
+role = "Silver forms the fine conducting paste on crystalline-silicon solar cells; better pastes have cut the silver per panel by 80 %, but it remains one of the most costly materials in a panel."
 source = "iea_critical_minerals2021"
-page = "p. 14"
+page = "p. 56"
 
 [[sector]]
 Z = 48
 sector = "energy"
 status = "important"
-role = "Cadmium goes into solar panels, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Cadmium, with tellurium, forms cadmium telluride (CdTe) thin-film solar panels, which use no silicon or silver."
+source = "iea_critical_minerals2021"
+page = "p. 56"
 
 [[sector]]
 Z = 49
 sector = "energy"
 status = "important"
-role = "Indium goes into solar panels, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Indium is in the thin-film solar cells called CIGS (copper indium gallium diselenide)."
+source = "iea_critical_minerals2021"
+page = "p. 56"
 
 [[sector]]
 Z = 50
@@ -305,9 +305,9 @@ page = "Table 7, p. 143"
 Z = 52
 sector = "energy"
 status = "important"
-role = "Tellurium goes into solar panels, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Tellurium, with cadmium, forms cadmium telluride (CdTe) thin-film solar panels; their module efficiency has doubled from 9 % to 19 %."
+source = "iea_critical_minerals2021"
+page = "p. 56"
 
 [[sector]]
 Z = 56
@@ -321,33 +321,33 @@ page = "Table 7, p. 143"
 Z = 59
 sector = "energy"
 status = "important"
-role = "Praseodymium, one of the rare earths of permanent magnets, goes into electrolysers that make hydrogen, wind turbines and heat pumps, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Praseodymium is one of the rare earths in the permanent magnets of many wind-turbine generators and electric-car motors."
+source = "iea_critical_minerals2021"
+page = "pp. 5, 66"
 
 [[sector]]
 Z = 60
 sector = "energy"
 status = "important"
-role = "Neodymium, one of the rare earths of permanent magnets, goes into electrolysers that make hydrogen, wind turbines and heat pumps, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Neodymium is the main rare earth in the permanent magnets of many wind-turbine generators and electric-car motors."
+source = "iea_critical_minerals2021"
+page = "pp. 5, 66"
 
 [[sector]]
 Z = 65
 sector = "energy"
 status = "important"
-role = "Terbium, one of the rare earths of permanent magnets, goes into electrolysers that make hydrogen, wind turbines and heat pumps, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Terbium is a rare earth added to the permanent magnets of wind-turbine generators and electric-car motors."
+source = "iea_critical_minerals2021"
+page = "pp. 65, 68"
 
 [[sector]]
 Z = 66
 sector = "energy"
 status = "important"
-role = "Dysprosium, one of the rare earths of permanent magnets, goes into electrolysers that make hydrogen, wind turbines and heat pumps, according to the JRC's study of strategic technologies."
-source = "jrc_foresight2023"
-page = "Table 7, p. 143"
+role = "Dysprosium, with neodymium, is needed for the permanent-magnet generators of many wind turbines and for electric-car motors."
+source = "iea_critical_minerals2021"
+page = "pp. 5, 66"
 
 [[sector]]
 Z = 73
@@ -1057,3 +1057,50 @@ role = "Essential as of 2026: hydrogen is bound to carbon in the hydrocarbons of
 source = "eia_energy_explained"
 page = "Hydrogen; Natural gas; U.S. energy facts explained (2025 shares)"
 
+[[sector]]
+Z = 39
+sector = "energy"
+status = "important"
+role = "Yttrium is used in nuclear reactors and in solid-oxide electrolysers that make hydrogen."
+source = "iea_critical_minerals2021"
+page = "pp. 74, 113"
+
+[[sector]]
+Z = 46
+sector = "energy"
+status = "important"
+role = "Palladium is one of the platinum-group metals the IEA lists among the materials of PEM electrolysers, which make hydrogen."
+source = "iea_critical_minerals2021"
+page = "p. 111"
+
+[[sector]]
+Z = 57
+sector = "energy"
+status = "important"
+role = "Lanthanum goes into the ceramic layers of solid-oxide electrolysers, about 20 kg per megawatt."
+source = "iea_critical_minerals2021"
+page = "p. 113"
+
+[[sector]]
+Z = 72
+sector = "energy"
+status = "important"
+role = "Hafnium is used in nuclear reactors, about half a kilogram per megawatt of a pressurised-water reactor."
+source = "iea_critical_minerals2021"
+page = "p. 74"
+
+[[sector]]
+Z = 77
+sector = "energy"
+status = "important"
+role = "Iridium is a catalyst in PEM electrolysers, which split water into hydrogen: about 0.7 kg per megawatt today."
+source = "iea_critical_minerals2021"
+page = "pp. 111, 113"
+
+[[sector]]
+Z = 78
+sector = "energy"
+status = "important"
+role = "Platinum is the catalyst of hydrogen fuel cells and of PEM electrolysers (about 0.3 kg per megawatt of electrolyser)."
+source = "iea_critical_minerals2021"
+page = "pp. 8, 111, 113"

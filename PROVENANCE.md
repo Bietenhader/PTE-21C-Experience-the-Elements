@@ -80,6 +80,10 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 | `suttle2022` | [Mineral Nutrition of Livestock, 5th edition](https://doi.org/10.1079/9781789240924.0000) | [Textbook; facts cited](https://doi.org/10.1079/9781789240924.0000) | — | used |
 | `zhang_gladyshev2011` | [Comparative Genomics of Trace Element Dependence in Biology](https://doi.org/10.1074/jbc.R110.172833) | [Open access; facts, cited](https://doi.org/10.1074/jbc.R110.172833) | — | used |
 | `cyert_philpott2013` | [Regulation of Cation Balance in Saccharomyces cerevisiae](https://doi.org/10.1534/genetics.112.147207) | [© Genetics Society of America; facts, cited](https://doi.org/10.1534/genetics.112.147207) | — | used |
+| `graedel2015basis` | [On the materials basis of modern society](https://doi.org/10.1073/pnas.1312752110) | [Journal article; facts cited](https://doi.org/10.1073/pnas.1312752110) | — | used |
+| `graedel2015criticality` | [Criticality of metals and metalloids](https://doi.org/10.1073/pnas.1500415112) | [Journal article (PNAS user licence); facts cited](http://www.pnas.org/site/misc/userlicense.xhtml) | — | used |
+| `iea_critical_minerals2021` | [The Role of Critical Minerals in Clean Energy Transitions](https://doi.org/10.1787/f262b91c-en) | [IEA, all rights reserved; facts cited](https://www.iea.org/terms) | — | used |
+| `eia_energy_explained` | [Energy Explained (U.S. Energy Information Administration)](https://www.eia.gov/energyexplained/) | [Public domain (U.S. Government work)](https://www.eia.gov/about/copyrights_reuse.php) | — | used |
 
 ### Citations
 
@@ -148,6 +152,10 @@ Every number in `public/data/` carries a `source` key from the registry below (`
 - `suttle2022` — N. F. Suttle, Mineral Nutrition of Livestock, 5th ed., CABI, Wallingford (2022), doi:10.1079/9781789240924.0000; one chapter per element, cited by its chapter DOI (10.1079/9781789240924.00NN, NN = chapter number).
 - `zhang_gladyshev2011` — Y. Zhang and V. N. Gladyshev, Comparative Genomics of Trace Element Dependence in Biology, J. Biol. Chem. 286, 23623–23629 (2011), doi:10.1074/jbc.R110.172833.
 - `cyert_philpott2013` — M. S. Cyert and C. C. Philpott, Regulation of Cation Balance in Saccharomyces cerevisiae, Genetics 193, 677–713 (2013), doi:10.1534/genetics.112.147207.
+- `graedel2015basis` — T. E. Graedel, E. M. Harper, N. T. Nassar and B. K. Reck, On the materials basis of modern society, Proc. Natl. Acad. Sci. USA 112, 6295–6300 (2015), doi:10.1073/pnas.1312752110.
+- `graedel2015criticality` — T. E. Graedel, E. M. Harper, N. T. Nassar, P. Nuss and B. K. Reck, Criticality of metals and metalloids, Proc. Natl. Acad. Sci. USA 112, 4257–4262 (2015), doi:10.1073/pnas.1500415112.
+- `iea_critical_minerals2021` — International Energy Agency, The Role of Critical Minerals in Clean Energy Transitions, World Energy Outlook Special Report, IEA, Paris (2021, revised March 2022), doi:10.1787/f262b91c-en.
+- `eia_energy_explained` — U.S. Energy Information Administration, Energy Explained: Coal; Oil and petroleum products; Natural gas; Hydrogen, https://www.eia.gov/energyexplained/ (retrieved 2026-10-26).
 
 ## Field coverage (of 118 elements)
 

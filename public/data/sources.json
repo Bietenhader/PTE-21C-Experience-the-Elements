@@ -812,6 +812,50 @@
    "kind": "reference",
    "status": "ok",
    "notes": "Added after M5. What baker's yeast, the best-studied fungus, needs potassium, magnesium, calcium, iron, zinc, copper and manganese for (biology.toml [[life]], fungi)."
+  },
+  "graedel2015basis": {
+   "id": "graedel2015basis",
+   "title": "On the materials basis of modern society",
+   "url": "https://doi.org/10.1073/pnas.1312752110",
+   "licence": "Journal article; facts cited",
+   "licenceUrl": "https://doi.org/10.1073/pnas.1312752110",
+   "citation": "T. E. Graedel, E. M. Harper, N. T. Nassar and B. K. Reck, On the materials basis of modern society, Proc. Natl. Acad. Sci. USA 112, 6295–6300 (2015), doi:10.1073/pnas.1312752110.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after v0.1.0. tools/curated/sectors.toml: uses of metals and their substitutes (Table 1, tungsten). Read from Fin's copy; facts only, in our own words. DOI checked against Crossref."
+  },
+  "graedel2015criticality": {
+   "id": "graedel2015criticality",
+   "title": "Criticality of metals and metalloids",
+   "url": "https://doi.org/10.1073/pnas.1500415112",
+   "licence": "Journal article (PNAS user licence); facts cited",
+   "licenceUrl": "http://www.pnas.org/site/misc/userlicense.xhtml",
+   "citation": "T. E. Graedel, E. M. Harper, N. T. Nassar, P. Nuss and B. K. Reck, Criticality of metals and metalloids, Proc. Natl. Acad. Sci. USA 112, 4257–4262 (2015), doi:10.1073/pnas.1500415112.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after v0.1.0. tools/curated/sectors.toml: steel-alloying metals (niobium). Read from Fin's copy; facts only, in our own words. DOI checked against Crossref."
+  },
+  "iea_critical_minerals2021": {
+   "id": "iea_critical_minerals2021",
+   "title": "The Role of Critical Minerals in Clean Energy Transitions",
+   "url": "https://doi.org/10.1787/f262b91c-en",
+   "licence": "IEA, all rights reserved; facts cited",
+   "licenceUrl": "https://www.iea.org/terms",
+   "citation": "International Energy Agency, The Role of Critical Minerals in Clean Energy Transitions, World Energy Outlook Special Report, IEA, Paris (2021, revised March 2022), doi:10.1787/f262b91c-en.",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after v0.1.0. tools/curated/sectors.toml: minerals used in batteries, grids, solar, wind, nuclear and fossil power plants and electrolysers, from the pages Fin supplied (the website refuses automated downloads). Facts only, in our own words; DOI checked against Crossref."
+  },
+  "eia_energy_explained": {
+   "id": "eia_energy_explained",
+   "title": "Energy Explained (U.S. Energy Information Administration)",
+   "url": "https://www.eia.gov/energyexplained/",
+   "licence": "Public domain (U.S. Government work)",
+   "licenceUrl": "https://www.eia.gov/about/copyrights_reuse.php",
+   "citation": "U.S. Energy Information Administration, Energy Explained: Coal; Oil and petroleum products; Natural gas; Hydrogen, https://www.eia.gov/energyexplained/ (retrieved 2026-10-26).",
+   "kind": "reference",
+   "status": "ok",
+   "notes": "Added after v0.1.0. tools/curated/sectors.toml: carbon and hydrogen in fossil fuels, hydrogen as an energy carrier. Pages cached in tools/raw/sectors/eia/."
   }
  }
 }

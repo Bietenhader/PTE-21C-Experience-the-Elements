@@ -60,4 +60,27 @@ def test_golden_facts(map_id, z, status):
 def test_every_committed_row_builds_and_cites_a_registered_source():
     rows = curated.load("sectors.toml", "sector")
     assert len(T.sector_rows(rows)) == len(rows) > 100
-    assert {r["source"] for r in rows} <= {"jrc_foresight2023", "usgs_mcs"}
+    allowed = {
+        "jrc_foresight2023", "usgs_mcs", "graedel2015basis", "graedel2015criticality", "iea_critical_minerals2021",
+        "eia_energy_explained",
+    }  # fmt: skip
+    assert {r["source"] for r in rows} <= allowed
+    # The Graedel papers name uses but not the JRC's technology coverage: never "essential" on their own.
+    assert all(r["status"] == "important" for r in rows if r["source"].startswith("graedel"))
+
+
+def test_cement_makes_calcium_essential_for_infrastructure():
+    rows = T.sector_rows(curated.load("sectors.toml", "sector"))
+    ca = rows[(20, "infrastructure")]
+    assert ca["status"] == "essential" and ca["source"] == "usgs_mcs" and "cement" in ca["role"]
+
+
+def test_every_role_is_a_full_sentence_not_a_count():
+    for r in curated.load("sectors.toml", "sector"):
+        assert "technologies the JRC studied" not in r["role"], r["Z"]
+        assert r["role"][0].isupper() and r["role"].endswith("."), (r["Z"], r["sector"])
+
+
+def test_fossil_fuels_carbon_and_hydrogen_count_for_energy():
+    rows = T.sector_rows(curated.load("sectors.toml", "sector"))
+    assert rows[(6, "energy")]["source"] == rows[(1, "energy")]["source"] == "eia_energy_explained"

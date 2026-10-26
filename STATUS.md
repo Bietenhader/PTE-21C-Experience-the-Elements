@@ -10,17 +10,26 @@ This file is updated at the end of every working session (SPEC §17.5).
 
 ---
 
-## Sector maps (2026-10-25) — please review `tools/curated/sectors.toml`
+## Sector maps (2026-10-26) — please review `tools/curated/sectors.toml`
 
 - Three maps below "Essential for humans": energy, logistics & infrastructure, IT / computing / telecom.
-- **The rule had to change.** The sources say which technologies use a material, not whether it can be
-  replaced. So "essential" now means *used in every technology the JRC studied for that sector* and
-  "important" *used in some*. The caption says so.
-- **Energy covers renewables (batteries, electrolysers, wind, heat pumps, solar PV) and nuclear fuel (U)
-  only.** Fossil fuels burnt for electricity and heat (coal, oil, gas: C and H) are not covered yet:
-  `source_unavailable_at_build` — the IEA critical-minerals reports and Graedel et al. 2015 (PNAS) refused
-  this machine (HTTP 403). If you can download the PDFs, I can add them.
-- Grouped rows of the JRC tables (platinum-group metals, "light/heavy rare earths, rest") are left out because
+- **Your decisions, done:** the counting rule stays ("essential" = used in every technology the JRC studied for
+  that sector, or a main use named by the USGS; "important" = some); cement and concrete added; every row is
+  now a full sentence naming what the element goes into.
+- **Cement and concrete:** calcium is now *essential* for infrastructure (USGS: about a sixth of US crushed stone,
+  mostly limestone, goes into cement; cement plants also use gypsum). Clay and sand go into cement and concrete
+  too, but the USGS names them as rocks, not as elements, so silicon and aluminium keep their other rows.
+- **Fossil fuels:** carbon and hydrogen now count for energy, from the US EIA "Energy Explained" pages (coal,
+  oil and gas are carbon and hydrocarbon fuels; hydrogen is an energy carrier). Both are *important* under the
+  counting rule. **Your call:** should C and H be shown as *essential* for energy?
+- **IEA report:** now used, from the pages you sent (copper in every power technology and grids, aluminium in
+  grids, silicon and silver in solar cells, lithium in batteries, zirconium in electrolysers). The full PDF did
+  not arrive, only page images; the report is "all rights reserved", so facts only.
+- **Graedel et al. (PNAS 2015), both papers:** now available (your copies). The per-element use tables are in
+  their online supplements, which you did not send; from the main texts: tungsten (half goes into cemented-
+  carbide tools for mining and construction) and niobium (a steel-alloying metal), both *important* for
+  infrastructure.
+- Grouped rows of the JRC tables (platinum-group metals, "light/heavy rare earths, rest") are still left out:
   the tables do not say which members are used; the magnet rare earths count as Nd, Pr, Dy, Tb (report p. 45).
 
 ## Plants, part 2, and three maps (2026-10-25) — please review

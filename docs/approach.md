@@ -689,10 +689,13 @@ Fin's look at the live site, on desktop and on his iPhone (video, 22 October 202
   duplicates stop the build) and classifies essential / important / none.
 - Rule: counting, not judging substitutes — JRC 2023 (doi:10.2760/386650, CC BY 4.0) sector Tables 7–10 mark
   which raw materials each technology uses; essential = every technology of the sector, important = some.
-  Infrastructure combines e-mobility (Table 8) and energy-intensive industry (Table 9); a few USGS MCS 2026
-  end-use statements (Cu, Fe, Al, Zn, Pb, U) sharpen the sentences. The rows were generated once from the
-  cached PDF text and are edited by hand from now on.
-- Gaps, stated in the caption and STATUS.md: fossil fuels (IEA, PNAS unreachable from the build machine).
+  Infrastructure combines e-mobility (Table 8) and energy-intensive industry (Table 9). USGS MCS 2026 end-use
+  statements (Cu, Fe, Al, Zn, Pb, U; Ca for cement from the Cement, Stone (crushed) and Gypsum chapters) may set
+  "essential" where they name a main use; Graedel et al. 2015, the IEA pages Fin sent and the US EIA "Energy
+  Explained" pages (C and H as fuels) only add "important" rows or sharpen sentences.
+- Sentences (Fin: "full sentences"): for JRC rows, generated from the tables' columns (which technologies use
+  the raw material), read from the word positions of the PDF; others written by hand from the cited text.
+- Gaps, stated in STATUS.md: the Graedel supplements (per-element use tables) and the full IEA PDF.
 
 ## Tooling
 

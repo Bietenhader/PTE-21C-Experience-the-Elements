@@ -2964,9 +2964,11 @@
   {
    "id": "essential-energy",
    "label": "Essential for energy",
-   "caption": "Elements that producing electricity and heat needs, from tools/curated/sectors.toml: the JRC's 2023 foresight study (renewable energy: batteries, electrolysers, wind turbines, heat pumps, solar PV; nuclear fuel from the USGS. Fossil fuels are not yet covered) and the USGS Mineral Commodity Summaries 2026. Essential = used in every technology the JRC studied for the sector; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none.",
+   "caption": "Elements that producing electricity and heat needs, from tools/curated/sectors.toml: the JRC's 2023 foresight study (renewable energy: batteries, electrolysers, wind turbines, heat pumps, solar PV), the IEA's report on critical minerals in clean energy, the US EIA on fossil fuels and hydrogen (carbon and hydrogen), and the USGS Mineral Commodity Summaries 2026 (uranium). Essential = used in every technology the JRC studied for the sector, or a main use named by the USGS; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none.",
    "sources": [
     "jrc_foresight2023",
+    "iea_critical_minerals2021",
+    "eia_energy_explained",
     "usgs_mcs"
    ],
    "classes": [
@@ -2993,7 +2995,7 @@
     }
    ],
    "values": {
-    "1": "none",
+    "1": "important",
     "2": "none",
     "3": "important",
     "4": "none",
@@ -3116,10 +3118,12 @@
   {
    "id": "essential-infrastructure",
    "label": "Essential for logistics & infrastructure",
-   "caption": "Elements that vehicles, steel and construction need, from tools/curated/sectors.toml: the JRC's 2023 foresight study (e-mobility and green steel; copper, steel, aluminium, zinc and lead from the USGS) and the USGS Mineral Commodity Summaries 2026. Essential = used in every technology the JRC studied for the sector; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none.",
+   "caption": "Elements that vehicles, steel and construction need, from tools/curated/sectors.toml: the JRC's 2023 foresight study (e-mobility and green steel), the USGS Mineral Commodity Summaries 2026 (copper, steel, aluminium, zinc, lead, and cement and concrete) and Graedel et al. 2015 (tungsten tools, niobium steel). Essential = used in every technology the JRC studied for the sector, or a main construction use named by the USGS; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none.",
    "sources": [
     "jrc_foresight2023",
-    "usgs_mcs"
+    "usgs_mcs",
+    "graedel2015basis",
+    "graedel2015criticality"
    ],
    "classes": [
     {
@@ -3164,7 +3168,7 @@
     "17": "none",
     "18": "none",
     "19": "none",
-    "20": "important",
+    "20": "essential",
     "21": "none",
     "22": "important",
     "23": "important",
@@ -3185,7 +3189,7 @@
     "38": "important",
     "39": "none",
     "40": "important",
-    "41": "none",
+    "41": "important",
     "42": "important",
     "43": "none",
     "44": "none",
@@ -3218,7 +3222,7 @@
     "71": "none",
     "72": "none",
     "73": "none",
-    "74": "none",
+    "74": "important",
     "75": "none",
     "76": "none",
     "77": "none",
@@ -3268,10 +3272,9 @@
   {
    "id": "essential-ict",
    "label": "Essential for IT, computing & telecom",
-   "caption": "Elements that IT, computing and telecom need, from tools/curated/sectors.toml: the JRC's 2023 foresight study (data transmission networks, data storage and servers, smartphones, tablets and laptops) and the USGS Mineral Commodity Summaries 2026. Essential = used in every technology the JRC studied for the sector; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none.",
+   "caption": "Elements that IT, computing and telecom need, from tools/curated/sectors.toml: the JRC's 2023 foresight study (data transmission networks, data storage and servers, smartphones, tablets and laptops). Essential = used in every technology the JRC studied for the sector; important = used in some. An element without a row has no role named in PTE-21C's sources, which does not mean it has none.",
    "sources": [
-    "jrc_foresight2023",
-    "usgs_mcs"
+    "jrc_foresight2023"
    ],
    "classes": [
     {

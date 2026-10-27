@@ -974,6 +974,15 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "essential",
+    "text": "The fuel of nuclear power stations; the USGS lists nuclear fuel as its main use.",
+    "source": "usgs_mcs",
+    "page": "Table 6, Final 2025 Critical Minerals List"
+   }
+  ],
   "allotropes": [
    {
     "name": "α-uranium",

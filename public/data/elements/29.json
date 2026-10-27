@@ -501,6 +501,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "essential",
+    "text": "Copper is a cornerstone of every electricity technology: power grids need huge amounts of it, and it appears in every power plant and clean-energy technology the IEA compares, from solar panels and wind turbines to nuclear, coal and gas plants.",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 5, 6, 11"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "essential",
+    "text": "Mostly used in building construction (42 %) and in electrical products; the USGS names cables and wiring as its use.",
+    "source": "usgs_mcs",
+    "page": "Copper, p. 72"
+   },
+   {
+    "sector": "ict",
+    "status": "essential",
+    "text": "Copper goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

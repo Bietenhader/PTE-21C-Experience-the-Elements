@@ -200,6 +200,30 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "essential",
+    "text": "Essential as of 2026: hydrogen is bound to carbon in the hydrocarbons of oil and natural gas, which in 2025 supplied about three quarters of the energy used in the United States; on its own it is an energy carrier, made from water, fossil fuels or biomass and used as a fuel.",
+    "source": "eia_energy_explained",
+    "page": "Hydrogen; Natural gas; U.S. energy facts explained (2025 shares)",
+    "asOf": 2026
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Hydrogen goes into hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 9, p. 163"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Hydrogen goes into phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

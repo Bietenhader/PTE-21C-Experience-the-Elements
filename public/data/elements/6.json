@@ -288,6 +288,30 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "essential",
+    "text": "Essential as of 2026: coal, oil and natural gas, the fossil fuels, are carbon compounds that release energy when burnt, and in 2025 oil and natural gas alone supplied about 38 % and 36 % of the energy used in the United States. Coal is a rock rich in carbon, natural gas is mostly methane (one carbon atom with four hydrogens), and as graphite carbon also goes into batteries.",
+    "source": "eia_energy_explained",
+    "page": "Coal, Oil and petroleum products, Natural gas; U.S. energy facts explained (2025 shares)",
+    "asOf": 2026
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Carbon, mined as natural graphite, goes into vehicle batteries, fuel cells and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 8, p. 154"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Carbon, mined as natural graphite, goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [
    {
     "name": "Graphite",

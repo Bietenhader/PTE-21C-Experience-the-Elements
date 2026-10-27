@@ -493,6 +493,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "essential",
+    "text": "Nickel goes into batteries, electrolysers that make hydrogen, wind turbines, solar panels and heat pumps, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 7, p. 143"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "essential",
+    "text": "Nickel goes into vehicle batteries, fuel cells, industrial heat pumps and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 9, p. 163"
+   },
+   {
+    "sector": "ict",
+    "status": "essential",
+    "text": "Nickel goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

@@ -614,6 +614,15 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Yttrium is used in nuclear reactors and in solid-oxide electrolysers that make hydrogen.",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 74, 113"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

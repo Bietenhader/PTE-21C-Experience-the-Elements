@@ -2,13 +2,24 @@
 # STATUS
 
 **Current milestone:** M5 — Release v0.1.0 · **released on 2026-10-23** (tag `v0.1.0`, GitHub Release)
-**Last updated:** 2026-10-24
+**Last updated:** 2026-10-27
 **Now:** "Plants in detail" in the Biology & ecology panel (pull request open, for Fin's review). Fin's open
 questions below still have their defaults.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
+
+## Seeing the sector sentences (2026-10-27) — please look
+
+The sentences in `tools/curated/sectors.toml` can now be read in the app:
+
+- Open an element (for example copper), open **Physical & engineering** and scroll to **Role in energy,
+  infrastructure and IT**. Carbon and hydrogen say "Essential (as of 2026)" for energy.
+- Choose an energy, infrastructure or IT map in the **Trend** menu and point at a tile: the card shows the
+  sentence and its source.
+
+Nothing blocked. Screenshots: `docs/screenshots/sectors-*.png`.
 
 ## Sector maps (2026-10-26) — please review `tools/curated/sectors.toml`
 

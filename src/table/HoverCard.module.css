@@ -69,3 +69,15 @@
 .card[data-category="reactive-nonmetal"] { --fill: var(--cat-reactive-nonmetal); }
 .card[data-category="noble-gas"] { --fill: var(--cat-noble-gas); }
 .card[data-category="unknown"] { --fill: var(--cat-unknown); }
+
+/* The sentence behind a sector map's colour (energy, infrastructure, IT). */
+.note {
+  margin: var(--space-2) 0 0;
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+  font-size: 0.8125rem;
+}
+
+.noteSource {
+  color: var(--text-muted);
+}

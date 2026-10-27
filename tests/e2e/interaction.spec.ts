@@ -32,6 +32,25 @@ test.describe("hover card (SPEC §9.1)", () => {
     await expect(tile(page, 26)).toBeFocused();
   });
 
+  test("on the energy map it shows the sourced sentence behind the colour", async ({ page }) => {
+    await open(page);
+    await page.getByRole("combobox", { name: "Trend", exact: true }).selectOption("map:essential-energy");
+    await tile(page, 28).focus();
+    await page.keyboard.press("Tab");
+    await expect(tile(page, 29)).toBeFocused();
+    const note = page.getByTestId("hovercard-note");
+    await expect(note).toContainText("Copper");
+    await expect(note).toContainText("Critical Minerals");
+    await expect(tile(page, 29)).toHaveAccessibleDescription(/Essential for energy: Essential\. Copper/);
+  });
+
+  test("off the sector maps the card has no sentence", async ({ page }) => {
+    await open(page);
+    await tile(page, 29).hover();
+    await expect(page.getByTestId("hovercard")).toBeVisible();
+    await expect(page.getByTestId("hovercard-note")).toHaveCount(0);
+  });
+
   test("stays while the pointer moves onto it (WCAG 1.4.13) and leaves with it", async ({ page }) => {
     await open(page);
     await tile(page, 26).hover();

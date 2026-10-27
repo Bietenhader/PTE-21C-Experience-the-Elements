@@ -13,6 +13,8 @@ export interface Face {
   missing: boolean;
   /** Full sentence added to the tile's accessible description. */
   description: string;
+  /** For the sector maps: the sourced sentence behind the class, shown in the hover card. */
+  note?: { text: string; source: string };
 }
 
 export type Faces = ReadonlyMap<number, Face>;

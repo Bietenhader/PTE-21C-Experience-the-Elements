@@ -505,6 +505,29 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Zinc goes into electrolysers that make hydrogen, wind turbines, solar panels and heat pumps, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 7, p. 143"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Mostly used to galvanise steel against rust.",
+    "source": "usgs_mcs",
+    "page": "Zinc, p. 212"
+   },
+   {
+    "sector": "ict",
+    "status": "essential",
+    "text": "Zinc goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

@@ -153,7 +153,7 @@ def map_life(group):
 
 SECTORS = ("energy", "infrastructure", "ict")
 SECTOR_STATUS = ("essential", "important")
-SECTOR_COLUMNS = {"Z", "sector", "status", "role", "source", "page"}
+SECTOR_COLUMNS = {"Z", "sector", "status", "role", "source", "page", "as_of"}
 
 
 def sector_rows(rows: list[dict]) -> dict[tuple[int, str], dict]:
@@ -174,6 +174,23 @@ def sector_rows(rows: list[dict]) -> dict[tuple[int, str], dict]:
         if (r["Z"], r["sector"]) in out:
             raise ValueError(f"{where}: more than one row")
         out[(r["Z"], r["sector"])] = r
+    return out
+
+
+SECTOR_MAPS = {"essential-energy": "energy", "essential-infrastructure": "infrastructure", "essential-ict": "ict"}
+
+
+def sector_record(z: int, rows: dict[tuple[int, str], dict]) -> list[dict]:
+    """physical.sectors of element z: its sectors.toml rows in map order, as the element file carries them."""
+    out = []
+    for sector in SECTORS:
+        r = rows.get((z, sector))
+        if r:
+            out.append(
+                {"sector": sector, "status": r["status"], "text": r["role"], "source": r["source"]}
+                | ({"page": str(r["page"])} if r.get("page") else {})
+                | ({"asOf": r["as_of"]} if r.get("as_of") else {})
+            )
     return out
 
 
@@ -241,7 +258,16 @@ def build_trends() -> int:
         stray = set(values.values()) - {c["id"] for c in spec["classes"]}
         if stray:
             raise ValueError(f"map {spec['id']}: classes {stray} are not declared in trends.toml")
-        maps.append(spec | {"values": values})
+        entry = spec | {"values": values}
+        sector = SECTOR_MAPS.get(spec["id"])
+        if sector:
+            # The sentence behind each coloured element, for the hover card (no element file needed).
+            entry["notes"] = {
+                str(z): {"text": r["role"], "source": r["source"]}
+                for (z, sec), r in sorted(ctx["sectors"].items())
+                if sec == sector
+            }
+        maps.append(entry)
     if set(CLASSIFIERS) | set(CONTEXT_CLASSIFIERS) != {m["id"] for m in maps}:
         raise ValueError("every map in trends.toml needs a classifier in build_trends.py, and vice versa")
     trends = {

@@ -777,6 +777,15 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Lanthanum goes into the ceramic layers of solid-oxide electrolysers, about 20 kg per megawatt.",
+    "source": "iea_critical_minerals2021",
+    "page": "p. 113"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

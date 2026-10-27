@@ -456,6 +456,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Vanadium goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 7, p. 143"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Vanadium goes into fuel cells and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 9, p. 163"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Vanadium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [],

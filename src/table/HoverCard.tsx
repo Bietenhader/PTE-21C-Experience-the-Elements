@@ -167,11 +167,14 @@ interface CardProps {
   element: ElementIndexEntry;
   anchor: HTMLElement;
   via: Via;
+  /** The sentence behind the element's class on a sector map (trends.json notes). */
+  note?: { text: string; source: string } | undefined;
+  sourceTitle?: (id: string) => string;
   onPointerEnter: () => void;
   onPointerLeave: () => void;
 }
 
-export function HoverCard({ element: e, anchor, via, onPointerEnter, onPointerLeave }: CardProps) {
+export function HoverCard({ element: e, anchor, via, note, sourceTitle, onPointerEnter, onPointerLeave }: CardProps) {
   const { refs, floatingStyles, isPositioned } = useFloating<HTMLElement>({
     strategy: "fixed",
     placement: "right-start",
@@ -207,6 +210,11 @@ export function HoverCard({ element: e, anchor, via, onPointerEnter, onPointerLe
         </div>
       </div>
       <p className={styles.fact}>{e.quantumFact}</p>
+      {note && (
+        <p className={styles.note} data-testid="hovercard-note">
+          {note.text} <span className={styles.noteSource}>({sourceTitle ? sourceTitle(note.source) : note.source})</span>
+        </p>
+      )}
       <p className={styles.footer}>{action} · Esc to dismiss</p>
     </div>,
     document.body,

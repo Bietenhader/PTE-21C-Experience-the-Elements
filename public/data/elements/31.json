@@ -535,6 +535,22 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Gallium is in the thin-film solar cells called CIGS (copper indium gallium diselenide) and in high-efficiency gallium arsenide cells.",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 44, 56"
+   },
+   {
+    "sector": "ict",
+    "status": "essential",
+    "text": "Gallium goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

@@ -39,7 +39,20 @@ def _tables() -> dict:
         "uses": by_z(curated.load("uses.toml")),
         "allotropes": by_z(curated.load("allotropes.toml")),
         "ghs": ghs,
+        "sectors": _sectors(),
     }
+
+
+def _sectors() -> dict:
+    import build_trends  # the one loader and validator of sectors.toml (imported late: it reads index.json)
+
+    return build_trends.sector_rows(curated.load("sectors.toml", "sector"))
+
+
+def _sector_record(z: int, rows: dict) -> list[dict]:
+    import build_trends
+
+    return build_trends.sector_record(z, rows)
 
 
 def thermal_record(z: int, row: dict | None) -> dict:
@@ -177,6 +190,7 @@ def record(entry: dict, physical: dict) -> dict:
     return {
         "thermal": thermal_record(z, t["thermal"].get(z)),
         "uses": uses_record(z, t["uses"].get(z, [])),
+        "sectors": _sector_record(z, t["sectors"]),
         "allotropes": allotropes_record(t["allotropes"].get(z, [])),
         "hazards": hazards_record(entry, t["ghs"].get(z)),
         "abundanceByMass": abundance_by_mass(physical["abundance"]),

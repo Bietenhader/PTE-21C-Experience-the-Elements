@@ -365,6 +365,29 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "essential",
+    "text": "Aluminium goes into power grids alongside copper (together about a fifth of grid investment costs) and into all five renewable-energy technologies of the JRC's study.",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 5, 11"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "essential",
+    "text": "Transport takes about 36 % of the aluminium used in the US, packaging and building most of the rest.",
+    "source": "usgs_mcs",
+    "page": "Aluminum, p. 40"
+   },
+   {
+    "sector": "ict",
+    "status": "essential",
+    "text": "Aluminium goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

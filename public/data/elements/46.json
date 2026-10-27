@@ -634,6 +634,15 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Palladium is one of the platinum-group metals the IEA lists among the materials of PEM electrolysers, which make hydrogen.",
+    "source": "iea_critical_minerals2021",
+    "page": "p. 111"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

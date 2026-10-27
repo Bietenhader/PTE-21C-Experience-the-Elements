@@ -623,6 +623,29 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Zirconium goes into the electrolysers that make hydrogen, and more hydrogen will raise the demand for it.",
+    "source": "iea_critical_minerals2021",
+    "page": "p. 8"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Zirconium goes into fuel cells and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 9, p. 163"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Zirconium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

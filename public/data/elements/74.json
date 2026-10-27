@@ -908,6 +908,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Tungsten goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 7, p. 143"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "About half of all tungsten becomes cemented carbide, the very hard material of tools for cutting metal and of mining and construction machines.",
+    "source": "graedel2015basis",
+    "page": "Table 1, p. 6297"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Tungsten goes into phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

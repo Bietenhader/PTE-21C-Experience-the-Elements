@@ -827,6 +827,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Terbium is a rare earth added to the permanent magnets of wind-turbine generators and electric-car motors.",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 65, 68"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Terbium, one of the rare earths of permanent magnets, goes into fuel cells, electric traction motors and industrial heat pumps, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 8, p. 154"
+   },
+   {
+    "sector": "ict",
+    "status": "essential",
+    "text": "Terbium, one of the rare earths of permanent magnets, goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

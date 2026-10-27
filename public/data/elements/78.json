@@ -929,6 +929,15 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Platinum is the catalyst of hydrogen fuel cells and of PEM electrolysers (about 0.3 kg per megawatt of electrolyser).",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 8, 111, 113"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

@@ -372,6 +372,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Crystalline silicon wafers make up most solar panels sold today; the amount of silicon per panel has more than halved since 2008 as wafers became thinner.",
+    "source": "iea_critical_minerals2021",
+    "page": "p. 56"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "essential",
+    "text": "Silicon goes into fuel cells, electric traction motors, industrial heat pumps and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 9, p. 163"
+   },
+   {
+    "sector": "ict",
+    "status": "essential",
+    "text": "Silicon goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [],

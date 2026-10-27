@@ -2,13 +2,24 @@
 # STATUS
 
 **Current milestone:** M5 — Release v0.1.0 · **released on 2026-10-23** (tag `v0.1.0`, GitHub Release)
-**Last updated:** 2026-10-24
+**Last updated:** 2026-10-27
 **Now:** "Plants in detail" in the Biology & ecology panel (pull request open, for Fin's review). Fin's open
 questions below still have their defaults.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
 ---
+
+## Seeing the sector sentences (2026-10-27) — please look
+
+The sentences in `tools/curated/sectors.toml` can now be read in the app:
+
+- Open an element (for example copper), open **Physical & engineering** and scroll to **Role in energy,
+  infrastructure and IT**. Carbon and hydrogen say "Essential (as of 2026)" for energy.
+- Choose an energy, infrastructure or IT map in the **Trend** menu and point at a tile: the card shows the
+  sentence and its source.
+
+Nothing blocked. Screenshots: `docs/screenshots/sectors-*.png`.
 
 ## Sector maps (2026-10-26) — please review `tools/curated/sectors.toml`
 
@@ -31,6 +42,12 @@ This file is updated at the end of every working session (SPEC §17.5).
   infrastructure.
 - Grouped rows of the JRC tables (platinum-group metals, "light/heavy rare earths, rest") are still left out:
   the tables do not say which members are used; the magnet rare earths count as Nd, Pr, Dy, Tb (report p. 45).
+
+## Energy map from the full IEA report (2026-10-26) — please review
+
+- 17 energy sentences in `tools/curated/sectors.toml` now cite the IEA report you sent as text (page numbers
+  given); 6 new energy rows (Y, Pd, La, Hf, Ir, Pt), all "important". No status was raised.
+- Uranium is outside the IEA report's scope (p. 74); it keeps its USGS row.
 
 ## Plants, part 2, and three maps (2026-10-25) — please review
 

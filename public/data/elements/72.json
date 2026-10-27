@@ -893,6 +893,22 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Hafnium is used in nuclear reactors, about half a kilogram per megawatt of a pressurised-water reactor.",
+    "source": "iea_critical_minerals2021",
+    "page": "p. 74"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Hafnium goes into data centres (storage and servers), according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

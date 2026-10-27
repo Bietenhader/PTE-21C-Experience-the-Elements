@@ -343,7 +343,14 @@ export function TableView(props: Props) {
         <strong>{layout.title}.</strong> {layout.caption}
       </figcaption>
       {hover.shown && shownElement && (
-        <HoverCard element={shownElement} anchor={hover.shown.el} via={hover.shown.via} {...hover.card} />
+        <HoverCard
+          element={shownElement}
+          anchor={hover.shown.el}
+          via={hover.shown.via}
+          note={faces?.get(shownElement.Z)?.note}
+          sourceTitle={(id) => sources[id]?.title ?? id}
+          {...hover.card}
+        />
       )}
     </figure>
   );

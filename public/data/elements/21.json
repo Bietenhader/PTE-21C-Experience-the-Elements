@@ -453,6 +453,22 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Scandium goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 7, p. 143"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Scandium goes into data centres (storage and servers), according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

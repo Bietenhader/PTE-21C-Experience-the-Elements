@@ -917,6 +917,15 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Iridium is a catalyst in PEM electrolysers, which split water into hydrogen: about 0.7 kg per megawatt today.",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 111, 113"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

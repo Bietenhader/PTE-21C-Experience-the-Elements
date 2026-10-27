@@ -456,6 +456,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Geothermal power plants, which run turbines on underground steam or hot water, are a main driver of titanium demand among low-carbon power technologies.",
+    "source": "iea_critical_minerals2021",
+    "page": "p. 71"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Titanium goes into fuel cells, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 8, p. 154"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Titanium goes into phones, tablets and laptops and data centres (storage and servers), according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [
    {
     "name": "α-titanium",

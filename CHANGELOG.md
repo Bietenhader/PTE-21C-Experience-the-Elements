@@ -5,6 +5,24 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added — seeing the sector sentences
+
+- The *Physical & engineering* panel has a new section, **Role in energy, infrastructure and IT**: each
+  sector the element is named in, its status in words ("Essential", "Essential (as of 2026)" or
+  "Important"), our sentence, its source chip and page. Elements without a row say: "No role in these
+  sectors is named in PTE-21C's sources."
+- With a sector map chosen, the hover card shows that element's sentence and its source; screen readers hear
+  it in the tile's description.
+- `as_of` column in `tools/curated/sectors.toml` (set for the C and H energy rows); the sentences are in the
+  element files (`physical.sectors`) and in `trends.json` (`notes` on the three sector maps).
+
+### Changed — energy map, from the full IEA report
+
+- 17 energy sentences rewritten from *The Role of Critical Minerals in Clean Energy Transitions* (IEA): which
+  battery chemistries use cobalt and manganese, crystalline-silicon and thin-film solar cells (Cd, Te, In, Ga,
+  Se), silver paste, magnet rare earths in wind turbines and electric motors, geothermal and nuclear plants.
+- Six new energy rows, all "important": Y, Pd, La, Hf, Ir, Pt (electrolysers, fuel cells, nuclear reactors).
+
 ### Added — sector maps
 
 - Trend menu: **Essential for energy**, **for logistics & infrastructure** and **for IT, computing & telecom**

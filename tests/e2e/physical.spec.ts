@@ -116,4 +116,26 @@ test.describe("physical & engineering", () => {
       expect(await axeViolations(page), s).toEqual([]);
     }
   });
+
+  test("copper: its role in energy, infrastructure and IT, each with a source; carbon is essential as of 2026", async ({
+    page,
+  }) => {
+    await openPhysical(page, "Cu");
+    const s = current(page).getByTestId("sectors");
+    await expect(s.locator('[data-sector="energy"]')).toContainText("Essential.");
+    await expect(s.locator('[data-sector="energy"]')).toContainText("Copper");
+    expect(await s.locator("[data-sector]").count()).toBeGreaterThanOrEqual(2);
+    await openPhysical(page, "C");
+    await expect(current(page).getByTestId("sectors").locator('[data-sector="energy"]')).toContainText(
+      "Essential (as of 2026)",
+    );
+    await openPhysical(page, "Og");
+    await expect(current(page).getByTestId("sectors")).toContainText("No role in these sectors");
+  });
+
+  test("axe: the sectors section of copper", async ({ page }) => {
+    await openPhysical(page, "Cu");
+    await current(page).getByTestId("sectors").scrollIntoViewIfNeeded();
+    expect(await axeViolations(page)).toEqual([]);
+  });
 });

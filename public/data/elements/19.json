@@ -424,6 +424,15 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Potassium, mined as potash, goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 7, p. 143"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

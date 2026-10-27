@@ -1151,6 +1151,16 @@
             }
           },
           "additionalProperties": false
+        },
+        "notes": {
+          "description": "For the sector maps: the sourced sentence behind an element's class, by Z (sectors.toml).",
+          "type": "object",
+          "patternProperties": {
+            "^[0-9]+$": {
+              "$ref": "#/definitions/SourcedText"
+            }
+          },
+          "additionalProperties": false
         }
       },
       "required": [
@@ -3019,6 +3029,12 @@
                 "body"
               ],
               "additionalProperties": false
+            },
+            "sectors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SectorRole"
+              }
             }
           },
           "required": [
@@ -3030,7 +3046,8 @@
             "uses",
             "allotropes",
             "hazards",
-            "abundanceByMass"
+            "abundanceByMass",
+            "sectors"
           ],
           "additionalProperties": false
         },
@@ -3934,6 +3951,47 @@
       "required": [
         "name",
         "Z",
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "SectorRole": {
+      "description": "An element's role in a sector (tools/curated/sectors.toml): essential = used in every technology the sources studied for the sector (C and H in energy: essential as of 2026), important = used in some.",
+      "type": "object",
+      "properties": {
+        "sector": {
+          "type": "string",
+          "enum": [
+            "energy",
+            "infrastructure",
+            "ict"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "essential",
+            "important"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/SourceId"
+        },
+        "page": {
+          "type": "string"
+        },
+        "asOf": {
+          "type": "integer",
+          "description": "The status holds as of this year (Fin's call for C and H in energy: fossil fuels)."
+        }
+      },
+      "required": [
+        "sector",
+        "status",
         "text",
         "source"
       ],

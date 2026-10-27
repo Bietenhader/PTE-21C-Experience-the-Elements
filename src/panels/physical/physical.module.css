@@ -142,3 +142,8 @@
   font-size: 0.875rem;
   font-weight: 600;
 }
+
+/* Role in energy, infrastructure and IT: rows of the shared facts list. */
+.sectorRow {
+  display: contents;
+}

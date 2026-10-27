@@ -674,6 +674,22 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Cadmium, with tellurium, forms cadmium telluride (CdTe) thin-film solar panels, which use no silicon or silver.",
+    "source": "iea_critical_minerals2021",
+    "page": "p. 56"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Cadmium goes into phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

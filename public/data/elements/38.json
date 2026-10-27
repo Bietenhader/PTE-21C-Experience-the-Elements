@@ -591,6 +591,29 @@
     "source": "bipm_frequencies"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Strontium goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 7, p. 143"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Strontium goes into fuel cells, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 8, p. 154"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Strontium goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

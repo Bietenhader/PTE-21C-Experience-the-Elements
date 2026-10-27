@@ -403,6 +403,21 @@ export interface CategoricalMap {
      */
     [k: string]: string;
   };
+  /**
+   * For the sector maps: the sourced sentence behind an element's class, by Z (sectors.toml).
+   */
+  notes?: {
+    [k: string]: SourcedText;
+  };
+}
+/**
+ * This interface was referenced by `undefined`'s JSON-Schema definition
+ * via the `patternProperty` "^[0-9]+$".
+ */
+export interface SourcedText {
+  text: string;
+  source: SourceId;
+  doi?: string;
 }
 /**
  * public/data/trends.json, produced by tools/build_trends.py from tools/curated/trends.toml.
@@ -562,11 +577,6 @@ export interface Citation {
   year: number;
   doi: string;
   source: SourceId;
-}
-export interface SourcedText {
-  text: string;
-  source: SourceId;
-  doi?: string;
 }
 export interface Zeff {
   n: number;
@@ -962,6 +972,7 @@ export interface ElementDetailFile {
       solar: Q;
       body: Q;
     };
+    sectors: SectorRole[];
   };
   amo: {
     hyperfine: HyperfineRecord[];
@@ -1102,6 +1113,20 @@ export interface HazardStatement {
    * Per cent of the ECHA notifications that give this statement, as PubChem aggregates them.
    */
   share?: number;
+}
+/**
+ * An element's role in a sector (tools/curated/sectors.toml): essential = used in every technology the sources studied for the sector (C and H in energy: essential as of 2026), important = used in some.
+ */
+export interface SectorRole {
+  sector: "energy" | "infrastructure" | "ict";
+  status: "essential" | "important";
+  text: string;
+  source: SourceId;
+  page?: string;
+  /**
+   * The status holds as of this year (Fin's call for C and H in energy: fossil fuels).
+   */
+  asOf?: number;
 }
 /**
  * Share of the element made by each process when the Solar System formed (SPEC §10.7), read off Fig. 39 of Kobayashi, Karakas & Lugaro (2020): an approximation, flagged as such. Keys with zero share are omitted; the shares sum to 1.

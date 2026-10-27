@@ -245,6 +245,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Lithium is one of the minerals that decide how well batteries perform; every lithium-ion chemistry the IEA compares, including lithium iron phosphate, contains it.",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 5, 88"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Lithium goes into vehicle batteries, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 8, p. 154"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Lithium goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

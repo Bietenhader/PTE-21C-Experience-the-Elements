@@ -89,13 +89,15 @@ export function mapFaces(elements: ElementIndexEntry[], m: CategoricalMap): MapR
     const cls = m.classes.find((c) => c.id === id);
     if (!cls) throw new Error(`map ${m.id}: element ${e.Z} has no class`);
     counts[cls.id] = (counts[cls.id] ?? 0) + 1;
+    const note = m.notes?.[String(e.Z)];
     faces.set(e.Z, {
       kind: "map",
       fill: `var(--map-${cls.tone})`,
       ink: "var(--tile-ink)",
       text: cls.short,
       missing: false,
-      description: `Map, ${m.label}: ${cls.label}. ${cls.description}`,
+      description: `Map, ${m.label}: ${cls.label}. ${note ? note.text : cls.description}`,
+      ...(note ? { note: { text: note.text, source: note.source } } : {}),
     });
   }
   return { faces, counts };

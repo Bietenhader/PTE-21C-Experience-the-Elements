@@ -490,6 +490,29 @@
     "source": "usgs_mcs"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Cobalt stabilises the cathodes of nickel-based lithium-ion batteries; NMC 111 cells need almost eight times more cobalt than NCA cells, while lithium iron phosphate (LFP) cells need none.",
+    "source": "iea_critical_minerals2021",
+    "page": "p. 88"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Cobalt goes into vehicle batteries and fuel cells, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 8, p. 154"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Cobalt goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [
    {
     "name": "α-cobalt",

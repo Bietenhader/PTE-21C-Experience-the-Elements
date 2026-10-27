@@ -11,7 +11,18 @@ import { lazy, Suspense, useCallback, useMemo, useState } from "react";
 import { useSettings } from "../../app/store";
 import { useElementDetail } from "../../data/load";
 import { concise, formatQuantity, isInterval, isMissing, MISSING_TEXT, superscriptDigits } from "../../data/format";
-import type { Allotrope, CrystalStructure, ElementDetailFile, ElementIndexEntry, GhsHazards, Missing, Q, SourcesFile, UseNote } from "../../data/types";
+import type {
+  Allotrope,
+  CrystalStructure,
+  ElementDetailFile,
+  ElementIndexEntry,
+  GhsHazards,
+  Missing,
+  Q,
+  SectorRole,
+  SourcesFile,
+  UseNote,
+} from "../../data/types";
 import { convertTemperature, type TemperatureUnit } from "../../physics/units";
 import { Formula } from "../../ui/Formula";
 import { MissingValue, Quantity, SourceChip } from "../../ui/Quantity";
@@ -489,6 +500,38 @@ function Uses({ uses, sources }: { uses: UseNote[]; sources: Sources }) {
   );
 }
 
+const SECTOR_NAME: Record<SectorRole["sector"], string> = {
+  energy: "Energy",
+  infrastructure: "Logistics & infrastructure",
+  ict: "IT, computing & telecom",
+};
+
+/** The element's role in three sectors (tools/curated/sectors.toml), each with its source. */
+function Sectors({ rows, sources }: { rows: SectorRole[]; sources: Sources }) {
+  if (rows.length === 0) {
+    return (
+      <p className={shared.muted} data-testid="sectors">
+        No role in these sectors is named in PTE-21C&apos;s sources.
+      </p>
+    );
+  }
+  const status = (r: SectorRole) =>
+    r.status === "essential" ? `Essential${r.asOf ? ` (as of ${r.asOf})` : ""}` : "Important";
+  return (
+    <dl className={shared.facts} data-testid="sectors">
+      {rows.map((r) => (
+        <div key={r.sector} className={styles.sectorRow} data-sector={r.sector}>
+          <dt>{SECTOR_NAME[r.sector]}</dt>
+          <dd>
+            <b>{status(r)}.</b> {r.text} <SourceChip id={r.source} sources={sources} />
+            {r.page ? <span className={shared.muted}> ({r.page})</span> : null}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
 /** Our own drawing of a GHS pictogram frame: a red-bordered diamond with the code inside; no GHS artwork is copied. */
 function Diamond({ code, name }: { code: string; name: string }) {
   return (
@@ -604,6 +647,9 @@ function Body({ e, d, sources, active }: { e: ElementIndexEntry; d: ElementDetai
       </Section>
       <Section title="Uses" id="uses">
         <Uses uses={p.uses} sources={sources} />
+      </Section>
+      <Section title="Role in energy, infrastructure and IT" id="sectors">
+        <Sectors rows={p.sectors} sources={sources} />
       </Section>
       <Section title="Hazards (GHS)" id="hazards">
         <Hazards e={e} h={p.hazards} sources={sources} />

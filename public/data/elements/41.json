@@ -624,6 +624,29 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Niobium goes into electrolysers that make hydrogen and wind turbines, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 7, p. 143"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "important",
+    "text": "Niobium is alloyed into steel; Graedel and colleagues name it, with chromium, among the steel-alloying metals most exposed to supply restrictions.",
+    "source": "graedel2015criticality",
+    "page": "p. 4257"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Niobium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

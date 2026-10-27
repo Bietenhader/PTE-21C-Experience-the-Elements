@@ -3033,14 +3033,14 @@
     "36": "none",
     "37": "none",
     "38": "important",
-    "39": "none",
+    "39": "important",
     "40": "important",
     "41": "important",
     "42": "important",
     "43": "none",
     "44": "none",
     "45": "none",
-    "46": "none",
+    "46": "important",
     "47": "important",
     "48": "important",
     "49": "important",
@@ -3051,7 +3051,7 @@
     "54": "none",
     "55": "none",
     "56": "important",
-    "57": "none",
+    "57": "important",
     "58": "none",
     "59": "important",
     "60": "important",
@@ -3066,13 +3066,13 @@
     "69": "none",
     "70": "none",
     "71": "none",
-    "72": "none",
+    "72": "important",
     "73": "important",
     "74": "important",
     "75": "none",
     "76": "none",
-    "77": "none",
-    "78": "none",
+    "77": "important",
+    "78": "important",
     "79": "important",
     "80": "none",
     "81": "none",
@@ -3113,6 +3113,212 @@
     "116": "none",
     "117": "none",
     "118": "none"
+   },
+   "notes": {
+    "1": {
+     "text": "Essential as of 2026: hydrogen is bound to carbon in the hydrocarbons of oil and natural gas, which in 2025 supplied about three quarters of the energy used in the United States; on its own it is an energy carrier, made from water, fossil fuels or biomass and used as a fuel.",
+     "source": "eia_energy_explained"
+    },
+    "3": {
+     "text": "Lithium is one of the minerals that decide how well batteries perform; every lithium-ion chemistry the IEA compares, including lithium iron phosphate, contains it.",
+     "source": "iea_critical_minerals2021"
+    },
+    "5": {
+     "text": "Boron goes into electrolysers that make hydrogen, wind turbines, solar panels and heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "6": {
+     "text": "Essential as of 2026: coal, oil and natural gas, the fossil fuels, are carbon compounds that release energy when burnt, and in 2025 oil and natural gas alone supplied about 38 % and 36 % of the energy used in the United States. Coal is a rock rich in carbon, natural gas is mostly methane (one carbon atom with four hydrogens), and as graphite carbon also goes into batteries.",
+     "source": "eia_energy_explained"
+    },
+    "9": {
+     "text": "Fluorine, mined as fluorspar, goes into batteries, solar panels and heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "12": {
+     "text": "Magnesium goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "13": {
+     "text": "Aluminium goes into power grids alongside copper (together about a fifth of grid investment costs) and into all five renewable-energy technologies of the JRC's study.",
+     "source": "iea_critical_minerals2021"
+    },
+    "14": {
+     "text": "Crystalline silicon wafers make up most solar panels sold today; the amount of silicon per panel has more than halved since 2008 as wafers became thinner.",
+     "source": "iea_critical_minerals2021"
+    },
+    "15": {
+     "text": "Phosphorus goes into batteries and solar panels, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "19": {
+     "text": "Potassium, mined as potash, goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "20": {
+     "text": "Calcium, mined as limestone, goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "21": {
+     "text": "Scandium goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "22": {
+     "text": "Geothermal power plants, which run turbines on underground steam or hot water, are a main driver of titanium demand among low-carbon power technologies.",
+     "source": "iea_critical_minerals2021"
+    },
+    "23": {
+     "text": "Vanadium goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "24": {
+     "text": "Chromium is used in nuclear and geothermal power plants, in wind turbines and in coal and gas plants, much of it in high-alloy steels.",
+     "source": "iea_critical_minerals2021"
+    },
+    "25": {
+     "text": "Manganese is part of the cathodes of nickel-manganese-cobalt (NMC) batteries and of the steel in wind turbines.",
+     "source": "iea_critical_minerals2021"
+    },
+    "26": {
+     "text": "Iron, mined as iron ore, goes into batteries, electrolysers that make hydrogen, wind turbines, solar panels and heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "27": {
+     "text": "Cobalt stabilises the cathodes of nickel-based lithium-ion batteries; NMC 111 cells need almost eight times more cobalt than NCA cells, while lithium iron phosphate (LFP) cells need none.",
+     "source": "iea_critical_minerals2021"
+    },
+    "28": {
+     "text": "Nickel goes into batteries, electrolysers that make hydrogen, wind turbines, solar panels and heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "29": {
+     "text": "Copper is a cornerstone of every electricity technology: power grids need huge amounts of it, and it appears in every power plant and clean-energy technology the IEA compares, from solar panels and wind turbines to nuclear, coal and gas plants.",
+     "source": "iea_critical_minerals2021"
+    },
+    "30": {
+     "text": "Zinc goes into electrolysers that make hydrogen, wind turbines, solar panels and heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "31": {
+     "text": "Gallium is in the thin-film solar cells called CIGS (copper indium gallium diselenide) and in high-efficiency gallium arsenide cells.",
+     "source": "iea_critical_minerals2021"
+    },
+    "32": {
+     "text": "Germanium goes into solar panels, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "33": {
+     "text": "Arsenic goes into solar panels, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "34": {
+     "text": "Selenium is in the thin-film solar cells called CIGS (copper indium gallium diselenide), which use it instead of silicon and silver.",
+     "source": "iea_critical_minerals2021"
+    },
+    "38": {
+     "text": "Strontium goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "39": {
+     "text": "Yttrium is used in nuclear reactors and in solid-oxide electrolysers that make hydrogen.",
+     "source": "iea_critical_minerals2021"
+    },
+    "40": {
+     "text": "Zirconium goes into the electrolysers that make hydrogen, and more hydrogen will raise the demand for it.",
+     "source": "iea_critical_minerals2021"
+    },
+    "41": {
+     "text": "Niobium goes into electrolysers that make hydrogen and wind turbines, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "42": {
+     "text": "Molybdenum is used in wind turbines and in geothermal, nuclear and coal power plants.",
+     "source": "iea_critical_minerals2021"
+    },
+    "46": {
+     "text": "Palladium is one of the platinum-group metals the IEA lists among the materials of PEM electrolysers, which make hydrogen.",
+     "source": "iea_critical_minerals2021"
+    },
+    "47": {
+     "text": "Silver forms the fine conducting paste on crystalline-silicon solar cells; better pastes have cut the silver per panel by 80 %, but it remains one of the most costly materials in a panel.",
+     "source": "iea_critical_minerals2021"
+    },
+    "48": {
+     "text": "Cadmium, with tellurium, forms cadmium telluride (CdTe) thin-film solar panels, which use no silicon or silver.",
+     "source": "iea_critical_minerals2021"
+    },
+    "49": {
+     "text": "Indium is in the thin-film solar cells called CIGS (copper indium gallium diselenide).",
+     "source": "iea_critical_minerals2021"
+    },
+    "50": {
+     "text": "Tin goes into electrolysers that make hydrogen and solar panels, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "51": {
+     "text": "Antimony goes into solar panels, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "52": {
+     "text": "Tellurium, with cadmium, forms cadmium telluride (CdTe) thin-film solar panels; their module efficiency has doubled from 9 % to 19 %.",
+     "source": "iea_critical_minerals2021"
+    },
+    "56": {
+     "text": "Barium, mined as baryte, goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "57": {
+     "text": "Lanthanum goes into the ceramic layers of solid-oxide electrolysers, about 20 kg per megawatt.",
+     "source": "iea_critical_minerals2021"
+    },
+    "59": {
+     "text": "Praseodymium is one of the rare earths in the permanent magnets of many wind-turbine generators and electric-car motors.",
+     "source": "iea_critical_minerals2021"
+    },
+    "60": {
+     "text": "Neodymium is the main rare earth in the permanent magnets of many wind-turbine generators and electric-car motors.",
+     "source": "iea_critical_minerals2021"
+    },
+    "65": {
+     "text": "Terbium is a rare earth added to the permanent magnets of wind-turbine generators and electric-car motors.",
+     "source": "iea_critical_minerals2021"
+    },
+    "66": {
+     "text": "Dysprosium, with neodymium, is needed for the permanent-magnet generators of many wind turbines and for electric-car motors.",
+     "source": "iea_critical_minerals2021"
+    },
+    "72": {
+     "text": "Hafnium is used in nuclear reactors, about half a kilogram per megawatt of a pressurised-water reactor.",
+     "source": "iea_critical_minerals2021"
+    },
+    "73": {
+     "text": "Tantalum goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "74": {
+     "text": "Tungsten goes into electrolysers that make hydrogen, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "77": {
+     "text": "Iridium is a catalyst in PEM electrolysers, which split water into hydrogen: about 0.7 kg per megawatt today.",
+     "source": "iea_critical_minerals2021"
+    },
+    "78": {
+     "text": "Platinum is the catalyst of hydrogen fuel cells and of PEM electrolysers (about 0.3 kg per megawatt of electrolyser).",
+     "source": "iea_critical_minerals2021"
+    },
+    "79": {
+     "text": "Gold goes into electrolysers that make hydrogen and heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "82": {
+     "text": "Lead goes into wind turbines and solar panels, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "92": {
+     "text": "The fuel of nuclear power stations; the USGS lists nuclear fuel as its main use.",
+     "source": "usgs_mcs"
+    }
    }
   },
   {
@@ -3267,6 +3473,136 @@
     "116": "none",
     "117": "none",
     "118": "none"
+   },
+   "notes": {
+    "1": {
+     "text": "Hydrogen goes into hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "3": {
+     "text": "Lithium goes into vehicle batteries, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "5": {
+     "text": "Boron goes into fuel cells, electric traction motors and industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "6": {
+     "text": "Carbon, mined as natural graphite, goes into vehicle batteries, fuel cells and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "9": {
+     "text": "Fluorine, mined as fluorspar, goes into vehicle batteries and industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "12": {
+     "text": "Magnesium, mined as magnesite, goes into hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "13": {
+     "text": "Transport takes about 36 % of the aluminium used in the US, packaging and building most of the rest.",
+     "source": "usgs_mcs"
+    },
+    "14": {
+     "text": "Silicon goes into fuel cells, electric traction motors, industrial heat pumps and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "15": {
+     "text": "Phosphorus goes into vehicle batteries and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "20": {
+     "text": "Calcium comes into cement and concrete as limestone: about a sixth of all crushed stone in the US, most of it limestone and dolomite, goes into cement making, and cement plants also use gypsum; the JRC lists limestone for hydrogen-based steelmaking too.",
+     "source": "usgs_mcs"
+    },
+    "22": {
+     "text": "Titanium goes into fuel cells, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "23": {
+     "text": "Vanadium goes into fuel cells and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "24": {
+     "text": "Chromium goes into fuel cells, electric traction motors, industrial heat pumps and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "25": {
+     "text": "Manganese goes into vehicle batteries, fuel cells, industrial heat pumps and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "26": {
+     "text": "As steel: construction takes about 31 % of US steel shipments, cars 15 %.",
+     "source": "usgs_mcs"
+    },
+    "27": {
+     "text": "Cobalt goes into vehicle batteries and fuel cells, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "28": {
+     "text": "Nickel goes into vehicle batteries, fuel cells, industrial heat pumps and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "29": {
+     "text": "Mostly used in building construction (42 %) and in electrical products; the USGS names cables and wiring as its use.",
+     "source": "usgs_mcs"
+    },
+    "30": {
+     "text": "Mostly used to galvanise steel against rust.",
+     "source": "usgs_mcs"
+    },
+    "38": {
+     "text": "Strontium goes into fuel cells, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "40": {
+     "text": "Zirconium goes into fuel cells and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "41": {
+     "text": "Niobium is alloyed into steel; Graedel and colleagues name it, with chromium, among the steel-alloying metals most exposed to supply restrictions.",
+     "source": "graedel2015criticality"
+    },
+    "42": {
+     "text": "Molybdenum goes into electric traction motors and industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "47": {
+     "text": "Silver goes into industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "56": {
+     "text": "Barium, mined as baryte, goes into fuel cells, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "59": {
+     "text": "Praseodymium, one of the rare earths of permanent magnets, goes into fuel cells, electric traction motors and industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "60": {
+     "text": "Neodymium, one of the rare earths of permanent magnets, goes into fuel cells, electric traction motors and industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "65": {
+     "text": "Terbium, one of the rare earths of permanent magnets, goes into fuel cells, electric traction motors and industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "66": {
+     "text": "Dysprosium, one of the rare earths of permanent magnets, goes into fuel cells, electric traction motors and industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "74": {
+     "text": "About half of all tungsten becomes cemented carbide, the very hard material of tools for cutting metal and of mining and construction machines.",
+     "source": "graedel2015basis"
+    },
+    "79": {
+     "text": "Gold goes into industrial heat pumps, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "82": {
+     "text": "About two thirds goes into lead-acid batteries, mostly for vehicles.",
+     "source": "usgs_mcs"
+    }
    }
   },
   {
@@ -3418,6 +3754,208 @@
     "116": "none",
     "117": "none",
     "118": "none"
+   },
+   "notes": {
+    "1": {
+     "text": "Hydrogen goes into phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "2": {
+     "text": "Helium goes into data centres (storage and servers), according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "3": {
+     "text": "Lithium goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "4": {
+     "text": "Beryllium goes into data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "5": {
+     "text": "Boron goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "6": {
+     "text": "Carbon, mined as natural graphite, goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "9": {
+     "text": "Fluorine, mined as fluorspar, goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "10": {
+     "text": "Neon goes into data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "12": {
+     "text": "Magnesium goes into data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "13": {
+     "text": "Aluminium goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "14": {
+     "text": "Silicon goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "15": {
+     "text": "Phosphorus goes into data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "21": {
+     "text": "Scandium goes into data centres (storage and servers), according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "22": {
+     "text": "Titanium goes into phones, tablets and laptops and data centres (storage and servers), according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "23": {
+     "text": "Vanadium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "24": {
+     "text": "Chromium goes into data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "25": {
+     "text": "Manganese goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "26": {
+     "text": "Iron, mined as iron ore, goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "27": {
+     "text": "Cobalt goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "28": {
+     "text": "Nickel goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "29": {
+     "text": "Copper goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "30": {
+     "text": "Zinc goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "31": {
+     "text": "Gallium goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "32": {
+     "text": "Germanium goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "33": {
+     "text": "Arsenic goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "34": {
+     "text": "Selenium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "36": {
+     "text": "Krypton goes into data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "38": {
+     "text": "Strontium goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "40": {
+     "text": "Zirconium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "41": {
+     "text": "Niobium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "42": {
+     "text": "Molybdenum goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "47": {
+     "text": "Silver goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "48": {
+     "text": "Cadmium goes into phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "49": {
+     "text": "Indium goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "50": {
+     "text": "Tin goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "51": {
+     "text": "Antimony goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "52": {
+     "text": "Tellurium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "54": {
+     "text": "Xenon goes into data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "56": {
+     "text": "Barium, mined as baryte, goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "59": {
+     "text": "Praseodymium, one of the rare earths of permanent magnets, goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "60": {
+     "text": "Neodymium, one of the rare earths of permanent magnets, goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "65": {
+     "text": "Terbium, one of the rare earths of permanent magnets, goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "66": {
+     "text": "Dysprosium, one of the rare earths of permanent magnets, goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "72": {
+     "text": "Hafnium goes into data centres (storage and servers), according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "73": {
+     "text": "Tantalum goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "74": {
+     "text": "Tungsten goes into phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "75": {
+     "text": "Rhenium goes into the networks that carry data, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "79": {
+     "text": "Gold goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "82": {
+     "text": "Lead goes into the networks that carry data and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    },
+    "83": {
+     "text": "Bismuth goes into the networks that carry data, data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+     "source": "jrc_foresight2023"
+    }
    }
   },
   {

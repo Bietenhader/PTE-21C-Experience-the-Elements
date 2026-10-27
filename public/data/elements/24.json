@@ -463,6 +463,29 @@
     "source": "pubchem"
    }
   ],
+  "sectors": [
+   {
+    "sector": "energy",
+    "status": "important",
+    "text": "Chromium is used in nuclear and geothermal power plants, in wind turbines and in coal and gas plants, much of it in high-alloy steels.",
+    "source": "iea_critical_minerals2021",
+    "page": "pp. 6, 71, 74"
+   },
+   {
+    "sector": "infrastructure",
+    "status": "essential",
+    "text": "Chromium goes into fuel cells, electric traction motors, industrial heat pumps and hydrogen-based steelmaking, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 9, p. 163"
+   },
+   {
+    "sector": "ict",
+    "status": "important",
+    "text": "Chromium goes into data centres (storage and servers) and phones, tablets and laptops, according to the JRC's study of strategic technologies.",
+    "source": "jrc_foresight2023",
+    "page": "Table 10, p. 168"
+   }
+  ],
   "allotropes": [],
   "hazards": {
    "pictograms": [

@@ -84,3 +84,23 @@ def test_every_role_is_a_full_sentence_not_a_count():
 def test_fossil_fuels_carbon_and_hydrogen_count_for_energy():
     rows = T.sector_rows(curated.load("sectors.toml", "sector"))
     assert rows[(6, "energy")]["source"] == rows[(1, "energy")]["source"] == "eia_energy_explained"
+
+
+def test_element_files_carry_their_sector_rows():
+    from common import DATA_DIR, load_json
+
+    cu = {r["sector"]: r for r in load_json(DATA_DIR / "elements" / "29.json")["physical"]["sectors"]}
+    assert cu["energy"]["status"] == "essential" and cu["energy"]["text"]
+    ni = load_json(DATA_DIR / "elements" / "28.json")["physical"]["sectors"]
+    assert [r["sector"] for r in ni] == ["energy", "infrastructure", "ict"][: len(ni)]
+    c = {r["sector"]: r for r in load_json(DATA_DIR / "elements" / "6.json")["physical"]["sectors"]}
+    assert c["energy"]["asOf"] == 2026
+    assert load_json(DATA_DIR / "elements" / "118.json")["physical"]["sectors"] == []
+
+
+def test_sector_maps_carry_the_sentences_for_the_hover_card():
+    from common import DATA_DIR, load_json
+
+    maps = {m["id"]: m for m in load_json(DATA_DIR / "trends.json")["maps"]}
+    assert maps["essential-energy"]["notes"]["29"]["source"]
+    assert "notes" not in maps["essential-plants"]

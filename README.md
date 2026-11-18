@@ -41,30 +41,31 @@ nothing has been measured, the table says so and says why, instead of showing a 
 - **Hover** a tile (or focus it with Tab, or press and hold on a phone) for a quick card; **click** it for the
   element's sheet, which has a tab for each of the eleven panels. Every view has its own link
   (e.g. `#/Cs/amo`).
-- **Panels** (in the sheet; ←/→, the tabs or a swipe move between them):
-  - *Orbitals* — a 3D picture of every occupied subshell, a viewer to turn it, the shell stack of all radial
-    distributions, and the node counts. Hydrogen-like shapes with effective charges; the panel says so.
-  - *Electromagnetic & ionization* — every ionization stage NIST lists, electron affinity, electronegativity.
-  - *Spectrum & energy levels* — the visible lines in true colour, the strongest lines, a Grotrian diagram.
-  - *Nucleus & isotopes* — every isotope by half-life and decay, a survival calculator, binding energy,
-    cosmic origin.
-  - *Probability & statistics* — where the electron is likely to be, bosons and fermions, the speeds of a gas
-    of the atoms at any temperature, the isotope mix, and how uncertainties are written.
-  - *Physical & engineering* — phase, density, melting and boiling points, heat capacity, the crystal's unit
-    cell in 3D, allotropes, abundance, production and price, uses and GHS hazards.
-  - *Mathematical & theoretical* — every valence electron's quantum numbers, Hund's rules worked step by step
-    next to the measured term, the Landé factor, Slater's screening arithmetic, Aufbau anomalies explained,
-    and how fast the 1s electron moves (relativity).
-  - *AMO & metrology* — hyperfine structure, nuclear moments, atomic clocks, laser cooling with its computed
-    limits, and the timeline of the second.
+- **Panels** (in the sheet, in this order; ←/→, the tabs or a swipe move between them):
+  - *History & naming* — the discovery, its place on a world map, a timeline of all 118 discoveries, and
+    where the name and symbol come from.
   - *Chemistry & bonding* — oxidation states with an example compound each, ionic, covalent and van der
     Waals radii, electronegativity, bonding, well-known compounds and reactions with air, water and acids.
   - *Biology & ecology* — whether people, animals, plants, fungi, bacteria and archaea need the element;
     for plants, "More about plants": uptake, mobility, leaf levels from too little to too much, soils,
     forests and crops. How much is in the body, toxicity, IARC groups, soils and food webs, and isotopes
     used in biology and medicine.
-  - *History & naming* — the discovery, its place on a world map, a timeline of all 118 discoveries, and
-    where the name and symbol come from.
+  - *Orbitals* — a 3D picture of every occupied subshell, a viewer to turn it, the shell stack of all radial
+    distributions, and the node counts. Hydrogen-like shapes with effective charges; the panel says so.
+  - *Electromagnetic & ionization* — every ionization stage NIST lists, electron affinity, electronegativity.
+  - *Probability & statistics* — where the electron is likely to be, bosons and fermions, the speeds of a gas
+    of the atoms at any temperature, the isotope mix, and how uncertainties are written.
+  - *Physical & engineering* — phase, density, melting and boiling points, heat capacity, the crystal's unit
+    cell in 3D, allotropes, abundance, production and price, uses, the element's role in energy,
+    infrastructure and IT, and GHS hazards.
+  - *Mathematical & theoretical* — every valence electron's quantum numbers, Hund's rules worked step by step
+    next to the measured term, the Landé factor, Slater's screening arithmetic, Aufbau anomalies explained,
+    and how fast the 1s electron moves (relativity).
+  - *AMO & metrology* — hyperfine structure, nuclear moments, atomic clocks, laser cooling with its computed
+    limits, and the timeline of the second.
+  - *Nucleus & isotopes* — every isotope by half-life and decay, a survival calculator, binding energy,
+    cosmic origin.
+  - *Spectrum & energy levels* — the visible lines in true colour, the strongest lines, a Grotrian diagram.
 
   Every chart has "Show as table"; every source label opens its citation.
 - **Keyboard:** Tab follows Z, arrow keys move across the table, Enter opens, Esc closes, `/` search, `L`

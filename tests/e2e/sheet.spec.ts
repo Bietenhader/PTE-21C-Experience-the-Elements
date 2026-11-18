@@ -4,26 +4,51 @@ import { expect, test } from "@playwright/test";
 import { axeViolations, longPress, open, pinch, settled, swipe, tile } from "./helpers";
 
 test.describe("routing and the sheet", () => {
-  test("click opens the sheet and the URL becomes #/Fe/<panel>", async ({ page }) => {
+  test("click opens the sheet on the first panel, History & naming, and the URL becomes #/Fe/history", async ({
+    page,
+  }) => {
     await open(page);
     await tile(page, 26).click();
     const sheet = page.getByTestId("sheet");
     await expect(sheet).toBeVisible();
-    await expect(page).toHaveURL(/#\/Fe\/orbitals$/);
+    await expect(page).toHaveURL(/#\/Fe\/history$/);
     await expect(sheet.getByRole("heading", { level: 2 })).toContainText("Iron");
-    await expect(sheet.getByRole("tab", { selected: true })).toHaveText("Orbitals");
+    await expect(sheet.getByRole("tab", { selected: true })).toHaveText("History & naming");
+  });
+
+  test("the panels come in Fin's order: history, chemistry and biology first, then SPEC §10's order", async ({
+    page,
+  }) => {
+    await open(page, "#/Fe/history");
+    const sheet = page.getByTestId("sheet");
+    await expect(sheet).toBeVisible();
+    await expect(sheet.getByRole("tab")).toHaveText([
+      "History & naming",
+      "Chemistry & bonding",
+      "Biology & ecology",
+      "Orbitals",
+      "Electromagnetic & ionization",
+      "Probability & statistics",
+      "Physical & engineering",
+      "Mathematical & theoretical",
+      "AMO & metrology",
+      "Nucleus & isotopes",
+      "Spectrum & energy levels",
+    ]);
   });
 
   test("←/→ and tab clicks change the panel and the URL", async ({ page }) => {
-    await open(page, "#/Fe/orbitals");
+    await open(page, "#/Fe/history");
     const sheet = page.getByTestId("sheet");
     await expect(sheet).toBeVisible();
     await page.keyboard.press("ArrowRight");
-    await expect(page).toHaveURL(/#\/Fe\/em$/);
+    await expect(page).toHaveURL(/#\/Fe\/chemistry$/);
     await page.keyboard.press("ArrowRight");
-    await expect(page).toHaveURL(/#\/Fe\/probability$/);
+    await expect(page).toHaveURL(/#\/Fe\/biology$/);
+    await page.keyboard.press("ArrowRight");
+    await expect(page).toHaveURL(/#\/Fe\/orbitals$/);
     await page.keyboard.press("ArrowLeft");
-    await expect(page).toHaveURL(/#\/Fe\/em$/);
+    await expect(page).toHaveURL(/#\/Fe\/biology$/);
     await sheet.getByRole("tab", { name: "Nucleus & isotopes" }).click();
     await expect(page).toHaveURL(/#\/Fe\/nucleus$/);
     await expect(sheet.getByRole("tab", { selected: true })).toHaveText("Nucleus & isotopes");
@@ -40,18 +65,18 @@ test.describe("routing and the sheet", () => {
   });
 
   test("#/Cs opens the remembered panel", async ({ page }) => {
-    await open(page, "#/Fe/history");
+    await open(page, "#/Fe/amo");
     await page.keyboard.press("Escape");
     await expect(page.getByTestId("sheet")).toBeHidden();
     await page.goto("./#/Cs");
     await expect(page.getByTestId("sheet")).toBeVisible();
-    await expect(page).toHaveURL(/#\/Cs\/history$/);
+    await expect(page).toHaveURL(/#\/Cs\/amo$/);
   });
 
   test("a scroll event on the closed sheet does not change the remembered panel", async ({ page }) => {
     // WebKit fires a scroll event on the panel strip as the dialog closes (its scroll position resets);
     // that must not count as a swipe to the first panel.
-    await open(page, "#/Fe/history");
+    await open(page, "#/Fe/amo");
     await page.keyboard.press("Escape");
     await expect(page.getByTestId("sheet")).toBeHidden();
     await page.getByTestId("panel-strip").evaluate((s) => {
@@ -61,7 +86,7 @@ test.describe("routing and the sheet", () => {
     });
     await page.waitForTimeout(300);
     await page.goto("./#/Cs");
-    await expect(page).toHaveURL(/#\/Cs\/history$/);
+    await expect(page).toHaveURL(/#\/Cs\/amo$/);
   });
 
   test("table state rides in the URL: #/?layout=janet&g3=la&trend=ie1&view=heat", async ({ page }) => {

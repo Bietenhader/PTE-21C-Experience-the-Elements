@@ -28,7 +28,7 @@ const supportsClosedBy = typeof HTMLDialogElement !== "undefined" && "closedBy" 
 
 export function ElementSheet({ elements, sources }: Props) {
   const symbol = useView((s) => s.element);
-  const panel = useView((s) => s.panel) ?? PANELS[0]?.slug ?? "orbitals";
+  const panel = useView((s) => s.panel) ?? PANELS[0]?.slug ?? "history";
   const current = symbol ? elements.find((e) => e.symbol === symbol) : undefined;
   // Keep showing the last element while the dialog closes.
   const [shown, setShown] = useState<ElementIndexEntry | undefined>(current);

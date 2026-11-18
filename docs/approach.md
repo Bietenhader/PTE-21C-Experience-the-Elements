@@ -166,7 +166,7 @@ Every rule below is also logged per element in `tools/build-report.md`.
   the panel. Panels mount when within one snap and stay mounted. Closing returns focus to the tile.
 - **Panels.** Each of the eleven lives in `src/panels/<slug>/` (`index.ts` exports `{ slug, title, summary,
   Component, needs }`, `Panel.tsx` is a lazily loaded chunk) and is registered with one line in
-  `src/panels/registry.ts`, which also fails fast if the order differs from SPEC §10. In M1 every panel is a
+  `src/panels/registry.ts`, which also fails fast if the order differs from `src/panels/slugs.ts`. In M1 every panel is a
   placeholder that says what it will show and when, and shows no number.
 - **Settings (SPEC §9.3).** A dialog: theme, palette, energy unit (kJ/mol or eV — also on the tiles), temperature
   unit (K or °C), motion (follow the system, reduce, full), single-key shortcuts. Layout and group 3 sit
@@ -696,6 +696,17 @@ Fin's look at the live site, on desktop and on his iPhone (video, 22 October 202
 - Sentences (Fin: "full sentences"): for JRC rows, generated from the tables' columns (which technologies use
   the raw material), read from the word positions of the PDF; others written by hand from the cited text.
 - Gaps, stated in STATUS.md: the Graedel supplements (per-element use tables) and the full IEA PDF.
+
+### Panel order (Fin, 2026-11-18)
+
+- **Fin's choice:** History & naming, Chemistry & bonding and Biology & ecology come first; the other eight follow
+  in the order of SPEC §10 (Orbitals, Electromagnetic & ionization, Probability & statistics, Physical &
+  engineering, Mathematical & theoretical, AMO & metrology, Nucleus & isotopes, Spectrum & energy levels). The
+  order lives in `src/panels/slugs.ts`; `src/panels/registry.ts` fails fast if it differs. SPEC §10 keeps its
+  section numbers, which the code and docs cite, and notes the display order.
+- **Where the sheet opens:** on the panel opened last (SPEC §9.2), and on the first panel, History & naming, until
+  a visitor has opened one (it was Orbitals). Deep links such as `#/Cs/amo` are unchanged: they name the panel,
+  not its position.
 
 ## Tooling
 

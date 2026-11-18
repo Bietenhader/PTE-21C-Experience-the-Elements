@@ -55,7 +55,10 @@ jobs:
 
   e2e:
     name: End-to-end (Playwright, Chromium desktop + phone)
-    runs-on: ubuntu-latest
+    # Pinned to Ubuntu 24.04: GitHub's ubuntu-latest is now Ubuntu 26.04 (seen 2026-11-18), where Playwright
+    # 1.56.1 cannot install its browsers. Back to ubuntu-latest once Playwright is upgraded to a version that
+    # supports 26.04.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6

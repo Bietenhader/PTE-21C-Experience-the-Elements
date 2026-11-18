@@ -5,6 +5,14 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Changed — panel order
+
+- The element sheet now starts with **History & naming**, then **Chemistry & bonding** and **Biology & ecology**;
+  the other eight panels follow in their previous order (Orbitals, Electromagnetic & ionization, Probability &
+  statistics, Physical & engineering, Mathematical & theoretical, AMO & metrology, Nucleus & isotopes, Spectrum &
+  energy levels). A first-time visitor's sheet opens on History & naming; after that it opens on the panel
+  opened last, as before. Links to a panel (`#/Fe/biology`) are unchanged.
+
 ### Added — seeing the sector sentences
 
 - The *Physical & engineering* panel has a new section, **Role in energy, infrastructure and IT**: each

@@ -25,8 +25,9 @@ version you re-read every session.
 
 React 19 + TypeScript strict + Vite · @react-three/fiber · D3 · KaTeX · Floating UI · Zustand · CSS Modules · npm ·
 Python 3.11 pipeline in `tools/` · GitHub Pages via Actions · hash routing · four layouts (standard18, long32,
-janet, adomah) with FLIP morph · group 3 default Lu/Lr · eleven panels in the order of SPEC §10 · Tier A orbitals
-in v0.1 · vendored curated images with honest placeholders · `PTE-21C.command` launcher.
+janet, adomah) with FLIP morph · group 3 default Lu/Lr · eleven panels: history, chemistry and biology first
+(Fin, 2026-11-18), then the order of SPEC §10 · Tier A orbitals in v0.1 · vendored curated images with honest
+placeholders · `PTE-21C.command` launcher.
 
 ## Conventions
 

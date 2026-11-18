@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
-// The eleven panels in the order of SPEC §10 (LOCKED). One line per panel.
+// The eleven panels in the order of PANEL_SLUGS (history, chemistry and biology first, then SPEC §10's
+// order). One line per panel.
 
 import { panel as amo } from "./amo";
 import { panel as biology } from "./biology";
@@ -16,6 +17,9 @@ import { panel as spectrum } from "./spectrum";
 import type { PanelModule } from "./types";
 
 export const PANELS: readonly PanelModule[] = [
+  history,
+  chemistry,
+  biology,
   orbitals,
   em,
   probability,
@@ -24,11 +28,8 @@ export const PANELS: readonly PanelModule[] = [
   amo,
   nucleus,
   spectrum,
-  chemistry,
-  biology,
-  history,
 ];
 
 if (PANELS.map((p) => p.slug).join() !== PANEL_SLUGS.join()) {
-  throw new Error("panels are registered out of the order of SPEC §10");
+  throw new Error("panels are registered out of the order of PANEL_SLUGS");
 }

@@ -556,6 +556,10 @@ who want the numbers. Charts are D3-driven SVG inside React; 3D is three.js in a
 
 Element-detail fields below are stored under `elements/{Z}.json[<slug>]` unless another file is named.
 
+**Display order (Fin, 2026-11-18).** The sheet shows History & naming (§10.11), Chemistry & bonding (§10.9) and
+Biology & ecology (§10.10) first, then the others in the order of the sections below (§10.1–10.8). The section
+numbers stay as they are, because the code and the documentation cite them.
+
 ### 10.1 Orbitals (`orbitals`)
 
 *Purpose:* show what this atom's electrons are doing, at honest fidelity.

@@ -224,7 +224,7 @@ test.describe("search (SPEC §7.4)", () => {
     await search.fill("iron");
     await expect(page.locator('button[data-match="true"]')).toHaveCount(1);
     await search.press("Enter");
-    await expect(page).toHaveURL(/#\/Fe\/orbitals/);
+    await expect(page).toHaveURL(/#\/Fe\/history/);
   });
 
   test("/ focuses the search field", async ({ page }, info) => {

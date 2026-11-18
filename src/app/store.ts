@@ -9,7 +9,7 @@
 
 import { create } from "zustand";
 import { createJSONStorage, persist, type StateStorage } from "zustand/middleware";
-import { isPanelSlug, type PanelSlug } from "../panels/slugs";
+import { isPanelSlug, PANEL_SLUGS, type PanelSlug } from "../panels/slugs";
 import type { EnergyUnit, TemperatureUnit } from "../physics/units";
 import { DEFAULT_GROUP3, DEFAULT_LAYOUT, type Group3, LAYOUT_IDS, type LayoutId, type Overlay } from "./route";
 
@@ -28,7 +28,7 @@ export interface Settings {
   temperatureUnit: TemperatureUnit;
   /** Single-key shortcuts (/, L, T). WCAG 2.1.4 requires a way to turn them off. */
   shortcuts: boolean;
-  /** The panel the sheet opens on (SPEC §9.2: the last one opened). */
+  /** The panel the sheet opens on (SPEC §9.2: the last one opened; the first panel until then). */
   lastPanel: PanelSlug;
   /** The "zoom in to see more" tip has done its job (dismissed, or the user has zoomed). */
   zoomHintSeen: boolean;
@@ -43,7 +43,7 @@ export const DEFAULT_SETTINGS: Settings = {
   energyUnit: "kJ/mol",
   temperatureUnit: "K",
   shortcuts: true,
-  lastPanel: "orbitals",
+  lastPanel: PANEL_SLUGS[0],
   zoomHintSeen: false,
 };
 

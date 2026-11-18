@@ -5,6 +5,12 @@ All notable changes. The format follows [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Fixed — browser tests in CI
+
+- The end-to-end jobs (`ci.yml` and the manual `nightly.yml`) run on Ubuntu 24.04. GitHub's `ubuntu-latest`
+  is now Ubuntu 26.04, where Playwright 1.56.1 cannot install its browsers, so the job failed before any
+  test ran. They go back to `ubuntu-latest` once Playwright is upgraded to a version that supports 26.04.
+
 ### Changed — panel order
 
 - The element sheet now starts with **History & naming**, then **Chemistry & bonding** and **Biology & ecology**;

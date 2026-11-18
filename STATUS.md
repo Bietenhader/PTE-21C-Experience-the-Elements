@@ -4,7 +4,9 @@
 **Current milestone:** M5 — Release v0.1.0 · **released on 2026-10-23** (tag `v0.1.0`, GitHub Release)
 **Last updated:** 2026-11-18
 **Now:** the new panel order (pull request open, for Fin's review): History & naming, Chemistry & bonding and
-Biology & ecology first, then the other eight as before. Fin's open questions below still have their defaults.
+Biology & ecology first, then the other eight as before. The same pull request pins the browser tests in CI to
+Ubuntu 24.04: GitHub's newest Ubuntu (26.04) cannot run our Playwright version yet. Fin's open questions below
+still have their defaults.
 
 This file is updated at the end of every working session (SPEC §17.5).
 
